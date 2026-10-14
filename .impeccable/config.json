@@ -1,0 +1,14 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "montserrat",
+        "createdAt": "2026-10-14T21:14:18.856Z",
+        "reason": "mesma fonte oficial da marca CVDentus (variação de caixa no CSS)"
+      }
+    ]
+  }
+}
