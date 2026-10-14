@@ -309,5 +309,207 @@ window.CVD_LUPAS = {
   "baixar": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/catalogo-lupas-oficial-2026.pdf",
   "mb": 49
  },
- "nota": "Os preços e descontos seguem a política comercial. Antes de passar valores ao cliente, confira se a política vigente não teve alteração de sazonalidade."
+ "nota": "Os preços e descontos seguem a política comercial. Antes de passar valores ao cliente, confira se a política vigente não teve alteração de sazonalidade.",
+ "modelos": [
+ {
+  "id": "fdj-21b",
+  "linha": "Galileu",
+  "tipo": "Flip-up",
+  "codigo": "FDJ-21B",
+  "mags": "2.5X · 3.0X · 3.5X",
+  "n": 10,
+  "mb": 0.9,
+  "zip": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/modelos-lupas/lupa-fdj-21b-fotos.zip"
+ },
+ {
+  "id": "fdj-22a",
+  "linha": "Galileu",
+  "tipo": "Flip-up",
+  "codigo": "FDJ-22A",
+  "mags": "",
+  "n": 4,
+  "mb": 0.3,
+  "zip": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/modelos-lupas/lupa-fdj-22a-fotos.zip"
+ },
+ {
+  "id": "fdj-22b",
+  "linha": "Kepler",
+  "tipo": "Flip-up",
+  "codigo": "FDJ-22B",
+  "mags": "4.0X · 5.0X",
+  "n": 6,
+  "mb": 0.5,
+  "zip": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/modelos-lupas/lupa-fdj-22b-fotos.zip"
+ },
+ {
+  "id": "fdj-24b",
+  "linha": "Kepler",
+  "tipo": "Flip-up",
+  "codigo": "FDJ-24B",
+  "mags": "4X · 5X · 6X",
+  "n": 4,
+  "mb": 0.6,
+  "zip": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/modelos-lupas/lupa-fdj-24b-fotos.zip"
+ },
+ {
+  "id": "fdj-ergo-h3",
+  "linha": "Ergo",
+  "tipo": "Flip-up",
+  "codigo": "FDJ-ERGO-H3",
+  "mags": "2.5X · 3.5X",
+  "n": 12,
+  "mb": 1.2,
+  "zip": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/modelos-lupas/lupa-fdj-ergo-h3-fotos.zip"
+ },
+ {
+  "id": "fdj-ergo-cx",
+  "linha": "Ergo CX",
+  "tipo": "Flip-up",
+  "codigo": "FDJ-ERGO-CX",
+  "mags": "",
+  "n": 7,
+  "mb": 0.6,
+  "zip": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/modelos-lupas/lupa-fdj-ergo-cx-fotos.zip"
+ },
+ {
+  "id": "ttl-21",
+  "linha": "Galileu",
+  "tipo": "TTL",
+  "codigo": "TTL-21",
+  "mags": "2.5X – 3.5X",
+  "n": 12,
+  "mb": 0.9,
+  "zip": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/modelos-lupas/lupa-ttl-21-fotos.zip"
+ },
+ {
+  "id": "ttl-24",
+  "linha": "Kepler",
+  "tipo": "TTL",
+  "codigo": "TTL-24",
+  "mags": "4.0X – 6.0X",
+  "n": 10,
+  "mb": 1.1,
+  "zip": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/modelos-lupas/lupa-ttl-24-fotos.zip"
+ },
+ {
+  "id": "ttl-ergo-21",
+  "linha": "Ergo",
+  "tipo": "TTL",
+  "codigo": "TTL-ERGO-21",
+  "mags": "3.5X · 4.5X · 5.5X · 6.5X",
+  "n": 12,
+  "mb": 1.2,
+  "zip": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/modelos-lupas/lupa-ttl-ergo-21-fotos.zip"
+ },
+ {
+  "id": "jc-m06-b",
+  "linha": "JC-M06-B",
+  "tipo": "Fotóforo",
+  "codigo": "JC-M06-B",
+  "mags": "Kit Starter",
+  "n": 4,
+  "mb": 0.5,
+  "zip": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/modelos-lupas/lupa-jc-m06-b-fotos.zip"
+ },
+ {
+  "id": "jc-m06-c",
+  "linha": "JC-M06-C",
+  "tipo": "Fotóforo",
+  "codigo": "JC-M06-C",
+  "mags": "Kit Intermediário",
+  "n": 3,
+  "mb": 0.4,
+  "zip": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/modelos-lupas/lupa-jc-m06-c-fotos.zip"
+ },
+ {
+  "id": "jg-m06c",
+  "linha": "JG-M06C",
+  "tipo": "Fotóforo",
+  "codigo": "JG-M06C",
+  "mags": "",
+  "n": 8,
+  "mb": 0.6,
+  "zip": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/modelos-lupas/lupa-jg-m06c-fotos.zip"
+ },
+ {
+  "id": "jg-m07c",
+  "linha": "JG-M07C",
+  "tipo": "Fotóforo",
+  "codigo": "JG-M07C",
+  "mags": "",
+  "n": 6,
+  "mb": 0.6,
+  "zip": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/modelos-lupas/lupa-jg-m07c-fotos.zip"
+ },
+ {
+  "id": "h1",
+  "linha": "H1",
+  "tipo": "Armação",
+  "codigo": "H1",
+  "mags": "",
+  "n": 7,
+  "mb": 0.9,
+  "zip": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/modelos-lupas/lupa-h1-fotos.zip"
+ },
+ {
+  "id": "j04",
+  "linha": "J04",
+  "tipo": "Armação",
+  "codigo": "J04",
+  "mags": "",
+  "n": 8,
+  "mb": 0.5,
+  "zip": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/modelos-lupas/lupa-j04-fotos.zip"
+ },
+ {
+  "id": "j20",
+  "linha": "J20",
+  "tipo": "Armação",
+  "codigo": "J20",
+  "mags": "",
+  "n": 8,
+  "mb": 0.5,
+  "zip": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/modelos-lupas/lupa-j20-fotos.zip"
+ },
+ {
+  "id": "j21",
+  "linha": "J21",
+  "tipo": "Armação",
+  "codigo": "J21",
+  "mags": "",
+  "n": 8,
+  "mb": 0.6,
+  "zip": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/modelos-lupas/lupa-j21-fotos.zip"
+ },
+ {
+  "id": "j22",
+  "linha": "J22",
+  "tipo": "Armação",
+  "codigo": "J22",
+  "mags": "",
+  "n": 8,
+  "mb": 0.6,
+  "zip": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/modelos-lupas/lupa-j22-fotos.zip"
+ },
+ {
+  "id": "j23",
+  "linha": "J23",
+  "tipo": "Armação",
+  "codigo": "J23",
+  "mags": "",
+  "n": 8,
+  "mb": 0.8,
+  "zip": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/modelos-lupas/lupa-j23-fotos.zip"
+ },
+ {
+  "id": "j24",
+  "linha": "J24",
+  "tipo": "Armação",
+  "codigo": "J24",
+  "mags": "",
+  "n": 8,
+  "mb": 0.6,
+  "zip": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/modelos-lupas/lupa-j24-fotos.zip"
+ }
+]
 };

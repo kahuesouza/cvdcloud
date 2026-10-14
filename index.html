@@ -175,6 +175,7 @@ details.outros[open] summary svg{transform:rotate(90deg)}
 .cartao .im img{width:100%;height:100%;object-fit:cover;display:block}
 .cartao b{display:block;margin-top:9px;font-size:14px;font-weight:700;line-height:1.25}
 .cartao small{color:var(--fraco);font-weight:600;font-size:12px}
+.cod-row .cod-n{font-size:17px;font-weight:800;letter-spacing:-.01em}
 .logo-box{aspect-ratio:4/3;border-radius:var(--raio);display:grid;place-items:center;padding:18px;border:1px solid var(--linha)}
 .logo-box.claro{background:#fff}.logo-box.escuro{background:#0d1320;border-color:#0d1320}.logo-box.neutro{background:#e9edf4}
 .logo-box img{max-width:100%;max-height:72px;object-fit:contain}
@@ -500,8 +501,34 @@ function resultadosPontas(termos){
 }
 
 /* ---------- Lupas e fotóforos ---------- */
+const ORDEM_TIPO = ['Flip-up','TTL','Fotóforo','Armação'];
+function linhaModelo(x, i){
+  const sub = [x.linha, x.tipo, x.mags].filter(Boolean).join(' · ');
+  return `<div class="linha cod-row anima" style="--i:${Math.min(i,10)}"><button class="abrir" data-modelo="${x.id}"><span class="lead foto" style="background:#fff;border:1px solid var(--linha)"><img loading="lazy" alt="" src="img/modelos/${x.id}.webp"></span><span class="txt"><span class="t cod-n">${esc(x.codigo)}</span><span class="m" style="display:block">${esc(sub)}</span></span></button>
+    <span class="acoes"><a class="ibtn" href="${esc(x.zip)}" download data-dl="modelo" data-mb="${x.mb}" aria-label="Baixar ${x.n} fotos (${fmtTam(x.mb)})">${ic('download')}</a></span></div>`;
+}
+function telaModelos(){
+  const mod = LUPAS.modelos || []; let html = '', i = 0;
+  ORDEM_TIPO.forEach(t=>{ const g = mod.filter(x=>x.tipo===t); if(!g.length) return;
+    html += secao(t==='Fotóforo'?'Fotóforos':t==='Armação'?'Armações':'Lupas '+t, g.length) + `<div class="lista">${g.map(x=>linhaModelo(x,i++)).join('')}</div>`; });
+  return html;
+}
+function painelModelo(id){
+  const x = (LUPAS.modelos||[]).find(m=>m.id===id); if(!x) return;
+  const sub = [x.linha, x.tipo].filter(Boolean).join(' · ');
+  abrirPainel(`<div class="img-g" style="background:#fff"><img src="img/modelos/${x.id}.webp" alt=""></div>
+    <h3 style="margin-top:14px">${esc(x.codigo)}</h3><p class="sub">${esc(sub)}${x.mags?' · '+esc(x.mags):''}</p>
+    <p class="desc">Seleção de ${x.n} fotos em alta resolução, prontas para uso em apresentações e redes.</p>
+    <div class="botoes"><a class="btn prim" href="${esc(x.zip)}" download data-dl="modelo" data-mb="${x.mb}">${ic('download')}Baixar fotos <small>${x.n} · ${fmtTam(x.mb)}</small></a></div>`);
+}
 function telaLupas(grupoId){
-  const gs = LUPAS.grupos, ativo = gs.find(g=>g.id===grupoId) || gs[0];
+  const gs = LUPAS.grupos;
+  if(grupoId==='codigos'){
+    return { titulo:'Lupas', voltar:'#/', corpo: largo('Lupas','Lupas, fotóforos e armações CVDentus.')
+      + abas([...gs.map(g=>({id:g.id,nome:g.nome.replace('Lupas ',''),n:g.itens.length})), {id:'codigos',nome:'Por código',n:(LUPAS.modelos||[]).length}], 'codigos', '#/lupas')
+      + `<p style="color:var(--sub);font-size:13.5px;margin:10px 0 0">Cada modelo pelo código, com a seleção de fotos para baixar.</p>` + telaModelos() };
+  }
+  const ativo = gs.find(g=>g.id===grupoId) || gs[0];
   const itens = `<div class="grade">${ativo.itens.map((it,i)=>`<button class="cartao anima" style="--i:${i}" data-lupa="${it.id}"><span class="im"><img loading="lazy" src="img/lupas/${it.img}.webp" alt="${esc(it.nome)}"></span><b>${esc(it.nome)}</b><small>${esc(it.kit || (ativo.id==='flip'?'Flip-up':ativo.id==='ttl'?'TTL':''))}</small></button>`).join('')}</div>`;
   const pdf = LUPAS.pdf;
   const docs = `<div class="lista">
@@ -511,7 +538,7 @@ function telaLupas(grupoId){
   return { titulo:'Lupas', voltar:'#/', corpo: largo('Lupas','Lupas, fotóforos e armações CVDentus.')
     + `<div class="nota anima" style="--i:1">${ic('info')}<div><b>Antes de passar valores</b>${esc(LUPAS.nota)}</div></div>`
     + secao('Catálogo e simulador') + docs
-    + abas(gs.map(g=>({id:g.id,nome:g.nome.replace('Lupas ',''),n:g.itens.length})), ativo.id, '#/lupas')
+    + abas([...gs.map(g=>({id:g.id,nome:g.nome.replace('Lupas ',''),n:g.itens.length})), {id:'codigos',nome:'Por código',n:(LUPAS.modelos||[]).length}], ativo.id, '#/lupas')
     + `<p style="color:var(--sub);font-size:13.5px;margin:10px 0 0">${esc(ativo.sub)} Toque para ver o vídeo 360° e baixar fotos e vídeo.</p>` + itens };
 }
 function painelLupa(id){
@@ -601,12 +628,14 @@ function resultadosBusca(q){
   const procs = D.procedimentos.filter(p=>casa([p.titulo,p.prof,p.ponta,ESP[p.esp]?.nome,p.formato].join(' ')));
   const lup = []; LUPAS.grupos.forEach(g=>g.itens.forEach(it=>{ if(casa([it.nome,it.kit,it.desc,g.nome,'lupa'].join(' '))) lup.push([g,it]); }));
   const logos = []; D.marcas.forEach((g,gi)=>g.logos.forEach((l,li)=>{ if(casa([l.nome,l.nota,g.grupo,'logo marca'].join(' '))) logos.push([gi,li,l]); }));
+  const modl = (LUPAS.modelos||[]).filter(x=>casa([x.codigo,x.linha,x.tipo,x.mags,'lupa modelo codigo'].join(' ')));
   const pt = resultadosPontas(termos);
-  if(!mats.length && !procs.length && !lup.length && !logos.length && !pt.n) return vazio(`Nada encontrado para “${esc(q)}”.`);
+  if(!mats.length && !procs.length && !lup.length && !logos.length && !pt.n && !modl.length) return vazio(`Nada encontrado para “${esc(q)}”.`);
   return (pt.n ? secao('Pontas (bula)', pt.n) + pt.html.replace(/<div class="sec">.*?<\/div>/g,'') : '')
     + (procs.length ? secao('Procedimentos', procs.length) + lista(procs.slice(0,30),{produto:true}) : '')
     + (mats.length ? secao('Materiais', mats.length) + lista(mats.slice(0,40),{produto:true}) : '')
     + (lup.length ? secao('Lupas e fotóforos', lup.length) + `<div class="lista">${lup.map(([g,it])=>`<div class="linha"><button class="abrir" data-lupa="${it.id}"><span class="lead foto"><img src="img/lupas/${it.img}.webp" alt=""></span><span class="txt"><span class="t">${esc(it.nome)}${it.kit?' · '+esc(it.kit):''}</span><span class="m" style="display:block">${esc(g.nome)}</span></span></button></div>`).join('')}</div>` : '')
+    + (modl.length ? secao('Lupas por código', modl.length) + `<div class="lista">${modl.map((x,i)=>linhaModelo(x,i)).join('')}</div>` : '')
     + (logos.length ? secao('Logos e selos', logos.length) + `<div class="lista">${logos.map(([gi,li,l])=>`<div class="linha"><button class="abrir" data-logo-p="${gi}:${li}"><span class="lead">${ic('estrela')}</span><span class="txt"><span class="t">${esc(l.nome)}</span><span class="m" style="display:block">${esc(l.nota)}</span></span></button></div>`).join('')}</div>` : '');
 }
 
@@ -695,6 +724,7 @@ document.addEventListener('click', e=>{
   if(t.closest('[data-fechar-busca]')){ fecharBusca(); return; }
   const sug = t.closest('[data-sug]'); if(sug){ const q = document.getElementById('q'); q.value = sug.dataset.sug; q.dispatchEvent(new Event('input')); q.focus(); return; }
   const mais = t.closest('[data-mais]'); if(mais){ painelItem(mais.dataset.mais); return; }
+  const mod = t.closest('[data-modelo]'); if(mod){ painelModelo(mod.dataset.modelo); return; }
   const lupa = t.closest('[data-lupa]'); if(lupa){ painelLupa(lupa.dataset.lupa); return; }
   const lp = t.closest('[data-logo-p]'); if(lp){ const [gi,li] = lp.dataset.logoP.split(':'); painelLogo(+gi,+li); return; }
   const cp = t.closest('[data-compartilhar]'); if(cp){ compartilhar(TODOS[cp.dataset.compartilhar]); return; }
