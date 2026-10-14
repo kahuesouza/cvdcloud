@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>CVDentus Materiais</title>
 <meta name="description" content="Central de materiais comerciais CVDentus: catálogos, manuais, vídeos, procedimentos, pontas e marca.">
-<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0b0f17" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" id="meta-tema">
+<script>try{var t=JSON.parse(localStorage.getItem('cvd.tema')||'"claro"');if(t==='escuro'){document.documentElement.setAttribute('data-theme','dark');document.getElementById('meta-tema').setAttribute('content','#0b0f17')}}catch(e){}</script>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="img/icone.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="img/icone-192.png">
@@ -22,11 +22,11 @@
   --acento:#3d72e6; --acento-tinta:#1d4ed8; --acento-fundo:#eaf0fd; --ok:#12805c; --alerta:#b45309; --alerta-fundo:#fff7e6;
   --raio:16px; --nav-h:64px; --ease:cubic-bezier(.2,.8,.2,1);
 }
-@media (prefers-color-scheme: dark){
-  :root{ --bg:#0b0f17; --surface:#121826; --surface-2:#1a2233; --linha:#1f2a3e; --texto:#eef2f8; --sub:#9aa7bd; --fraco:#6d7a92;
-    --acento:#6c97f5; --acento-tinta:#9db9f8; --acento-fundo:#16233f; --alerta:#fbbf6a; --alerta-fundo:#2f2511; }
-  .bar .logo{filter:brightness(0) invert(1)}
-}
+:root{ color-scheme: light }
+:root[data-theme="dark"]{ color-scheme: dark;
+  --bg:#0b0f17; --surface:#121826; --surface-2:#1a2233; --linha:#1f2a3e; --texto:#eef2f8; --sub:#9aa7bd; --fraco:#6d7a92;
+  --acento:#6c97f5; --acento-tinta:#9db9f8; --acento-fundo:#16233f; --alerta:#fbbf6a; --alerta-fundo:#2f2511; }
+:root[data-theme="dark"] .bar .logo{filter:brightness(0) invert(1)}
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0}
 body{font-family:"Montserrat",system-ui,sans-serif;font-weight:500;font-size:15px;line-height:1.45;background:var(--bg);color:var(--texto);
@@ -291,6 +291,8 @@ const P = {
   link:'<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/>',
   info:'<circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/>',
   video:'<rect x="3" y="6" width="13" height="12" rx="2"/><path d="m16 10 5-3v10l-5-3z"/>',
+  lua:'<path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/>',
+  sol:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>',
 };
 const ic = (n, cls='i') => `<svg class="${cls}" viewBox="0 0 24 24" aria-hidden="true">${P[n]||P.doc}</svg>`;
 
@@ -696,6 +698,15 @@ function bannerInstalar(){
   return '';
 }
 
+/* ===================== Tema (branco por padrão; escuro por escolha) ===================== */
+const temaEscuro = () => document.documentElement.getAttribute('data-theme') === 'dark';
+function aplicarTema(escuro){
+  if(escuro) document.documentElement.setAttribute('data-theme','dark'); else document.documentElement.removeAttribute('data-theme');
+  document.getElementById('meta-tema').setAttribute('content', escuro ? '#0b0f17' : '#ffffff');
+  ls.set('tema', escuro ? 'escuro' : 'claro');
+  document.querySelectorAll('[data-tema]').forEach(b=>{ b.innerHTML = ic(escuro?'sol':'lua'); b.setAttribute('aria-label', escuro?'Usar visual branco':'Usar visual escuro'); });
+}
+
 /* ===================== Roteador ===================== */
 const NAV = [['#/','Início','casa','inicio'],['#/tipo/catalogo','Catálogos','livro','catalogo'],['#/procedimentos','Procedim.','dente','proc'],['#/pontas','Pontas','pilula','pontas'],['#/salvos','Salvos','estrela','salvos']];
 const barEl = document.getElementById('bar'), app = document.getElementById('app'), navEl = document.getElementById('nav');
@@ -727,6 +738,7 @@ function pintar(){
   const inicio = !!tela.inicio;
   barEl.innerHTML = (tela.voltar ? `<a class="ibtn" href="${tela.voltar}" aria-label="Voltar">${ic('volta')}</a>` : `<a href="#/" aria-label="Início"><img class="logo" src="img/logo.svg" alt="CVDentus"></a>`)
     + `<span class="titulo-pequeno">${inicio?'':esc(tela.titulo||'')}</span><span class="esp"></span>`
+    + `<button class="ibtn" data-tema aria-label="${temaEscuro()?'Usar visual branco':'Usar visual escuro'}">${ic(temaEscuro()?'sol':'lua')}</button>`
     + `<button class="ibtn" data-busca aria-label="Buscar">${ic('busca')}</button>`;
   app.innerHTML = tela.corpo;
   const atual = qualNav(a, b);
@@ -763,6 +775,7 @@ async function compartilhar(x){
 }
 document.addEventListener('click', e=>{
   const t = e.target;
+  if(t.closest('[data-tema]')){ aplicarTema(!temaEscuro()); toast(temaEscuro() ? 'Visual escuro' : 'Visual branco'); return; }
   if(t.closest('[data-busca]')){ abrirBusca(); return; }
   if(t.closest('[data-fechar-busca]')){ fecharBusca(); return; }
   const sug = t.closest('[data-sug]'); if(sug){ const q = document.getElementById('q'); q.value = sug.dataset.sug; q.dispatchEvent(new Event('input')); q.focus(); return; }
