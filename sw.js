@@ -1,5 +1,5 @@
 // Cache só da "casca" do app (alguns KB). Os materiais em si são sempre links externos.
-const VERSAO = 'cvd-materiais-v16';
+const VERSAO = 'cvd-materiais-v18';
 const CASCA = ['./', 'index.html', 'dados.js', 'pontas.js', 'pontas_img.js', 'lupas.js', 'thumbs.js', 'fotos.js', 'manifest.webmanifest', 'img/logo-branco.svg', 'img/icone.svg',
   'img/optymus.webp', 'img/clinical-plus.webp', 'img/dentsurg-pro.webp'];
 

@@ -516,11 +516,20 @@ function cardPonta(p){
   const pots = [...new Set(p.linhas.map(l=>l[1]))], unica = pots.length===1 && pots[0];
   const exp = p.cod.flatMap(expandirCod), com = exp.filter(c=>IMGP[c]), prim = com[0] ? IMGP[com[0]] : null;
   const foto = prim ? `<a class="foto" href="${esc(prim.link)}" target="_blank" rel="noopener" aria-label="Ver ${esc(com[0])} no site"><img loading="lazy" alt="Ponta ${esc(com[0])}" src="img/pontas/${prim.s}.webp"></a>` : '';
-  const rot = c => exp.length===1 ? 'Baixar fotos' : c.replace(/^(SCPF?|SI) /,'Ø ');
-  const dls = com.map(c=>`<a class="pilula" href="${esc(window.CVD_PONTAS_ZIP + 'ponta-' + IMGP[c].s + '.zip')}" download data-dl="ponta" data-mb="${IMGP[c].mb}">${ic('download')}${esc(rot(c))}${exp.length===1?` · ${fmtTam(Math.max(.1,IMGP[c].mb))}`:''}</a>`).join('');
+  const rot = c => exp.length===1 ? `Fotos (${IMGP[c].f.length})` : c.replace(/^(SCPF?|SI) /,'Ø ');
+  const dls = com.map(c=>`<button class="pilula" data-galeria="${esc(c)}">${ic('download')}${esc(rot(c))}</button>`).join('');
   return `<div class="ponta anima">${foto}<div class="corpo"><div class="topo-p"><div class="cods">${p.cod.map(c=>{ const [cd,diam]=c.split(' · '); return `<span class="cod">${esc(cd)}</span>${diam?`<span class="diam">${esc(diam)}</span>`:''}`; }).join('')}</div>${unica?`<span class="pot-u">${esc(fmtPot(pots[0]))}</span>`:''}</div>
     <ul>${p.linhas.map(([ind,pot])=>`<li><span>${esc(ind)}</span>${!unica&&pot?`<span class="pt">${esc(fmtPot(pot))}</span>`:''}</li>`).join('')}</ul>
-    ${com.length?`<div class="dls">${dls}</div>`:''}</div></div>`;
+    ${com.length?`<div class="dls">${dls}${exp.length>1?'<span class="diam" style="align-self:center">toque no diâmetro</span>':''}</div>`:''}</div></div>`;
+}
+function painelPonta(cod){
+  const I = IMGP[cod]; if(!I) return;
+  const DL = window.CVD_PONTAS_DL, PV = window.CVD_PONTAS_PREV;
+  abrirPainel(`<h3>${esc(cod)}</h3><p class="sub">Toque na imagem que quer baixar. Cada arquivo é um PNG com o nome da ponta no topo.</p>
+    <div class="grade" style="margin-top:14px">${I.f.map(([id,rot,mb])=>`<a class="fcard" href="${esc(DL+id+'.png')}" download data-dl="ponta-png" data-mb="${mb}">
+      <span class="im" style="background:#fff;border:1px solid var(--linha)"><img loading="lazy" alt="${esc(cod+' · '+rot)}" src="${esc(PV+id+'.webp')}"></span>
+      <b>${esc(rot)}</b><small>PNG · ${fmtTam(Math.max(.1,mb))} · baixar</small></a>`).join('')}</div>
+    <div class="botoes" style="margin-top:14px"><a class="btn sec" href="${esc(I.link)}" target="_blank" rel="noopener">${ic('link')}Ver a ponta no site</a></div>`);
 }
 function telaPontas(eqId, modoId){
   const e = PONTAS.find(x=>x.id===eqId);
@@ -796,6 +805,7 @@ document.addEventListener('click', e=>{
   const sug = t.closest('[data-sug]'); if(sug){ const q = document.getElementById('q'); q.value = sug.dataset.sug; q.dispatchEvent(new Event('input')); q.focus(); return; }
   const mais = t.closest('[data-mais]'); if(mais){ painelItem(mais.dataset.mais); return; }
   const ft = t.closest('[data-foto]'); if(ft){ painelFoto(ft.dataset.foto); return; }
+  const gp = t.closest('[data-galeria]'); if(gp){ painelPonta(gp.dataset.galeria); return; }
   const mod = t.closest('[data-modelo]'); if(mod){ painelModelo(mod.dataset.modelo); return; }
   const lupa = t.closest('[data-lupa]'); if(lupa){ painelLupa(lupa.dataset.lupa); return; }
   const lp = t.closest('[data-logo-p]'); if(lp){ const [gi,li] = lp.dataset.logoP.split(':'); painelLogo(+gi,+li); return; }

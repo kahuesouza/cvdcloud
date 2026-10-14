@@ -61,21 +61,21 @@ window.CVD = {
   /* ---------------- MATERIAIS (ex-Linktree) ---------------- */
   materiais: [
     // Catálogos gerais
-    { titulo: 'Catálogo Equipamentos CVDentus', tipo: 'catalogo', produto: 'geral', idioma: 'pt', ano: 2023, url: 'https://online.fliphtml5.com/recpy/tijm/' },
-    { titulo: 'Equipment Catalog CVDentus', tipo: 'catalogo', produto: 'geral', idioma: 'en', ano: 2023, url: 'https://online.fliphtml5.com/recpy/lbtj/' },
-    { titulo: 'Catálogo Equipos CVDentus', tipo: 'catalogo', produto: 'geral', idioma: 'es', ano: 2020, url: 'https://online.fliphtml5.com/recpy/uags/#p=1', aviso: 'Versão 2020' },
-    { titulo: 'Catálogo Representantes', tipo: 'catalogo', produto: 'geral', idioma: 'pt', url: 'http://online.fliphtml5.com/recpy/hvzp/?1612999894896', aviso: 'Versão 2021 — revisar' },
+    { titulo: 'Catálogo Equipamentos CVDentus', tipo: 'catalogo', produto: 'geral', idioma: 'pt', ano: 2023, url: 'https://kahuesouza.github.io/cvdentus-arquivos/livros/catalogo-equipamentos-cvdentus.pdf', baixarUrl: 'https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-equipamentos-cvdentus.pdf', mb: 1.9 },
+    { titulo: 'Equipment Catalog CVDentus', tipo: 'catalogo', produto: 'geral', idioma: 'en', ano: 2023, url: 'https://kahuesouza.github.io/cvdentus-arquivos/livros/equipment-catalog-cvdentus-en.pdf', baixarUrl: 'https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/equipment-catalog-cvdentus-en.pdf', mb: 1.8 },
+    { titulo: 'Catálogo Equipos CVDentus', tipo: 'catalogo', produto: 'geral', idioma: 'es', ano: 2020, url: 'https://kahuesouza.github.io/cvdentus-arquivos/livros/catalogo-equipos-cvdentus-es.pdf', baixarUrl: 'https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-equipos-cvdentus-es.pdf', mb: 1.8, aviso: 'Versão 2020' },
+    { titulo: 'Catálogo Representantes', tipo: 'catalogo', produto: 'geral', idioma: 'pt', url: 'https://kahuesouza.github.io/cvdentus-arquivos/livros/catalogo-representantes.pdf', baixarUrl: 'https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-representantes.pdf', mb: 9.1, aviso: 'Versão 2021 — revisar' },
     { titulo: 'Tabela Comparativa dos Piezos', tipo: 'comparativo', produto: 'geral', idioma: 'pt', mb: 0.8, url: 'https://www.dropbox.com/s/7s7lk805t3kly3t/Tabela%20comparativa.jpg?dl=0' },
     { titulo: '3 Verdades sobre o Piezoelétrico', tipo: 'marketing', produto: 'geral', idioma: 'pt', mb: 0.9, url: 'https://www.dropbox.com/s/z8btmt174vazsqb/3%20Verdades%20sobre%20Piezoel%C3%A9trico.pdf?dl=0' },
 
     // Brocas
-    { titulo: 'Catálogo Brocas CVDentus', tipo: 'catalogo', produto: 'brocas', idioma: 'pt', url: 'https://online.fliphtml5.com/recpy/puzl/' },
+    { titulo: 'Catálogo Brocas CVDentus', tipo: 'catalogo', produto: 'brocas', idioma: 'pt', url: 'https://kahuesouza.github.io/cvdentus-arquivos/livros/catalogo-brocas-cvdentus.pdf', baixarUrl: 'https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-brocas-cvdentus.pdf', mb: 1.9 },
 
     // Pontas
-    { titulo: 'Catálogo Pontas · Clinical Plus e DentSurg Pro', tipo: 'catalogo', produto: 'pontas', idioma: 'pt', ano: 2026, novo: true, url: 'https://online.fliphtml5.com/recpy/dhxf/' },
-    { titulo: 'Catálogo Pontas · Optymus', tipo: 'catalogo', produto: 'pontas', idioma: 'pt', ano: 2025, url: 'https://online.fliphtml5.com/recpy/taio/' },
-    { titulo: 'Tips Catalog · Clinical Plus & DentSurg Pro', tipo: 'catalogo', produto: 'pontas', idioma: 'en', ano: 2023, url: 'https://online.fliphtml5.com/recpy/eqzy/' },
-    { titulo: 'Catálogo Puntas', tipo: 'catalogo', produto: 'pontas', idioma: 'es', ano: 2021, url: 'https://online.fliphtml5.com/recpy/xufg/#p=1', aviso: 'Versão 2021' },
+    { titulo: 'Catálogo Pontas · Clinical Plus e DentSurg Pro', tipo: 'catalogo', produto: 'pontas', idioma: 'pt', ano: 2026, novo: true, url: 'https://kahuesouza.github.io/cvdentus-arquivos/livros/catalogo-pontas-clinical-plus-dentsurg-pro-2026.pdf', baixarUrl: 'https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-pontas-clinical-plus-dentsurg-pro-2026.pdf', mb: 12.1 },
+    { titulo: 'Catálogo Pontas · Optymus', tipo: 'catalogo', produto: 'pontas', idioma: 'pt', ano: 2025, url: 'https://kahuesouza.github.io/cvdentus-arquivos/livros/catalogo-pontas-optymus-2025.pdf', baixarUrl: 'https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-pontas-optymus-2025.pdf', mb: 4.4 },
+    { titulo: 'Tips Catalog · Clinical Plus & DentSurg Pro', tipo: 'catalogo', produto: 'pontas', idioma: 'en', ano: 2023, url: 'https://kahuesouza.github.io/cvdentus-arquivos/livros/tips-catalog-clinical-plus-dentsurg-pro-en.pdf', baixarUrl: 'https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/tips-catalog-clinical-plus-dentsurg-pro-en.pdf', mb: 8.7 },
+    { titulo: 'Catálogo Puntas', tipo: 'catalogo', produto: 'pontas', idioma: 'es', ano: 2021, url: 'https://kahuesouza.github.io/cvdentus-arquivos/livros/catalogo-puntas-es.pdf', baixarUrl: 'https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-puntas-es.pdf', mb: 4.7, aviso: 'Versão 2021' },
     { titulo: 'Bula das pontas · Optymus (completa)', tipo: 'bula', produto: 'optymus', idioma: 'pt', ano: 2023, mb: 0.2, url: 'https://d335luupugsy2.cloudfront.net/cms%2Ffiles%2F59178%2F1693500441Bula_OPTYMUS_2023_v04.pdf', baixarUrl: 'https://github.com/kahuesouza/cvdentus-arquivos/releases/download/bulas/bula-pontas-optymus-2023-v04.pdf' },
     { titulo: 'Bula por procedimento · Clinical Plus (completa)', tipo: 'bula', produto: 'clinical-plus', idioma: 'pt', ano: 2022, mb: 0.2, url: 'https://d335luupugsy2.cloudfront.net/cms%2Ffiles%2F59178%2F1693500450Bula_por_procedimento_clnicas_DS_e_DS_PRO_V.05_2022.pdf', baixarUrl: 'https://github.com/kahuesouza/cvdentus-arquivos/releases/download/bulas/bula-procedimento-clinical-plus-ds-2022-v05.pdf' },
     { titulo: 'Bula cirúrgica e clínica · DentSurg Pro (completa)', tipo: 'bula', produto: 'dentsurg-pro', idioma: 'pt', ano: 2023, mb: 0.2, url: 'https://d335luupugsy2.cloudfront.net/cms%2Ffiles%2F59178%2F1693500463Bula_cirrgicas_e_clnica_DS_PRO_V04_2023.pdf', baixarUrl: 'https://github.com/kahuesouza/cvdentus-arquivos/releases/download/bulas/bula-cirurgica-clinica-dentsurg-pro-2023-v04.pdf' },
@@ -92,7 +92,7 @@ window.CVD = {
     { titulo: 'Modo de Uso Optymus', tipo: 'uso', produto: 'optymus', idioma: 'pt', url: 'https://youtu.be/7lVcrUFfFlQ' },
     { titulo: 'How to Use Optymus', tipo: 'uso', produto: 'optymus', idioma: 'en', url: 'https://youtu.be/jIoGEZu3R3Q' },
     { titulo: 'Modo de Uso Optymus', tipo: 'uso', produto: 'optymus', idioma: 'es', url: 'https://youtu.be/wVuyZkZgaUw' },
-    { titulo: 'Manual Optymus', tipo: 'manual', produto: 'optymus', idioma: 'pt', url: 'https://online.fliphtml5.com/recpy/lngp/' },
+    { titulo: 'Manual Optymus', tipo: 'manual', produto: 'optymus', idioma: 'pt', url: 'https://kahuesouza.github.io/cvdentus-arquivos/livros/manual-optymus.pdf', baixarUrl: 'https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/manual-optymus.pdf', mb: 13.5 },
 
     // Clinical Plus
     { titulo: 'Vídeo 3D Clinical Plus', tipo: 'video3d', produto: 'clinical-plus', idioma: 'pt', url: 'https://youtu.be/eHURySio6Yo' },
@@ -104,8 +104,8 @@ window.CVD = {
     { titulo: 'Modo de Uso Clinical Plus', tipo: 'uso', produto: 'clinical-plus', idioma: 'pt', url: 'https://youtu.be/RMMw6dI8k90' },
     { titulo: 'How to Use Clinical Plus', tipo: 'uso', produto: 'clinical-plus', idioma: 'en', url: 'https://youtu.be/hIYBXrC0Rg0' },
     { titulo: 'Modo de Uso Clinical Plus', tipo: 'uso', produto: 'clinical-plus', idioma: 'es', url: 'https://youtu.be/pJWZx8l6IyU' },
-    { titulo: 'Manual Clinical Plus', tipo: 'manual', produto: 'clinical-plus', idioma: 'pt', url: 'https://online.fliphtml5.com/recpy/zpna/' },
-    { titulo: 'Clinical Plus Manual', tipo: 'manual', produto: 'clinical-plus', idioma: 'en', url: 'https://online.fliphtml5.com/recpy/hqhj/' },
+    { titulo: 'Manual Clinical Plus', tipo: 'manual', produto: 'clinical-plus', idioma: 'pt', url: 'https://kahuesouza.github.io/cvdentus-arquivos/livros/manual-clinical-plus.pdf', baixarUrl: 'https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/manual-clinical-plus.pdf', mb: 16.3 },
+    { titulo: 'Clinical Plus Manual', tipo: 'manual', produto: 'clinical-plus', idioma: 'en', url: 'https://kahuesouza.github.io/cvdentus-arquivos/livros/clinical-plus-manual-en.pdf', baixarUrl: 'https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/clinical-plus-manual-en.pdf', mb: 13.9 },
 
     // DentSurg Pro
     { titulo: 'Vídeo 3D DentSurg Pro', tipo: 'video3d', produto: 'dentsurg-pro', idioma: 'pt', url: 'https://youtu.be/za1LrR-Jp0o' },
@@ -117,12 +117,12 @@ window.CVD = {
     { titulo: 'Modo de Uso DentSurg Pro', tipo: 'uso', produto: 'dentsurg-pro', idioma: 'pt', url: 'https://youtu.be/9kBlbd_ZXd4' },
     { titulo: 'How to Use DentSurg Pro', tipo: 'uso', produto: 'dentsurg-pro', idioma: 'en', url: 'https://youtu.be/AzZOPpWdPy8' },
     { titulo: 'Modo de Uso DentSurg Pro', tipo: 'uso', produto: 'dentsurg-pro', idioma: 'es', url: 'https://youtu.be/OSFUZF5a02w' },
-    { titulo: 'Manual DentSurg Pro', tipo: 'manual', produto: 'dentsurg-pro', idioma: 'pt', url: 'https://online.fliphtml5.com/recpy/iqwp/' },
-    { titulo: 'DentSurg Pro Manual', tipo: 'manual', produto: 'dentsurg-pro', idioma: 'en', url: 'https://online.fliphtml5.com/recpy/phbk/' },
-    { titulo: 'Manual DentSurg Pro', tipo: 'manual', produto: 'dentsurg-pro', idioma: 'es', url: 'https://online.fliphtml5.com/recpy/khjg/' },
+    { titulo: 'Manual DentSurg Pro', tipo: 'manual', produto: 'dentsurg-pro', idioma: 'pt', url: 'https://kahuesouza.github.io/cvdentus-arquivos/livros/manual-dentsurg-pro.pdf', baixarUrl: 'https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/manual-dentsurg-pro.pdf', mb: 15.3 },
+    { titulo: 'DentSurg Pro Manual', tipo: 'manual', produto: 'dentsurg-pro', idioma: 'en', url: 'https://kahuesouza.github.io/cvdentus-arquivos/livros/dentsurg-pro-manual-en.pdf', baixarUrl: 'https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/dentsurg-pro-manual-en.pdf', mb: 14.2 },
+    { titulo: 'Manual DentSurg Pro', tipo: 'manual', produto: 'dentsurg-pro', idioma: 'es', url: 'https://kahuesouza.github.io/cvdentus-arquivos/livros/manual-dentsurg-pro-es.pdf', baixarUrl: 'https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/manual-dentsurg-pro-es.pdf', mb: 13.5 },
     { titulo: 'DentSurg Pro Catalog', tipo: 'catalogo', produto: 'dentsurg-pro', idioma: 'en', mb: 2.1, url: 'https://kahuesouza.github.io/cvdentus-arquivos/catalogos/catalogo-dentsurg-pro-en.pdf', baixarUrl: 'https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/english_CATALOG_DS_PRO_OK.pdf' },
     { titulo: 'Catálogo DentSurg Pro', tipo: 'catalogo', produto: 'dentsurg-pro', idioma: 'es', mb: 2.7, url: 'https://kahuesouza.github.io/cvdentus-arquivos/catalogos/catalogo-dentsurg-pro-es.pdf', baixarUrl: 'https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/SPANISH_CATALOG_DS_PRO_OK.pdf' },
-    { titulo: 'Folder DentSurg Pro Cirúrgico', tipo: 'catalogo', produto: 'dentsurg-pro', idioma: 'pt', ano: 2024, url: 'https://online.fliphtml5.com/recpy/flit/' },
+    { titulo: 'Folder DentSurg Pro Cirúrgico', tipo: 'catalogo', produto: 'dentsurg-pro', idioma: 'pt', ano: 2024, url: 'https://kahuesouza.github.io/cvdentus-arquivos/livros/folder-dentsurg-pro-cirurgico-2024.pdf', baixarUrl: 'https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/folder-dentsurg-pro-cirurgico-2024.pdf', mb: 1.4 },
 
     // Lupas
     { titulo: 'Catálogo de Lupas (online)', tipo: 'catalogo', produto: 'lupas', idioma: 'pt', ano: 2026, novo: true, url: 'https://catalogodelupas.cvdentus.com.br/', pdf: 'https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/catalogo-lupas-oficial-2026.pdf', pdfMb: 49, aviso: 'Confira a política comercial vigente' },
