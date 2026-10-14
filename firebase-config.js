@@ -1,24 +1,19 @@
 /* =====================================================================
    Configuração do Firebase (login, catálogo protegido, comentários e admin)
    ---------------------------------------------------------------------
-   1) Crie o projeto no Firebase (guia: LEIA-ME_ADMIN.md).
-   2) Cole abaixo os valores do "Config do app da Web" e salve.
    Esses valores NÃO são segredos (identificam o projeto). A proteção dos
    dados vem do login e das regras do Firestore (firestore.rules).
-   Enquanto estiver "null", o app funciona sem login (modo de preparação).
+   Se esta configuração for removida (null), o app volta ao modo de
+   preparação (sem login).
    ===================================================================== */
-window.CVD_FIREBASE = null;
-
-/* Exemplo do formato (substitua pelos seus valores):
 window.CVD_FIREBASE = {
-  apiKey: "COLE_AQUI",
-  authDomain: "SEU-PROJETO.firebaseapp.com",
-  projectId: "SEU-PROJETO",
-  storageBucket: "SEU-PROJETO.appspot.com",
-  messagingSenderId: "000000000000",
-  appId: "1:000000000000:web:xxxxxxxxxxxxxxxx"
+  apiKey: "AIzaSyBe8sADQa8drl-VHIadXtQmgQa7-HjKC4U",
+  authDomain: "cvd-vale.firebaseapp.com",
+  projectId: "cvd-vale",
+  storageBucket: "cvd-vale.firebasestorage.app",
+  messagingSenderId: "1019559739053",
+  appId: "1:1019559739053:web:4cdbd254d1df9821571024"
 };
-*/
 
 /* Só estes domínios podem criar conta (a regra de verdade está em firestore.rules). */
 window.CVD_DOMINIOS = ['cvdvale.com.br', 'cvdentus.com.br'];
