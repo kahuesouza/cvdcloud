@@ -411,7 +411,8 @@ function telaInicio(){
   const prodCard = (href, img, nome, sub, i) => `<a class="pc anima" href="${href}" style="--i:${i}"><span class="img">${img}</span><b>${nome}</b><small>${sub}</small></a>`;
   const cards = [
     ...D.produtos.filter(p=>p.img).map((p,i)=>prodCard('#/produto/'+p.id, `<img src="${p.img}" alt="">`, esc(p.nome), esc(p.resumo.split('·')[0].trim()), i)),
-    prodCard('#/lupas', `<img src="img/lupas/flip-kepler.webp" alt="" style="max-width:100%;max-height:100%;width:100%;height:100%;object-fit:cover">`, 'Lupas', 'Flip, TTL e fotóforos', 3),
+    prodCard('#/lupas', `<img src="img/lupas/flip-kepler.webp" alt="" style="max-width:100%;max-height:100%;width:100%;height:100%;object-fit:cover">`, 'Lupas', 'Flip, TTL e armações', 3),
+    prodCard('#/produto/fotoforos', `<img src="img/lupas/jg-m06c.webp" alt="" style="max-width:100%;max-height:100%;width:100%;height:100%;object-fit:cover">`, 'Fotóforos', 'Iluminação LED', 4),
   ].join('');
   const outros = D.produtos.filter(p=>!p.img && p.id!=='lupas');
   const novos = D.materiais.filter(m=>m.novo && doPt(m));
@@ -439,6 +440,7 @@ function telaInicio(){
 
 function telaProduto(id, aba){
   if(id==='lupas') return telaLupas();
+  if(id==='fotoforos') return telaFotoforos();
   if(id==='pontas') return telaPontas();
   const p = PROD[id]; if(!p) return telaInicio();
   const todos = D.materiais.filter(m=>m.produto===id);
@@ -546,14 +548,16 @@ function resultadosPontas(termos){
 }
 
 /* ---------- Lupas e fotóforos ---------- */
-const ORDEM_TIPO = ['Flip-up','TTL','Fotóforo','Armação'];
+const ORDEM_TIPO = ['Flip-up','TTL','Armação'];
+const modelosLupas = () => (LUPAS.modelos||[]).filter(x=>x.tipo!=='Fotóforo');
+const gruposLupas = () => LUPAS.grupos.filter(g=>g.id!=='fotoforos');
 function linhaModelo(x, i){
   const sub = [x.linha, x.tipo, x.mags].filter(Boolean).join(' · ');
   return `<div class="linha cod-row anima" style="--i:${Math.min(i,10)}"><button class="abrir" data-modelo="${x.id}"><span class="lead foto" style="background:#fff;border:1px solid var(--linha)"><img loading="lazy" alt="" src="img/modelos/${x.id}.webp"></span><span class="txt"><span class="t cod-n">${esc(x.codigo)}</span><span class="m" style="display:block">${esc(sub)}</span></span></button>
     <span class="acoes"><a class="ibtn" href="${esc(x.zip)}" download data-dl="modelo" data-mb="${x.mb}" aria-label="Baixar ${x.n} fotos (${fmtTam(x.mb)})">${ic('download')}</a></span></div>`;
 }
 function telaModelos(){
-  const mod = LUPAS.modelos || []; let html = '', i = 0;
+  const mod = modelosLupas(); let html = '', i = 0;
   ORDEM_TIPO.forEach(t=>{ const g = mod.filter(x=>x.tipo===t); if(!g.length) return;
     html += secao(t==='Fotóforo'?'Fotóforos':t==='Armação'?'Armações':'Lupas '+t, g.length) + `<div class="lista">${g.map(x=>linhaModelo(x,i++)).join('')}</div>`; });
   return html;
@@ -566,11 +570,21 @@ function painelModelo(id){
     <p class="desc">Seleção de ${x.n} fotos em alta resolução, prontas para uso em apresentações e redes.</p>
     <div class="botoes"><a class="btn prim" href="${esc(x.zip)}" download data-dl="modelo" data-mb="${x.mb}">${ic('download')}Baixar fotos <small>${x.n} · ${fmtTam(x.mb)}</small></a></div>`);
 }
+function telaFotoforos(){
+  const g = LUPAS.grupos.find(x=>x.id==='fotoforos'); if(!g) return telaInicio();
+  const mods = (LUPAS.modelos||[]).filter(x=>x.tipo==='Fotóforo');
+  const cards = `<div class="grade">${g.itens.map((it,i)=>`<button class="cartao anima" style="--i:${i}" data-lupa="${it.id}"><span class="im"><img loading="lazy" src="img/lupas/${it.img}.webp" alt="${esc(it.nome)}"></span><b>${esc(it.nome)}</b><small>${esc(it.kit || 'Fotóforo LED')}</small></button>`).join('')}</div>`;
+  return { titulo:'Fotóforos', voltar:'#/', corpo: largo('Fotóforos','Iluminação LED frontal de precisão para lupas e procedimentos.')
+    + `<div class="nota anima" style="--i:1">${ic('info')}<div><b>Antes de passar valores</b>${esc(LUPAS.nota)}</div></div>`
+    + secao('Modelos', g.itens.length) + `<p style="color:var(--sub);font-size:13.5px;margin:6px 0 0">Toque para ver a descrição, o vídeo e baixar fotos.</p>` + cards
+    + secao('Fotos por código', mods.length) + `<div class="lista">${mods.map((x,i)=>linhaModelo(x,i)).join('')}</div>`
+    + secao('Mais') + `<div class="lista">${linhaExt(LUPAS.catalogoOnline,'globo','Catálogo online com vídeos 360°','Fotóforos, lupas e armações')}</div>` };
+}
 function telaLupas(grupoId){
-  const gs = LUPAS.grupos;
+  const gs = gruposLupas();
   if(grupoId==='codigos'){
     return { titulo:'Lupas', voltar:'#/', corpo: largo('Lupas','Lupas, fotóforos e armações CVDentus.')
-      + abas([...gs.map(g=>({id:g.id,nome:g.nome.replace('Lupas ',''),n:g.itens.length})), {id:'codigos',nome:'Por código',n:(LUPAS.modelos||[]).length}], 'codigos', '#/lupas')
+      + abas([...gs.map(g=>({id:g.id,nome:g.nome.replace('Lupas ',''),n:g.itens.length})), {id:'codigos',nome:'Por código',n:modelosLupas().length}], 'codigos', '#/lupas')
       + `<p style="color:var(--sub);font-size:13.5px;margin:10px 0 0">Cada modelo pelo código, com a seleção de fotos para baixar.</p>` + telaModelos() };
   }
   const ativo = gs.find(g=>g.id===grupoId) || gs[0];
@@ -583,7 +597,8 @@ function telaLupas(grupoId){
   return { titulo:'Lupas', voltar:'#/', corpo: largo('Lupas','Lupas, fotóforos e armações CVDentus.')
     + `<div class="nota anima" style="--i:1">${ic('info')}<div><b>Antes de passar valores</b>${esc(LUPAS.nota)}</div></div>`
     + secao('Catálogo e simulador') + docs
-    + abas([...gs.map(g=>({id:g.id,nome:g.nome.replace('Lupas ',''),n:g.itens.length})), {id:'codigos',nome:'Por código',n:(LUPAS.modelos||[]).length}], ativo.id, '#/lupas')
+    + `<div style="margin-top:8px">${linkRow('#/produto/fotoforos','lupa','Fotóforos (iluminação LED)',(LUPAS.grupos.find(g=>g.id==='fotoforos')||{itens:[]}).itens.length+' modelos')}</div>`
+    + abas([...gs.map(g=>({id:g.id,nome:g.nome.replace('Lupas ',''),n:g.itens.length})), {id:'codigos',nome:'Por código',n:modelosLupas().length}], ativo.id, '#/lupas')
     + `<p style="color:var(--sub);font-size:13.5px;margin:10px 0 0">${esc(ativo.sub)} Toque para ver o vídeo 360° e baixar fotos e vídeo.</p>` + itens };
 }
 function painelLupa(id){
