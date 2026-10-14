@@ -92,16 +92,25 @@ main{max-width:720px;margin:0 auto;padding:6px 18px 28px}
 
 /* listas */
 .lista{margin-top:6px}
-.linha{display:flex;align-items:center;gap:12px;padding:12px 0;border-top:1px solid var(--linha);min-height:64px}
+.linha{display:flex;align-items:center;gap:12px;padding:12px 0;border-top:1px solid var(--linha);min-height:72px}
 .linha:first-child{border-top:0}
 .linha .abrir{display:flex;align-items:center;gap:12px;flex:1;min-width:0;transition:opacity .15s;text-align:left}
 .linha .abrir:active{opacity:.55}
 .lead{flex:none;width:46px;height:46px;border-radius:12px;background:var(--surface-2);display:grid;place-items:center;color:var(--acento);position:relative;overflow:hidden}
-.lead.thumb{width:74px;height:46px;background:#000}
+.lead.thumb{width:96px;height:60px;background:#000;border-radius:10px}
 .lead.thumb img{width:100%;height:100%;object-fit:cover;display:block;opacity:.92}
 .lead.thumb .pl{position:absolute;inset:0;display:grid;place-items:center;color:#fff}
 .lead.thumb .pl svg{width:20px;height:20px;fill:#fff;stroke:none;filter:drop-shadow(0 1px 3px rgba(0,0,0,.5))}
 .lead.foto img{width:100%;height:100%;object-fit:contain}
+.lead.doc{width:64px;height:64px;border-radius:10px;background:#fff;border:1px solid var(--linha)}
+.lead.doc img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.fcard{position:relative;display:block}
+.fcard .im{display:grid;place-items:center;aspect-ratio:1;border-radius:var(--raio);background:var(--surface-2);overflow:hidden;width:100%;transition:transform .18s var(--ease)}
+.fcard .im:active{transform:scale(.97)}
+.fcard .im img{max-width:100%;max-height:100%;object-fit:contain;display:block}
+.fcard b{display:block;margin-top:8px;font-size:13.5px;font-weight:700;line-height:1.25}
+.fcard small{color:var(--fraco);font-weight:600;font-size:12px}
+.fcard .ia{position:absolute;top:8px;left:8px;font-size:10.5px;font-weight:700;background:var(--alerta-fundo);color:var(--alerta);padding:3px 8px;border-radius:999px}
 .txt{min-width:0;flex:1}
 .t{font-weight:600;font-size:14.5px;line-height:1.3;overflow-wrap:anywhere}
 .m{margin-top:3px;font-size:12.5px;color:var(--sub);font-weight:500;line-height:1.35}
@@ -247,6 +256,8 @@ nav.base a.on svg{transform:translateY(-1px) scale(1.08);stroke-width:2}
 <script src="pontas.js"></script>
 <script src="pontas_img.js"></script>
 <script src="lupas.js"></script>
+<script src="thumbs.js"></script>
+<script src="fotos.js"></script>
 <script>
 /* ===================== Ícones ===================== */
 const P = {
@@ -329,7 +340,17 @@ function linkDownload(x){
 const tamDownload = x => x.pdf ? x.pdfMb : x.mb;
 
 /* ===================== Componentes ===================== */
+const THUMBS = window.CVD_THUMBS || {};
+const FOT = (window.CVD_FOTOS || {}).equip || {};
+function leadPorThumb(url, icone){
+  const t = THUMBS[url];
+  if(!t) return `<span class="lead">${ic(icone||'doc')}</span>`;
+  return t[1] === 'v'
+    ? `<span class="lead thumb"><img loading="lazy" alt="" src="img/t/${t[0]}"><span class="pl">${ic('playcheio')}</span></span>`
+    : `<span class="lead doc"><img loading="lazy" alt="" src="img/t/${t[0]}"></span>`;
+}
 function leadDe(x){
+  if(THUMBS[x.url]) return leadPorThumb(x.url);
   const yt = ytId(x.url);
   if(yt) return `<span class="lead thumb"><img loading="lazy" alt="" src="https://i.ytimg.com/vi/${yt}/mqdefault.jpg" onerror="this.remove()"><span class="pl">${ic('playcheio')}</span></span>`;
   if(x.esp) return `<span class="lead">${ic('play')}</span>`;
@@ -360,6 +381,7 @@ const lista = (itens, opt={}) => `<div class="lista">${itens.map((x,i)=>linha(x,
 const secao = (t, n='') => `<div class="sec"><h2>${t}</h2>${n!==''?`<span>${n}</span>`:''}</div>`;
 const vazio = (msg) => `<div class="vazio">${ic('busca')}<p>${msg}</p></div>`;
 const linkRow = (href, icone, titulo, n='') => `<a class="link-row anima" href="${href}">${ic(icone)}<span class="t">${titulo}</span>${n!==''?`<span class="n">${n}</span>`:''}<span class="seta">${ic('seta')}</span></a>`;
+const linhaExt = (href, icone, titulo, meta) => `<div class="linha anima"><a class="abrir" href="${esc(href)}" target="_blank" rel="noopener">${leadPorThumb(href,icone)}<span class="txt"><span class="t">${esc(titulo)}</span><span class="m" style="display:block">${esc(meta)}</span></span></a><span class="acoes"><span class="ibtn" style="color:var(--fraco)">${ic('seta')}</span></span></div>`;
 const linkRowExt = (href, icone, titulo) => `<a class="link-row anima" href="${esc(href)}" target="_blank" rel="noopener">${ic(icone)}<span class="t">${esc(titulo)}</span><span class="seta">${ic('seta')}</span></a>`;
 const largo = (titulo, sub='') => `<div class="largo anima"><h1>${titulo}</h1>${sub?`<p>${sub}</p>`:''}</div>`;
 const outrosIdiomas = itens => {
@@ -420,15 +442,17 @@ function telaProduto(id, aba){
   const todos = D.materiais.filter(m=>m.produto===id);
   const grupos = GRUPOS_ABA.map(g=>({...g, itens: todos.filter(m=>g.tipos.includes(m.tipo))})).filter(g=>g.itens.some(doPt));
   const eq = PONTAS.find(e=>e.id===id);
+  if(FOT[id]){ const k = grupos.findIndex(g=>g.id==='videos'); grupos.splice(k<0?0:k+1, 0, {id:'fotos', nome:'Fotos', tipos:[], itens:[], nFotos: FOT[id].grupos.reduce((s,g)=>s+g.itens.length,0)}); }
   const ativo = grupos.find(g=>g.id===aba) || grupos[0];
   let corpo = '';
-  if(ativo){
+  if(ativo && ativo.id==='fotos'){ corpo = telaFotos(id); }
+  else if(ativo){
     const pt = ativo.itens.filter(doPt);
     if(ativo.id==='videos') ['video3d','instalacao','uso','apoio'].forEach(t=>{ const g = pt.filter(m=>m.tipo===t); if(g.length) corpo += secao(TIPOS[t].nome, g.length) + lista(g); });
     else corpo += lista(pt);
     corpo += outrosIdiomas(todos.filter(m=>ativo.tipos.includes(m.tipo)));
   } else corpo = vazio(`Nenhum material de ${esc(p.nome)} cadastrado ainda.`);
-  const abasHtml = grupos.length > 1 ? abas(grupos.map(g=>({id:g.id,nome:g.nome,n:g.itens.filter(doPt).length})), ativo.id, '#/produto/'+id) : '';
+  const abasHtml = grupos.length > 1 ? abas(grupos.map(g=>({id:g.id,nome:g.nome,n:g.id==='fotos'?g.nFotos:g.itens.filter(doPt).length})), ativo.id, '#/produto/'+id) : '';
   const hero = p.img
     ? `<div class="anima" style="display:flex;align-items:center;gap:16px;margin:8px 0 2px"><span class="pc" style="flex:none"><span class="img" style="width:112px;height:96px"><img src="${p.img}" alt=""></span></span><div class="largo" style="margin:0"><h1 style="font-size:26px">${esc(p.nome)}</h1><p>${esc(p.resumo)}</p></div></div>`
     : largo(esc(p.nome), esc(p.resumo));
@@ -436,6 +460,25 @@ function telaProduto(id, aba){
   return { titulo:p.nome, voltar:'#/', corpo: hero + pontasRow + abasHtml + corpo };
 }
 
+function telaFotos(id){
+  const F = FOT[id]; if(!F) return '';
+  let html = `<div class="lista"><div class="linha anima"><a class="abrir" href="${esc(F.zip.url)}" download data-dl="fotos-zip" data-mb="${F.zip.mb}"><span class="lead">${ic('download')}</span><span class="txt"><span class="t">Baixar todas (.zip)</span><span class="m" style="display:block">${F.zip.n} imagens · ${fmtTam(F.zip.mb)}${F.grupos.some(g=>g.ia)?' · sem as geradas com IA':''}</span></span></a></div></div>`;
+  F.grupos.forEach(g=>{
+    html += secao(g.nome, g.itens.length);
+    if(g.ia) html += `<p style="color:var(--alerta);font-size:12.5px;margin:6px 0 0;line-height:1.5">Imagens geradas com IA. Confira se representam fielmente o produto antes de usar.</p>`;
+    html += `<div class="grade" style="margin-top:12px">${g.itens.map((it,i)=>`<div class="fcard anima" style="--i:${Math.min(i,10)}"><button class="im" data-foto="${esc(it.id)}" aria-label="Ver ${esc(it.titulo)}"><img loading="lazy" alt="${esc(it.titulo)}" src="img/eq/${esc(it.id)}.webp"></button>${g.ia?'<span class="ia">IA</span>':''}<b>${esc(it.titulo)}</b><small>${it.ext.toUpperCase()} · ${fmtTam(Math.max(.1,it.mb))}</small></div>`).join('')}</div>`;
+  });
+  return html;
+}
+function painelFoto(fid){
+  let it, g, eq;
+  Object.entries(FOT).forEach(([e,F])=>F.grupos.forEach(gr=>gr.itens.forEach(x=>{ if(x.id===fid){ it=x; g=gr; eq=e; } })));
+  if(!it) return; const CF = window.CVD_FOTOS;
+  abrirPainel(`<div class="img-g" style="background:var(--surface-2)"><img src="${esc(CF.prev + it.id + '.webp')}" alt="${esc(it.titulo)}" onerror="this.onerror=null;this.src='img/eq/${esc(it.id)}.webp'"></div>
+    <h3 style="margin-top:14px">${esc(it.titulo)}</h3><p class="sub">${esc(PROD[eq].nome)} · ${esc(g.nome)}</p>
+    ${g.ia?'<p class="desc" style="color:var(--alerta)">Imagem gerada com IA. Confira se representa fielmente o produto antes de usar.</p>':''}
+    <div class="botoes"><a class="btn prim" href="${esc(CF.dl + it.id + '.' + it.ext)}" download data-dl="foto" data-mb="${it.mb}">${ic('download')}Baixar ${it.ext.toUpperCase()} <small>${fmtTam(Math.max(.1,it.mb))}</small></a></div>`);
+}
 function telaTipo(tipo){
   const t = TIPOS[tipo]; if(!t) return telaInicio();
   const todos = D.materiais.filter(m=>m.tipo===tipo), pt = todos.filter(doPt);
@@ -462,7 +505,7 @@ function telaProcedimentos(espSel){
 const fmtPot = p => !p ? '' : /^\d+$/.test(p) ? 'Pot. ' + p : p;
 const expandirCod = c => { const m = c.match(/^(\S+) · Ø (.+)$/); return m ? m[2].split('/').map(d => m[1] + ' ' + d) : [c.replace(/\s*\(.*?\)/g,'').trim()]; };
 function bulaRow(e){
-  return `<div class="linha anima"><a class="abrir" href="${esc(e.bula.ver)}" target="_blank" rel="noopener"><span class="lead">${ic('pilula')}</span><span class="txt"><span class="t">${esc(e.bula.titulo)}</span><span class="m" style="display:block">Versão ${esc(e.bula.versao)} · PDF completo</span></span></a>
+  return `<div class="linha anima"><a class="abrir" href="${esc(e.bula.ver)}" target="_blank" rel="noopener">${leadPorThumb(e.bula.ver,'pilula')}<span class="txt"><span class="t">${esc(e.bula.titulo)}</span><span class="m" style="display:block">Versão ${esc(e.bula.versao)} · PDF completo</span></span></a>
   <span class="acoes"><a class="ibtn" href="${esc(e.bula.baixar)}" download data-dl="bula" data-mb="0.2" aria-label="Baixar bula">${ic('download')}</a></span></div>`;
 }
 function cardPonta(p){
@@ -532,9 +575,9 @@ function telaLupas(grupoId){
   const itens = `<div class="grade">${ativo.itens.map((it,i)=>`<button class="cartao anima" style="--i:${i}" data-lupa="${it.id}"><span class="im"><img loading="lazy" src="img/lupas/${it.img}.webp" alt="${esc(it.nome)}"></span><b>${esc(it.nome)}</b><small>${esc(it.kit || (ativo.id==='flip'?'Flip-up':ativo.id==='ttl'?'TTL':''))}</small></button>`).join('')}</div>`;
   const pdf = LUPAS.pdf;
   const docs = `<div class="lista">
-    <div class="linha anima"><a class="abrir" href="${esc(pdf.baixar)}" download data-dl="lupas-pdf" data-mb="${pdf.mb}"><span class="lead">${ic('livro')}</span><span class="txt"><span class="t">Catálogo de lupas (PDF oficial)</span><span class="m" style="display:block">2026 · ${fmtTam(pdf.mb)}</span></span></a><span class="acoes"><a class="ibtn" href="${esc(pdf.baixar)}" download data-dl="lupas-pdf" data-mb="${pdf.mb}" aria-label="Baixar">${ic('download')}</a></span></div>
-    ${linkRowExt(LUPAS.catalogoOnline,'globo','Catálogo online com vídeos 360°')}
-    ${linkRowExt(LUPAS.simulador,'lupa','Simulador de lupas')}</div>`;
+    <div class="linha anima"><a class="abrir" href="${esc(pdf.baixar)}" download data-dl="lupas-pdf" data-mb="${pdf.mb}">${leadPorThumb(pdf.baixar,'livro')}<span class="txt"><span class="t">Catálogo de lupas (PDF oficial)</span><span class="m" style="display:block">2026 · ${fmtTam(pdf.mb)}</span></span></a><span class="acoes"><a class="ibtn" href="${esc(pdf.baixar)}" download data-dl="lupas-pdf" data-mb="${pdf.mb}" aria-label="Baixar">${ic('download')}</a></span></div>
+    ${linhaExt(LUPAS.catalogoOnline,'globo','Catálogo online com vídeos 360°','Vídeos 360° de cada modelo')}
+    ${linhaExt(LUPAS.simulador,'lupa','Simulador de lupas','Escolha a lupa ideal')}</div>`;
   return { titulo:'Lupas', voltar:'#/', corpo: largo('Lupas','Lupas, fotóforos e armações CVDentus.')
     + `<div class="nota anima" style="--i:1">${ic('info')}<div><b>Antes de passar valores</b>${esc(LUPAS.nota)}</div></div>`
     + secao('Catálogo e simulador') + docs
@@ -724,6 +767,7 @@ document.addEventListener('click', e=>{
   if(t.closest('[data-fechar-busca]')){ fecharBusca(); return; }
   const sug = t.closest('[data-sug]'); if(sug){ const q = document.getElementById('q'); q.value = sug.dataset.sug; q.dispatchEvent(new Event('input')); q.focus(); return; }
   const mais = t.closest('[data-mais]'); if(mais){ painelItem(mais.dataset.mais); return; }
+  const ft = t.closest('[data-foto]'); if(ft){ painelFoto(ft.dataset.foto); return; }
   const mod = t.closest('[data-modelo]'); if(mod){ painelModelo(mod.dataset.modelo); return; }
   const lupa = t.closest('[data-lupa]'); if(lupa){ painelLupa(lupa.dataset.lupa); return; }
   const lp = t.closest('[data-logo-p]'); if(lp){ const [gi,li] = lp.dataset.logoP.split(':'); painelLogo(+gi,+li); return; }
