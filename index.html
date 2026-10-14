@@ -254,6 +254,30 @@ details.outros[open] summary svg{transform:rotate(90deg)}
 .chips-f button.on{background:var(--acento-fundo);color:var(--acento-tinta)}
 .dicas-item{margin-top:18px}
 .dicas-item h4{margin:0 0 6px;font-size:13px;color:var(--sub);font-weight:700}
+.gate{position:fixed;inset:0;z-index:200;background:var(--bg);overflow:auto;display:none}
+.gate-on .gate{display:block}
+.gate-on .bar,.gate-on nav.base,.gate-on main{display:none!important}
+.gate-in{max-width:420px;margin:0 auto;padding:calc(40px + env(safe-area-inset-top)) 22px 40px}
+.gate-in .logo-g{height:38px;display:block;margin:0 auto 26px}
+:root[data-theme="dark"] .gate-in .logo-g{filter:brightness(0) invert(1)}
+.gate-in h1{font-size:26px;font-weight:800;letter-spacing:-.02em;margin:0;text-align:center}
+.gate-in .sub-g{color:var(--sub);font-size:14px;text-align:center;margin:8px 0 0;line-height:1.5}
+.gate-in .dom{display:inline-block;background:var(--surface-2);border-radius:8px;padding:2px 8px;font-weight:700;color:var(--texto);font-size:12.5px}
+.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:14px}
+.kpi{background:var(--surface);border:1px solid var(--linha);border-radius:var(--raio);padding:14px}
+.kpi b{display:block;font-size:26px;font-weight:800;letter-spacing:-.02em;line-height:1.1}
+.kpi small{color:var(--fraco);font-weight:600;font-size:12px}
+.barras{display:flex;align-items:flex-end;gap:5px;height:96px;margin-top:12px}
+.barras span{flex:1;background:var(--acento-fundo);border-radius:5px 5px 2px 2px;min-height:3px;position:relative}
+.barras span.hj{background:var(--acento)}
+.barras-leg{display:flex;justify-content:space-between;color:var(--fraco);font-size:11px;font-weight:600;margin-top:6px}
+.rank{margin-top:6px}
+.rank .r{display:flex;align-items:center;gap:10px;padding:10px 0;border-top:1px solid var(--linha);font-size:13.5px}
+.rank .r:first-child{border-top:0}
+.rank .r .n{flex:none;width:24px;color:var(--fraco);font-weight:700;font-size:12.5px}
+.rank .r .t{flex:1;min-width:0;overflow-wrap:anywhere;font-weight:600}
+.rank .r .v{flex:none;font-weight:800;color:var(--acento-tinta)}
+.rank .vz{color:var(--fraco);font-size:13px;padding:10px 0}
 .rodape{text-align:center;font-size:12px;color:var(--fraco);margin:34px 0 4px;line-height:1.6}
 .toast{position:fixed;left:50%;bottom:calc(var(--nav-h) + 22px + env(safe-area-inset-bottom));transform:translate(-50%,14px) scale(.96);background:var(--texto);color:var(--bg);
   padding:11px 18px;border-radius:999px;font-size:13px;font-weight:600;opacity:0;transition:.28s var(--ease);pointer-events:none;z-index:90;white-space:nowrap}
@@ -276,17 +300,12 @@ nav.base a.on svg{transform:translateY(-1px) scale(1.08);stroke-width:2}
 <header class="bar" id="bar"></header>
 <main id="app"></main>
 <nav class="base"><div id="nav"></div></nav>
+<div class="gate" id="gate" role="dialog" aria-label="Acesso"></div>
 <div class="veu" id="veu"></div>
 <div class="painel" id="painel" role="dialog" aria-modal="true"></div>
 <div class="busca-ov" id="busca-ov" role="dialog" aria-label="Buscar"></div>
 <div class="toast" id="toast" role="status"></div>
 
-<script src="dados.js"></script>
-<script src="pontas.js"></script>
-<script src="pontas_img.js"></script>
-<script src="lupas.js"></script>
-<script src="thumbs.js"></script>
-<script src="fotos.js"></script>
 <script src="firebase-config.js"></script>
 <script type="module" src="conta.js"></script>
 <script>
@@ -329,7 +348,7 @@ const P = {
 const ic = (n, cls='i') => `<svg class="${cls}" viewBox="0 0 24 24" aria-hidden="true">${P[n]||P.doc}</svg>`;
 
 /* ===================== Dados ===================== */
-const D = window.CVD, PONTAS = window.CVD_PONTAS || [], IMGP = window.CVD_PONTAS_IMG || {}, LUPAS = window.CVD_LUPAS;
+let D, PONTAS = [], IMGP = {}, LUPAS, PROD = {}, ESP = {}, TODOS = {}, THUMBS = {}, FOT = {}, favs = new Set();
 const TIPOS = {
   catalogo:{nome:'Catálogos',ic:'livro'}, manual:{nome:'Manuais',ic:'doc'}, video3d:{nome:'Vídeos 3D',ic:'cubo'},
   instalacao:{nome:'Instalação',ic:'chave'}, uso:{nome:'Modo de uso',ic:'play'}, bula:{nome:'Bulas',ic:'pilula'},
@@ -344,11 +363,6 @@ const GRUPOS_ABA = [
   {id:'outros', nome:'Outros', tipos:['landing','marketing','treinamento']},
 ];
 const LANG = {pt:'Português', en:'English', es:'Español'};
-D.materiais.forEach((m,i)=> m.id = 'm'+i);
-D.procedimentos.forEach((p,i)=> p.id = 'p'+i);
-const PROD = Object.fromEntries(D.produtos.map(p=>[p.id,p]));
-const ESP = Object.fromEntries(D.especialidades.map(e=>[e.id,e]));
-const TODOS = Object.fromEntries([...D.materiais, ...D.procedimentos].map(x=>[x.id,x]));
 const doPt = m => !m.idioma || m.idioma === 'pt';
 
 /* ===================== Utilidades ===================== */
@@ -359,7 +373,16 @@ const ytId = u => { const m = (u||'').match(/(?:youtu\.be\/|v=)([\w-]{11})/); re
 const fmtTam = mb => mb >= 1000 ? (mb/1000).toFixed(1).replace('.',',')+' GB' : (mb < 1 ? '<1 MB' : (mb < 10 ? String(mb).replace('.',',') : Math.round(mb)) + ' MB');
 const reduzido = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const favUrls = new Set(ls.get('favUrls', []));
-const favs = new Set(Object.values(TODOS).filter(x=>favUrls.has(x.url)).map(x=>x.id));
+function prepararDados(){
+  D = window.CVD; PONTAS = window.CVD_PONTAS || []; IMGP = window.CVD_PONTAS_IMG || {}; LUPAS = window.CVD_LUPAS;
+  THUMBS = window.CVD_THUMBS || {}; FOT = (window.CVD_FOTOS || {}).equip || {};
+  D.materiais.forEach((m,i)=> m.id = 'm'+i);
+  D.procedimentos.forEach((p,i)=> p.id = 'p'+i);
+  PROD = Object.fromEntries(D.produtos.map(p=>[p.id,p]));
+  ESP = Object.fromEntries(D.especialidades.map(e=>[e.id,e]));
+  TODOS = Object.fromEntries([...D.materiais, ...D.procedimentos].map(x=>[x.id,x]));
+  favs = new Set(Object.values(TODOS).filter(x=>favUrls.has(x.url)).map(x=>x.id));
+}
 const salvarFavs = () => ls.set('favUrls', [...favs].map(i=>TODOS[i].url));
 
 function linkDownload(x){
@@ -374,8 +397,6 @@ function linkDownload(x){
 const tamDownload = x => x.pdf ? x.pdfMb : x.mb;
 
 /* ===================== Componentes ===================== */
-const THUMBS = window.CVD_THUMBS || {};
-const FOT = (window.CVD_FOTOS || {}).equip || {};
 function leadPorThumb(url, icone){
   const t = THUMBS[url];
   if(!t) return `<span class="lead">${ic(icone||'doc')}</span>`;
@@ -408,9 +429,10 @@ function metaDe(x, {produto=false}={}){
 function linha(x, opt={}){
   const dl = linkDownload(x), tam = tamDownload(x);
   return `<div class="linha anima" style="--i:${opt.i||0}">
-    <a class="abrir" href="${esc(x.url)}" target="_blank" rel="noopener">${leadDe(x)}<span class="txt"><span class="t">${esc(x.titulo)}</span><span class="m" style="display:block">${metaDe(x,opt)}</span></span></a>
+    <a class="abrir" data-item="${x.id}" href="${esc(x.url)}" target="_blank" rel="noopener">${leadDe(x)}<span class="txt"><span class="t">${esc(x.titulo)}</span><span class="m" style="display:block">${metaDe(x,opt)}</span></span></a>
     <span class="acoes">${dl ? `<a class="ibtn" href="${esc(dl)}" download data-dl="${x.id}" data-mb="${tam||0}" aria-label="Baixar${tam?' ('+fmtTam(tam)+')':''}">${ic('download')}</a>` : ''}<button class="ibtn" data-mais="${x.id}" aria-label="Mais opções">${ic('mais')}</button></span></div>`;
 }
+const track = (tipo, chave, titulo, extra) => { const C = CONTA(); if(C && C.configurado && C.registrar) C.registrar(tipo, String(chave||''), String(titulo||''), extra||''); };
 const lista = (itens, opt={}) => `<div class="lista">${itens.map((x,i)=>linha(x,{...opt,i:Math.min(i,10)})).join('')}</div>`;
 const secao = (t, n='') => `<div class="sec"><h2>${t}</h2>${n!==''?`<span>${n}</span>`:''}</div>`;
 const vazio = (msg) => `<div class="vazio">${ic('busca')}<p>${msg}</p></div>`;
@@ -558,7 +580,7 @@ function painelPonta(cod){
   const I = IMGP[cod]; if(!I) return;
   const DL = window.CVD_PONTAS_DL, PV = window.CVD_PONTAS_PREV;
   abrirPainel(`<h3>${esc(cod)}</h3><p class="sub">Toque na imagem que quer baixar. Cada arquivo é um PNG com o nome da ponta no topo.</p>
-    <div class="grade" style="margin-top:14px">${I.f.map(([id,rot,mb])=>`<a class="fcard" href="${esc(DL+id+'.png')}" download data-dl="ponta-png" data-mb="${mb}">
+    <div class="grade" style="margin-top:14px">${I.f.map(([id,rot,mb])=>`<a class="fcard" href="${esc(DL+id+'.png')}" download data-dl="ponta-png" data-tit="${esc(cod+' · '+rot)}" data-mb="${mb}">
       <span class="im" style="background:#fff;border:1px solid var(--linha)"><img loading="lazy" alt="${esc(cod+' · '+rot)}" src="${esc(PV+id+'.webp')}"></span>
       <b>${esc(rot)}</b><small>PNG · ${fmtTam(Math.max(.1,mb))} · baixar</small></a>`).join('')}</div>
     <div class="botoes" style="margin-top:14px"><a class="btn sec" href="${esc(I.link)}" target="_blank" rel="noopener">${ic('link')}Ver a ponta no site</a></div>`);
@@ -720,7 +742,7 @@ function abrirBusca(){
   const recentes = ls.get('recentes', []);
   const vazioHtml = `${recentes.length?`${secao('Recentes')}<div class="sugestoes">${recentes.map(r=>`<button data-sug="${esc(r)}">${esc(r)}</button>`).join('')}</div>`:''}${secao('Sugestões')}<div class="sugestoes">${SUGESTOES.map(r=>`<button data-sug="${esc(r)}">${esc(r)}</button>`).join('')}</div>`;
   res.innerHTML = vazioHtml;
-  let t; q.addEventListener('input', ()=>{ clearTimeout(t); t = setTimeout(()=>{ const v = q.value.trim(); res.innerHTML = v ? resultadosBusca(v) : vazioHtml; },90); });
+  let t, tb; q.addEventListener('input', ()=>{ clearTimeout(t); t = setTimeout(()=>{ const v = q.value.trim(); res.innerHTML = v ? resultadosBusca(v) : vazioHtml; },90); clearTimeout(tb); tb = setTimeout(()=>{ const v = q.value.trim(); if(v.length >= 3) track('buscar', 'busca', v.slice(0, 100), ''); }, 1600); });
   q.addEventListener('keydown', e=>{ if(e.key==='Enter'){ const v=q.value.trim(); if(v){ ls.set('recentes',[v,...recentes.filter(r=>r!==v)].slice(0,6)); q.blur(); } } });
   setTimeout(()=>q.focus(), 60);
 }
@@ -768,7 +790,7 @@ function aplicarTema(escuro){
 /* ===================== Conta, comentários e painel admin ===================== */
 const CONTA = () => window.CVDConta;
 let modoLogin = 'entrar';
-let filtroAdmin = { comentarios: 'pendente', usuarios: 'pendente' };
+let filtroAdmin = { comentarios: 'pendente', usuarios: 'aprovado' };
 const CATS = { sugestao: 'Sugestão', erro: 'Erro ou link quebrado', dica: 'Dica de venda', duvida: 'Dúvida' };
 const chaveItem = x => { let hh = 5381; const s = x.url || x.titulo || ''; for(let i = 0; i < s.length; i++) hh = ((hh << 5) + hh + s.charCodeAt(i)) | 0; return 'i' + (hh >>> 0).toString(36); };
 const fmtData = t => t && t.seconds ? new Date(t.seconds * 1000).toLocaleDateString('pt-BR', {day:'2-digit', month:'short', year:'numeric'}) : 'agora';
@@ -800,7 +822,7 @@ function telaConta(){
   if(C.aprovado()){
     corpo += `<div class="botoes" style="display:grid;gap:8px;margin-top:14px"><button class="btn prim" data-comentar="geral">${ic('mega')}Enviar comentário</button></div>`;
     corpo += `<div style="margin-top:8px">${linkRow('#/dicas', 'estrela', 'Dicas da equipe')}</div>`;
-    if(C.admin()) corpo += `<div>${linkRow('#/admin/comentarios', 'info', 'Painel de administração')}</div>`;
+    if(C.admin()) corpo += `<div>${linkRow('#/admin/painel', 'info', 'Painel de administração')}</div>`;
     corpo += secao('Meus comentários') + `<div id="meus-com">${vazio('Carregando…')}</div>`;
   }
   corpo += `<div style="margin-top:22px"><button class="btn sec" data-sair>Sair da conta</button></div>`;
@@ -828,28 +850,86 @@ function telaDicas(){
   } };
 }
 
+const ABAS_ADMIN = [{id:'painel', nome:'Painel'}, {id:'comentarios', nome:'Comentários'}, {id:'usuarios', nome:'Equipe'}, {id:'links', nome:'Links'}, {id:'catalogo', nome:'Catálogo'}];
+function haQuanto(t){
+  const s = t && (t.seconds ?? (t.toMillis ? t.toMillis()/1000 : null)); if(!s) return 'nunca';
+  const d = Math.max(0, Date.now()/1000 - s);
+  if(d < 90) return 'agora'; if(d < 3600) return Math.round(d/60) + ' min'; if(d < 86400) return Math.round(d/3600) + ' h';
+  return Math.round(d/86400) + (Math.round(d/86400) === 1 ? ' dia' : ' dias');
+}
 function telaAdmin(aba){
-  const C = CONTA(); aba = aba === 'usuarios' ? 'usuarios' : 'comentarios';
+  const C = CONTA(); aba = ABAS_ADMIN.find(x => x.id === aba) ? aba : 'painel';
   const base = { titulo:'Administração', voltar:'#/conta' };
   if(!C || !C.configurado || !C.resolvido) return { ...base, corpo: largo('Administração') + infoCard('Carregando', 'Só um instante.') };
   if(!C.admin()) return { ...base, corpo: largo('Administração') + infoCard('Área restrita', 'Somente administradores têm acesso a esta página.') };
-  const sts = aba === 'comentarios' ? [['pendente','Pendentes'],['aprovado','Aprovados'],['rejeitado','Rejeitados']] : [['pendente','Pendentes'],['aprovado','Aprovados'],['bloqueado','Bloqueados']];
-  const corpo = largo('Administração', 'Aprove comentários e cadastros da equipe.')
-    + abas([{id:'comentarios', nome:'Comentários'}, {id:'usuarios', nome:'Cadastros'}], aba, '#/admin')
-    + `<div class="chips-f">${sts.map(([k,n]) => `<button class="${filtroAdmin[aba] === k ? 'on' : ''}" data-filtro="${aba}:${k}">${n}</button>`).join('')}</div><div id="admin-lista">${vazio('Carregando…')}</div>`;
+  const sts = aba === 'comentarios' ? [['pendente','Pendentes'],['aprovado','Aprovados'],['rejeitado','Rejeitados']] : aba === 'usuarios' ? [['aprovado','Ativos'],['bloqueado','Bloqueados']] : [];
+  const corpo = largo('Administração', 'Uso do app, equipe e moderação.')
+    + abas(ABAS_ADMIN, aba, '#/admin')
+    + (sts.length ? `<div class="chips-f">${sts.map(([k,n]) => `<button class="${filtroAdmin[aba] === k ? 'on' : ''}" data-filtro="${aba}:${k}">${n}</button>`).join('')}</div>` : '')
+    + `<div id="admin-lista">${vazio('Carregando…')}</div>`;
   return { ...base, corpo, depois: () => carregarAdmin(aba) };
+}
+const rankHtml = (itens, vazioMsg) => itens.length ? `<div class="rank">${itens.map((x, i) => `<div class="r"><span class="n">${i + 1}</span><span class="t">${esc(x[0])}</span><span class="v">${x[1]}</span></div>`).join('')}</div>` : `<div class="rank"><div class="vz">${vazioMsg || 'Sem dados ainda.'}</div></div>`;
+function contar(lista, chaveFn, tituloFn){
+  const m = new Map();
+  lista.forEach(e => { const k = chaveFn(e); const o = m.get(k) || [tituloFn(e), 0]; o[1]++; m.set(k, o); });
+  return [...m.values()].sort((a, b) => b[1] - a[1]);
+}
+async function carregarPainel(el){
+  const C = CONTA();
+  const [users, evs] = await Promise.all([C.todosUsuarios(), C.eventos(30, 3000)]);
+  const agora = Date.now(), seg = t => (t && (t.seconds ?? (t.toMillis ? t.toMillis()/1000 : 0))) || 0;
+  const dia = 86400, nUser = new Map(users.map(u => [u.uid, u.nome]));
+  const novos7 = users.filter(u => agora/1000 - seg(u.criadoEm) < 7*dia).length;
+  const ativos7 = users.filter(u => agora/1000 - seg(u.ultimoAcesso) < 7*dia).length;
+  const ativosHoje = users.filter(u => agora/1000 - seg(u.ultimoAcesso) < dia).length;
+  const bloqueados = users.filter(u => u.status === 'bloqueado').length;
+  const porTipo = t => evs.filter(e => e.tipo === t);
+  // atividade por dia (14 dias)
+  const dias = []; for(let i = 13; i >= 0; i--){ const d0 = new Date(); d0.setHours(0,0,0,0); d0.setDate(d0.getDate() - i); dias.push({ ini: d0.getTime()/1000, n: 0, rot: d0.getDate() }); }
+  evs.forEach(e => { const s = seg(e.criadoEm); for(let i = dias.length - 1; i >= 0; i--){ if(s >= dias[i].ini){ dias[i].n++; break; } } });
+  const mx = Math.max(1, ...dias.map(d => d.n));
+  const topEquipe = contar(evs, e => e.uid, e => nUser.get(e.uid) || 'Usuário').slice(0, 6);
+  const ultimos = [...users].filter(u => seg(u.ultimoAcesso)).sort((a, b) => seg(b.ultimoAcesso) - seg(a.ultimoAcesso)).slice(0, 8);
+  const recentes = [...users].sort((a, b) => seg(b.criadoEm) - seg(a.criadoEm)).slice(0, 6);
+  const nunca = users.filter(u => !seg(u.ultimoAcesso) && u.status !== 'bloqueado').length;
+  el.innerHTML = `
+    <div class="kpis"><div class="kpi"><b>${users.length}</b><small>Pessoas cadastradas</small></div><div class="kpi"><b>${novos7}</b><small>Novas nos últimos 7 dias</small></div>
+      <div class="kpi"><b>${ativosHoje}</b><small>Acessaram nas últimas 24 h</small></div><div class="kpi"><b>${ativos7}</b><small>Ativas nos últimos 7 dias</small></div></div>
+    ${secao('Atividade nos últimos 14 dias', evs.length + ' ações em 30 dias')}
+    <div class="barras" aria-label="Ações por dia">${dias.map((d, i) => `<span class="${i === dias.length - 1 ? 'hj' : ''}" style="height:${Math.max(3, Math.round(d.n / mx * 100))}%" title="${d.n}"></span>`).join('')}</div>
+    <div class="barras-leg"><span>${dias[0].rot}</span><span>hoje</span></div>
+    ${secao('Materiais mais abertos', '30 dias')}${rankHtml(contar(porTipo('abrir'), e => e.chave, e => e.titulo).slice(0, 8), 'Ninguém abriu materiais ainda.')}
+    ${secao('Mais baixados', '30 dias')}${rankHtml(contar(porTipo('baixar'), e => e.chave, e => e.titulo).slice(0, 8), 'Nenhum download ainda.')}
+    ${secao('Mais compartilhados com clientes', '30 dias')}${rankHtml(contar(porTipo('compartilhar'), e => e.chave, e => e.titulo).slice(0, 8), 'Nenhum compartilhamento ainda.')}
+    ${secao('Buscas mais feitas', '30 dias')}${rankHtml(contar(porTipo('buscar'), e => (e.titulo || '').toLowerCase(), e => e.titulo).slice(0, 8), 'Nenhuma busca ainda.')}
+    ${secao('Áreas mais visitadas', '30 dias')}${rankHtml(contar(porTipo('tela'), e => e.chave, e => e.titulo || e.chave).slice(0, 8), 'Sem dados ainda.')}
+    ${secao('Equipe mais ativa', '30 dias')}${rankHtml(topEquipe, 'Sem dados ainda.')}
+    ${secao('Últimos acessos')}<div class="rank">${ultimos.length ? ultimos.map(u => `<div class="r"><span class="t">${esc(u.nome)}<br><span class="quem" style="color:var(--fraco);font-size:12px;font-weight:500">${esc(u.email)}</span></span><span class="v" style="color:var(--sub);font-weight:600">${haQuanto(u.ultimoAcesso)}</span></div>`).join('') : '<div class="vz">Ninguém acessou ainda.</div>'}</div>
+    ${secao('Cadastros recentes', nunca ? nunca + ' nunca acessaram' : '')}<div class="rank">${recentes.map(u => `<div class="r"><span class="t">${esc(u.nome)}<br><span class="quem" style="color:var(--fraco);font-size:12px;font-weight:500">${esc(u.email)}</span></span><span class="v" style="color:var(--sub);font-weight:600">${fmtData(u.criadoEm)}</span></div>`).join('')}</div>
+    ${bloqueados ? `<p style="color:var(--sub);font-size:12.5px;margin:12px 0 0">${bloqueados} pessoa(s) bloqueada(s).</p>` : ''}
+    <p style="color:var(--fraco);font-size:12px;line-height:1.5;margin:16px 0 0">Baseado nos últimos 3.000 eventos registrados. Cada abertura, download, compartilhamento, busca e visita a uma área vira um evento.</p>`;
 }
 async function carregarAdmin(aba){
   const el = document.getElementById('admin-lista'); if(!el) return; const C = CONTA(), st = filtroAdmin[aba];
   try{
-    if(aba === 'comentarios'){
+    if(aba === 'painel'){ await carregarPainel(el); }
+    else if(aba === 'comentarios'){
       const l = await C.listarComentarios(st);
       el.innerHTML = l.length ? l.map(c => `<div class="cartao-c anima"><div class="topo-c"><span class="st">${esc(CATS[c.categoria] || c.categoria)}</span>${stChip(c.status)}<span class="quem">${esc(c.autorNome)} · ${fmtData(c.criadoEm)}</span></div><p>${esc(c.texto)}</p><div class="item-c">Sobre: ${esc(c.itemTitulo || 'Geral')}</div>${c.notaAdmin ? `<p style="color:var(--sub);font-size:13px">Nota: ${esc(c.notaAdmin)}</p>` : ''}
         <div class="acoes-c">${st !== 'aprovado' ? `<button class="ok" data-mod="${esc(c.id)}:aprovado">Aprovar</button>` : ''}${st !== 'rejeitado' ? `<button data-mod="${esc(c.id)}:rejeitado">Rejeitar</button>` : ''}${st !== 'pendente' ? `<button data-mod="${esc(c.id)}:pendente">Voltar p/ pendente</button>` : ''}<button class="ruim" data-excluir="${esc(c.id)}">Excluir</button></div></div>`).join('') : vazio('Nada por aqui.');
-    } else {
+    } else if(aba === 'usuarios'){
       const l = await C.listarUsuarios(st);
-      el.innerHTML = l.length ? l.map(u => `<div class="cartao-c anima"><div class="topo-c"><b>${esc(u.nome)}</b>${stChip(u.status)}${u.role === 'admin' ? '<span class="st">Admin</span>' : ''}</div><div class="quem">${esc(u.email)} · ${fmtData(u.criadoEm)}</div>
-        ${u.uid !== C.user.uid && u.role !== 'admin' ? `<div class="acoes-c">${u.status !== 'aprovado' ? `<button class="ok" data-usr="${esc(u.uid)}:aprovado">Aprovar</button>` : ''}${u.status !== 'bloqueado' ? `<button class="ruim" data-usr="${esc(u.uid)}:bloqueado">Bloquear</button>` : ''}${u.status === 'bloqueado' ? `<button data-usr="${esc(u.uid)}:pendente">Voltar p/ pendente</button>` : ''}</div>` : ''}</div>`).join('') : vazio('Nada por aqui.');
+      el.innerHTML = l.length ? l.map(u => `<div class="cartao-c anima"><div class="topo-c"><b>${esc(u.nome)}</b>${stChip(u.status)}${u.role === 'admin' || (window.CVD_ADMINS || []).includes((u.email || '').toLowerCase()) ? '<span class="st">Admin</span>' : ''}</div><div class="quem">${esc(u.email)}</div><div class="quem" style="margin-top:2px">Cadastro ${fmtData(u.criadoEm)} · último acesso ${haQuanto(u.ultimoAcesso)}</div>
+        ${u.uid !== C.user.uid && u.role !== 'admin' && !(window.CVD_ADMINS || []).includes((u.email || '').toLowerCase()) ? `<div class="acoes-c">${u.status !== 'bloqueado' ? `<button class="ruim" data-usr="${esc(u.uid)}:bloqueado">Bloquear</button>` : `<button class="ok" data-usr="${esc(u.uid)}:aprovado">Liberar de novo</button>`}</div>` : ''}</div>`).join('') : vazio('Ninguém por aqui.');
+    } else if(aba === 'links'){
+      const l = await C.listarCompartilhamentos(); const us = new Map((await C.todosUsuarios()).map(u => [u.uid, u.nome]));
+      el.innerHTML = `<p style="color:var(--sub);font-size:13.5px;margin:12px 0 0">Links enviados a clientes. Excluir derruba o link na hora.</p>` + (l.length ? l.map(c => `<div class="cartao-c anima"><b style="font-size:14px">${esc(c.titulo)}</b><div class="quem" style="margin-top:2px">${esc(us.get(c.criadoPor) || 'Equipe')} · ${fmtData(c.criadoEm)}${c.tipo ? ' · ' + esc(c.tipo) : ''}</div><div class="acoes-c"><button data-abrir-link="${esc(c.id)}">Abrir</button><button class="ruim" data-excluir-link="${esc(c.id)}">Excluir link</button></div></div>`).join('') : vazio('Nenhum link compartilhado ainda.'));
+    } else if(aba === 'catalogo'){
+      const orig = window.__origemCatalogo === 'servidor' ? 'do servidor protegido (Firestore)' : window.__origemCatalogo === 'arquivos' ? 'dos arquivos do app (modo de preparação)' : 'de nenhuma fonte';
+      el.innerHTML = `<div class="nota anima" style="--i:0">${ic('info')}<div><b>Fonte atual do catálogo</b>O app está lendo ${orig}. ${D ? D.materiais.length + ' materiais, ' + D.procedimentos.length + ' procedimentos.' : ''}</div></div>
+        <div class="cartao-c"><b style="font-size:14.5px">Publicar catálogo</b><p style="color:var(--sub);font-size:13.5px">Escolha o arquivo <b>catalogo-export.json</b> (gerado a partir dos arquivos do app). Ele é gravado no servidor protegido e só aparece para quem tem login.</p>
+        <label class="btn prim" style="margin-top:10px;cursor:pointer">${ic('download')}Escolher arquivo<input type="file" accept="application/json,.json" data-importar hidden></label><p class="erro-f" id="imp-msg" role="status" style="color:var(--sub)"></p></div>`;
     }
   }catch(e){ el.innerHTML = vazio('Não foi possível carregar: ' + esc(e.message || 'erro')); }
 }
@@ -871,12 +951,83 @@ function atualizarDicasDoItem(x){
   C.dicasDoItem(chaveItem(x)).then(l => { if(!l.length) return; el.innerHTML = `<h4>Dicas da equipe (${l.length})</h4>` + l.slice(0, 4).map(c => `<div class="cartao-c"><div class="topo-c"><span class="st">${esc(CATS[c.categoria] || c.categoria)}</span><span class="quem">${esc((c.autorNome || '').split(' ')[0])}</span></div><p>${esc(c.texto)}</p></div>`).join(''); }).catch(() => {});
 }
 
-window.addEventListener('cvd-conta-pronta', () => {
-  const C = CONTA(); if(!C) return;
-  if(C.ouvintes) C.ouvintes.add(() => { if(/^#\/(conta|admin|dicas)/.test(location.hash)) render(); else { const b = document.querySelector('[href="#/conta"]'); if(b) b.style.color = C.user ? 'var(--acento)' : ''; } });
-  if(/^#\/(conta|admin|dicas)/.test(location.hash)) render();
-});
-if(CONTA() && CONTA().ouvintes) window.dispatchEvent(new Event('cvd-conta-pronta'));
+/* ===================== Acesso obrigatório (login) e carregamento do catálogo ===================== */
+const gateEl = document.getElementById('gate');
+let appIniciado = false, carregandoCatalogo = false, modoGate = 'entrar';
+const VERSAO_APP = 'v20';
+function gateHtml(corpo){ return `<div class="gate-in"><img class="logo-g" src="img/logo.svg" alt="CVDentus">${corpo}</div>`; }
+function gateMostrar(html){ document.body.classList.add('gate-on'); gateEl.innerHTML = gateHtml(html); }
+function gateFechar(){ document.body.classList.remove('gate-on'); gateEl.innerHTML = ''; }
+const DOM_TXT = `<span class="dom">@cvdvale.com.br</span> ou <span class="dom">@cvdentus.com.br</span>`;
+function atualizarGate(){
+  const C = CONTA(); if(!C || !C.configurado) return;
+  const e = C.estado();
+  if(e === 'ok'){
+    if(!appIniciado && !carregandoCatalogo) carregarEIniciar();
+    else if(appIniciado){ gateFechar(); render(); }
+    return;
+  }
+  if(appIniciado && (e === 'deslogado' || e === 'bloqueado' || e === 'dominio')){ /* saiu ou foi bloqueado: volta para a tela de acesso */ }
+  if(e === 'carregando') return gateMostrar(`<h1>CVDentus</h1><p class="sub-g">Verificando seu acesso…</p>`);
+  if(e === 'indisponivel') return gateMostrar(`<h1>Sem conexão</h1><p class="sub-g">Não foi possível falar com o servidor. Verifique a internet.</p><div class="form"><button class="btn prim" onclick="location.reload()">Tentar de novo</button></div>`);
+  if(e === 'verificar') return gateMostrar(`<h1>Confirme seu e-mail</h1><p class="sub-g">Enviamos uma mensagem de confirmação para<br><b>${esc(C.user.email)}</b><br>Abra o e-mail, toque no link de confirmação e volte aqui.</p>
+    <div class="form"><button class="btn prim" data-atualizar>Já confirmei</button><button class="btn sec" data-reenviar>Reenviar e-mail</button><button class="link-b" data-sair>Usar outra conta</button></div><p class="sub-g" style="font-size:12.5px">Não achou? Olhe também a caixa de spam.</p>`);
+  if(e === 'dominio') return gateMostrar(`<h1>Acesso não permitido</h1><p class="sub-g">Só e-mails ${DOM_TXT} têm acesso a este app.</p><div class="form"><button class="btn sec" data-sair>Sair</button></div>`);
+  if(e === 'bloqueado') return gateMostrar(`<h1>Acesso bloqueado</h1><p class="sub-g">Fale com a administração do app.</p><div class="form"><button class="btn sec" data-sair>Sair</button></div>`);
+  // deslogado
+  const entrar = modoGate === 'entrar';
+  gateMostrar(`<h1>Acesso restrito</h1><p class="sub-g">Entre com o seu e-mail corporativo ${DOM_TXT}.</p>
+    <div class="seg"><button class="${entrar ? 'on' : ''}" data-gmodo="entrar">Entrar</button><button class="${!entrar ? 'on' : ''}" data-gmodo="criar">Criar conta</button></div>`
+    + (entrar
+      ? `<form class="form" data-f="entrar" novalidate><label>E-mail<input name="email" type="email" required autocomplete="username" inputmode="email"></label><label>Senha<input name="senha" type="password" required autocomplete="current-password"></label><p class="erro-f" role="alert"></p><button class="btn prim" type="submit">Entrar</button><button class="link-b" type="button" data-esqueci>Esqueci minha senha</button></form>`
+      : `<form class="form" data-f="criar" novalidate><label>Nome completo<input name="nome" required autocomplete="name" maxlength="80"></label><label>E-mail corporativo<input name="email" type="email" required autocomplete="username" inputmode="email"></label><label>Senha (mínimo 8, com letras e números)<input name="senha" type="password" required minlength="8" autocomplete="new-password"></label><label>Confirmar senha<input name="senha2" type="password" required minlength="8" autocomplete="new-password"></label><p class="erro-f" role="alert"></p><button class="btn prim" type="submit">Criar conta</button><p class="sub-g" style="font-size:12.5px;margin:0">Enviaremos um e-mail para você confirmar o endereço. Depois é só entrar.</p></form>`));
+}
+function aplicarCatalogo(c){
+  window.CVD = c.dados; window.CVD_PONTAS = c.pontas; window.CVD_LUPAS = c.lupas; window.CVD_FOTOS = c.fotos; window.CVD_THUMBS = c.thumbs;
+  const pi = c.pontas_img || {}; window.CVD_PONTAS_IMG = pi.img; window.CVD_PONTAS_DL = pi.dl; window.CVD_PONTAS_PREV = pi.prev;
+}
+async function carregarEstatico(){
+  for(const a of ['dados.js', 'pontas.js', 'pontas_img.js', 'lupas.js', 'thumbs.js', 'fotos.js']){
+    await new Promise((ok, er) => { const s = document.createElement('script'); s.src = a + '?' + VERSAO_APP; s.onload = ok; s.onerror = () => er(new Error(a)); document.head.appendChild(s); });
+  }
+}
+async function carregarEIniciar(){
+  const C = CONTA(); carregandoCatalogo = true;
+  gateMostrar(`<h1>CVDentus</h1><p class="sub-g">Carregando o catálogo…</p>`);
+  try{
+    let cat = null;
+    try{ cat = await C.carregarCatalogo(); }catch(e){}
+    if(cat && cat.dados){ aplicarCatalogo(cat); window.__origemCatalogo = 'servidor'; }
+    else { await carregarEstatico(); window.__origemCatalogo = 'arquivos'; }
+    prepararDados(); appIniciado = true; carregandoCatalogo = false; gateFechar(); render();
+  }catch(e){
+    carregandoCatalogo = false;
+    if(C.admin()) gateMostrar(`<h1>Catálogo ainda não publicado</h1><p class="sub-g">Escolha o arquivo <b>catalogo-export.json</b> para publicar o catálogo no servidor protegido.</p>
+      <div class="form"><label class="btn prim" style="cursor:pointer">Escolher arquivo<input type="file" accept="application/json,.json" data-importar hidden></label><p class="erro-f" id="imp-msg" role="status" style="color:var(--sub)"></p><button class="link-b" data-sair>Sair</button></div>`);
+    else gateMostrar(`<h1>Catálogo indisponível</h1><p class="sub-g">O catálogo ainda não foi publicado. Fale com a administração do app.</p><div class="form"><button class="btn sec" data-sair>Sair</button></div>`);
+  }
+}
+async function importarCatalogo(arquivo, msg){
+  const C = CONTA(); const say = t => { if(msg) msg.textContent = t; };
+  try{
+    const j = JSON.parse(await arquivo.text());
+    const chaves = ['dados', 'pontas', 'pontas_img', 'lupas', 'fotos', 'thumbs'];
+    if(!j.dados || !j.dados.materiais || !j.dados.procedimentos) throw new Error('Arquivo inválido.');
+    for(const k of chaves){ if(j[k] === undefined) continue; say('Publicando ' + k + '…'); await C.publicarCatalogo(k, JSON.stringify(j[k])); }
+    say('Pronto! Catálogo publicado.'); toast('Catálogo publicado');
+    setTimeout(() => location.reload(), 900);
+  }catch(e){ say('Não foi possível publicar: ' + (e.message || 'erro')); }
+}
+function boot(){
+  const C = CONTA();
+  if(!C || !C.configurado){   // modo de preparação: ainda sem Firebase → app aberto
+    carregarEstatico().then(() => { window.__origemCatalogo = 'arquivos'; prepararDados(); appIniciado = true; render(); })
+      .catch(() => gateMostrar(`<h1>CVDentus</h1><p class="sub-g">Não foi possível carregar o catálogo.</p>`));
+    return;
+  }
+  if(C.ouvintes) C.ouvintes.add(atualizarGate);
+  atualizarGate();
+}
 
 /* ===================== Roteador ===================== */
 const NAV = [['#/','Início','casa','inicio'],['#/tipo/catalogo','Catálogos','livro','catalogo'],['#/procedimentos','Procedim.','dente','proc'],['#/pontas','Pontas','pilula','pontas'],['#/salvos','Salvos','estrela','salvos']];
@@ -923,6 +1074,7 @@ function pintar(){
   if(!tabsMesmaPagina || h.split('/').length < 4) { if(!mesma) window.scrollTo(0,0); }
   rotaAnterior = h;
   document.title = (tela.titulo && !inicio ? tela.titulo + ' · ' : '') + 'CVDentus Materiais';
+  track('tela', h.split('/').slice(1, 3).join('/') || 'inicio', tela.titulo || 'Início', '');
   if(io) io.disconnect();
   const g = app.querySelector('.largo');
   if(g && !inicio){ io = new IntersectionObserver(([en])=>barEl.classList.toggle('compacta', !en.isIntersecting), {rootMargin:'-56px 0px 0px 0px'}); io.observe(g); }
@@ -938,6 +1090,8 @@ function posicionarAbas(){
   requestAnimationFrame(()=>requestAnimationFrame(()=>barra.classList.remove('sem')));
 }
 function render(){
+  if(!appIniciado) return;
+  const Cx = CONTA(); if(Cx && Cx.configurado && Cx.estado() !== 'ok') return;
   let feito = false; const rodar = () => { if(feito) return; feito = true; pintar(); };
   if(document.startViewTransition && !reduzido && document.visibilityState === 'visible'){
     try{ document.startViewTransition(rodar); }catch(e){ rodar(); }
@@ -949,11 +1103,26 @@ window.addEventListener('resize', posicionarAbas);
 
 /* ===================== Ações ===================== */
 let tt; function toast(msg){ const t = document.getElementById('toast'); t.textContent = msg; t.classList.add('on'); clearTimeout(tt); tt = setTimeout(()=>t.classList.remove('on'), 1900); }
+async function enviarLink(titulo, link){
+  const texto = `${titulo} — CVDentus`;
+  if(navigator.share){ try{ await navigator.share({title:texto, text:texto, url:link}); return; }catch(e){ if(e.name==='AbortError') return; } }
+  try{ await navigator.clipboard.writeText(`${texto}\n${link}`); toast('Link copiado'); }
+  catch(e){ window.open('https://wa.me/?text=' + encodeURIComponent(`${texto}\n${link}`), '_blank'); }
+}
 async function compartilhar(x){
-  const nome = x.esp ? `${x.titulo}${x.prof?' · '+x.prof:''}` : x.titulo, texto = `${nome} — CVDentus`;
-  if(navigator.share){ try{ await navigator.share({title:texto, text:texto, url:x.url}); return; }catch(e){ if(e.name==='AbortError') return; } }
-  try{ await navigator.clipboard.writeText(`${texto}\n${x.url}`); toast('Link copiado'); }
-  catch(e){ window.open('https://wa.me/?text=' + encodeURIComponent(`${texto}\n${x.url}`), '_blank'); }
+  const nome = x.esp ? `${x.titulo}${x.prof?' · '+x.prof:''}` : x.titulo;
+  const C = CONTA();
+  if(C && C.configurado && C.aprovado()){
+    // link seguro: o cliente só vê ESTE material, sem acesso ao resto do app
+    try{
+      const dl = linkDownload(x), t = THUMBS[x.url], tam = tamDownload(x);
+      const id = await C.criarCompartilhamento({ titulo: nome, url: x.url, baixarUrl: dl || undefined, thumb: t ? 'img/t/' + t[0] : undefined, tipo: x.esp ? 'Vídeo de procedimento' : (TIPOS[x.tipo] || {}).nome, mb: typeof tam === 'number' ? tam : undefined });
+      track('compartilhar', chaveItem(x), x.titulo, '');
+      await enviarLink(nome, new URL('v.html', location.href.split('#')[0]).href + '#' + id);
+    }catch(e){ toast('Não foi possível gerar o link agora'); }
+    return;
+  }
+  await enviarLink(nome, x.url);   // modo de preparação (sem Firebase)
 }
 document.addEventListener('click', e=>{
   const t = e.target;
@@ -961,6 +1130,8 @@ document.addEventListener('click', e=>{
   if(t.closest('[data-busca]')){ abrirBusca(); return; }
   if(t.closest('[data-fechar-busca]')){ fecharBusca(); return; }
   const sug = t.closest('[data-sug]'); if(sug){ const q = document.getElementById('q'); q.value = sug.dataset.sug; q.dispatchEvent(new Event('input')); q.focus(); return; }
+  const gm = t.closest('[data-gmodo]'); if(gm){ modoGate = gm.dataset.gmodo; atualizarGate(); return; }
+  const it = t.closest('[data-item]'); if(it){ const x = TODOS[it.dataset.item]; if(x) track('abrir', chaveItem(x), x.titulo, x.produto || x.esp || ''); }
   const mais = t.closest('[data-mais]'); if(mais){ painelItem(mais.dataset.mais); return; }
   const ft = t.closest('[data-foto]'); if(ft){ painelFoto(ft.dataset.foto); return; }
   const gp = t.closest('[data-galeria]'); if(gp){ painelPonta(gp.dataset.galeria); return; }
@@ -970,10 +1141,19 @@ document.addEventListener('click', e=>{
   const cp = t.closest('[data-compartilhar]'); if(cp){ compartilhar(TODOS[cp.dataset.compartilhar]); return; }
   const cm = t.closest('[data-comentar]'); if(cm){ const id = cm.dataset.comentar; fecharPainel(); const x = TODOS[id]; setTimeout(() => painelComentario(x ? { chave: chaveItem(x), titulo: x.titulo } : { chave: 'geral', titulo: 'Geral' }), 200); return; }
   if(t.closest('[data-modo]')){ modoLogin = t.closest('[data-modo]').dataset.modo; render(); return; }
-  if(t.closest('[data-sair]')){ CONTA().sair().then(() => { toast('Você saiu'); render(); }); return; }
+  if(t.closest('[data-sair]')){ CONTA().sair().then(() => { toast('Você saiu'); atualizarGate(); }); return; }
+  const al = t.closest('[data-abrir-link]'); if(al){ window.open(new URL('v.html', location.href.split('#')[0]).href + '#' + al.dataset.abrirLink, '_blank'); return; }
+  const el_ = t.closest('[data-excluir-link]'); if(el_){ if(confirm('Excluir este link? O cliente deixará de ver o material.')) CONTA().excluirCompartilhamento(el_.dataset.excluirLink).then(() => { toast('Link excluído'); carregarAdmin('links'); }).catch(e => toast('Erro: ' + e.message)); return; }
   if(t.closest('[data-reenviar]')){ CONTA().reenviarVerificacao().then(() => toast('E-mail reenviado')).catch(e => toast(e.message)); return; }
   if(t.closest('[data-atualizar]')){ CONTA().atualizar().then(() => toast('Status atualizado')).catch(() => toast('Tente de novo')); return; }
-  if(t.closest('[data-esqueci]')){ const em = prompt('Digite o e-mail da sua conta:'); if(em){ CONTA().recuperarSenha(em).finally(() => toast('Se o e-mail existir, enviamos o link')); } return; }
+  if(t.closest('[data-esqueci]')){
+    const campo = document.querySelector('form[data-f="entrar"] [name=email]');
+    let em = (campo && campo.value.trim()) || prompt('Digite o e-mail da sua conta (@cvdvale.com.br ou @cvdentus.com.br):');
+    if(!em) return; em = em.trim();
+    if(!CONTA().dominioOk(em)){ toast('Use seu e-mail @cvdvale.com.br ou @cvdentus.com.br'); return; }
+    CONTA().recuperarSenha(em).finally(() => toast('Se esse e-mail tiver conta, enviamos o link para criar uma nova senha'));
+    return;
+  }
   const fl = t.closest('[data-filtro]'); if(fl){ const [aba, st] = fl.dataset.filtro.split(':'); filtroAdmin[aba] = st; render(); return; }
   const md = t.closest('[data-mod]'); if(md){ const [id, st] = md.dataset.mod.split(':'); const nota = st === 'rejeitado' ? (prompt('Motivo (opcional):') || '') : ''; CONTA().moderarComentario(id, st, nota).then(() => { toast('Atualizado'); carregarAdmin('comentarios'); }).catch(e => toast('Erro: ' + e.message)); return; }
   const ex = t.closest('[data-excluir]'); if(ex){ if(confirm('Excluir este comentário de vez?')) CONTA().excluirComentario(ex.dataset.excluir).then(() => { toast('Excluído'); carregarAdmin('comentarios'); }).catch(e => toast('Erro: ' + e.message)); return; }
@@ -983,6 +1163,8 @@ document.addEventListener('click', e=>{
   if(dl){
     const mb = parseFloat(dl.dataset.mb||0);
     if(mb > 40 && !confirm(`Este arquivo tem ${fmtTam(mb)}.\nBaixar agora? Recomendado usar Wi-Fi.`)){ e.preventDefault(); return; }
+    const x = TODOS[dl.dataset.dl]; const href = dl.getAttribute('href') || '';
+    track('baixar', x ? chaveItem(x) : href.split('/').pop().slice(0, 64), x ? x.titulo : (dl.dataset.tit || dl.textContent.trim().slice(0, 100)), '');
     toast('Download iniciado'); return;
   }
   if(t.closest('[data-instalar]')){ if(promptInstalar){ promptInstalar.prompt(); promptInstalar.userChoice.finally(()=>{ promptInstalar = null; render(); }); } return; }
@@ -1000,9 +1182,11 @@ document.addEventListener('submit', async e => {
   }catch(err){ falha(err.message); }
   finally{ btn.disabled = false; btn.textContent = txtBtn; }
 });
+document.addEventListener('change', e => { const f = e.target.closest('[data-importar]'); if(f && f.files[0]) importarCatalogo(f.files[0], document.getElementById('imp-msg')); });
 document.addEventListener('keydown', e=>{ if(e.key==='Escape'){ fecharPainel(); fecharBusca(); } if((e.ctrlKey||e.metaKey) && e.key==='k'){ e.preventDefault(); abrirBusca(); } });
 
-render();
+window.addEventListener('cvd-conta-pronta', () => { if(window.__bootFeito) return; window.__bootFeito = true; boot(); });
+if(window.__contaPronta && !window.__bootFeito){ window.__bootFeito = true; boot(); }
 if('serviceWorker' in navigator && location.protocol.startsWith('http')){ navigator.serviceWorker.register('sw.js').catch(()=>{}); }
 </script>
 </body>
