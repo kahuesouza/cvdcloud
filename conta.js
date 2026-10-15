@@ -17,7 +17,7 @@ if(!CFG || !CFG.apiKey || CFG.apiKey === 'COLE_AQUI'){
   let resolverPronto; const pronto = new Promise(r => resolverPronto = r);
   const C = window.CVDConta = { configurado: true, pronto, user: null, perfil: null, ouvintes: new Set(), resolvido: false, dominioOk };
   try{
-    const [{ initializeApp }, A, F] = await Promise.all([
+    const [{ initializeApp, getApp }, A, F] = await Promise.all([
       import(`https://www.gstatic.com/firebasejs/${V}/firebase-app.js`),
       import(`https://www.gstatic.com/firebasejs/${V}/firebase-auth.js`),
       import(`https://www.gstatic.com/firebasejs/${V}/firebase-firestore.js`),
@@ -28,6 +28,15 @@ if(!CFG || !CFG.apiKey || CFG.apiKey === 'COLE_AQUI'){
     const txt = (s, max) => String(s ?? '').replace(/[\u0000-\u001f\u007f]/g, ' ').trim().slice(0, max);
     const por = (a, b) => (b.criadoEm?.seconds || 0) - (a.criadoEm?.seconds || 0);
     const lerPerfil = async u => { const s = await F.getDoc(F.doc(db, 'users', u.uid)); return s.exists() ? { uid: u.uid, ...s.data() } : null; };
+    /* e-mail confirmado pelo administrador (coleção "verificados") */
+    const lerVerificado = async u => { try{ const s = await F.getDoc(F.doc(db, 'verificados', (u.email || '').toLowerCase())); return s.exists() ? s.data() : null; }catch(e){ return null; } };
+    const carregarConta = async u => {
+      C.verificado = await lerVerificado(u);
+      C.perfil = await lerPerfil(u);
+      if(!C.perfil && C.verificado){   // conta já existia sem perfil: cria agora (regra de auto-cadastro)
+        try{ await F.setDoc(F.doc(db, 'users', u.uid), { nome: txt(C.verificado.nome || u.email, 80), email: u.email, role: 'vendedor', status: 'aprovado', criadoEm: F.serverTimestamp() }); C.perfil = await lerPerfil(u); }catch(e){}
+      }
+    };
     let acessoRegistrado = false;
     const registrarEntrada = () => {
       if(C.estado() === 'ok' && !acessoRegistrado){
@@ -40,7 +49,7 @@ if(!CFG || !CFG.apiKey || CFG.apiKey === 'COLE_AQUI'){
     A.onAuthStateChanged(auth, async u => {
       C.user = u; C.perfil = null; acessoRegistrado = false;
       if(u){
-        try{ await u.reload(); await auth.currentUser.getIdToken(true); C.user = auth.currentUser; C.perfil = await lerPerfil(auth.currentUser); }catch(e){}
+        try{ await u.reload(); await auth.currentUser.getIdToken(true); C.user = auth.currentUser; await carregarConta(auth.currentUser); }catch(e){}
         registrarEntrada();
       }
       C.resolvido = true; resolverPronto(true); avisar();
@@ -53,6 +62,7 @@ if(!CFG || !CFG.apiKey || CFG.apiKey === 'COLE_AQUI'){
         'permission-denied':'Sem permissão para esta ação.' };
       return new Error(m[e.code] || 'Algo deu errado. Tente novamente.');
     };
+    const secApp = () => { try{ return getApp('sec'); }catch(e){ return initializeApp(CFG, 'sec'); } };
     const NEG = 'Use o seu e-mail @cvdvale.com.br ou @cvdentus.com.br. Outros endereços não têm acesso.';
 
     Object.assign(C, {
@@ -62,7 +72,7 @@ if(!CFG || !CFG.apiKey || CFG.apiKey === 'COLE_AQUI'){
         if(!C.resolvido) return 'carregando';
         if(!C.user) return 'deslogado';
         if(!dominioOk(C.user.email)) return 'dominio';
-        if(!C.user.emailVerified) return 'verificar';
+        if(!C.user.emailVerified && !C.verificado) return 'verificar';
         if(C.perfil && C.perfil.status === 'bloqueado') return 'bloqueado';
         if(!C.perfil && !C.ehAdminEmail()) return 'bloqueado';
         return 'ok';
@@ -93,7 +103,7 @@ if(!CFG || !CFG.apiKey || CFG.apiKey === 'COLE_AQUI'){
       async atualizar(){
         if(auth.currentUser){
           await auth.currentUser.reload(); await auth.currentUser.getIdToken(true);
-          C.user = auth.currentUser; C.perfil = await lerPerfil(auth.currentUser); registrarEntrada(); avisar();
+          C.user = auth.currentUser; await carregarConta(auth.currentUser); registrarEntrada(); avisar();
         }
       },
 
@@ -143,6 +153,27 @@ if(!CFG || !CFG.apiKey || CFG.apiKey === 'COLE_AQUI'){
         const s = await F.getDocs(F.collection(db, 'users')); return s.docs.map(d => ({ uid: d.id, ...d.data() }));
       },
       async listarUsuarios(status){ return (await C.todosUsuarios()).filter(u => u.status === status).sort(por); },
+      /* Admin cria conta já verificada: senha aleatória (ninguém a conhece) + e-mail para a pessoa definir a própria senha. */
+      async criarContaFuncionario(nome, email){
+        if(!C.admin()) throw new Error('Apenas administradores.');
+        nome = txt(nome, 80); email = txt(email, 120).toLowerCase();
+        if(!dominioOk(email)) throw new Error(NEG);
+        if(nome.length < 2) throw new Error('Informe o nome da pessoa.');
+        const sec = A.getAuth(secApp()); sec.languageCode = 'pt-BR';
+        const marca = { nome, email, criadoPor: C.user.uid, criadoEm: F.serverTimestamp() };
+        let existia = false, uid = null;
+        try{
+          const b = crypto.getRandomValues(new Uint8Array(18)); const senha = 'Aa1' + Array.from(b, x => x.toString(16).padStart(2, '0')).join('');
+          const cred = await A.createUserWithEmailAndPassword(sec, email, senha); uid = cred.user.uid;
+        }catch(e){ if(e.code === 'auth/email-already-in-use') existia = true; else throw erro(e); }
+        try{
+          await F.setDoc(F.doc(db, 'verificados', email), marca);
+          if(uid) await F.setDoc(F.doc(db, 'users', uid), { nome, email, role: 'vendedor', status: 'aprovado', criadoEm: F.serverTimestamp(), criadoPor: C.user.uid });
+        }catch(e){ throw erro(e); }
+        try{ await A.sendPasswordResetEmail(sec, email); }catch(e){}
+        try{ await A.signOut(sec); }catch(e){}
+        return existia ? 'existia' : 'criada';
+      },
       async mudarUsuario(uid, status){ if(!C.admin()) throw new Error('Apenas administradores.'); await F.updateDoc(F.doc(db, 'users', uid), { status }); },
 
       /* ---------- comentários ---------- */

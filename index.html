@@ -954,8 +954,8 @@ async function carregarAdmin(aba){
         <div class="acoes-c">${st !== 'aprovado' ? `<button class="ok" data-mod="${esc(c.id)}:aprovado">Aprovar</button>` : ''}${st !== 'rejeitado' ? `<button data-mod="${esc(c.id)}:rejeitado">Rejeitar</button>` : ''}${st !== 'pendente' ? `<button data-mod="${esc(c.id)}:pendente">Voltar p/ pendente</button>` : ''}<button class="ruim" data-excluir="${esc(c.id)}">Excluir</button></div></div>`).join('') : vazio('Nada por aqui.');
     } else if(aba === 'usuarios'){
       const l = await C.listarUsuarios(st);
-      el.innerHTML = l.length ? l.map(u => `<div class="cartao-c anima"><div class="topo-c"><b>${esc(u.nome)}</b>${stChip(u.status)}${u.role === 'admin' || (window.CVD_ADMINS || []).includes((u.email || '').toLowerCase()) ? '<span class="st">Admin</span>' : ''}</div><div class="quem">${esc(u.email)}</div><div class="quem" style="margin-top:2px">Cadastro ${fmtData(u.criadoEm)} · último acesso ${haQuanto(u.ultimoAcesso)}</div>
-        ${u.uid !== C.user.uid && u.role !== 'admin' && !(window.CVD_ADMINS || []).includes((u.email || '').toLowerCase()) ? `<div class="acoes-c">${u.status !== 'bloqueado' ? `<button class="ruim" data-usr="${esc(u.uid)}:bloqueado">Bloquear</button>` : `<button class="ok" data-usr="${esc(u.uid)}:aprovado">Liberar de novo</button>`}</div>` : ''}</div>`).join('') : vazio('Ninguém por aqui.');
+      el.innerHTML = `<form class="cartao-c anima form" data-criar-conta autocomplete="off"><b style="font-size:14.5px">Criar conta verificada</b><p style="color:var(--sub);font-size:13.5px;margin:6px 0 10px">Para quem não conseguiu entrar. A conta já nasce confirmada e a pessoa recebe um e-mail para definir a própria senha (você não precisa saber nenhuma).</p><input name="nome" placeholder="Nome completo" required minlength="2" maxlength="80"><input name="email" type="email" placeholder="email@cvdvale.com.br" required maxlength="120"><button class="btn prim" type="submit">Criar conta</button><p class="erro-f" id="cc-msg" role="status" style="color:var(--sub)"></p></form>` + (l.length ? l.map(u => `<div class="cartao-c anima"><div class="topo-c"><b>${esc(u.nome)}</b>${stChip(u.status)}${u.role === 'admin' || (window.CVD_ADMINS || []).includes((u.email || '').toLowerCase()) ? '<span class="st">Admin</span>' : ''}</div><div class="quem">${esc(u.email)}</div><div class="quem" style="margin-top:2px">Cadastro ${fmtData(u.criadoEm)} · último acesso ${haQuanto(u.ultimoAcesso)}</div>
+        ${u.uid !== C.user.uid && u.role !== 'admin' && !(window.CVD_ADMINS || []).includes((u.email || '').toLowerCase()) ? `<div class="acoes-c">${u.status !== 'bloqueado' ? `<button class="ruim" data-usr="${esc(u.uid)}:bloqueado">Bloquear</button>` : `<button class="ok" data-usr="${esc(u.uid)}:aprovado">Liberar de novo</button>`}</div>` : ''}</div>`).join('') : vazio('Ninguém por aqui.'));
     } else if(aba === 'links'){
       const l = await C.listarCompartilhamentos(); const us = new Map((await C.todosUsuarios()).map(u => [u.uid, u.nome]));
       el.innerHTML = `<p style="color:var(--sub);font-size:13.5px;margin:12px 0 0">Links enviados a clientes. Excluir derruba o link na hora.</p>` + (l.length ? l.map(c => `<div class="cartao-c anima"><b style="font-size:14px">${esc(c.titulo)}</b><div class="quem" style="margin-top:2px">${esc(us.get(c.criadoPor) || 'Equipe')} · ${fmtData(c.criadoEm)}${c.tipo ? ' · ' + esc(c.tipo) : ''}</div><div class="acoes-c"><button data-abrir-link="${esc(c.id)}">Abrir</button><button class="ruim" data-excluir-link="${esc(c.id)}">Excluir link</button></div></div>`).join('') : vazio('Nenhum link compartilhado ainda.'));
@@ -1218,6 +1218,16 @@ document.addEventListener('submit', async e => {
     else if(tipo === 'comentario'){ await C.enviarComentario({ categoria: d.categoria, texto: d.texto, itemChave: f.dataset.chave, itemTitulo: f.dataset.titulo }); fecharPainel(); toast('Enviado! Um administrador vai revisar.'); if(location.hash.startsWith('#/conta')) carregarMeusComentarios(); }
   }catch(err){ falha(err.message); }
   finally{ btn.disabled = false; btn.textContent = txtBtn; }
+});
+document.addEventListener('submit', async e => {
+  const f = e.target.closest('[data-criar-conta]'); if(!f) return; e.preventDefault();
+  const msg = document.getElementById('cc-msg'), b = f.querySelector('button'); b.disabled = true; msg.textContent = 'Criando…';
+  try{
+    const r = await CONTA().criarContaFuncionario(f.nome.value, f.email.value);
+    msg.textContent = r === 'existia' ? 'Esse e-mail já tinha conta: marcado como verificado. A pessoa já pode entrar (ou usar "Esqueci a senha").' : 'Conta criada e verificada. Um e-mail foi enviado para a pessoa definir a senha.';
+    f.reset(); toast(r === 'existia' ? 'E-mail marcado como verificado' : 'Conta criada e verificada'); carregarAdmin('usuarios');
+  }catch(err){ msg.textContent = err.message; }
+  b.disabled = false;
 });
 document.addEventListener('change', e => { const f = e.target.closest('[data-importar]'); if(f && f.files[0]) importarCatalogo(f.files[0], document.getElementById('imp-msg')); });
 document.addEventListener('keydown', e=>{ if(e.key==='Escape'){ fecharPainel(); fecharBusca(); } if((e.ctrlKey||e.metaKey) && e.key==='k'){ e.preventDefault(); abrirBusca(); } });
