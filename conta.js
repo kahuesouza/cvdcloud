@@ -74,7 +74,6 @@ if(!CFG || !CFG.apiKey || CFG.apiKey === 'COLE_AQUI'){
         if(!C.resolvido) return 'carregando';
         if(!C.user) return 'deslogado';
         if(!dominioOk(C.user.email)) return 'dominio';
-        if(!C.user.emailVerified && !C.verificado) return 'verificar';
         if(C.perfil && C.perfil.status === 'bloqueado') return 'bloqueado';
         if(!C.perfil && !C.ehAdminEmail()) return 'bloqueado';
         return 'ok';
@@ -91,7 +90,6 @@ if(!CFG || !CFG.apiKey || CFG.apiKey === 'COLE_AQUI'){
         try{
           const cred = await A.createUserWithEmailAndPassword(auth, email, senha);
           await F.setDoc(F.doc(db, 'users', cred.user.uid), { nome, email, role: 'vendedor', status: 'aprovado', criadoEm: F.serverTimestamp() });
-          try{ await A.sendEmailVerification(cred.user); }catch(e){}
         }catch(e){ throw erro(e); }
       },
       async entrar(email, senha){
