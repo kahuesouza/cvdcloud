@@ -171,14 +171,16 @@ if(!CFG || !CFG.apiKey || CFG.apiKey === 'COLE_AQUI'){
         const sec = A.getAuth(secApp()); sec.languageCode = 'pt-BR';
         try{ await F.deleteDoc(F.doc(db, 'excluidos', email)); }catch(e){}
         const marca = { nome, email, criadoPor: C.user.uid, criadoEm: F.serverTimestamp() };
-        let existia = false, uid = null;
+        let existia = false, uid = null, etapa = '';
         try{
           const cred = await A.createUserWithEmailAndPassword(sec, email, senha); uid = cred.user.uid;
         }catch(e){ if(e.code === 'auth/email-already-in-use') existia = true; else throw erro(e); }
         try{
+          etapa = 'verificados';
           await F.setDoc(F.doc(db, 'verificados', email), marca);
+          etapa = 'perfil (users)';
           if(uid) await F.setDoc(F.doc(db, 'users', uid), { nome, email, role: 'vendedor', status: 'aprovado', criadoEm: F.serverTimestamp(), criadoPor: C.user.uid });
-        }catch(e){ throw erro(e); }
+        }catch(e){ const x = erro(e); throw new Error(x.message + ' [falhou em: ' + etapa + (uid ? '; o login já foi criado no Firebase' : '') + ']'); }
         if(existia){ try{ await A.sendPasswordResetEmail(sec, email); }catch(e){} }   // conta antiga: a senha genérica não vale, manda link para redefinir
         try{ await A.signOut(sec); }catch(e){}
         return existia ? 'existia' : 'criada';
