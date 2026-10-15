@@ -897,6 +897,22 @@ const CATS = { sugestao: 'Sugestão', erro: 'Erro ou link quebrado', dica: 'Dica
 const chaveItem = x => { let hh = 5381; const s = x.url || x.titulo || ''; for(let i = 0; i < s.length; i++) hh = ((hh << 5) + hh + s.charCodeAt(i)) | 0; return 'i' + (hh >>> 0).toString(36); };
 const fmtData = t => t && t.seconds ? new Date(t.seconds * 1000).toLocaleDateString('pt-BR', {day:'2-digit', month:'short', year:'numeric'}) : 'agora';
 const stChip = (st) => ({ aprovado:'<span class="st st-ok">Aprovado</span>', pendente:'<span class="st st-pend">Pendente</span>', rejeitado:'<span class="st st-no">Rejeitado</span>', bloqueado:'<span class="st st-no">Bloqueado</span>' }[st] || '');
+const stCom = st => ({ pendente:'<span class="st st-pend">Novo</span>', aprovado:'<span class="st st-ok">Resolvido</span>', rejeitado:'<span class="st st-no">Descartado</span>' }[st] || '');
+/* onde o comentário foi feito: rótulo legível + como chegar lá */
+function contextoComentario(c){
+  const ch = String(c.itemChave || 'geral'), tit = c.itemTitulo || 'Geral';
+  const mapa = {}; [...(D.materiais || []), ...(D.procedimentos || [])].forEach(x => { mapa[chaveItem(x)] = x; });
+  const x = mapa[ch];
+  if(x){
+    const onde = x.esp ? `Procedimento · ${(ESP[x.esp] || {}).nome || ''}${x.topico ? ' · ' + (((D.topicos || []).find(t => t.id === x.topico) || {}).nome || '') : ''}`
+      : `${(TIPOS[x.tipo] || {}).nome || 'Material'}${PROD[x.produto] ? ' · ' + PROD[x.produto].nome : ''}`;
+    return { onde, titulo: x.titulo, btn: `<button class="ok" data-ver-item="${x.id}">Abrir o item</button>` };
+  }
+  if(ch.startsWith('ponta:')){ const cod = ch.slice(6); return { onde: 'Pontas (bula) · ' + cod, titulo: tit, btn: `<button class="ok" data-ver-ponta="${esc(cod)}">Ver a ponta</button>` }; }
+  if(ch.startsWith('galeria:')){ const gid = ch.slice(8).split('-')[0]; return { onde: 'Galeria de marketing', titulo: tit, btn: `<a class="btn sec" style="padding:8px 12px;font-size:13px" href="#/galeria/${esc(gid)}">Abrir a galeria</a>` }; }
+  if(ch === 'geral') return { onde: 'Comentário geral (tela Conta)', titulo: tit, btn: '' };
+  return { onde: 'Item que não está mais no app', titulo: tit, btn: '' };
+}
 const infoCard = (titulo, msg) => `<div class="nota anima">${ic('info')}<div><b>${titulo}</b>${msg}</div></div>`;
 
 function telaConta(){
@@ -975,7 +991,7 @@ function telaAdmin(aba){
   const base = { titulo:'Administração', voltar:'#/conta' };
   if(!C || !C.configurado || !C.resolvido) return { ...base, corpo: largo('Administração') + infoCard('Carregando', 'Só um instante.') };
   if(!C.admin()) return { ...base, corpo: largo('Administração') + infoCard('Área restrita', 'Somente administradores têm acesso a esta página.') };
-  const sts = aba === 'comentarios' ? [['pendente','Pendentes'],['aprovado','Aprovados'],['rejeitado','Rejeitados']] : aba === 'usuarios' ? [['aprovado','Ativos'],['bloqueado','Bloqueados']] : [];
+  const sts = aba === 'comentarios' ? [['pendente','Novos'],['aprovado','Resolvidos'],['rejeitado','Descartados']] : aba === 'usuarios' ? [['aprovado','Ativos'],['bloqueado','Bloqueados']] : [];
   const corpo = largo('Administração', 'Uso do app, equipe e moderação.')
     + abas(ABAS_ADMIN.map(x => x.id === 'usuarios' && novasContas ? { ...x, n: novasContas } : x), aba, '#/admin')
     + (sts.length ? `<div class="chips-f">${sts.map(([k,n]) => `<button class="${filtroAdmin[aba] === k ? 'on' : ''}" data-filtro="${aba}:${k}">${n}</button>`).join('')}</div>` : '')
@@ -1098,8 +1114,8 @@ async function carregarAdmin(aba){
     else if(aba === 'desempenho'){ await carregarDesempenho(el); }
     else if(aba === 'comentarios'){
       const l = await C.listarComentarios(st);
-      el.innerHTML = l.length ? l.map(c => `<div class="cartao-c anima"><div class="topo-c"><span class="st">${esc(CATS[c.categoria] || c.categoria)}</span>${stChip(c.status)}<span class="quem">${esc(c.autorNome)} · ${fmtData(c.criadoEm)}</span></div><p>${esc(c.texto)}</p><div class="item-c">Sobre: ${esc(c.itemTitulo || 'Geral')}</div>${c.notaAdmin ? `<p style="color:var(--sub);font-size:13px">Nota: ${esc(c.notaAdmin)}</p>` : ''}
-        <div class="acoes-c">${st !== 'aprovado' ? `<button class="ok" data-mod="${esc(c.id)}:aprovado">Aprovar</button>` : ''}${st !== 'rejeitado' ? `<button data-mod="${esc(c.id)}:rejeitado">Rejeitar</button>` : ''}${st !== 'pendente' ? `<button data-mod="${esc(c.id)}:pendente">Voltar p/ pendente</button>` : ''}<button class="ruim" data-excluir="${esc(c.id)}">Excluir</button></div></div>`).join('') : vazio('Nada por aqui.');
+      el.innerHTML = l.length ? l.map(c => { const cx = contextoComentario(c); return `<div class="cartao-c anima"><div class="topo-c"><span class="st">${esc(CATS[c.categoria] || c.categoria)}</span>${stCom(c.status)}<span class="quem">${esc(c.autorNome)} · ${fmtData(c.criadoEm)}</span></div><p>${esc(c.texto)}</p><div class="item-c" style="margin-top:8px"><b style="font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--sub)">Onde foi feito</b><br><span style="font-weight:700">${esc(cx.titulo)}</span><br><span class="quem">${esc(cx.onde)}</span></div>${cx.btn ? `<div class="acoes-c" style="margin-top:10px">${cx.btn}</div>` : ''}${c.notaAdmin ? `<p style="color:var(--sub);font-size:13px">Nota: ${esc(c.notaAdmin)}</p>` : ''}
+        <div class="acoes-c">${st !== 'aprovado' ? `<button class="ok" data-mod="${esc(c.id)}:aprovado">Marcar como resolvido</button>` : ''}${st !== 'rejeitado' ? `<button data-mod="${esc(c.id)}:rejeitado">Descartar</button>` : ''}${st !== 'pendente' ? `<button data-mod="${esc(c.id)}:pendente">Voltar para novos</button>` : ''}<button class="ruim" data-excluir="${esc(c.id)}">Excluir</button></div></div>`; }).join('') : vazio('Nada por aqui.');
     } else if(aba === 'usuarios'){
       const l = await C.listarUsuarios(st); const novas = await C.contasNovas().catch(() => []); novasContas = novas.length; novasContasEm = Date.now(); pintarAlertaContas();
       el.innerHTML = (novas.length ? `<div class="cartao-c anima" style="border-color:var(--acento)"><b style="font-size:14.5px">${novas.length} ${novas.length > 1 ? 'contas novas' : 'conta nova'} para conferir</b><p style="color:var(--sub);font-size:13.5px;margin:6px 0 10px">Elas já têm acesso normal ao app. Confirme com OK se a conta é real; se não for, bloqueie ou exclua.</p>${novas.map(u => `<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:8px 0;border-top:1px solid var(--linha)"><span style="flex:1;min-width:160px"><b style="font-size:14px">${esc(u.nome)}</b><br><span class="quem">${esc(u.email)} · ${fmtData(u.criadoEm)}</span></span><span class="acoes-c" style="margin:0"><button class="ok" data-revisar="${esc(u.uid)}">OK, conta real</button><button class="ruim" data-usr="${esc(u.uid)}:bloqueado">Bloquear</button></span></div>`).join('')}</div>` : '') + `<form class="cartao-c anima form" data-criar-conta autocomplete="off"><b style="font-size:14.5px">Criar conta verificada</b><p style="color:var(--sub);font-size:13.5px;margin:6px 0 10px">Para quem não conseguiu entrar. A conta já nasce confirmada, com uma senha genérica que você envia à pessoa. Depois de entrar, ela pode trocar a senha se quiser (opcional).</p><input name="nome" placeholder="Nome completo" required minlength="2" maxlength="80"><input name="email" type="email" placeholder="email@cvdvale.com.br" required maxlength="120"><input name="senha" type="text" placeholder="Senha genérica (mín. 8, letras e números)" required minlength="8" maxlength="60" value="Cvd@${Math.floor(1000 + Math.random() * 9000)}" autocomplete="off" spellcheck="false"><button class="btn prim" type="submit">Criar conta</button><p class="erro-f" id="cc-msg" role="status" style="color:var(--sub)"></p></form>` + (l.length ? l.map(u => `<div class="cartao-c anima"><div class="topo-c"><b>${esc(u.nome)}</b>${stChip(u.status)}${u.role === 'admin' || (window.CVD_ADMINS || []).includes((u.email || '').toLowerCase()) ? '<span class="st">Admin</span>' : ''}</div><div class="quem">${esc(u.email)}</div><div class="quem" style="margin-top:2px">Cadastro ${fmtData(u.criadoEm)} · último acesso ${haQuanto(u.ultimoAcesso)}</div>
@@ -1326,6 +1342,8 @@ document.addEventListener('click', e=>{
   const vd = t.closest('[data-video]'); if(vd && e.button === 0 && !e.ctrlKey && !e.metaKey && !e.shiftKey){ e.preventDefault(); const xv = TODOS[vd.dataset.video]; if(xv){ const aberto = painel.classList.contains('on'); if(aberto) fecharPainel(); setTimeout(() => painelVideo(xv), aberto ? 220 : 0); } return; }
   const ga = t.closest('[data-gal]'); if(ga){ const [gi, ii] = ga.dataset.gal.split(':'); painelGal(gi, ii); return; }
   const pv = t.closest('[data-pvid]'); if(pv){ painelVideosPonta(pv.dataset.pvid.split('|')); return; }
+  const vi = t.closest('[data-ver-item]'); if(vi){ painelItem(vi.dataset.verItem); return; }
+  const vpo = t.closest('[data-ver-ponta]'); if(vpo){ abrirBusca(); setTimeout(() => { const q = document.getElementById('q'); if(q){ q.value = vpo.dataset.verPonta; q.dispatchEvent(new Event('input')); } }, 60); return; }
   const pe = t.closest('[data-periodo]'); if(pe){ periodoDes = +pe.dataset.periodo; carregarAdmin('desempenho'); return; }
   const vd2 = t.closest('[data-vend]'); if(vd2){ painelVendedor(vd2.dataset.vend); return; }
   const ir = t.closest('[data-ir]'); if(ir){ const el = document.getElementById(ir.dataset.ir); if(el) el.scrollIntoView({behavior:'smooth', block:'start'}); return; }
