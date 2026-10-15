@@ -869,12 +869,15 @@ function resultadosBusca(q){
 /* ===================== Instalação (Android / iOS) ===================== */
 let promptInstalar = null;
 const appInstalado = () => matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
+const ehSamsung = () => /SamsungBrowser/i.test(navigator.userAgent);
 const ehIOS = () => /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
 window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); promptInstalar = e; if(!location.hash || location.hash==='#/') render(); });
 window.addEventListener('appinstalled', () => { promptInstalar = null; render(); });
 function bannerInstalar(){
   if(appInstalado() || ls.get('ocultarInstalar', false)) return '';
   const x = `<button class="x" data-fechar-instalar aria-label="Fechar">${ic('x')}</button>`;
+  // Samsung Internet cria um app que o Google Play Protect bloqueia (“app de risco”): no Samsung, orienta usar o Chrome
+  if(ehSamsung()) return `<div class="instalar anima">${ic('celular')}<div style="flex:1"><b>Instalar no Samsung</b>Abra este link no <strong>Chrome</strong> e toque em ⋮ → <strong>Instalar app</strong>. (O Samsung Internet gera um app que o Android bloqueia.)<div style="margin-top:8px"><button class="ir" data-copiar="${esc(location.href.split('#')[0])}">Copiar link para o Chrome</button></div></div>${x}</div>`;
   if(promptInstalar) return `<div class="instalar anima">${ic('celular')}<div style="flex:1"><b>Instale o app</b>Acesso em 1 toque, direto da tela inicial.</div><button class="ir" data-instalar>Instalar</button>${x}</div>`;
   if(ehIOS()) return `<div class="instalar anima">${ic('celular')}<div style="flex:1"><b>Instale no iPhone</b>Toque em <span class="ios">${ic('share')}</span> Compartilhar e depois em “Adicionar à Tela de Início”.</div>${x}</div>`;
   return '';
