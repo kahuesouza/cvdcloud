@@ -177,6 +177,7 @@ if(!CFG || !CFG.apiKey || CFG.apiKey === 'COLE_AQUI'){
         }catch(e){ if(e.code === 'auth/email-already-in-use') existia = true; else throw erro(e); }
         try{
           etapa = 'verificados';
+          try{ await F.deleteDoc(F.doc(db, 'verificados', email)); }catch(e){}   // registro de tentativa anterior (as regras não permitem sobrescrever)
           await F.setDoc(F.doc(db, 'verificados', email), marca);
           etapa = 'perfil (users)';
           if(uid) await F.setDoc(F.doc(db, 'users', uid), { nome, email, role: 'vendedor', status: 'aprovado', criadoEm: F.serverTimestamp(), criadoPor: C.user.uid });
