@@ -622,6 +622,17 @@ window.CVD = {
    "idioma": "pt",
    "url": "https://www.dropbox.com/home/REDE01/MARKETING/EQUIPE%20MARKETING/CVDentus/COMERCIAL/TREINAMENTOS?preview=Piezo+na+Odontologia+Moderna.mp4",
    "aviso": "Exige login no Dropbox da equipe"
+  },
+  {
+   "titulo": "Catálogo de Lupas 2026 (PDF)",
+   "tipo": "catalogo",
+   "produto": "lupas",
+   "idioma": "pt",
+   "ano": 2026,
+   "novo": true,
+   "mb": 14.7,
+   "url": "https://kahuesouza.github.io/cvdentus-arquivos/catalogos/catalogo-lupas-cvdentus-2026.pdf",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/CATALOGO_LUPAS_CVDENTUS_2026_DIGITAL.pdf"
   }
  ],
  "marcas": [
