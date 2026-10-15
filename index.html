@@ -120,7 +120,8 @@ main{max-width:720px;margin:0 auto;padding:6px 18px 28px}
 .m .av{color:var(--alerta);font-weight:600}
 .acoes{display:flex;flex:none;gap:2px}
 .acoes .ibtn{width:40px;height:40px;color:var(--sub)}
-.acoes a.ibtn{color:var(--acento)}
+.acoes a.ibtn,.acoes .ibtn.comp{color:var(--acento);background:color-mix(in srgb,var(--acento) 12%,transparent)}
+.acoes .ibtn.comp:active,.acoes a.ibtn:active{transform:scale(.92)}
 .link-row{display:flex;align-items:center;gap:14px;padding:14px 0;border-top:1px solid var(--linha);transition:opacity .15s}
 .link-row:first-child{border-top:0}
 .link-row:active{opacity:.55}
@@ -435,7 +436,7 @@ function linha(x, opt={}){
   const dl = linkDownload(x), tam = tamDownload(x), vid = isVideo(x), gal = !!x.galeria;
   return `<div class="linha anima" style="--i:${opt.i||0}">
     <a class="abrir" data-item="${x.id}" ${vid ? `data-video="${x.id}"` : ''} href="${esc(x.url)}" ${gal ? '' : 'target="_blank" rel="noopener"'}>${leadDe(x)}<span class="txt"><span class="t">${esc(x.titulo)}</span><span class="m" style="display:block">${metaDe(x,opt)}</span></span></a>
-    <span class="acoes">${dl ? `<a class="ibtn" href="${esc(dl)}" download data-dl="${x.id}" data-mb="${tam||0}" aria-label="Baixar${tam?' ('+fmtTam(tam)+')':''}">${ic('download')}</a>` : ''}<button class="ibtn" data-mais="${x.id}" aria-label="Mais opções">${ic('mais')}</button></span></div>`;
+    <span class="acoes">${gal ? '' : `<button class="ibtn comp" data-compartilhar="${x.id}" aria-label="Copiar link para compartilhar">${ic('share')}</button>`}${dl ? `<a class="ibtn" href="${esc(dl)}" download data-dl="${x.id}" data-mb="${tam||0}" aria-label="Baixar${tam?' ('+fmtTam(tam)+')':''}">${ic('download')}</a>` : ''}<button class="ibtn" data-mais="${x.id}" aria-label="Mais opções">${ic('mais')}</button></span></div>`;
 }
 const track = (tipo, chave, titulo, extra) => { const C = CONTA(); if(C && C.configurado && C.registrar) C.registrar(tipo, String(chave||''), String(titulo||''), extra||''); };
 const lista = (itens, opt={}) => `<div class="lista">${itens.map((x,i)=>linha(x,{...opt,i:Math.min(i,10)})).join('')}</div>`;
@@ -742,7 +743,7 @@ function painelVideo(x){
   abrirPainel(`<div class="player"><video controls playsinline preload="metadata" ${t ? `poster="img/t/${t[0]}"` : ''} src="${esc(x.url)}"></video></div>
     <h3 style="margin-top:14px">${esc(x.titulo)}</h3><p class="sub">${sub}</p>
     <div class="botoes">${dl ? `<a class="btn prim" href="${esc(dl)}" download data-dl="${x.id}" data-mb="${tam||0}">${ic('download')}Baixar vídeo${tam ? ` <small>${fmtTam(tam)}</small>` : ''}</a>` : ''}
-      <button class="btn sec" data-compartilhar="${x.id}">${ic('share')}Compartilhar</button>
+      <button class="btn prim" data-compartilhar="${x.id}">${ic('share')}Copiar link</button>
       <button class="btn sec" data-fav="${x.id}">${ic('estrela')}${fav ? 'Remover dos salvos' : 'Salvar'}</button></div>`);
   const v = painel.querySelector('video'); if(v) v.play().catch(() => {});
 }
@@ -762,7 +763,7 @@ function painelGal(gid, iid){
     ? `<div class="player"><video controls playsinline preload="metadata" poster="${esc(PV + it.id + '.webp')}" src="${esc(arq)}"></video></div>`
     : `<div class="img-g" style="background:var(--surface-2)"><img src="${esc(arq)}" alt="${esc(it.titulo)}" onerror="this.onerror=null;this.src='${esc(PV + it.id + '.webp')}'"></div>`;
   abrirPainel(`${midia}<h3 style="margin-top:14px">${esc(it.titulo)}</h3><p class="sub">${esc(GL.titulo)} · ${esc(it.grupo)}</p>
-    <div class="botoes"><a class="btn prim" href="${esc(arq)}" download data-dl="gal" data-tit="${esc(GL.titulo + ' · ' + it.titulo)}" data-mb="${it.mb}">${ic('download')}Baixar ${it.tipo === 'video' ? 'vídeo' : it.ext.toUpperCase()} <small>${fmtTam(Math.max(.1, it.mb))}</small></a></div>`);
+    <div class="botoes"><a class="btn prim" href="${esc(arq)}" download data-dl="gal" data-tit="${esc(GL.titulo + ' · ' + it.titulo)}" data-mb="${it.mb}">${ic('download')}Baixar ${it.tipo === 'video' ? 'vídeo' : it.ext.toUpperCase()} <small>${fmtTam(Math.max(.1, it.mb))}</small></a><button class="btn prim" data-copiar="${esc(arq)}">${ic('share')}Copiar link</button></div>`);
   const v = painel.querySelector('video'); if(v) v.play().catch(() => {});
 }
 function painelItem(id){
@@ -771,9 +772,9 @@ function painelItem(id){
   const sub = metaDe(x,{produto:true}).replace(/<br>.*/,'').replace(/<[^>]+>/g,'');
   abrirPainel(`<h3>${esc(x.titulo)}</h3><p class="sub">${sub}</p>
     <div class="botoes">
-      ${isVideo(x) ? `<button class="btn prim" data-video="${id}">${ic('playcheio')}Assistir</button>` : x.galeria ? `<a class="btn prim" href="${esc(x.url)}">${ic('link')}Abrir galeria</a>` : `<a class="btn prim" href="${esc(x.url)}" target="_blank" rel="noopener">${ic('link')}Abrir</a>`}
-      ${dl ? `<a class="btn sec" href="${esc(dl)}" download data-dl="${x.id}" data-mb="${tam||0}">${ic('download')}Baixar${tam?` <small>${fmtTam(tam)}</small>`:''}</a>` : ''}
-      ${x.galeria ? '' : `<button class="btn sec" data-compartilhar="${id}">${ic('share')}Compartilhar</button>`}
+      ${isVideo(x) ? `<button class="btn sec" data-video="${id}">${ic('playcheio')}Assistir</button>` : x.galeria ? `<a class="btn prim" href="${esc(x.url)}">${ic('link')}Abrir galeria</a>` : `<a class="btn sec" href="${esc(x.url)}" target="_blank" rel="noopener">${ic('link')}Abrir</a>`}
+      ${dl ? `<a class="btn prim" href="${esc(dl)}" download data-dl="${x.id}" data-mb="${tam||0}">${ic('download')}Baixar${tam?` <small>${fmtTam(tam)}</small>`:''}</a>` : ''}
+      ${x.galeria ? '' : `<button class="btn prim" data-compartilhar="${id}">${ic('share')}Copiar link</button>`}
       <button class="btn sec" data-fav="${id}">${ic('estrela')}${fav?'Remover dos salvos':'Salvar'}</button>
       <button class="btn sec" data-comentar="${id}">${ic('mega')}Comentar ou sugerir</button>
     </div><div class="dicas-item" id="dicas-item"></div>`);
@@ -1155,10 +1156,12 @@ window.addEventListener('resize', posicionarAbas);
 /* ===================== Ações ===================== */
 let tt; function toast(msg){ const t = document.getElementById('toast'); t.textContent = msg; t.classList.add('on'); clearTimeout(tt); tt = setTimeout(()=>t.classList.remove('on'), 1900); }
 async function enviarLink(titulo, link){
-  const texto = `${titulo} — CVDentus`;
-  if(navigator.share){ try{ await navigator.share({title:texto, text:texto, url:link}); return; }catch(e){ if(e.name==='AbortError') return; } }
-  try{ await navigator.clipboard.writeText(`${texto}\n${link}`); toast('Link copiado'); }
-  catch(e){ window.open('https://wa.me/?text=' + encodeURIComponent(`${texto}\n${link}`), '_blank'); }
+  let ok = false;
+  try{ await navigator.clipboard.writeText(link); ok = true; }
+  catch(e){
+    try{ const ta = document.createElement('textarea'); ta.value = link; ta.setAttribute('readonly',''); ta.style.cssText = 'position:fixed;top:-100px;opacity:0'; document.body.appendChild(ta); ta.select(); ok = document.execCommand('copy'); ta.remove(); }catch(e2){}
+  }
+  toast(ok ? 'Link copiado' : 'Não foi possível copiar o link');
 }
 async function compartilhar(x){
   const nome = x.esp ? `${x.titulo}${x.prof?' · '+x.prof:''}` : x.titulo;
@@ -1192,6 +1195,7 @@ document.addEventListener('click', e=>{
   const mod = t.closest('[data-modelo]'); if(mod){ painelModelo(mod.dataset.modelo); return; }
   const lupa = t.closest('[data-lupa]'); if(lupa){ painelLupa(lupa.dataset.lupa); return; }
   const lp = t.closest('[data-logo-p]'); if(lp){ const [gi,li] = lp.dataset.logoP.split(':'); painelLogo(+gi,+li); return; }
+  const cl = t.closest('[data-copiar]'); if(cl){ enviarLink('', cl.dataset.copiar); return; }
   const cp = t.closest('[data-compartilhar]'); if(cp){ compartilhar(TODOS[cp.dataset.compartilhar]); return; }
   const cm = t.closest('[data-comentar]'); if(cm){ const id = cm.dataset.comentar; fecharPainel(); const x = TODOS[id]; setTimeout(() => painelComentario(x ? { chave: chaveItem(x), titulo: x.titulo } : { chave: 'geral', titulo: 'Geral' }), 200); return; }
   if(t.closest('[data-modo]')){ modoLogin = t.closest('[data-modo]').dataset.modo; render(); return; }
