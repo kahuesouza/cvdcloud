@@ -131,6 +131,7 @@ main{max-width:720px;margin:0 auto;padding:6px 18px 28px}
 .link-row .seta{color:var(--fraco);display:flex}
 
 /* abas deslizantes */
+.esp-titulo{font-size:19px;font-weight:800;margin:26px 0 0;padding-bottom:6px;border-bottom:2px solid var(--acento);letter-spacing:-.01em}
 .abas{position:sticky;top:calc(54px + env(safe-area-inset-top));z-index:20;margin:14px -18px 4px;padding:8px 18px 0;background:color-mix(in srgb,var(--bg) 88%,transparent);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
 .abas .trilho{display:flex;gap:22px;overflow-x:auto;scrollbar-width:none;position:relative;border-bottom:1px solid var(--linha)}
 .abas .trilho::-webkit-scrollbar{display:none}
@@ -569,14 +570,18 @@ function telaTopico(id){
   const g = D.procedimentos.filter(p=>p.topico===id);
   return { titulo:t.nome, voltar:'#/procedimentos', corpo: largo(esc(t.nome), `${g.length} vídeo${g.length>1?'s':''} · toque para assistir`) + lista(g,{produto:true}) };
 }
+function procPorTopico(lista_){
+  const ordem = (D.topicos||[]).map(t=>t.id), nomes = Object.fromEntries((D.topicos||[]).map(t=>[t.id,t.nome]));
+  const ids = [...new Set(lista_.map(p=>p.topico||'outros'))].sort((a,b)=>{ const x=ordem.indexOf(a), y=ordem.indexOf(b); return (x<0?99:x)-(y<0?99:y); });
+  return ids.map(id=>{ const g = lista_.filter(p=>(p.topico||'outros')===id); return secao(esc(nomes[id]||'Outros'), g.length) + lista(g); }).join('');
+}
 function telaProcedimentos(espSel){
-  const itensAba = [{id:'topicos',nome:'Por tópico',n:(D.topicos||[]).length}, {id:'todos',nome:'Todos',n:D.procedimentos.length}, ...D.especialidades.map(e=>({id:e.id,nome:e.curto,n:D.procedimentos.filter(p=>p.esp===e.id).length}))];
-  const ativo = ESP[espSel] ? espSel : (espSel==='todos' || !(D.topicos||[]).length) ? 'todos' : 'topicos';
+  const itensAba = [{id:'todos',nome:'Todos',n:D.procedimentos.length}, ...D.especialidades.map(e=>({id:e.id,nome:e.curto,n:D.procedimentos.filter(p=>p.esp===e.id).length}))];
+  const ativo = ESP[espSel] ? espSel : 'todos';
   let corpo = '';
-  if(ativo==='topicos') corpo = `<div>${D.topicos.map(t=>linkRow('#/topico/'+t.id, 'dente', esc(t.nome), D.procedimentos.filter(p=>p.topico===t.id).length)).join('')}</div>`;
-  else if(ativo==='todos') D.especialidades.forEach(e=>{ const g = D.procedimentos.filter(p=>p.esp===e.id); corpo += secao(e.nome, g.length) + lista(g); });
-  else corpo = lista(D.procedimentos.filter(p=>p.esp===ativo));
-  return { titulo:'Procedimentos', corpo: largo('Procedimentos','Escolha um tópico (ex.: Flapless) para ver todos os vídeos dele, ou navegue por especialidade. Os do canal no YouTube abrem no YouTube; os demais tocam aqui mesmo.') + abas(itensAba, ativo, '#/procedimentos') + corpo };
+  if(ativo==='todos') D.especialidades.forEach(e=>{ const g = D.procedimentos.filter(p=>p.esp===e.id); corpo += `<div class="esp-bloco"><h2 class="esp-titulo">${esc(e.nome)}</h2>${procPorTopico(g)}</div>`; });
+  else corpo = procPorTopico(D.procedimentos.filter(p=>p.esp===ativo));
+  return { titulo:'Procedimentos', corpo: largo('Procedimentos','Escolha a especialidade; dentro dela os vídeos ficam separados por tópico (ex.: Flapless). Os do canal no YouTube abrem no YouTube; os demais tocam aqui mesmo.') + abas(itensAba, ativo, '#/procedimentos') + corpo };
 }
 
 /* ---------- Pontas (organizadas pela bula) ---------- */
