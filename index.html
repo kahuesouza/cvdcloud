@@ -1048,8 +1048,6 @@ function atualizarGate(){
   if(appIniciado && (e === 'deslogado' || e === 'bloqueado' || e === 'dominio')){ /* saiu ou foi bloqueado: volta para a tela de acesso */ }
   if(e === 'carregando') return gateMostrar(`<h1>CVDentus</h1><p class="sub-g">Verificando seu acesso…</p>`);
   if(e === 'indisponivel') return gateMostrar(`<h1>Sem conexão</h1><p class="sub-g">Não foi possível falar com o servidor. Verifique a internet.</p><div class="form"><button class="btn prim" onclick="location.reload()">Tentar de novo</button></div>`);
-  if(e === 'verificar') return gateMostrar(`<h1>Confirme seu e-mail</h1><p class="sub-g">Enviamos uma mensagem de confirmação para<br><b>${esc(C.user.email)}</b><br>Abra o e-mail, toque no link de confirmação e volte aqui.</p>
-    <div class="form"><button class="btn prim" data-atualizar>Já confirmei</button><button class="btn sec" data-reenviar>Reenviar e-mail</button><button class="link-b" data-sair>Usar outra conta</button></div><p class="sub-g" style="font-size:12.5px">Não achou? Olhe também a caixa de spam.</p>`);
   if(e === 'dominio') return gateMostrar(`<h1>Acesso não permitido</h1><p class="sub-g">Só e-mails ${DOM_TXT} têm acesso a este app.</p><div class="form"><button class="btn sec" data-sair>Sair</button></div>`);
   if(e === 'bloqueado') return gateMostrar(`<h1>Acesso bloqueado</h1><p class="sub-g">Fale com a administração do app.</p><div class="form"><button class="btn sec" data-sair>Sair</button></div>`);
   // deslogado
@@ -1235,7 +1233,6 @@ document.addEventListener('click', e=>{
   if(t.closest('[data-sair]')){ CONTA().sair().then(() => { toast('Você saiu'); atualizarGate(); }); return; }
   const al = t.closest('[data-abrir-link]'); if(al){ window.open(new URL('v.html', location.href.split('#')[0]).href + '#' + al.dataset.abrirLink, '_blank'); return; }
   const el_ = t.closest('[data-excluir-link]'); if(el_){ if(confirm('Excluir este link? O cliente deixará de ver o material.')) CONTA().excluirCompartilhamento(el_.dataset.excluirLink).then(() => { toast('Link excluído'); carregarAdmin('links'); }).catch(e => toast('Erro: ' + e.message)); return; }
-  if(t.closest('[data-reenviar]')){ CONTA().reenviarVerificacao().then(() => toast('E-mail reenviado')).catch(e => toast(e.message)); return; }
   if(t.closest('[data-atualizar]')){ CONTA().atualizar().then(() => toast('Status atualizado')).catch(() => toast('Tente de novo')); return; }
   if(t.closest('[data-esqueci]')){
     const campo = document.querySelector('form[data-f="entrar"] [name=email]');
@@ -1271,7 +1268,7 @@ document.addEventListener('submit', async e => {
   falha(''); btn.disabled = true; const txtBtn = btn.textContent; btn.textContent = 'Aguarde…';
   try{
     if(tipo === 'entrar'){ if(!d.email || !d.senha) throw new Error('Preencha e-mail e senha.'); await C.entrar(d.email, d.senha); toast('Bem-vindo'); }
-    else if(tipo === 'criar'){ if(d.senha !== d.senha2) throw new Error('As senhas não conferem.'); await C.cadastrar(d.nome, d.email, d.senha); toast('Conta criada. Confirme seu e-mail.'); }
+    else if(tipo === 'criar'){ if(d.senha !== d.senha2) throw new Error('As senhas não conferem.'); await C.cadastrar(d.nome, d.email, d.senha); toast('Conta criada. Bem-vindo!'); }
     else if(tipo === 'comentario'){ await C.enviarComentario({ categoria: d.categoria, texto: d.texto, itemChave: f.dataset.chave, itemTitulo: f.dataset.titulo }); fecharPainel(); toast('Enviado! Um administrador vai revisar.'); if(location.hash.startsWith('#/conta')) carregarMeusComentarios(); }
   }catch(err){ falha(err.message); }
   finally{ btn.disabled = false; btn.textContent = txtBtn; }

@@ -90,6 +90,7 @@ if(!CFG || !CFG.apiKey || CFG.apiKey === 'COLE_AQUI'){
         try{
           const cred = await A.createUserWithEmailAndPassword(auth, email, senha);
           await F.setDoc(F.doc(db, 'users', cred.user.uid), { nome, email, role: 'vendedor', status: 'aprovado', criadoEm: F.serverTimestamp() });
+          await C.atualizar();   // o perfil acabou de ser criado: libera a entrada no app na hora
         }catch(e){ throw erro(e); }
       },
       async entrar(email, senha){
