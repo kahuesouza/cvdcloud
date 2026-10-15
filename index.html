@@ -131,6 +131,8 @@ main{max-width:720px;margin:0 auto;padding:6px 18px 28px}
 .link-row .seta{color:var(--fraco);display:flex}
 
 /* abas deslizantes */
+.ibtn.alerta{position:relative}.ibtn.alerta::after{content:"";position:absolute;top:7px;right:7px;width:11px;height:11px;border-radius:50%;background:#e5484d;border:2px solid var(--surface)}
+[hidden]{display:none!important}
 .esp-titulo{font-size:19px;font-weight:800;margin:26px 0 0;padding-bottom:6px;border-bottom:2px solid var(--acento);letter-spacing:-.01em}
 .abas{position:sticky;top:calc(54px + env(safe-area-inset-top));z-index:20;margin:14px -18px 4px;padding:8px 18px 0;background:color-mix(in srgb,var(--bg) 88%,transparent);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
 .abas .trilho{display:flex;gap:22px;overflow-x:auto;scrollbar-width:none;position:relative;border-bottom:1px solid var(--linha)}
@@ -884,6 +886,7 @@ function telaConta(){
   if(C.aprovado()){
     corpo += `<div class="botoes" style="display:grid;gap:8px;margin-top:14px"><button class="btn prim" data-comentar="geral">${ic('mega')}Enviar comentário</button></div>`;
     corpo += `<div style="margin-top:8px">${linkRow('#/dicas', 'estrela', 'Dicas da equipe')}</div>`;
+    if(C.admin()) corpo += `<a id="banner-contas" class="nota anima" href="#/admin/usuarios" ${novasContas ? '' : 'hidden'} style="display:flex;border-color:var(--acento)">${ic('info')}<div><b>${novasContas} ${novasContas > 1 ? 'contas novas' : 'conta nova'}</b>Toque para conferir e dar o OK. O acesso delas já funciona.</div></a>`;
     if(C.admin()) corpo += `<div>${linkRow('#/admin/painel', 'info', 'Painel de administração')}</div>`;
     corpo += secao('Meus comentários') + `<div id="meus-com">${vazio('Carregando…')}</div>`;
   }
@@ -913,6 +916,18 @@ function telaDicas(){
   } };
 }
 
+let novasContas = 0, novasContasEm = 0;
+async function atualizarNovas(forcar){
+  const C = CONTA(); if(!C || !C.configurado || !C.admin()) { novasContas = 0; return; }
+  if(!forcar && Date.now() - novasContasEm < 45000) return; novasContasEm = Date.now();
+  try{ novasContas = (await C.contasNovas()).length; }catch(e){}
+  pintarAlertaContas();
+}
+function pintarAlertaContas(){
+  document.querySelectorAll('a[href="#/conta"].ibtn').forEach(a => a.classList.toggle('alerta', novasContas > 0));
+  const eq = document.querySelector('.abas a[href="#/admin/usuarios"] small'); if(eq) eq.textContent = novasContas ? novasContas : '';
+  const bn = document.getElementById('banner-contas'); if(bn) bn.hidden = !novasContas, bn.querySelector('b') && (bn.querySelector('b').textContent = novasContas + (novasContas > 1 ? ' contas novas' : ' conta nova'));
+}
 const ABAS_ADMIN = [{id:'painel', nome:'Painel'}, {id:'comentarios', nome:'Comentários'}, {id:'usuarios', nome:'Equipe'}, {id:'links', nome:'Links'}, {id:'catalogo', nome:'Catálogo'}];
 function haQuanto(t){
   const s = t && (t.seconds ?? (t.toMillis ? t.toMillis()/1000 : null)); if(!s) return 'nunca';
@@ -927,7 +942,7 @@ function telaAdmin(aba){
   if(!C.admin()) return { ...base, corpo: largo('Administração') + infoCard('Área restrita', 'Somente administradores têm acesso a esta página.') };
   const sts = aba === 'comentarios' ? [['pendente','Pendentes'],['aprovado','Aprovados'],['rejeitado','Rejeitados']] : aba === 'usuarios' ? [['aprovado','Ativos'],['bloqueado','Bloqueados']] : [];
   const corpo = largo('Administração', 'Uso do app, equipe e moderação.')
-    + abas(ABAS_ADMIN, aba, '#/admin')
+    + abas(ABAS_ADMIN.map(x => x.id === 'usuarios' && novasContas ? { ...x, n: novasContas } : x), aba, '#/admin')
     + (sts.length ? `<div class="chips-f">${sts.map(([k,n]) => `<button class="${filtroAdmin[aba] === k ? 'on' : ''}" data-filtro="${aba}:${k}">${n}</button>`).join('')}</div>` : '')
     + `<div id="admin-lista">${vazio('Carregando…')}</div>`;
   return { ...base, corpo, depois: () => carregarAdmin(aba) };
@@ -982,8 +997,8 @@ async function carregarAdmin(aba){
       el.innerHTML = l.length ? l.map(c => `<div class="cartao-c anima"><div class="topo-c"><span class="st">${esc(CATS[c.categoria] || c.categoria)}</span>${stChip(c.status)}<span class="quem">${esc(c.autorNome)} · ${fmtData(c.criadoEm)}</span></div><p>${esc(c.texto)}</p><div class="item-c">Sobre: ${esc(c.itemTitulo || 'Geral')}</div>${c.notaAdmin ? `<p style="color:var(--sub);font-size:13px">Nota: ${esc(c.notaAdmin)}</p>` : ''}
         <div class="acoes-c">${st !== 'aprovado' ? `<button class="ok" data-mod="${esc(c.id)}:aprovado">Aprovar</button>` : ''}${st !== 'rejeitado' ? `<button data-mod="${esc(c.id)}:rejeitado">Rejeitar</button>` : ''}${st !== 'pendente' ? `<button data-mod="${esc(c.id)}:pendente">Voltar p/ pendente</button>` : ''}<button class="ruim" data-excluir="${esc(c.id)}">Excluir</button></div></div>`).join('') : vazio('Nada por aqui.');
     } else if(aba === 'usuarios'){
-      const l = await C.listarUsuarios(st); const ver = await C.listarVerificados().catch(() => new Set());
-      el.innerHTML = `` + `<form class="cartao-c anima form" data-criar-conta autocomplete="off"><b style="font-size:14.5px">Criar conta verificada</b><p style="color:var(--sub);font-size:13.5px;margin:6px 0 10px">Para quem não conseguiu entrar. A conta já nasce confirmada, com uma senha genérica que você envia à pessoa. Depois de entrar, ela pode trocar a senha se quiser (opcional).</p><input name="nome" placeholder="Nome completo" required minlength="2" maxlength="80"><input name="email" type="email" placeholder="email@cvdvale.com.br" required maxlength="120"><input name="senha" type="text" placeholder="Senha genérica (mín. 8, letras e números)" required minlength="8" maxlength="60" value="Cvd@${Math.floor(1000 + Math.random() * 9000)}" autocomplete="off" spellcheck="false"><button class="btn prim" type="submit">Criar conta</button><p class="erro-f" id="cc-msg" role="status" style="color:var(--sub)"></p></form>` + (l.length ? l.map(u => `<div class="cartao-c anima"><div class="topo-c"><b>${esc(u.nome)}</b>${stChip(u.status)}${u.role === 'admin' || (window.CVD_ADMINS || []).includes((u.email || '').toLowerCase()) ? '<span class="st">Admin</span>' : ''}</div><div class="quem">${esc(u.email)}</div><div class="quem" style="margin-top:2px">Cadastro ${fmtData(u.criadoEm)} · último acesso ${haQuanto(u.ultimoAcesso)}</div>
+      const l = await C.listarUsuarios(st); const novas = await C.contasNovas().catch(() => []); novasContas = novas.length; novasContasEm = Date.now(); pintarAlertaContas();
+      el.innerHTML = (novas.length ? `<div class="cartao-c anima" style="border-color:var(--acento)"><b style="font-size:14.5px">${novas.length} ${novas.length > 1 ? 'contas novas' : 'conta nova'} para conferir</b><p style="color:var(--sub);font-size:13.5px;margin:6px 0 10px">Elas já têm acesso normal ao app. Confirme com OK se a conta é real; se não for, bloqueie ou exclua.</p>${novas.map(u => `<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:8px 0;border-top:1px solid var(--linha)"><span style="flex:1;min-width:160px"><b style="font-size:14px">${esc(u.nome)}</b><br><span class="quem">${esc(u.email)} · ${fmtData(u.criadoEm)}</span></span><span class="acoes-c" style="margin:0"><button class="ok" data-revisar="${esc(u.uid)}">OK, conta real</button><button class="ruim" data-usr="${esc(u.uid)}:bloqueado">Bloquear</button></span></div>`).join('')}</div>` : '') + `<form class="cartao-c anima form" data-criar-conta autocomplete="off"><b style="font-size:14.5px">Criar conta verificada</b><p style="color:var(--sub);font-size:13.5px;margin:6px 0 10px">Para quem não conseguiu entrar. A conta já nasce confirmada, com uma senha genérica que você envia à pessoa. Depois de entrar, ela pode trocar a senha se quiser (opcional).</p><input name="nome" placeholder="Nome completo" required minlength="2" maxlength="80"><input name="email" type="email" placeholder="email@cvdvale.com.br" required maxlength="120"><input name="senha" type="text" placeholder="Senha genérica (mín. 8, letras e números)" required minlength="8" maxlength="60" value="Cvd@${Math.floor(1000 + Math.random() * 9000)}" autocomplete="off" spellcheck="false"><button class="btn prim" type="submit">Criar conta</button><p class="erro-f" id="cc-msg" role="status" style="color:var(--sub)"></p></form>` + (l.length ? l.map(u => `<div class="cartao-c anima"><div class="topo-c"><b>${esc(u.nome)}</b>${stChip(u.status)}${u.role === 'admin' || (window.CVD_ADMINS || []).includes((u.email || '').toLowerCase()) ? '<span class="st">Admin</span>' : ''}</div><div class="quem">${esc(u.email)}</div><div class="quem" style="margin-top:2px">Cadastro ${fmtData(u.criadoEm)} · último acesso ${haQuanto(u.ultimoAcesso)}</div>
         ${u.uid !== C.user.uid && u.role !== 'admin' && !(window.CVD_ADMINS || []).includes((u.email || '').toLowerCase()) ? `<div class="acoes-c">${u.status !== 'bloqueado' ? `<button class="ruim" data-usr="${esc(u.uid)}:bloqueado">Bloquear</button>` : `<button class="ok" data-usr="${esc(u.uid)}:aprovado">Liberar de novo</button>`}<button class="ruim" data-excluir-conta="${esc(u.uid)}" data-email="${esc(u.email)}" data-nome="${esc(u.nome)}">Excluir conta</button></div>` : ''}</div>`).join('') : vazio('Ninguém por aqui.'));
     } else if(aba === 'links'){
       const l = await C.listarCompartilhamentos(); const us = new Map((await C.todosUsuarios()).map(u => [u.uid, u.nome]));
@@ -1060,8 +1075,9 @@ async function carregarEIniciar(){
   try{
     let cat = null;
     try{ cat = await C.carregarCatalogo(); }catch(e){}
-    if(cat && cat.dados){ aplicarCatalogo(cat); window.__origemCatalogo = 'servidor'; }
-    else { await carregarEstatico(); window.__origemCatalogo = 'arquivos'; }
+    // usa sempre a cópia mais nova: a do servidor (Firestore) ou os arquivos publicados com o app
+    await carregarEstatico(); window.__origemCatalogo = 'arquivos';
+    if(cat && cat.dados && (cat.dados.rev || 0) >= ((window.CVD && window.CVD.rev) || 0)){ aplicarCatalogo(cat); window.__origemCatalogo = 'servidor'; }
     prepararDados(); appIniciado = true; carregandoCatalogo = false; gateFechar(); render();
   }catch(e){
     carregandoCatalogo = false;
@@ -1133,6 +1149,7 @@ function pintar(){
     + `<button class="ibtn" data-busca aria-label="Buscar">${ic('busca')}</button>`;
   app.innerHTML = tela.corpo;
   const atual = qualNav(a, b);
+  pintarAlertaContas(); atualizarNovas();
   navEl.innerHTML = NAV.map(([href,nome,icn,k])=>`<a href="${href}" class="${k===atual?'on':''}">${ic(icn)}${nome}</a>`).join('');
   const mesma = h.split('/').slice(0,3).join('/') === rotaAnterior.split('/').slice(0,3).join('/');
   const tabsMesmaPagina = h.split('/').slice(0,3).join('/') === rotaAnterior.split('/').slice(0,3).join('/');
@@ -1231,6 +1248,7 @@ document.addEventListener('click', e=>{
   const fl = t.closest('[data-filtro]'); if(fl){ const [aba, st] = fl.dataset.filtro.split(':'); filtroAdmin[aba] = st; render(); return; }
   const md = t.closest('[data-mod]'); if(md){ const [id, st] = md.dataset.mod.split(':'); const nota = st === 'rejeitado' ? (prompt('Motivo (opcional):') || '') : ''; CONTA().moderarComentario(id, st, nota).then(() => { toast('Atualizado'); carregarAdmin('comentarios'); }).catch(e => toast('Erro: ' + e.message)); return; }
   const ex = t.closest('[data-excluir]'); if(ex){ if(confirm('Excluir este comentário de vez?')) CONTA().excluirComentario(ex.dataset.excluir).then(() => { toast('Excluído'); carregarAdmin('comentarios'); }).catch(e => toast('Erro: ' + e.message)); return; }
+  const rv = t.closest('[data-revisar]'); if(rv){ CONTA().marcarRevisado(rv.dataset.revisar).then(() => { toast('Conta confirmada'); carregarAdmin('usuarios'); }).catch(e => toast('Erro: ' + e.message)); return; }
   const val = t.closest('[data-validar]'); if(val){ CONTA().validarEmail(val.dataset.validar, val.dataset.nome).then(() => { toast('E-mail validado'); carregarAdmin('usuarios'); }).catch(e => toast('Erro: ' + e.message)); return; }
   const exc = t.closest('[data-excluir-conta]'); if(exc){ if(!confirm('Excluir a conta de ' + exc.dataset.nome + ' (' + exc.dataset.email + ')? A pessoa perde o acesso na hora. Para liberar de novo, crie a conta outra vez.')) return; CONTA().excluirUsuario(exc.dataset.excluirConta, exc.dataset.email).then(() => { toast('Conta excluída'); carregarAdmin('usuarios'); }).catch(e => toast('Erro: ' + e.message)); return; }
   const us = t.closest('[data-usr]'); if(us){ const [uid, st] = us.dataset.usr.split(':'); CONTA().mudarUsuario(uid, st).then(() => { toast('Atualizado'); carregarAdmin('usuarios'); }).catch(e => toast('Erro: ' + e.message)); return; }

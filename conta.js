@@ -160,6 +160,12 @@ if(!CFG || !CFG.apiKey || CFG.apiKey === 'COLE_AQUI'){
         if(!C.admin()) throw new Error('Apenas administradores.');
         const s = await F.getDocs(F.collection(db, 'users')); return s.docs.map(d => ({ uid: d.id, ...d.data() }));
       },
+      /* contas novas ainda sem o OK do admin (o acesso delas já funciona normalmente) */
+      async contasNovas(){
+        if(!C.admin()) return [];
+        return (await C.todosUsuarios()).filter(u => !u.revisado && u.status !== 'bloqueado' && u.role !== 'admin' && !ADMINS.includes((u.email || '').toLowerCase())).sort(por);
+      },
+      async marcarRevisado(uid){ if(!C.admin()) throw new Error('Apenas administradores.'); try{ await F.updateDoc(F.doc(db, 'users', uid), { revisado: true }); }catch(e){ throw erro(e); } },
       async listarUsuarios(status){ return (await C.todosUsuarios()).filter(u => u.status === status).sort(por); },
       /* Admin cria conta já verificada: senha aleatória (ninguém a conhece) + e-mail para a pessoa definir a própria senha. */
       async criarContaFuncionario(nome, email, senha){
