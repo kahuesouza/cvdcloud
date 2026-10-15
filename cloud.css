@@ -1,0 +1,150 @@
+/* =====================================================================
+   cvdcloud · tema futurista
+   Camada visual por cima do estilo base (index.html). Só aparência.
+   ===================================================================== */
+:root{
+  --acento:#2f6bff; --acento-2:#22d3ee; --acento-3:#8b5cf6;
+  --grad:linear-gradient(135deg,#2f6bff 0%,#6d5dfc 52%,#22d3ee 125%);
+  --vidro:color-mix(in srgb,var(--surface) 70%,transparent);
+  --bg:#f2f6fe; --surface:#ffffff; --surface-2:#e9effb; --linha:rgba(47,107,255,.14);
+}
+:root[data-theme="dark"]{
+  --bg:#04060e; --surface:#0a1120; --surface-2:#111c35; --linha:rgba(140,172,255,.15);
+  --texto:#eaf1ff; --sub:#9fb2d6; --fraco:#7088b0;
+  --acento:#4c8dff; --acento-tinta:#aac7ff; --acento-fundo:rgba(76,141,255,.17);
+  --alerta-fundo:rgba(251,191,106,.12);
+}
+
+/* fundo: aurora + grade */
+html{background:var(--bg)}
+body{background:transparent;position:relative}
+body::before{content:"";position:fixed;inset:-20vh -20vw;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(42vmax 42vmax at 10% 6%,rgba(47,107,255,.34),transparent 60%),
+    radial-gradient(38vmax 38vmax at 94% 12%,rgba(139,92,246,.26),transparent 62%),
+    radial-gradient(46vmax 46vmax at 72% 100%,rgba(34,211,238,.20),transparent 60%);
+  animation:aurora 28s ease-in-out infinite alternate}
+:root:not([data-theme="dark"]) body::before{opacity:.55}
+@keyframes aurora{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(3vw,2vh,0) scale(1.1)}}
+body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background-image:linear-gradient(rgba(130,165,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(130,165,255,.07) 1px,transparent 1px);
+  background-size:46px 46px;
+  -webkit-mask-image:radial-gradient(120% 70% at 50% 0%,#000 8%,transparent 75%);mask-image:radial-gradient(120% 70% at 50% 0%,#000 8%,transparent 75%)}
+:root:not([data-theme="dark"]) body::after{opacity:.5}
+
+/* barra superior */
+.bar{background:color-mix(in srgb,var(--bg) 55%,transparent);-webkit-backdrop-filter:saturate(1.8) blur(18px);backdrop-filter:saturate(1.8) blur(18px)}
+.bar .logo{height:20px;margin-left:8px}
+.ibtn{border-radius:14px}
+.ibtn:active{background:var(--acento-fundo)}
+
+/* títulos */
+.largo h1{font-size:32px;font-weight:800;letter-spacing:-.03em}
+.sec h2{color:var(--texto);font-size:11.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+.sec h2::before{content:"";display:inline-block;width:20px;height:2px;border-radius:2px;background:var(--grad);margin-right:9px;vertical-align:middle}
+.sec span{color:var(--sub)}
+
+/* herói da tela inicial */
+.hero{position:relative;margin:10px 0 4px;padding:26px 22px 22px;border-radius:28px;overflow:hidden;
+  background:linear-gradient(160deg,color-mix(in srgb,var(--surface) 82%,transparent),color-mix(in srgb,var(--surface) 55%,transparent));
+  -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border:1px solid var(--linha);
+  box-shadow:0 30px 80px -40px rgba(47,107,255,.65)}
+.hero::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:var(--grad);opacity:.75;pointer-events:none;
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0)}
+.hero::after{content:"";position:absolute;top:-40%;left:-60%;width:50%;height:180%;transform:rotate(18deg);pointer-events:none;
+  background:linear-gradient(90deg,transparent,rgba(160,200,255,.13),transparent);animation:varre 7s ease-in-out infinite}
+@keyframes varre{0%,55%{left:-60%}100%{left:130%}}
+.hero-logo{height:44px;width:auto;display:block;margin-bottom:18px}
+:root[data-theme="dark"] .hero-logo,:root[data-theme="dark"] .logo-g{filter:brightness(0) invert(1)}
+.hero h1{margin:0;font-size:29px;line-height:1.1;font-weight:800;letter-spacing:-.03em}
+.hero h1 em{font-style:normal;color:var(--acento-tinta)}
+.hero p{margin:10px 0 0;color:var(--sub);font-size:14.5px;line-height:1.5;max-width:30em}
+.hero-chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.hero-chips span{display:inline-flex;align-items:baseline;gap:6px;padding:8px 13px;border-radius:999px;font-size:12px;font-weight:700;color:var(--sub);background:var(--acento-fundo);border:1px solid var(--linha)}
+.hero-chips b{font-size:16px;font-weight:800;color:var(--texto);font-variant-numeric:tabular-nums}
+
+/* busca */
+.busca-fake{background:var(--vidro);border:1px solid var(--linha);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);
+  box-shadow:0 14px 40px -24px rgba(47,107,255,.8);color:var(--sub)}
+.busca-fake:hover{border-color:color-mix(in srgb,var(--acento) 55%,transparent)}
+
+/* cartões em vidro */
+.tile,.cartao-c,.nota{background:var(--vidro);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border:1px solid var(--linha)}
+.nota{color:var(--texto)}
+.tile,.pc .img{position:relative;overflow:hidden;transition:transform .2s var(--ease),border-color .25s,box-shadow .25s}
+.tile::before,.cartao-c::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .25s;
+  background:radial-gradient(230px circle at var(--mx,50%) var(--my,0%),rgba(120,170,255,.20),transparent 62%)}
+.cartao-c{position:relative}
+.tile:hover::before,.cartao-c:hover::before{opacity:1}
+.tile:hover{border-color:color-mix(in srgb,var(--acento) 55%,transparent);box-shadow:0 18px 50px -22px var(--acento)}
+.tile>svg{filter:drop-shadow(0 0 10px color-mix(in srgb,var(--acento) 70%,transparent))}
+.tile.destaque{background:var(--grad);color:#fff;border-color:transparent;box-shadow:0 22px 60px -24px rgba(47,107,255,.9)}
+.tile.destaque>svg{color:#fff;filter:none}
+.tile.destaque small{color:rgba(255,255,255,.82)}
+.tile.destaque::before{background:radial-gradient(260px circle at var(--mx,50%) var(--my,0%),rgba(255,255,255,.24),transparent 62%)}
+.pc .img{background:var(--vidro);border:1px solid var(--linha);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.pc:hover .img{border-color:color-mix(in srgb,var(--acento) 55%,transparent);box-shadow:0 18px 44px -22px var(--acento)}
+.pc .img img{transition:transform .35s var(--ease)}.pc:hover .img img{transform:scale(1.06)}
+
+/* carrossel com margem lateral */
+.rolagem{scroll-padding-left:18px}
+
+/* listas em painel de vidro */
+.lista{margin-top:10px;padding:0 14px;border-radius:22px;background:var(--vidro);border:1px solid var(--linha);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.lead{background:var(--acento-fundo)}
+.lead.thumb{background:#000}.lead.doc{background:#fff}
+.linha,.link-row{border-top-color:var(--linha)}
+
+/* botões */
+.btn.prim{background:var(--grad);color:#fff;box-shadow:0 14px 34px -14px rgba(47,107,255,.95)}
+.btn.sec{background:var(--acento-fundo);border:1px solid var(--linha)}
+.acoes a.ibtn,.acoes .ibtn.comp{background:var(--acento-fundo);color:var(--acento-tinta)}
+.pilula{border:1px solid var(--linha)}
+.seg{background:var(--surface-2)}
+.seg button.on{background:var(--grad);color:#fff;box-shadow:0 8px 20px -10px var(--acento)}
+
+/* abas em pílulas */
+.abas{background:transparent;box-shadow:none}
+.abas a{background:var(--vidro);border-color:var(--linha);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.abas a.on{background:var(--grad);border-color:transparent;color:#fff;box-shadow:0 10px 26px -10px rgba(47,107,255,.95)}
+.chips-t button{background:var(--vidro);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.topicos-ir{background:var(--vidro);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+
+/* barra de navegação flutuante (dock) */
+nav.base{left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom));padding-bottom:0;border:1px solid var(--linha);border-radius:28px;
+  background:color-mix(in srgb,var(--surface) 72%,transparent);-webkit-backdrop-filter:blur(22px) saturate(1.6);backdrop-filter:blur(22px) saturate(1.6);
+  box-shadow:0 24px 60px -24px #000,0 0 0 1px rgba(255,255,255,.04) inset,0 0 40px -22px var(--acento)}
+nav.base div{max-width:540px;padding:6px}
+nav.base a{border-radius:22px}
+nav.base a.on{background:var(--grad);color:#fff;box-shadow:0 10px 26px -10px rgba(47,107,255,.95)}
+nav.base a.on::after{display:none}
+nav.base a.on svg{filter:drop-shadow(0 0 6px rgba(255,255,255,.5))}
+body{padding-bottom:calc(var(--nav-h) + env(safe-area-inset-bottom) + 26px)}
+.toast{bottom:calc(var(--nav-h) + 34px + env(safe-area-inset-bottom))}
+
+/* painel inferior e busca */
+.veu{background:rgba(2,5,14,.62);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+.painel{background:color-mix(in srgb,var(--surface) 90%,transparent);-webkit-backdrop-filter:blur(26px) saturate(1.5);backdrop-filter:blur(26px) saturate(1.5);
+  border:1px solid var(--linha);border-bottom:0;box-shadow:0 -30px 80px -30px rgba(47,107,255,.5)}
+.busca-ov{background:color-mix(in srgb,var(--bg) 94%,transparent);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.busca-ov .campo{background:var(--vidro);border:1px solid var(--linha)}
+
+/* entrada / login */
+.gate{background:transparent}
+.gate-in{margin-top:4vh;padding:34px 24px 36px;border-radius:30px;background:var(--vidro);border:1px solid var(--linha);
+  -webkit-backdrop-filter:blur(22px);backdrop-filter:blur(22px);box-shadow:0 40px 100px -40px rgba(47,107,255,.7)}
+.gate-in .logo-g{height:44px;margin-bottom:24px;animation:flutua 5s ease-in-out infinite}
+@keyframes flutua{50%{transform:translateY(-5px)}}
+.gate-in h1{font-size:27px}
+.form input,.form select,.form textarea{background:var(--surface-2);border:1.5px solid var(--linha)}
+.form input:focus,.form select:focus,.form textarea:focus{border-color:var(--acento);box-shadow:0 0 0 4px color-mix(in srgb,var(--acento) 22%,transparent)}
+
+/* painéis de números */
+.kpi{background:var(--vidro);border:1px solid var(--linha);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.kpi b{color:var(--acento-tinta)}
+.rank{background:var(--vidro);border:1px solid var(--linha);border-radius:18px;padding:4px 14px}
+.barras span{background:color-mix(in srgb,var(--acento) 30%,transparent)}
+.barras span.hj{background:var(--grad)}
+
+@media (prefers-reduced-motion: reduce){ body::before,.hero::after,.gate-in .logo-g{animation:none!important} }

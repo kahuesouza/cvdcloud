@@ -3,18 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>CVDentus Materiais</title>
+<title>cvdcloud</title>
 <meta name="description" content="Central de materiais comerciais CVDentus: catálogos, manuais, vídeos, procedimentos, pontas e marca.">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; media-src https:; connect-src 'self' https://*.googleapis.com https://*.firebaseio.com https://*.firebaseapp.com https://firestore.googleapis.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com wss://*.firebaseio.com; frame-src https://*.firebaseapp.com; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<meta name="theme-color" content="#ffffff" id="meta-tema">
-<script>try{var t=JSON.parse(localStorage.getItem('cvd.tema')||'"claro"');if(t==='escuro'){document.documentElement.setAttribute('data-theme','dark');document.getElementById('meta-tema').setAttribute('content','#0b0f17')}}catch(e){}</script>
+<meta name="theme-color" content="#f2f6fe" id="meta-tema">
+<script>try{var t=JSON.parse(localStorage.getItem('cvd.tema')||'"escuro"');if(t==='escuro'){document.documentElement.setAttribute('data-theme','dark');document.getElementById('meta-tema').setAttribute('content','#04060e')}}catch(e){}</script>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="img/icone.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="img/icone-192.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="CVDentus">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="cvdcloud">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -332,6 +332,7 @@ nav.base a.on::after{content:"";position:absolute;top:-7px;left:50%;width:26px;h
 
 @media (min-width:640px){ .tiles{grid-template-columns:repeat(3,1fr)} .tile.destaque{grid-column:span 3} .grade{grid-template-columns:repeat(3,1fr)} }
 </style>
+<link rel="stylesheet" href="cloud.css?v53">
 </head>
 <body>
 <header class="bar" id="bar"></header>
@@ -521,7 +522,12 @@ function telaInicio(){
   const novos = D.materiais.filter(m=>m.novo && doPt(m));
   return { titulo:'Materiais', inicio:true, corpo: `
     ${bannerInstalar()}
-    <div class="largo anima"><h1>Materiais</h1><p>Tudo para vender, a um toque.</p></div>
+    <section class="hero anima">
+      <img class="hero-logo" src="img/logo.svg" alt="cvdcloud">
+      <h1>Tudo para <em>vender mais</em>,<br>a um toque.</h1>
+      <p>Catálogos, vídeos de procedimentos, pontas e materiais de marketing da CVDentus em um só lugar.</p>
+      <div class="hero-chips"><span><b>${D.materiais.length}</b> materiais</span><span><b>${nProc}</b> vídeos</span><span><b>${PONTAS.reduce((a,e)=>a+e.modos.reduce((b,m)=>b+m.pontas.length,0),0)}</b> pontas</span></div>
+    </section>
     <button class="busca-fake anima" style="--i:1" data-busca>${ic('busca')}Buscar material, vídeo ou ponta</button>
     ${secao('Acesso rápido')}
     <div class="tiles">
@@ -887,7 +893,7 @@ function bannerInstalar(){
 const temaEscuro = () => document.documentElement.getAttribute('data-theme') === 'dark';
 function aplicarTema(escuro){
   if(escuro) document.documentElement.setAttribute('data-theme','dark'); else document.documentElement.removeAttribute('data-theme');
-  document.getElementById('meta-tema').setAttribute('content', escuro ? '#0b0f17' : '#ffffff');
+  document.getElementById('meta-tema').setAttribute('content', escuro ? '#04060e' : '#f2f6fe');
   ls.set('tema', escuro ? 'escuro' : 'claro');
   document.querySelectorAll('[data-tema]').forEach(b=>{ b.innerHTML = ic(escuro?'sol':'lua'); b.setAttribute('aria-label', escuro?'Usar visual branco':'Usar visual escuro'); });
 }
@@ -1161,7 +1167,7 @@ function atualizarDicasDoItem(x){
 const gateEl = document.getElementById('gate');
 let appIniciado = false, carregandoCatalogo = false, modoGate = 'entrar';
 const VERSAO_APP = 'v43';
-function gateHtml(corpo){ return `<div class="gate-in"><img class="logo-g" src="img/logo.svg" alt="CVDentus">${corpo}</div>`; }
+function gateHtml(corpo){ return `<div class="gate-in"><img class="logo-g" src="img/logo.svg" alt="cvdcloud">${corpo}</div>`; }
 function gateMostrar(html){ document.body.classList.add('gate-on'); gateEl.innerHTML = gateHtml(html); }
 function gateFechar(){ document.body.classList.remove('gate-on'); gateEl.innerHTML = ''; }
 const DOM_TXT = `<span class="dom">@cvdvale.com.br</span> ou <span class="dom">@cvdentus.com.br</span>`;
@@ -1197,7 +1203,7 @@ async function carregarEstatico(){
 }
 async function carregarEIniciar(){
   const C = CONTA(); carregandoCatalogo = true;
-  gateMostrar(`<h1>CVDentus</h1><p class="sub-g">Carregando o catálogo…</p>`);
+  gateMostrar(`<h1>cvdcloud</h1><p class="sub-g">Carregando o catálogo…</p>`);
   try{
     let cat = null;
     try{ cat = await C.carregarCatalogo(); }catch(e){}
@@ -1269,7 +1275,7 @@ function pintar(){
   const h = location.hash || '#/', [, a, b] = h.split('/');
   const tela = escolherTela();
   const inicio = !!tela.inicio;
-  barEl.innerHTML = (tela.voltar ? `<a class="ibtn" href="${tela.voltar}" aria-label="Voltar">${ic('volta')}</a>` : `<a href="#/" aria-label="Início"><img class="logo" src="img/logo.svg" alt="CVDentus"></a>`)
+  barEl.innerHTML = (tela.voltar ? `<a class="ibtn" href="${tela.voltar}" aria-label="Voltar">${ic('volta')}</a>` : `<a href="#/" aria-label="Início"><img class="logo" src="img/logo.svg" alt="cvdcloud"></a>`)
     + `<span class="titulo-pequeno">${inicio?'':esc(tela.titulo||'')}</span><span class="esp"></span>`
     + `<a class="ibtn" href="#/conta" aria-label="Minha conta" style="${CONTA() && CONTA().user ? 'color:var(--acento)' : ''}">${ic('usuario')}</a>`
     + `<button class="ibtn" data-tema aria-label="${temaEscuro()?'Usar visual branco':'Usar visual escuro'}">${ic(temaEscuro()?'sol':'lua')}</button>`
@@ -1282,7 +1288,7 @@ function pintar(){
   const tabsMesmaPagina = h.split('/').slice(0,3).join('/') === rotaAnterior.split('/').slice(0,3).join('/');
   if(!tabsMesmaPagina || h.split('/').length < 4) { if(!mesma) window.scrollTo(0,0); }
   rotaAnterior = h;
-  document.title = (tela.titulo && !inicio ? tela.titulo + ' · ' : '') + 'CVDentus Materiais';
+  document.title = (tela.titulo && !inicio ? tela.titulo + ' · ' : '') + 'cvdcloud';
   track('tela', h.split('/').slice(1, 3).join('/') || 'inicio', tela.titulo || 'Início', '');
   if(io) io.disconnect();
   const g = app.querySelector('.largo');
@@ -1338,6 +1344,7 @@ async function compartilhar(x){
   }
   await enviarLink(nome, x.url);   // modo de preparação (sem Firebase)
 }
+document.addEventListener('pointermove', e => { const c = e.target.closest && e.target.closest('.tile,.cartao-c'); if(!c) return; const r = c.getBoundingClientRect(); c.style.setProperty('--mx', (e.clientX - r.left) + 'px'); c.style.setProperty('--my', (e.clientY - r.top) + 'px'); }, { passive: true });
 document.addEventListener('click', e=>{
   const t = e.target;
   if(t.closest('[data-tema]')){ aplicarTema(!temaEscuro()); toast(temaEscuro() ? 'Visual escuro' : 'Visual branco'); return; }

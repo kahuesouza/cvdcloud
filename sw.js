@@ -1,6 +1,6 @@
 // Cache só da "casca" do app (alguns KB). Os materiais em si são sempre links externos.
-const VERSAO = 'cvd-materiais-v51';
-const CASCA = ['./', 'index.html', 'firebase-config.js', 'conta.js', 'manifest.webmanifest', 'img/logo-branco.svg', 'img/icone.svg',
+const VERSAO = 'cvd-materiais-v53';
+const CASCA = ['./', 'index.html', 'firebase-config.js', 'conta.js', 'manifest.webmanifest', 'img/logo-branco.svg', 'cloud.css', 'img/icone.svg',
   'img/optymus.webp', 'img/clinical-plus.webp', 'img/dentsurg-pro.webp'];
 
 self.addEventListener('install', e => {

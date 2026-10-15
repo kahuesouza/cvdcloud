@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CVDentus</title>
+<title>cvdcloud</title>
 <meta name="robots" content="noindex, nofollow">
 <meta name="referrer" content="no-referrer">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; media-src https:; connect-src https://*.googleapis.com https://*.firebaseio.com https://firestore.googleapis.com wss://*.firebaseio.com; object-src 'none'; base-uri 'none'; form-action 'none'">
@@ -37,7 +37,7 @@ svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-l
 </head>
 <body>
 <main>
-  <img class="logo" src="img/logo.svg" alt="CVDentus">
+  <img class="logo" src="img/logo.svg" alt="cvdcloud">
   <div class="cartao" id="c"><div class="vazio">Carregando…</div></div>
   <div class="rod">Material compartilhado pela equipe CVDentus</div>
 </main>
@@ -67,7 +67,7 @@ else {
       else {
         const thumb = /^img\/[\w\-./]+$/.test(d.thumb || '') ? d.thumb : '';
         const mb = typeof d.mb === 'number' ? (d.mb < 1 ? '<1 MB' : (d.mb < 10 ? String(d.mb).replace('.', ',') : Math.round(d.mb)) + ' MB') : '';
-        document.title = d.titulo + ' · CVDentus';
+        document.title = d.titulo + ' · cvdcloud';
         const ehVideo = /\.mp4(\?|$)/i.test(d.url);
         c.innerHTML = `${ehVideo ? `<div class="im" style="aspect-ratio:auto;background:#000"><video controls playsinline preload="metadata" ${thumb ? `poster="${esc(thumb)}"` : ''} src="${esc(d.url)}" style="width:100%;max-height:60vh;display:block"></video></div>` : thumb ? `<div class="im ${/\/t\//.test(thumb) ? 'doc' : ''}"><img alt="" src="${esc(thumb)}"></div>` : ''}
           <h1>${esc(d.titulo)}</h1><p class="meta">${esc([d.tipo, mb].filter(Boolean).join(' · '))}</p>
