@@ -53,6 +53,8 @@ if(!CFG || !CFG.apiKey || CFG.apiKey === 'COLE_AQUI'){
         registrarEntrada();
       }
       C.resolvido = true; resolverPronto(true); avisar();
+      clearInterval(C._poll);
+      if(u && !u.emailVerified) C._poll = setInterval(() => { if(!document.hidden && C.estado() === 'verificar') C.atualizar().catch(() => {}); else if(C.estado() !== 'verificar') clearInterval(C._poll); }, 8000);   // libera sozinho quando o admin validar
     });
 
     const erro = e => {
@@ -197,6 +199,21 @@ if(!CFG || !CFG.apiKey || CFG.apiKey === 'COLE_AQUI'){
           await F.deleteDoc(F.doc(db, 'users', uid));
         }catch(e){ throw erro(e); }
       },
+      /* Admin valida o e-mail de quem já se cadastrou (sem esperar o e-mail de confirmação). */
+      async listarVerificados(){
+        if(!C.admin()) return new Set();
+        const s = await F.getDocs(F.collection(db, 'verificados')); return new Set(s.docs.map(d => d.id));
+      },
+      async validarEmail(email, nome){
+        if(!C.admin()) throw new Error('Apenas administradores.');
+        email = txt(email, 120).toLowerCase(); if(!dominioOk(email)) throw new Error(NEG);
+        try{
+          await F.deleteDoc(F.doc(db, 'verificados', email)).catch(() => {});
+          await F.deleteDoc(F.doc(db, 'excluidos', email)).catch(() => {});
+          await F.setDoc(F.doc(db, 'verificados', email), { nome: txt(nome || email, 80), email, criadoPor: C.user.uid, criadoEm: F.serverTimestamp() });
+        }catch(e){ throw erro(e); }
+      },
+      async removerValidacao(email){ if(!C.admin()) throw new Error('Apenas administradores.'); try{ await F.deleteDoc(F.doc(db, 'verificados', txt(email, 120).toLowerCase())); }catch(e){ throw erro(e); } },
       async mudarUsuario(uid, status){ if(!C.admin()) throw new Error('Apenas administradores.'); await F.updateDoc(F.doc(db, 'users', uid), { status }); },
 
       /* ---------- comentários ---------- */
