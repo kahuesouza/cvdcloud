@@ -555,13 +555,19 @@ function telaTipo(tipo){
   return { titulo:t.nome, voltar:'#/', corpo: largo(t.nome, `${pt.length} ${pt.length===1?'item':'itens'}`) + (corpo || vazio('Nenhum item cadastrado ainda.')) };
 }
 
+function telaTopico(id){
+  const t = (D.topicos||[]).find(x=>x.id===id); if(!t) return telaProcedimentos();
+  const g = D.procedimentos.filter(p=>p.topico===id);
+  return { titulo:t.nome, voltar:'#/procedimentos', corpo: largo(esc(t.nome), `${g.length} vídeo${g.length>1?'s':''} · toque para assistir`) + lista(g,{produto:true}) };
+}
 function telaProcedimentos(espSel){
-  const itensAba = [{id:'todos',nome:'Todos',n:D.procedimentos.length}, ...D.especialidades.map(e=>({id:e.id,nome:e.curto,n:D.procedimentos.filter(p=>p.esp===e.id).length}))];
-  const ativo = ESP[espSel] ? espSel : 'todos';
+  const itensAba = [{id:'topicos',nome:'Por tópico',n:(D.topicos||[]).length}, {id:'todos',nome:'Todos',n:D.procedimentos.length}, ...D.especialidades.map(e=>({id:e.id,nome:e.curto,n:D.procedimentos.filter(p=>p.esp===e.id).length}))];
+  const ativo = ESP[espSel] ? espSel : (espSel==='todos' || !(D.topicos||[]).length) ? 'todos' : 'topicos';
   let corpo = '';
-  if(ativo==='todos') D.especialidades.forEach(e=>{ const g = D.procedimentos.filter(p=>p.esp===e.id); corpo += secao(e.nome, g.length) + lista(g); });
+  if(ativo==='topicos') corpo = `<div>${D.topicos.map(t=>linkRow('#/topico/'+t.id, 'dente', esc(t.nome), D.procedimentos.filter(p=>p.topico===t.id).length)).join('')}</div>`;
+  else if(ativo==='todos') D.especialidades.forEach(e=>{ const g = D.procedimentos.filter(p=>p.esp===e.id); corpo += secao(e.nome, g.length) + lista(g); });
   else corpo = lista(D.procedimentos.filter(p=>p.esp===ativo));
-  return { titulo:'Procedimentos', corpo: largo('Procedimentos','Vídeos clínicos por especialidade. Os do canal no YouTube abrem no YouTube; os demais tocam aqui mesmo.') + abas(itensAba, ativo, '#/procedimentos') + corpo };
+  return { titulo:'Procedimentos', corpo: largo('Procedimentos','Escolha um tópico (ex.: Flapless) para ver todos os vídeos dele, ou navegue por especialidade. Os do canal no YouTube abrem no YouTube; os demais tocam aqui mesmo.') + abas(itensAba, ativo, '#/procedimentos') + corpo };
 }
 
 /* ---------- Pontas (organizadas pela bula) ---------- */
@@ -1072,7 +1078,7 @@ let io = null, rotaAnterior = '';
 function qualNav(a, b){
   if(!a) return 'inicio';
   if(a==='tipo' && b==='catalogo') return 'catalogo';
-  if(a==='procedimentos') return 'proc';
+  if(a==='procedimentos' || a==='topico') return 'proc';
   if(a==='pontas') return 'pontas';
   if(a==='salvos') return 'salvos';
   return '';
@@ -1083,6 +1089,7 @@ function escolherTela(){
   if(a==='lupas') return telaLupas(b);
   if(a==='tipo') return telaTipo(b);
   if(a==='procedimentos') return telaProcedimentos(b);
+  if(a==='topico') return telaTopico(b);
   if(a==='pontas') return telaPontas(b, c);
   if(a==='marketing') return telaMarketing();
   if(a==='marca') return telaMarca();
