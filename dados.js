@@ -633,6 +633,17 @@ window.CVD = {
    "mb": 14.7,
    "url": "https://kahuesouza.github.io/cvdentus-arquivos/catalogos/catalogo-lupas-cvdentus-2026.pdf",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/CATALOGO_LUPAS_CVDENTUS_2026_DIGITAL.pdf"
+  },
+  {
+   "titulo": "Catálogo de Lupas · versão fechada",
+   "tipo": "catalogo",
+   "produto": "lupas",
+   "idioma": "pt",
+   "ano": 2026,
+   "novo": true,
+   "mb": 28.3,
+   "url": "https://kahuesouza.github.io/cvdentus-arquivos/catalogos/catalogo-lupas-fechado.pdf",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/CATALOGO_CVLUPAS_fechado.pdf"
   }
  ],
  "marcas": [
@@ -2962,5 +2973,5 @@ window.CVD = {
    "nome": "Demonstrações e casos clínicos"
   }
  ],
- "rev": 1792074920179
+ "rev": 1792075590388
 };
