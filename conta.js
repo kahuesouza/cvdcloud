@@ -169,6 +169,7 @@ if(!CFG || !CFG.apiKey || CFG.apiKey === 'COLE_AQUI'){
         if(nome.length < 2) throw new Error('Informe o nome da pessoa.');
         if(senha.length < 8 || !/[a-zA-Z]/.test(senha) || !/[0-9]/.test(senha)) throw new Error('A senha inicial precisa ter ao menos 8 caracteres, com letras e números.');
         const sec = A.getAuth(secApp()); sec.languageCode = 'pt-BR';
+        try{ await F.deleteDoc(F.doc(db, 'excluidos', email)); }catch(e){}
         const marca = { nome, email, criadoPor: C.user.uid, criadoEm: F.serverTimestamp() };
         let existia = false, uid = null;
         try{
@@ -180,6 +181,17 @@ if(!CFG || !CFG.apiKey || CFG.apiKey === 'COLE_AQUI'){
         }catch(e){ throw erro(e); }
         try{ await A.signOut(sec); }catch(e){}
         return existia ? 'existia' : 'criada';
+      },
+      /* Exclui o acesso: apaga o perfil e a verificação e registra o e-mail em "excluidos" (impede recadastro sozinho). */
+      async excluirUsuario(uid, email){
+        if(!C.admin()) throw new Error('Apenas administradores.');
+        email = txt(email, 120).toLowerCase();
+        if(uid === C.user.uid || ADMINS.includes(email)) throw new Error('Esta conta não pode ser excluída.');
+        try{
+          await F.setDoc(F.doc(db, 'excluidos', email), { email, criadoPor: C.user.uid, criadoEm: F.serverTimestamp() });
+          await F.deleteDoc(F.doc(db, 'verificados', email));
+          await F.deleteDoc(F.doc(db, 'users', uid));
+        }catch(e){ throw erro(e); }
       },
       async mudarUsuario(uid, status){ if(!C.admin()) throw new Error('Apenas administradores.'); await F.updateDoc(F.doc(db, 'users', uid), { status }); },
 
