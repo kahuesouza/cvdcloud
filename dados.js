@@ -1201,7 +1201,12 @@ window.CVD = {
    "mb": 71,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-15-cirurgia-de-retropreparo-prof-eduardo-santini.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-15-cirurgia-de-retropreparo-prof-eduardo-santini.mp4",
-   "topico": "apicectomia"
+   "topico": "apicectomia",
+   "pontas": [
+    "VR04XR",
+    "T1F-2"
+   ],
+   "ponta": "VR04XR e T1F-2"
   },
   {
    "titulo": "Irrigação do Conduto e Corte de Guta-Percha",
@@ -1321,7 +1326,13 @@ window.CVD = {
    "mb": 31,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-27-remocao-de-facetas-dr-clebio-domingues.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-27-remocao-de-facetas-dr-clebio-domingues.mp4",
-   "topico": "facetas"
+   "topico": "facetas",
+   "pontas": [
+    "W1",
+    "CR1",
+    "CR1U"
+   ],
+   "ponta": "W1 e CR1 e CR1U"
   },
   {
    "titulo": "Remoção de Amálgama",
@@ -1507,7 +1518,11 @@ window.CVD = {
    "esps": [
     "cirurgia",
     "periodontia"
-   ]
+   ],
+   "pontas": [
+    "T1"
+   ],
+   "ponta": "T1"
   },
   {
    "titulo": "Aumento de Coroa Clínica · Flap",
@@ -1768,7 +1783,11 @@ window.CVD = {
    "prof": "Dr. Rogério Marcondes",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=tVIl2BaL2Ok",
-   "topico": "cimentacao"
+   "topico": "cimentacao",
+   "pontas": [
+    "CM4"
+   ],
+   "ponta": "CM4"
   },
   {
    "titulo": "Como realizar o refinamento dos limites do preparo com ponta CR4XR?",
@@ -1927,9 +1946,12 @@ window.CVD = {
    "url": "https://www.youtube.com/watch?v=XPg2iS2iEX8",
    "topico": "facetas",
    "pontas": [
-    "W1-O"
+    "W1-O",
+    "W1",
+    "CR1",
+    "CR1U"
    ],
-   "ponta": "W1-O"
+   "ponta": "W1-O e W1 e CR1 e CR1U"
   },
   {
    "titulo": "Remoção de Material Restaurador · Ponta CR4XR",
@@ -2010,7 +2032,13 @@ window.CVD = {
    "esp": "endodontia",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=hO2ye44zmng",
-   "topico": "endodontia"
+   "topico": "endodontia",
+   "pontas": [
+    "T1F-E",
+    "T0S-E2",
+    "R1-E"
+   ],
+   "ponta": "T1F-E e T0S-E2 e R1-E"
   },
   {
    "titulo": "Endodontia",
@@ -2223,7 +2251,11 @@ window.CVD = {
    "prof": "Dr. Leonardo Costa",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=VITipyNfzX8",
-   "topico": "raspagem"
+   "topico": "raspagem",
+   "pontas": [
+    "T1F"
+   ],
+   "ponta": "T1F"
   },
   {
    "titulo": "Remoção de Cálculo com a Ponta T1U-2",
