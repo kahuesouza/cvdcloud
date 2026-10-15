@@ -1230,7 +1230,7 @@ document.addEventListener('submit', async e => {
   const msg = document.getElementById('cc-msg'), b = f.querySelector('button'); b.disabled = true; msg.textContent = 'Criando…';
   try{
     const r = await CONTA().criarContaFuncionario(f.nome.value, f.email.value, f.senha.value);
-    msg.textContent = r === 'existia' ? 'Esse e-mail já tinha conta: marcado como verificado. A senha dele continua a que ele criou (ou use "Esqueci minha senha").' : 'Conta criada e verificada. Envie para a pessoa: e-mail ' + f.email.value + ' e senha ' + f.senha.value;
+    msg.textContent = r === 'existia' ? 'Esse e-mail já tinha conta: marcado como verificado. A senha genérica NÃO vale para ele (a conta já existia). Enviamos um e-mail de redefinição de senha para ele.' : 'Conta criada e verificada. Envie para a pessoa: e-mail ' + f.email.value + ' e senha ' + f.senha.value;
     toast(r === 'existia' ? 'E-mail marcado como verificado' : 'Conta criada e verificada'); b.disabled = false; carregarAdmin('usuarios').then(() => { const m2 = document.getElementById('cc-msg'); if(m2) m2.textContent = msg.textContent; }); return;
   }catch(err){ msg.textContent = err.message; }
   b.disabled = false;

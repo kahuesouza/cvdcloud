@@ -179,6 +179,7 @@ if(!CFG || !CFG.apiKey || CFG.apiKey === 'COLE_AQUI'){
           await F.setDoc(F.doc(db, 'verificados', email), marca);
           if(uid) await F.setDoc(F.doc(db, 'users', uid), { nome, email, role: 'vendedor', status: 'aprovado', criadoEm: F.serverTimestamp(), criadoPor: C.user.uid });
         }catch(e){ throw erro(e); }
+        if(existia){ try{ await A.sendPasswordResetEmail(sec, email); }catch(e){} }   // conta antiga: a senha genérica não vale, manda link para redefinir
         try{ await A.signOut(sec); }catch(e){}
         return existia ? 'existia' : 'criada';
       },
