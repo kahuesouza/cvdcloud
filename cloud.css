@@ -15,7 +15,7 @@
   --alerta-fundo:rgba(251,191,106,.12);
 }
 
-/* fundo: aurora + grade */
+/* fundo: aurora */
 html{background:var(--bg)}
 body{background:transparent;position:relative}
 body::before{content:"";position:fixed;inset:-20vh -20vw;z-index:-1;pointer-events:none;
@@ -26,11 +26,7 @@ body::before{content:"";position:fixed;inset:-20vh -20vw;z-index:-1;pointer-even
   animation:aurora 28s ease-in-out infinite alternate}
 :root:not([data-theme="dark"]) body::before{opacity:.55}
 @keyframes aurora{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(3vw,2vh,0) scale(1.1)}}
-body::after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
-  background-image:linear-gradient(rgba(130,165,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(130,165,255,.07) 1px,transparent 1px);
-  background-size:46px 46px;
-  -webkit-mask-image:radial-gradient(120% 70% at 50% 0%,#000 8%,transparent 75%);mask-image:radial-gradient(120% 70% at 50% 0%,#000 8%,transparent 75%)}
-:root:not([data-theme="dark"]) body::after{opacity:.5}
+
 
 /* barra superior */
 .bar{background:color-mix(in srgb,var(--bg) 55%,transparent);-webkit-backdrop-filter:saturate(1.8) blur(18px);backdrop-filter:saturate(1.8) blur(18px)}
