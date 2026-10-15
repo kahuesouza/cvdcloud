@@ -278,6 +278,10 @@ details.outros[open] summary svg{transform:rotate(90deg)}
 .rank .r .t{flex:1;min-width:0;overflow-wrap:anywhere;font-weight:600}
 .rank .r .v{flex:none;font-weight:800;color:var(--acento-tinta)}
 .rank .vz{color:var(--fraco);font-size:13px;padding:10px 0}
+.player video{width:100%;border-radius:14px;background:#000;max-height:58vh;display:block}
+.fcard .im{position:relative}
+.fcard .pl2{position:absolute;width:44px;height:44px;border-radius:50%;background:rgba(0,0,0,.55);color:#fff;display:grid;place-items:center;pointer-events:none}
+.fcard .pl2 svg{width:20px;height:20px;fill:#fff;stroke:none}
 .rodape{text-align:center;font-size:12px;color:var(--fraco);margin:34px 0 4px;line-height:1.6}
 .toast{position:fixed;left:50%;bottom:calc(var(--nav-h) + 22px + env(safe-area-inset-bottom));transform:translate(-50%,14px) scale(.96);background:var(--texto);color:var(--bg);
   padding:11px 18px;border-radius:999px;font-size:13px;font-weight:600;opacity:0;transition:.28s var(--ease);pointer-events:none;z-index:90;white-space:nowrap}
@@ -426,10 +430,11 @@ function metaDe(x, {produto=false}={}){
   if(x.aviso) s += `<br><span class="av">${esc(x.aviso)}</span>`;
   return s;
 }
+const isVideo = x => /\.mp4(\?|$)/i.test((x && x.url) || '');
 function linha(x, opt={}){
-  const dl = linkDownload(x), tam = tamDownload(x);
+  const dl = linkDownload(x), tam = tamDownload(x), vid = isVideo(x), gal = !!x.galeria;
   return `<div class="linha anima" style="--i:${opt.i||0}">
-    <a class="abrir" data-item="${x.id}" href="${esc(x.url)}" target="_blank" rel="noopener">${leadDe(x)}<span class="txt"><span class="t">${esc(x.titulo)}</span><span class="m" style="display:block">${metaDe(x,opt)}</span></span></a>
+    <a class="abrir" data-item="${x.id}" ${vid ? `data-video="${x.id}"` : ''} href="${esc(x.url)}" ${gal ? '' : 'target="_blank" rel="noopener"'}>${leadDe(x)}<span class="txt"><span class="t">${esc(x.titulo)}</span><span class="m" style="display:block">${metaDe(x,opt)}</span></span></a>
     <span class="acoes">${dl ? `<a class="ibtn" href="${esc(dl)}" download data-dl="${x.id}" data-mb="${tam||0}" aria-label="Baixar${tam?' ('+fmtTam(tam)+')':''}">${ic('download')}</a>` : ''}<button class="ibtn" data-mais="${x.id}" aria-label="Mais opções">${ic('mais')}</button></span></div>`;
 }
 const track = (tipo, chave, titulo, extra) => { const C = CONTA(); if(C && C.configurado && C.registrar) C.registrar(tipo, String(chave||''), String(titulo||''), extra||''); };
@@ -556,7 +561,7 @@ function telaProcedimentos(espSel){
   let corpo = '';
   if(ativo==='todos') D.especialidades.forEach(e=>{ const g = D.procedimentos.filter(p=>p.esp===e.id); corpo += secao(e.nome, g.length) + lista(g); });
   else corpo = lista(D.procedimentos.filter(p=>p.esp===ativo));
-  return { titulo:'Procedimentos', corpo: largo('Procedimentos','Vídeos clínicos por especialidade. Abrem no Dropbox.') + abas(itensAba, ativo, '#/procedimentos') + corpo };
+  return { titulo:'Procedimentos', corpo: largo('Procedimentos','Vídeos clínicos por especialidade. Toque para assistir aqui mesmo.') + abas(itensAba, ativo, '#/procedimentos') + corpo };
 }
 
 /* ---------- Pontas (organizadas pela bula) ---------- */
@@ -694,7 +699,7 @@ function telaMarketing(){
   const itens = D.materiais.filter(m=>m.tipo==='marketing'||m.tipo==='treinamento');
   const pastas = itens.filter(m=>m.pasta), docs = itens.filter(m=>!m.pasta&&m.tipo==='marketing'), tr = itens.filter(m=>m.tipo==='treinamento');
   return { titulo:'Marketing', voltar:'#/', corpo: largo('Marketing','Artes, campanhas e treinamentos para usar com o cliente.')
-    + secao('Pastas de artes', pastas.length) + lista(pastas,{produto:true}) + (docs.length?secao('Para enviar')+lista(docs):'') + secao('Treinamentos') + lista(tr) };
+    + secao('Artes e campanhas', pastas.length) + lista(pastas,{produto:true}) + (docs.length?secao('Para enviar')+lista(docs):'') + secao('Treinamentos') + lista(tr) };
 }
 function telaSalvos(){
   const itens = [...favs].map(i=>TODOS[i]).filter(Boolean);
@@ -710,22 +715,51 @@ function abrirPainel(html){
   painel.innerHTML = `<div class="alca"></div>${html}`;
   veu.classList.add('on'); painel.classList.add('on'); document.body.style.overflow = 'hidden';
 }
-function fecharPainel(){ if(!painel.classList.contains('on')) return; veu.classList.remove('on'); painel.classList.remove('on'); if(!buscaOv.classList.contains('on')) document.body.style.overflow = ''; if(foco && foco.focus) try{ foco.focus(); }catch(e){} }
+function fecharPainel(){ painel.querySelectorAll('video').forEach(v => { try{ v.pause(); }catch(e){} }); if(!painel.classList.contains('on')) return; veu.classList.remove('on'); painel.classList.remove('on'); if(!buscaOv.classList.contains('on')) document.body.style.overflow = ''; if(foco && foco.focus) try{ foco.focus(); }catch(e){} }
 veu.addEventListener('click', fecharPainel);
 (()=>{ let y0=null, dy=0;
   painel.addEventListener('touchstart',e=>{ if(painel.scrollTop<=0){ y0=e.touches[0].clientY; dy=0; painel.style.transition='none'; } },{passive:true});
   painel.addEventListener('touchmove',e=>{ if(y0===null) return; dy=Math.max(0,e.touches[0].clientY-y0); painel.style.transform=`translateY(${dy}px)`; },{passive:true});
   painel.addEventListener('touchend',()=>{ if(y0===null) return; painel.style.transition=''; painel.style.transform=''; if(dy>110) fecharPainel(); y0=null; }); })();
 
+function painelVideo(x){
+  const dl = linkDownload(x), tam = tamDownload(x), t = THUMBS[x.url], fav = favs.has(x.id);
+  const sub = metaDe(x, {produto:true}).replace(/<br>.*/, '').replace(/<[^>]+>/g, '');
+  abrirPainel(`<div class="player"><video controls playsinline preload="metadata" ${t ? `poster="img/t/${t[0]}"` : ''} src="${esc(x.url)}"></video></div>
+    <h3 style="margin-top:14px">${esc(x.titulo)}</h3><p class="sub">${sub}</p>
+    <div class="botoes">${dl ? `<a class="btn prim" href="${esc(dl)}" download data-dl="${x.id}" data-mb="${tam||0}">${ic('download')}Baixar vídeo${tam ? ` <small>${fmtTam(tam)}</small>` : ''}</a>` : ''}
+      <button class="btn sec" data-compartilhar="${x.id}">${ic('share')}Compartilhar</button>
+      <button class="btn sec" data-fav="${x.id}">${ic('estrela')}${fav ? 'Remover dos salvos' : 'Salvar'}</button></div>`);
+  const v = painel.querySelector('video'); if(v) v.play().catch(() => {});
+}
+function telaGaleria(id){
+  const GL = D.galerias && D.galerias.lista && D.galerias.lista[id]; if(!GL) return telaMarketing();
+  const PV = D.galerias.prev, grupos = [...new Set(GL.itens.map(i => i.grupo))];
+  const corpo = largo(esc(GL.titulo), `${GL.itens.length} arquivos · toque para ver e baixar`) + grupos.map(g => {
+    const its = GL.itens.filter(i => i.grupo === g);
+    return secao(esc(g), its.length) + `<div class="grade" style="margin-top:12px">${its.map((it, i) => `<div class="fcard anima" style="--i:${Math.min(i,10)}"><button class="im" data-gal="${id}:${it.id}" aria-label="Ver ${esc(it.titulo)}"><img loading="lazy" alt="${esc(it.titulo)}" src="${esc(PV + it.id + '.webp')}">${it.tipo === 'video' ? `<span class="pl2">${ic('playcheio')}</span>` : ''}</button><b>${esc(it.titulo)}</b><small>${it.tipo === 'video' ? 'Vídeo' : it.ext.toUpperCase()} · ${fmtTam(Math.max(.1, it.mb))}</small></div>`).join('')}</div>`;
+  }).join('');
+  return { titulo: GL.titulo, voltar: '#/marketing', corpo };
+}
+function painelGal(gid, iid){
+  const GL = D.galerias.lista[gid]; const it = GL && GL.itens.find(i => i.id === iid); if(!it) return;
+  const DL = D.galerias.dl, PV = D.galerias.prev, arq = DL + it.id + '.' + it.ext;
+  const midia = it.tipo === 'video'
+    ? `<div class="player"><video controls playsinline preload="metadata" poster="${esc(PV + it.id + '.webp')}" src="${esc(arq)}"></video></div>`
+    : `<div class="img-g" style="background:var(--surface-2)"><img src="${esc(arq)}" alt="${esc(it.titulo)}" onerror="this.onerror=null;this.src='${esc(PV + it.id + '.webp')}'"></div>`;
+  abrirPainel(`${midia}<h3 style="margin-top:14px">${esc(it.titulo)}</h3><p class="sub">${esc(GL.titulo)} · ${esc(it.grupo)}</p>
+    <div class="botoes"><a class="btn prim" href="${esc(arq)}" download data-dl="gal" data-tit="${esc(GL.titulo + ' · ' + it.titulo)}" data-mb="${it.mb}">${ic('download')}Baixar ${it.tipo === 'video' ? 'vídeo' : it.ext.toUpperCase()} <small>${fmtTam(Math.max(.1, it.mb))}</small></a></div>`);
+  const v = painel.querySelector('video'); if(v) v.play().catch(() => {});
+}
 function painelItem(id){
   const x = TODOS[id]; if(!x) return;
   const dl = linkDownload(x), tam = tamDownload(x), fav = favs.has(id);
   const sub = metaDe(x,{produto:true}).replace(/<br>.*/,'').replace(/<[^>]+>/g,'');
   abrirPainel(`<h3>${esc(x.titulo)}</h3><p class="sub">${sub}</p>
     <div class="botoes">
-      <a class="btn prim" href="${esc(x.url)}" target="_blank" rel="noopener">${ic('link')}Abrir</a>
+      ${isVideo(x) ? `<button class="btn prim" data-video="${id}">${ic('playcheio')}Assistir</button>` : x.galeria ? `<a class="btn prim" href="${esc(x.url)}">${ic('link')}Abrir galeria</a>` : `<a class="btn prim" href="${esc(x.url)}" target="_blank" rel="noopener">${ic('link')}Abrir</a>`}
       ${dl ? `<a class="btn sec" href="${esc(dl)}" download data-dl="${x.id}" data-mb="${tam||0}">${ic('download')}Baixar${tam?` <small>${fmtTam(tam)}</small>`:''}</a>` : ''}
-      <button class="btn sec" data-compartilhar="${id}">${ic('share')}Compartilhar</button>
+      ${x.galeria ? '' : `<button class="btn sec" data-compartilhar="${id}">${ic('share')}Compartilhar</button>`}
       <button class="btn sec" data-fav="${id}">${ic('estrela')}${fav?'Remover dos salvos':'Salvar'}</button>
       <button class="btn sec" data-comentar="${id}">${ic('mega')}Comentar ou sugerir</button>
     </div><div class="dicas-item" id="dicas-item"></div>`);
@@ -1051,6 +1085,7 @@ function escolherTela(){
   if(a==='pontas') return telaPontas(b, c);
   if(a==='marketing') return telaMarketing();
   if(a==='marca') return telaMarca();
+  if(a==='galeria') return telaGaleria(b);
   if(a==='salvos') return telaSalvos();
   if(a==='conta') return telaConta();
   if(a==='admin') return telaAdmin(b);
@@ -1132,6 +1167,8 @@ document.addEventListener('click', e=>{
   const sug = t.closest('[data-sug]'); if(sug){ const q = document.getElementById('q'); q.value = sug.dataset.sug; q.dispatchEvent(new Event('input')); q.focus(); return; }
   const gm = t.closest('[data-gmodo]'); if(gm){ modoGate = gm.dataset.gmodo; atualizarGate(); return; }
   const it = t.closest('[data-item]'); if(it){ const x = TODOS[it.dataset.item]; if(x) track('abrir', chaveItem(x), x.titulo, x.produto || x.esp || ''); }
+  const vd = t.closest('[data-video]'); if(vd && e.button === 0 && !e.ctrlKey && !e.metaKey && !e.shiftKey){ e.preventDefault(); const xv = TODOS[vd.dataset.video]; if(xv){ const aberto = painel.classList.contains('on'); if(aberto) fecharPainel(); setTimeout(() => painelVideo(xv), aberto ? 220 : 0); } return; }
+  const ga = t.closest('[data-gal]'); if(ga){ const [gi, ii] = ga.dataset.gal.split(':'); painelGal(gi, ii); return; }
   const mais = t.closest('[data-mais]'); if(mais){ painelItem(mais.dataset.mais); return; }
   const ft = t.closest('[data-foto]'); if(ft){ painelFoto(ft.dataset.foto); return; }
   const gp = t.closest('[data-galeria]'); if(gp){ painelPonta(gp.dataset.galeria); return; }
