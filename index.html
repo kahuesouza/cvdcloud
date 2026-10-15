@@ -150,6 +150,8 @@ main{max-width:720px;margin:0 auto;padding:6px 18px 28px}
 .abas .trilho{flex-wrap:wrap;overflow:visible}
 .topicos-ir{margin:14px 0 4px;padding:14px;border-radius:18px;background:var(--surface-2);border:1px solid var(--linha)}
 .topicos-ir .rot{display:block;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--sub);margin-bottom:10px}
+.vend{display:flex;width:100%;align-items:center;gap:10px;text-align:left;cursor:pointer;background:none;border:0;font:inherit;color:inherit;border-bottom:1px solid var(--linha)}
+.vend:active{background:var(--surface-2)}
 .chips-t{display:flex;flex-wrap:wrap;gap:8px}
 .chips-t button{display:inline-flex;align-items:center;gap:6px;padding:9px 14px;border-radius:999px;background:var(--surface);border:1.5px solid var(--linha);font-weight:700;font-size:13.5px;color:var(--texto);transition:transform .15s var(--ease),border-color .2s,color .2s}
 .chips-t button:active{transform:scale(.95)}
@@ -842,7 +844,7 @@ function abrirBusca(){
   const recentes = ls.get('recentes', []);
   const vazioHtml = `${recentes.length?`${secao('Recentes')}<div class="sugestoes">${recentes.map(r=>`<button data-sug="${esc(r)}">${esc(r)}</button>`).join('')}</div>`:''}${secao('Sugestões')}<div class="sugestoes">${SUGESTOES.map(r=>`<button data-sug="${esc(r)}">${esc(r)}</button>`).join('')}</div>`;
   res.innerHTML = vazioHtml;
-  let t, tb; q.addEventListener('input', ()=>{ clearTimeout(t); t = setTimeout(()=>{ const v = q.value.trim(); res.innerHTML = v ? resultadosBusca(v) : vazioHtml; },90); clearTimeout(tb); tb = setTimeout(()=>{ const v = q.value.trim(); if(v.length >= 3) track('buscar', 'busca', v.slice(0, 100), ''); }, 1600); });
+  let t, tb; q.addEventListener('input', ()=>{ clearTimeout(t); t = setTimeout(()=>{ const v = q.value.trim(); res.innerHTML = v ? resultadosBusca(v) : vazioHtml; },90); clearTimeout(tb); tb = setTimeout(()=>{ const v = q.value.trim(); if(v.length >= 3) track('buscar', 'busca', v.slice(0, 100), resultadosBusca(v).includes('Nada encontrado') ? '0' : 'ok'); }, 1600); });
   q.addEventListener('keydown', e=>{ if(e.key==='Enter'){ const v=q.value.trim(); if(v){ ls.set('recentes',[v,...recentes.filter(r=>r!==v)].slice(0,6)); q.blur(); } } });
   setTimeout(()=>q.focus(), 60);
 }
@@ -961,7 +963,7 @@ function pintarAlertaContas(){
   const eq = document.querySelector('.abas a[href="#/admin/usuarios"] small'); if(eq) eq.textContent = novasContas ? novasContas : '';
   const bn = document.getElementById('banner-contas'); if(bn) bn.hidden = !novasContas, bn.querySelector('b') && (bn.querySelector('b').textContent = novasContas + (novasContas > 1 ? ' contas novas' : ' conta nova'));
 }
-const ABAS_ADMIN = [{id:'painel', nome:'Painel'}, {id:'comentarios', nome:'Comentários'}, {id:'usuarios', nome:'Equipe'}, {id:'links', nome:'Links'}, {id:'catalogo', nome:'Catálogo'}];
+const ABAS_ADMIN = [{id:'painel', nome:'Painel'}, {id:'desempenho', nome:'Vendedores'}, {id:'comentarios', nome:'Comentários'}, {id:'usuarios', nome:'Equipe'}, {id:'links', nome:'Links'}, {id:'catalogo', nome:'Catálogo'}];
 function haQuanto(t){
   const s = t && (t.seconds ?? (t.toMillis ? t.toMillis()/1000 : null)); if(!s) return 'nunca';
   const d = Math.max(0, Date.now()/1000 - s);
@@ -986,6 +988,74 @@ function contar(lista, chaveFn, tituloFn){
   lista.forEach(e => { const k = chaveFn(e); const o = m.get(k) || [tituloFn(e), 0]; o[1]++; m.set(k, o); });
   return [...m.values()].sort((a, b) => b[1] - a[1]);
 }
+/* ---------- Desempenho dos vendedores (somente admin) ---------- */
+let periodoDes = 30, cacheDes = null;
+const nomeCurto = n => String(n || 'Usuário').split(' ').slice(0, 2).join(' ');
+function statsPorUsuario(evs, seg){
+  const m = new Map();
+  evs.forEach(e => {
+    const o = m.get(e.uid) || { abrir: 0, baixar: 0, compartilhar: 0, buscar: 0, tela: 0, dias: new Set(), ult: 0 };
+    if(o[e.tipo] !== undefined) o[e.tipo]++;
+    const s = seg(e.criadoEm); if(s){ o.dias.add(new Date(s * 1000).toDateString()); if(s > o.ult) o.ult = s; }
+    m.set(e.uid, o);
+  });
+  return m;
+}
+const pontosDe = o => o.abrir + o.baixar * 2 + o.compartilhar * 3 + o.buscar;
+const zeroStats = () => ({ abrir: 0, baixar: 0, compartilhar: 0, buscar: 0, tela: 0, dias: new Set(), ult: 0 });
+async function carregarDesempenho(el){
+  const C = CONTA();
+  const [users, evs] = await Promise.all([C.todosUsuarios(), C.eventos(periodoDes, 8000)]);
+  const agora = Date.now() / 1000, seg = t => (t && (t.seconds ?? (t.toMillis ? t.toMillis()/1000 : 0))) || 0;
+  cacheDes = { users, evs, seg };
+  const por = statsPorUsuario(evs, seg);
+  const vend = users.filter(u => u.status !== 'bloqueado');
+  const linhas = vend.map(u => ({ u, o: por.get(u.uid) || zeroStats() })).sort((a, b) => pontosDe(b.o) - pontosDe(a.o) || b.o.ult - a.o.ult);
+  const ativos = linhas.filter(x => x.o.dias.size).length;
+  const tot = t => evs.filter(e => e.tipo === t).length;
+  const sem14 = vend.filter(u => u.role !== 'admin' && agora - Math.max(seg(u.ultimoAcesso), (por.get(u.uid) || zeroStats()).ult) > 14 * 86400);
+  const semRes = contar(evs.filter(e => e.tipo === 'buscar' && e.extra === '0'), e => (e.titulo || '').toLowerCase(), e => e.titulo).slice(0, 8);
+  const abertos = new Set(evs.filter(e => e.tipo === 'abrir').map(e => e.chave));
+  const parados = [...(D.materiais || []), ...(D.procedimentos || [])].filter(x => !abertos.has(chaveItem(x))).slice(0, 10);
+  const horas = new Array(24).fill(0), sem = new Array(7).fill(0);
+  evs.forEach(e => { const s = seg(e.criadoEm); if(!s) return; const d = new Date(s * 1000); horas[d.getHours()]++; sem[d.getDay()]++; });
+  const mxH = Math.max(1, ...horas), mxS = Math.max(1, ...sem), dn = ['D','S','T','Q','Q','S','S'];
+  const pico = horas.indexOf(mxH);
+  const compartilhados = contar(evs.filter(e => e.tipo === 'compartilhar'), e => e.chave, e => e.titulo).slice(0, 8);
+  const topComp = linhas.filter(x => x.o.compartilhar).sort((a, b) => b.o.compartilhar - a.o.compartilhar).slice(0, 3);
+  const sub = 'color:var(--fraco);font-size:12px;font-weight:500';
+  el.innerHTML = `
+    <div class="chips-f">${[[7,'7 dias'],[30,'30 dias'],[90,'90 dias']].map(([d,n]) => `<button class="${periodoDes === d ? 'on' : ''}" data-periodo="${d}">${n}</button>`).join('')}</div>
+    <div class="kpis"><div class="kpi"><b>${ativos}<small style="font-size:14px;color:var(--sub)">/${vend.length}</small></b><small>Vendedores ativos</small></div><div class="kpi"><b>${tot('abrir')}</b><small>Materiais abertos</small></div>
+      <div class="kpi"><b>${tot('compartilhar')}</b><small>Enviados a clientes</small></div><div class="kpi"><b>${tot('baixar')}</b><small>Downloads</small></div></div>
+    ${secao('Ranking de vendedores', 'toque para ver o detalhe')}
+    <p style="color:var(--sub);font-size:12.5px;margin:6px 0 0">Pontuação: abrir 1 · baixar 2 · compartilhar 3 · buscar 1. Compartilhar pesa mais porque é o material indo para o cliente.</p>
+    <div class="rank vend-lista">${linhas.length ? linhas.slice(0, 40).map((x, i) => `<button class="r vend" data-vend="${esc(x.u.uid)}"><span class="n">${i + 1}</span><span class="t">${esc(nomeCurto(x.u.nome))}<br><span class="quem" style="${sub}">${x.o.abrir} abertos · ${x.o.baixar} downloads · ${x.o.compartilhar} enviados · ${x.o.buscar} buscas · ${x.o.dias.size} dia${x.o.dias.size === 1 ? '' : 's'}</span></span><span class="v">${pontosDe(x.o)}</span></button>`).join('') : `<div class="vz">Sem dados ainda.</div>`}</div>
+    ${secao('Quem mais envia material ao cliente')}${topComp.length ? `<div class="rank">${topComp.map((x, i) => `<div class="r"><span class="n">${i + 1}</span><span class="t">${esc(nomeCurto(x.u.nome))}</span><span class="v">${x.o.compartilhar}</span></div>`).join('')}</div>` : rankHtml([], 'Ninguém compartilhou ainda.')}
+    ${secao('Materiais que mais viram envio ao cliente')}${rankHtml(compartilhados, 'Nenhum compartilhamento ainda.')}
+    ${secao('Buscas sem resultado', 'o que adicionar ao app')}${rankHtml(semRes, 'Nenhuma busca sem resultado no período.')}
+    ${secao('Materiais parados', 'ninguém abriu no período')}${parados.length ? `<div class="rank">${parados.map(x => `<div class="r"><span class="t">${esc(x.titulo)}</span></div>`).join('')}</div>` : rankHtml([], 'Tudo foi aberto pelo menos uma vez.')}
+    ${secao('Sem acesso há 14 dias ou mais', sem14.length + ' pessoa' + (sem14.length === 1 ? '' : 's'))}${sem14.length ? `<div class="rank">${sem14.slice(0, 12).map(u => `<div class="r"><span class="t">${esc(nomeCurto(u.nome))}<br><span class="quem" style="${sub}">${esc(u.email)}</span></span><span class="v">${seg(u.ultimoAcesso) ? haQuanto(u.ultimoAcesso) : 'nunca'}</span></div>`).join('')}</div>` : rankHtml([], 'Toda a equipe acessou nas últimas duas semanas.')}
+    ${secao('Horário de maior uso', pico + 'h')}
+    <div class="barras" aria-label="Ações por hora">${horas.map((n, i) => `<span class="${i === pico ? 'hj' : ''}" style="height:${Math.max(3, Math.round(n / mxH * 100))}%" title="${i}h: ${n}"></span>`).join('')}</div><div class="barras-leg"><span>0h</span><span>12h</span><span>23h</span></div>
+    ${secao('Dia da semana')}
+    <div class="barras" aria-label="Ações por dia da semana">${sem.map((n, i) => `<span class="${n === mxS ? 'hj' : ''}" style="height:${Math.max(3, Math.round(n / mxS * 100))}%" title="${n}"></span>`).join('')}</div><div class="barras-leg">${dn.map(x => `<span>${x}</span>`).join('')}</div>
+    <p style="color:var(--fraco);font-size:12px;line-height:1.5;margin:16px 0 0">Baseado nos últimos ${evs.length.toLocaleString('pt-BR')} eventos do período (máximo de 8.000). Buscas sem resultado só aparecem para pesquisas feitas depois desta atualização.</p>`;
+}
+function painelVendedor(uid){
+  if(!cacheDes) return; const { users, evs, seg } = cacheDes, u = users.find(x => x.uid === uid); if(!u) return;
+  const meus = evs.filter(e => e.uid === uid), o = statsPorUsuario(meus, seg).get(uid) || zeroStats();
+  const top = (t, n) => rankHtml(contar(meus.filter(e => e.tipo === t), e => e.chave, e => e.titulo).slice(0, n), 'Nada ainda.');
+  const buscas = [...new Set(meus.filter(e => e.tipo === 'buscar').map(e => (e.titulo || '').trim()).filter(Boolean))].slice(0, 8);
+  const horas = new Array(24).fill(0); meus.forEach(e => { const s = seg(e.criadoEm); if(s) horas[new Date(s * 1000).getHours()]++; });
+  const pico = Math.max(...horas) ? horas.indexOf(Math.max(...horas)) + 'h' : '—';
+  abrirPainel(`<h3>${esc(u.nome)}</h3><p class="sub">${esc(u.email)} · ${periodoDes} dias · último acesso ${seg(u.ultimoAcesso) ? haQuanto(u.ultimoAcesso) : 'nunca'}</p>
+    <div class="kpis" style="margin-top:10px"><div class="kpi"><b>${o.abrir}</b><small>Abertos</small></div><div class="kpi"><b>${o.compartilhar}</b><small>Enviados a clientes</small></div><div class="kpi"><b>${o.baixar}</b><small>Downloads</small></div><div class="kpi"><b>${o.dias.size}</b><small>Dias ativos · pico ${pico}</small></div></div>
+    ${secao('Mais abre')}${top('abrir', 6)}${secao('Mais compartilha')}${top('compartilhar', 6)}${secao('Mais baixa')}${top('baixar', 5)}
+    ${secao('Áreas que mais visita')}${rankHtml(contar(meus.filter(e => e.tipo === 'tela'), e => e.chave, e => e.titulo || e.chave).slice(0, 5), 'Nada ainda.')}
+    ${secao('O que busca')}${buscas.length ? `<p style="color:var(--sub);font-size:14px;line-height:1.6;margin:6px 0 0">${buscas.map(esc).join(' · ')}</p>` : rankHtml([], 'Nenhuma busca.')}`);
+}
+
 async function carregarPainel(el){
   const C = CONTA();
   const [users, evs] = await Promise.all([C.todosUsuarios(), C.eventos(30, 3000)]);
@@ -1025,6 +1095,7 @@ async function carregarAdmin(aba){
   const el = document.getElementById('admin-lista'); if(!el) return; const C = CONTA(), st = filtroAdmin[aba];
   try{
     if(aba === 'painel'){ await carregarPainel(el); }
+    else if(aba === 'desempenho'){ await carregarDesempenho(el); }
     else if(aba === 'comentarios'){
       const l = await C.listarComentarios(st);
       el.innerHTML = l.length ? l.map(c => `<div class="cartao-c anima"><div class="topo-c"><span class="st">${esc(CATS[c.categoria] || c.categoria)}</span>${stChip(c.status)}<span class="quem">${esc(c.autorNome)} · ${fmtData(c.criadoEm)}</span></div><p>${esc(c.texto)}</p><div class="item-c">Sobre: ${esc(c.itemTitulo || 'Geral')}</div>${c.notaAdmin ? `<p style="color:var(--sub);font-size:13px">Nota: ${esc(c.notaAdmin)}</p>` : ''}
@@ -1255,6 +1326,8 @@ document.addEventListener('click', e=>{
   const vd = t.closest('[data-video]'); if(vd && e.button === 0 && !e.ctrlKey && !e.metaKey && !e.shiftKey){ e.preventDefault(); const xv = TODOS[vd.dataset.video]; if(xv){ const aberto = painel.classList.contains('on'); if(aberto) fecharPainel(); setTimeout(() => painelVideo(xv), aberto ? 220 : 0); } return; }
   const ga = t.closest('[data-gal]'); if(ga){ const [gi, ii] = ga.dataset.gal.split(':'); painelGal(gi, ii); return; }
   const pv = t.closest('[data-pvid]'); if(pv){ painelVideosPonta(pv.dataset.pvid.split('|')); return; }
+  const pe = t.closest('[data-periodo]'); if(pe){ periodoDes = +pe.dataset.periodo; carregarAdmin('desempenho'); return; }
+  const vd2 = t.closest('[data-vend]'); if(vd2){ painelVendedor(vd2.dataset.vend); return; }
   const ir = t.closest('[data-ir]'); if(ir){ const el = document.getElementById(ir.dataset.ir); if(el) el.scrollIntoView({behavior:'smooth', block:'start'}); return; }
   const mais = t.closest('[data-mais]'); if(mais){ painelItem(mais.dataset.mais); return; }
   const ft = t.closest('[data-foto]'); if(ft){ painelFoto(ft.dataset.foto); return; }
