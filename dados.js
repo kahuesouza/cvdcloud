@@ -1026,7 +1026,10 @@ window.CVD = {
    "mb": 15,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-01-sinus-lift-prof-renato-lavezo.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-01-sinus-lift-prof-renato-lavezo.mp4",
-   "topico": "sinus-lift"
+   "topico": "sinus-lift",
+   "pontas": [
+    "SR9"
+   ]
   },
   {
    "titulo": "Descolamento da Membrana Sinusal",
@@ -1054,7 +1057,10 @@ window.CVD = {
    "mb": 241,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-04-descolamento-prof-diego-bazan.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-04-descolamento-prof-diego-bazan.mp4",
-   "topico": "descolamento"
+   "topico": "descolamento",
+   "pontas": [
+    "SL1-0"
+   ]
   },
   {
    "titulo": "Descolamento de Torus",
@@ -1175,7 +1181,10 @@ window.CVD = {
    "mb": 6.3,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-18-compactacao-da-guta-percha.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-18-compactacao-da-guta-percha.mp4",
-   "topico": "guta-percha"
+   "topico": "guta-percha",
+   "pontas": [
+    "CR2T-E"
+   ]
   },
   {
    "titulo": "Remoção de Guta-Percha para Pino de Fibra",
@@ -1184,7 +1193,10 @@ window.CVD = {
    "mb": 7.3,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-19-remocao-de-guta-percha-para-pino-de-fibra.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-19-remocao-de-guta-percha-para-pino-de-fibra.mp4",
-   "topico": "guta-percha"
+   "topico": "guta-percha",
+   "pontas": [
+    "T0S-E2"
+   ]
   },
   {
    "titulo": "Remoção de Pino",
@@ -1219,7 +1231,10 @@ window.CVD = {
    "mb": 43,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-23-termino-de-preparo.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-23-termino-de-preparo.mp4",
-   "topico": "preparo-termino"
+   "topico": "preparo-termino",
+   "pontas": [
+    "T1F"
+   ]
   },
   {
    "titulo": "Acabamento Cervical de Restauros em Resina",
@@ -1238,7 +1253,10 @@ window.CVD = {
    "mb": 7.7,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-25-acabamento-cervical-de-restauros-em-resina-prof-renato-voss.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-25-acabamento-cervical-de-restauros-em-resina-prof-renato-voss.mp4",
-   "topico": "preparo-termino"
+   "topico": "preparo-termino",
+   "pontas": [
+    "TR1F-RV"
+   ]
   },
   {
    "titulo": "Remoção de Facetas",
@@ -1324,7 +1342,10 @@ window.CVD = {
    "mb": 13,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-35-limpeza-com-ponta-t1t-p-ricardo-scotton.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-35-limpeza-com-ponta-t1t-p-ricardo-scotton.mp4",
-   "topico": "t1tp-implantes"
+   "topico": "t1tp-implantes",
+   "pontas": [
+    "T1T-P"
+   ]
   },
   {
    "titulo": "Modo de Uso da Ponta T1T-P",
@@ -1333,7 +1354,10 @@ window.CVD = {
    "mb": 50,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-36-modo-de-uso-da-ponta-t1t-p.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-36-modo-de-uso-da-ponta-t1t-p.mp4",
-   "topico": "t1tp-implantes"
+   "topico": "t1tp-implantes",
+   "pontas": [
+    "T1T-P"
+   ]
   },
   {
    "titulo": "Ponta T1T-P em ação",
@@ -1342,7 +1366,10 @@ window.CVD = {
    "mb": 24,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-37-ponta-t1t-p-em-acao.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-37-ponta-t1t-p-em-acao.mp4",
-   "topico": "t1tp-implantes"
+   "topico": "t1tp-implantes",
+   "pontas": [
+    "T1T-P"
+   ]
   },
   {
    "titulo": "Remoção de Resina de Bracket",
@@ -1524,7 +1551,11 @@ window.CVD = {
    "prof": "Liete Yassuda",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=2goQJsDpkzY",
-   "topico": "outras-cirurgias"
+   "topico": "outras-cirurgias",
+   "pontas": [
+    "VR1T"
+   ],
+   "ponta": "VR1T"
   },
   {
    "titulo": "Osteotomias",
@@ -1540,7 +1571,10 @@ window.CVD = {
    "ponta": "SR9",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=M9AxPO2OCUo",
-   "topico": "sinus-lift"
+   "topico": "sinus-lift",
+   "pontas": [
+    "SR9"
+   ]
   },
   {
    "titulo": "Preservando os nervos durante o procedimento",
@@ -1556,7 +1590,11 @@ window.CVD = {
    "prof": "Renato Lavezo",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=Sci1bIBlc5U",
-   "topico": "osteotomia-torus"
+   "topico": "osteotomia-torus",
+   "pontas": [
+    "SFR4"
+   ],
+   "ponta": "SFR4"
   },
   {
    "titulo": "Remoção de Tórus · Ponta SFR4",
@@ -1564,7 +1602,10 @@ window.CVD = {
    "ponta": "SFR4",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=qNwljFxBCJM",
-   "topico": "osteotomia-torus"
+   "topico": "osteotomia-torus",
+   "pontas": [
+    "SFR4"
+   ]
   },
   {
    "titulo": "Sinus Lift",
@@ -1580,7 +1621,12 @@ window.CVD = {
    "prof": "Diego Bazan",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=Hm8O3Air--Y",
-   "topico": "sinus-lift"
+   "topico": "sinus-lift",
+   "pontas": [
+    "SFR4",
+    "SLO-2"
+   ],
+   "ponta": "SFR4 e SLO-2"
   },
   {
    "titulo": "Sinus Lift",
@@ -1628,7 +1674,10 @@ window.CVD = {
    "ponta": "CR4XR",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=mQv82kDRaAE",
-   "topico": "preparo-termino"
+   "topico": "preparo-termino",
+   "pontas": [
+    "CR4XR"
+   ]
   },
   {
    "titulo": "Como remover excessos com a ponta T1?",
@@ -1637,14 +1686,21 @@ window.CVD = {
    "ponta": "T1",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=UQVEKl6995w",
-   "topico": "amalgama-resina"
+   "topico": "amalgama-resina",
+   "pontas": [
+    "T1"
+   ]
   },
   {
    "titulo": "Remoção de Facetas com o DentSurg Pro",
    "esp": "dentistica",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=Dg6QHEydf9g",
-   "topico": "facetas"
+   "topico": "facetas",
+   "pontas": [
+    "W1-O"
+   ],
+   "ponta": "W1-O"
   },
   {
    "titulo": "Ponta T1F",
@@ -1653,7 +1709,10 @@ window.CVD = {
    "ponta": "T1F",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=NbJVzW6k3KY",
-   "topico": "preparo-termino"
+   "topico": "preparo-termino",
+   "pontas": [
+    "T1F"
+   ]
   },
   {
    "titulo": "Preparo Cavitário",
@@ -1667,7 +1726,11 @@ window.CVD = {
    "esp": "dentistica",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=r2CjynOgDHg",
-   "topico": "preparo-termino"
+   "topico": "preparo-termino",
+   "pontas": [
+    "CR1XR"
+   ],
+   "ponta": "CR1XR"
   },
   {
    "titulo": "Preparo da caixa distal com ponta CH1-D",
@@ -1676,7 +1739,10 @@ window.CVD = {
    "ponta": "CH1-D",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=bQnnFLvqtNY",
-   "topico": "preparo-termino"
+   "topico": "preparo-termino",
+   "pontas": [
+    "CH1-D"
+   ]
   },
   {
    "titulo": "Preparo em área de difícil acesso",
@@ -1728,7 +1794,10 @@ window.CVD = {
    "ponta": "W1",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=VycZdDqYGJw",
-   "topico": "amalgama-resina"
+   "topico": "amalgama-resina",
+   "pontas": [
+    "W1"
+   ]
   },
   {
    "titulo": "Remoção de Excesso · Restauração em classe V",
@@ -1742,14 +1811,22 @@ window.CVD = {
    "esp": "dentistica",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=QFQw8-qMvHQ",
-   "topico": "facetas"
+   "topico": "facetas",
+   "pontas": [
+    "W1-O"
+   ],
+   "ponta": "W1-O"
   },
   {
    "titulo": "Remoção de Faceta com o DentSurg Pro",
    "esp": "dentistica",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=XPg2iS2iEX8",
-   "topico": "facetas"
+   "topico": "facetas",
+   "pontas": [
+    "W1-O"
+   ],
+   "ponta": "W1-O"
   },
   {
    "titulo": "Remoção de Material Restaurador · Ponta CR4XR",
@@ -1757,7 +1834,10 @@ window.CVD = {
    "ponta": "CR4XR",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=BSZx2n7So8A",
-   "topico": "amalgama-resina"
+   "topico": "amalgama-resina",
+   "pontas": [
+    "CR4XR"
+   ]
   },
   {
    "titulo": "Remoção de amálgama (Ponta T1)",
@@ -1766,7 +1846,10 @@ window.CVD = {
    "ponta": "T1",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=Vet9LgFfKKk",
-   "topico": "amalgama-resina"
+   "topico": "amalgama-resina",
+   "pontas": [
+    "T1"
+   ]
   },
   {
    "titulo": "Remoção de amálgama com alta precisão!",
@@ -1782,7 +1865,10 @@ window.CVD = {
    "ponta": "CR4XR",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=joAze665sdI",
-   "topico": "amalgama-resina"
+   "topico": "amalgama-resina",
+   "pontas": [
+    "CR4XR"
+   ]
   },
   {
    "titulo": "Restauração de resina composta · Ultrassom e ponta CR1",
@@ -1790,7 +1876,10 @@ window.CVD = {
    "ponta": "CR1",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=udHMN0oxmKA",
-   "topico": "amalgama-resina"
+   "topico": "amalgama-resina",
+   "pontas": [
+    "CR1"
+   ]
   },
   {
    "titulo": "Tratamento Dentário Proximal",
@@ -1864,7 +1953,11 @@ window.CVD = {
    "prof": "Danilo Cioffi",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=BPDngu0dJFU",
-   "topico": "pui"
+   "topico": "pui",
+   "pontas": [
+    "T0T-E2"
+   ],
+   "ponta": "T0T-E2"
   },
   {
    "titulo": "Remoção de Pinos",
@@ -1886,7 +1979,11 @@ window.CVD = {
    "esp": "endodontia",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=xPEsVMswMmQ",
-   "topico": "pinos"
+   "topico": "pinos",
+   "pontas": [
+    "C2S"
+   ],
+   "ponta": "C2S"
   },
   {
    "titulo": "Remoção de pinos",
@@ -1900,10 +1997,13 @@ window.CVD = {
    "titulo": "Aplicação da ponta R,05 na Odontopediatria",
    "esp": "orto-odontoped",
    "prof": "Dra. Liete Yassuda",
-   "ponta": "R.05",
+   "ponta": "R0,5",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=8BznPFgACwc",
-   "topico": "odontopediatria"
+   "topico": "odontopediatria",
+   "pontas": [
+    "R0,5"
+   ]
   },
   {
    "titulo": "Odontopediatria",
@@ -1934,7 +2034,10 @@ window.CVD = {
    "ponta": "R4",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=YSq-bzXXVXo",
-   "topico": "odontopediatria"
+   "topico": "odontopediatria",
+   "pontas": [
+    "R4"
+   ]
   },
   {
    "titulo": "Flapless e Peeling Gengival",
@@ -1951,7 +2054,10 @@ window.CVD = {
    "ponta": "T1T-P",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=obRPyPdOT1E",
-   "topico": "t1tp-implantes"
+   "topico": "t1tp-implantes",
+   "pontas": [
+    "T1T-P"
+   ]
   },
   {
    "titulo": "Limpeza com a ponta T1T-P",
@@ -1960,14 +2066,21 @@ window.CVD = {
    "ponta": "T1T-P",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=e2r1BbeteK0",
-   "topico": "t1tp-implantes"
+   "topico": "t1tp-implantes",
+   "pontas": [
+    "T1T-P"
+   ]
   },
   {
    "titulo": "Modo de uso da ponta T1T-P",
    "esp": "periodontia",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=k6myHF4cnxs",
-   "topico": "t1tp-implantes"
+   "topico": "t1tp-implantes",
+   "pontas": [
+    "T1T-P"
+   ],
+   "ponta": "T1T-P"
   },
   {
    "titulo": "Peeling Gengival",
@@ -2008,7 +2121,10 @@ window.CVD = {
    "ponta": "T1U-2",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=DVzTjQB1U5s",
-   "topico": "raspagem"
+   "topico": "raspagem",
+   "pontas": [
+    "T1U-2"
+   ]
   },
   {
    "titulo": "Retracão Gengival",

@@ -417,7 +417,7 @@ function leadDe(x){
 }
 function metaDe(x, {produto=false}={}){
   const p = [];
-  if(x.esp){ if(x.prof) p.push(esc(x.prof)); if(x.ponta) p.push('Ponta ' + esc(x.ponta)); if(x.formato) p.push(esc(x.formato)); if(produto) p.push(esc(ESP[x.esp].curto)); }
+  if(x.esp){ if(x.prof) p.push(esc(x.prof)); if(x.ponta) p.push((x.pontas && x.pontas.length>1 ? 'Pontas ' : 'Ponta ') + esc(x.ponta)); if(x.formato) p.push(esc(x.formato)); if(produto) p.push(esc(ESP[x.esp].curto)); }
   else {
     if(x.idioma && x.idioma!=='pt') p.push(LANG[x.idioma]);
     if(produto && PROD[x.produto]) p.push(esc(PROD[x.produto].nome));
@@ -577,6 +577,13 @@ function bulaRow(e){
   return `<div class="linha anima"><a class="abrir" href="${esc(e.bula.ver)}" target="_blank" rel="noopener">${leadPorThumb(e.bula.ver,'pilula')}<span class="txt"><span class="t">${esc(e.bula.titulo)}</span><span class="m" style="display:block">Versão ${esc(e.bula.versao)} · PDF completo</span></span></a>
   <span class="acoes"><a class="ibtn" href="${esc(e.bula.baixar)}" download data-dl="bula" data-mb="0.2" aria-label="Baixar bula">${ic('download')}</a></span></div>`;
 }
+const codBase = c => String(c).split(' · ')[0].replace(/\s*\(.*\)/,'').trim().toUpperCase().replace(/[^A-Z0-9]/g,'');
+const videosDaPonta = cods => { const k = new Set(cods.map(codBase)); return (D.procedimentos||[]).filter(v => v.pontas && v.pontas.some(c => k.has(codBase(c)))); };
+function painelVideosPonta(cods){
+  const vs = videosDaPonta(cods); if(!vs.length) return;
+  const nome = cods.map(c => String(c).split(' · ')[0]).join(' / ');
+  abrirPainel(`<h3>Vídeos com a ponta ${esc(nome)}</h3><p class="sub">${vs.length} vídeo${vs.length>1?'s':''} de uso · toque para assistir ou use ⋯ para compartilhar</p><div style="margin-top:10px">${lista(vs)}</div>`);
+}
 function cardPonta(p){
   const pots = [...new Set(p.linhas.map(l=>l[1]))], unica = pots.length===1 && pots[0];
   const exp = p.cod.flatMap(expandirCod), com = exp.filter(c=>IMGP[c]), prim = com[0] ? IMGP[com[0]] : null;
@@ -585,6 +592,7 @@ function cardPonta(p){
   const dls = com.map(c=>`<button class="pilula" data-galeria="${esc(c)}">${ic('download')}${esc(rot(c))}</button>`).join('');
   return `<div class="ponta anima">${foto}<div class="corpo"><div class="topo-p"><div class="cods">${p.cod.map(c=>{ const [cd,diam]=c.split(' · '); return `<span class="cod">${esc(cd)}</span>${diam?`<span class="diam">${esc(diam)}</span>`:''}`; }).join('')}</div>${unica?`<span class="pot-u">${esc(fmtPot(pots[0]))}</span>`:''}</div>
     <ul>${p.linhas.map(([ind,pot])=>`<li><span>${esc(ind)}</span>${!unica&&pot?`<span class="pt">${esc(fmtPot(pot))}</span>`:''}</li>`).join('')}</ul>
+    ${videosDaPonta(p.cod).length?`<div class="dls"><button class="pilula" data-pvid="${esc(p.cod.join('|'))}">${ic('playcheio')}Vídeos de uso (${videosDaPonta(p.cod).length})</button></div>`:''}
     ${com.length?`<div class="dls">${dls}${exp.length>1?'<span class="diam" style="align-self:center">toque no diâmetro</span>':''}</div>`:''}</div></div>`;
 }
 function painelPonta(cod){
@@ -1177,6 +1185,7 @@ document.addEventListener('click', e=>{
   const it = t.closest('[data-item]'); if(it){ const x = TODOS[it.dataset.item]; if(x) track('abrir', chaveItem(x), x.titulo, x.produto || x.esp || ''); }
   const vd = t.closest('[data-video]'); if(vd && e.button === 0 && !e.ctrlKey && !e.metaKey && !e.shiftKey){ e.preventDefault(); const xv = TODOS[vd.dataset.video]; if(xv){ const aberto = painel.classList.contains('on'); if(aberto) fecharPainel(); setTimeout(() => painelVideo(xv), aberto ? 220 : 0); } return; }
   const ga = t.closest('[data-gal]'); if(ga){ const [gi, ii] = ga.dataset.gal.split(':'); painelGal(gi, ii); return; }
+  const pv = t.closest('[data-pvid]'); if(pv){ painelVideosPonta(pv.dataset.pvid.split('|')); return; }
   const mais = t.closest('[data-mais]'); if(mais){ painelItem(mais.dataset.mais); return; }
   const ft = t.closest('[data-foto]'); if(ft){ painelFoto(ft.dataset.foto); return; }
   const gp = t.closest('[data-galeria]'); if(gp){ painelPonta(gp.dataset.galeria); return; }
