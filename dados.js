@@ -1103,7 +1103,11 @@ window.CVD = {
    "esps": [
     "cirurgia",
     "periodontia"
-   ]
+   ],
+   "pontas": [
+    "SL1-0"
+   ],
+   "ponta": "SL1-0"
   },
   {
    "titulo": "Osteotomia de Torus",
@@ -1116,7 +1120,11 @@ window.CVD = {
    "esps": [
     "cirurgia",
     "periodontia"
-   ]
+   ],
+   "pontas": [
+    "SF3"
+   ],
+   "ponta": "SF3"
   },
   {
    "titulo": "Osteotomia",
@@ -2973,5 +2981,5 @@ window.CVD = {
    "nome": "Demonstrações e casos clínicos"
   }
  ],
- "rev": 1792075773990
+ "rev": 1792077088509
 };
