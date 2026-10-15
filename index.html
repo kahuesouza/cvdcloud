@@ -561,7 +561,7 @@ function telaProcedimentos(espSel){
   let corpo = '';
   if(ativo==='todos') D.especialidades.forEach(e=>{ const g = D.procedimentos.filter(p=>p.esp===e.id); corpo += secao(e.nome, g.length) + lista(g); });
   else corpo = lista(D.procedimentos.filter(p=>p.esp===ativo));
-  return { titulo:'Procedimentos', corpo: largo('Procedimentos','Vídeos clínicos por especialidade. Toque para assistir aqui mesmo.') + abas(itensAba, ativo, '#/procedimentos') + corpo };
+  return { titulo:'Procedimentos', corpo: largo('Procedimentos','Vídeos clínicos por especialidade. Os do canal no YouTube abrem no YouTube; os demais tocam aqui mesmo.') + abas(itensAba, ativo, '#/procedimentos') + corpo };
 }
 
 /* ---------- Pontas (organizadas pela bula) ---------- */

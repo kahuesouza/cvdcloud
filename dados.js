@@ -1377,6 +1377,524 @@ window.CVD = {
    "mb": 13,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-46-video-sem-titulo-26-07-2022.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-46-video-sem-titulo-26-07-2022.mp4"
+  },
+  {
+   "titulo": "Aumento de Coroa · Flapless com DentSurg",
+   "esp": "cirurgia",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=wi9IzQrBXxo"
+  },
+  {
+   "titulo": "Aumento de Coroa Clínica · Flap",
+   "esp": "cirurgia",
+   "prof": "Dra. Thayane Furtado",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=fbNMSDdVj3o"
+  },
+  {
+   "titulo": "Cirurgia Flapless",
+   "esp": "cirurgia",
+   "prof": "Dr. Paulo Kano",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=UAydlOoTFLA"
+  },
+  {
+   "titulo": "Cirurgia Flapless",
+   "esp": "cirurgia",
+   "prof": "Dr. Alexandre Teixeira Neto",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=YXHPTtstu6g"
+  },
+  {
+   "titulo": "Cirurgia Flapless",
+   "esp": "cirurgia",
+   "prof": "Dr. Boanerges Araújo",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=iwImNKu3nqM"
+  },
+  {
+   "titulo": "Como a CVDentus auxilia na osteotomia?",
+   "esp": "cirurgia",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=yTyNztoidJg"
+  },
+  {
+   "titulo": "Descolamento de Retalho com o Piezo DentSurg Pro",
+   "esp": "cirurgia",
+   "prof": "Dr. Diego Bazan",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=RyiRHUvYIC0"
+  },
+  {
+   "titulo": "Entrevista · Pontas na Cirurgia Estética",
+   "esp": "cirurgia",
+   "prof": "Eduardo Santini",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=vPVzbfGDsmc"
+  },
+  {
+   "titulo": "Enxerto Anterior com o Piezo DentSurg Pro",
+   "esp": "cirurgia",
+   "prof": "Dr. Rodrigo Bucker do Instituto Bucker",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=-ZoqziA4DDI"
+  },
+  {
+   "titulo": "Flapless em ação",
+   "esp": "cirurgia",
+   "prof": "Florin Cofar",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=F4d6g_AsSc0"
+  },
+  {
+   "titulo": "Gengivoplastia Flapless realizada com o Piezo DentSurg Pro",
+   "esp": "cirurgia",
+   "prof": "Dr. Diego Bazan",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=svU3vsmquz4"
+  },
+  {
+   "titulo": "Instalação de implantes para protocolo inferior",
+   "esp": "cirurgia",
+   "prof": "Dra. Thayane Furtado",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=Uy3suGWv0Rs"
+  },
+  {
+   "titulo": "Nova técnica de extração",
+   "esp": "cirurgia",
+   "prof": "Liete Yassuda",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=2goQJsDpkzY"
+  },
+  {
+   "titulo": "Osteotomias",
+   "esp": "cirurgia",
+   "prof": "Heitor Consenza",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=2GXanb3J4u8"
+  },
+  {
+   "titulo": "Ponta SR9 · Levantamento de seio via crista alveolar",
+   "esp": "cirurgia",
+   "ponta": "SR9",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=M9AxPO2OCUo"
+  },
+  {
+   "titulo": "Preservando os nervos durante o procedimento",
+   "esp": "cirurgia",
+   "prof": "Renato Maluta",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=Why3JVWDAFc"
+  },
+  {
+   "titulo": "Remoção de Tórus",
+   "esp": "cirurgia",
+   "prof": "Renato Lavezo",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=Sci1bIBlc5U"
+  },
+  {
+   "titulo": "Remoção de Tórus · Ponta SFR4",
+   "esp": "cirurgia",
+   "ponta": "SFR4",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=qNwljFxBCJM"
+  },
+  {
+   "titulo": "Sinus Lift",
+   "esp": "cirurgia",
+   "prof": "Dr. Fernando Almeida",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=ygIANwe7gdc"
+  },
+  {
+   "titulo": "Sinus Lift com SFR4 e SLO-2",
+   "esp": "cirurgia",
+   "prof": "Diego Bazan",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=Hm8O3Air--Y"
+  },
+  {
+   "titulo": "Sinus Lift",
+   "esp": "cirurgia",
+   "prof": "Prof. Diego Bazan",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=3eVEs0TMViU"
+  },
+  {
+   "titulo": "Técnica Flapless em ação",
+   "esp": "cirurgia",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=T7yo7_mWkoI"
+  },
+  {
+   "titulo": "Técnica Flapless",
+   "esp": "cirurgia",
+   "prof": "Prof. Eduardo Santini de Almeida",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=WM02wTTFUEs"
+  },
+  {
+   "titulo": "Acabamento em Facetas",
+   "esp": "dentistica",
+   "prof": "Dr. Rogério Marcondes",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=OEWJfrRT8ZA"
+  },
+  {
+   "titulo": "Cimentação",
+   "esp": "dentistica",
+   "prof": "Dr. Rogério Marcondes",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=tVIl2BaL2Ok"
+  },
+  {
+   "titulo": "Como realizar o refinamento dos limites do preparo com ponta CR4XR?",
+   "esp": "dentistica",
+   "prof": "Dr. Danilo Cioffi",
+   "ponta": "CR4XR",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=mQv82kDRaAE"
+  },
+  {
+   "titulo": "Como remover excessos com a ponta T1?",
+   "esp": "dentistica",
+   "prof": "Dr. Danilo Cioffi",
+   "ponta": "T1",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=UQVEKl6995w"
+  },
+  {
+   "titulo": "Remoção de Facetas com o DentSurg Pro",
+   "esp": "dentistica",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=Dg6QHEydf9g"
+  },
+  {
+   "titulo": "Ponta T1F",
+   "esp": "dentistica",
+   "prof": "Shizuma Shibata",
+   "ponta": "T1F",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=NbJVzW6k3KY"
+  },
+  {
+   "titulo": "Preparo Cavitário",
+   "esp": "dentistica",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=pHJiCuKc0lA"
+  },
+  {
+   "titulo": "Preparo Classe V",
+   "esp": "dentistica",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=r2CjynOgDHg"
+  },
+  {
+   "titulo": "Preparo da caixa distal com ponta CH1-D",
+   "esp": "dentistica",
+   "prof": "Dr. Danilo Cioffi",
+   "ponta": "CH1-D",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=bQnnFLvqtNY"
+  },
+  {
+   "titulo": "Preparo em área de difícil acesso",
+   "esp": "dentistica",
+   "prof": "Danilo Cioffi",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=Leq3te44KJM"
+  },
+  {
+   "titulo": "Refinamento de Preparo",
+   "esp": "dentistica",
+   "prof": "João Maurício",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=DbLVt4iYBcM"
+  },
+  {
+   "titulo": "Remoção de Cárie",
+   "esp": "dentistica",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=aDlzRV2Mr6Q"
+  },
+  {
+   "titulo": "Remoção de Restauração e Amálgama",
+   "esp": "dentistica",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=Z6wIFwkUvr0"
+  },
+  {
+   "titulo": "Remoção de Amálgama",
+   "esp": "dentistica",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=xiqvklQ99Yk"
+  },
+  {
+   "titulo": "Remoção de Amálgama",
+   "esp": "dentistica",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=ReZj1xzwGNE"
+  },
+  {
+   "titulo": "Remoção de Amálgama · Ponta W1",
+   "esp": "dentistica",
+   "ponta": "W1",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=VycZdDqYGJw"
+  },
+  {
+   "titulo": "Remoção de Excesso · Restauração em classe V",
+   "esp": "dentistica",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=HGT0MTH9tcg"
+  },
+  {
+   "titulo": "Remoção de Faceta com o DentSurg Pro",
+   "esp": "dentistica",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=QFQw8-qMvHQ"
+  },
+  {
+   "titulo": "Remoção de Faceta com o DentSurg Pro",
+   "esp": "dentistica",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=XPg2iS2iEX8"
+  },
+  {
+   "titulo": "Remoção de Material Restaurador · Ponta CR4XR",
+   "esp": "dentistica",
+   "ponta": "CR4XR",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=BSZx2n7So8A"
+  },
+  {
+   "titulo": "Remoção de amálgama (Ponta T1)",
+   "esp": "dentistica",
+   "prof": "Dr. Danilo Cioffi",
+   "ponta": "T1",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=Vet9LgFfKKk"
+  },
+  {
+   "titulo": "Remoção de amálgama com alta precisão!",
+   "esp": "dentistica",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=Bq0HXG9DOvk"
+  },
+  {
+   "titulo": "Remoção de resina composta em restauração de classe V (Ponta CR4XR)",
+   "esp": "dentistica",
+   "prof": "Dr. Danilo Cioffi",
+   "ponta": "CR4XR",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=joAze665sdI"
+  },
+  {
+   "titulo": "Restauração de resina composta · Ultrassom e ponta CR1",
+   "esp": "dentistica",
+   "ponta": "CR1",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=udHMN0oxmKA"
+  },
+  {
+   "titulo": "Tratamento Dentário Proximal",
+   "esp": "dentistica",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=JwLscRDSXQQ"
+  },
+  {
+   "titulo": "Apicectomia",
+   "esp": "endodontia",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=znT__3AL7S8"
+  },
+  {
+   "titulo": "Corte de Guta-Percha",
+   "esp": "endodontia",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=55JhfcB5xOU"
+  },
+  {
+   "titulo": "Endodontia Completa",
+   "esp": "endodontia",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=hO2ye44zmng"
+  },
+  {
+   "titulo": "Endodontia",
+   "esp": "endodontia",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=Ds0KJXNyGOk"
+  },
+  {
+   "titulo": "Endodontia · Cone + PUI + Guta",
+   "esp": "endodontia",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=bJdKR-V781U"
+  },
+  {
+   "titulo": "Fases operatórias na Endodontia",
+   "esp": "endodontia",
+   "prof": "Marco Aurélio",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=D4djpKMMT5k"
+  },
+  {
+   "titulo": "Irrigação do Conduto, Corte e Termoplastificação da Guta-Percha",
+   "esp": "endodontia",
+   "prof": "Dr. Rodrigo Villagra",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=yo4N3xLUACo"
+  },
+  {
+   "titulo": "PUI · Irrigação Ultrassônica Passiva",
+   "esp": "endodontia",
+   "prof": "Dr. Rodrigo Villagra",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=5N_-cOotnU8"
+  },
+  {
+   "titulo": "PUI · Irrigação Ultrassônica Passiva",
+   "esp": "endodontia",
+   "prof": "Danilo Cioffi",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=BPDngu0dJFU"
+  },
+  {
+   "titulo": "Remoção de Pinos",
+   "esp": "endodontia",
+   "prof": "Dr. Marco Aurélio",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=Vxc-1fRuOhk"
+  },
+  {
+   "titulo": "Corte da Guta-Percha e Limpeza com Optymus",
+   "esp": "endodontia",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=D9dZqa_bJvI"
+  },
+  {
+   "titulo": "Remoção de Pinos",
+   "esp": "endodontia",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=xPEsVMswMmQ"
+  },
+  {
+   "titulo": "Remoção de pinos",
+   "esp": "endodontia",
+   "prof": "Dr. Marco Aurélio",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=JvM-5vOW0Qk"
+  },
+  {
+   "titulo": "Aplicação da ponta R,05 na Odontopediatria",
+   "esp": "orto-odontoped",
+   "prof": "Dra. Liete Yassuda",
+   "ponta": "R.05",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=8BznPFgACwc"
+  },
+  {
+   "titulo": "Odontopediatria",
+   "esp": "orto-odontoped",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=s2Yi1R5jRJM"
+  },
+  {
+   "titulo": "Procedimento Slice",
+   "esp": "dentistica",
+   "prof": "Monique Bazan",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=7Wct-hj7TTQ"
+  },
+  {
+   "titulo": "Procedimento Slice",
+   "esp": "dentistica",
+   "prof": "Prof. Monique Bazan",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=ANK4d91w9tI"
+  },
+  {
+   "titulo": "Realização de procedimento na Odontopediatria com Clinical Plus e Ponta R4",
+   "esp": "orto-odontoped",
+   "ponta": "R4",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=YSq-bzXXVXo"
+  },
+  {
+   "titulo": "Flapless e Peeling Gengival",
+   "esp": "periodontia",
+   "prof": "Prof. Paulo Kano",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=1bL--HkhMU8"
+  },
+  {
+   "titulo": "Limpeza de implantes com DentSurg Pro e ponta T1T-P",
+   "esp": "periodontia",
+   "prof": "Dr. Helder Pavanelli",
+   "ponta": "T1T-P",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=obRPyPdOT1E"
+  },
+  {
+   "titulo": "Limpeza com a ponta T1T-P",
+   "esp": "periodontia",
+   "prof": "Dr. Ricardo Scotton",
+   "ponta": "T1T-P",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=e2r1BbeteK0"
+  },
+  {
+   "titulo": "Modo de uso da ponta T1T-P",
+   "esp": "periodontia",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=k6myHF4cnxs"
+  },
+  {
+   "titulo": "Peeling Gengival",
+   "esp": "periodontia",
+   "prof": "Dra. Débora Ayala",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=1xdHV_EWobk"
+  },
+  {
+   "titulo": "Raspagem",
+   "esp": "periodontia",
+   "prof": "Prof. Diego Bazan",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=N49aEd9JBOQ"
+  },
+  {
+   "titulo": "Raspagem",
+   "esp": "periodontia",
+   "prof": "Dra. Analice Giovani Pereira",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=WcJRg_2HL8s"
+  },
+  {
+   "titulo": "Raspagem/ Remoção de Cálculo",
+   "esp": "periodontia",
+   "prof": "Dr. Leonardo Costa",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=VITipyNfzX8"
+  },
+  {
+   "titulo": "Remoção de Cálculo com a Ponta T1U-2",
+   "esp": "periodontia",
+   "prof": "Dr. Maurício Castello",
+   "ponta": "T1U-2",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=DVzTjQB1U5s"
+  },
+  {
+   "titulo": "Retracão Gengival",
+   "esp": "periodontia",
+   "prof": "Dr. Rodrigo Bucker do Instituto Bucker",
+   "formato": "YouTube",
+   "url": "https://www.youtube.com/watch?v=bbhINtRRQeM"
   }
  ],
  "galerias": {
