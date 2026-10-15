@@ -938,6 +938,7 @@ function telaConta(){
   else if(p.status === 'bloqueado') corpo += infoCard('Acesso bloqueado', 'Fale com um administrador.');
   if(C.aprovado()){
     corpo += `<div class="botoes" style="display:grid;gap:8px;margin-top:14px"><button class="btn prim" data-comentar="geral">${ic('mega')}Enviar comentário</button></div>`;
+    if(C.admin()) corpo += `<a id="banner-comentarios" class="nota anima" href="#/admin/comentarios" ${novosComentarios ? '' : 'hidden'} style="display:flex;border-color:var(--acento)">${ic('mega')}<div><b>${novosComentarios} ${novosComentarios > 1 ? 'sugestões novas' : 'sugestão nova'}</b>Dos vendedores. Toque para ver onde foi feita cada uma.</div></a>`;
     if(C.admin()) corpo += `<a id="banner-contas" class="nota anima" href="#/admin/usuarios" ${novasContas ? '' : 'hidden'} style="display:flex;border-color:var(--acento)">${ic('info')}<div><b>${novasContas} ${novasContas > 1 ? 'contas novas' : 'conta nova'}</b>Toque para conferir e dar o OK. O acesso delas já funciona.</div></a>`;
     if(C.admin()) corpo += `<div>${linkRow('#/admin/painel', 'info', 'Painel de administração')}</div>`;
   }
@@ -967,15 +968,18 @@ function telaDicas(){
   } };
 }
 
-let novasContas = 0, novasContasEm = 0;
+let novasContas = 0, novasContasEm = 0, novosComentarios = 0;
 async function atualizarNovas(forcar){
-  const C = CONTA(); if(!C || !C.configurado || !C.admin()) { novasContas = 0; return; }
+  const C = CONTA(); if(!C || !C.configurado || !C.admin()) { novasContas = 0; novosComentarios = 0; return; }
   if(!forcar && Date.now() - novasContasEm < 45000) return; novasContasEm = Date.now();
   try{ novasContas = (await C.contasNovas()).length; }catch(e){}
+  try{ novosComentarios = (await C.listarComentarios('pendente')).length; }catch(e){}
   pintarAlertaContas();
 }
 function pintarAlertaContas(){
-  document.querySelectorAll('a[href="#/conta"].ibtn').forEach(a => a.classList.toggle('alerta', novasContas > 0));
+  document.querySelectorAll('a[href="#/conta"].ibtn').forEach(a => a.classList.toggle('alerta', novasContas > 0 || novosComentarios > 0));
+  const ec = document.querySelector('.abas a[href="#/admin/comentarios"] small'); if(ec) ec.textContent = novosComentarios ? novosComentarios : '';
+  const bc = document.getElementById('banner-comentarios'); if(bc){ bc.hidden = !novosComentarios; const b = bc.querySelector('b'); if(b) b.textContent = novosComentarios + (novosComentarios > 1 ? ' sugestões novas' : ' sugestão nova'); }
   const eq = document.querySelector('.abas a[href="#/admin/usuarios"] small'); if(eq) eq.textContent = novasContas ? novasContas : '';
   const bn = document.getElementById('banner-contas'); if(bn) bn.hidden = !novasContas, bn.querySelector('b') && (bn.querySelector('b').textContent = novasContas + (novasContas > 1 ? ' contas novas' : ' conta nova'));
 }
@@ -993,7 +997,7 @@ function telaAdmin(aba){
   if(!C.admin()) return { ...base, corpo: largo('Administração') + infoCard('Área restrita', 'Somente administradores têm acesso a esta página.') };
   const sts = aba === 'comentarios' ? [['pendente','Novos'],['aprovado','Resolvidos'],['rejeitado','Descartados']] : aba === 'usuarios' ? [['aprovado','Ativos'],['bloqueado','Bloqueados']] : [];
   const corpo = largo('Administração', 'Uso do app, equipe e moderação.')
-    + abas(ABAS_ADMIN.map(x => x.id === 'usuarios' && novasContas ? { ...x, n: novasContas } : x), aba, '#/admin')
+    + abas(ABAS_ADMIN.map(x => x.id === 'usuarios' && novasContas ? { ...x, n: novasContas } : x.id === 'comentarios' && novosComentarios ? { ...x, n: novosComentarios } : x), aba, '#/admin')
     + (sts.length ? `<div class="chips-f">${sts.map(([k,n]) => `<button class="${filtroAdmin[aba] === k ? 'on' : ''}" data-filtro="${aba}:${k}">${n}</button>`).join('')}</div>` : '')
     + `<div id="admin-lista">${vazio('Carregando…')}</div>`;
   return { ...base, corpo, depois: () => carregarAdmin(aba) };
@@ -1113,7 +1117,7 @@ async function carregarAdmin(aba){
     if(aba === 'painel'){ await carregarPainel(el); }
     else if(aba === 'desempenho'){ await carregarDesempenho(el); }
     else if(aba === 'comentarios'){
-      const l = await C.listarComentarios(st);
+      const l = await C.listarComentarios(st); if(st === 'pendente'){ novosComentarios = l.length; novasContasEm = Date.now(); pintarAlertaContas(); }
       el.innerHTML = l.length ? l.map(c => { const cx = contextoComentario(c); return `<div class="cartao-c anima"><div class="topo-c"><span class="st">${esc(CATS[c.categoria] || c.categoria)}</span>${stCom(c.status)}<span class="quem">${esc(c.autorNome)} · ${fmtData(c.criadoEm)}</span></div><p>${esc(c.texto)}</p><div class="item-c" style="margin-top:8px"><b style="font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--sub)">Onde foi feito</b><br><span style="font-weight:700">${esc(cx.titulo)}</span><br><span class="quem">${esc(cx.onde)}</span></div>${cx.btn ? `<div class="acoes-c" style="margin-top:10px">${cx.btn}</div>` : ''}${c.notaAdmin ? `<p style="color:var(--sub);font-size:13px">Nota: ${esc(c.notaAdmin)}</p>` : ''}
         <div class="acoes-c">${st !== 'aprovado' ? `<button class="ok" data-mod="${esc(c.id)}:aprovado">Marcar como resolvido</button>` : ''}${st !== 'rejeitado' ? `<button data-mod="${esc(c.id)}:rejeitado">Descartar</button>` : ''}${st !== 'pendente' ? `<button data-mod="${esc(c.id)}:pendente">Voltar para novos</button>` : ''}<button class="ruim" data-excluir="${esc(c.id)}">Excluir</button></div></div>`; }).join('') : vazio('Nada por aqui.');
     } else if(aba === 'usuarios'){
