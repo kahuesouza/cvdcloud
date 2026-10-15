@@ -7,8 +7,8 @@
 <meta name="description" content="Central de materiais comerciais CVDentus: catálogos, manuais, vídeos, procedimentos, pontas e marca.">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; media-src https:; connect-src 'self' https://*.googleapis.com https://*.firebaseio.com https://*.firebaseapp.com https://firestore.googleapis.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com wss://*.firebaseio.com; frame-src https://*.firebaseapp.com; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<meta name="theme-color" content="#f2f6fe" id="meta-tema">
-<script>try{var t=JSON.parse(localStorage.getItem('cvd.tema')||'"escuro"');if(t==='escuro'){document.documentElement.setAttribute('data-theme','dark');document.getElementById('meta-tema').setAttribute('content','#04060e')}}catch(e){}</script>
+<meta name="theme-color" content="#ffffff" id="meta-tema">
+<script>try{var t=JSON.parse(localStorage.getItem('cvd.tema')||'"escuro"');if(t==='escuro'){document.documentElement.setAttribute('data-theme','dark');document.getElementById('meta-tema').setAttribute('content','#000000')}}catch(e){}</script>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="img/icone.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="img/icone-192.png">
@@ -332,7 +332,7 @@ nav.base a.on::after{content:"";position:absolute;top:-7px;left:50%;width:26px;h
 
 @media (min-width:640px){ .tiles{grid-template-columns:repeat(3,1fr)} .tile.destaque{grid-column:span 3} .grade{grid-template-columns:repeat(3,1fr)} }
 </style>
-<link rel="stylesheet" href="cloud.css?v54">
+<link rel="stylesheet" href="cloud.css?v56">
 </head>
 <body>
 <header class="bar" id="bar"></header>
@@ -893,7 +893,7 @@ function bannerInstalar(){
 const temaEscuro = () => document.documentElement.getAttribute('data-theme') === 'dark';
 function aplicarTema(escuro){
   if(escuro) document.documentElement.setAttribute('data-theme','dark'); else document.documentElement.removeAttribute('data-theme');
-  document.getElementById('meta-tema').setAttribute('content', escuro ? '#04060e' : '#f2f6fe');
+  document.getElementById('meta-tema').setAttribute('content', escuro ? '#000000' : '#ffffff');
   ls.set('tema', escuro ? 'escuro' : 'claro');
   document.querySelectorAll('[data-tema]').forEach(b=>{ b.innerHTML = ic(escuro?'sol':'lua'); b.setAttribute('aria-label', escuro?'Usar visual branco':'Usar visual escuro'); });
 }
