@@ -477,7 +477,7 @@ function linha(x, opt={}){
   const dl = linkDownload(x), tam = tamDownload(x), vid = isVideo(x), gal = !!x.galeria;
   return `<div class="linha anima" style="--i:${opt.i||0}">
     <a class="abrir" data-item="${x.id}" ${vid ? `data-video="${x.id}"` : ''} href="${esc(x.url)}" ${gal ? '' : 'target="_blank" rel="noopener"'}>${leadDe(x)}<span class="txt"><span class="t">${esc(x.titulo)}</span><span class="m" style="display:block">${metaDe(x,opt)}</span></span></a>
-    <span class="acoes">${gal ? '' : `<button class="ibtn comp" data-compartilhar="${x.id}" aria-label="Copiar link para compartilhar">${ic('share')}</button>`}${dl ? `<a class="ibtn" href="${esc(dl)}" download data-dl="${x.id}" data-mb="${tam||0}" aria-label="Baixar${tam?' ('+fmtTam(tam)+')':''}">${ic('download')}</a>` : ''}<button class="ibtn" data-mais="${x.id}" aria-label="Mais opções">${ic('mais')}</button></span></div>`;
+    <span class="acoes"><button class="ibtn" data-comentar="${x.id}" aria-label="Deixar sugestão ou comentário">${ic('mega')}</button>${gal ? '' : `<button class="ibtn comp" data-compartilhar="${x.id}" aria-label="Copiar link para compartilhar">${ic('share')}</button>`}${dl ? `<a class="ibtn" href="${esc(dl)}" download data-dl="${x.id}" data-mb="${tam||0}" aria-label="Baixar${tam?' ('+fmtTam(tam)+')':''}">${ic('download')}</a>` : ''}<button class="ibtn" data-mais="${x.id}" aria-label="Mais opções">${ic('mais')}</button></span></div>`;
 }
 const track = (tipo, chave, titulo, extra) => { const C = CONTA(); if(C && C.configurado && C.registrar) C.registrar(tipo, String(chave||''), String(titulo||''), extra||''); };
 const lista = (itens, opt={}) => `<div class="lista">${itens.map((x,i)=>linha(x,{...opt,i:Math.min(i,10)})).join('')}</div>`;
@@ -642,6 +642,7 @@ function cardPonta(p){
   const dls = com.map(c=>`<button class="pilula" data-galeria="${esc(c)}">${ic('download')}${esc(rot(c))}</button>`).join('');
   return `<div class="ponta anima">${foto}<div class="corpo"><div class="topo-p"><div class="cods">${p.cod.map(c=>{ const [cd,diam]=c.split(' · '); return `<span class="cod">${esc(cd)}</span>${diam?`<span class="diam">${esc(diam)}</span>`:''}`; }).join('')}</div>${unica?`<span class="pot-u">${esc(fmtPot(pots[0]))}</span>`:''}</div>
     <ul>${p.linhas.map(([ind,pot])=>`<li><span>${esc(ind)}</span>${!unica&&pot?`<span class="pt">${esc(fmtPot(pot))}</span>`:''}</li>`).join('')}</ul>
+    <div class="dls"><button class="pilula" data-comentar-ctx="${esc('ponta:' + p.cod[0].split(' · ')[0] + '|Ponta ' + p.cod.map(c => c.split(' · ')[0]).join(' / '))}">${ic('mega')}Sugerir ou comentar</button></div>
     ${videosDaPonta(p.cod).length?`<div class="dls"><button class="pilula" data-pvid="${esc(p.cod.join('|'))}">${ic('playcheio')}Vídeos de uso (${videosDaPonta(p.cod).length})</button></div>`:''}
     ${com.length?`<div class="dls">${dls}${exp.length>1?'<span class="diam" style="align-self:center">toque no diâmetro</span>':''}</div>`:''}</div></div>`;
 }
@@ -813,7 +814,7 @@ function painelGal(gid, iid){
     ? `<div class="player"><video controls playsinline preload="metadata" poster="${esc(PV + it.id + '.webp')}" src="${esc(arq)}"></video></div>`
     : `<div class="img-g" style="background:var(--surface-2)"><img src="${esc(arq)}" alt="${esc(it.titulo)}" onerror="this.onerror=null;this.src='${esc(PV + it.id + '.webp')}'"></div>`;
   abrirPainel(`${midia}<h3 style="margin-top:14px">${esc(it.titulo)}</h3><p class="sub">${esc(GL.titulo)} · ${esc(it.grupo)}</p>
-    <div class="botoes"><a class="btn prim" href="${esc(arq)}" download data-dl="gal" data-tit="${esc(GL.titulo + ' · ' + it.titulo)}" data-mb="${it.mb}">${ic('download')}Baixar ${it.tipo === 'video' ? 'vídeo' : it.ext.toUpperCase()} <small>${fmtTam(Math.max(.1, it.mb))}</small></a><button class="btn prim" data-copiar="${esc(arq)}">${ic('share')}Copiar link</button></div>`);
+    <div class="botoes"><a class="btn prim" href="${esc(arq)}" download data-dl="gal" data-tit="${esc(GL.titulo + ' · ' + it.titulo)}" data-mb="${it.mb}">${ic('download')}Baixar ${it.tipo === 'video' ? 'vídeo' : it.ext.toUpperCase()} <small>${fmtTam(Math.max(.1, it.mb))}</small></a><button class="btn prim" data-copiar="${esc(arq)}">${ic('share')}Copiar link</button><button class="btn sec" data-comentar-ctx="${esc('galeria:' + it.id + '|' + GL.titulo + ' · ' + it.titulo)}">${ic('mega')}Sugerir ou comentar</button></div>`);
   const v = painel.querySelector('video'); if(v) v.play().catch(() => {});
 }
 function painelItem(id){
@@ -828,8 +829,7 @@ function painelItem(id){
       <button class="btn sec" data-fav="${id}">${ic('estrela')}${fav?'Remover dos salvos':'Salvar'}</button>
       <button class="btn sec" data-comentar="${id}">${ic('mega')}Comentar ou sugerir</button>
       ${adminAgora() ? `<button class="btn sec" data-ocultar="${id}" style="color:var(--erro)">${ic('x')}Excluir do app</button>` : ''}
-    </div><div class="dicas-item" id="dicas-item"></div>`);
-  atualizarDicasDoItem(x);
+    </div>`);
 }
 
 /* ===================== Busca em tela cheia ===================== */
@@ -920,14 +920,12 @@ function telaConta(){
   else if(p.status === 'bloqueado') corpo += infoCard('Acesso bloqueado', 'Fale com um administrador.');
   if(C.aprovado()){
     corpo += `<div class="botoes" style="display:grid;gap:8px;margin-top:14px"><button class="btn prim" data-comentar="geral">${ic('mega')}Enviar comentário</button></div>`;
-    corpo += `<div style="margin-top:8px">${linkRow('#/dicas', 'estrela', 'Dicas da equipe')}</div>`;
     if(C.admin()) corpo += `<a id="banner-contas" class="nota anima" href="#/admin/usuarios" ${novasContas ? '' : 'hidden'} style="display:flex;border-color:var(--acento)">${ic('info')}<div><b>${novasContas} ${novasContas > 1 ? 'contas novas' : 'conta nova'}</b>Toque para conferir e dar o OK. O acesso delas já funciona.</div></a>`;
     if(C.admin()) corpo += `<div>${linkRow('#/admin/painel', 'info', 'Painel de administração')}</div>`;
-    corpo += secao('Meus comentários') + `<div id="meus-com">${vazio('Carregando…')}</div>`;
   }
   corpo += `<form class="cartao-c form anima" data-trocar-senha autocomplete="off"><b style="font-size:14.5px">Alterar senha <span style="color:var(--sub);font-weight:500">(opcional)</span></b><input name="atual" type="password" placeholder="Senha atual" required autocomplete="current-password"><input name="nova" type="password" placeholder="Nova senha (mín. 8, letras e números)" required minlength="8" autocomplete="new-password"><button class="btn sec" type="submit">Salvar nova senha</button><p class="erro-f" id="ts-msg" role="status" style="color:var(--sub)"></p></form>`;
   corpo += `<div style="margin-top:22px"><button class="btn sec" data-sair>Sair da conta</button></div>`;
-  return { titulo:'Conta', voltar:'#/', corpo, depois: C.aprovado() ? carregarMeusComentarios : null };
+  return { titulo:'Conta', voltar:'#/', corpo };
 }
 async function carregarMeusComentarios(){
   const el = document.getElementById('meus-com'); if(!el) return;
@@ -1034,7 +1032,7 @@ async function carregarAdmin(aba){
     } else if(aba === 'usuarios'){
       const l = await C.listarUsuarios(st); const novas = await C.contasNovas().catch(() => []); novasContas = novas.length; novasContasEm = Date.now(); pintarAlertaContas();
       el.innerHTML = (novas.length ? `<div class="cartao-c anima" style="border-color:var(--acento)"><b style="font-size:14.5px">${novas.length} ${novas.length > 1 ? 'contas novas' : 'conta nova'} para conferir</b><p style="color:var(--sub);font-size:13.5px;margin:6px 0 10px">Elas já têm acesso normal ao app. Confirme com OK se a conta é real; se não for, bloqueie ou exclua.</p>${novas.map(u => `<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:8px 0;border-top:1px solid var(--linha)"><span style="flex:1;min-width:160px"><b style="font-size:14px">${esc(u.nome)}</b><br><span class="quem">${esc(u.email)} · ${fmtData(u.criadoEm)}</span></span><span class="acoes-c" style="margin:0"><button class="ok" data-revisar="${esc(u.uid)}">OK, conta real</button><button class="ruim" data-usr="${esc(u.uid)}:bloqueado">Bloquear</button></span></div>`).join('')}</div>` : '') + `<form class="cartao-c anima form" data-criar-conta autocomplete="off"><b style="font-size:14.5px">Criar conta verificada</b><p style="color:var(--sub);font-size:13.5px;margin:6px 0 10px">Para quem não conseguiu entrar. A conta já nasce confirmada, com uma senha genérica que você envia à pessoa. Depois de entrar, ela pode trocar a senha se quiser (opcional).</p><input name="nome" placeholder="Nome completo" required minlength="2" maxlength="80"><input name="email" type="email" placeholder="email@cvdvale.com.br" required maxlength="120"><input name="senha" type="text" placeholder="Senha genérica (mín. 8, letras e números)" required minlength="8" maxlength="60" value="Cvd@${Math.floor(1000 + Math.random() * 9000)}" autocomplete="off" spellcheck="false"><button class="btn prim" type="submit">Criar conta</button><p class="erro-f" id="cc-msg" role="status" style="color:var(--sub)"></p></form>` + (l.length ? l.map(u => `<div class="cartao-c anima"><div class="topo-c"><b>${esc(u.nome)}</b>${stChip(u.status)}${u.role === 'admin' || (window.CVD_ADMINS || []).includes((u.email || '').toLowerCase()) ? '<span class="st">Admin</span>' : ''}</div><div class="quem">${esc(u.email)}</div><div class="quem" style="margin-top:2px">Cadastro ${fmtData(u.criadoEm)} · último acesso ${haQuanto(u.ultimoAcesso)}</div>
-        ${u.uid !== C.user.uid && u.role !== 'admin' && !(window.CVD_ADMINS || []).includes((u.email || '').toLowerCase()) ? `<div class="acoes-c">${u.status !== 'bloqueado' ? `<button class="ruim" data-usr="${esc(u.uid)}:bloqueado">Bloquear</button>` : `<button class="ok" data-usr="${esc(u.uid)}:aprovado">Liberar de novo</button>`}<button class="ruim" data-excluir-conta="${esc(u.uid)}" data-email="${esc(u.email)}" data-nome="${esc(u.nome)}">Excluir conta</button></div>` : ''}</div>`).join('') : vazio('Ninguém por aqui.'));
+        ${(() => { const ehMaster = (window.CVD_ADMINS || []).includes((u.email || '').toLowerCase()); if(u.uid === C.user.uid || ehMaster) return ''; const nm = esc(u.nome); return u.role === 'admin' ? `<div class="acoes-c"><button data-papel="${esc(u.uid)}:vendedor" data-nome="${nm}">Remover admin</button></div>` : `<div class="acoes-c">${u.status !== 'bloqueado' ? `<button class="ruim" data-usr="${esc(u.uid)}:bloqueado">Bloquear</button>` : `<button class="ok" data-usr="${esc(u.uid)}:aprovado">Liberar de novo</button>`}<button class="ok" data-papel="${esc(u.uid)}:admin" data-nome="${nm}">Tornar admin</button><button class="ruim" data-excluir-conta="${esc(u.uid)}" data-email="${esc(u.email)}" data-nome="${nm}">Excluir conta</button></div>`; })()}</div>`).join('') : vazio('Ninguém por aqui.'));
     } else if(aba === 'links'){
       const l = await C.listarCompartilhamentos(); const us = new Map((await C.todosUsuarios()).map(u => [u.uid, u.nome]));
       el.innerHTML = `<p style="color:var(--sub);font-size:13.5px;margin:12px 0 0">Links enviados a clientes. Excluir derruba o link na hora.</p>` + (l.length ? l.map(c => `<div class="cartao-c anima"><b style="font-size:14px">${esc(c.titulo)}</b><div class="quem" style="margin-top:2px">${esc(us.get(c.criadoPor) || 'Equipe')} · ${fmtData(c.criadoEm)}${c.tipo ? ' · ' + esc(c.tipo) : ''}</div><div class="acoes-c"><button data-abrir-link="${esc(c.id)}">Abrir</button><button class="ruim" data-excluir-link="${esc(c.id)}">Excluir link</button></div></div>`).join('') : vazio('Nenhum link compartilhado ainda.'));
@@ -1057,7 +1055,7 @@ function painelComentario(ctx){
     <form class="form" data-f="comentario" data-chave="${esc(ctx.chave)}" data-titulo="${esc(ctx.titulo)}" novalidate>
       <label>Tipo<select name="categoria">${Object.entries(CATS).map(([k,v]) => `<option value="${k}">${v}</option>`).join('')}</select></label>
       <label>Seu comentário<textarea name="texto" maxlength="800" required placeholder="Conte o que você viu, o que funciona na venda ou o que precisa melhorar."></textarea></label>
-      <p class="quem" style="margin:0;color:var(--fraco);font-size:12px">Só os administradores veem o comentário. Se for aprovado, ele pode aparecer para a equipe como dica.</p>
+      <p class="quem" style="margin:0;color:var(--fraco);font-size:12px">Só os administradores veem este comentário.</p>
       <p class="erro-f" role="alert"></p><button class="btn prim" type="submit">Enviar</button></form>`);
 }
 function atualizarDicasDoItem(x){
@@ -1170,7 +1168,7 @@ function escolherTela(){
   if(a==='salvos') return telaSalvos();
   if(a==='conta') return telaConta();
   if(a==='admin') return telaAdmin(b);
-  if(a==='dicas') return telaDicas();
+  if(a==='dicas') return telaConta();
   return telaInicio();
 }
 function pintar(){
@@ -1266,6 +1264,7 @@ document.addEventListener('click', e=>{
   const lp = t.closest('[data-logo-p]'); if(lp){ const [gi,li] = lp.dataset.logoP.split(':'); painelLogo(+gi,+li); return; }
   const cl = t.closest('[data-copiar]'); if(cl){ enviarLink('', cl.dataset.copiar); return; }
   const cp = t.closest('[data-compartilhar]'); if(cp){ compartilhar(TODOS[cp.dataset.compartilhar]); return; }
+  const cc = t.closest('[data-comentar-ctx]'); if(cc){ const [ch, ...ti] = cc.dataset.comentarCtx.split('|'); fecharPainel(); setTimeout(() => painelComentario({ chave: ch, titulo: ti.join('|') }), 200); return; }
   const cm = t.closest('[data-comentar]'); if(cm){ const id = cm.dataset.comentar; fecharPainel(); const x = TODOS[id]; setTimeout(() => painelComentario(x ? { chave: chaveItem(x), titulo: x.titulo } : { chave: 'geral', titulo: 'Geral' }), 200); return; }
   if(t.closest('[data-modo]')){ modoLogin = t.closest('[data-modo]').dataset.modo; render(); return; }
   if(t.closest('[data-sair]')){ CONTA().sair().then(() => { toast('Você saiu'); atualizarGate(); }); return; }
@@ -1285,6 +1284,7 @@ document.addEventListener('click', e=>{
   const ex = t.closest('[data-excluir]'); if(ex){ if(confirm('Excluir este comentário de vez?')) CONTA().excluirComentario(ex.dataset.excluir).then(() => { toast('Excluído'); carregarAdmin('comentarios'); }).catch(e => toast('Erro: ' + e.message)); return; }
   const oc = t.closest('[data-ocultar]'); if(oc){ ocultarItem(oc.dataset.ocultar); return; }
   const rs = t.closest('[data-restaurar]'); if(rs){ const u = rs.dataset.restaurar; const o = { urls: OCULTOS.urls.filter(x => x !== u), titulos: { ...(OCULTOS.titulos || {}) } }; delete o.titulos[u]; CONTA().salvarOcultos(o).then(() => { toast('Item restaurado'); setTimeout(() => location.reload(), 600); }).catch(e => toast('Erro: ' + e.message)); return; }
+  const pp = t.closest('[data-papel]'); if(pp){ const [pu, pr] = pp.dataset.papel.split(':'); if(!confirm((pr === 'admin' ? 'Tornar ' + pp.dataset.nome + ' administrador? Essa pessoa verá comentários, estatísticas e poderá gerenciar contas.' : 'Remover o acesso de administrador de ' + pp.dataset.nome + '?'))) return; CONTA().definirPapel(pu, pr).then(() => { toast(pr === 'admin' ? 'Agora é administrador' : 'Deixou de ser administrador'); carregarAdmin('usuarios'); }).catch(e => toast('Erro: ' + e.message)); return; }
   const rv = t.closest('[data-revisar]'); if(rv){ CONTA().marcarRevisado(rv.dataset.revisar).then(() => { toast('Conta confirmada'); carregarAdmin('usuarios'); }).catch(e => toast('Erro: ' + e.message)); return; }
   const val = t.closest('[data-validar]'); if(val){ CONTA().validarEmail(val.dataset.validar, val.dataset.nome).then(() => { toast('E-mail validado'); carregarAdmin('usuarios'); }).catch(e => toast('Erro: ' + e.message)); return; }
   const exc = t.closest('[data-excluir-conta]'); if(exc){ if(!confirm('Excluir a conta de ' + exc.dataset.nome + ' (' + exc.dataset.email + ')? A pessoa perde o acesso na hora. Para liberar de novo, crie a conta outra vez.')) return; CONTA().excluirUsuario(exc.dataset.excluirConta, exc.dataset.email).then(() => { toast('Conta excluída'); carregarAdmin('usuarios'); }).catch(e => toast('Erro: ' + e.message)); return; }
@@ -1309,7 +1309,7 @@ document.addEventListener('submit', async e => {
   try{
     if(tipo === 'entrar'){ if(!d.email || !d.senha) throw new Error('Preencha e-mail e senha.'); await C.entrar(d.email, d.senha); toast('Bem-vindo'); }
     else if(tipo === 'criar'){ if(d.senha !== d.senha2) throw new Error('As senhas não conferem.'); await C.cadastrar(d.nome, d.email, d.senha); toast('Conta criada. Bem-vindo!'); }
-    else if(tipo === 'comentario'){ await C.enviarComentario({ categoria: d.categoria, texto: d.texto, itemChave: f.dataset.chave, itemTitulo: f.dataset.titulo }); fecharPainel(); toast('Enviado! Um administrador vai revisar.'); if(location.hash.startsWith('#/conta')) carregarMeusComentarios(); }
+    else if(tipo === 'comentario'){ await C.enviarComentario({ categoria: d.categoria, texto: d.texto, itemChave: f.dataset.chave, itemTitulo: f.dataset.titulo }); fecharPainel(); toast('Enviado! Obrigado pela sugestão.'); }
   }catch(err){ falha(err.message); }
   finally{ btn.disabled = false; btn.textContent = txtBtn; }
 });

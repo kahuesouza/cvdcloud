@@ -229,6 +229,12 @@ if(!CFG || !CFG.apiKey || CFG.apiKey === 'COLE_AQUI'){
         }catch(e){ throw erro(e); }
       },
       async removerValidacao(email){ if(!C.admin()) throw new Error('Apenas administradores.'); try{ await F.deleteDoc(F.doc(db, 'verificados', txt(email, 120).toLowerCase())); }catch(e){ throw erro(e); } },
+      /* torna uma pessoa administradora (ou volta a vendedor) */
+      async definirPapel(uid, role){
+        if(!C.admin()) throw new Error('Apenas administradores.');
+        if(!['admin', 'vendedor'].includes(role)) throw new Error('Papel inválido.');
+        try{ await F.updateDoc(F.doc(db, 'users', uid), { role }); }catch(e){ throw erro(e); }
+      },
       async mudarUsuario(uid, status){ if(!C.admin()) throw new Error('Apenas administradores.'); await F.updateDoc(F.doc(db, 'users', uid), { status }); },
 
       /* ---------- comentários ---------- */
