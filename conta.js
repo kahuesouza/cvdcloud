@@ -99,6 +99,14 @@ if(!CFG || !CFG.apiKey || CFG.apiKey === 'COLE_AQUI'){
       },
       async sair(){ await A.signOut(auth); },
       async recuperarSenha(email){ email = txt(email, 120).toLowerCase(); if(!dominioOk(email)) return; try{ await A.sendPasswordResetEmail(auth, email); }catch(e){} },
+      /* troca opcional de senha (pede a atual para confirmar) */
+      async alterarSenha(atual, nova){
+        if(nova.length < 8 || !/[a-zA-Z]/.test(nova) || !/[0-9]/.test(nova)) throw new Error('A nova senha precisa ter ao menos 8 caracteres, com letras e números.');
+        try{
+          await A.reauthenticateWithCredential(auth.currentUser, A.EmailAuthProvider.credential(auth.currentUser.email, atual));
+          await A.updatePassword(auth.currentUser, nova);
+        }catch(e){ throw erro(e); }
+      },
       async reenviarVerificacao(){ try{ await A.sendEmailVerification(auth.currentUser); }catch(e){ throw erro(e); } },
       async atualizar(){
         if(auth.currentUser){
@@ -154,23 +162,22 @@ if(!CFG || !CFG.apiKey || CFG.apiKey === 'COLE_AQUI'){
       },
       async listarUsuarios(status){ return (await C.todosUsuarios()).filter(u => u.status === status).sort(por); },
       /* Admin cria conta já verificada: senha aleatória (ninguém a conhece) + e-mail para a pessoa definir a própria senha. */
-      async criarContaFuncionario(nome, email){
+      async criarContaFuncionario(nome, email, senha){
         if(!C.admin()) throw new Error('Apenas administradores.');
         nome = txt(nome, 80); email = txt(email, 120).toLowerCase();
         if(!dominioOk(email)) throw new Error(NEG);
         if(nome.length < 2) throw new Error('Informe o nome da pessoa.');
+        if(senha.length < 8 || !/[a-zA-Z]/.test(senha) || !/[0-9]/.test(senha)) throw new Error('A senha inicial precisa ter ao menos 8 caracteres, com letras e números.');
         const sec = A.getAuth(secApp()); sec.languageCode = 'pt-BR';
         const marca = { nome, email, criadoPor: C.user.uid, criadoEm: F.serverTimestamp() };
         let existia = false, uid = null;
         try{
-          const b = crypto.getRandomValues(new Uint8Array(18)); const senha = 'Aa1' + Array.from(b, x => x.toString(16).padStart(2, '0')).join('');
           const cred = await A.createUserWithEmailAndPassword(sec, email, senha); uid = cred.user.uid;
         }catch(e){ if(e.code === 'auth/email-already-in-use') existia = true; else throw erro(e); }
         try{
           await F.setDoc(F.doc(db, 'verificados', email), marca);
           if(uid) await F.setDoc(F.doc(db, 'users', uid), { nome, email, role: 'vendedor', status: 'aprovado', criadoEm: F.serverTimestamp(), criadoPor: C.user.uid });
         }catch(e){ throw erro(e); }
-        try{ await A.sendPasswordResetEmail(sec, email); }catch(e){}
         try{ await A.signOut(sec); }catch(e){}
         return existia ? 'existia' : 'criada';
       },
