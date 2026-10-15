@@ -122,6 +122,16 @@ if(!CFG || !CFG.apiKey || CFG.apiKey === 'COLE_AQUI'){
         s.forEach(d => { try{ out[d.id] = JSON.parse(d.data().json); }catch(e){} });
         return Object.keys(out).length ? out : null;
       },
+      /* itens que o admin excluiu do app (ficam escondidos; os arquivos continuam no GitHub) */
+      async lerOcultos(){
+        try{ const s = await F.getDoc(F.doc(db, 'catalogo', 'ocultos')); return s.exists() ? JSON.parse(s.data().json) : { urls: [], titulos: {} }; }
+        catch(e){ return { urls: [], titulos: {} }; }
+      },
+      async salvarOcultos(o){
+        if(!C.admin()) throw new Error('Apenas administradores.');
+        try{ await F.setDoc(F.doc(db, 'catalogo', 'ocultos'), { json: JSON.stringify(o), atualizadoEm: F.serverTimestamp(), por: txt(C.perfil ? C.perfil.nome : C.user.email, 80) }); }
+        catch(e){ throw erro(e); }
+      },
       async publicarCatalogo(nome, json){
         if(!C.admin()) throw new Error('Apenas administradores.');
         await F.setDoc(F.doc(db, 'catalogo', nome), { json, atualizadoEm: F.serverTimestamp(), por: txt(C.perfil ? C.perfil.nome : C.user.email, 80) });

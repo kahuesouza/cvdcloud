@@ -389,8 +389,10 @@ const ytId = u => { const m = (u||'').match(/(?:youtu\.be\/|v=)([\w-]{11})/); re
 const fmtTam = mb => mb >= 1000 ? (mb/1000).toFixed(1).replace('.',',')+' GB' : (mb < 1 ? '<1 MB' : (mb < 10 ? String(mb).replace('.',',') : Math.round(mb)) + ' MB');
 const reduzido = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const favUrls = new Set(ls.get('favUrls', []));
+let OCULTOS = { urls: [], titulos: {} };
 function prepararDados(){
-  D = window.CVD; PONTAS = window.CVD_PONTAS || []; IMGP = window.CVD_PONTAS_IMG || {}; LUPAS = window.CVD_LUPAS;
+  D = window.CVD;
+  if(OCULTOS.urls.length){ const oc = new Set(OCULTOS.urls); D.materiais = D.materiais.filter(m => !oc.has(m.url)); D.procedimentos = D.procedimentos.filter(p => !oc.has(p.url)); } PONTAS = window.CVD_PONTAS || []; IMGP = window.CVD_PONTAS_IMG || {}; LUPAS = window.CVD_LUPAS;
   THUMBS = window.CVD_THUMBS || {}; FOT = (window.CVD_FOTOS || {}).equip || {};
   D.materiais.forEach((m,i)=> m.id = 'm'+i);
   D.procedimentos.forEach((p,i)=> p.id = 'p'+i);
@@ -441,6 +443,15 @@ function metaDe(x, {produto=false}={}){
   if(x.novo) s += ` · <span class="novo">Novo</span>`;
   if(x.aviso) s += `<br><span class="av">${esc(x.aviso)}</span>`;
   return s;
+}
+const adminAgora = () => { const C = CONTA(); return !!(C && C.configurado && C.admin && C.admin()); };
+async function ocultarItem(id){
+  const x = TODOS[id]; if(!x) return;
+  if(!confirm('Excluir "' + x.titulo + '" do app? Ele some para todos. O arquivo continua no GitHub e você pode restaurar em Admin → Catálogo.')) return;
+  const C = CONTA(); const o = { urls: [...OCULTOS.urls], titulos: { ...(OCULTOS.titulos || {}) } };
+  if(!o.urls.includes(x.url)) o.urls.push(x.url); o.titulos[x.url] = x.titulo;
+  try{ await C.salvarOcultos(o); }catch(e){ toast('Erro: ' + e.message); return; }
+  OCULTOS = o; fecharPainel(); prepararDados(); render(); toast('Item excluído do app');
 }
 const isVideo = x => /\.mp4(\?|$)/i.test((x && x.url) || '');
 function linha(x, opt={}){
@@ -760,7 +771,8 @@ function painelVideo(x){
     <h3 style="margin-top:14px">${esc(x.titulo)}</h3><p class="sub">${sub}</p>
     <div class="botoes">${dl ? `<a class="btn prim" href="${esc(dl)}" download data-dl="${x.id}" data-mb="${tam||0}">${ic('download')}Baixar vídeo${tam ? ` <small>${fmtTam(tam)}</small>` : ''}</a>` : ''}
       <button class="btn prim" data-compartilhar="${x.id}">${ic('share')}Copiar link</button>
-      <button class="btn sec" data-fav="${x.id}">${ic('estrela')}${fav ? 'Remover dos salvos' : 'Salvar'}</button></div>`);
+      <button class="btn sec" data-fav="${x.id}">${ic('estrela')}${fav ? 'Remover dos salvos' : 'Salvar'}</button>
+      ${adminAgora() ? `<button class="btn sec" data-ocultar="${x.id}" style="color:var(--erro)">${ic('x')}Excluir do app</button>` : ''}</div>`);
   const v = painel.querySelector('video'); if(v) v.play().catch(() => {});
 }
 function telaGaleria(id){
@@ -793,6 +805,7 @@ function painelItem(id){
       ${x.galeria ? '' : `<button class="btn prim" data-compartilhar="${id}">${ic('share')}Copiar link</button>`}
       <button class="btn sec" data-fav="${id}">${ic('estrela')}${fav?'Remover dos salvos':'Salvar'}</button>
       <button class="btn sec" data-comentar="${id}">${ic('mega')}Comentar ou sugerir</button>
+      ${adminAgora() ? `<button class="btn sec" data-ocultar="${id}" style="color:var(--erro)">${ic('x')}Excluir do app</button>` : ''}
     </div><div class="dicas-item" id="dicas-item"></div>`);
   atualizarDicasDoItem(x);
 }
@@ -1007,7 +1020,8 @@ async function carregarAdmin(aba){
       const orig = window.__origemCatalogo === 'servidor' ? 'do servidor protegido (Firestore)' : window.__origemCatalogo === 'arquivos' ? 'dos arquivos do app (modo de preparação)' : 'de nenhuma fonte';
       el.innerHTML = `<div class="nota anima" style="--i:0">${ic('info')}<div><b>Fonte atual do catálogo</b>O app está lendo ${orig}. ${D ? D.materiais.length + ' materiais, ' + D.procedimentos.length + ' procedimentos.' : ''}</div></div>
         <div class="cartao-c"><b style="font-size:14.5px">Publicar catálogo</b><p style="color:var(--sub);font-size:13.5px">Escolha o arquivo <b>catalogo-export.json</b> (gerado a partir dos arquivos do app). Ele é gravado no servidor protegido e só aparece para quem tem login.</p>
-        <label class="btn prim" style="margin-top:10px;cursor:pointer">${ic('download')}Escolher arquivo<input type="file" accept="application/json,.json" data-importar hidden></label><p class="erro-f" id="imp-msg" role="status" style="color:var(--sub)"></p></div>`;
+        <label class="btn prim" style="margin-top:10px;cursor:pointer">${ic('download')}Escolher arquivo<input type="file" accept="application/json,.json" data-importar hidden></label><p class="erro-f" id="imp-msg" role="status" style="color:var(--sub)"></p></div>`
+        + `<div class="cartao-c"><b style="font-size:14.5px">Itens excluídos do app (${OCULTOS.urls.length})</b><p style="color:var(--sub);font-size:13.5px;margin:6px 0 0">Para excluir um item, abra-o e toque em <b>Excluir do app</b>. Aqui você restaura.</p>${OCULTOS.urls.map(u => `<div style="display:flex;align-items:center;gap:8px;padding:8px 0;border-top:1px solid var(--linha);margin-top:8px"><span style="flex:1;font-size:14px">${esc((OCULTOS.titulos || {})[u] || u)}</span><span class="acoes-c" style="margin:0"><button class="ok" data-restaurar="${esc(u)}">Restaurar</button></span></div>`).join('')}</div>`;
     }
   }catch(e){ el.innerHTML = vazio('Não foi possível carregar: ' + esc(e.message || 'erro')); }
 }
@@ -1032,7 +1046,7 @@ function atualizarDicasDoItem(x){
 /* ===================== Acesso obrigatório (login) e carregamento do catálogo ===================== */
 const gateEl = document.getElementById('gate');
 let appIniciado = false, carregandoCatalogo = false, modoGate = 'entrar';
-const VERSAO_APP = 'v20';
+const VERSAO_APP = 'v43';
 function gateHtml(corpo){ return `<div class="gate-in"><img class="logo-g" src="img/logo.svg" alt="CVDentus">${corpo}</div>`; }
 function gateMostrar(html){ document.body.classList.add('gate-on'); gateEl.innerHTML = gateHtml(html); }
 function gateFechar(){ document.body.classList.remove('gate-on'); gateEl.innerHTML = ''; }
@@ -1076,6 +1090,7 @@ async function carregarEIniciar(){
     // usa sempre a cópia mais nova: a do servidor (Firestore) ou os arquivos publicados com o app
     await carregarEstatico(); window.__origemCatalogo = 'arquivos';
     if(cat && cat.dados && (cat.dados.rev || 0) >= ((window.CVD && window.CVD.rev) || 0)){ aplicarCatalogo(cat); window.__origemCatalogo = 'servidor'; }
+    try{ OCULTOS = (cat && cat.ocultos && cat.ocultos.urls) ? cat.ocultos : await C.lerOcultos(); if(!OCULTOS.titulos) OCULTOS.titulos = {}; }catch(e){}
     prepararDados(); appIniciado = true; carregandoCatalogo = false; gateFechar(); render();
   }catch(e){
     carregandoCatalogo = false;
@@ -1245,6 +1260,8 @@ document.addEventListener('click', e=>{
   const fl = t.closest('[data-filtro]'); if(fl){ const [aba, st] = fl.dataset.filtro.split(':'); filtroAdmin[aba] = st; render(); return; }
   const md = t.closest('[data-mod]'); if(md){ const [id, st] = md.dataset.mod.split(':'); const nota = st === 'rejeitado' ? (prompt('Motivo (opcional):') || '') : ''; CONTA().moderarComentario(id, st, nota).then(() => { toast('Atualizado'); carregarAdmin('comentarios'); }).catch(e => toast('Erro: ' + e.message)); return; }
   const ex = t.closest('[data-excluir]'); if(ex){ if(confirm('Excluir este comentário de vez?')) CONTA().excluirComentario(ex.dataset.excluir).then(() => { toast('Excluído'); carregarAdmin('comentarios'); }).catch(e => toast('Erro: ' + e.message)); return; }
+  const oc = t.closest('[data-ocultar]'); if(oc){ ocultarItem(oc.dataset.ocultar); return; }
+  const rs = t.closest('[data-restaurar]'); if(rs){ const u = rs.dataset.restaurar; const o = { urls: OCULTOS.urls.filter(x => x !== u), titulos: { ...(OCULTOS.titulos || {}) } }; delete o.titulos[u]; CONTA().salvarOcultos(o).then(() => { toast('Item restaurado'); setTimeout(() => location.reload(), 600); }).catch(e => toast('Erro: ' + e.message)); return; }
   const rv = t.closest('[data-revisar]'); if(rv){ CONTA().marcarRevisado(rv.dataset.revisar).then(() => { toast('Conta confirmada'); carregarAdmin('usuarios'); }).catch(e => toast('Erro: ' + e.message)); return; }
   const val = t.closest('[data-validar]'); if(val){ CONTA().validarEmail(val.dataset.validar, val.dataset.nome).then(() => { toast('E-mail validado'); carregarAdmin('usuarios'); }).catch(e => toast('Erro: ' + e.message)); return; }
   const exc = t.closest('[data-excluir-conta]'); if(exc){ if(!confirm('Excluir a conta de ' + exc.dataset.nome + ' (' + exc.dataset.email + ')? A pessoa perde o acesso na hora. Para liberar de novo, crie a conta outra vez.')) return; CONTA().excluirUsuario(exc.dataset.excluirConta, exc.dataset.email).then(() => { toast('Conta excluída'); carregarAdmin('usuarios'); }).catch(e => toast('Erro: ' + e.message)); return; }
