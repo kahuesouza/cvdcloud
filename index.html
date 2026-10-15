@@ -1174,12 +1174,15 @@ async function enviarLink(titulo, link){
 async function compartilhar(x){
   const nome = x.esp ? `${x.titulo}${x.prof?' · '+x.prof:''}` : x.titulo;
   const C = CONTA();
-  if(C && C.configurado && C.aprovado()){
+  track('compartilhar', chaveItem(x), x.titulo, '');
+  // link direto para o material (abre o PDF, imagem, vídeo do YouTube ou página do item, sem passar pelo app)
+  if(!isVideo(x) || !(C && C.configurado && C.aprovado())){ await enviarLink(nome, x.url); return; }
+  // vídeo hospedado no GitHub: o link bruto baixaria o arquivo; esta página só toca o vídeo (sem acesso ao resto do app)
+  if(true){
     // link seguro: o cliente só vê ESTE material, sem acesso ao resto do app
     try{
       const dl = linkDownload(x), t = THUMBS[x.url], tam = tamDownload(x);
       const id = await C.criarCompartilhamento({ titulo: nome, url: x.url, baixarUrl: dl || undefined, thumb: t ? 'img/t/' + t[0] : undefined, tipo: x.esp ? 'Vídeo de procedimento' : (TIPOS[x.tipo] || {}).nome, mb: typeof tam === 'number' ? tam : undefined });
-      track('compartilhar', chaveItem(x), x.titulo, '');
       await enviarLink(nome, new URL('v.html', location.href.split('#')[0]).href + '#' + id);
     }catch(e){ toast('Não foi possível gerar o link agora'); }
     return;
