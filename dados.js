@@ -1047,7 +1047,11 @@ window.CVD = {
    "mb": 213,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-03-flapless-dr-diego-bazan.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-03-flapless-dr-diego-bazan.mp4",
-   "topico": "flapless"
+   "topico": "flapless",
+   "esps": [
+    "cirurgia",
+    "periodontia"
+   ]
   },
   {
    "titulo": "Descolamento",
@@ -1060,6 +1064,10 @@ window.CVD = {
    "topico": "descolamento",
    "pontas": [
     "SL1-0"
+   ],
+   "esps": [
+    "cirurgia",
+    "periodontia"
    ]
   },
   {
@@ -1069,7 +1077,11 @@ window.CVD = {
    "mb": 74,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-05-descolamento-de-torus-prof-diego-bazan.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-05-descolamento-de-torus-prof-diego-bazan.mp4",
-   "topico": "osteotomia-torus"
+   "topico": "osteotomia-torus",
+   "esps": [
+    "cirurgia",
+    "periodontia"
+   ]
   },
   {
    "titulo": "Osteotomia de Torus",
@@ -1078,7 +1090,11 @@ window.CVD = {
    "mb": 74,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-06-osteotomia-de-torus-prof-diego-bazan.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-06-osteotomia-de-torus-prof-diego-bazan.mp4",
-   "topico": "osteotomia-torus"
+   "topico": "osteotomia-torus",
+   "esps": [
+    "cirurgia",
+    "periodontia"
+   ]
   },
   {
    "titulo": "Osteotomia",
@@ -1086,7 +1102,11 @@ window.CVD = {
    "mb": 5,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-07-osteotomia.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-07-osteotomia.mp4",
-   "topico": "osteotomia-torus"
+   "topico": "osteotomia-torus",
+   "esps": [
+    "cirurgia",
+    "periodontia"
+   ]
   },
   {
    "titulo": "Descolamento",
@@ -1094,7 +1114,11 @@ window.CVD = {
    "mb": 6.2,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-08-descolamento.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-08-descolamento.mp4",
-   "topico": "descolamento"
+   "topico": "descolamento",
+   "esps": [
+    "cirurgia",
+    "periodontia"
+   ]
   },
   {
    "titulo": "Cirurgia do Mento",
@@ -1120,7 +1144,11 @@ window.CVD = {
    "mb": 93,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-11-aumento-de-coroa-e-regularizacao-radicular-prof-diego-bazan.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-11-aumento-de-coroa-e-regularizacao-radicular-prof-diego-bazan.mp4",
-   "topico": "flapless"
+   "topico": "flapless",
+   "esps": [
+    "cirurgia",
+    "periodontia"
+   ]
   },
   {
    "titulo": "Raspagem e Alisamento Radicular",
@@ -1137,7 +1165,11 @@ window.CVD = {
    "mb": 195,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-13-gengivoplastia-com-osteotomia.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-13-gengivoplastia-com-osteotomia.mp4",
-   "topico": "gengivoplastia-peeling"
+   "topico": "gengivoplastia-peeling",
+   "esps": [
+    "cirurgia",
+    "periodontia"
+   ]
   },
   {
    "titulo": "Peeling Gengival",
@@ -1145,7 +1177,11 @@ window.CVD = {
    "mb": 190,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-14-peeling-gengival.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-14-peeling-gengival.mp4",
-   "topico": "gengivoplastia-peeling"
+   "topico": "gengivoplastia-peeling",
+   "esps": [
+    "cirurgia",
+    "periodontia"
+   ]
   },
   {
    "titulo": "Cirurgia de Retropreparo",
@@ -1456,7 +1492,11 @@ window.CVD = {
    "esp": "cirurgia",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=wi9IzQrBXxo",
-   "topico": "flapless"
+   "topico": "flapless",
+   "esps": [
+    "cirurgia",
+    "periodontia"
+   ]
   },
   {
    "titulo": "Aumento de Coroa Clínica · Flap",
@@ -1464,7 +1504,11 @@ window.CVD = {
    "prof": "Dra. Thayane Furtado",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=fbNMSDdVj3o",
-   "topico": "flapless"
+   "topico": "flapless",
+   "esps": [
+    "cirurgia",
+    "periodontia"
+   ]
   },
   {
    "titulo": "Cirurgia Flapless",
@@ -1472,7 +1516,11 @@ window.CVD = {
    "prof": "Dr. Paulo Kano",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=UAydlOoTFLA",
-   "topico": "flapless"
+   "topico": "flapless",
+   "esps": [
+    "cirurgia",
+    "periodontia"
+   ]
   },
   {
    "titulo": "Cirurgia Flapless",
@@ -1480,7 +1528,11 @@ window.CVD = {
    "prof": "Dr. Alexandre Teixeira Neto",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=YXHPTtstu6g",
-   "topico": "flapless"
+   "topico": "flapless",
+   "esps": [
+    "cirurgia",
+    "periodontia"
+   ]
   },
   {
    "titulo": "Cirurgia Flapless",
@@ -1488,14 +1540,22 @@ window.CVD = {
    "prof": "Dr. Boanerges Araújo",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=iwImNKu3nqM",
-   "topico": "flapless"
+   "topico": "flapless",
+   "esps": [
+    "cirurgia",
+    "periodontia"
+   ]
   },
   {
    "titulo": "Como a CVDentus auxilia na osteotomia?",
    "esp": "cirurgia",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=yTyNztoidJg",
-   "topico": "osteotomia-torus"
+   "topico": "osteotomia-torus",
+   "esps": [
+    "cirurgia",
+    "periodontia"
+   ]
   },
   {
    "titulo": "Descolamento de Retalho com o Piezo DentSurg Pro",
@@ -1503,7 +1563,11 @@ window.CVD = {
    "prof": "Dr. Diego Bazan",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=RyiRHUvYIC0",
-   "topico": "descolamento"
+   "topico": "descolamento",
+   "esps": [
+    "cirurgia",
+    "periodontia"
+   ]
   },
   {
    "titulo": "Entrevista · Pontas na Cirurgia Estética",
@@ -1527,7 +1591,11 @@ window.CVD = {
    "prof": "Florin Cofar",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=F4d6g_AsSc0",
-   "topico": "flapless"
+   "topico": "flapless",
+   "esps": [
+    "cirurgia",
+    "periodontia"
+   ]
   },
   {
    "titulo": "Gengivoplastia Flapless realizada com o Piezo DentSurg Pro",
@@ -1535,7 +1603,11 @@ window.CVD = {
    "prof": "Dr. Diego Bazan",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=svU3vsmquz4",
-   "topico": "flapless"
+   "topico": "flapless",
+   "esps": [
+    "cirurgia",
+    "periodontia"
+   ]
   },
   {
    "titulo": "Instalação de implantes para protocolo inferior",
@@ -1563,7 +1635,11 @@ window.CVD = {
    "prof": "Heitor Consenza",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=2GXanb3J4u8",
-   "topico": "osteotomia-torus"
+   "topico": "osteotomia-torus",
+   "esps": [
+    "cirurgia",
+    "periodontia"
+   ]
   },
   {
    "titulo": "Ponta SR9 · Levantamento de seio via crista alveolar",
@@ -1594,7 +1670,11 @@ window.CVD = {
    "pontas": [
     "SFR4"
    ],
-   "ponta": "SFR4"
+   "ponta": "SFR4",
+   "esps": [
+    "cirurgia",
+    "periodontia"
+   ]
   },
   {
    "titulo": "Remoção de Tórus · Ponta SFR4",
@@ -1605,6 +1685,10 @@ window.CVD = {
    "topico": "osteotomia-torus",
    "pontas": [
     "SFR4"
+   ],
+   "esps": [
+    "cirurgia",
+    "periodontia"
    ]
   },
   {
@@ -1641,7 +1725,11 @@ window.CVD = {
    "esp": "cirurgia",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=T7yo7_mWkoI",
-   "topico": "flapless"
+   "topico": "flapless",
+   "esps": [
+    "cirurgia",
+    "periodontia"
+   ]
   },
   {
    "titulo": "Técnica Flapless",
@@ -1649,7 +1737,11 @@ window.CVD = {
    "prof": "Prof. Eduardo Santini de Almeida",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=WM02wTTFUEs",
-   "topico": "flapless"
+   "topico": "flapless",
+   "esps": [
+    "cirurgia",
+    "periodontia"
+   ]
   },
   {
    "titulo": "Acabamento em Facetas",
@@ -2045,7 +2137,11 @@ window.CVD = {
    "prof": "Prof. Paulo Kano",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=1bL--HkhMU8",
-   "topico": "flapless"
+   "topico": "flapless",
+   "esps": [
+    "cirurgia",
+    "periodontia"
+   ]
   },
   {
    "titulo": "Limpeza de implantes com DentSurg Pro e ponta T1T-P",
@@ -2088,7 +2184,11 @@ window.CVD = {
    "prof": "Dra. Débora Ayala",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=1xdHV_EWobk",
-   "topico": "gengivoplastia-peeling"
+   "topico": "gengivoplastia-peeling",
+   "esps": [
+    "cirurgia",
+    "periodontia"
+   ]
   },
   {
    "titulo": "Raspagem",
@@ -2132,7 +2232,11 @@ window.CVD = {
    "prof": "Dr. Rodrigo Bucker do Instituto Bucker",
    "formato": "YouTube",
    "url": "https://www.youtube.com/watch?v=bbhINtRRQeM",
-   "topico": "gengivoplastia-peeling"
+   "topico": "gengivoplastia-peeling",
+   "esps": [
+    "cirurgia",
+    "periodontia"
+   ]
   }
  ],
  "galerias": {

@@ -576,11 +576,12 @@ function procPorTopico(lista_){
   return ids.map(id=>{ const g = lista_.filter(p=>(p.topico||'outros')===id); return secao(esc(nomes[id]||'Outros'), g.length) + lista(g); }).join('');
 }
 function telaProcedimentos(espSel){
-  const itensAba = [{id:'todos',nome:'Todos',n:D.procedimentos.length}, ...D.especialidades.map(e=>({id:e.id,nome:e.curto,n:D.procedimentos.filter(p=>p.esp===e.id).length}))];
+  const naEsp = id => D.procedimentos.filter(p=>p.esp===id || (p.esps||[]).includes(id));
+  const itensAba = [{id:'todos',nome:'Todos',n:D.procedimentos.length}, ...D.especialidades.map(e=>({id:e.id,nome:e.curto,n:naEsp(e.id).length}))];
   const ativo = ESP[espSel] ? espSel : 'todos';
   let corpo = '';
-  if(ativo==='todos') D.especialidades.forEach(e=>{ const g = D.procedimentos.filter(p=>p.esp===e.id); corpo += `<div class="esp-bloco"><h2 class="esp-titulo">${esc(e.nome)}</h2>${procPorTopico(g)}</div>`; });
-  else corpo = procPorTopico(D.procedimentos.filter(p=>p.esp===ativo));
+  if(ativo==='todos') D.especialidades.forEach(e=>{ const g = naEsp(e.id); corpo += `<div class="esp-bloco"><h2 class="esp-titulo">${esc(e.nome)}</h2>${procPorTopico(g)}</div>`; });
+  else corpo = procPorTopico(naEsp(ativo));
   return { titulo:'Procedimentos', corpo: largo('Procedimentos','Escolha a especialidade; dentro dela os vídeos ficam separados por tópico (ex.: Flapless). Os do canal no YouTube abrem no YouTube; os demais tocam aqui mesmo.') + abas(itensAba, ativo, '#/procedimentos') + corpo };
 }
 
