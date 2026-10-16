@@ -1,7 +1,7 @@
 /* Fotos de marketing dos equipamentos. Download no release "equipamentos"; prévia no Pages de cvdentus-arquivos. */
 window.CVD_FOTOS = {
  "dl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/equipamentos/",
- "prev": "https://kahuesouza.github.io/cvdentus-arquivos/eq/",
+ "prev": "https://cloud.cvdentus.com.br/arquivos/eq/",
  "equip": {
   "optymus": {
    "zip": {

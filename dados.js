@@ -91,7 +91,7 @@ window.CVD = {
    "produto": "geral",
    "idioma": "pt",
    "ano": 2023,
-   "url": "https://kahuesouza.github.io/cvdentus-arquivos/livros/catalogo-equipamentos-cvdentus.pdf",
+   "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-equipamentos-cvdentus.pdf",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-equipamentos-cvdentus.pdf",
    "mb": 1.9
   },
@@ -101,7 +101,7 @@ window.CVD = {
    "produto": "geral",
    "idioma": "en",
    "ano": 2023,
-   "url": "https://kahuesouza.github.io/cvdentus-arquivos/livros/equipment-catalog-cvdentus-en.pdf",
+   "url": "https://cloud.cvdentus.com.br/arquivos/livros/equipment-catalog-cvdentus-en.pdf",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/equipment-catalog-cvdentus-en.pdf",
    "mb": 1.8
   },
@@ -111,7 +111,7 @@ window.CVD = {
    "produto": "geral",
    "idioma": "es",
    "ano": 2020,
-   "url": "https://kahuesouza.github.io/cvdentus-arquivos/livros/catalogo-equipos-cvdentus-es.pdf",
+   "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-equipos-cvdentus-es.pdf",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-equipos-cvdentus-es.pdf",
    "mb": 1.8,
    "aviso": "Versão 2020"
@@ -121,7 +121,7 @@ window.CVD = {
    "tipo": "catalogo",
    "produto": "geral",
    "idioma": "pt",
-   "url": "https://kahuesouza.github.io/cvdentus-arquivos/livros/catalogo-representantes.pdf",
+   "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-representantes.pdf",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-representantes.pdf",
    "mb": 9.1,
    "aviso": "Versão 2021 — revisar"
@@ -132,7 +132,7 @@ window.CVD = {
    "produto": "geral",
    "idioma": "pt",
    "mb": 0.8,
-   "url": "https://kahuesouza.github.io/cvdentus-arquivos/arte/mat-tabela-comparativa-dos-piezos.jpg",
+   "url": "https://cloud.cvdentus.com.br/arquivos/arte/mat-tabela-comparativa-dos-piezos.jpg",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/mat-tabela-comparativa-dos-piezos.jpg"
   },
   {
@@ -141,7 +141,7 @@ window.CVD = {
    "produto": "geral",
    "idioma": "pt",
    "mb": 0.9,
-   "url": "https://kahuesouza.github.io/cvdentus-arquivos/arte/mat-3-verdades-sobre-o-piezoeletrico.pdf",
+   "url": "https://cloud.cvdentus.com.br/arquivos/arte/mat-3-verdades-sobre-o-piezoeletrico.pdf",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/mat-3-verdades-sobre-o-piezoeletrico.pdf"
   },
   {
@@ -149,7 +149,7 @@ window.CVD = {
    "tipo": "catalogo",
    "produto": "brocas",
    "idioma": "pt",
-   "url": "https://kahuesouza.github.io/cvdentus-arquivos/livros/catalogo-brocas-cvdentus.pdf",
+   "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-brocas-cvdentus.pdf",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-brocas-cvdentus.pdf",
    "mb": 1.9
   },
@@ -160,7 +160,7 @@ window.CVD = {
    "idioma": "pt",
    "ano": 2026,
    "novo": true,
-   "url": "https://kahuesouza.github.io/cvdentus-arquivos/livros/catalogo-pontas-clinical-plus-dentsurg-pro-2026.pdf",
+   "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-pontas-clinical-plus-dentsurg-pro-2026.pdf",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-pontas-clinical-plus-dentsurg-pro-2026.pdf",
    "mb": 12.1
   },
@@ -170,7 +170,7 @@ window.CVD = {
    "produto": "pontas",
    "idioma": "pt",
    "ano": 2025,
-   "url": "https://kahuesouza.github.io/cvdentus-arquivos/livros/catalogo-pontas-optymus-2025.pdf",
+   "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-pontas-optymus-2025.pdf",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-pontas-optymus-2025.pdf",
    "mb": 4.4
   },
@@ -180,7 +180,7 @@ window.CVD = {
    "produto": "pontas",
    "idioma": "en",
    "ano": 2023,
-   "url": "https://kahuesouza.github.io/cvdentus-arquivos/livros/tips-catalog-clinical-plus-dentsurg-pro-en.pdf",
+   "url": "https://cloud.cvdentus.com.br/arquivos/livros/tips-catalog-clinical-plus-dentsurg-pro-en.pdf",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/tips-catalog-clinical-plus-dentsurg-pro-en.pdf",
    "mb": 8.7
   },
@@ -190,7 +190,7 @@ window.CVD = {
    "produto": "pontas",
    "idioma": "es",
    "ano": 2021,
-   "url": "https://kahuesouza.github.io/cvdentus-arquivos/livros/catalogo-puntas-es.pdf",
+   "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-puntas-es.pdf",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-puntas-es.pdf",
    "mb": 4.7,
    "aviso": "Versão 2021"
@@ -307,7 +307,7 @@ window.CVD = {
    "tipo": "manual",
    "produto": "optymus",
    "idioma": "pt",
-   "url": "https://kahuesouza.github.io/cvdentus-arquivos/livros/manual-optymus.pdf",
+   "url": "https://cloud.cvdentus.com.br/arquivos/livros/manual-optymus.pdf",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/manual-optymus.pdf",
    "mb": 13.5
   },
@@ -379,7 +379,7 @@ window.CVD = {
    "tipo": "manual",
    "produto": "clinical-plus",
    "idioma": "pt",
-   "url": "https://kahuesouza.github.io/cvdentus-arquivos/livros/manual-clinical-plus.pdf",
+   "url": "https://cloud.cvdentus.com.br/arquivos/livros/manual-clinical-plus.pdf",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/manual-clinical-plus.pdf",
    "mb": 16.3
   },
@@ -388,7 +388,7 @@ window.CVD = {
    "tipo": "manual",
    "produto": "clinical-plus",
    "idioma": "en",
-   "url": "https://kahuesouza.github.io/cvdentus-arquivos/livros/clinical-plus-manual-en.pdf",
+   "url": "https://cloud.cvdentus.com.br/arquivos/livros/clinical-plus-manual-en.pdf",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/clinical-plus-manual-en.pdf",
    "mb": 13.9
   },
@@ -460,7 +460,7 @@ window.CVD = {
    "tipo": "manual",
    "produto": "dentsurg-pro",
    "idioma": "pt",
-   "url": "https://kahuesouza.github.io/cvdentus-arquivos/livros/manual-dentsurg-pro.pdf",
+   "url": "https://cloud.cvdentus.com.br/arquivos/livros/manual-dentsurg-pro.pdf",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/manual-dentsurg-pro.pdf",
    "mb": 15.3
   },
@@ -469,7 +469,7 @@ window.CVD = {
    "tipo": "manual",
    "produto": "dentsurg-pro",
    "idioma": "en",
-   "url": "https://kahuesouza.github.io/cvdentus-arquivos/livros/dentsurg-pro-manual-en.pdf",
+   "url": "https://cloud.cvdentus.com.br/arquivos/livros/dentsurg-pro-manual-en.pdf",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/dentsurg-pro-manual-en.pdf",
    "mb": 14.2
   },
@@ -478,7 +478,7 @@ window.CVD = {
    "tipo": "manual",
    "produto": "dentsurg-pro",
    "idioma": "es",
-   "url": "https://kahuesouza.github.io/cvdentus-arquivos/livros/manual-dentsurg-pro-es.pdf",
+   "url": "https://cloud.cvdentus.com.br/arquivos/livros/manual-dentsurg-pro-es.pdf",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/manual-dentsurg-pro-es.pdf",
    "mb": 13.5
   },
@@ -488,7 +488,7 @@ window.CVD = {
    "produto": "dentsurg-pro",
    "idioma": "en",
    "mb": 2.1,
-   "url": "https://kahuesouza.github.io/cvdentus-arquivos/catalogos/catalogo-dentsurg-pro-en.pdf",
+   "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-dentsurg-pro-en.pdf",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/english_CATALOG_DS_PRO_OK.pdf"
   },
   {
@@ -497,7 +497,7 @@ window.CVD = {
    "produto": "dentsurg-pro",
    "idioma": "es",
    "mb": 2.7,
-   "url": "https://kahuesouza.github.io/cvdentus-arquivos/catalogos/catalogo-dentsurg-pro-es.pdf",
+   "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-dentsurg-pro-es.pdf",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/SPANISH_CATALOG_DS_PRO_OK.pdf"
   },
   {
@@ -506,7 +506,7 @@ window.CVD = {
    "produto": "dentsurg-pro",
    "idioma": "pt",
    "ano": 2024,
-   "url": "https://kahuesouza.github.io/cvdentus-arquivos/livros/folder-dentsurg-pro-cirurgico-2024.pdf",
+   "url": "https://cloud.cvdentus.com.br/arquivos/livros/folder-dentsurg-pro-cirurgico-2024.pdf",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/folder-dentsurg-pro-cirurgico-2024.pdf",
    "mb": 1.4
   },
@@ -552,7 +552,7 @@ window.CVD = {
    "ano": 2026,
    "novo": true,
    "mb": 5.2,
-   "url": "https://kahuesouza.github.io/cvdentus-arquivos/catalogos/catalogo-acessorios-cvdentus-2026.pdf",
+   "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-acessorios-cvdentus-2026.pdf",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/CATALOGO_ACESSORIOS_CVDENTUS_2026_DIGITAL.pdf"
   },
   {
@@ -631,7 +631,7 @@ window.CVD = {
    "ano": 2026,
    "novo": true,
    "mb": 14.7,
-   "url": "https://kahuesouza.github.io/cvdentus-arquivos/catalogos/catalogo-lupas-cvdentus-2026.pdf",
+   "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-lupas-cvdentus-2026.pdf",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/CATALOGO_LUPAS_CVDENTUS_2026_DIGITAL.pdf"
   },
   {
@@ -642,7 +642,7 @@ window.CVD = {
    "ano": 2026,
    "novo": true,
    "mb": 28.3,
-   "url": "https://kahuesouza.github.io/cvdentus-arquivos/catalogos/catalogo-lupas-fechado.pdf",
+   "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-lupas-fechado.pdf",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/CATALOGO_CVLUPAS_fechado.pdf"
   }
  ],
@@ -2251,7 +2251,7 @@ window.CVD = {
  ],
  "galerias": {
   "dl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/",
-  "prev": "https://kahuesouza.github.io/cvdentus-arquivos/arte/",
+  "prev": "https://cloud.cvdentus.com.br/arquivos/arte/",
   "lista": {
    "members": {
     "titulo": "CVDentus Members · artes",
@@ -2929,5 +2929,5 @@ window.CVD = {
    "nome": "Demonstrações e casos clínicos"
   }
  ],
- "rev": 1792154885265
+ "rev": 1792159840106
 };
