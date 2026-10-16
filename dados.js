@@ -695,19 +695,6 @@ window.CVD = {
      ]
     },
     {
-     "nome": "Perfil Google",
-     "nota": "Quadrado 1080 px",
-     "img": "cvdentus-google",
-     "fundo": "neutro",
-     "arquivos": [
-      [
-       "PNG",
-       "cvdentus-google.png",
-       0.03
-      ]
-     ]
-    },
-    {
      "nome": "Alta resolução",
      "nota": "Web e impressão grande · 21020 px",
      "img": "cvdentus-padrao",
@@ -758,32 +745,6 @@ window.CVD = {
      ]
     },
     {
-     "nome": "ISO 9001 + 13485",
-     "nota": "Selo conjunto em PDF",
-     "doc": true,
-     "fundo": "neutro",
-     "arquivos": [
-      [
-       "PDF",
-       "iso-9001-e-13485.pdf",
-       0.3
-      ]
-     ]
-    },
-    {
-     "nome": "Padronização ISO",
-     "nota": "Documento de padronização",
-     "doc": true,
-     "fundo": "neutro",
-     "arquivos": [
-      [
-       "PDF",
-       "padronizacao-iso.pdf",
-       0.26
-      ]
-     ]
-    },
-    {
      "nome": "+25 anos",
      "nota": "Selo comemorativo",
      "img": "25-anos",
@@ -803,19 +764,6 @@ window.CVD = {
        "Editável .ai",
        "25-anos-identidade-editavel.ai",
        1.95
-      ]
-     ]
-    },
-    {
-     "nome": "+25 anos · padrão",
-     "nota": "Arquivo editável",
-     "doc": true,
-     "fundo": "neutro",
-     "arquivos": [
-      [
-       "Editável .ai",
-       "25-anos-padrao.ai",
-       3
       ]
      ]
     }
@@ -2981,5 +2929,5 @@ window.CVD = {
    "nome": "Demonstrações e casos clínicos"
   }
  ],
- "rev": 1792077088509
+ "rev": 1792154885265
 };

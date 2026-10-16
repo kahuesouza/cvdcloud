@@ -522,22 +522,32 @@ function telaInicio(){
   ].join('');
   const outros = D.produtos.filter(p=>!p.img && p.id!=='lupas');
   const novos = D.materiais.filter(m=>m.novo && doPt(m));
+  const nPontasEq = e => e.modos.reduce((a,m)=>a+m.pontas.length,0);
+  const totalPontas = PONTAS.reduce((a,e)=>a+nPontasEq(e),0);
+  const naEsp = id => D.procedimentos.filter(x=>x.esp===id || (x.esps||[]).includes(id)).length;
+  const areaPontas = `<section class="area anima" style="--i:2">
+      <div class="area-topo"><div><h2>Pontas</h2><p>${totalPontas} pontas por equipamento e modo de uso, com bula e vídeos de uso.</p></div><a class="area-ver" href="#/pontas">Ver todas${ic('seta')}</a></div>
+      <div class="area-grade">${PONTAS.map(e=>`<a class="area-card" href="#/pontas/${e.id}"><span class="img"><img src="${e.img}" alt=""></span><b>${esc(e.nome)}</b><small>${nPontasEq(e)} pontas</small></a>`).join('')}</div>
+    </section>`;
+  const areaProc = `<section class="area anima" style="--i:3">
+      <div class="area-topo"><div><h2>Procedimentos</h2><p>${nProc} vídeos clínicos, separados por especialidade e tópico.</p></div><a class="area-ver" href="#/procedimentos">Ver todos${ic('seta')}</a></div>
+      <div class="area-esp">${D.especialidades.map(e=>`<a href="#/procedimentos/${e.id}"><b>${esc(e.curto)}</b><small>${naEsp(e.id)}</small></a>`).join('')}</div>
+    </section>`;
+  const tilesRapidos = [
+    tile('#/tipo/catalogo','livro','Catálogos',`${cont('catalogo')} itens`),
+    tile('#/tipo/manual','doc','Manuais',`${cont('manual')} itens`),
+    tile('#/tipo/instalacao','chave','Instalação',`${cont('instalacao')} vídeos`),
+    tile('#/tipo/uso','play','Modo de uso',`${cont('uso')} vídeos`),
+    tile('#/tipo/video3d','cubo','Vídeos 3D',`${cont('video3d')} vídeos`),
+  ].join('');
   return { titulo:'Materiais', inicio:true, corpo: `
     ${bannerInstalar()}
-    <section class="hero anima">
-      <img class="hero-logo" src="img/logo.svg" alt="cvdcloud">
-      <h1>Tudo para <em>vender mais</em>,<br>a um toque.</h1>
-      <p>Catálogos, vídeos de procedimentos, pontas e materiais de marketing da CVDentus em um só lugar.</p>
-      <div class="hero-chips"><span><b>${D.materiais.length}</b> materiais</span><span><b>${nProc}</b> vídeos</span><span><b>${PONTAS.reduce((a,e)=>a+e.modos.reduce((b,m)=>b+m.pontas.length,0),0)}</b> pontas</span></div>
-    </section>
-    <button class="busca-fake anima" style="--i:1" data-busca>${ic('busca')}Buscar material, vídeo ou ponta</button>
-    ${secao('Acesso rápido')}
-    <div class="tiles">
-      <a class="tile destaque anima" href="#/procedimentos" style="--i:1">${ic('dente')}<span><b>Vídeos de procedimentos</b><small>${nProc} vídeos · ${D.especialidades.length} especialidades</small></span><span class="seta">${ic('seta')}</span></a>
-      ${tiles}
-    </div>
     ${secao('Equipamentos')}
     <div class="rolagem">${cards}</div>
+    ${areaPontas}
+    ${areaProc}
+    ${secao('Materiais')}
+    <div class="tiles">${tilesRapidos}</div>
     ${secao('Mais conteúdo')}
     <div class="lista">
       ${outros.map(p=>linkRow('#/produto/'+p.id, p.icone, esc(p.nome))).join('')}
@@ -545,7 +555,7 @@ function telaInicio(){
       ${linkRow('#/marketing','mega','Marketing e treinamentos')}
       ${linkRow('#/marca','estrela','Logos, selos e marca')}
     </div>
-    ${novos.length ? secao('Novidades') + lista(novos,{produto:true}) : ''}
+    ${novos.length ? `<details class="novidades anima"><summary><span>Novidades</span><small>${novos.length}</small>${ic('seta')}</summary>${lista(novos,{produto:true})}</details>` : ''}
     <div class="rodape">Base atualizada em ${D.atualizado}<br>Tudo abre por link. Nada fica guardado no app.</div>` };
 }
 
