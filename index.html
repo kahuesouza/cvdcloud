@@ -514,11 +514,11 @@ function telaInicio(){
     tile('#/tipo/uso','play','Modo de uso',`${cont('uso')} vídeos`),
     tile('#/tipo/video3d','cubo','Vídeos 3D',`${cont('video3d')} vídeos`),
   ].join('');
-  const prodCard = (href, img, nome, sub, i) => `<a class="pc anima" href="${href}" style="--i:${i}"><span class="img">${img}</span><b>${nome}</b><small>${sub}</small></a>`;
+  const prodCard = (href, img, nome, sub, i, claro) => `<a class="pc anima" href="${href}" style="--i:${i}"><span class="img${claro ? ' claro' : ''}">${img}</span><b>${nome}</b><small>${sub}</small></a>`;
   const cards = [
     ...D.produtos.filter(p=>p.img).map((p,i)=>prodCard('#/produto/'+p.id, `<img src="${p.img}" alt="">`, esc(p.nome), esc(p.resumo.split('·')[0].trim()), i)),
-    prodCard('#/lupas', `<img src="img/lupas/flip-kepler.webp" alt="" style="max-width:100%;max-height:100%;width:100%;height:100%;object-fit:cover">`, 'Lupas', 'Flip, TTL e armações', 3),
-    prodCard('#/produto/fotoforos', `<img src="img/lupas/jg-m06c.webp" alt="" style="max-width:100%;max-height:100%;width:100%;height:100%;object-fit:cover">`, 'Fotóforos', 'Iluminação LED', 4),
+    prodCard('#/lupas', `<img src="img/home-lupas.webp" alt="">`, 'Lupas', 'Flip, TTL e armações', 3, true),
+    prodCard('#/produto/fotoforos', `<img src="img/home-fotoforos.webp" alt="">`, 'Fotóforos', 'Iluminação LED', 4, true),
   ].join('');
   const outros = D.produtos.filter(p=>!p.img && p.id!=='lupas');
   const novos = D.materiais.filter(m=>m.novo && doPt(m));

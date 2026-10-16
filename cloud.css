@@ -149,3 +149,7 @@ body{padding-bottom:calc(var(--nav-h) + env(safe-area-inset-bottom) + 14px)}
 .novidades summary svg{width:18px;height:18px;transition:transform .25s var(--ease);color:var(--fraco)}
 .novidades[open] summary svg{transform:rotate(90deg)}
 .novidades .lista{margin:0;padding:0 14px 6px;border:0;border-top:1px solid var(--linha);border-radius:0;background:none}
+
+/* fotos de produto escuro sobre fundo transparente: placa clara */
+.pc .img.claro{background:#eeeff1;border-color:#e4e4e7}
+.pc .img.claro img{max-width:90%;max-height:80%}
