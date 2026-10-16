@@ -527,7 +527,7 @@ function telaInicio(){
   const naEsp = id => D.procedimentos.filter(x=>x.esp===id || (x.esps||[]).includes(id)).length;
   const areaPontas = `<section class="area anima" style="--i:2">
       <div class="area-topo"><div><h2>Pontas</h2><p>${totalPontas} pontas por equipamento e modo de uso, com bula e vídeos de uso.</p></div><a class="area-ver" href="#/pontas">Ver todas${ic('seta')}</a></div>
-      <div class="area-grade">${PONTAS.map(e=>`<a class="area-card" href="#/pontas/${e.id}"><span class="img"><img src="${e.img}" alt=""></span><b>${esc(e.nome)}</b><small>${nPontasEq(e)} pontas</small></a>`).join('')}</div>
+      <div class="area-grade">${PONTAS.map(e=>`<a class="area-card" href="#/pontas/${e.id}"><span class="img"><img src="${e.img}" alt=""></span><b>Pontas para o ${esc(e.nome)}</b><small>${nPontasEq(e)} pontas</small></a>`).join('')}</div>
     </section>`;
   const areaProc = `<section class="area anima" style="--i:3">
       <div class="area-topo"><div><h2>Procedimentos</h2><p>${nProc} vídeos clínicos, separados por especialidade e tópico.</p></div><a class="area-ver" href="#/procedimentos">Ver todos${ic('seta')}</a></div>
