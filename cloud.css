@@ -153,3 +153,7 @@ body{padding-bottom:calc(var(--nav-h) + env(safe-area-inset-bottom) + 14px)}
 /* fotos de produto escuro sobre fundo transparente: placa clara */
 .pc .img.claro{background:#eeeff1;border-color:#e4e4e7}
 .pc .img.claro img{max-width:90%;max-height:80%}
+
+/* produto preto sem fundo sobre o cartão escuro: contorno claro discreto para destacar */
+.pc .img.escuro img{max-width:88%;max-height:78%;filter:drop-shadow(0 0 1.5px rgba(255,255,255,.55)) drop-shadow(0 0 10px rgba(255,255,255,.12))}
+:root:not([data-theme="dark"]) .pc .img.escuro img{filter:none}

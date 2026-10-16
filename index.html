@@ -514,13 +514,13 @@ function telaInicio(){
     tile('#/tipo/uso','play','Modo de uso',`${cont('uso')} vídeos`),
     tile('#/tipo/video3d','cubo','Vídeos 3D',`${cont('video3d')} vídeos`),
   ].join('');
-  const prodCard = (href, img, nome, sub, i, claro) => `<a class="pc anima" href="${href}" style="--i:${i}"><span class="img${claro ? ' claro' : ''}">${img}</span><b>${nome}</b><small>${sub}</small></a>`;
+  const prodCard = (href, img, nome, sub, i, claro) => `<a class="pc anima" href="${href}" style="--i:${i}"><span class="img${claro ? ' ' + claro : ''}">${img}</span><b>${nome}</b><small>${sub}</small></a>`;
   const cards = [
     ...D.produtos.filter(p=>p.img).map((p,i)=>prodCard('#/produto/'+p.id, `<img src="${p.img}" alt="">`, esc(p.nome), esc(p.resumo.split('·')[0].trim()), i)),
-    prodCard('#/lupas', `<img src="img/home-lupas.webp" alt="">`, 'Lupas', 'Flip, TTL e armações', 3, true),
-    prodCard('#/produto/fotoforos', `<img src="img/home-fotoforos.webp" alt="">`, 'Fotóforos', 'Iluminação LED', 4, true),
+    prodCard('#/lupas', `<img src="img/home-lupas.webp" alt="">`, 'Lupas', 'Flip, TTL e armações', 3, 'escuro'),
+    prodCard('#/produto/fotoforos', `<img src="img/home-fotoforos.webp" alt="">`, 'Fotóforos', 'Iluminação LED', 4, 'escuro'),
   ].join('');
-  const outros = D.produtos.filter(p=>!p.img && p.id!=='lupas');
+  const outros = D.produtos.filter(p=>!p.img && p.id!=='lupas' && p.id!=='brocas');
   const novos = D.materiais.filter(m=>m.novo && doPt(m));
   const nPontasEq = e => e.modos.reduce((a,m)=>a+m.pontas.length,0);
   const totalPontas = PONTAS.reduce((a,e)=>a+nPontasEq(e),0);
@@ -530,7 +530,7 @@ function telaInicio(){
       <div class="area-grade">${PONTAS.map(e=>`<a class="area-card" href="#/pontas/${e.id}"><span class="img"><img src="${e.img}" alt=""></span><b>Pontas para o ${esc(e.nome)}</b><small>${nPontasEq(e)} pontas</small></a>`).join('')}</div>
     </section>`;
   const areaProc = `<section class="area anima" style="--i:3">
-      <div class="area-topo"><div><h2>Procedimentos</h2><p>${nProc} vídeos clínicos, separados por especialidade e tópico.</p></div><a class="area-ver" href="#/procedimentos">Ver todos${ic('seta')}</a></div>
+      <div class="area-topo"><div><h2>Procedimentos</h2><p>Vídeos de Procedimentos Clínicos e Cirúrgicos</p></div><a class="area-ver" href="#/procedimentos">Ver todos${ic('seta')}</a></div>
       <div class="area-esp">${D.especialidades.map(e=>`<a href="#/procedimentos/${e.id}"><b>${esc(e.curto)}</b><small>${naEsp(e.id)}</small></a>`).join('')}</div>
     </section>`;
   const tilesRapidos = [
@@ -551,7 +551,7 @@ function telaInicio(){
     ${secao('Mais conteúdo')}
     <div class="lista">
       ${outros.map(p=>linkRow('#/produto/'+p.id, p.icone, esc(p.nome))).join('')}
-      ${linkRow('#/tipo/comparativo','tabela','Comparativos',cont('comparativo'))}
+      ${linkRow('#/tipo/comparativo','tabela','Tabela Comparativa dos Piezos',cont('comparativo'))}
       ${linkRow('#/marketing','mega','Marketing e treinamentos')}
       ${linkRow('#/marca','estrela','Logos, selos e marca')}
     </div>
