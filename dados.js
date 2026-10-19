@@ -182,6 +182,17 @@ window.CVD = {
    "mb": 4.4
   },
   {
+   "titulo": "Tips Catalog · Clinical Plus & DentSurg Pro (2026)",
+   "tipo": "catalogo",
+   "produto": "pontas",
+   "idioma": "en",
+   "ano": 2026,
+   "novo": true,
+   "url": "https://cloud.cvdentus.com.br/arquivos/livros/tips-catalog-clinical-plus-dentsurg-pro-en-2026.pdf",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/tips-catalog-clinical-plus-dentsurg-pro-en-2026.pdf",
+   "mb": 10.1
+  },
+  {
    "titulo": "Tips Catalog · Clinical Plus & DentSurg Pro",
    "tipo": "catalogo",
    "produto": "pontas",
@@ -3156,5 +3167,5 @@ window.CVD = {
    "nome": "Demonstrações e casos clínicos"
   }
  ],
- "rev": 1792417908290
+ "rev": 1792437078755
 };
