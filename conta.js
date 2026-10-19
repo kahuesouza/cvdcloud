@@ -147,9 +147,28 @@ if(!CFG || !CFG.apiKey || CFG.apiKey === 'COLE_AQUI'){
         const ref = await F.addDoc(F.collection(db, 'compartilhamentos'), d);
         return ref.id;
       },
-      async listarCompartilhamentos(){
+      async listarCompartilhamentos(dias, limite){
         if(!C.admin()) throw new Error('Apenas administradores.');
-        const s = await F.getDocs(F.query(F.collection(db, 'compartilhamentos'), F.orderBy('criadoEm', 'desc'), F.limit(100)));
+        const q = dias ? F.query(F.collection(db, 'compartilhamentos'), F.where('criadoEm', '>=', F.Timestamp.fromMillis(Date.now() - dias * 864e5)), F.orderBy('criadoEm', 'desc'), F.limit(limite || 2000))
+                       : F.query(F.collection(db, 'compartilhamentos'), F.orderBy('criadoEm', 'desc'), F.limit(limite || 100));
+        const s = await F.getDocs(q);
+        return s.docs.map(d => ({ id: d.id, ...d.data() }));
+      },
+      /* ---------- análises (somente admin) ---------- */
+      async eventosEntre(iniMs, fimMs, limite){
+        if(!C.admin()) throw new Error('Apenas administradores.');
+        const s = await F.getDocs(F.query(F.collection(db, 'eventos'), F.where('criadoEm', '>=', F.Timestamp.fromMillis(iniMs)), F.where('criadoEm', '<', F.Timestamp.fromMillis(fimMs)), F.orderBy('criadoEm', 'desc'), F.limit(limite || 8000)));
+        return s.docs.map(d => d.data());
+      },
+      async contarEntre(colecao, iniMs, fimMs){
+        if(!C.admin()) throw new Error('Apenas administradores.');
+        if(!['eventos', 'visitas', 'compartilhamentos'].includes(colecao)) throw new Error('Coleção inválida.');
+        const r = await F.getCountFromServer(F.query(F.collection(db, colecao), F.where('criadoEm', '>=', F.Timestamp.fromMillis(iniMs)), F.where('criadoEm', '<', F.Timestamp.fromMillis(fimMs))));
+        return r.data().count;
+      },
+      async visitas(iniMs, fimMs, limite){
+        if(!C.admin()) throw new Error('Apenas administradores.');
+        const s = await F.getDocs(F.query(F.collection(db, 'visitas'), F.where('criadoEm', '>=', F.Timestamp.fromMillis(iniMs)), F.where('criadoEm', '<', F.Timestamp.fromMillis(fimMs)), F.orderBy('criadoEm', 'desc'), F.limit(limite || 5000)));
         return s.docs.map(d => ({ id: d.id, ...d.data() }));
       },
       async excluirCompartilhamento(id){ if(!C.admin()) throw new Error('Apenas administradores.'); await F.deleteDoc(F.doc(db, 'compartilhamentos', id)); },

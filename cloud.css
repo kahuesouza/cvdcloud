@@ -157,3 +157,17 @@ body{padding-bottom:calc(var(--nav-h) + env(safe-area-inset-bottom) + 14px)}
 /* produto preto sem fundo sobre o cartão escuro: contorno claro discreto para destacar */
 .pc .img.escuro img{max-width:88%;max-height:78%;filter:drop-shadow(0 0 1.5px rgba(255,255,255,.55)) drop-shadow(0 0 10px rgba(255,255,255,.12))}
 :root:not([data-theme="dark"]) .pc .img.escuro img{filter:none}
+
+/* análises: variação, mapa de calor, listas com barra */
+.kd{margin-top:4px;font-size:12px;font-weight:700}
+.dl{font-size:12px;font-weight:800;color:var(--fraco)}.dl.up{color:#12805c}.dl.dn{color:#b42318}
+:root[data-theme="dark"] .dl.up{color:#5fd3a4}:root[data-theme="dark"] .dl.dn{color:#ff8a80}
+.ins{margin:0;padding-left:18px;line-height:1.6;font-size:14px}
+.ins li{margin:4px 0}
+.mapa{display:grid;grid-template-columns:30px repeat(24,1fr);gap:2px;margin-top:12px;font-size:10px}
+.mapa b{font-weight:700;color:var(--fraco);display:flex;align-items:center}
+.mapa i{aspect-ratio:1;border-radius:3px;background:var(--texto);opacity:calc(.07 + var(--v) * .9)}
+.mapa em{font-style:normal;color:var(--fraco);text-align:left;font-size:10px}
+.r.bh{gap:10px}
+.bhb{flex:0 0 38%;height:6px;border-radius:4px;background:var(--surface-2);overflow:hidden}
+.bhb i{display:block;height:100%;border-radius:4px;background:var(--texto)}

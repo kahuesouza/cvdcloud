@@ -1,40 +1,46 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<script>if(location.protocol==='http:'&&/(^|\.)cvdentus\.com\.br$/.test(location.hostname))location.replace('https://'+location.host+location.pathname+location.search+location.hash)</script>
-
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>cvdcloud</title>
 <meta name="robots" content="noindex, nofollow">
-<meta name="referrer" content="no-referrer">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; media-src https:; connect-src https://*.googleapis.com https://*.firebaseio.com https://firestore.googleapis.com wss://*.firebaseio.com; object-src 'none'; base-uri 'none'; form-action 'none'">
-<meta name="theme-color" content="#ffffff">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; media-src https:; frame-src 'self' https://www.youtube-nocookie.com; connect-src https://*.googleapis.com https://*.firebaseio.com https://firestore.googleapis.com wss://*.firebaseio.com; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="theme-color" content="#000000">
 <link rel="icon" href="img/icone.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#fbfbfd;--surface:#fff;--surface2:#f2f4f8;--linha:#e9ecf2;--texto:#0b1220;--sub:#667085;--fraco:#98a2b3;--acento:#3d72e6}
-@media (prefers-color-scheme: dark){:root{--bg:#0b0f17;--surface:#121826;--surface2:#1a2233;--linha:#1f2a3e;--texto:#eef2f8;--sub:#9aa7bd;--fraco:#6d7a92;--acento:#6c97f5}.logo{filter:brightness(0) invert(1)}}
+:root{--bg:#ffffff;--surface:#ffffff;--surface2:#f4f4f5;--linha:#e4e4e7;--texto:#09090b;--sub:#52525b;--fraco:#8a8a93}
+@media (prefers-color-scheme: dark){:root{--bg:#000000;--surface:#0b0b0c;--surface2:#151517;--linha:#222225;--texto:#fafafa;--sub:#a1a1aa;--fraco:#71717a}.logo{filter:brightness(0) invert(1)}}
 *{box-sizing:border-box}
-body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px 18px;background:var(--bg);color:var(--texto);font-family:"Montserrat",system-ui,sans-serif;font-weight:500;-webkit-font-smoothing:antialiased}
-main{width:100%;max-width:440px}
-.logo{height:34px;display:block;margin:0 auto 22px}
-.cartao{background:var(--surface);border:1px solid var(--linha);border-radius:22px;padding:18px;box-shadow:0 8px 30px rgba(11,18,32,.06);animation:sobe .5s cubic-bezier(.2,.8,.2,1) both}
-@keyframes sobe{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
-.im{border-radius:16px;background:var(--surface2);overflow:hidden;display:grid;place-items:center;aspect-ratio:16/10;margin-bottom:16px}
-.im img{width:100%;height:100%;object-fit:contain;display:block}
-.im.doc img{object-fit:cover;object-position:top}
-h1{font-size:28px;line-height:1.15;margin:0;font-weight:800;letter-spacing:-.01em;overflow-wrap:anywhere}
-.meta{color:var(--sub);font-size:13px;margin:6px 0 0}
+body{margin:0;min-height:100vh;padding:22px 16px 40px;background:var(--bg);color:var(--texto);font-family:"Montserrat",system-ui,sans-serif;font-weight:500;-webkit-font-smoothing:antialiased}
+main{width:100%;max-width:560px;margin:0 auto}
+.logo{height:22px;display:block;margin:6px 0 24px}
+.cartao{animation:sobe .45s cubic-bezier(.2,.8,.2,1) both}
+@keyframes sobe{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.midia{border-radius:18px;overflow:hidden;background:var(--surface2);border:1px solid var(--linha);margin-bottom:18px}
+.midia video,.midia img{display:block;width:100%;max-height:70vh;object-fit:contain;background:#000}
+.midia.img-clara img{background:var(--surface2)}
+.midia iframe{display:block;width:100%;border:0;aspect-ratio:16/9;background:#000}
+.midia iframe.pdf{aspect-ratio:auto;height:72vh;background:#fff}
+.midia.capa img{object-fit:cover;object-position:top;max-height:340px}
+h1{font-size:26px;line-height:1.15;margin:0;font-weight:800;letter-spacing:-.03em;overflow-wrap:anywhere}
+.meta{color:var(--sub);font-size:13px;margin:8px 0 0}
 .botoes{display:grid;gap:10px;margin-top:20px}
 a.btn{display:flex;align-items:center;justify-content:center;gap:9px;padding:15px 18px;border-radius:14px;font-weight:700;font-size:15px;text-decoration:none;transition:transform .15s}
 a.btn:active{transform:scale(.97)}
-.prim{background:var(--acento);color:#fff}.sec{background:var(--surface2);color:var(--texto)}
-.rod{text-align:center;color:var(--fraco);font-size:12px;margin-top:22px}
-.vazio{text-align:center;padding:30px 10px;color:var(--sub);line-height:1.6}
+.prim{background:var(--texto);color:var(--bg)}.sec{background:var(--surface2);color:var(--texto);border:1px solid var(--linha)}
+.rod{text-align:center;color:var(--fraco);font-size:12px;margin-top:26px}
+.vazio{text-align:center;padding:40px 10px;color:var(--sub);line-height:1.6}
 svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.aviso{position:fixed;left:12px;right:12px;bottom:12px;max-width:536px;margin:0 auto;padding:14px 16px;border-radius:16px;background:var(--surface);border:1px solid var(--linha);box-shadow:0 12px 40px rgba(0,0,0,.25);font-size:12.5px;line-height:1.5;color:var(--sub);z-index:5}
+.aviso b{color:var(--texto)}
+.aviso .ac{display:flex;gap:14px;margin-top:10px;align-items:center}
+.aviso button{font:inherit;font-weight:700;font-size:13px;border:0;border-radius:10px;padding:9px 16px;cursor:pointer;background:var(--texto);color:var(--bg)}
+.aviso a{color:var(--sub);font-size:12px;text-decoration:underline;cursor:pointer}
 </style>
 </head>
 <body>
@@ -43,6 +49,7 @@ svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-l
   <div class="cartao" id="c"><div class="vazio">Carregando…</div></div>
   <div class="rod">Material compartilhado pela equipe CVDentus</div>
 </main>
+<div id="aviso" class="aviso" hidden></div>
 <script src="firebase-config.js"></script>
 <script type="module">
 const c = document.getElementById('c');
@@ -51,18 +58,31 @@ const falha = m => { c.innerHTML = `<div class="vazio"><b>${m}</b><br>Peça um n
 const https = u => { try{ return new URL(u).protocol === 'https:'; }catch(e){ return false; } };
 const id = (location.hash || '').slice(1);
 const CFG = window.CVD_FIREBASE;
+
+/* ---------- cookie de visitante (anônimo, do próprio site) ---------- */
+const lerCookie = n => { const m = document.cookie.match(new RegExp('(?:^|; )' + n + '=([^;]*)')); return m ? decodeURIComponent(m[1]) : null; };
+const gravarCookie = (n, v, dias) => { try{ document.cookie = `${n}=${encodeURIComponent(v)}; max-age=${dias * 86400}; path=/; SameSite=Lax${location.protocol === 'https:' ? '; Secure' : ''}`; }catch(e){} };
+const aleatorio = n => { const a = new Uint8Array(n); crypto.getRandomValues(a); return Array.from(a, x => 'abcdefghijklmnopqrstuvwxyz0123456789'[x % 36]).join(''); };
+const naoRastrear = () => navigator.doNotTrack === '1' || lerCookie('cvdcloud_dnt') === '1';
+function aparelho(){
+  const ua = navigator.userAgent, m = /Mobi|Android|iPhone/i.test(ua), t = /iPad|Tablet/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+  const so = /Android/i.test(ua) ? 'Android' : /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1) ? 'iOS' : /Windows/i.test(ua) ? 'Windows' : /Mac OS/i.test(ua) ? 'macOS' : /Linux/i.test(ua) ? 'Linux' : 'outro';
+  const nav = /SamsungBrowser/i.test(ua) ? 'Samsung' : /Edg\//i.test(ua) ? 'Edge' : /OPR\//i.test(ua) ? 'Opera' : /Firefox/i.test(ua) ? 'Firefox' : /Chrome|CriOS/i.test(ua) ? 'Chrome' : /Safari/i.test(ua) ? 'Safari' : 'outro';
+  return { disp: t ? 'tablet' : m ? 'celular' : 'computador', so, nav };
+}
+
 if(!/^[A-Za-z0-9]{10,40}$/.test(id)) falha('Link inválido.');
 else if(!CFG || !CFG.apiKey) falha('Link indisponível.');
 else {
   try{
     const V = '10.14.1';
-    const [{ initializeApp }, { getFirestore, doc, getDoc }] = await Promise.all([
+    const [{ initializeApp }, { getFirestore, doc, getDoc, setDoc, updateDoc, serverTimestamp }] = await Promise.all([
       import(`https://www.gstatic.com/firebasejs/${V}/firebase-app.js`),
       import(`https://www.gstatic.com/firebasejs/${V}/firebase-firestore.js`),
     ]);
     const db = getFirestore(initializeApp(CFG));
     const s = await getDoc(doc(db, 'compartilhamentos', id));
-    if(!s.exists()) falha('Este link não existe mais.');
+    if(!s.exists()) { falha('Este link não existe mais.'); }
     else {
       const d = s.data();
       if(!https(d.url)) { falha('Link inválido.'); }
@@ -70,11 +90,55 @@ else {
         const thumb = /^img\/[\w\-./]+$/.test(d.thumb || '') ? d.thumb : '';
         const mb = typeof d.mb === 'number' ? (d.mb < 1 ? '<1 MB' : (d.mb < 10 ? String(d.mb).replace('.', ',') : Math.round(d.mb)) + ' MB') : '';
         document.title = d.titulo + ' · cvdcloud';
-        const ehVideo = /\.mp4(\?|$)/i.test(d.url);
-        c.innerHTML = `${ehVideo ? `<div class="im" style="aspect-ratio:auto;background:#000"><video controls playsinline preload="metadata" ${thumb ? `poster="${esc(thumb)}"` : ''} src="${esc(d.url)}" style="width:100%;max-height:60vh;display:block"></video></div>` : thumb ? `<div class="im ${/\/t\//.test(thumb) ? 'doc' : ''}"><img alt="" src="${esc(thumb)}"></div>` : ''}
-          <h1>${esc(d.titulo)}</h1><p class="meta">${esc([d.tipo, mb].filter(Boolean).join(' · '))}</p>
-          <div class="botoes">${ehVideo ? '' : `<a class="btn prim" href="${esc(d.url)}" target="_blank" rel="noopener noreferrer">Abrir</a>`}
-          ${d.baixarUrl && https(d.baixarUrl) ? `<a class="btn ${ehVideo ? 'prim' : 'sec'}" href="${esc(d.baixarUrl)}" download rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Baixar${mb ? ' · ' + esc(mb) : ''}</a>` : ''}</div>`;
+        const u = d.url, mesma = u.startsWith(location.origin + '/');
+        const yt = (u.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([\w-]{11})/) || [])[1];
+        const ehMp4 = /\.mp4(\?|$)/i.test(u), ehPdf = /\.pdf(\?|$)/i.test(u), ehImg = /\.(png|jpe?g|webp|gif)(\?|$)/i.test(u);
+        const celular = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
+        let midia = '';
+        if(yt) midia = `<div class="midia"><iframe id="yt" src="https://www.youtube-nocookie.com/embed/${yt}?rel=0&playsinline=1" title="${esc(d.titulo)}" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>`;
+        else if(ehMp4) midia = `<div class="midia"><video id="vd" controls playsinline preload="metadata" ${thumb ? `poster="${esc(thumb)}"` : ''} src="${esc(u)}"></video></div>`;
+        else if(ehImg) midia = `<div class="midia img-clara"><img alt="${esc(d.titulo)}" src="${esc(u)}"></div>`;
+        else if(ehPdf && mesma && !celular) midia = `<div class="midia"><iframe class="pdf" id="pdf" src="${esc(u)}#view=FitH" title="${esc(d.titulo)}"></iframe></div>`;
+        else if(thumb) midia = `<div class="midia capa"><img alt="" src="${esc(thumb)}"></div>`;
+        const mostraAbrir = !(yt || ehMp4 || ehImg || (ehPdf && mesma && !celular));
+        const dlOk = d.baixarUrl && https(d.baixarUrl);
+        c.innerHTML = `${midia}<h1>${esc(d.titulo)}</h1><p class="meta">${esc([d.tipo, mb].filter(Boolean).join(' · '))}</p>
+          <div class="botoes">${mostraAbrir || (ehPdf && celular) ? `<a class="btn prim" id="b-abrir" href="${esc(u)}" target="_blank" rel="noopener noreferrer">${ehPdf ? 'Abrir o PDF' : 'Abrir'}</a>` : ''}
+          ${dlOk ? `<a class="btn ${mostraAbrir ? 'sec' : 'prim'}" id="b-baixar" href="${esc(d.baixarUrl)}" download rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Baixar${mb ? ' · ' + esc(mb) : ''}</a>` : ''}</div>`;
+
+        /* ---------- registro anônimo do acesso (horário, aparelho, tempo) ---------- */
+        if(!naoRastrear()){
+          const jaTinha = !!lerCookie('cvdcloud_v');
+          const vid = lerCookie('cvdcloud_v') || aleatorio(20);
+          gravarCookie('cvdcloud_v', vid, 400);
+          const ap = aparelho(), sid = aleatorio(20);
+          let ref = ''; try{ ref = document.referrer ? new URL(document.referrer).hostname.slice(0, 60) : ''; }catch(e){}
+          const estado = { seg: 0, abriu: false, baixou: false, video: 0 };
+          const ref_ = doc(db, 'visitas', sid);
+          const base = { compId: id, vid, retorno: jaTinha, disp: ap.disp, so: ap.so, nav: ap.nav, tz: (Intl.DateTimeFormat().resolvedOptions().timeZone || '').slice(0, 40), idioma: (navigator.language || '').slice(0, 12), tela: `${screen.width}x${screen.height}`.slice(0, 12), ref };
+          setDoc(ref_, { ...base, ...estado, criadoEm: serverTimestamp(), ultimoSinal: serverTimestamp() }).catch(() => {});
+          let sujo = false, ultimo = Date.now(), visivel = document.visibilityState === 'visible';
+          const enviar = () => { if(!sujo) return; sujo = false; updateDoc(ref_, { seg: estado.seg, abriu: estado.abriu, baixou: estado.baixou, video: Math.round(estado.video), ultimoSinal: serverTimestamp() }).catch(() => {}); };
+          setInterval(() => { const agora = Date.now(); if(visivel && estado.seg < 7200){ estado.seg += Math.min(6, Math.round((agora - ultimo) / 1000)); sujo = true; } ultimo = agora; enviar(); }, 5000);
+          document.addEventListener('visibilitychange', () => { visivel = document.visibilityState === 'visible'; ultimo = Date.now(); if(!visivel){ sujo = true; enviar(); } });
+          addEventListener('pagehide', () => { sujo = true; enviar(); });
+          const marca = campo => { if(!estado[campo]){ estado[campo] = true; sujo = true; enviar(); } };
+          document.getElementById('b-abrir')?.addEventListener('click', () => marca('abriu'));
+          document.getElementById('b-baixar')?.addEventListener('click', () => marca('baixou'));
+          const v = document.getElementById('vd');
+          if(v){ let ult = 0; v.addEventListener('play', () => marca('abriu')); v.addEventListener('timeupdate', () => { if(!v.paused && v.currentTime > ult && v.currentTime - ult < 2) { estado.video += v.currentTime - ult; sujo = true; } ult = v.currentTime; }); v.addEventListener('seeked', () => { ult = v.currentTime; }); }
+          document.getElementById('pdf') && marca('abriu');
+          document.getElementById('yt') && marca('abriu');
+          /* aviso de privacidade (uma vez) */
+          if(!lerCookie('cvdcloud_ciente')){
+            const av = document.getElementById('aviso');
+            av.innerHTML = `<b>Privacidade.</b> Este link registra o acesso de forma <b>anônima</b> (horário, tipo de aparelho e tempo na página) para a CVDentus melhorar o atendimento. Não coletamos nome, telefone nem e-mail.
+              <div class="ac"><button id="ok-ciente">Entendi</button><a id="nao-rastrear">Não registrar meus acessos</a></div>`;
+            av.hidden = false;
+            document.getElementById('ok-ciente').onclick = () => { gravarCookie('cvdcloud_ciente', '1', 400); av.hidden = true; };
+            document.getElementById('nao-rastrear').onclick = () => { gravarCookie('cvdcloud_dnt', '1', 400); gravarCookie('cvdcloud_v', '', 0); av.hidden = true; location.reload(); };
+          }
+        }
       }
     }
   }catch(e){ falha('Não foi possível abrir este link agora.'); }

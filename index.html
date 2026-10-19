@@ -582,7 +582,8 @@ function telaProduto(id, aba){
     ? `<div class="anima" style="display:flex;align-items:center;gap:16px;margin:8px 0 2px"><span class="pc" style="flex:none"><span class="img" style="width:112px;height:96px"><img src="${p.img}" alt=""></span></span><div class="largo" style="margin:0"><h1 style="font-size:26px">${esc(p.nome)}</h1><p>${esc(p.resumo)}</p></div></div>`
     : largo(esc(p.nome), esc(p.resumo));
   const pontasRow = eq ? `<div style="margin-top:14px">${linkRow('#/pontas/'+id,'pilula','Pontas e bula do '+esc(p.nome), eq.modos.reduce((s,m)=>s+m.pontas.length,0)+' pontas')}</div>` : '';
-  return { titulo:p.nome, voltar:'#/', corpo: hero + pontasRow + abasHtml + corpo };
+  const notaProd = p.nota ? `<div class="nota anima" style="--i:1">${ic('info')}<div>${esc(p.nota)}</div></div>` : '';
+  return { titulo:p.nome, voltar:'#/', corpo: hero + notaProd + pontasRow + abasHtml + corpo };
 }
 
 function telaFotos(id){
@@ -845,7 +846,7 @@ function painelItem(id){
     <div class="botoes">
       ${isVideo(x) ? `<button class="btn sec" data-video="${id}">${ic('playcheio')}Assistir</button>` : x.galeria ? `<a class="btn prim" href="${esc(x.url)}">${ic('link')}Abrir galeria</a>` : `<a class="btn sec" href="${esc(x.url)}" target="_blank" rel="noopener">${ic('link')}Abrir</a>`}
       ${dl ? `<a class="btn prim" href="${esc(dl)}" download data-dl="${x.id}" data-mb="${tam||0}">${ic('download')}Baixar${tam?` <small>${fmtTam(tam)}</small>`:''}</a>` : ''}
-      ${x.galeria ? '' : `<button class="btn prim" data-compartilhar="${id}">${ic('share')}Copiar link</button>`}
+      ${x.galeria ? '' : `<button class="btn prim" data-compartilhar="${id}">${ic('share')}Copiar link</button><button class="btn sec" data-copiar="${esc(x.url)}">${ic('link')}Copiar link direto (sem rastreio)</button>`}
       <button class="btn sec" data-fav="${id}">${ic('estrela')}${fav?'Remover dos salvos':'Salvar'}</button>
       <button class="btn sec" data-comentar="${id}">${ic('mega')}Comentar ou sugerir</button>
       ${adminAgora() ? `<button class="btn sec" data-ocultar="${id}" style="color:var(--erro)">${ic('x')}Excluir do app</button>` : ''}
@@ -1004,7 +1005,7 @@ function pintarAlertaContas(){
   const eq = document.querySelector('.abas a[href="#/admin/usuarios"] small'); if(eq) eq.textContent = novasContas ? novasContas : '';
   const bn = document.getElementById('banner-contas'); if(bn) bn.hidden = !novasContas, bn.querySelector('b') && (bn.querySelector('b').textContent = novasContas + (novasContas > 1 ? ' contas novas' : ' conta nova'));
 }
-const ABAS_ADMIN = [{id:'painel', nome:'Painel'}, {id:'desempenho', nome:'Vendedores'}, {id:'comentarios', nome:'Comentários'}, {id:'usuarios', nome:'Equipe'}, {id:'links', nome:'Links'}, {id:'catalogo', nome:'Catálogo'}];
+const ABAS_ADMIN = [{id:'painel', nome:'Painel'}, {id:'desempenho', nome:'Vendedores'}, {id:'semana', nome:'Semana'}, {id:'clientes', nome:'Clientes'}, {id:'comentarios', nome:'Comentários'}, {id:'usuarios', nome:'Equipe'}, {id:'links', nome:'Links'}, {id:'catalogo', nome:'Catálogo'}];
 function haQuanto(t){
   const s = t && (t.seconds ?? (t.toMillis ? t.toMillis()/1000 : null)); if(!s) return 'nunca';
   const d = Math.max(0, Date.now()/1000 - s);
@@ -1137,6 +1138,8 @@ async function carregarAdmin(aba){
   try{
     if(aba === 'painel'){ await carregarPainel(el); }
     else if(aba === 'desempenho'){ await carregarDesempenho(el); }
+    else if(aba === 'semana'){ await carregarSemana(el); }
+    else if(aba === 'clientes'){ await carregarClientes(el); }
     else if(aba === 'comentarios'){
       const l = await C.listarComentarios(st); if(st === 'pendente'){ novosComentarios = l.length; novasContasEm = Date.now(); pintarAlertaContas(); }
       el.innerHTML = l.length ? l.map(c => { const cx = contextoComentario(c); return `<div class="cartao-c anima"><div class="topo-c"><span class="st">${esc(CATS[c.categoria] || c.categoria)}</span>${stCom(c.status)}<span class="quem">${esc(c.autorNome)} · ${fmtData(c.criadoEm)}</span></div><p>${esc(c.texto)}</p><div class="item-c" style="margin-top:8px"><b style="font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--sub)">Onde foi feito</b><br><span style="font-weight:700">${esc(cx.titulo)}</span><br><span class="quem">${esc(cx.onde)}</span></div>${cx.btn ? `<div class="acoes-c" style="margin-top:10px">${cx.btn}</div>` : ''}${c.notaAdmin ? `<p style="color:var(--sub);font-size:13px">Nota: ${esc(c.notaAdmin)}</p>` : ''}
@@ -1343,11 +1346,8 @@ async function compartilhar(x){
   const nome = x.esp ? `${x.titulo}${x.prof?' · '+x.prof:''}` : x.titulo;
   const C = CONTA();
   track('compartilhar', chaveItem(x), x.titulo, '');
-  // link direto para o material (abre o PDF, imagem, vídeo do YouTube ou página do item, sem passar pelo app)
-  if(!isVideo(x) || !(C && C.configurado && C.aprovado())){ await enviarLink(nome, x.url); return; }
-  // vídeo hospedado no GitHub: o link bruto baixaria o arquivo; esta página só toca o vídeo (sem acesso ao resto do app)
-  if(true){
-    // link seguro: o cliente só vê ESTE material, sem acesso ao resto do app
+  // link rastreado: abre o material numa página do cvdcloud que registra (de forma anônima) o acesso do cliente
+  if(C && C.configurado && C.aprovado()){
     try{
       const dl = linkDownload(x), t = THUMBS[x.url], tam = tamDownload(x);
       const id = await C.criarCompartilhamento({ titulo: nome, url: x.url, baixarUrl: dl || undefined, thumb: t ? 'img/t/' + t[0] : undefined, tipo: x.esp ? 'Vídeo de procedimento' : (TIPOS[x.tipo] || {}).nome, mb: typeof tam === 'number' ? tam : undefined });
@@ -1371,6 +1371,9 @@ document.addEventListener('click', e=>{
   const pv = t.closest('[data-pvid]'); if(pv){ painelVideosPonta(pv.dataset.pvid.split('|')); return; }
   const vi = t.closest('[data-ver-item]'); if(vi){ painelItem(vi.dataset.verItem); return; }
   const vpo = t.closest('[data-ver-ponta]'); if(vpo){ abrirBusca(); setTimeout(() => { const q = document.getElementById('q'); if(q){ q.value = vpo.dataset.verPonta; q.dispatchEvent(new Event('input')); } }, 60); return; }
+  const sw = t.closest('[data-semana]'); if(sw){ semanaSel = +sw.dataset.semana; carregarAdmin('semana'); return; }
+  const pc = t.closest('[data-periodo-cli]'); if(pc){ periodoCli = +pc.dataset.periodoCli; carregarAdmin('clientes'); return; }
+  const cr = t.closest('[data-copiar-resumo]'); if(cr){ enviarLink('', window.__resumoSemana || ''); return; }
   const pe = t.closest('[data-periodo]'); if(pe){ periodoDes = +pe.dataset.periodo; carregarAdmin('desempenho'); return; }
   const vd2 = t.closest('[data-vend]'); if(vd2){ painelVendedor(vd2.dataset.vend); return; }
   const ir = t.closest('[data-ir]'); if(ir){ const el = document.getElementById(ir.dataset.ir); if(el) el.scrollIntoView({behavior:'smooth', block:'start'}); return; }
@@ -1456,5 +1459,6 @@ window.addEventListener('cvd-conta-pronta', () => { if(window.__bootFeito) retur
 if(window.__contaPronta && !window.__bootFeito){ window.__bootFeito = true; boot(); }
 if('serviceWorker' in navigator && location.protocol.startsWith('http')){ navigator.serviceWorker.register('sw.js').catch(()=>{}); }
 </script>
+<script src="admin-analise.js"></script>
 </body>
 </html>

@@ -82,6 +82,13 @@ window.CVD = {
    "nome": "Acessórios",
    "icone": "chave",
    "resumo": "Bomba peristáltica, chave catraca e afins"
+  },
+  {
+   "id": "linha-elo",
+   "nome": "Linha Elo",
+   "icone": "pilula",
+   "resumo": "Pontas T1T e T1UX · encaixes D, E e N",
+   "nota": "Pontas de ultrassom de alta performance, compatíveis com a maioria dos piezoelétricos do mercado. T1T (profilaxia, raspagem e manutenção) e T1UX com Diamante CVD (manchas, biofilme, próteses e peri-implantar). Encaixes D, E e N. 30 dias de garantia de compatibilidade e performance, ou o dinheiro de volta. Os valores seguem a política comercial: confira se não houve alteração antes de passar ao cliente."
   }
  ],
  "materiais": [
@@ -644,6 +651,75 @@ window.CVD = {
    "mb": 28.3,
    "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-lupas-fechado.pdf",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/CATALOGO_CVLUPAS_fechado.pdf"
+  },
+  {
+   "titulo": "Catálogo Linha Elo 2026",
+   "tipo": "catalogo",
+   "produto": "linha-elo",
+   "idioma": "pt",
+   "ano": 2026,
+   "novo": true,
+   "mb": 8.4,
+   "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-linha-elo-2026.pdf",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/CATALOGO_LINHA_ELO_2026.pdf"
+  },
+  {
+   "titulo": "Tabela de valores · Linha Elo",
+   "tipo": "comparativo",
+   "produto": "linha-elo",
+   "idioma": "pt",
+   "novo": true,
+   "aviso": "Confira a política comercial vigente",
+   "mb": 0.3,
+   "url": "https://cloud.cvdentus.com.br/arquivos/arte/elo-08-tabela-de-valores-linha-elo.png",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-08-tabela-de-valores-linha-elo.png"
+  },
+  {
+   "titulo": "Compatibilidade das pontas Elo",
+   "tipo": "comparativo",
+   "produto": "linha-elo",
+   "idioma": "pt",
+   "novo": true,
+   "mb": 1.3,
+   "url": "https://cloud.cvdentus.com.br/arquivos/arte/elo-07-compatibilidade-das-pontas-elo.png",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-07-compatibilidade-das-pontas-elo.png"
+  },
+  {
+   "titulo": "Vídeo · Linha Elo (anúncio)",
+   "tipo": "apoio",
+   "produto": "linha-elo",
+   "idioma": "pt",
+   "novo": true,
+   "mb": 33.2,
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-video-anuncio.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-video-anuncio.mp4"
+  },
+  {
+   "titulo": "Vídeo · Pontas Elo em movimento",
+   "tipo": "apoio",
+   "produto": "linha-elo",
+   "idioma": "pt",
+   "mb": 0.5,
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-video-pontas-em-movimento.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-video-pontas-em-movimento.mp4"
+  },
+  {
+   "titulo": "Site oficial · Linha Elo",
+   "tipo": "landing",
+   "produto": "linha-elo",
+   "idioma": "pt",
+   "url": "https://cvdentus.com.br/linha-elo/"
+  },
+  {
+   "titulo": "Linha Elo · fotos e artes",
+   "tipo": "marketing",
+   "produto": "linha-elo",
+   "idioma": "pt",
+   "novo": true,
+   "mb": 3.9,
+   "url": "#/galeria/elo",
+   "galeria": "elo",
+   "semDownload": true
   }
  ],
  "marcas": [
@@ -942,6 +1018,34 @@ window.CVD = {
       [
        "PDF vetor",
        "linha-elo-vetor.pdf",
+       0.1
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "grupo": "Linha Elo",
+   "logos": [
+    {
+     "nome": "Linha Elo",
+     "nota": "Logo da linha de pontas · PNG sem fundo, SVG e PDF vetor",
+     "img": "linha-elo",
+     "fundo": "claro",
+     "arquivos": [
+      [
+       "PNG",
+       "logo-linha-elo.png",
+       0.05
+      ],
+      [
+       "SVG",
+       "logo-linha-elo.svg",
+       0.02
+      ],
+      [
+       "PDF vetor",
+       "logo-linha-elo.pdf",
        0.1
       ]
      ]
@@ -2840,6 +2944,147 @@ window.CVD = {
       "mb": 0.1
      }
     ]
+   },
+   "elo": {
+    "titulo": "Linha Elo · fotos e artes",
+    "itens": [
+     {
+      "id": "elo-01-ponta-t1t-foto-1",
+      "titulo": "Ponta T1T · foto 1",
+      "grupo": "Pontas Elo",
+      "tipo": "img",
+      "ext": "png",
+      "mb": 0.1
+     },
+     {
+      "id": "elo-02-ponta-t1t-foto-2",
+      "titulo": "Ponta T1T · foto 2",
+      "grupo": "Pontas Elo",
+      "tipo": "img",
+      "ext": "png",
+      "mb": 0.1
+     },
+     {
+      "id": "elo-03-ponta-t1t-foto-3",
+      "titulo": "Ponta T1T · foto 3",
+      "grupo": "Pontas Elo",
+      "tipo": "img",
+      "ext": "png",
+      "mb": 0.2
+     },
+     {
+      "id": "elo-04-ponta-t1ux-diamante-cvd-foto-1",
+      "titulo": "Ponta T1UX Diamante CVD · foto 1",
+      "grupo": "Pontas Elo",
+      "tipo": "img",
+      "ext": "png",
+      "mb": 0.1
+     },
+     {
+      "id": "elo-05-ponta-t1ux-diamante-cvd-foto-2",
+      "titulo": "Ponta T1UX Diamante CVD · foto 2",
+      "grupo": "Pontas Elo",
+      "tipo": "img",
+      "ext": "png",
+      "mb": 0.1
+     },
+     {
+      "id": "elo-06-ponta-t1ux-diamante-cvd-foto-3",
+      "titulo": "Ponta T1UX Diamante CVD · foto 3",
+      "grupo": "Pontas Elo",
+      "tipo": "img",
+      "ext": "png",
+      "mb": 0.2
+     },
+     {
+      "id": "elo-07-compatibilidade-das-pontas-elo",
+      "titulo": "Compatibilidade das pontas Elo",
+      "grupo": "Tabelas",
+      "tipo": "img",
+      "ext": "png",
+      "mb": 1.3
+     },
+     {
+      "id": "elo-08-tabela-de-valores-linha-elo",
+      "titulo": "Tabela de valores Linha Elo",
+      "grupo": "Tabelas",
+      "tipo": "img",
+      "ext": "png",
+      "mb": 0.3
+     },
+     {
+      "id": "elo-09-cartela-elo",
+      "titulo": "Cartela Elo",
+      "grupo": "Cartelas",
+      "tipo": "img",
+      "ext": "png",
+      "mb": 0.5
+     },
+     {
+      "id": "elo-10-cartela-elo-1",
+      "titulo": "Cartela Elo · 1",
+      "grupo": "Cartelas",
+      "tipo": "img",
+      "ext": "png",
+      "mb": 0.1
+     },
+     {
+      "id": "elo-11-cartela-elo-2",
+      "titulo": "Cartela Elo · 2",
+      "grupo": "Cartelas",
+      "tipo": "img",
+      "ext": "png",
+      "mb": 0.6
+     },
+     {
+      "id": "elo-12-catalogo-capa",
+      "titulo": "Catálogo · Capa",
+      "grupo": "Páginas do catálogo",
+      "tipo": "img",
+      "ext": "png",
+      "mb": 0
+     },
+     {
+      "id": "elo-13-catalogo-ponta-t1t",
+      "titulo": "Catálogo · Ponta T1T",
+      "grupo": "Páginas do catálogo",
+      "tipo": "img",
+      "ext": "png",
+      "mb": 0.1
+     },
+     {
+      "id": "elo-14-catalogo-ponta-t1ux",
+      "titulo": "Catálogo · Ponta T1UX",
+      "grupo": "Páginas do catálogo",
+      "tipo": "img",
+      "ext": "png",
+      "mb": 0.1
+     },
+     {
+      "id": "elo-15-catalogo-guia-de-encaixes",
+      "titulo": "Catálogo · Guia de encaixes",
+      "grupo": "Páginas do catálogo",
+      "tipo": "img",
+      "ext": "png",
+      "mb": 0.1
+     },
+     {
+      "id": "elo-16-catalogo-garantias-e-suporte",
+      "titulo": "Catálogo · Garantias e suporte",
+      "grupo": "Páginas do catálogo",
+      "tipo": "img",
+      "ext": "png",
+      "mb": 0
+     },
+     {
+      "id": "elo-17-catalogo-vantagens-do-diamante",
+      "titulo": "Catálogo · Vantagens do diamante",
+      "grupo": "Páginas do catálogo",
+      "tipo": "img",
+      "ext": "png",
+      "mb": 0
+     }
+    ]
    }
   }
  },
@@ -2929,5 +3174,5 @@ window.CVD = {
    "nome": "Demonstrações e casos clínicos"
   }
  ],
- "rev": 1792159840106
+ "rev": 1792416215285
 };
