@@ -489,7 +489,7 @@ const lista = (itens, opt={}) => `<div class="lista">${itens.map((x,i)=>linha(x,
 const secao = (t, n='') => `<div class="sec"><h2>${t}</h2>${n!==''?`<span>${n}</span>`:''}</div>`;
 const vazio = (msg) => `<div class="vazio">${ic('busca')}<p>${msg}</p></div>`;
 const linkRow = (href, icone, titulo, n='') => `<a class="link-row anima" href="${href}">${ic(icone)}<span class="t">${titulo}</span>${n!==''?`<span class="n">${n}</span>`:''}<span class="seta">${ic('seta')}</span></a>`;
-const linhaExt = (href, icone, titulo, meta) => `<div class="linha anima"><a class="abrir" href="${esc(href)}" target="_blank" rel="noopener">${leadPorThumb(href,icone)}<span class="txt"><span class="t">${esc(titulo)}</span><span class="m" style="display:block">${esc(meta)}</span></span></a><span class="acoes"><span class="ibtn" style="color:var(--fraco)">${ic('seta')}</span></span></div>`;
+const linhaExt = (href, icone, titulo, meta) => `<div class="linha anima"><a class="abrir" href="${esc(href)}" target="_blank" rel="noopener">${leadPorThumb(href,icone)}<span class="txt"><span class="t">${esc(titulo)}</span><span class="m" style="display:block">${esc(meta)}</span></span></a><span class="acoes"><button class="ibtn comp" data-comp-gen="${esc(JSON.stringify({ t: titulo, u: href, d: '', tp: 'Página', mb: null }))}" aria-label="Compartilhar">${ic('share')}</button></span></div>`;
 const linkRowExt = (href, icone, titulo) => `<a class="link-row anima" href="${esc(href)}" target="_blank" rel="noopener">${ic(icone)}<span class="t">${esc(titulo)}</span><span class="seta">${ic('seta')}</span></a>`;
 const largo = (titulo, sub='') => `<div class="largo anima"><h1>${titulo}</h1>${sub?`<p>${sub}</p>`:''}</div>`;
 const outrosIdiomas = itens => {
@@ -603,7 +603,7 @@ function painelFoto(fid){
   abrirPainel(`<div class="img-g" style="background:var(--surface-2)"><img src="${esc(CF.prev + it.id + '.webp')}" alt="${esc(it.titulo)}" onerror="this.onerror=null;this.src='img/eq/${esc(it.id)}.webp'"></div>
     <h3 style="margin-top:14px">${esc(it.titulo)}</h3><p class="sub">${esc(PROD[eq].nome)} · ${esc(g.nome)}</p>
     ${g.ia?'<p class="desc" style="color:var(--alerta)">Imagem gerada com IA. Confira se representa fielmente o produto antes de usar.</p>':''}
-    <div class="botoes"><a class="btn prim" href="${esc(CF.dl + it.id + '.' + it.ext)}" download data-dl="foto" data-mb="${it.mb}">${ic('download')}Baixar ${it.ext.toUpperCase()} <small>${fmtTam(Math.max(.1,it.mb))}</small></a></div>`);
+    <div class="botoes"><a class="btn prim" href="${esc(CF.dl + it.id + '.' + it.ext)}" download data-dl="foto" data-mb="${it.mb}">${ic('download')}Baixar ${it.ext.toUpperCase()} <small>${fmtTam(Math.max(.1,it.mb))}</small></a>${btnComp(PROD[eq].nome + ' · ' + it.titulo, CF.dl + it.id + '.' + it.ext, CF.dl + it.id + '.' + it.ext, 'Foto', it.mb)}</div>`);
 }
 function telaTipo(tipo){
   const t = TIPOS[tipo]; if(!t) return telaInicio();
@@ -674,7 +674,7 @@ function painelPonta(cod){
     <div class="grade" style="margin-top:14px">${I.f.map(([id,rot,mb])=>`<a class="fcard" href="${esc(DL+id+'.png')}" download data-dl="ponta-png" data-tit="${esc(cod+' · '+rot)}" data-mb="${mb}">
       <span class="im" style="background:#fff;border:1px solid var(--linha)"><img loading="lazy" alt="${esc(cod+' · '+rot)}" src="${esc(PV+id+'.webp')}"></span>
       <b>${esc(rot)}</b><small>PNG · ${fmtTam(Math.max(.1,mb))} · baixar</small></a>`).join('')}</div>
-    <div class="botoes" style="margin-top:14px"><a class="btn sec" href="${esc(I.link)}" target="_blank" rel="noopener">${ic('link')}Ver a ponta no site</a></div>`);
+    <div class="botoes" style="margin-top:14px">${btnComp('Ponta ' + cod, I.link, '', 'Ponta')}<a class="btn sec" href="${esc(I.link)}" target="_blank" rel="noopener">${ic('link')}Ver a ponta no site</a></div>`);
 }
 function telaPontas(eqId, modoId){
   const e = PONTAS.find(x=>x.id===eqId);
@@ -722,7 +722,7 @@ function painelModelo(id){
   abrirPainel(`<div class="img-g" style="background:#fff"><img src="img/modelos/${x.id}.webp" alt=""></div>
     <h3 style="margin-top:14px">${esc(x.codigo)}</h3><p class="sub">${esc(sub)}${x.mags?' · '+esc(x.mags):''}</p>
     <p class="desc">Seleção de ${x.n} fotos em alta resolução, prontas para uso em apresentações e redes.</p>
-    <div class="botoes"><a class="btn prim" href="${esc(x.zip)}" download data-dl="modelo" data-mb="${x.mb}">${ic('download')}Baixar fotos <small>${x.n} · ${fmtTam(x.mb)}</small></a></div>`);
+    <div class="botoes"><a class="btn prim" href="${esc(x.zip)}" download data-dl="modelo" data-mb="${x.mb}">${ic('download')}Baixar fotos <small>${x.n} · ${fmtTam(x.mb)}</small></a>${btnComp('Lupa ' + x.codigo + ' · fotos', x.zip, x.zip, 'Fotos', x.mb)}</div>`);
 }
 function telaFotoforos(){
   const g = LUPAS.grupos.find(x=>x.id==='fotoforos'); if(!g) return telaInicio();
@@ -763,6 +763,7 @@ function painelLupa(id){
     <p class="desc">${esc(it.desc)}</p>
     <div class="botoes">
       <a class="btn prim" href="${esc(it.video.ver)}" target="_blank" rel="noopener">${ic('video')}Ver vídeo 360°</a>
+      ${btnComp(it.nome + (it.kit ? ' · ' + it.kit : '') + ' · vídeo 360°', it.video.ver, '', 'Vídeo')}
       <a class="btn sec" href="${esc(it.fotos.url)}" download data-dl="lupa" data-mb="${it.fotos.mb}">${ic('download')}Baixar fotos <small>${it.fotos.n} · ${fmtTam(it.fotos.mb)}</small></a>
       <a class="btn sec" href="${esc(it.video.baixar)}" download data-dl="lupa" data-mb="${it.video.mb}">${ic('download')}Baixar vídeo <small>${fmtTam(it.video.mb)}</small></a>
     </div>`);
@@ -778,7 +779,7 @@ function painelLogo(gi, li){
   const g = D.marcas[gi], l = g.logos[li], pasta = g.pasta || 'logos';
   abrirPainel(`<div class="img-g logo-box ${l.fundo}" style="padding:26px;border:0;aspect-ratio:auto">${l.doc ? ic('doc').replace('class="i"','class="i" style="width:48px;height:48px;color:var(--fraco)"') : `<img src="img/${pasta==='selos'?'selos':'logos'}/${l.img}.webp" alt="" style="max-height:120px">`}</div>
     <h3 style="margin-top:14px">${esc(l.nome)}</h3><p class="sub">${esc(l.nota)}</p>
-    <div class="botoes">${l.arquivos.map(([fmt,arq,mb],i)=>`<a class="btn ${i===0?'prim':'sec'}" href="${esc(D.marcasBase + pasta + '/' + arq)}" download data-dl="logo" data-mb="${mb}">${ic('download')}${esc(fmt)} <small>${fmtTam(Math.max(mb,.1))}</small></a>`).join('')}</div>`);
+    <div class="botoes">${l.arquivos.map(([fmt,arq,mb],i)=>`<a class="btn ${i===0?'prim':'sec'}" href="${esc(D.marcasBase + pasta + '/' + arq)}" download data-dl="logo" data-mb="${mb}">${ic('download')}${esc(fmt)} <small>${fmtTam(Math.max(mb,.1))}</small></a>`).join('')}${btnComp(l.nome, D.marcasBase + pasta + '/' + l.arquivos[0][1], D.marcasBase + pasta + '/' + l.arquivos[0][1], 'Logo')}</div>`);
 }
 
 function telaMarketing(){
@@ -835,7 +836,7 @@ function painelGal(gid, iid){
     ? `<div class="player"><video controls playsinline preload="metadata" poster="${esc(PV + it.id + '.webp')}" src="${esc(arq)}"></video></div>`
     : `<div class="img-g" style="background:var(--surface-2)"><img src="${esc(arq)}" alt="${esc(it.titulo)}" onerror="this.onerror=null;this.src='${esc(PV + it.id + '.webp')}'"></div>`;
   abrirPainel(`${midia}<h3 style="margin-top:14px">${esc(it.titulo)}</h3><p class="sub">${esc(GL.titulo)} · ${esc(it.grupo)}</p>
-    <div class="botoes"><a class="btn prim" href="${esc(arq)}" download data-dl="gal" data-tit="${esc(GL.titulo + ' · ' + it.titulo)}" data-mb="${it.mb}">${ic('download')}Baixar ${it.tipo === 'video' ? 'vídeo' : it.ext.toUpperCase()} <small>${fmtTam(Math.max(.1, it.mb))}</small></a><button class="btn prim" data-copiar="${esc(arq)}">${ic('share')}Copiar link</button><button class="btn sec" data-comentar-ctx="${esc('galeria:' + it.id + '|' + GL.titulo + ' · ' + it.titulo)}">${ic('mega')}Sugerir ou comentar</button></div>`);
+    <div class="botoes"><a class="btn prim" href="${esc(arq)}" download data-dl="gal" data-tit="${esc(GL.titulo + ' · ' + it.titulo)}" data-mb="${it.mb}">${ic('download')}Baixar ${it.tipo === 'video' ? 'vídeo' : it.ext.toUpperCase()} <small>${fmtTam(Math.max(.1, it.mb))}</small></a>${btnComp(GL.titulo + ' · ' + it.titulo, arq, arq, it.tipo === 'video' ? 'Vídeo' : 'Imagem', it.mb)}<button class="btn sec" data-copiar="${esc(arq)}">${ic('link')}Copiar link direto (sem rastreio)</button><button class="btn sec" data-comentar-ctx="${esc('galeria:' + it.id + '|' + GL.titulo + ' · ' + it.titulo)}">${ic('mega')}Sugerir ou comentar</button></div>`);
   const v = painel.querySelector('video'); if(v) v.play().catch(() => {});
 }
 function painelItem(id){
@@ -1348,6 +1349,19 @@ async function enviarLink(titulo, link){
   }
   toast(ok ? 'Link copiado' : 'Não foi possível copiar o link');
 }
+const btnComp = (titulo, url, baixarUrl, tipo, mb, rot) => `<button class="btn prim" data-comp-gen="${esc(JSON.stringify({ t: titulo, u: url, d: baixarUrl || '', tp: tipo || '', mb: typeof mb === 'number' ? mb : null }))}">${ic('share')}${rot || 'Compartilhar'}</button>`;
+async function compartilharGenerico(o){
+  const C = CONTA();
+  track('compartilhar', 'g' + String(o.u).slice(-40), o.t, '');
+  if(C && C.configurado && C.aprovado()){
+    try{
+      const id = await C.criarCompartilhamento({ titulo: o.t, url: o.u, baixarUrl: o.d || undefined, tipo: o.tp || undefined, mb: typeof o.mb === 'number' ? o.mb : undefined });
+      await enviarLink(o.t, new URL('v.html', location.href.split('#')[0]).href + '#' + id);
+    }catch(e){ toast('Não foi possível gerar o link agora'); }
+    return;
+  }
+  await enviarLink(o.t, o.u);
+}
 async function compartilhar(x){
   const nome = x.esp ? `${x.titulo}${x.prof?' · '+x.prof:''}` : x.titulo;
   const C = CONTA();
@@ -1389,6 +1403,7 @@ document.addEventListener('click', e=>{
   const mod = t.closest('[data-modelo]'); if(mod){ painelModelo(mod.dataset.modelo); return; }
   const lupa = t.closest('[data-lupa]'); if(lupa){ painelLupa(lupa.dataset.lupa); return; }
   const lp = t.closest('[data-logo-p]'); if(lp){ const [gi,li] = lp.dataset.logoP.split(':'); painelLogo(+gi,+li); return; }
+  const cg = t.closest('[data-comp-gen]'); if(cg){ try{ compartilharGenerico(JSON.parse(cg.dataset.compGen)); }catch(e){} return; }
   const cl = t.closest('[data-copiar]'); if(cl){ enviarLink('', cl.dataset.copiar); return; }
   const cp = t.closest('[data-compartilhar]'); if(cp){ compartilhar(TODOS[cp.dataset.compartilhar]); return; }
   const cc = t.closest('[data-comentar-ctx]'); if(cc){ const [ch, ...ti] = cc.dataset.comentarCtx.split('|'); fecharPainel(); setTimeout(() => painelComentario({ chave: ch, titulo: ti.join('|') }), 200); return; }
