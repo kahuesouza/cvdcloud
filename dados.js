@@ -124,14 +124,14 @@ window.CVD = {
    "aviso": "Versão 2020"
   },
   {
-   "titulo": "Catálogo Representantes",
+   "titulo": "Catálogo Técnico · Representantes",
    "tipo": "catalogo",
    "produto": "geral",
    "idioma": "pt",
    "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-representantes.pdf",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-representantes.pdf",
-   "mb": 9.1,
-   "aviso": "Versão 2021 — revisar"
+   "mb": 7.9,
+   "aviso": "Versão 2021"
   },
   {
    "titulo": "Tabela Comparativa dos Piezos",
@@ -3156,5 +3156,5 @@ window.CVD = {
    "nome": "Demonstrações e casos clínicos"
   }
  ],
- "rev": 1792417734376
+ "rev": 1792417908290
 };
