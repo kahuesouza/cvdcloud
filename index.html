@@ -334,7 +334,7 @@ nav.base a.on::after{content:"";position:absolute;top:-7px;left:50%;width:26px;h
 
 @media (min-width:640px){ .tiles{grid-template-columns:repeat(3,1fr)} .tile.destaque{grid-column:span 3} .grade{grid-template-columns:repeat(3,1fr)} }
 </style>
-<link rel="stylesheet" href="cloud.css?v57">
+<link rel="stylesheet" href="cloud.css?v78">
 </head>
 <body>
 <header class="bar" id="bar"></header>
@@ -414,11 +414,13 @@ const fmtTam = mb => mb >= 1000 ? (mb/1000).toFixed(1).replace('.',',')+' GB' : 
 const reduzido = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const favUrls = new Set(ls.get('favUrls', []));
 let OCULTOS = { urls: [], titulos: {} };
+let FAM = {};
 function prepararDados(){
   D = window.CVD;
   if(OCULTOS.urls.length){ const oc = new Set(OCULTOS.urls); D.materiais = D.materiais.filter(m => !oc.has(m.url)); D.procedimentos = D.procedimentos.filter(p => !oc.has(p.url)); } PONTAS = window.CVD_PONTAS || []; IMGP = window.CVD_PONTAS_IMG || {}; LUPAS = window.CVD_LUPAS;
   THUMBS = window.CVD_THUMBS || {}; FOT = (window.CVD_FOTOS || {}).equip || {};
   D.materiais.forEach((m,i)=> m.id = 'm'+i);
+  FAM = {}; D.materiais.forEach(m=>{ if(m.familia){ (FAM[m.familia] = FAM[m.familia] || {})[m.idioma || 'pt'] = m; } });
   D.procedimentos.forEach((p,i)=> p.id = 'p'+i);
   PROD = Object.fromEntries(D.produtos.map(p=>[p.id,p]));
   ESP = Object.fromEntries(D.especialidades.map(e=>[e.id,e]));
@@ -478,10 +480,17 @@ async function ocultarItem(id){
   OCULTOS = o; fecharPainel(); prepararDados(); render(); toast('Item excluído do app');
 }
 const isVideo = x => /\.mp4(\?|$)/i.test((x && x.url) || '');
+function chipsIdioma(x){
+  const f = x.familia && FAM[x.familia]; if(!f) return '';
+  const ks = ['pt','en','es'].filter(k=>f[k]); if(ks.length < 2) return '';
+  const atual = x.idioma || 'pt';
+  return `<span class="idiomas" role="group" aria-label="Idioma do catálogo">${ks.map(k=>`<span role="button" tabindex="0" class="idm${k===atual?' on':''}" data-idioma="${f[k].id}" aria-pressed="${k===atual}" title="${esc(LANG[k])}">${k.toUpperCase()}</span>`).join('')}</span>`;
+}
 function linha(x, opt={}){
+  if(x.familia && !opt.fixo && (x.idioma || 'pt') === 'pt'){ const F = FAM[x.familia], pf = ls.get('idioma_' + x.familia, 'pt'); if(F && F[pf]) x = F[pf]; }
   const dl = linkDownload(x), tam = tamDownload(x), vid = isVideo(x), gal = !!x.galeria;
   return `<div class="linha anima" style="--i:${opt.i||0}">
-    <a class="abrir" data-item="${x.id}" ${vid ? `data-video="${x.id}"` : ''} href="${esc(x.url)}" ${gal ? '' : 'target="_blank" rel="noopener"'}>${leadDe(x)}<span class="txt"><span class="t">${esc(x.titulo)}</span><span class="m" style="display:block">${metaDe(x,opt)}</span></span></a>
+    <a class="abrir" data-item="${x.id}" ${vid ? `data-video="${x.id}"` : ''} href="${esc(x.url)}" ${gal ? '' : 'target="_blank" rel="noopener"'}>${leadDe(x)}<span class="txt"><span class="t">${esc(x.titulo)}</span><span class="m" style="display:block">${metaDe(x,opt)}</span>${chipsIdioma(x)}</span></a>
     <span class="acoes"><button class="ibtn" data-comentar="${x.id}" aria-label="Deixar sugestão ou comentário">${ic('mega')}</button>${gal ? '' : `<button class="ibtn comp" data-compartilhar="${x.id}" aria-label="Copiar link para compartilhar">${ic('share')}</button>`}${dl ? `<a class="ibtn" href="${esc(dl)}" download data-dl="${x.id}" data-mb="${tam||0}" aria-label="Baixar${tam?' ('+fmtTam(tam)+')':''}">${ic('download')}</a>` : ''}<button class="ibtn" data-mais="${x.id}" aria-label="Mais opções">${ic('mais')}</button></span></div>`;
 }
 const track = (tipo, chave, titulo, extra) => { const C = CONTA(); if(C && C.configurado && C.registrar) C.registrar(tipo, String(chave||''), String(titulo||''), extra||''); };
@@ -493,7 +502,7 @@ const linhaExt = (href, icone, titulo, meta) => `<div class="linha anima"><a cla
 const linkRowExt = (href, icone, titulo) => `<a class="link-row anima" href="${esc(href)}" target="_blank" rel="noopener">${ic(icone)}<span class="t">${esc(titulo)}</span><span class="seta">${ic('seta')}</span></a>`;
 const largo = (titulo, sub='') => `<div class="largo anima"><h1>${titulo}</h1>${sub?`<p>${sub}</p>`:''}</div>`;
 const outrosIdiomas = itens => {
-  const o = itens.filter(m=>!doPt(m)); if(!o.length) return '';
+  const o = itens.filter(m=>!doPt(m) && !(m.familia && FAM[m.familia] && FAM[m.familia].pt)); if(!o.length) return '';
   return `<details class="outros"><summary>Outros idiomas · ${o.length}${ic('seta')}</summary>${lista(o)}</details>`;
 };
 function abas(lista_, ativo, base){
@@ -1395,6 +1404,7 @@ async function compartilhar(x){
   await enviarLink(nome, x.url);   // modo de preparação (sem Firebase)
 }
 document.addEventListener('pointermove', e => { const c = e.target.closest && e.target.closest('.tile,.cartao-c'); if(!c) return; const r = c.getBoundingClientRect(); c.style.setProperty('--mx', (e.clientX - r.left) + 'px'); c.style.setProperty('--my', (e.clientY - r.top) + 'px'); }, { passive: true });
+document.addEventListener('keydown', e=>{ if((e.key === 'Enter' || e.key === ' ') && e.target.matches && e.target.matches('.idm')){ e.preventDefault(); e.target.click(); } });
 document.addEventListener('click', e=>{
   const t = e.target;
   if(t.closest('[data-tema]')){ aplicarTema(!temaEscuro()); toast(temaEscuro() ? 'Visual escuro' : 'Visual branco'); return; }
@@ -1402,6 +1412,12 @@ document.addEventListener('click', e=>{
   if(t.closest('[data-fechar-busca]')){ fecharBusca(); return; }
   const sug = t.closest('[data-sug]'); if(sug){ const q = document.getElementById('q'); q.value = sug.dataset.sug; q.dispatchEvent(new Event('input')); q.focus(); return; }
   const gm = t.closest('[data-gmodo]'); if(gm){ modoGate = gm.dataset.gmodo; atualizarGate(); return; }
+  const idm = t.closest('[data-idioma]'); if(idm){
+    e.preventDefault(); e.stopPropagation();
+    const v = TODOS[idm.dataset.idioma], row = idm.closest('.linha');
+    if(v && row){ ls.set('idioma_' + v.familia, v.idioma || 'pt'); const tmp = document.createElement('div'); tmp.innerHTML = linha(v, { fixo:true }); const n = tmp.firstElementChild; n.classList.remove('anima'); row.replaceWith(n); }
+    return;
+  }
   const it = t.closest('[data-item]'); if(it){ const x = TODOS[it.dataset.item]; if(x) track('abrir', chaveItem(x), x.titulo, x.produto || x.esp || ''); }
   const vd = t.closest('[data-video]'); if(vd && e.button === 0 && !e.ctrlKey && !e.metaKey && !e.shiftKey){ e.preventDefault(); const xv = TODOS[vd.dataset.video]; if(xv){ const aberto = painel.classList.contains('on'); if(aberto) fecharPainel(); setTimeout(() => painelVideo(xv), aberto ? 220 : 0); } return; }
   const ga = t.closest('[data-gal]'); if(ga){ const [gi, ii] = ga.dataset.gal.split(':'); painelGal(gi, ii); return; }

@@ -231,3 +231,9 @@ body{padding-bottom:calc(var(--nav-h) + env(safe-area-inset-bottom) + 14px)}
   .abas a{font-size:15px}
   .topicos-ir{padding:20px}
 }
+
+/* seletor de idioma do catálogo (PT · EN · ES) */
+.idiomas{display:flex;width:max-content;gap:2px;margin-top:9px;padding:2px;border:1px solid var(--linha);border-radius:999px;background:var(--surface-2)}
+.idm{font-size:11px;font-weight:800;letter-spacing:.08em;padding:5px 13px;border-radius:999px;color:var(--sub);cursor:pointer;transition:background .2s,color .2s;user-select:none}
+.idm:hover{color:var(--texto)}
+.idm.on{background:var(--texto);color:var(--bg)}

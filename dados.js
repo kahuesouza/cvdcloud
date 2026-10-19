@@ -94,6 +94,7 @@ window.CVD = {
  "materiais": [
   {
    "titulo": "Catálogo Equipamentos CVDentus",
+   "familia": "cat-equipamentos",
    "tipo": "catalogo",
    "produto": "geral",
    "idioma": "pt",
@@ -104,6 +105,7 @@ window.CVD = {
   },
   {
    "titulo": "Equipment Catalog CVDentus",
+   "familia": "cat-equipamentos",
    "tipo": "catalogo",
    "produto": "geral",
    "idioma": "en",
@@ -114,6 +116,7 @@ window.CVD = {
   },
   {
    "titulo": "Catálogo Equipos CVDentus",
+   "familia": "cat-equipamentos",
    "tipo": "catalogo",
    "produto": "geral",
    "idioma": "es",
@@ -162,6 +165,7 @@ window.CVD = {
   },
   {
    "titulo": "Catálogo Pontas · Clinical Plus e DentSurg Pro",
+   "familia": "cat-pontas-cp-dsp",
    "tipo": "catalogo",
    "produto": "pontas",
    "idioma": "pt",
@@ -183,6 +187,7 @@ window.CVD = {
   },
   {
    "titulo": "Tips Catalog · Clinical Plus & DentSurg Pro (2026)",
+   "familia": "cat-pontas-cp-dsp",
    "tipo": "catalogo",
    "produto": "pontas",
    "idioma": "en",
@@ -204,6 +209,7 @@ window.CVD = {
   },
   {
    "titulo": "Catálogo Puntas · Clinical Plus y DentSurg Pro (2026)",
+   "familia": "cat-pontas-cp-dsp",
    "tipo": "catalogo",
    "produto": "pontas",
    "idioma": "es",
@@ -513,6 +519,7 @@ window.CVD = {
   },
   {
    "titulo": "DentSurg Pro Catalog",
+   "familia": "cat-dentsurg-pro",
    "tipo": "catalogo",
    "produto": "dentsurg-pro",
    "idioma": "en",
@@ -522,6 +529,7 @@ window.CVD = {
   },
   {
    "titulo": "Catálogo DentSurg Pro",
+   "familia": "cat-dentsurg-pro",
    "tipo": "catalogo",
    "produto": "dentsurg-pro",
    "idioma": "es",
@@ -531,6 +539,7 @@ window.CVD = {
   },
   {
    "titulo": "Folder DentSurg Pro Cirúrgico",
+   "familia": "cat-dentsurg-pro",
    "tipo": "catalogo",
    "produto": "dentsurg-pro",
    "idioma": "pt",
@@ -3178,5 +3187,5 @@ window.CVD = {
    "nome": "Demonstrações e casos clínicos"
   }
  ],
- "rev": 1792437732797
+ "rev": 1792438056316
 };
