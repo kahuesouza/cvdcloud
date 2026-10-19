@@ -40,6 +40,7 @@ svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-l
 .aviso b{color:var(--texto)}
 .aviso .ac{display:flex;gap:14px;margin-top:10px;align-items:center}
 .aviso button{font:inherit;font-weight:700;font-size:13px;border:0;border-radius:10px;padding:9px 16px;cursor:pointer;background:var(--texto);color:var(--bg)}
+.aviso button.sec2{background:var(--surface2);color:var(--texto);border:1px solid var(--linha)}
 .aviso a{color:var(--sub);font-size:12px;text-decoration:underline;cursor:pointer}
 </style>
 </head>
@@ -63,7 +64,6 @@ const CFG = window.CVD_FIREBASE;
 const lerCookie = n => { const m = document.cookie.match(new RegExp('(?:^|; )' + n + '=([^;]*)')); return m ? decodeURIComponent(m[1]) : null; };
 const gravarCookie = (n, v, dias) => { try{ document.cookie = `${n}=${encodeURIComponent(v)}; max-age=${dias * 86400}; path=/; SameSite=Lax${location.protocol === 'https:' ? '; Secure' : ''}`; }catch(e){} };
 const aleatorio = n => { const a = new Uint8Array(n); crypto.getRandomValues(a); return Array.from(a, x => 'abcdefghijklmnopqrstuvwxyz0123456789'[x % 36]).join(''); };
-const naoRastrear = () => navigator.doNotTrack === '1' || lerCookie('cvdcloud_dnt') === '1';
 function aparelho(){
   const ua = navigator.userAgent, m = /Mobi|Android|iPhone/i.test(ua), t = /iPad|Tablet/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
   const so = /Android/i.test(ua) ? 'Android' : /iPhone|iPad|iPod/i.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1) ? 'iOS' : /Windows/i.test(ua) ? 'Windows' : /Mac OS/i.test(ua) ? 'macOS' : /Linux/i.test(ua) ? 'Linux' : 'outro';
@@ -106,8 +106,12 @@ else {
           <div class="botoes">${mostraAbrir || (ehPdf && celular) ? `<a class="btn prim" id="b-abrir" href="${esc(u)}" target="_blank" rel="noopener noreferrer">${ehPdf ? 'Abrir o PDF' : 'Abrir'}</a>` : ''}
           ${dlOk ? `<a class="btn ${mostraAbrir ? 'sec' : 'prim'}" id="b-baixar" href="${esc(d.baixarUrl)}" download rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Baixar${mb ? ' · ' + esc(mb) : ''}</a>` : ''}</div>`;
 
-        /* ---------- registro anônimo do acesso (horário, aparelho, tempo) ---------- */
-        if(!naoRastrear()){
+        /* ---------- registro do acesso, SÓ depois que o visitante aceita ---------- */
+        const depuracao = /[?&]debug=1/.test(location.search);
+        const nota = t => { if(!depuracao) return; let el = document.getElementById('dbg'); if(!el){ el = document.createElement('pre'); el.id = 'dbg'; el.style.cssText = 'margin:18px 0 0;font:12px/1.5 monospace;white-space:pre-wrap;color:var(--sub)'; document.querySelector('main').appendChild(el); } el.textContent += t + '\n'; };
+        let rastreando = false;
+        const iniciarRastreio = () => {
+          if(rastreando) return; rastreando = true;
           const jaTinha = !!lerCookie('cvdcloud_v');
           const vid = lerCookie('cvdcloud_v') || aleatorio(20);
           gravarCookie('cvdcloud_v', vid, 400);
@@ -116,10 +120,14 @@ else {
           const estado = { seg: 0, abriu: false, baixou: false, video: 0 };
           const ref_ = doc(db, 'visitas', sid);
           const base = { compId: id, vid, retorno: jaTinha, disp: ap.disp, so: ap.so, nav: ap.nav, tz: (Intl.DateTimeFormat().resolvedOptions().timeZone || '').slice(0, 40), idioma: (navigator.language || '').slice(0, 12), tela: `${screen.width}x${screen.height}`.slice(0, 12), ref };
-          setDoc(ref_, { ...base, ...estado, criadoEm: serverTimestamp(), ultimoSinal: serverTimestamp() }).catch(() => {});
+          let criado = false;
+          const criar = () => setDoc(ref_, { ...base, ...estado, criadoEm: serverTimestamp(), ultimoSinal: serverTimestamp() })
+            .then(() => { criado = true; nota('registro de acesso: ok'); })
+            .catch(e => { nota('registro de acesso: ERRO ' + (e && e.code || e) + (e && e.code === 'permission-denied' ? ' (as regras do Firestore v8 ainda não foram publicadas?)' : '')); });
+          criar();
           let sujo = false, ultimo = Date.now(), visivel = document.visibilityState === 'visible';
-          const enviar = () => { if(!sujo) return; sujo = false; updateDoc(ref_, { seg: estado.seg, abriu: estado.abriu, baixou: estado.baixou, video: Math.round(estado.video), ultimoSinal: serverTimestamp() }).catch(() => {}); };
-          setInterval(() => { const agora = Date.now(); if(visivel && estado.seg < 7200){ estado.seg += Math.min(6, Math.round((agora - ultimo) / 1000)); sujo = true; } ultimo = agora; enviar(); }, 5000);
+          const enviar = () => { if(!sujo || !criado) return; sujo = false; updateDoc(ref_, { seg: estado.seg, abriu: estado.abriu, baixou: estado.baixou, video: Math.round(estado.video), ultimoSinal: serverTimestamp() }).catch(e => nota('atualização: ERRO ' + (e && e.code || e))); };
+          setInterval(() => { const agora = Date.now(); if(visivel && estado.seg < 7200){ estado.seg += Math.min(6, Math.round((agora - ultimo) / 1000)); sujo = true; } ultimo = agora; if(!criado && !criar.tentou){ criar.tentou = true; criar(); } enviar(); }, 5000);
           document.addEventListener('visibilitychange', () => { visivel = document.visibilityState === 'visible'; ultimo = Date.now(); if(!visivel){ sujo = true; enviar(); } });
           addEventListener('pagehide', () => { sujo = true; enviar(); });
           const marca = campo => { if(!estado[campo]){ estado[campo] = true; sujo = true; enviar(); } };
@@ -129,15 +137,17 @@ else {
           if(v){ let ult = 0; v.addEventListener('play', () => marca('abriu')); v.addEventListener('timeupdate', () => { if(!v.paused && v.currentTime > ult && v.currentTime - ult < 2) { estado.video += v.currentTime - ult; sujo = true; } ult = v.currentTime; }); v.addEventListener('seeked', () => { ult = v.currentTime; }); }
           document.getElementById('pdf') && marca('abriu');
           document.getElementById('yt') && marca('abriu');
-          /* aviso de privacidade (uma vez) */
-          if(!lerCookie('cvdcloud_ciente')){
-            const av = document.getElementById('aviso');
-            av.innerHTML = `<b>Privacidade.</b> Este link registra o acesso de forma <b>anônima</b> (horário, tipo de aparelho e tempo na página) para a CVDentus melhorar o atendimento. Não coletamos nome, telefone nem e-mail.
-              <div class="ac"><button id="ok-ciente">Entendi</button><a id="nao-rastrear">Não registrar meus acessos</a></div>`;
-            av.hidden = false;
-            document.getElementById('ok-ciente').onclick = () => { gravarCookie('cvdcloud_ciente', '1', 400); av.hidden = true; };
-            document.getElementById('nao-rastrear').onclick = () => { gravarCookie('cvdcloud_dnt', '1', 400); gravarCookie('cvdcloud_v', '', 0); av.hidden = true; location.reload(); };
-          }
+        };
+        const decisao = lerCookie('cvdcloud_ciente');          // '1' aceitou · '0' recusou
+        if(navigator.doNotTrack === '1' || decisao === '0'){ nota('rastreio desligado (recusado ou "não rastrear" do navegador)'); }
+        else if(decisao === '1'){ iniciarRastreio(); }
+        else {
+          const av = document.getElementById('aviso');
+          av.innerHTML = `<b>Posso registrar seu acesso?</b> Para a CVDentus entender o que interessa aos clientes, registramos de forma <b>anônima</b> o horário, o tipo de aparelho e o tempo que você fica nesta página. <b>Não</b> pedimos nome, telefone nem e-mail, e você pode recusar sem perder nada.
+            <div class="ac"><button id="aceitar">Aceitar</button><button id="recusar" class="sec2">Recusar</button></div>`;
+          av.hidden = false;
+          document.getElementById('aceitar').onclick = () => { gravarCookie('cvdcloud_ciente', '1', 400); av.hidden = true; iniciarRastreio(); };
+          document.getElementById('recusar').onclick = () => { gravarCookie('cvdcloud_ciente', '0', 400); gravarCookie('cvdcloud_v', '', 0); av.hidden = true; nota('rastreio recusado'); };
         }
       }
     }

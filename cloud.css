@@ -200,3 +200,34 @@ body{padding-bottom:calc(var(--nav-h) + env(safe-area-inset-bottom) + 14px)}
 .mf-mini img{display:block;width:100%;height:100%;object-fit:contain}
 .mf-mini.on{border-color:var(--texto);box-shadow:0 0 0 1px var(--texto)}
 .mf-mini:active{transform:scale(.94)}
+
+/* ===== computador: layout largo (a partir de 1024 px) ===== */
+@media (min-width:1024px){
+  main{max-width:1160px;padding:14px 40px 60px}
+  .bar{padding-left:40px;padding-right:40px}
+  .bar-linha{max-width:1160px;margin:0 auto;width:100%}
+  .busca-topo{width:min(100%,560px);height:48px;font-size:15px}
+  .rolagem{margin-left:0;margin-right:0;padding:0;overflow:visible;flex-wrap:nowrap;gap:22px}
+  .pc{flex:1 1 0;min-width:0}
+  .pc .img{height:210px}
+  .pc b{font-size:15.5px}
+  .area{padding:30px 30px 26px;border-radius:26px}
+  .area-topo h2{font-size:30px}
+  .area-topo p{font-size:15px;max-width:34em}
+  .area-grade{gap:22px;margin-top:24px}
+  .area-card .img{height:190px}
+  .area-card b{font-size:15.5px}
+  .area-esp{gap:12px}
+  .area-esp a{padding:14px 22px;font-size:16px}
+  .tiles{grid-template-columns:repeat(5,1fr);gap:16px}
+  .tile{padding:20px}
+  .lista{display:grid;grid-template-columns:1fr 1fr;column-gap:48px;padding:0 24px}
+  .lista .linha:nth-child(2),.lista .link-row:nth-child(2){border-top:0}
+  .grade{grid-template-columns:repeat(4,1fr);gap:20px 18px}
+  .largo h1{font-size:40px}
+  .sec{margin-top:44px}
+  .sec h2{font-size:12.5px}
+  nav.base div{max-width:640px}
+  .abas a{font-size:15px}
+  .topicos-ir{padding:20px}
+}
