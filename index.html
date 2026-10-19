@@ -715,44 +715,31 @@ function telaModelos(){
     html += secao(t==='Fotóforo'?'Fotóforos':t==='Armação'?'Armações':'Lupas '+t, g.length) + `<div class="lista">${g.map(x=>linhaModelo(x,i++)).join('')}</div>`; });
   return html;
 }
+const MFOTO_BASE = 'https://cloud.cvdentus.com.br/arquivos/modelos/';
+const mfotoUrl = (id, i) => MFOTO_BASE + id + '_' + String(i).padStart(2, '0') + '.jpg';
 function painelModelo(id){
   const x = (LUPAS.modelos||[]).find(m=>m.id===id); if(!x) return;
   const sub = [x.linha, x.tipo].filter(Boolean).join(' · ');
-  abrirPainel(`<div class="img-g" style="background:#fff"><img src="img/modelos/${x.id}.webp" alt=""></div>
+  const n = x.n || 1, fotos = Array.from({ length: n }, (_, k) => k + 1);
+  const nome1 = `Lupa ${x.codigo} · foto 1`;
+  abrirPainel(`<div class="img-g" style="background:#fff"><img id="mf-img" src="${esc(mfotoUrl(id, 1))}" alt="${esc(x.codigo)}" onerror="this.onerror=null;this.src='img/modelos/${esc(x.id)}.webp'"></div>
     <h3 style="margin-top:14px">${esc(x.codigo)}</h3><p class="sub">${esc(sub)}${x.mags?' · '+esc(x.mags):''}</p>
-    <p class="desc">Seleção de ${x.n} fotos em alta resolução, prontas para uso em apresentações e redes.</p>
-    <div class="botoes"><a class="btn prim" href="${esc(x.zip)}" download data-dl="modelo" data-mb="${x.mb}">${ic('download')}Baixar fotos <small>${x.n} · ${fmtTam(x.mb)}</small></a>${btnComp('Lupa ' + x.codigo + ' · fotos', x.zip, x.zip, 'Fotos', x.mb)}</div>`);
+    <p class="sub" id="mf-leg" style="margin-top:2px">Foto 1 de ${n} · toque em uma miniatura para ver e baixar só ela</p>
+    <div class="mf-tiras" role="list">${fotos.map(i => `<button class="mf-mini${i === 1 ? ' on' : ''}" role="listitem" data-mfoto="${esc(id)}:${i}" aria-label="Foto ${i}"><img loading="lazy" alt="" src="${esc(mfotoUrl(id, i))}"></button>`).join('')}</div>
+    <div class="botoes">
+      <a class="btn prim" id="mf-dl" href="${esc(mfotoUrl(id, 1))}" download="lupa-${esc(id)}-01.jpg" data-dl="modelo-foto" data-mb="0.1">${ic('download')}Baixar esta foto</a>
+      <a class="btn sec" href="${esc(x.zip)}" download data-dl="modelo" data-mb="${x.mb}">${ic('download')}Baixar todas as ${n} fotos <small>${fmtTam(x.mb)}</small></a>
+      <button class="btn sec" id="mf-comp" data-comp-gen="${esc(JSON.stringify({ t: nome1, u: mfotoUrl(id, 1), d: mfotoUrl(id, 1), tp: 'Foto', mb: 0.1 }))}">${ic('share')}Compartilhar esta foto</button>
+    </div>`);
 }
-function telaFotoforos(){
-  const g = LUPAS.grupos.find(x=>x.id==='fotoforos'); if(!g) return telaInicio();
-  const mods = (LUPAS.modelos||[]).filter(x=>x.tipo==='Fotóforo');
-  const cards = `<div class="grade">${g.itens.map((it,i)=>`<button class="cartao anima" style="--i:${i}" data-lupa="${it.id}"><span class="im"><img loading="lazy" src="img/lupas/${it.img}.webp" alt="${esc(it.nome)}"></span><b>${esc(it.nome)}</b><small>${esc(it.kit || 'Fotóforo LED')}</small></button>`).join('')}</div>`;
-  return { titulo:'Fotóforos', voltar:'#/', corpo: largo('Fotóforos','Iluminação LED frontal de precisão para lupas e procedimentos.')
-    + `<div class="nota anima" style="--i:1">${ic('info')}<div><b>Antes de passar valores</b>${esc(LUPAS.nota)}</div></div>`
-    + secao('Modelos', g.itens.length) + `<p style="color:var(--sub);font-size:13.5px;margin:6px 0 0">Toque para ver a descrição, o vídeo e baixar fotos.</p>` + cards
-    + secao('Fotos por código', mods.length) + `<div class="lista">${mods.map((x,i)=>linhaModelo(x,i)).join('')}</div>`
-    + secao('Mais') + `<div class="lista">${linhaExt(LUPAS.catalogoOnline,'globo','Catálogo online com vídeos 360°','Fotóforos, lupas e armações')}</div>` };
-}
-function telaLupas(grupoId){
-  const gs = gruposLupas();
-  if(grupoId==='codigos'){
-    return { titulo:'Lupas', voltar:'#/', corpo: largo('Lupas','Lupas, fotóforos e armações CVDentus.')
-      + abas([...gs.map(g=>({id:g.id,nome:g.nome.replace('Lupas ',''),n:g.itens.length})), {id:'codigos',nome:'Por código',n:modelosLupas().length}], 'codigos', '#/lupas')
-      + `<p style="color:var(--sub);font-size:13.5px;margin:10px 0 0">Cada modelo pelo código, com a seleção de fotos para baixar.</p>` + telaModelos() };
-  }
-  const ativo = gs.find(g=>g.id===grupoId) || gs[0];
-  const itens = `<div class="grade">${ativo.itens.map((it,i)=>`<button class="cartao anima" style="--i:${i}" data-lupa="${it.id}"><span class="im"><img loading="lazy" src="img/lupas/${it.img}.webp" alt="${esc(it.nome)}"></span><b>${esc(it.nome)}</b><small>${esc(it.kit || (ativo.id==='flip'?'Flip-up':ativo.id==='ttl'?'TTL':''))}</small></button>`).join('')}</div>`;
-  const pdf = LUPAS.pdf;
-  const docs = `<div class="lista">
-    <div class="linha anima"><a class="abrir" href="${esc(pdf.baixar)}" download data-dl="lupas-pdf" data-mb="${pdf.mb}">${leadPorThumb(pdf.baixar,'livro')}<span class="txt"><span class="t">Catálogo de lupas (PDF oficial)</span><span class="m" style="display:block">2026 · ${fmtTam(pdf.mb)}</span></span></a><span class="acoes"><a class="ibtn" href="${esc(pdf.baixar)}" download data-dl="lupas-pdf" data-mb="${pdf.mb}" aria-label="Baixar">${ic('download')}</a></span></div>
-    ${linhaExt(LUPAS.catalogoOnline,'globo','Catálogo online com vídeos 360°','Vídeos 360° de cada modelo')}
-    ${linhaExt(LUPAS.simulador,'lupa','Simulador de lupas','Escolha a lupa ideal')}</div>`;
-  return { titulo:'Lupas', voltar:'#/', corpo: largo('Lupas','Lupas, fotóforos e armações CVDentus.')
-    + `<div class="nota anima" style="--i:1">${ic('info')}<div><b>Antes de passar valores</b>${esc(LUPAS.nota)}</div></div>`
-    + secao('Catálogo e simulador') + docs
-    + `<div style="margin-top:8px">${linkRow('#/produto/fotoforos','lupa','Fotóforos (iluminação LED)',(LUPAS.grupos.find(g=>g.id==='fotoforos')||{itens:[]}).itens.length+' modelos')}</div>`
-    + abas([...gs.map(g=>({id:g.id,nome:g.nome.replace('Lupas ',''),n:g.itens.length})), {id:'codigos',nome:'Por código',n:modelosLupas().length}], ativo.id, '#/lupas')
-    + `<p style="color:var(--sub);font-size:13.5px;margin:10px 0 0">${esc(ativo.sub)} Toque para ver o vídeo 360° e baixar fotos e vídeo.</p>` + itens };
+function trocarFotoModelo(id, i){
+  const x = (LUPAS.modelos||[]).find(m=>m.id===id); if(!x) return;
+  const u = mfotoUrl(id, i), nn = String(i).padStart(2, '0');
+  const img = document.getElementById('mf-img'); if(img){ img.onerror = null; img.src = u; }
+  const dl = document.getElementById('mf-dl'); if(dl){ dl.href = u; dl.setAttribute('download', `lupa-${id}-${nn}.jpg`); }
+  const cp = document.getElementById('mf-comp'); if(cp) cp.dataset.compGen = JSON.stringify({ t: `Lupa ${x.codigo} · foto ${i}`, u, d: u, tp: 'Foto', mb: 0.1 });
+  const lg = document.getElementById('mf-leg'); if(lg) lg.textContent = `Foto ${i} de ${x.n} · toque em uma miniatura para ver e baixar só ela`;
+  document.querySelectorAll('.mf-mini').forEach(b => b.classList.toggle('on', b.dataset.mfoto === id + ':' + i));
 }
 function painelLupa(id){
   let it, g; LUPAS.grupos.forEach(gr=>gr.itens.forEach(x=>{ if(x.id===id){ it=x; g=gr; } }));
@@ -1402,6 +1389,7 @@ document.addEventListener('click', e=>{
   const mod = t.closest('[data-modelo]'); if(mod){ painelModelo(mod.dataset.modelo); return; }
   const lupa = t.closest('[data-lupa]'); if(lupa){ painelLupa(lupa.dataset.lupa); return; }
   const lp = t.closest('[data-logo-p]'); if(lp){ const [gi,li] = lp.dataset.logoP.split(':'); painelLogo(+gi,+li); return; }
+  const mf = t.closest('[data-mfoto]'); if(mf){ const [mi, mn] = mf.dataset.mfoto.split(':'); trocarFotoModelo(mi, +mn); return; }
   const cg = t.closest('[data-comp-gen]'); if(cg){ try{ compartilharGenerico(JSON.parse(cg.dataset.compGen)); }catch(e){} return; }
   const cl = t.closest('[data-copiar]'); if(cl){ enviarLink('', cl.dataset.copiar); return; }
   const cp = t.closest('[data-compartilhar]'); if(cp){ compartilhar(TODOS[cp.dataset.compartilhar]); return; }
