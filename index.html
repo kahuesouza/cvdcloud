@@ -555,8 +555,7 @@ function telaInicio(){
       ${linkRow('#/marketing','mega','Marketing e treinamentos')}
       ${linkRow('#/marca','estrela','Logos, selos e marca')}
     </div>
-    ${novos.length ? `<details class="novidades anima"><summary><span>Novidades</span><small>${novos.length}</small>${ic('seta')}</summary>${lista(novos,{produto:true})}</details>` : ''}
-    <div class="rodape">Base atualizada em ${D.atualizado}<br>Tudo abre por link. Nada fica guardado no app.</div>` };
+    ${novos.length ? `<details class="novidades anima"><summary><span>Novidades</span><small>${novos.length}</small>${ic('seta')}</summary>${lista(novos,{produto:true})}</details>` : ''}` };
 }
 
 function telaProduto(id, aba){
