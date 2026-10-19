@@ -203,6 +203,17 @@ window.CVD = {
    "mb": 8.7
   },
   {
+   "titulo": "Catálogo Puntas · Clinical Plus y DentSurg Pro (2026)",
+   "tipo": "catalogo",
+   "produto": "pontas",
+   "idioma": "es",
+   "ano": 2026,
+   "novo": true,
+   "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-puntas-clinical-plus-dentsurg-pro-es-2026.pdf",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-puntas-clinical-plus-dentsurg-pro-es-2026.pdf",
+   "mb": 10.1
+  },
+  {
    "titulo": "Catálogo Puntas",
    "tipo": "catalogo",
    "produto": "pontas",
@@ -3167,5 +3178,5 @@ window.CVD = {
    "nome": "Demonstrações e casos clínicos"
   }
  ],
- "rev": 1792437078755
+ "rev": 1792437732797
 };
