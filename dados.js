@@ -1003,24 +1003,6 @@ window.CVD = {
        0.7
       ]
      ]
-    },
-    {
-     "nome": "Linha ELO",
-     "nota": "Colorido",
-     "img": "linha-elo",
-     "fundo": "claro",
-     "arquivos": [
-      [
-       "PNG",
-       "linha-elo.png",
-       0.04
-      ],
-      [
-       "PDF vetor",
-       "linha-elo-vetor.pdf",
-       0.1
-      ]
-     ]
     }
    ]
   },
@@ -3174,5 +3156,5 @@ window.CVD = {
    "nome": "Demonstrações e casos clínicos"
   }
  ],
- "rev": 1792416215285
+ "rev": 1792417734376
 };
