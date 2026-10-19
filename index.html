@@ -1291,11 +1291,11 @@ function pintar(){
   const h = location.hash || '#/', [, a, b] = h.split('/');
   const tela = escolherTela();
   const inicio = !!tela.inicio;
-  barEl.innerHTML = (tela.voltar ? `<a class="ibtn" href="${tela.voltar}" aria-label="Voltar">${ic('volta')}</a>` : `<a href="#/" aria-label="Início"><img class="logo" src="img/logo.svg" alt="cvdcloud"></a>`)
+  barEl.innerHTML = `<div class="bar-linha">` + (tela.voltar ? `<a class="ibtn" href="${tela.voltar}" aria-label="Voltar">${ic('volta')}</a>` : `<a href="#/" aria-label="Início"><img class="logo" src="img/logo.svg" alt="cvdcloud"></a>`)
     + `<span class="titulo-pequeno">${inicio?'':esc(tela.titulo||'')}</span><span class="esp"></span>`
     + `<a class="ibtn" href="#/conta" aria-label="Minha conta" style="${CONTA() && CONTA().user ? 'color:var(--acento)' : ''}">${ic('usuario')}</a>`
-    + `<button class="ibtn" data-tema aria-label="${temaEscuro()?'Usar visual branco':'Usar visual escuro'}">${ic(temaEscuro()?'sol':'lua')}</button>`
-    + `<button class="ibtn" data-busca aria-label="Buscar">${ic('busca')}</button>`;
+    + `<button class="ibtn" data-tema aria-label="${temaEscuro()?'Usar visual branco':'Usar visual escuro'}">${ic(temaEscuro()?'sol':'lua')}</button></div>`
+    + `<button class="busca-topo" data-busca aria-label="Buscar">${ic('busca')}<span>Buscar material, vídeo ou ponta</span></button>`;
   app.innerHTML = tela.corpo;
   const atual = qualNav(a, b);
   pintarAlertaContas(); atualizarNovas();

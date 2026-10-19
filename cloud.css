@@ -171,3 +171,11 @@ body{padding-bottom:calc(var(--nav-h) + env(safe-area-inset-bottom) + 14px)}
 .r.bh{gap:10px}
 .bhb{flex:0 0 38%;height:6px;border-radius:4px;background:var(--surface-2);overflow:hidden}
 .bhb i{display:block;height:100%;border-radius:4px;background:var(--texto)}
+
+/* busca em destaque no topo */
+.bar{flex-direction:column;align-items:stretch;gap:0;height:auto;padding:env(safe-area-inset-top) 12px 10px 12px}
+.bar-linha{display:flex;align-items:center;gap:6px;height:46px}
+.busca-topo{display:flex;align-items:center;gap:12px;width:100%;height:52px;padding:0 18px;border-radius:16px;background:var(--surface-2);border:1.5px solid var(--texto);color:var(--texto);font-weight:700;font-size:15.5px;text-align:left;transition:transform .15s var(--ease),background .15s}
+.busca-topo svg{width:24px;height:24px;stroke-width:2.2;flex:none}
+.busca-topo span{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.busca-topo:active{transform:scale(.985);background:var(--linha)}
