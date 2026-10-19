@@ -853,7 +853,7 @@ function painelGal(gid, iid){
     ? `<div class="player"><video controls playsinline preload="metadata" poster="${esc(PV + it.id + '.webp')}" src="${esc(arq)}"></video></div>`
     : `<div class="img-g" style="background:var(--surface-2)"><img src="${esc(arq)}" alt="${esc(it.titulo)}" onerror="this.onerror=null;this.src='${esc(PV + it.id + '.webp')}'"></div>`;
   abrirPainel(`${midia}<h3 style="margin-top:14px">${esc(it.titulo)}</h3><p class="sub">${esc(GL.titulo)} · ${esc(it.grupo)}</p>
-    <div class="botoes"><a class="btn prim" href="${esc(arq)}" download data-dl="gal" data-tit="${esc(GL.titulo + ' · ' + it.titulo)}" data-mb="${it.mb}">${ic('download')}Baixar ${it.tipo === 'video' ? 'vídeo' : it.ext.toUpperCase()} <small>${fmtTam(Math.max(.1, it.mb))}</small></a>${btnComp(GL.titulo + ' · ' + it.titulo, arq, arq, it.tipo === 'video' ? 'Vídeo' : 'Imagem', it.mb)}<button class="btn sec" data-copiar="${esc(arq)}">${ic('link')}Copiar link direto (sem rastreio)</button><button class="btn sec" data-comentar-ctx="${esc('galeria:' + it.id + '|' + GL.titulo + ' · ' + it.titulo)}">${ic('mega')}Sugerir ou comentar</button></div>`);
+    <div class="botoes"><a class="btn prim" href="${esc(arq)}" download data-dl="gal" data-tit="${esc(GL.titulo + ' · ' + it.titulo)}" data-mb="${it.mb}">${ic('download')}Baixar ${it.tipo === 'video' ? 'vídeo' : it.ext.toUpperCase()} <small>${fmtTam(Math.max(.1, it.mb))}</small></a>${btnComp(GL.titulo + ' · ' + it.titulo, arq, arq, it.tipo === 'video' ? 'Vídeo' : 'Imagem', it.mb)}<button class="btn sec" data-comentar-ctx="${esc('galeria:' + it.id + '|' + GL.titulo + ' · ' + it.titulo)}">${ic('mega')}Sugerir ou comentar</button></div>`);
   const v = painel.querySelector('video'); if(v) v.play().catch(() => {});
 }
 function painelItem(id){
@@ -864,7 +864,7 @@ function painelItem(id){
     <div class="botoes">
       ${isVideo(x) ? `<button class="btn sec" data-video="${id}">${ic('playcheio')}Assistir</button>` : x.galeria ? `<a class="btn prim" href="${esc(x.url)}">${ic('link')}Abrir galeria</a>` : `<a class="btn sec" href="${esc(x.url)}" target="_blank" rel="noopener">${ic('link')}Abrir</a>`}
       ${dl ? `<a class="btn prim" href="${esc(dl)}" download data-dl="${x.id}" data-mb="${tam||0}">${ic('download')}Baixar${tam?` <small>${fmtTam(tam)}</small>`:''}</a>` : ''}
-      ${x.galeria ? '' : `<button class="btn prim" data-compartilhar="${id}">${ic('share')}Copiar link</button><button class="btn sec" data-copiar="${esc(x.url)}">${ic('link')}Copiar link direto (sem rastreio)</button>`}
+      ${x.galeria ? '' : `<button class="btn prim" data-compartilhar="${id}">${ic('share')}Compartilhar</button>`}
       <button class="btn sec" data-fav="${id}">${ic('estrela')}${fav?'Remover dos salvos':'Salvar'}</button>
       <button class="btn sec" data-comentar="${id}">${ic('mega')}Comentar ou sugerir</button>
       ${adminAgora() ? `<button class="btn sec" data-ocultar="${id}" style="color:var(--erro)">${ic('x')}Excluir do app</button>` : ''}
@@ -1383,7 +1383,7 @@ async function compartilhar(x){
   const nome = x.esp ? `${x.titulo}${x.prof?' · '+x.prof:''}` : x.titulo;
   const C = CONTA();
   track('compartilhar', chaveItem(x), x.titulo, '');
-  // link rastreado: abre o material numa página do cvdcloud que registra (de forma anônima) o acesso do cliente
+  // o link abre o material numa página do cvdcloud
   if(C && C.configurado && C.aprovado()){
     try{
       const dl = linkDownload(x), t = THUMBS[x.url], tam = tamDownload(x);
