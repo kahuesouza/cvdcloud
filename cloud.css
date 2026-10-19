@@ -179,3 +179,17 @@ body{padding-bottom:calc(var(--nav-h) + env(safe-area-inset-bottom) + 14px)}
 .busca-topo svg{width:20px;height:20px;stroke-width:2.2;flex:none}
 .busca-topo span{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .busca-topo:active{transform:scale(.985);background:var(--linha)}
+
+/* painel de administração em destaque */
+.admin-card{display:flex;align-items:center;gap:14px;margin-top:14px;padding:18px 16px;border-radius:18px;background:var(--texto);color:var(--bg);transition:transform .15s var(--ease)}
+.admin-card:active{transform:scale(.985)}
+.admin-card .ac-ic{flex:none;width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:color-mix(in srgb,var(--bg) 16%,transparent)}
+.admin-card .ac-ic svg{width:24px;height:24px}
+.admin-card .ac-tx{flex:1;min-width:0}
+.admin-card .ac-tx b{display:block;font-size:17px;font-weight:800;letter-spacing:-.02em}
+.admin-card .ac-tx small{display:block;margin-top:3px;font-size:12.5px;line-height:1.35;color:color-mix(in srgb,var(--bg) 68%,transparent);font-weight:600}
+.admin-card .ac-n{flex:none;min-width:26px;height:26px;padding:0 8px;border-radius:999px;display:grid;place-items:center;background:#e5484d;color:#fff;font-size:13px;font-weight:800}
+.admin-card .ac-seta{flex:none;display:flex;opacity:.75}
+.admin-pill{display:inline-flex;align-items:center;gap:6px;height:34px;padding:0 13px;border-radius:999px;background:var(--texto);color:var(--bg);font-weight:800;font-size:13px;letter-spacing:-.01em;position:relative;margin-right:2px}
+.admin-pill svg{width:16px;height:16px}
+.admin-pill.alerta::after{content:"";position:absolute;top:-3px;right:-3px;width:11px;height:11px;border-radius:50%;background:#e5484d;border:2px solid var(--bg)}

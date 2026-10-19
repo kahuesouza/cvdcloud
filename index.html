@@ -955,6 +955,10 @@ function telaConta(){
   const p = C.perfil;
   corpo += `<div class="cartao-c anima"><b style="font-size:16px">${esc(p ? p.nome : C.user.email)}</b><div class="quem" style="margin-top:2px">${esc(C.user.email)}</div>
     <div class="topo-c" style="margin-top:10px">${p ? stChip(p.status) : ''}${p && p.role === 'admin' ? '<span class="st">Admin</span>' : ''}</div></div>`;
+  if(C.aprovado() && C.admin()){
+    const alertas = novasContas + novosComentarios;
+    corpo += `<a class="admin-card anima" id="admin-card" href="#/admin/painel" style="--i:1"><span class="ac-ic">${ic('info')}</span><span class="ac-tx"><b>Painel de administração</b><small>Análises, vendedores, clientes, comentários, equipe e catálogo</small></span>${alertas ? `<span class="ac-n" id="admin-card-n">${alertas}</span>` : '<span class="ac-n" id="admin-card-n" hidden></span>'}<span class="ac-seta">${ic('seta')}</span></a>`;
+  }
   if(!p) corpo += infoCard('Cadastro incompleto', 'Não encontramos o seu perfil. Saia e crie a conta de novo, ou fale com um administrador.');
   else if(p.status === 'pendente') corpo += infoCard('Aguardando aprovação', 'Um administrador precisa liberar o seu acesso. Você poderá comentar assim que for aprovado.') + `<button class="link-b" data-atualizar>Atualizar status</button>`;
   else if(p.status === 'bloqueado') corpo += infoCard('Acesso bloqueado', 'Fale com um administrador.');
@@ -962,7 +966,6 @@ function telaConta(){
     corpo += `<div class="botoes" style="display:grid;gap:8px;margin-top:14px"><button class="btn prim" data-comentar="geral">${ic('mega')}Enviar comentário</button></div>`;
     if(C.admin()) corpo += `<a id="banner-comentarios" class="nota anima" href="#/admin/comentarios" ${novosComentarios ? '' : 'hidden'} style="display:flex;border-color:var(--acento)">${ic('mega')}<div><b>${novosComentarios} ${novosComentarios > 1 ? 'sugestões novas' : 'sugestão nova'}</b>Dos vendedores. Toque para ver onde foi feita cada uma.</div></a>`;
     if(C.admin()) corpo += `<a id="banner-contas" class="nota anima" href="#/admin/usuarios" ${novasContas ? '' : 'hidden'} style="display:flex;border-color:var(--acento)">${ic('info')}<div><b>${novasContas} ${novasContas > 1 ? 'contas novas' : 'conta nova'}</b>Toque para conferir e dar o OK. O acesso delas já funciona.</div></a>`;
-    if(C.admin()) corpo += `<div>${linkRow('#/admin/painel', 'info', 'Painel de administração')}</div>`;
   }
   corpo += `<form class="cartao-c form anima" data-trocar-senha autocomplete="off"><b style="font-size:14.5px">Alterar senha <span style="color:var(--sub);font-weight:500">(opcional)</span></b><input name="atual" type="password" placeholder="Senha atual" required autocomplete="current-password"><input name="nova" type="password" placeholder="Nova senha (mín. 8, letras e números)" required minlength="8" autocomplete="new-password"><button class="btn sec" type="submit">Salvar nova senha</button><p class="erro-f" id="ts-msg" role="status" style="color:var(--sub)"></p></form>`;
   corpo += `<div style="margin-top:22px"><button class="btn sec" data-sair>Sair da conta</button></div>`;
@@ -1000,6 +1003,8 @@ async function atualizarNovas(forcar){
 }
 function pintarAlertaContas(){
   document.querySelectorAll('a[href="#/conta"].ibtn').forEach(a => a.classList.toggle('alerta', novasContas > 0 || novosComentarios > 0));
+  const ac = document.getElementById('admin-card-n'); if(ac){ const t = novasContas + novosComentarios; ac.textContent = t; ac.hidden = !t; }
+  document.querySelectorAll('.admin-pill').forEach(a => a.classList.toggle('alerta', novasContas + novosComentarios > 0));
   const ec = document.querySelector('.abas a[href="#/admin/comentarios"] small'); if(ec) ec.textContent = novosComentarios ? novosComentarios : '';
   const bc = document.getElementById('banner-comentarios'); if(bc){ bc.hidden = !novosComentarios; const b = bc.querySelector('b'); if(b) b.textContent = novosComentarios + (novosComentarios > 1 ? ' sugestões novas' : ' sugestão nova'); }
   const eq = document.querySelector('.abas a[href="#/admin/usuarios"] small'); if(eq) eq.textContent = novasContas ? novasContas : '';
@@ -1293,6 +1298,7 @@ function pintar(){
   const inicio = !!tela.inicio;
   barEl.innerHTML = `<div class="bar-linha">` + (tela.voltar ? `<a class="ibtn" href="${tela.voltar}" aria-label="Voltar">${ic('volta')}</a>` : `<a href="#/" aria-label="Início"><img class="logo" src="img/logo.svg" alt="cvdcloud"></a>`)
     + `<span class="titulo-pequeno">${inicio?'':esc(tela.titulo||'')}</span><span class="esp"></span>`
+    + (adminAgora() ? `<a class="admin-pill" href="#/admin/painel">${ic('info')}Admin</a>` : '')
     + `<a class="ibtn" href="#/conta" aria-label="Minha conta" style="${CONTA() && CONTA().user ? 'color:var(--acento)' : ''}">${ic('usuario')}</a>`
     + `<button class="ibtn" data-tema aria-label="${temaEscuro()?'Usar visual branco':'Usar visual escuro'}">${ic(temaEscuro()?'sol':'lua')}</button></div>`
     + `<button class="busca-topo" data-busca aria-label="Buscar">${ic('busca')}<span>Buscar material, vídeo ou ponta</span></button>`;
