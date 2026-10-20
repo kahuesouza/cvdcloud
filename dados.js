@@ -156,12 +156,35 @@ window.CVD = {
   },
   {
    "titulo": "Catálogo Brocas CVDentus",
+   "familia": "cat-brocas",
    "tipo": "catalogo",
    "produto": "brocas",
    "idioma": "pt",
    "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-brocas-cvdentus.pdf",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-brocas-cvdentus.pdf",
    "mb": 1.9
+  },
+  {
+   "titulo": "Burs Catalog CVDentus",
+   "familia": "cat-brocas",
+   "tipo": "catalogo",
+   "produto": "brocas",
+   "idioma": "en",
+   "novo": true,
+   "url": "https://cloud.cvdentus.com.br/arquivos/livros/burs-catalog-cvdentus-en.pdf",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/burs-catalog-cvdentus-en.pdf",
+   "mb": 1.6
+  },
+  {
+   "titulo": "Catálogo de Fresas CVDentus",
+   "familia": "cat-brocas",
+   "tipo": "catalogo",
+   "produto": "brocas",
+   "idioma": "es",
+   "novo": true,
+   "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-fresas-cvdentus-es.pdf",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-fresas-cvdentus-es.pdf",
+   "mb": 1.6
   },
   {
    "titulo": "Catálogo Pontas · Clinical Plus e DentSurg Pro",
@@ -3237,5 +3260,5 @@ window.CVD = {
    "nome": "Demonstrações e casos clínicos"
   }
  ],
- "rev": 1792503860426
+ "rev": 1792504526862
 };
