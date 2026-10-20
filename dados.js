@@ -128,6 +128,7 @@ window.CVD = {
   },
   {
    "titulo": "Catálogo Técnico · Representantes",
+   "familia": "cat-representantes",
    "tipo": "catalogo",
    "produto": "geral",
    "idioma": "pt",
@@ -135,6 +136,30 @@ window.CVD = {
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-representantes.pdf",
    "mb": 7.9,
    "aviso": "Versão 2021"
+  },
+  {
+   "titulo": "Technical Catalog · Representatives",
+   "familia": "cat-representantes",
+   "tipo": "catalogo",
+   "produto": "geral",
+   "idioma": "en",
+   "novo": true,
+   "aviso": "Versão 2021",
+   "mb": 6.2,
+   "url": "https://cloud.cvdentus.com.br/arquivos/livros/representatives-catalog-en.pdf",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/representatives-catalog-en.pdf"
+  },
+  {
+   "titulo": "Catálogo Técnico · Representantes (Español)",
+   "familia": "cat-representantes",
+   "tipo": "catalogo",
+   "produto": "geral",
+   "idioma": "es",
+   "novo": true,
+   "aviso": "Versão 2021",
+   "mb": 6.2,
+   "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-representantes-es.pdf",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-representantes-es.pdf"
   },
   {
    "titulo": "Tabela Comparativa dos Piezos",
@@ -632,6 +657,7 @@ window.CVD = {
   },
   {
    "titulo": "Catálogo de Acessórios",
+   "familia": "cat-acessorios",
    "tipo": "catalogo",
    "produto": "acessorios",
    "idioma": "pt",
@@ -640,6 +666,30 @@ window.CVD = {
    "mb": 5.2,
    "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-acessorios-cvdentus-2026.pdf",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/CATALOGO_ACESSORIOS_CVDENTUS_2026_DIGITAL.pdf"
+  },
+  {
+   "titulo": "Accessories Catalog CVDentus",
+   "familia": "cat-acessorios",
+   "tipo": "catalogo",
+   "produto": "acessorios",
+   "idioma": "en",
+   "ano": 2026,
+   "novo": true,
+   "mb": 6.0,
+   "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-acessorios-cvdentus-2026-en.pdf",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/catalogo-acessorios-cvdentus-2026-en.pdf"
+  },
+  {
+   "titulo": "Catálogo de Accesorios CVDentus",
+   "familia": "cat-acessorios",
+   "tipo": "catalogo",
+   "produto": "acessorios",
+   "idioma": "es",
+   "ano": 2026,
+   "novo": true,
+   "mb": 6.0,
+   "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-acessorios-cvdentus-2026-es.pdf",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/catalogo-acessorios-cvdentus-2026-es.pdf"
   },
   {
    "titulo": "Vídeo de apoio · Bomba Peristáltica",
@@ -3260,5 +3310,5 @@ window.CVD = {
    "nome": "Demonstrações e casos clínicos"
   }
  ],
- "rev": 1792504526862
+ "rev": 1792524765322
 };
