@@ -177,6 +177,7 @@ window.CVD = {
   },
   {
    "titulo": "Catálogo Pontas · Optymus",
+   "familia": "cat-pontas-optymus",
    "tipo": "catalogo",
    "produto": "pontas",
    "idioma": "pt",
@@ -184,6 +185,30 @@ window.CVD = {
    "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-pontas-optymus-2025.pdf",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-pontas-optymus-2025.pdf",
    "mb": 4.4
+  },
+  {
+   "titulo": "Tips Catalog · Optymus",
+   "familia": "cat-pontas-optymus",
+   "tipo": "catalogo",
+   "produto": "pontas",
+   "idioma": "en",
+   "ano": 2025,
+   "novo": true,
+   "url": "https://cloud.cvdentus.com.br/arquivos/livros/tips-catalog-optymus-2025-en.pdf",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/tips-catalog-optymus-2025-en.pdf",
+   "mb": 4.2
+  },
+  {
+   "titulo": "Catálogo Puntas · Optymus",
+   "familia": "cat-pontas-optymus",
+   "tipo": "catalogo",
+   "produto": "pontas",
+   "idioma": "es",
+   "ano": 2025,
+   "novo": true,
+   "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-puntas-optymus-2025-es.pdf",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-puntas-optymus-2025-es.pdf",
+   "mb": 4.2
   },
   {
    "titulo": "Tips Catalog · Clinical Plus & DentSurg Pro (2026)",
@@ -3212,5 +3237,5 @@ window.CVD = {
    "nome": "Demonstrações e casos clínicos"
   }
  ],
- "rev": 1792503097233
+ "rev": 1792503860426
 };
