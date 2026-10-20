@@ -193,9 +193,9 @@ window.CVD = {
    "idioma": "en",
    "ano": 2026,
    "novo": true,
-   "url": "https://cloud.cvdentus.com.br/arquivos/livros/tips-catalog-clinical-plus-dentsurg-pro-en-2026.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/tips-catalog-clinical-plus-dentsurg-pro-en-2026.pdf",
-   "mb": 10.1
+   "url": "https://cloud.cvdentus.com.br/arquivos/livros/tips-catalog-clinical-plus-dentsurg-pro-en-2026-v3.pdf",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/tips-catalog-clinical-plus-dentsurg-pro-en-2026-v3.pdf",
+   "mb": 10.6
   },
   {
    "titulo": "Tips Catalog · Clinical Plus & DentSurg Pro",
@@ -215,9 +215,9 @@ window.CVD = {
    "idioma": "es",
    "ano": 2026,
    "novo": true,
-   "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-puntas-clinical-plus-dentsurg-pro-es-2026.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-puntas-clinical-plus-dentsurg-pro-es-2026.pdf",
-   "mb": 10.1
+   "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-puntas-clinical-plus-dentsurg-pro-es-2026-v3.pdf",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-puntas-clinical-plus-dentsurg-pro-es-2026-v3.pdf",
+   "mb": 10.6
   },
   {
    "titulo": "Catálogo Puntas",
@@ -3187,5 +3187,5 @@ window.CVD = {
    "nome": "Demonstrações e casos clínicos"
   }
  ],
- "rev": 1792438056316
+ "rev": 1792501792643
 };
