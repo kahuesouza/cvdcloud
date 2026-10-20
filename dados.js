@@ -807,6 +807,7 @@ window.CVD = {
   },
   {
    "titulo": "Catálogo Linha Elo 2026",
+   "familia": "cat-linha-elo",
    "tipo": "catalogo",
    "produto": "linha-elo",
    "idioma": "pt",
@@ -815,6 +816,30 @@ window.CVD = {
    "mb": 8.4,
    "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-linha-elo-2026.pdf",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/CATALOGO_LINHA_ELO_2026.pdf"
+  },
+  {
+   "titulo": "Elo Line Catalog 2026",
+   "familia": "cat-linha-elo",
+   "tipo": "catalogo",
+   "produto": "linha-elo",
+   "idioma": "en",
+   "ano": 2026,
+   "novo": true,
+   "mb": 9.1,
+   "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-linha-elo-2026-en.pdf",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/elo-line-catalog-2026-EN.pdf"
+  },
+  {
+   "titulo": "Catálogo Línea Elo 2026",
+   "familia": "cat-linha-elo",
+   "tipo": "catalogo",
+   "produto": "linha-elo",
+   "idioma": "es",
+   "ano": 2026,
+   "novo": true,
+   "mb": 9.1,
+   "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-linha-elo-2026-es.pdf",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/catalogo-linea-elo-2026-ES.pdf"
   },
   {
    "titulo": "Tabela de valores · Linha Elo",
@@ -3309,5 +3334,5 @@ window.CVD = {
    "nome": "Demonstrações e casos clínicos"
   }
  ],
- "rev": 1792526547530
+ "rev": 1792528284900
 };
