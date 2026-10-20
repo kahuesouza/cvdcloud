@@ -104,27 +104,26 @@ window.CVD = {
    "mb": 1.9
   },
   {
-   "titulo": "Equipment Catalog CVDentus",
+   "titulo": "Piezo Catalog CVDentus",
    "familia": "cat-equipamentos",
    "tipo": "catalogo",
    "produto": "geral",
    "idioma": "en",
-   "ano": 2023,
-   "url": "https://cloud.cvdentus.com.br/arquivos/livros/equipment-catalog-cvdentus-en.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/equipment-catalog-cvdentus-en.pdf",
+   "novo": true,
+   "url": "https://cloud.cvdentus.com.br/arquivos/livros/piezo-catalog-cvdentus-en.pdf",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/piezo-catalog-cvdentus-en.pdf",
    "mb": 1.8
   },
   {
-   "titulo": "Catálogo Equipos CVDentus",
+   "titulo": "Catálogo de Piezos CVDentus",
    "familia": "cat-equipamentos",
    "tipo": "catalogo",
    "produto": "geral",
    "idioma": "es",
-   "ano": 2020,
-   "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-equipos-cvdentus-es.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-equipos-cvdentus-es.pdf",
-   "mb": 1.8,
-   "aviso": "Versão 2020"
+   "novo": true,
+   "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-piezos-cvdentus-es.pdf",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-piezos-cvdentus-es.pdf",
+   "mb": 1.8
   },
   {
    "titulo": "Catálogo Técnico · Representantes",
@@ -3310,5 +3309,5 @@ window.CVD = {
    "nome": "Demonstrações e casos clínicos"
   }
  ],
- "rev": 1792524765322
+ "rev": 1792526547530
 };
