@@ -674,6 +674,7 @@ window.CVD = {
   },
   {
    "titulo": "Catálogo de Lupas · versão fechada",
+   "familia": "cat-lupas-fechado",
    "tipo": "catalogo",
    "produto": "lupas",
    "idioma": "pt",
@@ -682,6 +683,30 @@ window.CVD = {
    "mb": 28.3,
    "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-lupas-fechado.pdf",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/CATALOGO_CVLUPAS_fechado.pdf"
+  },
+  {
+   "titulo": "Loupes Catalog CVDentus",
+   "familia": "cat-lupas-fechado",
+   "tipo": "catalogo",
+   "produto": "lupas",
+   "idioma": "en",
+   "ano": 2026,
+   "novo": true,
+   "mb": 2.8,
+   "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-lupas-fechado-en.pdf",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/loupes-catalog-cvdentus-EN.pdf"
+  },
+  {
+   "titulo": "Catálogo de Lupas CVDentus",
+   "familia": "cat-lupas-fechado",
+   "tipo": "catalogo",
+   "produto": "lupas",
+   "idioma": "es",
+   "ano": 2026,
+   "novo": true,
+   "mb": 2.9,
+   "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-lupas-fechado-es.pdf",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/catalogo-lupas-cvdentus-ES.pdf"
   },
   {
    "titulo": "Catálogo Linha Elo 2026",
@@ -3187,5 +3212,5 @@ window.CVD = {
    "nome": "Demonstrações e casos clínicos"
   }
  ],
- "rev": 1792501792643
+ "rev": 1792503097233
 };
