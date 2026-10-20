@@ -365,6 +365,51 @@ window.CVD_FOTOS = {
      ]
     }
    ]
+  },
+  "spray-control": {
+   "zip": {
+    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/equipamentos/spray-control-fotos-marketing.zip",
+    "mb": 2.6,
+    "n": 4
+   },
+   "grupos": [
+    {
+     "nome": "Produto",
+     "ia": false,
+     "itens": [
+      {
+       "id": "spray-control-ponteira",
+       "titulo": "Ponteira · unidade",
+       "ext": "png",
+       "mb": 0.4
+      },
+      {
+       "id": "spray-control-ponteiras-par",
+       "titulo": "Ponteiras · par",
+       "ext": "png",
+       "mb": 0.5
+      },
+      {
+       "id": "spray-control-clinico-par",
+       "titulo": "Spray Control Clínico · par",
+       "ext": "png",
+       "mb": 0.7
+      }
+     ]
+    },
+    {
+     "nome": "Capa de anúncio",
+     "ia": false,
+     "itens": [
+      {
+       "id": "spray-control-capa-gotas",
+       "titulo": "Capa · spray em ação",
+       "ext": "png",
+       "mb": 1.1
+      }
+     ]
+    }
+   ]
   }
  }
 };
