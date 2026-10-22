@@ -365,6 +365,16 @@ const P = {
   busca:'<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>',
   tabela:'<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 10v10"/>',
   pasta:'<path d="M3 6a1 1 0 0 1 1-1h5l2 2h9a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/>',
+  ok:'<path d="M5 12.5l4.5 4.5L19 7.5"/>',
+  tv:'<rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/>',
+  pausa:'<path d="M9 5v14M15 5v14"/>',
+  proximo:'<path d="M6 5l9 7-9 7z"/><path d="M18 5v14"/>',
+  anterior:'<path d="M18 5l-9 7 9 7z"/><path d="M6 5v14"/>',
+  som:'<path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11"/>',
+  mudo:'<path d="M4 9v6h4l5 4V5L8 9z"/><path d="M17 9l5 6M22 9l-5 6"/>',
+  tela:'<path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/>',
+  sobe:'<path d="M6 15l6-6 6 6"/>',
+  desce:'<path d="M6 9l6 6 6-6"/>',
   loop:'<path d="M17 2l4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/>',
   share:'<path d="M12 15V3M8 7l4-4 4 4"/><path d="M6 11H5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1h-1"/>',
   seta:'<path d="m9 6 6 6-6 6"/>', volta:'<path d="m15 6-6 6 6 6"/>',
@@ -562,6 +572,7 @@ function telaInicio(){
     ${secao('Mais conteúdo')}
     <div class="lista">
       ${outros.map(p=>linkRow('#/produto/'+p.id, p.icone, esc(p.nome))).join('')}
+      ${linkRow('#/clips','tv','CVD Clips Pro','Modo TV')}
       ${linkRow('#/tipo/comparativo','tabela','Tabela Comparativa dos Piezos',cont('comparativo'))}
       ${linkRow('#/marketing','mega','Marketing e treinamentos')}
       ${linkRow('#/marca','estrela','Logos, selos e marca')}
@@ -842,6 +853,123 @@ async function manterTela(){ try{ if('wakeLock' in navigator && !_wl){ _wl = awa
 function liberarTela(){ try{ if(_wl) _wl.release(); }catch(e){} _wl = null; }
 const btnLoop = () => { const on = ls.get('loopVideo', false); return `<button class="btn sec${on ? ' on' : ''}" data-loop aria-pressed="${on}">${ic('loop')}Repetir em loop <small>${on ? 'ligado' : 'desligado'}</small></button>`; };
 function iniciarLoop(){ const v = painel.querySelector('video'); if(!v) return; if(ls.get('loopVideo', false)){ v.loop = true; manterTela(); } v.play().catch(() => {}); }
+
+/* ===================== CVD Clips Pro: montagem de vídeos em loop (TV / notebook em congresso) ===================== */
+const clipsVideos = () => [...D.procedimentos, ...D.materiais].filter(x => isVideo(x));
+let clipsSel = ls.get('clipsSel', []);
+const clipsSalvar = () => ls.set('clipsSel', clipsSel);
+const clipsItem = url => clipsVideos().find(x => x.url === url);
+function clipsMontagem(){ return clipsSel.map(clipsItem).filter(Boolean); }
+function clipsResumo(){
+  const m = clipsMontagem(), mb = m.reduce((s, x) => s + (tamDownload(x) || x.mb || 0), 0);
+  return { n: m.length, mb };
+}
+function clipsLinha(x){
+  const on = clipsSel.includes(x.url), meta = metaDe(x).replace(/<br>.*/, '');
+  return `<div class="linha clip-row${on ? ' on' : ''}" data-clip-tog="${x.id}" role="button" tabindex="0" aria-pressed="${on}">${leadDe(x)}<span class="txt"><span class="t">${esc(x.titulo)}</span><span class="m" style="display:block">${meta}</span></span><span class="clip-chk" aria-hidden="true">${on ? ic('ok') : ''}</span></div>`;
+}
+function clipsOrdem(){
+  const m = clipsMontagem();
+  if(!m.length) return `<p class="clip-vazio">Nenhum vídeo escolhido ainda. Toque nos vídeos abaixo para montar a sua sequência.</p>`;
+  return m.map((x, i) => `<div class="clip-ord"><span class="clip-n">${i + 1}</span><span class="clip-t">${esc(x.titulo)}${x.prof ? `<small>${esc(x.prof)}</small>` : ''}</span><span class="clip-bt"><button class="ibtn" data-clip-mv="${i}:-1" aria-label="Subir" ${i === 0 ? 'disabled' : ''}>${ic('sobe')}</button><button class="ibtn" data-clip-mv="${i}:1" aria-label="Descer" ${i === m.length - 1 ? 'disabled' : ''}>${ic('desce')}</button><button class="ibtn" data-clip-rm="${i}" aria-label="Remover">${ic('x')}</button></span></div>`).join('');
+}
+function clipsPainelHtml(){
+  const r = clipsResumo();
+  return `<div class="clip-card anima">
+    <div class="clip-sum"><b>${r.n}</b><span>${r.n === 1 ? 'vídeo escolhido' : 'vídeos escolhidos'}${r.n ? ` · ${fmtTam(Math.max(.1, r.mb))}` : ''}</span></div>
+    <button class="btn prim clip-play" data-clip-play ${r.n ? '' : 'disabled'}>${ic('playcheio')}Iniciar exibição em loop</button>
+    <div class="clip-sec"><button class="btn sec" data-clip-todos>Selecionar todos</button><button class="btn sec" data-clip-limpar ${r.n ? '' : 'disabled'}>Limpar</button></div>
+    ${r.n ? `<details class="clip-ordem" open><summary>Ordem da exibição${ic('seta')}</summary><div class="clip-lista">${clipsOrdem()}</div></details>` : ''}
+    <p class="clip-dica">Os vídeos são carregados pela internet. Antes do evento, abra a exibição uma vez no Wi-Fi para conferir se tudo toca. Ao terminar o último vídeo, a sequência volta ao primeiro sozinha.</p>
+  </div>`;
+}
+function telaClips(){
+  const todos = clipsVideos();
+  const grupos = [];
+  (D.especialidades || []).forEach(e => { const it = todos.filter(x => x.esp === e.id); if(it.length) grupos.push({ id: e.id, nome: e.nome, it }); });
+  const outros = todos.filter(x => !x.esp); if(outros.length) grupos.push({ id: 'outros', nome: 'Linha Elo e vídeos de apoio', it: outros });
+  const corpo = largo('CVD Clips Pro', 'Escolha os vídeos e deixe a montagem passando em loop na TV ou no notebook.')
+    + `<div id="clips-painel">${clipsPainelHtml()}</div>`
+    + grupos.map(g => `<div class="sec clip-gh"><h2>${esc(g.nome)}</h2><span>${g.it.length}</span><button class="clip-gtog" data-clip-grupo="${g.id}">Selecionar grupo</button></div><div class="lista">${g.it.map(clipsLinha).join('')}</div>`).join('');
+  return { titulo: 'CVD Clips Pro', voltar: '#/', corpo };
+}
+function clipsAtualizar(){
+  document.querySelectorAll('[data-clip-tog]').forEach(el => {
+    const x = TODOS[el.dataset.clipTog]; const on = !!x && clipsSel.includes(x.url);
+    el.classList.toggle('on', on); el.setAttribute('aria-pressed', String(on));
+    const c = el.querySelector('.clip-chk'); if(c) c.innerHTML = on ? ic('ok') : '';
+  });
+  const p = document.getElementById('clips-painel'); if(p){ const ab = p.querySelector('details.clip-ordem'); const aberto = !ab || ab.open; p.innerHTML = clipsPainelHtml(); const nd = p.querySelector('details.clip-ordem'); if(nd) nd.open = aberto; }
+}
+function clipsToggle(url){ const i = clipsSel.indexOf(url); if(i >= 0) clipsSel.splice(i, 1); else clipsSel.push(url); clipsSalvar(); clipsAtualizar(); }
+
+/* player em tela cheia: toca a montagem inteira e volta ao primeiro vídeo sozinho */
+const CP = { lista: [], i: 0, el: null, v: null, pre: null, hud: null, hudT: null, erros: 0, mudo: ls.get('clipsMudo', true) };
+function clipsCriarPlayer(){
+  if(CP.el) return;
+  const d = document.createElement('div'); d.id = 'clips-player'; d.className = 'clips-player'; d.setAttribute('role', 'dialog'); d.setAttribute('aria-label', 'CVD Clips Pro');
+  d.innerHTML = `<video id="clips-v" playsinline></video><video id="clips-pre" muted playsinline preload="auto" style="display:none"></video>
+    <div class="clips-msg" id="clips-msg" hidden></div>
+    <div class="clips-hud" id="clips-hud">
+      <div class="clips-top"><div class="clips-info"><b id="clips-tit"></b><span id="clips-pos"></span></div><button class="clips-b" data-clips-sair aria-label="Sair da exibição">${ic('x')}</button></div>
+      <div class="clips-bot"><div class="clips-bar"><button class="clips-b" data-clips-ant aria-label="Anterior">${ic('anterior')}</button><button class="clips-b big" data-clips-pp aria-label="Pausar">${ic('pausa')}</button><button class="clips-b" data-clips-prox aria-label="Próximo">${ic('proximo')}</button><button class="clips-b" data-clips-mudo aria-label="Som">${ic('mudo')}</button><button class="clips-b" data-clips-tela aria-label="Tela cheia">${ic('tela')}</button></div>
+      <div class="clips-prog"><i id="clips-prog"></i></div></div>
+    </div>`;
+  document.body.appendChild(d);
+  CP.el = d; CP.v = d.querySelector('#clips-v'); CP.pre = d.querySelector('#clips-pre'); CP.hud = d.querySelector('#clips-hud');
+  CP.v.addEventListener('ended', () => clipsVai(CP.i + 1));
+  CP.v.addEventListener('error', () => { CP.erros++; if(CP.erros >= CP.lista.length){ clipsMsg('Não foi possível carregar os vídeos. Confira a internet e tente de novo.'); } else setTimeout(() => clipsVai(CP.i + 1), 600); });
+  CP.v.addEventListener('playing', () => { CP.erros = 0; clipsMsg(''); clipsPP(); });
+  CP.v.addEventListener('pause', clipsPP);
+  CP.v.addEventListener('timeupdate', () => { const p = document.getElementById('clips-prog'); if(p && CP.v.duration) p.style.width = (100 * CP.v.currentTime / CP.v.duration) + '%'; });
+  ['mousemove', 'touchstart', 'click'].forEach(ev => d.addEventListener(ev, clipsHud, { passive: true }));
+}
+function clipsMsg(t){ const m = document.getElementById('clips-msg'); if(!m) return; m.hidden = !t; m.textContent = t || ''; }
+function clipsHud(){ if(!CP.hud) return; CP.hud.classList.add('on'); clearTimeout(CP.hudT); CP.hudT = setTimeout(() => CP.hud && CP.hud.classList.remove('on'), 3200); }
+function clipsPP(){ const b = CP.el && CP.el.querySelector('[data-clips-pp]'); if(!b || !CP.v) return; b.innerHTML = ic(CP.v.paused ? 'playcheio' : 'pausa'); b.setAttribute('aria-label', CP.v.paused ? 'Tocar' : 'Pausar'); }
+function clipsMudoAplicar(){ if(!CP.v) return; CP.v.muted = CP.mudo; const b = CP.el.querySelector('[data-clips-mudo]'); if(b){ b.innerHTML = ic(CP.mudo ? 'mudo' : 'som'); b.setAttribute('aria-label', CP.mudo ? 'Ligar o som' : 'Desligar o som'); } }
+function clipsVai(i){
+  const n = CP.lista.length; if(!n) return;
+  CP.i = ((i % n) + n) % n;
+  const x = CP.lista[CP.i];
+  CP.v.loop = n === 1;                       // um vídeo só: repete direto
+  CP.v.src = x.url; CP.v.muted = CP.mudo;
+  document.getElementById('clips-tit').textContent = x.titulo + (x.prof ? ' · ' + x.prof : '');
+  document.getElementById('clips-pos').textContent = (CP.i + 1) + ' de ' + n + ' · repetição contínua';
+  const pr = document.getElementById('clips-prog'); if(pr) pr.style.width = '0%';
+  CP.v.play().catch(() => {});
+  if(n > 1){ const prox = CP.lista[(CP.i + 1) % n]; if(prox && CP.pre.getAttribute('src') !== prox.url) CP.pre.src = prox.url; }
+  track('abrir', chaveItem(x), x.titulo, 'clips');
+}
+function clipsIniciar(){
+  const m = clipsMontagem(); if(!m.length){ toast('Escolha ao menos um vídeo'); return; }
+  clipsCriarPlayer();
+  CP.lista = m; CP.erros = 0;
+  document.body.style.overflow = 'hidden';
+  CP.el.classList.add('on'); clipsMudoAplicar(); clipsMsg('');
+  try{ const rf = CP.el.requestFullscreen || CP.el.webkitRequestFullscreen; if(rf) rf.call(CP.el).catch(() => {}); }catch(e){}
+  manterTela(); clipsHud(); clipsVai(0);
+}
+function clipsSair(){
+  if(!CP.el) return;
+  try{ CP.v.pause(); CP.v.removeAttribute('src'); CP.v.load(); CP.pre.removeAttribute('src'); }catch(e){}
+  CP.el.classList.remove('on'); liberarTela();
+  try{ if(document.fullscreenElement) document.exitFullscreen(); }catch(e){}
+  if(!painel.classList.contains('on') && !buscaOv.classList.contains('on')) document.body.style.overflow = '';
+}
+function clipsTela(){ try{ if(document.fullscreenElement) document.exitFullscreen(); else { const rf = CP.el.requestFullscreen || CP.el.webkitRequestFullscreen; if(rf) rf.call(CP.el); } }catch(e){} }
+document.addEventListener('keydown', e => {
+  if(!CP.el || !CP.el.classList.contains('on')) return;
+  const k = e.key;
+  if(k === 'Escape'){ clipsSair(); }
+  else if(k === 'ArrowRight'){ clipsVai(CP.i + 1); clipsHud(); }
+  else if(k === 'ArrowLeft'){ clipsVai(CP.i - 1); clipsHud(); }
+  else if(k === ' '){ e.preventDefault(); if(CP.v.paused) CP.v.play(); else CP.v.pause(); clipsHud(); }
+  else if(k === 'm' || k === 'M'){ CP.mudo = !CP.mudo; ls.set('clipsMudo', CP.mudo); clipsMudoAplicar(); clipsHud(); }
+  else if(k === 'f' || k === 'F'){ clipsTela(); }
+});
+document.addEventListener('visibilitychange', () => { if(document.visibilityState === 'visible' && CP.el && CP.el.classList.contains('on')) manterTela(); });
+
 function painelVideo(x){
   const dl = linkDownload(x), tam = tamDownload(x), t = THUMBS[x.url], fav = favs.has(x.id);
   const sub = metaDe(x, {produto:true}).replace(/<br>.*/, '').replace(/<[^>]+>/g, '');
@@ -1317,6 +1445,7 @@ function escolherTela(){
   if(a==='procedimentos') return telaProcedimentos(b);
   if(a==='topico') return telaTopico(b);
   if(a==='pontas') return telaPontas(b, c);
+  if(a==='clips') return telaClips();
   if(a==='marketing') return telaMarketing();
   if(a==='marca') return telaMarca();
   if(a==='galeria') return telaGaleria(b);
@@ -1411,7 +1540,7 @@ async function compartilhar(x){
   await enviarLink(nome, x.url);   // modo de preparação (sem Firebase)
 }
 document.addEventListener('pointermove', e => { const c = e.target.closest && e.target.closest('.tile,.cartao-c'); if(!c) return; const r = c.getBoundingClientRect(); c.style.setProperty('--mx', (e.clientX - r.left) + 'px'); c.style.setProperty('--my', (e.clientY - r.top) + 'px'); }, { passive: true });
-document.addEventListener('keydown', e=>{ if((e.key === 'Enter' || e.key === ' ') && e.target.matches && e.target.matches('.idm')){ e.preventDefault(); e.target.click(); } });
+document.addEventListener('keydown', e=>{ if((e.key === 'Enter' || e.key === ' ') && e.target.matches && e.target.matches('.idm, .clip-row')){ e.preventDefault(); e.target.click(); } });
 document.addEventListener('click', e=>{
   const t = e.target;
   if(t.closest('[data-tema]')){ aplicarTema(!temaEscuro()); toast(temaEscuro() ? 'Visual escuro' : 'Visual branco'); return; }
@@ -1419,6 +1548,24 @@ document.addEventListener('click', e=>{
   if(t.closest('[data-fechar-busca]')){ fecharBusca(); return; }
   const sug = t.closest('[data-sug]'); if(sug){ const q = document.getElementById('q'); q.value = sug.dataset.sug; q.dispatchEvent(new Event('input')); q.focus(); return; }
   const gm = t.closest('[data-gmodo]'); if(gm){ modoGate = gm.dataset.gmodo; atualizarGate(); return; }
+  const ctg = t.closest('[data-clip-tog]'); if(ctg){ const x = TODOS[ctg.dataset.clipTog]; if(x) clipsToggle(x.url); return; }
+  const cgr = t.closest('[data-clip-grupo]'); if(cgr){
+    const id = cgr.dataset.clipGrupo, its = clipsVideos().filter(x => id === 'outros' ? !x.esp : x.esp === id);
+    const todos = its.every(x => clipsSel.includes(x.url));
+    its.forEach(x => { const i = clipsSel.indexOf(x.url); if(todos){ if(i >= 0) clipsSel.splice(i, 1); } else if(i < 0) clipsSel.push(x.url); });
+    clipsSalvar(); clipsAtualizar(); return;
+  }
+  if(t.closest('[data-clip-todos]')){ clipsVideos().forEach(x => { if(!clipsSel.includes(x.url)) clipsSel.push(x.url); }); clipsSalvar(); clipsAtualizar(); toast('Todos os vídeos escolhidos'); return; }
+  if(t.closest('[data-clip-limpar]')){ clipsSel = []; clipsSalvar(); clipsAtualizar(); return; }
+  const cmv = t.closest('[data-clip-mv]'); if(cmv){ const [i, d] = cmv.dataset.clipMv.split(':').map(Number), j = i + d; if(j >= 0 && j < clipsSel.length){ [clipsSel[i], clipsSel[j]] = [clipsSel[j], clipsSel[i]]; clipsSalvar(); clipsAtualizar(); } return; }
+  const crm = t.closest('[data-clip-rm]'); if(crm){ clipsSel.splice(+crm.dataset.clipRm, 1); clipsSalvar(); clipsAtualizar(); return; }
+  if(t.closest('[data-clip-play]')){ clipsIniciar(); return; }
+  if(t.closest('[data-clips-sair]')){ clipsSair(); return; }
+  if(t.closest('[data-clips-ant]')){ clipsVai(CP.i - 1); return; }
+  if(t.closest('[data-clips-prox]')){ clipsVai(CP.i + 1); return; }
+  if(t.closest('[data-clips-pp]')){ if(CP.v.paused) CP.v.play().catch(() => {}); else CP.v.pause(); return; }
+  if(t.closest('[data-clips-mudo]')){ CP.mudo = !CP.mudo; ls.set('clipsMudo', CP.mudo); clipsMudoAplicar(); return; }
+  if(t.closest('[data-clips-tela]')){ clipsTela(); return; }
   const lpv = t.closest('[data-loop]'); if(lpv){
     const v = painel.querySelector('video');
     if(v){
