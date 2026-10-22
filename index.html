@@ -184,6 +184,7 @@ details.outros[open] summary svg{transform:rotate(90deg)}
 .btn svg{width:20px;height:20px}
 .btn.prim{background:var(--acento);color:#fff}
 .btn.sec{background:var(--surface-2);color:var(--texto)}
+.btn.sec.on{background:var(--texto);color:var(--bg)}
 .btn small{font-weight:600;opacity:.75}
 .pilula{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:13px;color:var(--acento-tinta);background:var(--acento-fundo);padding:8px 13px;border-radius:999px;transition:transform .15s var(--ease)}
 .pilula:active{transform:scale(.95)}
@@ -364,6 +365,7 @@ const P = {
   busca:'<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>',
   tabela:'<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 10v10"/>',
   pasta:'<path d="M3 6a1 1 0 0 1 1-1h5l2 2h9a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/>',
+  loop:'<path d="M17 2l4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/>',
   share:'<path d="M12 15V3M8 7l4-4 4 4"/><path d="M6 11H5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1h-1"/>',
   seta:'<path d="m9 6 6 6-6 6"/>', volta:'<path d="m15 6-6 6 6 6"/>',
   download:'<path d="M12 3v12M7 10l5 5 5-5M4 20h16"/>',
@@ -828,23 +830,28 @@ function abrirPainel(html){
   painel.innerHTML = `<div class="alca"></div>${html}`;
   veu.classList.add('on'); painel.classList.add('on'); document.body.style.overflow = 'hidden';
 }
-function fecharPainel(){ painel.querySelectorAll('video').forEach(v => { try{ v.pause(); }catch(e){} }); if(!painel.classList.contains('on')) return; veu.classList.remove('on'); painel.classList.remove('on'); if(!buscaOv.classList.contains('on')) document.body.style.overflow = ''; if(foco && foco.focus) try{ foco.focus(); }catch(e){} }
+function fecharPainel(){ liberarTela(); painel.querySelectorAll('video').forEach(v => { try{ v.pause(); }catch(e){} }); if(!painel.classList.contains('on')) return; veu.classList.remove('on'); painel.classList.remove('on'); if(!buscaOv.classList.contains('on')) document.body.style.overflow = ''; if(foco && foco.focus) try{ foco.focus(); }catch(e){} }
 veu.addEventListener('click', fecharPainel);
 (()=>{ let y0=null, dy=0;
   painel.addEventListener('touchstart',e=>{ if(painel.scrollTop<=0){ y0=e.touches[0].clientY; dy=0; painel.style.transition='none'; } },{passive:true});
   painel.addEventListener('touchmove',e=>{ if(y0===null) return; dy=Math.max(0,e.touches[0].clientY-y0); painel.style.transform=`translateY(${dy}px)`; },{passive:true});
   painel.addEventListener('touchend',()=>{ if(y0===null) return; painel.style.transition=''; painel.style.transform=''; if(dy>110) fecharPainel(); y0=null; }); })();
 
+let _wl = null;
+async function manterTela(){ try{ if('wakeLock' in navigator && !_wl){ _wl = await navigator.wakeLock.request('screen'); _wl.addEventListener('release', () => { _wl = null; }); } }catch(e){} }
+function liberarTela(){ try{ if(_wl) _wl.release(); }catch(e){} _wl = null; }
+const btnLoop = () => { const on = ls.get('loopVideo', false); return `<button class="btn sec${on ? ' on' : ''}" data-loop aria-pressed="${on}">${ic('loop')}Repetir em loop <small>${on ? 'ligado' : 'desligado'}</small></button>`; };
+function iniciarLoop(){ const v = painel.querySelector('video'); if(!v) return; if(ls.get('loopVideo', false)){ v.loop = true; manterTela(); } v.play().catch(() => {}); }
 function painelVideo(x){
   const dl = linkDownload(x), tam = tamDownload(x), t = THUMBS[x.url], fav = favs.has(x.id);
   const sub = metaDe(x, {produto:true}).replace(/<br>.*/, '').replace(/<[^>]+>/g, '');
   abrirPainel(`<div class="player"><video controls playsinline preload="metadata" ${t ? `poster="img/t/${t[0]}"` : ''} src="${esc(x.url)}"></video></div>
     <h3 style="margin-top:14px">${esc(x.titulo)}</h3><p class="sub">${sub}</p>
-    <div class="botoes">${dl ? `<a class="btn prim" href="${esc(dl)}" download data-dl="${x.id}" data-mb="${tam||0}">${ic('download')}Baixar vídeo${tam ? ` <small>${fmtTam(tam)}</small>` : ''}</a>` : ''}
+    <div class="botoes">${btnLoop()}${dl ? `<a class="btn prim" href="${esc(dl)}" download data-dl="${x.id}" data-mb="${tam||0}">${ic('download')}Baixar vídeo${tam ? ` <small>${fmtTam(tam)}</small>` : ''}</a>` : ''}
       <button class="btn prim" data-compartilhar="${x.id}">${ic('share')}Copiar link</button>
       <button class="btn sec" data-fav="${x.id}">${ic('estrela')}${fav ? 'Remover dos salvos' : 'Salvar'}</button>
       ${adminAgora() ? `<button class="btn sec" data-ocultar="${x.id}" style="color:var(--erro)">${ic('x')}Excluir do app</button>` : ''}</div>`);
-  const v = painel.querySelector('video'); if(v) v.play().catch(() => {});
+  iniciarLoop();
 }
 function telaGaleria(id){
   const GL = D.galerias && D.galerias.lista && D.galerias.lista[id]; if(!GL) return telaMarketing();
@@ -862,8 +869,8 @@ function painelGal(gid, iid){
     ? `<div class="player"><video controls playsinline preload="metadata" poster="${esc(PV + it.id + '.webp')}" src="${esc(arq)}"></video></div>`
     : `<div class="img-g" style="background:var(--surface-2)"><img src="${esc(arq)}" alt="${esc(it.titulo)}" onerror="this.onerror=null;this.src='${esc(PV + it.id + '.webp')}'"></div>`;
   abrirPainel(`${midia}<h3 style="margin-top:14px">${esc(it.titulo)}</h3><p class="sub">${esc(GL.titulo)} · ${esc(it.grupo)}</p>
-    <div class="botoes"><a class="btn prim" href="${esc(arq)}" download data-dl="gal" data-tit="${esc(GL.titulo + ' · ' + it.titulo)}" data-mb="${it.mb}">${ic('download')}Baixar ${it.tipo === 'video' ? 'vídeo' : it.ext.toUpperCase()} <small>${fmtTam(Math.max(.1, it.mb))}</small></a>${btnComp(GL.titulo + ' · ' + it.titulo, arq, arq, it.tipo === 'video' ? 'Vídeo' : 'Imagem', it.mb)}<button class="btn sec" data-comentar-ctx="${esc('galeria:' + it.id + '|' + GL.titulo + ' · ' + it.titulo)}">${ic('mega')}Sugerir ou comentar</button></div>`);
-  const v = painel.querySelector('video'); if(v) v.play().catch(() => {});
+    <div class="botoes">${it.tipo === 'video' ? btnLoop() : ''}<a class="btn prim" href="${esc(arq)}" download data-dl="gal" data-tit="${esc(GL.titulo + ' · ' + it.titulo)}" data-mb="${it.mb}">${ic('download')}Baixar ${it.tipo === 'video' ? 'vídeo' : it.ext.toUpperCase()} <small>${fmtTam(Math.max(.1, it.mb))}</small></a>${btnComp(GL.titulo + ' · ' + it.titulo, arq, arq, it.tipo === 'video' ? 'Vídeo' : 'Imagem', it.mb)}<button class="btn sec" data-comentar-ctx="${esc('galeria:' + it.id + '|' + GL.titulo + ' · ' + it.titulo)}">${ic('mega')}Sugerir ou comentar</button></div>`);
+  iniciarLoop();
 }
 function painelItem(id){
   const x = TODOS[id]; if(!x) return;
@@ -1412,6 +1419,17 @@ document.addEventListener('click', e=>{
   if(t.closest('[data-fechar-busca]')){ fecharBusca(); return; }
   const sug = t.closest('[data-sug]'); if(sug){ const q = document.getElementById('q'); q.value = sug.dataset.sug; q.dispatchEvent(new Event('input')); q.focus(); return; }
   const gm = t.closest('[data-gmodo]'); if(gm){ modoGate = gm.dataset.gmodo; atualizarGate(); return; }
+  const lpv = t.closest('[data-loop]'); if(lpv){
+    const v = painel.querySelector('video');
+    if(v){
+      const on = !v.loop; v.loop = on; ls.set('loopVideo', on);
+      lpv.classList.toggle('on', on); lpv.setAttribute('aria-pressed', String(on));
+      const sm = lpv.querySelector('small'); if(sm) sm.textContent = on ? 'ligado' : 'desligado';
+      if(on){ manterTela(); if(v.ended) v.play().catch(() => {}); } else liberarTela();
+      toast(on ? 'Loop ligado: o vídeo repete sozinho' : 'Loop desligado');
+    }
+    return;
+  }
   const idm = t.closest('[data-idioma]'); if(idm){
     e.preventDefault(); e.stopPropagation();
     const v = TODOS[idm.dataset.idioma], row = idm.closest('.linha');
