@@ -1754,6 +1754,31 @@ window.CVD = {
    "topico": "outras-cirurgias"
   },
   {
+   "titulo": "Split Crest · Ponta SFR4",
+   "esp": "cirurgia",
+   "ponta": "SFR4",
+   "pontas": [
+    "SFR4"
+   ],
+   "mb": 47.6,
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-48-split-crest-ponta-sfr4.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-48-split-crest-ponta-sfr4.mp4",
+   "topico": "outras-cirurgias"
+  },
+  {
+   "titulo": "Aumento de Coroa · Flapless",
+   "esp": "cirurgia",
+   "prof": "Dr. Aldir Machado",
+   "mb": 86.9,
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-49-aumento-de-coroa-flapless-dr-aldir-machado.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-49-aumento-de-coroa-flapless-dr-aldir-machado.mp4",
+   "topico": "flapless",
+   "esps": [
+    "cirurgia",
+    "periodontia"
+   ]
+  },
+  {
    "titulo": "Aumento de Coroa · Flapless com DentSurg",
    "esp": "cirurgia",
    "formato": "YouTube",
@@ -3347,5 +3372,5 @@ window.CVD = {
    "nome": "Demonstrações e casos clínicos"
   }
  ],
- "rev": 1793021515999
+ "rev": 1793025340419
 };
