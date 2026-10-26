@@ -1741,6 +1741,19 @@ window.CVD = {
    "topico": "demonstracoes"
   },
   {
+   "titulo": "Cirurgia com a ponta SFR4",
+   "esp": "cirurgia",
+   "prof": "Dr. Berti",
+   "ponta": "SFR4",
+   "pontas": [
+    "SFR4"
+   ],
+   "mb": 5.8,
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-47-cirurgia-ponta-sfr4-dr-berti.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-47-cirurgia-ponta-sfr4-dr-berti.mp4",
+   "topico": "outras-cirurgias"
+  },
+  {
    "titulo": "Aumento de Coroa · Flapless com DentSurg",
    "esp": "cirurgia",
    "formato": "YouTube",
@@ -3334,5 +3347,5 @@ window.CVD = {
    "nome": "Demonstrações e casos clínicos"
   }
  ],
- "rev": 1792528284900
+ "rev": 1793021515999
 };
