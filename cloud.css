@@ -305,3 +305,19 @@ body{padding-bottom:calc(var(--nav-h) + env(safe-area-inset-bottom) + 14px)}
 .pg-t.on .pg-ck{display:grid}
 .pg-fixo{position:sticky;bottom:0;padding:12px 0 6px;background:var(--surface);margin-top:8px}
 .pg-fixo .btn[disabled]{opacity:.4;pointer-events:none}
+
+/* ===== Pós-venda ===== */
+.pv-dica{margin:14px 0 0;padding:20px;border:1px solid var(--linha);border-radius:20px;background:var(--surface)}
+.pv-dica h3{font-size:18px;font-weight:800;letter-spacing:-.02em;margin:0 0 10px;color:var(--texto)}
+.pv-dica h4{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;margin:18px 0 8px;color:var(--texto)}
+.pv-dica p{color:var(--sub);font-size:14.5px;line-height:1.6;margin:0 0 10px}
+.pv-dica p b,.pv-lista b{color:var(--texto)}
+.pv-dica .lista{margin-top:6px;padding:0}
+.pv-lista{margin:0 0 6px;padding-left:20px;color:var(--sub);font-size:14.5px;line-height:1.6}
+.pv-lista ul{margin:6px 0 0;padding-left:20px}
+.pv-img{display:block;width:100%;padding:0;margin:8px 0 4px;border:1px solid var(--linha);border-radius:14px;overflow:hidden;background:#fff}
+.pv-img img{display:block;width:100%;height:auto}
+.pv-duvida{margin:22px 0 8px;padding:22px;border-radius:20px;background:var(--surface-2)}
+.pv-duvida h3{margin:0 0 6px;font-size:18px;font-weight:800;letter-spacing:-.02em}
+.pv-duvida p{margin:0 0 14px;color:var(--sub);font-size:14.5px;line-height:1.55}
+.pv-eq{margin-top:6px}

@@ -573,6 +573,7 @@ function telaInicio(){
     ${secao('Mais conteúdo')}
     <div class="lista">
       ${outros.map(p=>linkRow('#/produto/'+p.id, p.icone, esc(p.nome))).join('')}
+      ${linkRow('#/posvenda','chave','Pós-venda','Instalar e usar')}
       ${linkRow('#/clips','tv','CVD Clips Pro','Modo TV')}
       ${linkRow('#/tipo/comparativo','tabela','Tabela Comparativa dos Piezos',cont('comparativo'))}
       ${linkRow('#/marketing','mega','Marketing e treinamentos')}
@@ -884,6 +885,49 @@ function clipsPainelHtml(){
     <p class="clip-dica">Os vídeos são carregados pela internet. Antes do evento, abra a exibição uma vez no Wi-Fi para conferir se tudo toca. Ao terminar o último vídeo, a sequência volta ao primeiro sozinha.</p>
   </div>`;
 }
+
+/* ===================== Pós-venda: como instalar e usar cada equipamento ===================== */
+const pvYt = id => 'https://www.youtube.com/watch?v=' + id;
+function pvLinhaVideo(id, titulo, sub, i){
+  const u = pvYt(id);
+  return `<div class="linha anima" style="--i:${Math.min(i || 0, 10)}"><a class="abrir" href="${u}" target="_blank" rel="noopener"><span class="lead thumb"><img loading="lazy" alt="" src="https://i.ytimg.com/vi/${id}/mqdefault.jpg" onerror="this.remove()"><span class="pl">${ic('playcheio')}</span></span><span class="txt"><span class="t">${esc(titulo)}</span><span class="m" style="display:block">${esc(sub)}</span></span></a><span class="acoes"><button class="ibtn comp" data-comp-gen="${esc(JSON.stringify({ t: titulo, u: u, d: '', tp: 'Vídeo', mb: null }))}" aria-label="Compartilhar">${ic('share')}</button></span></div>`;
+}
+function pvItensDoApp(e){
+  const por = nome => D.materiais.find(m => (m.url || '').endsWith('/' + nome) && doPt(m));
+  return [por(e.manual), por(e.catalogo)].filter(Boolean);
+}
+function telaPosVenda(eqId){
+  const PV = window.CVD_POSVENDA; if(!PV) return telaInicio();
+  const e = eqId && PV.equipamentos.find(x => x.id === eqId);
+  const wa = (msg) => 'https://api.whatsapp.com/send?phone=' + PV.whats + '&text=' + encodeURIComponent(msg);
+  if(!e){
+    const cards = PV.equipamentos.map((q, i) => `<a class="pc anima" href="#/posvenda/${q.id}" style="--i:${i}"><span class="img"><img src="${(PROD[q.produto] || {}).img || ''}" alt=""></span><b>${esc(q.nome)}</b><small>Como instalar e usar</small></a>`).join('');
+    return { titulo: 'Pós-venda', voltar: '#/', corpo: largo('Pós-venda', 'Instalação, modo de uso, cuidados e esterilização de cada equipamento. Escolha o equipamento:')
+      + `<div class="rolagem pv-eq">${cards}</div>`
+      + `<div class="nota anima" style="--i:2">${ic('info')}<div><b>Para o cliente ou para a equipe</b>Use os botões de compartilhar para enviar cada vídeo direto ao dentista que acabou de receber o equipamento.</div></div>` };
+  }
+  const passos = e.passos.map((p, i) => pvLinhaVideo(p.yt, `${i + 1}º passo · ${p.t}`, e.nome, i)).join('');
+  const dicas = [
+    { n: 'Chave catraca', yt: e.dicas.catraca, txt: ['É importante utilizar este acessório para o torque (encaixe) adequado e não danificar a peça de mão e ponta.', 'Utilize a chave catraca do <b>lado correto</b> para evitar danos na ponta ou peça de mão. Observe a etiqueta autoclavável na cor amarela indicativa na peça.'] },
+    { n: 'Função Clean', yt: e.dicas.clean, txt: ['É importante ser realizado no equipamento no <b>início</b> e no <b>final do dia</b>.', '<b>Início do dia:</b> esta função leva o líquido que será utilizado no procedimento até a extremidade da peça de mão, garantindo que a ponta não sofra superaquecimento, pois o líquido também tem a função de refrigeração.', '<b>Final do dia:</b> esta função evita a obstrução das mangueiras de irrigação e deve ser realizada com a mangueira fora do reservatório, para que todo o líquido seja ejetado.'] },
+    { n: 'Bomba peristáltica', yt: e.dicas.bomba, txt: ['Tem a função de conduzir o líquido presente no reservatório pela mangueira até a extremidade da ponta, através de movimentos peristálticos.', 'O espigão, conforme apontado no vídeo, deve sempre permanecer acima da bomba peristáltica.'] }
+  ].map((d, i) => `<div class="pv-dica anima" style="--i:${i}"><h3>${i + 1}. ${d.n}</h3>${d.txt.map(t => `<p>${t}</p>`).join('')}<div class="lista">${pvLinhaVideo(d.yt, d.n, `Dica ${i + 1} de 4 · ${e.nome}`, 0)}</div></div>`).join('');
+  const ester = `<div class="pv-dica anima"><h3>4. Esterilização</h3>
+    <p><b>Equipamento e acessórios:</b> no gabinete do equipamento, utilize álcool 70º e uma flanela macia e limpa.</p>
+    <p>Itens autoclaváveis do ${esc(e.nome)}:</p>
+    <button class="pv-img" data-pv-img="${esc(e.itens)}" aria-label="Ampliar a imagem dos itens autoclaváveis"><img loading="lazy" src="${esc(e.itens)}" alt="Itens autoclaváveis do ${esc(e.nome)}: conjunto de irrigação, conjunto da peça de mão, ponta e chave catraca"></button>
+    <h4>Como autoclavar</h4>
+    <ul class="pv-lista"><li>Nos acessórios, inicie a limpeza com uma escova e utilize <b>apenas</b> o autoclave.</li><li>Antes de iniciar o ciclo de esterilização, certifique-se de que as peças estejam completamente secas e livres de resíduos.</li><li>Esterilize utilizando um dos seguintes parâmetros:<ul><li>121 °C a 127 °C (1 atm de pressão) por 15 a 30 minutos; ou</li><li>132 °C a 134 °C (2 atm de pressão) por 4 a 7 minutos.</li></ul></li></ul>
+    <div class="nota">${ic('info')}<div><b>Atenção</b>A bomba peristáltica não deve ir no autoclave. Não utilize cuba ultrassônica, estufa, glutaraldeído ou qualquer outra solução enzimática ou química.</div></div></div>`;
+  const acesse = pvItensDoApp(e);
+  const corpo = largo(`Como instalar e usar · ${esc(e.nome)}`, 'Passo a passo simples e rápido para concluir a instalação, aprender a manusear o equipamento e as pontas CVDentus. Depois, veja as 4 dicas importantes.')
+    + secao('Passo a passo', e.passos.length) + `<div class="lista">${passos}</div>`
+    + secao('4 dicas importantes', 4) + dicas + ester
+    + (acesse.length ? secao('Acesse também') + lista(acesse, { produto: true }) : '')
+    + `<div class="pv-duvida anima"><h3>Ainda está com dúvidas?</h3><p>Solicite uma ligação ou videochamada: o time exclusivo de pós-venda está pronto para atender.</p><a class="btn prim" href="${wa(e.msg)}" target="_blank" rel="noopener">${ic('mega')}Falar com o pós-venda</a></div>`;
+  return { titulo: 'Pós-venda · ' + e.nome, voltar: '#/posvenda', corpo };
+}
+
 function telaClips(){
   const todos = clipsVideos();
   const grupos = [];
@@ -1507,7 +1551,7 @@ function aplicarCatalogo(c){
   const pi = c.pontas_img || {}; window.CVD_PONTAS_IMG = pi.img; window.CVD_PONTAS_DL = pi.dl; window.CVD_PONTAS_PREV = pi.prev;
 }
 async function carregarEstatico(){
-  for(const a of ['dados.js', 'pontas.js', 'pontas_img.js', 'lupas.js', 'thumbs.js', 'fotos.js']){
+  for(const a of ['dados.js', 'pontas.js', 'pontas_img.js', 'lupas.js', 'thumbs.js', 'fotos.js', 'posvenda.js']){
     await new Promise((ok, er) => { const s = document.createElement('script'); s.src = a + '?' + VERSAO_APP; s.onload = ok; s.onerror = () => er(new Error(a)); document.head.appendChild(s); });
   }
 }
@@ -1572,6 +1616,7 @@ function escolherTela(){
   if(a==='procedimentos') return telaProcedimentos(b);
   if(a==='topico') return telaTopico(b);
   if(a==='pontas') return telaPontas(b, c);
+  if(a==='posvenda') return telaPosVenda(b);
   if(a==='clips') return telaClips();
   if(a==='marketing') return telaMarketing();
   if(a==='marca') return telaMarca();
@@ -1693,6 +1738,7 @@ document.addEventListener('click', e=>{
   if(t.closest('[data-clips-pp]')){ if(CP.v.paused) CP.v.play().catch(() => {}); else CP.v.pause(); return; }
   if(t.closest('[data-clips-mudo]')){ CP.mudo = !CP.mudo; ls.set('clipsMudo', CP.mudo); clipsMudoAplicar(); return; }
   if(t.closest('[data-clips-tela]')){ clipsTela(); return; }
+  const pvi = t.closest('[data-pv-img]'); if(pvi){ const src = pvi.dataset.pvImg; abrirPainel(`<div class="img-g" style="background:var(--surface-2)"><img src="${esc(src)}" alt="Itens autoclaváveis"></div><p class="sub" style="margin-top:12px">Itens autoclaváveis. Toque e segure a imagem para salvar.</p>`); return; }
   const pga = t.closest('[data-pgabrir]'); if(pga){ const idp = pga.dataset.pgabrir; fecharPainel(); setTimeout(() => painelPaginas(idp), 240); return; }
   const pgs = t.closest('[data-pgsel]'); if(pgs){ pgToggle(+pgs.dataset.pgsel); return; }
   if(t.closest('[data-pg-todas]')){ if(!PG.doc) return; const n = PG.doc.numPages, todas = PG.sel.length === Math.min(n, PG_MAX); PG.sel = todas ? [] : Array.from({ length: Math.min(n, PG_MAX) }, (_, i) => i + 1); document.querySelectorAll('[data-pgsel]').forEach(el => { const on = PG.sel.includes(+el.dataset.pgsel); el.classList.toggle('on', on); el.setAttribute('aria-pressed', String(on)); }); pgResumo(); if(!todas && n > PG_MAX) toast(`Escolhidas as primeiras ${PG_MAX} páginas`); return; }
