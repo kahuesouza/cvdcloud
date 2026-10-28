@@ -321,3 +321,5 @@ body{padding-bottom:calc(var(--nav-h) + env(safe-area-inset-bottom) + 14px)}
 .pv-duvida h3{margin:0 0 6px;font-size:18px;font-weight:800;letter-spacing:-.02em}
 .pv-duvida p{margin:0 0 14px;color:var(--sub);font-size:14.5px;line-height:1.55}
 .pv-eq{margin-top:6px}
+
+.player iframe{display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:14px;background:#000}
