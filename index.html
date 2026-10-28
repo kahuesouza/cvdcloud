@@ -605,8 +605,9 @@ function telaProduto(id, aba){
     ? `<div class="anima" style="display:flex;align-items:center;gap:16px;margin:8px 0 2px"><span class="pc" style="flex:none"><span class="img" style="width:112px;height:96px"><img src="${p.img}" alt=""></span></span><div class="largo" style="margin:0"><h1 style="font-size:26px">${esc(p.nome)}</h1><p>${esc(p.resumo)}</p></div></div>`
     : largo(esc(p.nome), esc(p.resumo));
   const pontasRow = eq ? `<div style="margin-top:14px">${linkRow('#/pontas/'+id,'pilula','Pontas e bula do '+esc(p.nome), eq.modos.reduce((s,m)=>s+m.pontas.length,0)+' pontas')}</div>` : '';
+  const compEq = `<div style="margin-top:14px">${btnComp(p.nome, fichaEquip(id), '', 'Equipamento', null, 'Compartilhar apresentação com o cliente', p.img || '')}</div>`;
   const notaProd = p.nota ? `<div class="nota anima" style="--i:1">${ic('info')}<div>${esc(p.nota)}</div></div>` : '';
-  return { titulo:p.nome, voltar:'#/', corpo: hero + notaProd + pontasRow + abasHtml + corpo };
+  return { titulo:p.nome, voltar:'#/', corpo: hero + notaProd + compEq + pontasRow + abasHtml + corpo };
 }
 
 function telaFotos(id){
@@ -697,7 +698,7 @@ function painelPonta(cod){
     <div class="grade" style="margin-top:14px">${I.f.map(([id,rot,mb])=>`<a class="fcard" href="${esc(DL+id+'.png')}" download data-dl="ponta-png" data-tit="${esc(cod+' · '+rot)}" data-mb="${mb}">
       <span class="im" style="background:#fff;border:1px solid var(--linha)"><img loading="lazy" alt="${esc(cod+' · '+rot)}" src="${esc(PV+id+'.webp')}"></span>
       <b>${esc(rot)}</b><small>PNG · ${fmtTam(Math.max(.1,mb))} · baixar</small></a>`).join('')}</div>
-    <div class="botoes" style="margin-top:14px">${btnComp('Ponta ' + cod, I.link, '', 'Ponta')}<a class="btn sec" href="${esc(I.link)}" target="_blank" rel="noopener">${ic('link')}Ver a ponta no site</a></div>`);
+    <div class="botoes" style="margin-top:14px">${btnComp('Ponta ' + cod, fichaPonta(cod), '', 'Ponta', null, 'Compartilhar com o cliente', 'img/pontas/' + I.s + '.webp')}<a class="btn sec" href="${esc(I.link)}" target="_blank" rel="noopener">${ic('link')}Ver a ponta no site</a></div>`);
 }
 function telaPontas(eqId, modoId){
   const e = PONTAS.find(x=>x.id===eqId);
@@ -1683,13 +1684,17 @@ async function enviarLink(titulo, link){
   }
   toast(ok ? 'Link copiado' : 'Não foi possível copiar o link');
 }
-const btnComp = (titulo, url, baixarUrl, tipo, mb, rot) => `<button class="btn prim" data-comp-gen="${esc(JSON.stringify({ t: titulo, u: url, d: baixarUrl || '', tp: tipo || '', mb: typeof mb === 'number' ? mb : null }))}">${ic('share')}${rot || 'Compartilhar'}</button>`;
+const FICHA_BASE = 'https://cloud.cvdentus.com.br/v.html';
+const fichaPonta = cod => `${FICHA_BASE}?ficha=ponta&c=${encodeURIComponent(cod)}`;
+const fichaEquip = id => `${FICHA_BASE}?ficha=equip&p=${encodeURIComponent(id)}`;
+const siteEmpresaUrl = u => { try{ const h = new URL(u).hostname; return /(^|\.)cvdentus\.com\.br$/.test(h) && h !== 'cloud.cvdentus.com.br'; }catch(e){ return false; } };
+const btnComp = (titulo, url, baixarUrl, tipo, mb, rot, th) => `<button class="btn prim" data-comp-gen="${esc(JSON.stringify({ t: titulo, u: url, d: baixarUrl || '', tp: tipo || '', mb: typeof mb === 'number' ? mb : null, th: th || '' }))}">${ic('share')}${rot || 'Compartilhar'}</button>`;
 async function compartilharGenerico(o){
   const C = CONTA();
   track('compartilhar', 'g' + String(o.u).slice(-40), o.t, '');
   if(C && C.configurado && C.aprovado()){
     try{
-      const id = await C.criarCompartilhamento({ titulo: o.t, url: o.u, baixarUrl: o.d || undefined, tipo: o.tp || undefined, mb: typeof o.mb === 'number' ? o.mb : undefined });
+      const id = await C.criarCompartilhamento({ titulo: o.t, url: o.u, baixarUrl: o.d || undefined, thumb: o.th || undefined, tipo: o.tp || undefined, mb: typeof o.mb === 'number' ? o.mb : undefined });
       await enviarLink(o.t, new URL('v.html', location.href.split('#')[0]).href + '#' + id);
     }catch(e){ toast('Não foi possível gerar o link agora'); }
     return;
@@ -1704,7 +1709,8 @@ async function compartilhar(x){
   if(C && C.configurado && C.aprovado()){
     try{
       const dl = linkDownload(x), t = THUMBS[x.url], tam = tamDownload(x);
-      const id = await C.criarCompartilhamento({ titulo: nome, url: x.url, baixarUrl: dl || undefined, thumb: t ? 'img/t/' + t[0] : undefined, tipo: x.esp ? 'Vídeo de procedimento' : (TIPOS[x.tipo] || {}).nome, mb: typeof tam === 'number' ? tam : undefined });
+      const urlCli = siteEmpresaUrl(x.url) && PROD[x.produto] ? fichaEquip(x.produto) : x.url;
+      const id = await C.criarCompartilhamento({ titulo: nome, url: urlCli, baixarUrl: dl || undefined, thumb: t ? 'img/t/' + t[0] : undefined, tipo: x.esp ? 'Vídeo de procedimento' : (TIPOS[x.tipo] || {}).nome, mb: typeof tam === 'number' ? tam : undefined });
       await enviarLink(nome, new URL('v.html', location.href.split('#')[0]).href + '#' + id);
     }catch(e){ toast('Não foi possível gerar o link agora'); }
     return;

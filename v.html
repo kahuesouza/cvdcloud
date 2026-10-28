@@ -36,6 +36,25 @@ a.btn:active{transform:scale(.97)}
 .rod{text-align:center;color:var(--fraco);font-size:12px;margin-top:26px}
 .vazio{text-align:center;padding:40px 10px;color:var(--sub);line-height:1.6}
 svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.ficha h2{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;margin:26px 0 10px;color:var(--texto)}
+.ficha .sub{color:var(--sub);font-size:14.5px;line-height:1.6;margin:10px 0 0}
+.ficha .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.ficha .chip{font-size:12px;font-weight:700;padding:6px 11px;border-radius:999px;border:1px solid var(--linha);background:var(--surface2);color:var(--texto)}
+.ficha .bloco{border:1px solid var(--linha);border-radius:16px;padding:16px;margin-top:10px;background:var(--surface)}
+.ficha .bloco b.t{display:block;font-size:13px;margin-bottom:8px}
+.ficha ul{list-style:none;margin:0;padding:0}
+.ficha li{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-top:1px solid var(--linha);font-size:14px;line-height:1.4}
+.ficha li:first-child{border-top:0}
+.ficha li span.p{flex:none;color:var(--sub);font-weight:700;font-size:12.5px}
+.ficha .grade{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ficha .foto{border:1px solid var(--linha);border-radius:14px;overflow:hidden;background:#fff}
+.ficha .foto img{display:block;width:100%;aspect-ratio:1;object-fit:contain}
+.ficha .foto a{display:block;text-align:center;padding:9px;font-size:12.5px;font-weight:700;color:var(--texto);text-decoration:none;background:var(--surface2);border-top:1px solid var(--linha)}
+.ficha .vid{display:flex;gap:12px;align-items:center;width:100%;text-align:left;padding:10px;border:1px solid var(--linha);border-radius:14px;background:var(--surface);margin-top:8px;font:inherit;color:inherit;cursor:pointer}
+.ficha .vid img{width:96px;height:54px;object-fit:cover;border-radius:8px;background:#000;flex:none}
+.ficha .vid span{font-weight:700;font-size:14px;line-height:1.3}
+.ficha .vid small{display:block;color:var(--fraco);font-weight:600;font-size:12px;margin-top:2px}
+.ficha .doc{margin-top:8px}
 .aviso{position:fixed;left:12px;right:12px;bottom:12px;max-width:536px;margin:0 auto;padding:14px 16px;border-radius:16px;background:var(--surface);border:1px solid var(--linha);box-shadow:0 12px 40px rgba(0,0,0,.25);font-size:12.5px;line-height:1.5;color:var(--sub);z-index:5}
 .aviso b{color:var(--texto)}
 .aviso .ac{display:flex;gap:14px;margin-top:10px;align-items:center}
@@ -71,6 +90,79 @@ function aparelho(){
   return { disp: t ? 'tablet' : m ? 'celular' : 'computador', so, nav };
 }
 
+
+/* ---------- fichas: o cliente vê a informação aqui, sem ser levado para o site ---------- */
+const carregarScript = src => new Promise((ok, er) => { const t = document.createElement('script'); t.src = src; t.onload = ok; t.onerror = () => er(new Error(src)); document.head.appendChild(t); });
+const expandirCod = c => { const m = c.match(/^(\S+) · Ø (.+)$/); return m ? m[2].split('/').map(dd => m[1] + ' ' + dd) : [c.replace(/\s*\(.*?\)/g, '').trim()]; };
+const fmtPot = p => !p ? '' : /^\d+$/.test(p) ? 'Pot. ' + p : p;
+const ehSiteEmpresa = u => { try{ const h = new URL(u).hostname; return /(^|\.)cvdentus\.com\.br$/.test(h) && h !== 'cloud.cvdentus.com.br'; }catch(e){ return false; } };
+function fichaDe(d){
+  try{
+    const U = new URL(d.url);
+    const f = U.searchParams.get('ficha');
+    if(/\/v\.html$/.test(U.pathname) && f === 'ponta') return { t: 'ponta', c: U.searchParams.get('c') || '' };
+    if(/\/v\.html$/.test(U.pathname) && f === 'equip') return { t: 'equip', p: U.searchParams.get('p') || '' };
+    if(ehSiteEmpresa(d.url)){                       // links antigos que levavam ao site
+      if(/\/produto\/ponta-/.test(U.pathname)) return { t: 'ponta', link: d.url };
+      if(/spray-control/.test(U.pathname)) return { t: 'equip', p: 'spray-control' };
+      if(/linha-elo/.test(U.pathname)) return { t: 'equip', p: 'linha-elo' };
+      if(/bula-piezos/.test(U.pathname)) return { t: 'equip', p: 'pontas' };
+    }
+  }catch(e){}
+  return null;
+}
+async function renderFicha(f, d){
+  const W = window;
+  if(f.t === 'ponta'){
+    await Promise.all([carregarScript('pontas.js'), carregarScript('pontas_img.js')]);
+    const IMGP = W.CVD_PONTAS_IMG || {}, PREV = W.CVD_PONTAS_PREV, DL = W.CVD_PONTAS_DL;
+    let key = f.c;
+    if(!key && f.link){ const norm = x => String(x).replace(/\/+$/, ''); key = Object.keys(IMGP).find(k => norm(IMGP[k].link) === norm(f.link)) || ''; }
+    const I = IMGP[key];
+    if(!I){ c.innerHTML = `<h1>${esc(d.titulo)}</h1><p class="meta">Conteúdo apresentado pela equipe CVDentus.</p>`; return; }
+    const usos = [];
+    (W.CVD_PONTAS || []).forEach(e => e.modos.forEach(m => m.pontas.forEach(p => { if(p.cod.flatMap(expandirCod).includes(key)) usos.push({ eq: e.nome, modo: m.nome, linhas: p.linhas }); })));
+    const eqs = [...new Set(usos.map(u => u.eq))];
+    document.title = 'Ponta ' + key + ' · cvdcloud';
+    const foto0 = I.f[0];
+    c.innerHTML = `<div class="ficha">
+      <div class="midia img-clara"><img alt="Ponta ${esc(key)}" src="${esc(PREV + foto0[0] + '.webp')}"></div>
+      <h1>Ponta ${esc(key)}</h1>
+      ${eqs.length ? `<div class="chips">${eqs.map(e => `<span class="chip">${esc(e)}</span>`).join('')}</div>` : ''}
+      ${usos.length ? `<h2>Indicações</h2>` + usos.map(u => `<div class="bloco"><b class="t">${esc(u.eq)} · ${esc(u.modo)}</b><ul>${u.linhas.map(([ind, pot]) => `<li><span>${esc(ind)}</span>${pot ? `<span class="p">${esc(fmtPot(pot))}</span>` : ''}</li>`).join('')}</ul></div>`).join('') : ''}
+      <h2>Fotos e desenho técnico</h2>
+      <div class="grade">${I.f.map(([id, rot]) => `<div class="foto"><img loading="lazy" alt="${esc(rot)}" src="${esc(PREV + id + '.webp')}"><a href="${esc(DL + id + '.png')}" download data-baixou>Baixar PNG · ${esc(rot)}</a></div>`).join('')}</div>
+    </div>`;
+    return;
+  }
+  // equipamento
+  await Promise.all([carregarScript('dados.js'), carregarScript('fotos.js')]);
+  const D = W.CVD, P = (D.produtos || []).find(x => x.id === f.p);
+  if(!P){ c.innerHTML = `<h1>${esc(d.titulo)}</h1><p class="meta">Conteúdo apresentado pela equipe CVDentus.</p>`; return; }
+  document.title = P.nome + ' · cvdcloud';
+  const ptb = m => !m.idioma || m.idioma === 'pt';
+  const yid = u => ((u || '').match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([\w-]{11})/) || [])[1];
+  const videos = (D.materiais || []).filter(m => m.produto === f.p && ptb(m) && (yid(m.url) || /\.mp4(\?|$)/i.test(m.url || ''))).slice(0, 12);
+  const docs = (D.materiais || []).filter(m => m.produto === f.p && ptb(m) && /\.pdf(\?|$)/i.test(m.url || '') && /^https:/.test(m.url) && !ehSiteEmpresa(m.url));
+  const FO = (W.CVD_FOTOS && W.CVD_FOTOS.equip && W.CVD_FOTOS.equip[f.p]) || null;
+  const fotos = FO ? FO.grupos.flatMap(g => g.itens).slice(0, 6) : [];
+  c.innerHTML = `<div class="ficha">
+    ${P.img ? `<div class="midia img-clara"><img alt="${esc(P.nome)}" src="${esc(P.img)}"></div>` : ''}
+    <div class="midia" id="pl" hidden></div>
+    <h1>${esc(P.nome)}</h1>
+    ${P.resumo ? `<p class="sub">${esc(P.resumo)}</p>` : ''}
+    ${P.nota ? `<div class="bloco"><span class="p">${esc(P.nota)}</span></div>` : ''}
+    ${videos.length ? `<h2>Vídeos</h2>` + videos.map((m, i) => { const y = yid(m.url); return `<button class="vid" data-vid="${i}"><img loading="lazy" alt="" src="${y ? 'https://i.ytimg.com/vi/' + y + '/mqdefault.jpg' : (m.thumb || '')}" onerror="this.style.visibility='hidden'"><span>${esc(m.titulo)}<small>${y ? 'Vídeo' : 'Vídeo' + (m.mb ? ' · ' + Math.round(m.mb) + ' MB' : '')}</small></span></button>`; }).join('') : ''}
+    ${fotos.length ? `<h2>Fotos</h2><div class="grade">${fotos.map(it => `<div class="foto"><img loading="lazy" alt="${esc(it.titulo)}" src="${esc(W.CVD_FOTOS.prev + it.id + '.webp')}"><a href="${esc(W.CVD_FOTOS.dl + it.id + '.' + it.ext)}" download data-baixou>Baixar · ${esc(it.titulo)}</a></div>`).join('')}</div>` : ''}
+    ${docs.length ? `<h2>Catálogos e manuais</h2>` + docs.map(m => `<a class="btn sec doc" href="${esc(m.url)}" target="_blank" rel="noopener noreferrer" data-marca>${esc(m.titulo)}</a>`).join('') : ''}
+  </div>`;
+  c.querySelectorAll('[data-vid]').forEach(b => b.addEventListener('click', () => {
+    const m = videos[+b.dataset.vid], y = yid(m.url), pl = document.getElementById('pl');
+    pl.innerHTML = y ? `<iframe src="https://www.youtube-nocookie.com/embed/${y}?rel=0&playsinline=1&autoplay=1" title="${esc(m.titulo)}" allow="accelerometer; autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>` : `<video controls autoplay playsinline src="${esc(m.url)}"></video>`;
+    pl.hidden = false; pl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }));
+}
+
 if(!/^[A-Za-z0-9]{10,40}$/.test(id)) falha('Link inválido.');
 else if(!CFG || !CFG.apiKey) falha('Link indisponível.');
 else {
@@ -90,6 +182,9 @@ else {
         const thumb = /^img\/[\w\-./]+$/.test(d.thumb || '') ? d.thumb : '';
         const mb = typeof d.mb === 'number' ? (d.mb < 1 ? '<1 MB' : (d.mb < 10 ? String(d.mb).replace('.', ',') : Math.round(d.mb)) + ' MB') : '';
         document.title = d.titulo + ' · cvdcloud';
+        const fic = fichaDe(d);
+        if(fic){ await renderFicha(fic, d); }
+        else {
         const u = d.url, mesma = u.startsWith(location.origin + '/');
         const yt = (u.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([\w-]{11})/) || [])[1];
         const ehMp4 = /\.mp4(\?|$)/i.test(u), ehPdf = /\.pdf(\?|$)/i.test(u), ehImg = /\.(png|jpe?g|webp|gif)(\?|$)/i.test(u);
@@ -100,11 +195,14 @@ else {
         else if(ehImg) midia = `<div class="midia img-clara"><img alt="${esc(d.titulo)}" src="${esc(u)}"></div>`;
         else if(ehPdf && mesma && !celular) midia = `<div class="midia"><iframe class="pdf" id="pdf" src="${esc(u)}#view=FitH" title="${esc(d.titulo)}"></iframe></div>`;
         else if(thumb) midia = `<div class="midia capa"><img alt="" src="${esc(thumb)}"></div>`;
-        const mostraAbrir = !(yt || ehMp4 || ehImg || (ehPdf && mesma && !celular));
+        const siteEmpresa = ehSiteEmpresa(u);
+        const mostraAbrir = !(yt || ehMp4 || ehImg || (ehPdf && mesma && !celular) || siteEmpresa);
         const dlOk = d.baixarUrl && https(d.baixarUrl);
-        c.innerHTML = `${midia}<h1>${esc(d.titulo)}</h1><p class="meta">${esc([d.tipo, mb].filter(Boolean).join(' · '))}</p>
+        c.innerHTML = `${midia}<h1>${esc(d.titulo)}</h1><p class="meta">${esc([d.tipo, mb].filter(Boolean).join(' · '))}</p>${siteEmpresa && !dlOk ? '<p class="meta">Conteúdo apresentado pela equipe CVDentus. Fale com o seu consultor para saber mais.</p>' : ''}
           <div class="botoes">${mostraAbrir || (ehPdf && celular) ? `<a class="btn prim" id="b-abrir" href="${esc(u)}" target="_blank" rel="noopener noreferrer">${ehPdf ? 'Abrir o PDF' : 'Abrir'}</a>` : ''}
           ${dlOk ? `<a class="btn ${mostraAbrir ? 'sec' : 'prim'}" id="b-baixar" href="${esc(d.baixarUrl)}" download rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Baixar${mb ? ' · ' + esc(mb) : ''}</a>` : ''}</div>`;
+
+        }
 
         /* ---------- registro do acesso, SÓ depois que o visitante aceita ---------- */
         const depuracao = /[?&]debug=1/.test(location.search);
@@ -132,6 +230,7 @@ else {
           addEventListener('pagehide', () => { sujo = true; enviar(); });
           const marca = campo => { if(!estado[campo]){ estado[campo] = true; sujo = true; enviar(); } };
           document.getElementById('b-abrir')?.addEventListener('click', () => marca('abriu'));
+          c.addEventListener('click', e => { if(e.target.closest('[data-vid],[data-marca]')) marca('abriu'); if(e.target.closest('[data-baixou]')) marca('baixou'); });
           document.getElementById('b-baixar')?.addEventListener('click', () => marca('baixou'));
           const v = document.getElementById('vd');
           if(v){ let ult = 0; v.addEventListener('play', () => marca('abriu')); v.addEventListener('timeupdate', () => { if(!v.paused && v.currentTime > ult && v.currentTime - ult < 2) { estado.video += v.currentTime - ult; sujo = true; } ult = v.currentTime; }); v.addEventListener('seeked', () => { ult = v.currentTime; }); }
