@@ -393,7 +393,9 @@ window.CVD = {
    "tipo": "uso",
    "produto": "optymus",
    "idioma": "pt",
-   "url": "https://youtu.be/7lVcrUFfFlQ"
+   "mb": 6.6,
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/uso-optymus-pt-v2.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/uso-optymus-pt-v2.mp4"
   },
   {
    "titulo": "How to Use Optymus",
@@ -3372,5 +3374,5 @@ window.CVD = {
    "nome": "Demonstrações e casos clínicos"
   }
  ],
- "rev": 1793025340419
+ "rev": 1793192296508
 };
