@@ -50,6 +50,21 @@ svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-l
 .ficha .foto{border:1px solid var(--linha);border-radius:14px;overflow:hidden;background:#fff}
 .ficha .foto img{display:block;width:100%;aspect-ratio:1;object-fit:contain}
 .ficha .foto a{display:block;text-align:center;padding:9px;font-size:12.5px;font-weight:700;color:var(--texto);text-decoration:none;background:var(--surface2);border-top:1px solid var(--linha)}
+.ficha .carro{position:relative;margin-bottom:6px}
+.ficha .faixa{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;border-radius:18px}
+.ficha .faixa::-webkit-scrollbar{display:none}
+.ficha .sl{flex:0 0 100%;scroll-snap-align:center;position:relative;background:#fff;border:1px solid var(--linha);border-radius:18px;overflow:hidden}
+.ficha .sl img{display:block;width:100%;aspect-ratio:1;object-fit:contain}
+.ficha .sl em{position:absolute;left:12px;bottom:12px;font-style:normal;font-size:12px;font-weight:700;padding:5px 10px;border-radius:999px;background:#000b;color:#fff}
+.ficha .seta{position:absolute;top:50%;width:40px;height:40px;margin-top:-20px;border-radius:50%;border:1px solid var(--linha);background:var(--surface);color:var(--texto);display:grid;place-items:center;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.18);padding:0}
+.ficha .seta.e{left:8px}.ficha .seta.d{right:8px}
+.ficha .seta[hidden]{display:none}
+.ficha .pts{display:flex;justify-content:center;gap:7px;margin-top:12px}
+.ficha .pts i{width:7px;height:7px;border-radius:50%;background:var(--linha);transition:all .2s}
+.ficha .pts i.on{width:22px;border-radius:4px;background:var(--texto)}
+.ficha .dica{color:var(--fraco);font-size:12.5px;text-align:center;margin:8px 0 0}
+.ficha .baixar{display:grid;gap:8px;margin-top:8px}
+.ficha .baixar a{display:flex;align-items:center;justify-content:center;gap:9px;padding:13px 16px;border-radius:12px;border:1px solid var(--linha);background:var(--surface2);color:var(--texto);font-weight:700;font-size:14px;text-decoration:none}
 .ficha .vid{display:flex;gap:12px;align-items:center;width:100%;text-align:left;padding:10px;border:1px solid var(--linha);border-radius:14px;background:var(--surface);margin-top:8px;font:inherit;color:inherit;cursor:pointer}
 .ficha .vid img{width:96px;height:54px;object-fit:cover;border-radius:8px;background:#000;flex:none}
 .ficha .vid span{font-weight:700;font-size:14px;line-height:1.3}
@@ -100,7 +115,7 @@ function fichaDe(d){
   try{
     const U = new URL(d.url);
     const f = U.searchParams.get('ficha');
-    if(/\/v\.html$/.test(U.pathname) && f === 'ponta') return { t: 'ponta', c: U.searchParams.get('c') || '' };
+    if(/\/v\.html$/.test(U.pathname) && f === 'ponta') return { t: 'ponta', c: U.searchParams.get('c') || '', e: U.searchParams.get('e') || '' };
     if(/\/v\.html$/.test(U.pathname) && f === 'equip') return { t: 'equip', p: U.searchParams.get('p') || '' };
     if(ehSiteEmpresa(d.url)){                       // links antigos que levavam ao site
       if(/\/produto\/ponta-/.test(U.pathname)) return { t: 'ponta', link: d.url };
@@ -121,18 +136,32 @@ async function renderFicha(f, d){
     const I = IMGP[key];
     if(!I){ c.innerHTML = `<h1>${esc(d.titulo)}</h1><p class="meta">Conteúdo apresentado pela equipe CVDentus.</p>`; return; }
     const usos = [];
-    (W.CVD_PONTAS || []).forEach(e => e.modos.forEach(m => m.pontas.forEach(p => { if(p.cod.flatMap(expandirCod).includes(key)) usos.push({ eq: e.nome, modo: m.nome, linhas: p.linhas }); })));
+    (W.CVD_PONTAS || []).forEach(e => { if(f.e && e.id !== f.e) return; e.modos.forEach(m => m.pontas.forEach(p => { if(p.cod.flatMap(expandirCod).includes(key)) usos.push({ eq: e.nome, modo: m.nome, linhas: p.linhas }); })); });
+    if(f.e && !usos.length) (W.CVD_PONTAS || []).forEach(e => e.modos.forEach(m => m.pontas.forEach(p => { if(p.cod.flatMap(expandirCod).includes(key)) usos.push({ eq: e.nome, modo: m.nome, linhas: p.linhas }); })));   // aparelho sem essa ponta: mostra todos
     const eqs = [...new Set(usos.map(u => u.eq))];
     document.title = 'Ponta ' + key + ' · cvdcloud';
     const foto0 = I.f[0];
     c.innerHTML = `<div class="ficha">
-      <div class="midia img-clara"><img alt="Ponta ${esc(key)}" src="${esc(PREV + foto0[0] + '.webp')}"></div>
+      <div class="carro"><div class="faixa" id="fx">${I.f.map(([id, rot]) => `<div class="sl"><img ${id === foto0[0] ? '' : 'loading="lazy" '}alt="${esc(rot)} da ponta ${esc(key)}" src="${esc(PREV + id + '.webp')}"><em>${esc(rot)}</em></div>`).join('')}</div>
+        ${I.f.length > 1 ? `<button class="seta e" id="se" aria-label="Imagem anterior" hidden><svg viewBox="0 0 24 24"><path d="m15 6-6 6 6 6"/></svg></button><button class="seta d" id="sd" aria-label="Próxima imagem"><svg viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></svg></button>` : ''}
+      </div>
+      ${I.f.length > 1 ? `<div class="pts" id="pts">${I.f.map((_, i) => `<i class="${i ? '' : 'on'}"></i>`).join('')}</div><p class="dica">Deslize para o lado para ver todas as imagens</p>` : ''}
       <h1>Ponta ${esc(key)}</h1>
+      ${f.e && eqs.length === 1 ? `<p class="sub">Indicações no ${esc(eqs[0])}</p>` : ''}
       ${eqs.length ? `<div class="chips">${eqs.map(e => `<span class="chip">${esc(e)}</span>`).join('')}</div>` : ''}
       ${usos.length ? `<h2>Indicações</h2>` + usos.map(u => `<div class="bloco"><b class="t">${esc(u.eq)} · ${esc(u.modo)}</b><ul>${u.linhas.map(([ind, pot]) => `<li><span>${esc(ind)}</span>${pot ? `<span class="p">${esc(fmtPot(pot))}</span>` : ''}</li>`).join('')}</ul></div>`).join('') : ''}
-      <h2>Fotos e desenho técnico</h2>
-      <div class="grade">${I.f.map(([id, rot]) => `<div class="foto"><img loading="lazy" alt="${esc(rot)}" src="${esc(PREV + id + '.webp')}"><a href="${esc(DL + id + '.png')}" download data-baixou>Baixar PNG · ${esc(rot)}</a></div>`).join('')}</div>
+      <h2>Baixar imagens</h2>
+      <div class="baixar">${I.f.map(([id, rot]) => `<a href="${esc(DL + id + '.png')}" download data-baixou><svg viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M4 20h16"/></svg>Baixar PNG · ${esc(rot)}</a>`).join('')}</div>
     </div>`;
+    const fx = document.getElementById('fx'), pts = [...document.querySelectorAll('#pts i')], se = document.getElementById('se'), sd = document.getElementById('sd');
+    if(fx && pts.length){
+      const idx = () => Math.round(fx.scrollLeft / (fx.clientWidth + 10));
+      const atualizar = () => { const i = Math.max(0, Math.min(pts.length - 1, idx())); pts.forEach((p, k) => p.classList.toggle('on', k === i)); if(se) se.hidden = i === 0; if(sd) sd.hidden = i === pts.length - 1; };
+      fx.addEventListener('scroll', atualizar, { passive: true });
+      const ir = d => fx.scrollTo({ left: (idx() + d) * (fx.clientWidth + 10), behavior: 'smooth' });
+      se && se.addEventListener('click', () => ir(-1)); sd && sd.addEventListener('click', () => ir(1));
+      let vistas = new Set(); fx.addEventListener('scroll', () => { vistas.add(idx()); if(vistas.size > 1) document.getElementById('c').dispatchEvent(new CustomEvent('ficha-interacao')); }, { passive: true });
+    }
     return;
   }
   // equipamento
@@ -230,7 +259,8 @@ else {
           addEventListener('pagehide', () => { sujo = true; enviar(); });
           const marca = campo => { if(!estado[campo]){ estado[campo] = true; sujo = true; enviar(); } };
           document.getElementById('b-abrir')?.addEventListener('click', () => marca('abriu'));
-          c.addEventListener('click', e => { if(e.target.closest('[data-vid],[data-marca]')) marca('abriu'); if(e.target.closest('[data-baixou]')) marca('baixou'); });
+          c.addEventListener('ficha-interacao', () => marca('abriu'));
+          c.addEventListener('click', e => { if(e.target.closest('[data-vid],[data-marca],.seta')) marca('abriu'); if(e.target.closest('[data-baixou]')) marca('baixou'); });
           document.getElementById('b-baixar')?.addEventListener('click', () => marca('baixou'));
           const v = document.getElementById('vd');
           if(v){ let ult = 0; v.addEventListener('play', () => marca('abriu')); v.addEventListener('timeupdate', () => { if(!v.paused && v.currentTime > ult && v.currentTime - ult < 2) { estado.video += v.currentTime - ult; sujo = true; } ult = v.currentTime; }); v.addEventListener('seeked', () => { ult = v.currentTime; }); }

@@ -693,12 +693,14 @@ function cardPonta(p){
 }
 function painelPonta(cod){
   const I = IMGP[cod]; if(!I) return;
+  // se a ponta foi aberta dentro de um aparelho (Pontas › aparelho), o link do cliente mostra só o que ela faz nesse aparelho
+  const eqCtx = ((location.hash.match(/^#\/pontas\/([^/?]+)/) || [])[1]) || '', eqOk = PONTAS.some(e => e.id === eqCtx) ? eqCtx : '';
   const DL = window.CVD_PONTAS_DL, PV = window.CVD_PONTAS_PREV;
   abrirPainel(`<h3>${esc(cod)}</h3><p class="sub">Toque na imagem que quer baixar. Cada arquivo é um PNG com o nome da ponta no topo.</p>
     <div class="grade" style="margin-top:14px">${I.f.map(([id,rot,mb])=>`<a class="fcard" href="${esc(DL+id+'.png')}" download data-dl="ponta-png" data-tit="${esc(cod+' · '+rot)}" data-mb="${mb}">
       <span class="im" style="background:#fff;border:1px solid var(--linha)"><img loading="lazy" alt="${esc(cod+' · '+rot)}" src="${esc(PV+id+'.webp')}"></span>
       <b>${esc(rot)}</b><small>PNG · ${fmtTam(Math.max(.1,mb))} · baixar</small></a>`).join('')}</div>
-    <div class="botoes" style="margin-top:14px">${btnComp('Ponta ' + cod, fichaPonta(cod), '', 'Ponta', null, 'Compartilhar com o cliente', 'img/pontas/' + I.s + '.webp')}<a class="btn sec" href="${esc(I.link)}" target="_blank" rel="noopener">${ic('link')}Ver a ponta no site</a></div>`);
+    <div class="botoes" style="margin-top:14px">${btnComp('Ponta ' + cod, fichaPonta(cod, eqOk), '', 'Ponta', null, 'Compartilhar com o cliente', 'img/pontas/' + I.s + '.webp')}<a class="btn sec" href="${esc(I.link)}" target="_blank" rel="noopener">${ic('link')}Ver a ponta no site</a></div>`);
 }
 function telaPontas(eqId, modoId){
   const e = PONTAS.find(x=>x.id===eqId);
@@ -1685,7 +1687,7 @@ async function enviarLink(titulo, link){
   toast(ok ? 'Link copiado' : 'Não foi possível copiar o link');
 }
 const FICHA_BASE = 'https://cloud.cvdentus.com.br/v.html';
-const fichaPonta = cod => `${FICHA_BASE}?ficha=ponta&c=${encodeURIComponent(cod)}`;
+const fichaPonta = (cod, eq) => `${FICHA_BASE}?ficha=ponta&c=${encodeURIComponent(cod)}${eq ? '&e=' + encodeURIComponent(eq) : ''}`;
 const fichaEquip = id => `${FICHA_BASE}?ficha=equip&p=${encodeURIComponent(id)}`;
 const siteEmpresaUrl = u => { try{ const h = new URL(u).hostname; return /(^|\.)cvdentus\.com\.br$/.test(h) && h !== 'cloud.cvdentus.com.br'; }catch(e){ return false; } };
 const btnComp = (titulo, url, baixarUrl, tipo, mb, rot, th) => `<button class="btn prim" data-comp-gen="${esc(JSON.stringify({ t: titulo, u: url, d: baixarUrl || '', tp: tipo || '', mb: typeof mb === 'number' ? mb : null, th: th || '' }))}">${ic('share')}${rot || 'Compartilhar'}</button>`;
