@@ -75,8 +75,8 @@ window.CVD_LUPAS = {
      "img": "ttl-ergo",
      "fotos": {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-ergo-fotos.zip",
-      "mb": 0.2,
-      "n": 3,
+      "mb": 1.5,
+      "n": 7,
       "dir": "arquivos/lupas/ttl-ergo/"
      },
      "video": {
