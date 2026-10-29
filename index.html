@@ -773,7 +773,6 @@ function telaFotoforos(){
   const mods = (LUPAS.modelos||[]).filter(x=>x.tipo==='Fotóforo');
   const cards = `<div class="grade">${g.itens.map((it,i)=>`<button class="cartao anima" style="--i:${i}" data-lupa="${it.id}"><span class="im"><img loading="lazy" src="img/lupas/${it.img}.webp" alt="${esc(it.nome)}"></span><b>${esc(it.nome)}</b><small>${esc(it.kit || 'Fotóforo LED')}</small></button>`).join('')}</div>`;
   return { titulo:'Fotóforos', voltar:'#/', corpo: largo('Fotóforos','Iluminação LED frontal de precisão para lupas e procedimentos.')
-    + `<div class="nota anima" style="--i:1">${ic('info')}<div><b>Antes de passar valores</b>${esc(LUPAS.nota)}</div></div>`
     + secao('Modelos', g.itens.length) + `<p style="color:var(--sub);font-size:13.5px;margin:6px 0 0">Toque para ver a descrição, o vídeo e baixar fotos.</p>` + cards
     + secao('Fotos por código', mods.length) + `<div class="lista">${mods.map((x,i)=>linhaModelo(x,i)).join('')}</div>`
     + secao('Mais') + `<div class="lista">${linhaExt(LUPAS.catalogoOnline,'globo','Catálogo online com vídeos 360°','Fotóforos, lupas e armações')}</div>` };
@@ -802,7 +801,6 @@ function telaLupas(grupoId){
         return `<details class="v360 anima" style="--i:4"><summary>${ic('video')}<span class="t">Vídeos 360°</span><span class="n">${L.length + A.length}</span><span class="seta">${ic('seta')}</span></summary>
           <p class="sub" style="margin:10px 0 0">Vídeos feitos com IA a partir dos produtos: confira se representam fielmente o modelo antes de usar. Cada lupa também tem o seu vídeo dentro da página dela.</p>`
           + (L.length ? secao('Lupas', L.length) + lista(L) : '') + (A.length ? secao('Armações', A.length) + lista(A) : '') + `</details>`; })()
-    + `<div class="nota anima" style="--i:1">${ic('info')}<div><b>Antes de passar valores</b>${esc(LUPAS.nota)}</div></div>`
     + secao('Catálogo e simulador') + docs
  };
 }
