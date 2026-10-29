@@ -794,13 +794,9 @@ function telaLupas(grupoId){
     ${linhaExt(LUPAS.simulador,'lupa','Simulador de lupas','Escolha a lupa ideal')}</div>`;
   return { titulo:'Lupas', voltar:'#/', corpo: largo('Lupas','Lupas, fotóforos e armações CVDentus.')
     + abas([...gs.map(g=>({id:g.id,nome:g.nome.replace('Lupas ',''),n:g.itens.length})), {id:'codigos',nome:'Por código',n:modelosLupas().length}], ativo.id, '#/lupas')
-    + `<p style="color:var(--sub);font-size:13.5px;margin:10px 0 0">${esc(ativo.sub)} Toque para ver o vídeo 360° e baixar fotos e vídeo.</p>` + itens
+    + `<p style="color:var(--sub);font-size:13.5px;margin:10px 0 0">${esc(ativo.sub)} Toque para ver fotos e vídeo 360° e baixar.</p>` + itens
     + `<div class="nota anima" style="--i:1">${ic('info')}<div><b>Antes de passar valores</b>${esc(LUPAS.nota)}</div></div>`
     + secao('Catálogo e simulador') + docs
-    + (() => { const v360 = g => D.materiais.filter(m => m.produto === 'lupas' && m.grupo360 === g);
-        const L = v360('lupa'), A = v360('armacao'); if(!L.length && !A.length) return '';
-        return `<div class="nota anima" style="--i:2">${ic('info')}<div><b>Vídeos 360° para os vendedores</b>Toque para assistir, baixar ou compartilhar. São vídeos feitos com IA a partir dos produtos: confira se representam fielmente o modelo antes de usar.</div></div>`
-          + (L.length ? secao('Vídeos 360° das lupas', L.length) + lista(L) : '') + (A.length ? secao('Vídeos 360° das armações', A.length) + lista(A) : ''); })()
     + `<div style="margin-top:8px">${linkRow('#/produto/fotoforos','lupa','Fotóforos (iluminação LED)',(LUPAS.grupos.find(g=>g.id==='fotoforos')||{itens:[]}).itens.length+' modelos')}</div>` };
 }
 const LF = { id: '', sel: new Set(), atual: 1, busy: false };
@@ -852,15 +848,18 @@ function painelLupa(id){
     : `<div class="img-g"><img src="img/lupas/${it.img}.webp" alt=""></div>
        <h3 style="margin-top:14px">${esc(it.nome)}${it.kit?` · ${esc(it.kit)}`:''}</h3><p class="sub">${esc(g.nome)}</p>
        <p class="desc">${esc(it.desc)}</p>`;
+  const vid = it.video && it.video.baixar
+    ? `<h4 class="lf-vh">Vídeo 360°</h4><div class="player"><video controls playsinline preload="metadata" poster="img/lupas/${esc(it.img)}.webp" src="${esc(it.video.baixar)}"></video></div>
+       <p class="sub" style="margin:8px 0 0">Vídeo feito com IA a partir do produto: confira se representa fielmente o modelo antes de usar.</p>` : '';
   const fotosBtns = gal
     ? `<a class="btn prim" id="lf-dl" href="${esc(lfUrl(it, 1))}" download="lupa-${esc(id)}-01.jpg" data-dl="lupa" data-mb="0.2">${ic('download')}Baixar a foto que está aberta</a>
        <button class="btn sec" id="lf-baixar" data-lf-baixar disabled>${ic('download')}Baixar as escolhidas</button>
        <a class="btn sec" href="${esc(it.fotos.url)}" download data-dl="lupa" data-mb="${it.fotos.mb}">${ic('download')}Baixar todas as ${n} fotos <small>${fmtTam(it.fotos.mb)}</small></a>`
     : `<a class="btn sec" href="${esc(it.fotos.url)}" download data-dl="lupa" data-mb="${it.fotos.mb}">${ic('download')}Baixar fotos <small>${it.fotos.n} · ${fmtTam(it.fotos.mb)}</small></a>`;
-  abrirPainel(`${topo}
+  abrirPainel(`${topo}${vid}
     <div class="botoes">
-      <a class="btn ${gal ? 'sec' : 'prim'}" href="${esc(it.video.ver)}" target="_blank" rel="noopener">${ic('video')}Ver vídeo 360°</a>
-      ${btnComp(it.nome + (it.kit ? ' · ' + it.kit : '') + ' · vídeo 360°', it.video.ver, '', 'Vídeo')}
+      ${vid ? btnLoop() : ''}
+      ${btnComp(it.nome + (it.kit ? ' · ' + it.kit : '') + ' · vídeo 360°', it.video.baixar, it.video.baixar, 'Vídeo', it.video.mb, 'Compartilhar vídeo 360°', 'img/lupas/' + it.img + '.webp')}
       ${fotosBtns}
       <a class="btn sec" href="${esc(it.video.baixar)}" download data-dl="lupa" data-mb="${it.video.mb}">${ic('download')}Baixar vídeo <small>${fmtTam(it.video.mb)}</small></a>
     </div>`);
