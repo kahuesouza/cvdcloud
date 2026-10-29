@@ -14,8 +14,9 @@ window.CVD_LUPAS = {
      "img": "flip-ergo",
      "fotos": {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-ergo-fotos.zip",
-      "mb": 1.8,
-      "n": 3
+      "mb": 0.2,
+      "n": 3,
+      "dir": "arquivos/lupas/flip-ergo/"
      },
      "video": {
       "ver": "https://catalogodelupas.cvdentus.com.br/uploads/ERGO_FLIP_360.mp4",
@@ -31,8 +32,9 @@ window.CVD_LUPAS = {
      "img": "flip-kepler",
      "fotos": {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-kepler-fotos.zip",
-      "mb": 2.5,
-      "n": 3
+      "mb": 0.2,
+      "n": 3,
+      "dir": "arquivos/lupas/flip-kepler/"
      },
      "video": {
       "ver": "https://catalogodelupas.cvdentus.com.br/uploads/KEPLER_FLIP_360.mp4",
@@ -48,8 +50,9 @@ window.CVD_LUPAS = {
      "img": "flip-galileu",
      "fotos": {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-fotos.zip",
-      "mb": 1.7,
-      "n": 3
+      "mb": 0.2,
+      "n": 3,
+      "dir": "arquivos/lupas/flip-galileu/"
      },
      "video": {
       "ver": "https://catalogodelupas.cvdentus.com.br/uploads/GALILEU_FLIP_360.mp4",
@@ -72,8 +75,9 @@ window.CVD_LUPAS = {
      "img": "ttl-ergo",
      "fotos": {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-ergo-fotos.zip",
-      "mb": 2.4,
-      "n": 3
+      "mb": 0.2,
+      "n": 3,
+      "dir": "arquivos/lupas/ttl-ergo/"
      },
      "video": {
       "ver": "https://catalogodelupas.cvdentus.com.br/uploads/ERGO_TTL_360.mp4",
@@ -89,8 +93,9 @@ window.CVD_LUPAS = {
      "img": "ttl-kepler",
      "fotos": {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-kepler-fotos.zip",
-      "mb": 2.3,
-      "n": 3
+      "mb": 0.2,
+      "n": 3,
+      "dir": "arquivos/lupas/ttl-kepler/"
      },
      "video": {
       "ver": "https://catalogodelupas.cvdentus.com.br/uploads/KEPLER_TTL_360.mp4",
@@ -102,12 +107,13 @@ window.CVD_LUPAS = {
      "id": "ttl-galileu",
      "nome": "Galileu",
      "kit": "",
-     "desc": "Lupa TTL com oculares em anel embutidos diretamente na armação, corpo curto e compacto para menor peso frontal. Escala de distância interpupilar gravada na haste, sem articulação de báscula.",
+     "desc": "Lupa TTL com oculares em anel embutidos diretamente na armação, corpo curto e compacto para menor peso frontal, sem articulação de báscula.",
      "img": "ttl-galileu",
      "fotos": {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-fotos.zip",
-      "mb": 1.8,
-      "n": 3
+      "mb": 1.7,
+      "n": 5,
+      "dir": "arquivos/lupas/ttl-galileu/"
      },
      "video": {
       "ver": "https://catalogodelupas.cvdentus.com.br/uploads/GALILEU_360.mp4",
@@ -131,7 +137,8 @@ window.CVD_LUPAS = {
      "fotos": {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-jc-m06-b-fotos.zip",
       "mb": 0.1,
-      "n": 2
+      "n": 2,
+      "dir": "arquivos/lupas/jc-m06-b/"
      },
      "video": {
       "ver": "https://catalogodelupas.cvdentus.com.br/uploads/JC-M06-B_01.mp4",
@@ -148,7 +155,8 @@ window.CVD_LUPAS = {
      "fotos": {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-jc-m06-c-fotos.zip",
       "mb": 0.1,
-      "n": 2
+      "n": 2,
+      "dir": "arquivos/lupas/jc-m06-c/"
      },
      "video": {
       "ver": "https://catalogodelupas.cvdentus.com.br/uploads/JC-M06-C_02.mp4",
@@ -165,7 +173,8 @@ window.CVD_LUPAS = {
      "fotos": {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-jg-m06c-fotos.zip",
       "mb": 0.1,
-      "n": 2
+      "n": 2,
+      "dir": "arquivos/lupas/jg-m06c/"
      },
      "video": {
       "ver": "https://catalogodelupas.cvdentus.com.br/uploads/JG-M06C.mp4",
@@ -182,7 +191,8 @@ window.CVD_LUPAS = {
      "fotos": {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-jg-m07c-fotos.zip",
       "mb": 0.1,
-      "n": 2
+      "n": 2,
+      "dir": "arquivos/lupas/jg-m07c/"
      },
      "video": {
       "ver": "https://catalogodelupas.cvdentus.com.br/uploads/JG-M07C.mp4",
@@ -205,8 +215,9 @@ window.CVD_LUPAS = {
      "img": "j04-black",
      "fotos": {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-j04-black-fotos.zip",
-      "mb": 2.4,
-      "n": 3
+      "mb": 0.2,
+      "n": 3,
+      "dir": "arquivos/lupas/j04-black/"
      },
      "video": {
       "ver": "https://catalogodelupas.cvdentus.com.br/uploads/J04_BLACK_360.mp4",
@@ -222,8 +233,9 @@ window.CVD_LUPAS = {
      "img": "j04-silver",
      "fotos": {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-j04-silver-fotos.zip",
-      "mb": 2.3,
-      "n": 3
+      "mb": 0.2,
+      "n": 3,
+      "dir": "arquivos/lupas/j04-silver/"
      },
      "video": {
       "ver": "https://catalogodelupas.cvdentus.com.br/uploads/J04_SILVER_360.mp4",
@@ -239,8 +251,9 @@ window.CVD_LUPAS = {
      "img": "j22",
      "fotos": {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-j22-fotos.zip",
-      "mb": 2.3,
-      "n": 3
+      "mb": 0.1,
+      "n": 3,
+      "dir": "arquivos/lupas/j22/"
      },
      "video": {
       "ver": "https://catalogodelupas.cvdentus.com.br/uploads/J22_360.mp4",
@@ -256,8 +269,9 @@ window.CVD_LUPAS = {
      "img": "j23",
      "fotos": {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-j23-fotos.zip",
-      "mb": 2.2,
-      "n": 3
+      "mb": 0.2,
+      "n": 3,
+      "dir": "arquivos/lupas/j23/"
      },
      "video": {
       "ver": "https://catalogodelupas.cvdentus.com.br/uploads/J23_360.mp4",
@@ -273,8 +287,9 @@ window.CVD_LUPAS = {
      "img": "j24-black",
      "fotos": {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-j24-black-fotos.zip",
-      "mb": 2.3,
-      "n": 3
+      "mb": 0.2,
+      "n": 3,
+      "dir": "arquivos/lupas/j24-black/"
      },
      "video": {
       "ver": "https://catalogodelupas.cvdentus.com.br/uploads/J24_BLACK_360.mp4",
@@ -290,8 +305,9 @@ window.CVD_LUPAS = {
      "img": "j24-silver",
      "fotos": {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-j24-silver-fotos.zip",
-      "mb": 2.4,
-      "n": 3
+      "mb": 0.2,
+      "n": 3,
+      "dir": "arquivos/lupas/j24-silver/"
      },
      "video": {
       "ver": "https://catalogodelupas.cvdentus.com.br/uploads/J24_SILVER_360.mp4",

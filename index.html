@@ -803,16 +803,65 @@ function telaLupas(grupoId){
     + abas([...gs.map(g=>({id:g.id,nome:g.nome.replace('Lupas ',''),n:g.itens.length})), {id:'codigos',nome:'Por código',n:modelosLupas().length}], ativo.id, '#/lupas')
     + `<p style="color:var(--sub);font-size:13.5px;margin:10px 0 0">${esc(ativo.sub)} Toque para ver o vídeo 360° e baixar fotos e vídeo.</p>` + itens };
 }
+const LF = { id: '', sel: new Set(), atual: 1, busy: false };
+const lfUrl = (it, i) => it.fotos.dir + i + '.jpg';
+const lfItem = id => { let r; LUPAS.grupos.forEach(gr => gr.itens.forEach(x => { if(x.id === id) r = x; })); return r; };
+function lfResumo(){
+  const it = lfItem(LF.id); if(!it) return; const n = LF.sel.size, b = document.getElementById('lf-baixar'), t = document.getElementById('lf-todas');
+  if(b && !LF.busy){ b.disabled = !n; b.innerHTML = n ? `${ic('download')}Baixar ${n === 1 ? '1 foto escolhida' : n + ' fotos escolhidas'}` : `${ic('download')}Baixar as escolhidas`; }
+  if(t) t.textContent = n === it.fotos.n ? 'Limpar seleção' : 'Selecionar todas';
+  document.querySelectorAll('.lf-chk').forEach(c => c.setAttribute('aria-pressed', LF.sel.has(+c.dataset.lfsel.split(':')[1]) ? 'true' : 'false'));
+}
+function lfVer(i){
+  const it = lfItem(LF.id); if(!it) return; LF.atual = i; const u = lfUrl(it, i);
+  const img = document.getElementById('lf-img'); if(img) img.src = u;
+  const dl = document.getElementById('lf-dl'); if(dl){ dl.href = u; dl.setAttribute('download', `lupa-${LF.id}-${String(i).padStart(2, '0')}.jpg`); }
+  const lg = document.getElementById('lf-leg'); if(lg) lg.textContent = `Foto ${i} de ${it.fotos.n} · toque nas miniaturas para ver; marque as que quer baixar`;
+  document.querySelectorAll('.lf-tiras .mf-mini').forEach(b => b.classList.toggle('on', +b.dataset.lfoto.split(':')[1] === i));
+}
+async function lfBaixar(){
+  const it = lfItem(LF.id); if(!it || LF.busy || !LF.sel.size) return;
+  const idx = [...LF.sel].sort((p, q) => p - q), b = document.getElementById('lf-baixar'); LF.busy = true;
+  try{
+    const arq = [];
+    for(let k = 0; k < idx.length; k++){
+      if(b){ b.disabled = true; b.textContent = `Preparando ${k + 1} de ${idx.length}…`; }
+      const r = await fetch(lfUrl(it, idx[k])); if(!r.ok) throw new Error('foto');
+      arq.push({ nome: `lupa-${it.id}-${String(idx[k]).padStart(2, '0')}.jpg`, blob: await r.blob() });
+    }
+    if(arq.length === 1) salvarBlob(arq[0].blob, arq[0].nome);
+    else{
+      const dados = []; for(const a of arq) dados.push({ nome: a.nome, dados: new Uint8Array(await a.blob.arrayBuffer()) });
+      salvarBlob(montarZip(dados), `lupa-${it.id}-fotos.zip`);
+    }
+    toast(arq.length === 1 ? 'Foto baixada' : `${arq.length} fotos baixadas`);
+  }catch(e){ toast('Não foi possível baixar. Tente de novo'); }
+  LF.busy = false; lfResumo();
+}
 function painelLupa(id){
   let it, g; LUPAS.grupos.forEach(gr=>gr.itens.forEach(x=>{ if(x.id===id){ it=x; g=gr; } }));
   if(!it) return;
-  abrirPainel(`<div class="img-g"><img src="img/lupas/${it.img}.webp" alt=""></div>
-    <h3 style="margin-top:14px">${esc(it.nome)}${it.kit?` · ${esc(it.kit)}`:''}</h3><p class="sub">${esc(g.nome)}</p>
-    <p class="desc">${esc(it.desc)}</p>
+  const gal = !!it.fotos.dir, n = it.fotos.n;
+  LF.id = id; LF.sel = new Set(); LF.atual = 1; LF.busy = false;
+  const topo = gal
+    ? `<div class="img-g"><img id="lf-img" src="${esc(lfUrl(it, 1))}" alt="${esc(it.nome)}" onerror="this.onerror=null;this.src='img/lupas/${esc(it.img)}.webp'"></div>
+       <h3 style="margin-top:14px">${esc(it.nome)}${it.kit?` · ${esc(it.kit)}`:''}</h3><p class="sub">${esc(g.nome)}</p>
+       <p class="desc">${esc(it.desc)}</p>
+       <div class="lf-bar"><span id="lf-leg" class="sub" style="margin:0">Foto 1 de ${n} · toque nas miniaturas para ver; marque as que quer baixar</span><button class="btn sec" id="lf-todas" data-lf-todas>Selecionar todas</button></div>
+       <div class="mf-tiras lf-tiras" role="list">${Array.from({ length: n }, (_, k) => k + 1).map(i => `<div class="lf-item" role="listitem"><button class="mf-mini${i === 1 ? ' on' : ''}" data-lfoto="${esc(id)}:${i}" aria-label="Ver foto ${i}"><img loading="lazy" alt="" src="img/lupas/f/${esc(id)}-${i}.webp"></button><button class="lf-chk" data-lfsel="${esc(id)}:${i}" aria-pressed="false" aria-label="Marcar foto ${i} para baixar"></button></div>`).join('')}</div>`
+    : `<div class="img-g"><img src="img/lupas/${it.img}.webp" alt=""></div>
+       <h3 style="margin-top:14px">${esc(it.nome)}${it.kit?` · ${esc(it.kit)}`:''}</h3><p class="sub">${esc(g.nome)}</p>
+       <p class="desc">${esc(it.desc)}</p>`;
+  const fotosBtns = gal
+    ? `<a class="btn prim" id="lf-dl" href="${esc(lfUrl(it, 1))}" download="lupa-${esc(id)}-01.jpg" data-dl="lupa" data-mb="0.2">${ic('download')}Baixar a foto que está aberta</a>
+       <button class="btn sec" id="lf-baixar" data-lf-baixar disabled>${ic('download')}Baixar as escolhidas</button>
+       <a class="btn sec" href="${esc(it.fotos.url)}" download data-dl="lupa" data-mb="${it.fotos.mb}">${ic('download')}Baixar todas as ${n} fotos <small>${fmtTam(it.fotos.mb)}</small></a>`
+    : `<a class="btn sec" href="${esc(it.fotos.url)}" download data-dl="lupa" data-mb="${it.fotos.mb}">${ic('download')}Baixar fotos <small>${it.fotos.n} · ${fmtTam(it.fotos.mb)}</small></a>`;
+  abrirPainel(`${topo}
     <div class="botoes">
-      <a class="btn prim" href="${esc(it.video.ver)}" target="_blank" rel="noopener">${ic('video')}Ver vídeo 360°</a>
+      <a class="btn ${gal ? 'sec' : 'prim'}" href="${esc(it.video.ver)}" target="_blank" rel="noopener">${ic('video')}Ver vídeo 360°</a>
       ${btnComp(it.nome + (it.kit ? ' · ' + it.kit : '') + ' · vídeo 360°', it.video.ver, '', 'Vídeo')}
-      <a class="btn sec" href="${esc(it.fotos.url)}" download data-dl="lupa" data-mb="${it.fotos.mb}">${ic('download')}Baixar fotos <small>${it.fotos.n} · ${fmtTam(it.fotos.mb)}</small></a>
+      ${fotosBtns}
       <a class="btn sec" href="${esc(it.video.baixar)}" download data-dl="lupa" data-mb="${it.video.mb}">${ic('download')}Baixar vídeo <small>${fmtTam(it.video.mb)}</small></a>
     </div>`);
 }
@@ -1793,6 +1842,10 @@ document.addEventListener('click', e=>{
   const mod = t.closest('[data-modelo]'); if(mod){ painelModelo(mod.dataset.modelo); return; }
   const lupa = t.closest('[data-lupa]'); if(lupa){ painelLupa(lupa.dataset.lupa); return; }
   const lp = t.closest('[data-logo-p]'); if(lp){ const [gi,li] = lp.dataset.logoP.split(':'); painelLogo(+gi,+li); return; }
+  const lfs = t.closest('[data-lfsel]'); if(lfs){ const i = +lfs.dataset.lfsel.split(':')[1]; LF.sel.has(i) ? LF.sel.delete(i) : LF.sel.add(i); lfResumo(); return; }
+  const lfv = t.closest('[data-lfoto]'); if(lfv){ lfVer(+lfv.dataset.lfoto.split(':')[1]); return; }
+  if(t.closest('[data-lf-todas]')){ const it = lfItem(LF.id); if(it){ if(LF.sel.size === it.fotos.n) LF.sel.clear(); else for(let k = 1; k <= it.fotos.n; k++) LF.sel.add(k); lfResumo(); } return; }
+  if(t.closest('[data-lf-baixar]')){ lfBaixar(); return; }
   const mf = t.closest('[data-mfoto]'); if(mf){ const [mi, mn] = mf.dataset.mfoto.split(':'); trocarFotoModelo(mi, +mn); return; }
   const cg = t.closest('[data-comp-gen]'); if(cg){ try{ compartilharGenerico(JSON.parse(cg.dataset.compGen)); }catch(e){} return; }
   const cl = t.closest('[data-copiar]'); if(cl){ enviarLink('', cl.dataset.copiar); return; }
