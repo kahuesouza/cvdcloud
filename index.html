@@ -795,9 +795,16 @@ function telaLupas(grupoId){
   return { titulo:'Lupas', voltar:'#/', corpo: largo('Lupas','Lupas, fotóforos e armações CVDentus.')
     + abas([...gs.map(g=>({id:g.id,nome:g.nome.replace('Lupas ',''),n:g.itens.length})), {id:'codigos',nome:'Por código',n:modelosLupas().length}], ativo.id, '#/lupas')
     + `<p style="color:var(--sub);font-size:13.5px;margin:10px 0 0">${esc(ativo.sub)} Toque para ver fotos e vídeo 360° e baixar.</p>` + itens
+    + (() => { const F = LUPAS.grupos.find(g=>g.id==='fotoforos'); if(!F || !F.itens.length) return '';
+        return `<a class="fot-dest anima" href="#/produto/fotoforos" style="--i:3"><span class="fd-im">${F.itens.slice(0,4).map(x=>`<img loading="lazy" alt="" src="img/lupas/${esc(x.img)}.webp">`).join('')}</span><span class="fd-tx"><b>Fotóforos</b><small>Iluminação LED frontal · ${F.itens.length} modelos</small></span><span class="seta">${ic('seta')}</span></a>`; })()
+    + (() => { const v360 = g => D.materiais.filter(m => m.produto === 'lupas' && m.grupo360 === g);
+        const L = v360('lupa'), A = v360('armacao'); if(!L.length && !A.length) return '';
+        return `<details class="v360 anima" style="--i:4"><summary>${ic('video')}<span class="t">Vídeos 360°</span><span class="n">${L.length + A.length}</span><span class="seta">${ic('seta')}</span></summary>
+          <p class="sub" style="margin:10px 0 0">Vídeos feitos com IA a partir dos produtos: confira se representam fielmente o modelo antes de usar. Cada lupa também tem o seu vídeo dentro da página dela.</p>`
+          + (L.length ? secao('Lupas', L.length) + lista(L) : '') + (A.length ? secao('Armações', A.length) + lista(A) : '') + `</details>`; })()
     + `<div class="nota anima" style="--i:1">${ic('info')}<div><b>Antes de passar valores</b>${esc(LUPAS.nota)}</div></div>`
     + secao('Catálogo e simulador') + docs
-    + `<div style="margin-top:8px">${linkRow('#/produto/fotoforos','lupa','Fotóforos (iluminação LED)',(LUPAS.grupos.find(g=>g.id==='fotoforos')||{itens:[]}).itens.length+' modelos')}</div>` };
+ };
 }
 const LF = { id: '', sel: new Set(), atual: 1, busy: false };
 const lfUrl = (it, i) => it.fotos.dir + i + '.jpg';
