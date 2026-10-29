@@ -93,6 +93,149 @@ window.CVD = {
  ],
  "materiais": [
   {
+   "titulo": "Galileu · Flip-up · 360°",
+   "tipo": "video3d",
+   "produto": "lupas",
+   "grupo360": "lupa",
+   "idioma": "pt",
+   "novo": true,
+   "mb": 4.5,
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-360-galileu-flip.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-360-galileu-flip.mp4"
+  },
+  {
+   "titulo": "Ergo · Flip-up · 360°",
+   "tipo": "video3d",
+   "produto": "lupas",
+   "grupo360": "lupa",
+   "idioma": "pt",
+   "novo": true,
+   "mb": 5.6,
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-360-ergo-flip.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-360-ergo-flip.mp4"
+  },
+  {
+   "titulo": "Kepler · Flip-up · 360°",
+   "tipo": "video3d",
+   "produto": "lupas",
+   "grupo360": "lupa",
+   "idioma": "pt",
+   "novo": true,
+   "mb": 3.3,
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-360-kepler-flip.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-360-kepler-flip.mp4"
+  },
+  {
+   "titulo": "Galileu · TTL · 360°",
+   "tipo": "video3d",
+   "produto": "lupas",
+   "grupo360": "lupa",
+   "idioma": "pt",
+   "novo": true,
+   "mb": 2.9,
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-360-galileu-ttl.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-360-galileu-ttl.mp4"
+  },
+  {
+   "titulo": "Ergo · TTL · 360°",
+   "tipo": "video3d",
+   "produto": "lupas",
+   "grupo360": "lupa",
+   "idioma": "pt",
+   "novo": true,
+   "mb": 4.2,
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-360-ergo-ttl.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-360-ergo-ttl.mp4"
+  },
+  {
+   "titulo": "Kepler · TTL · 360°",
+   "tipo": "video3d",
+   "produto": "lupas",
+   "grupo360": "lupa",
+   "idioma": "pt",
+   "novo": true,
+   "mb": 7.0,
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-360-kepler-ttl.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-360-kepler-ttl.mp4"
+  },
+  {
+   "titulo": "Armação J04 Preta · 360°",
+   "tipo": "video3d",
+   "produto": "lupas",
+   "grupo360": "armacao",
+   "idioma": "pt",
+   "novo": true,
+   "mb": 3.3,
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j04-preta.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j04-preta.mp4"
+  },
+  {
+   "titulo": "Armação J04 Prata · 360°",
+   "tipo": "video3d",
+   "produto": "lupas",
+   "grupo360": "armacao",
+   "idioma": "pt",
+   "novo": true,
+   "mb": 2.4,
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j04-prata.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j04-prata.mp4"
+  },
+  {
+   "titulo": "Armação J22 · 360°",
+   "tipo": "video3d",
+   "produto": "lupas",
+   "grupo360": "armacao",
+   "idioma": "pt",
+   "novo": true,
+   "mb": 2.8,
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j22.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j22.mp4"
+  },
+  {
+   "titulo": "Armação J23 · 360°",
+   "tipo": "video3d",
+   "produto": "lupas",
+   "grupo360": "armacao",
+   "idioma": "pt",
+   "novo": true,
+   "mb": 3.4,
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j23.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j23.mp4"
+  },
+  {
+   "titulo": "Armação J24 Preta · 360°",
+   "tipo": "video3d",
+   "produto": "lupas",
+   "grupo360": "armacao",
+   "idioma": "pt",
+   "novo": true,
+   "mb": 2.5,
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j24-preta.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j24-preta.mp4"
+  },
+  {
+   "titulo": "Armação J24 Prata · 360°",
+   "tipo": "video3d",
+   "produto": "lupas",
+   "grupo360": "armacao",
+   "idioma": "pt",
+   "novo": true,
+   "mb": 2.5,
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j24-prata.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j24-prata.mp4"
+  },
+  {
+   "titulo": "Armação · 360° (modelo a confirmar)",
+   "tipo": "video3d",
+   "produto": "lupas",
+   "grupo360": "armacao",
+   "idioma": "pt",
+   "novo": true,
+   "mb": 3.5,
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-a-confirmar.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-a-confirmar.mp4"
+  },
+  {
    "titulo": "Catálogo Equipamentos CVDentus",
    "familia": "cat-equipamentos",
    "tipo": "catalogo",
@@ -3374,5 +3517,5 @@ window.CVD = {
    "nome": "Demonstrações e casos clínicos"
   }
  ],
- "rev": 1793192296508
+ "rev": 1793275841550
 };

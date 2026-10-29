@@ -795,6 +795,10 @@ function telaLupas(grupoId){
   return { titulo:'Lupas', voltar:'#/', corpo: largo('Lupas','Lupas, fotóforos e armações CVDentus.')
     + `<div class="nota anima" style="--i:1">${ic('info')}<div><b>Antes de passar valores</b>${esc(LUPAS.nota)}</div></div>`
     + secao('Catálogo e simulador') + docs
+    + (() => { const v360 = g => D.materiais.filter(m => m.produto === 'lupas' && m.grupo360 === g);
+        const L = v360('lupa'), A = v360('armacao'); if(!L.length && !A.length) return '';
+        return `<div class="nota anima" style="--i:2">${ic('info')}<div><b>Vídeos 360° para os vendedores</b>Toque para assistir, baixar ou compartilhar. São vídeos feitos com IA a partir dos produtos: confira se representam fielmente o modelo antes de usar.</div></div>`
+          + (L.length ? secao('Vídeos 360° das lupas', L.length) + lista(L) : '') + (A.length ? secao('Vídeos 360° das armações', A.length) + lista(A) : ''); })()
     + `<div style="margin-top:8px">${linkRow('#/produto/fotoforos','lupa','Fotóforos (iluminação LED)',(LUPAS.grupos.find(g=>g.id==='fotoforos')||{itens:[]}).itens.length+' modelos')}</div>`
     + abas([...gs.map(g=>({id:g.id,nome:g.nome.replace('Lupas ',''),n:g.itens.length})), {id:'codigos',nome:'Por código',n:modelosLupas().length}], ativo.id, '#/lupas')
     + `<p style="color:var(--sub);font-size:13.5px;margin:10px 0 0">${esc(ativo.sub)} Toque para ver o vídeo 360° e baixar fotos e vídeo.</p>` + itens };
