@@ -32,8 +32,8 @@ window.CVD_LUPAS = {
      "img": "flip-kepler",
      "fotos": {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-kepler-fotos.zip",
-      "mb": 0.2,
-      "n": 3,
+      "mb": 0.9,
+      "n": 5,
       "dir": "arquivos/lupas/flip-kepler/"
      },
      "video": {
