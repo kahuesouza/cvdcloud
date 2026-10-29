@@ -50,8 +50,8 @@ window.CVD_LUPAS = {
      "img": "flip-galileu",
      "fotos": {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-fotos.zip",
-      "mb": 0.2,
-      "n": 3,
+      "mb": 1.5,
+      "n": 7,
       "dir": "arquivos/lupas/flip-galileu/"
      },
      "video": {
