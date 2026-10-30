@@ -818,8 +818,10 @@ function lfVer(i){
   const img = document.getElementById('lf-img'); if(img) img.src = u;
   const dl = document.getElementById('lf-dl'); if(dl){ dl.href = u; dl.setAttribute('download', `lupa-${LF.id}-${String(i).padStart(2, '0')}.jpg`); }
   const lg = document.getElementById('lf-leg'); if(lg) lg.textContent = `Foto ${i} de ${it.fotos.n} · toque nas miniaturas para ver; marque as que quer baixar`;
-  document.querySelectorAll('.lf-tiras .mf-mini').forEach(b => b.classList.toggle('on', +b.dataset.lfoto.split(':')[1] === i));
+  document.querySelectorAll('.lf-tiras .mf-mini').forEach(b => { const on = +b.dataset.lfoto.split(':')[1] === i; b.classList.toggle('on', on); if(on && b.scrollIntoView) b.scrollIntoView({ block: 'nearest', inline: 'nearest' }); });
+  const ct = document.getElementById('lf-cont'); if(ct) ct.textContent = `${i} / ${it.fotos.n}`;
 }
+function lfPasso(d){ const it = lfItem(LF.id); if(!it) return; const n = it.fotos.n; lfVer(((LF.atual - 1 + d + n) % n) + 1); }
 async function lfBaixar(){
   const it = lfItem(LF.id); if(!it || LF.busy || !LF.sel.size) return;
   const idx = [...LF.sel].sort((p, q) => p - q), b = document.getElementById('lf-baixar'); LF.busy = true;
@@ -845,7 +847,8 @@ function painelLupa(id){
   const gal = !!it.fotos.dir, n = it.fotos.n;
   LF.id = id; LF.sel = new Set(); LF.atual = 1; LF.busy = false;
   const topo = gal
-    ? `<div class="img-g"><img id="lf-img" src="${esc(lfUrl(it, 1))}" alt="${esc(it.nome)}" onerror="this.onerror=null;this.src='img/lupas/${esc(it.img)}.webp'"></div>
+    ? `<div class="img-g lf-grande" id="lf-box"><img id="lf-img" src="${esc(lfUrl(it, 1))}" alt="${esc(it.nome)}" onerror="this.onerror=null;this.src='img/lupas/${esc(it.img)}.webp'">
+         ${n > 1 ? `<button class="lf-nav lf-prev" data-lfnav="-1" aria-label="Foto anterior">${ic('seta')}</button><button class="lf-nav lf-next" data-lfnav="1" aria-label="Próxima foto">${ic('seta')}</button><span class="lf-cont" id="lf-cont">1 / ${n}</span>` : ''}</div>
        <h3 style="margin-top:14px">${esc(it.nome)}${it.kit?` · ${esc(it.kit)}`:''}</h3><p class="sub">${esc(g.nome)}</p>
        <p class="desc">${esc(it.desc)}</p>
        <div class="lf-bar"><span id="lf-leg" class="sub" style="margin:0">Foto 1 de ${n} · toque nas miniaturas para ver; marque as que quer baixar</span><button class="btn sec" id="lf-todas" data-lf-todas>Selecionar todas</button></div>
@@ -871,6 +874,10 @@ function painelLupa(id){
       ${fotosBtns}
       ${vids.length ? `<a class="btn sec" id="lf-vdl" href="${esc(vids[0].url)}" download data-dl="lupa" data-mb="${vids[0].mb}">${ic('download')}Baixar vídeo <small>${fmtTam(vids[0].mb)}</small></a>` : ''}
     </div>`);
+  const bx = document.getElementById('lf-box');
+  if(bx){ let x0 = null;
+    bx.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+    bx.addEventListener('touchend', e => { if(x0 === null) return; const dx = e.changedTouches[0].clientX - x0; x0 = null; if(Math.abs(dx) > 40) lfPasso(dx < 0 ? 1 : -1); }, { passive: true }); }
 }
 
 /* ---------- Marca ---------- */
@@ -1858,6 +1865,7 @@ document.addEventListener('click', e=>{
       document.querySelectorAll('.lf-vchip').forEach((b, j) => b.classList.toggle('on', j === k));
     } return;
   }
+  const lnv = t.closest('[data-lfnav]'); if(lnv){ lfPasso(+lnv.dataset.lfnav); return; }
   const lfv = t.closest('[data-lfoto]'); if(lfv){ lfVer(+lfv.dataset.lfoto.split(':')[1]); return; }
   if(t.closest('[data-lf-todas]')){ const it = lfItem(LF.id); if(it){ if(LF.sel.size === it.fotos.n) LF.sel.clear(); else for(let k = 1; k <= it.fotos.n; k++) LF.sel.add(k); lfResumo(); } return; }
   if(t.closest('[data-lf-baixar]')){ lfBaixar(); return; }
