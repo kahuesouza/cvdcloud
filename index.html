@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>cvdcloud</title>
 <meta name="description" content="Central de materiais comerciais CVDentus: catálogos, manuais, vídeos, procedimentos, pontas e marca.">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; media-src https:; connect-src 'self' https://*.googleapis.com https://*.firebaseio.com https://*.firebaseapp.com https://firestore.googleapis.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com wss://*.firebaseio.com; frame-src https://*.firebaseapp.com https://www.youtube-nocookie.com; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; media-src 'self' https:; connect-src 'self' https://*.googleapis.com https://*.firebaseio.com https://*.firebaseapp.com https://firestore.googleapis.com https://identitytoolkit.googleapis.com https://securetoken.googleapis.com wss://*.firebaseio.com; frame-src https://*.firebaseapp.com https://www.youtube-nocookie.com; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="theme-color" content="#ffffff" id="meta-tema">
 <script>try{var t=JSON.parse(localStorage.getItem('cvd.tema')||'"escuro"');if(t==='escuro'){document.documentElement.setAttribute('data-theme','dark');document.getElementById('meta-tema').setAttribute('content','#000000')}}catch(e){}</script>
@@ -444,6 +444,7 @@ const salvarFavs = () => ls.set('favUrls', [...favs].map(i=>TODOS[i].url));
 
 function linkDownload(x){
   if(x.semDownload) return null;
+  if(x.local) return x.local;   // cópia otimizada hospedada no app (baixa direto, sem sair do site)
   if(x.baixarUrl) return x.baixarUrl;
   const u = x.pdf || x.url;
   if(x.baixar || x.pdf) return u;
@@ -492,6 +493,8 @@ async function ocultarItem(id){
   try{ await C.salvarOcultos(o); }catch(e){ toast('Erro: ' + e.message); return; }
   OCULTOS = o; fecharPainel(); prepararDados(); render(); toast('Item excluído do app');
 }
+const srcVid = x => x.local || x.url;
+const absUrl = u => /^https?:/i.test(u) ? u : new URL(u, location.href.split('#')[0]).href;
 const isVideo = x => /\.mp4(\?|$)/i.test((x && x.url) || '');
 function chipsIdioma(x){
   const f = x.familia && FAM[x.familia]; if(!f) return '';
@@ -1050,12 +1053,12 @@ function clipsVai(i){
   CP.i = ((i % n) + n) % n;
   const x = CP.lista[CP.i];
   CP.v.loop = n === 1;                       // um vídeo só: repete direto
-  CP.v.src = x.url; CP.v.muted = CP.mudo;
+  CP.v.src = srcVid(x); CP.v.muted = CP.mudo;
   document.getElementById('clips-tit').textContent = x.titulo + (x.prof ? ' · ' + x.prof : '');
   document.getElementById('clips-pos').textContent = (CP.i + 1) + ' de ' + n + ' · repetição contínua';
   const pr = document.getElementById('clips-prog'); if(pr) pr.style.width = '0%';
   CP.v.play().catch(() => {});
-  if(n > 1){ const prox = CP.lista[(CP.i + 1) % n]; if(prox && CP.pre.getAttribute('src') !== prox.url) CP.pre.src = prox.url; }
+  if(n > 1){ const prox = CP.lista[(CP.i + 1) % n]; if(prox && CP.pre.getAttribute('src') !== srcVid(prox)) CP.pre.src = srcVid(prox); }
   track('abrir', chaveItem(x), x.titulo, 'clips');
 }
 function clipsIniciar(){
@@ -1090,7 +1093,7 @@ document.addEventListener('visibilitychange', () => { if(document.visibilityStat
 function painelVideo(x){
   const dl = linkDownload(x), tam = tamDownload(x), t = THUMBS[x.url], fav = favs.has(x.id);
   const sub = metaDe(x, {produto:true}).replace(/<br>.*/, '').replace(/<[^>]+>/g, '');
-  abrirPainel(`<div class="player"><video controls playsinline preload="metadata" ${t ? `poster="img/t/${t[0]}"` : ''} src="${esc(x.url)}"></video></div>
+  abrirPainel(`<div class="player"><video controls playsinline preload="metadata" ${t ? `poster="img/t/${t[0]}"` : ''} src="${esc(srcVid(x))}"></video></div>
     <h3 style="margin-top:14px">${esc(x.titulo)}</h3><p class="sub">${sub}</p>
     <div class="botoes">${btnLoop()}${dl ? `<a class="btn prim" href="${esc(dl)}" download data-dl="${x.id}" data-mb="${tam||0}">${ic('download')}Baixar vídeo${tam ? ` <small>${fmtTam(tam)}</small>` : ''}</a>` : ''}
       <button class="btn prim" data-compartilhar="${x.id}">${ic('share')}Copiar link</button>
@@ -1780,8 +1783,8 @@ async function compartilhar(x){
   if(C && C.configurado && C.aprovado()){
     try{
       const dl = linkDownload(x), t = THUMBS[x.url], tam = tamDownload(x);
-      const urlCli = siteEmpresaUrl(x.url) && PROD[x.produto] ? fichaEquip(x.produto) : x.url;
-      const id = await C.criarCompartilhamento({ titulo: nome, url: urlCli, baixarUrl: dl || undefined, thumb: t ? 'img/t/' + t[0] : undefined, tipo: x.esp ? 'Vídeo de procedimento' : (TIPOS[x.tipo] || {}).nome, mb: typeof tam === 'number' ? tam : undefined });
+      const urlCli = siteEmpresaUrl(x.url) && PROD[x.produto] ? fichaEquip(x.produto) : (x.local ? absUrl(x.local) : x.url);
+      const id = await C.criarCompartilhamento({ titulo: nome, url: urlCli, baixarUrl: dl ? absUrl(dl) : undefined, thumb: t ? 'img/t/' + t[0] : undefined, tipo: x.esp ? 'Vídeo de procedimento' : (TIPOS[x.tipo] || {}).nome, mb: typeof tam === 'number' ? tam : undefined });
       await enviarLink(nome, new URL('v.html', location.href.split('#')[0]).href + '#' + id);
     }catch(e){ toast('Não foi possível gerar o link agora'); }
     return;

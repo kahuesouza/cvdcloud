@@ -1479,8 +1479,9 @@ window.CVD = {
    "esp": "cirurgia",
    "prof": "Prof. Renato Lavezo",
    "ponta": "SR9",
-   "mb": 15,
+   "mb": 10.4,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-01-sinus-lift-prof-renato-lavezo.mp4",
+   "local": "arquivos/procedimentos/proc-01-sinus-lift-prof-renato-lavezo.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-01-sinus-lift-prof-renato-lavezo.mp4",
    "topico": "sinus-lift",
    "pontas": [
@@ -1493,6 +1494,7 @@ window.CVD = {
    "prof": "Prof. Renato Lavezo",
    "mb": 3.5,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-02-descolamento-da-membrana-sinusal-prof-renato-lavezo.mp4",
+   "local": "arquivos/procedimentos/proc-02-descolamento-da-membrana-sinusal-prof-renato-lavezo.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-02-descolamento-da-membrana-sinusal-prof-renato-lavezo.mp4",
    "topico": "sinus-lift"
   },
@@ -1500,8 +1502,9 @@ window.CVD = {
    "titulo": "Flapless",
    "esp": "cirurgia",
    "prof": "Dr. Diego Bazan",
-   "mb": 213,
+   "mb": 23.0,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-03-flapless-dr-diego-bazan.mp4",
+   "local": "arquivos/procedimentos/proc-03-flapless-dr-diego-bazan.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-03-flapless-dr-diego-bazan.mp4",
    "topico": "flapless",
    "esps": [
@@ -1514,8 +1517,9 @@ window.CVD = {
    "esp": "cirurgia",
    "prof": "Prof. Diego Bazan",
    "ponta": "SL1-0",
-   "mb": 241,
+   "mb": 15.6,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-04-descolamento-prof-diego-bazan.mp4",
+   "local": "arquivos/procedimentos/proc-04-descolamento-prof-diego-bazan.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-04-descolamento-prof-diego-bazan.mp4",
    "topico": "descolamento",
    "pontas": [
@@ -1530,8 +1534,9 @@ window.CVD = {
    "titulo": "Descolamento de Torus",
    "esp": "cirurgia",
    "prof": "Prof. Diego Bazan",
-   "mb": 74,
+   "mb": 5.1,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-05-descolamento-de-torus-prof-diego-bazan.mp4",
+   "local": "arquivos/procedimentos/proc-05-descolamento-de-torus-prof-diego-bazan.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-05-descolamento-de-torus-prof-diego-bazan.mp4",
    "topico": "osteotomia-torus",
    "esps": [
@@ -1547,8 +1552,9 @@ window.CVD = {
    "titulo": "Osteotomia de Torus",
    "esp": "cirurgia",
    "prof": "Prof. Diego Bazan",
-   "mb": 74,
+   "mb": 4.3,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-06-osteotomia-de-torus-prof-diego-bazan.mp4",
+   "local": "arquivos/procedimentos/proc-06-osteotomia-de-torus-prof-diego-bazan.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-06-osteotomia-de-torus-prof-diego-bazan.mp4",
    "topico": "osteotomia-torus",
    "esps": [
@@ -1563,8 +1569,9 @@ window.CVD = {
   {
    "titulo": "Osteotomia",
    "esp": "cirurgia",
-   "mb": 5,
+   "mb": 5.0,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-07-osteotomia.mp4",
+   "local": "arquivos/procedimentos/proc-07-osteotomia.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-07-osteotomia.mp4",
    "topico": "osteotomia-torus",
    "esps": [
@@ -1577,6 +1584,7 @@ window.CVD = {
    "esp": "cirurgia",
    "mb": 6.2,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-08-descolamento.mp4",
+   "local": "arquivos/procedimentos/proc-08-descolamento.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-08-descolamento.mp4",
    "topico": "descolamento",
    "esps": [
@@ -1588,16 +1596,18 @@ window.CVD = {
    "titulo": "Cirurgia do Mento",
    "esp": "cirurgia",
    "prof": "Ricardo Scotton",
-   "mb": 170,
+   "mb": 8.8,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-09-cirurgia-do-mento-ricardo-scotton.mp4",
+   "local": "arquivos/procedimentos/proc-09-cirurgia-do-mento-ricardo-scotton.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-09-cirurgia-do-mento-ricardo-scotton.mp4",
    "topico": "outras-cirurgias"
   },
   {
    "titulo": "Sindesmotomia",
    "esp": "cirurgia",
-   "mb": 61,
+   "mb": 5.7,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-10-sindesmotomia.mp4",
+   "local": "arquivos/procedimentos/proc-10-sindesmotomia.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-10-sindesmotomia.mp4",
    "topico": "outras-cirurgias"
   },
@@ -1605,8 +1615,9 @@ window.CVD = {
    "titulo": "Aumento de Coroa e Regularização Radicular",
    "esp": "periodontia",
    "prof": "Prof. Diego Bazan",
-   "mb": 93,
+   "mb": 2.7,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-11-aumento-de-coroa-e-regularizacao-radicular-prof-diego-bazan.mp4",
+   "local": "arquivos/procedimentos/proc-11-aumento-de-coroa-e-regularizacao-radicular-prof-diego-bazan.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-11-aumento-de-coroa-e-regularizacao-radicular-prof-diego-bazan.mp4",
    "topico": "flapless",
    "esps": [
@@ -1618,16 +1629,18 @@ window.CVD = {
    "titulo": "Raspagem e Alisamento Radicular",
    "esp": "periodontia",
    "prof": "Prof. Diego Bazan",
-   "mb": 209,
+   "mb": 12.8,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-12-raspagem-e-alisamento-radicular-prof-diego-bazan.mp4",
+   "local": "arquivos/procedimentos/proc-12-raspagem-e-alisamento-radicular-prof-diego-bazan.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-12-raspagem-e-alisamento-radicular-prof-diego-bazan.mp4",
    "topico": "raspagem"
   },
   {
    "titulo": "Gengivoplastia com Osteotomia",
    "esp": "periodontia",
-   "mb": 195,
+   "mb": 6.6,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-13-gengivoplastia-com-osteotomia.mp4",
+   "local": "arquivos/procedimentos/proc-13-gengivoplastia-com-osteotomia.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-13-gengivoplastia-com-osteotomia.mp4",
    "topico": "gengivoplastia-peeling",
    "esps": [
@@ -1638,8 +1651,9 @@ window.CVD = {
   {
    "titulo": "Peeling Gengival",
    "esp": "periodontia",
-   "mb": 190,
+   "mb": 7.2,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-14-peeling-gengival.mp4",
+   "local": "arquivos/procedimentos/proc-14-peeling-gengival.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-14-peeling-gengival.mp4",
    "topico": "gengivoplastia-peeling",
    "esps": [
@@ -1651,8 +1665,9 @@ window.CVD = {
    "titulo": "Cirurgia de Retropreparo",
    "esp": "endodontia",
    "prof": "Prof. Eduardo Santini",
-   "mb": 71,
+   "mb": 23.6,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-15-cirurgia-de-retropreparo-prof-eduardo-santini.mp4",
+   "local": "arquivos/procedimentos/proc-15-cirurgia-de-retropreparo-prof-eduardo-santini.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-15-cirurgia-de-retropreparo-prof-eduardo-santini.mp4",
    "topico": "apicectomia",
    "pontas": [
@@ -1665,8 +1680,9 @@ window.CVD = {
    "titulo": "Irrigação do Conduto e Corte de Guta-Percha",
    "esp": "endodontia",
    "prof": "Prof. Rodrigo Villagra",
-   "mb": 15,
+   "mb": 14.6,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-16-irrigacao-do-conduto-e-corte-de-guta-percha-prof-rodrigo-vil.mp4",
+   "local": "arquivos/procedimentos/proc-16-irrigacao-do-conduto-e-corte-de-guta-percha-prof-rodrigo-vil.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-16-irrigacao-do-conduto-e-corte-de-guta-percha-prof-rodrigo-vil.mp4",
    "topico": "pui"
   },
@@ -1674,8 +1690,9 @@ window.CVD = {
    "titulo": "Limpeza da Câmara Pulpar",
    "esp": "endodontia",
    "prof": "Prof. Rodrigo Villagra",
-   "mb": 238,
+   "mb": 25.4,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-17-limpeza-da-camara-pulpar-prof-rodrigo-villagra.mp4",
+   "local": "arquivos/procedimentos/proc-17-limpeza-da-camara-pulpar-prof-rodrigo-villagra.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-17-limpeza-da-camara-pulpar-prof-rodrigo-villagra.mp4",
    "topico": "endodontia"
   },
@@ -1685,6 +1702,7 @@ window.CVD = {
    "ponta": "CR2T-E",
    "mb": 6.3,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-18-compactacao-da-guta-percha.mp4",
+   "local": "arquivos/procedimentos/proc-18-compactacao-da-guta-percha.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-18-compactacao-da-guta-percha.mp4",
    "topico": "guta-percha",
    "pontas": [
@@ -1697,6 +1715,7 @@ window.CVD = {
    "ponta": "T0S-E2",
    "mb": 7.3,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-19-remocao-de-guta-percha-para-pino-de-fibra.mp4",
+   "local": "arquivos/procedimentos/proc-19-remocao-de-guta-percha-para-pino-de-fibra.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-19-remocao-de-guta-percha-para-pino-de-fibra.mp4",
    "topico": "guta-percha",
    "pontas": [
@@ -1706,8 +1725,9 @@ window.CVD = {
   {
    "titulo": "Remoção de Pino",
    "esp": "endodontia",
-   "mb": 9,
+   "mb": 9.0,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-20-remocao-de-pino.mp4",
+   "local": "arquivos/procedimentos/proc-20-remocao-de-pino.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-20-remocao-de-pino.mp4",
    "topico": "pinos"
   },
@@ -1715,8 +1735,9 @@ window.CVD = {
    "titulo": "Término de Preparo",
    "esp": "dentistica",
    "prof": "Dr. Rodrigo Bucker",
-   "mb": 39,
+   "mb": 5.1,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-21-termino-de-preparo-dr-rodrigo-bucker.mp4",
+   "local": "arquivos/procedimentos/proc-21-termino-de-preparo-dr-rodrigo-bucker.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-21-termino-de-preparo-dr-rodrigo-bucker.mp4",
    "topico": "preparo-termino"
   },
@@ -1724,8 +1745,9 @@ window.CVD = {
    "titulo": "Término de Preparo",
    "esp": "dentistica",
    "prof": "Dr. Shizuma Shibata",
-   "mb": 40,
+   "mb": 4.7,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-22-termino-de-preparo-dr-shizuma-shibata.mp4",
+   "local": "arquivos/procedimentos/proc-22-termino-de-preparo-dr-shizuma-shibata.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-22-termino-de-preparo-dr-shizuma-shibata.mp4",
    "topico": "preparo-termino"
   },
@@ -1733,8 +1755,9 @@ window.CVD = {
    "titulo": "Término de Preparo",
    "esp": "dentistica",
    "ponta": "T1F",
-   "mb": 43,
+   "mb": 5.0,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-23-termino-de-preparo.mp4",
+   "local": "arquivos/procedimentos/proc-23-termino-de-preparo.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-23-termino-de-preparo.mp4",
    "topico": "preparo-termino",
    "pontas": [
@@ -1745,8 +1768,9 @@ window.CVD = {
    "titulo": "Acabamento Cervical de Restauros em Resina",
    "esp": "dentistica",
    "prof": "Prof. Renato Voss",
-   "mb": 12,
+   "mb": 11.8,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-24-acabamento-cervical-de-restauros-em-resina-prof-renato-voss.mp4",
+   "local": "arquivos/procedimentos/proc-24-acabamento-cervical-de-restauros-em-resina-prof-renato-voss.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-24-acabamento-cervical-de-restauros-em-resina-prof-renato-voss.mp4",
    "topico": "preparo-termino"
   },
@@ -1757,6 +1781,7 @@ window.CVD = {
    "ponta": "TR1F-RV",
    "mb": 7.7,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-25-acabamento-cervical-de-restauros-em-resina-prof-renato-voss.mp4",
+   "local": "arquivos/procedimentos/proc-25-acabamento-cervical-de-restauros-em-resina-prof-renato-voss.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-25-acabamento-cervical-de-restauros-em-resina-prof-renato-voss.mp4",
    "topico": "preparo-termino",
    "pontas": [
@@ -1767,8 +1792,9 @@ window.CVD = {
    "titulo": "Remoção de Facetas",
    "esp": "dentistica",
    "prof": "Gustavo Greco, Alexandre Greco e Ricardo Oliveira",
-   "mb": 109,
+   "mb": 6.6,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-26-remocao-de-facetas-gustavo-greco-alexandre-greco-e-ricardo-o.mp4",
+   "local": "arquivos/procedimentos/proc-26-remocao-de-facetas-gustavo-greco-alexandre-greco-e-ricardo-o.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-26-remocao-de-facetas-gustavo-greco-alexandre-greco-e-ricardo-o.mp4",
    "topico": "facetas"
   },
@@ -1776,8 +1802,9 @@ window.CVD = {
    "titulo": "Remoção de Facetas",
    "esp": "dentistica",
    "prof": "Dr. Clébio Domingues",
-   "mb": 31,
+   "mb": 5.2,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-27-remocao-de-facetas-dr-clebio-domingues.mp4",
+   "local": "arquivos/procedimentos/proc-27-remocao-de-facetas-dr-clebio-domingues.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-27-remocao-de-facetas-dr-clebio-domingues.mp4",
    "topico": "facetas",
    "pontas": [
@@ -1790,8 +1817,9 @@ window.CVD = {
   {
    "titulo": "Remoção de Amálgama",
    "esp": "dentistica",
-   "mb": 187,
+   "mb": 12.0,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-28-remocao-de-amalgama.mp4",
+   "local": "arquivos/procedimentos/proc-28-remocao-de-amalgama.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-28-remocao-de-amalgama.mp4",
    "topico": "amalgama-resina"
   },
@@ -1800,6 +1828,7 @@ window.CVD = {
    "esp": "dentistica",
    "mb": 9.3,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-29-preparo-interproximal.mp4",
+   "local": "arquivos/procedimentos/proc-29-preparo-interproximal.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-29-preparo-interproximal.mp4",
    "topico": "preparo-termino"
   },
@@ -1809,6 +1838,7 @@ window.CVD = {
    "prof": "Dra. Elizabeth Yassuda",
    "mb": 2.3,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-30-slice-dra-elizabeth-yassuda.mp4",
+   "local": "arquivos/procedimentos/proc-30-slice-dra-elizabeth-yassuda.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-30-slice-dra-elizabeth-yassuda.mp4",
    "topico": "slice"
   },
@@ -1817,14 +1847,16 @@ window.CVD = {
    "esp": "dentistica",
    "mb": 7.3,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-31-slice.mp4",
+   "local": "arquivos/procedimentos/proc-31-slice.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-31-slice.mp4",
    "topico": "slice"
   },
   {
    "titulo": "Cimentação",
    "esp": "dentistica",
-   "mb": 29,
+   "mb": 1.3,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-32-cimentacao.mp4",
+   "local": "arquivos/procedimentos/proc-32-cimentacao.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-32-cimentacao.mp4",
    "topico": "cimentacao"
   },
@@ -1832,16 +1864,18 @@ window.CVD = {
    "titulo": "Profilaxia com Spray Control",
    "esp": "profilaxia",
    "prof": "Dr. Danilo Cioffi",
-   "mb": 62,
+   "mb": 4.5,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-33-profilaxia-com-spray-control-dr-danilo-cioffi.mp4",
+   "local": "arquivos/procedimentos/proc-33-profilaxia-com-spray-control-dr-danilo-cioffi.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-33-profilaxia-com-spray-control-dr-danilo-cioffi.mp4",
    "topico": "profilaxia"
   },
   {
    "titulo": "Profilaxia com Spray Control",
    "esp": "profilaxia",
-   "mb": 20,
+   "mb": 4.2,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-34-profilaxia-com-spray-control.mp4",
+   "local": "arquivos/procedimentos/proc-34-profilaxia-com-spray-control.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-34-profilaxia-com-spray-control.mp4",
    "topico": "profilaxia"
   },
@@ -1850,8 +1884,9 @@ window.CVD = {
    "esp": "profilaxia",
    "prof": "Ricardo Scotton",
    "ponta": "T1T-P",
-   "mb": 13,
+   "mb": 12.8,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-35-limpeza-com-ponta-t1t-p-ricardo-scotton.mp4",
+   "local": "arquivos/procedimentos/proc-35-limpeza-com-ponta-t1t-p-ricardo-scotton.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-35-limpeza-com-ponta-t1t-p-ricardo-scotton.mp4",
    "topico": "t1tp-implantes",
    "pontas": [
@@ -1862,8 +1897,9 @@ window.CVD = {
    "titulo": "Modo de Uso da Ponta T1T-P",
    "esp": "profilaxia",
    "ponta": "T1T-P",
-   "mb": 50,
+   "mb": 4.2,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-36-modo-de-uso-da-ponta-t1t-p.mp4",
+   "local": "arquivos/procedimentos/proc-36-modo-de-uso-da-ponta-t1t-p.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-36-modo-de-uso-da-ponta-t1t-p.mp4",
    "topico": "t1tp-implantes",
    "pontas": [
@@ -1874,8 +1910,9 @@ window.CVD = {
    "titulo": "Ponta T1T-P em ação",
    "esp": "profilaxia",
    "ponta": "T1T-P",
-   "mb": 24,
+   "mb": 2.0,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-37-ponta-t1t-p-em-acao.mp4",
+   "local": "arquivos/procedimentos/proc-37-ponta-t1t-p-em-acao.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-37-ponta-t1t-p-em-acao.mp4",
    "topico": "t1tp-implantes",
    "pontas": [
@@ -1885,16 +1922,18 @@ window.CVD = {
   {
    "titulo": "Remoção de Resina de Bracket",
    "esp": "orto-odontoped",
-   "mb": 144,
+   "mb": 6.8,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-38-remocao-de-resina-de-bracket.mp4",
+   "local": "arquivos/procedimentos/proc-38-remocao-de-resina-de-bracket.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-38-remocao-de-resina-de-bracket.mp4",
    "topico": "odontopediatria"
   },
   {
    "titulo": "Odontopediatria",
    "esp": "orto-odontoped",
-   "mb": 228,
+   "mb": 10.9,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-39-odontopediatria.mp4",
+   "local": "arquivos/procedimentos/proc-39-odontopediatria.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-39-odontopediatria.mp4",
    "topico": "odontopediatria"
   },
@@ -1902,8 +1941,9 @@ window.CVD = {
    "titulo": "Simulação no Ovo · seletividade do corte",
    "esp": "demonstracao",
    "prof": "Dr. Danilo Cioffi",
-   "mb": 17,
+   "mb": 2.2,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-40-simulacao-no-ovo-seletividade-do-corte-dr-danilo-cioffi.mp4",
+   "local": "arquivos/procedimentos/proc-40-simulacao-no-ovo-seletividade-do-corte-dr-danilo-cioffi.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-40-simulacao-no-ovo-seletividade-do-corte-dr-danilo-cioffi.mp4",
    "topico": "demonstracoes"
   },
@@ -1912,8 +1952,9 @@ window.CVD = {
    "esp": "demonstracao",
    "prof": "Dr. Danilo Cioffi",
    "formato": "Feed",
-   "mb": 13,
+   "mb": 12.7,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-41-minimamente-invasivo-dr-danilo-cioffi.mp4",
+   "local": "arquivos/procedimentos/proc-41-minimamente-invasivo-dr-danilo-cioffi.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-41-minimamente-invasivo-dr-danilo-cioffi.mp4",
    "topico": "demonstracoes"
   },
@@ -1922,8 +1963,9 @@ window.CVD = {
    "esp": "demonstracao",
    "prof": "Dr. Danilo Cioffi",
    "formato": "Story",
-   "mb": 21,
+   "mb": 3.1,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-42-minimamente-invasivo-dr-danilo-cioffi.mp4",
+   "local": "arquivos/procedimentos/proc-42-minimamente-invasivo-dr-danilo-cioffi.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-42-minimamente-invasivo-dr-danilo-cioffi.mp4",
    "topico": "demonstracoes"
   },
@@ -1931,8 +1973,9 @@ window.CVD = {
    "titulo": "Profilaxia",
    "esp": "demonstracao",
    "formato": "Post",
-   "mb": 61,
+   "mb": 12.3,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-43-profilaxia.mp4",
+   "local": "arquivos/procedimentos/proc-43-profilaxia.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-43-profilaxia.mp4",
    "topico": "profilaxia"
   },
@@ -1940,16 +1983,18 @@ window.CVD = {
    "titulo": "Caso Clínico · Paciente Samuel",
    "esp": "demonstracao",
    "prof": "Dra. Liete Yassuda",
-   "mb": 9,
+   "mb": 9.0,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-44-caso-clinico-paciente-samuel-dra-liete-yassuda.mp4",
+   "local": "arquivos/procedimentos/proc-44-caso-clinico-paciente-samuel-dra-liete-yassuda.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-44-caso-clinico-paciente-samuel-dra-liete-yassuda.mp4",
    "topico": "demonstracoes"
   },
   {
    "titulo": "Broca em Rotação",
    "esp": "demonstracao",
-   "mb": 83,
+   "mb": 3.9,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-45-broca-em-rotacao.mp4",
+   "local": "arquivos/procedimentos/proc-45-broca-em-rotacao.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-45-broca-em-rotacao.mp4",
    "topico": "demonstracoes"
   },
@@ -1957,8 +2002,9 @@ window.CVD = {
    "titulo": "Vídeo sem título (26/07/2022)",
    "esp": "demonstracao",
    "aviso": "Renomear no Dropbox",
-   "mb": 13,
+   "mb": 12.8,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-46-video-sem-titulo-26-07-2022.mp4",
+   "local": "arquivos/procedimentos/proc-46-video-sem-titulo-26-07-2022.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-46-video-sem-titulo-26-07-2022.mp4",
    "topico": "demonstracoes"
   },
@@ -1972,6 +2018,7 @@ window.CVD = {
    ],
    "mb": 5.8,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-47-cirurgia-ponta-sfr4-dr-berti.mp4",
+   "local": "arquivos/procedimentos/proc-47-cirurgia-ponta-sfr4-dr-berti.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-47-cirurgia-ponta-sfr4-dr-berti.mp4",
    "topico": "outras-cirurgias"
   },
@@ -1982,8 +2029,9 @@ window.CVD = {
    "pontas": [
     "SFR4"
    ],
-   "mb": 47.6,
+   "mb": 3.0,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-48-split-crest-ponta-sfr4.mp4",
+   "local": "arquivos/procedimentos/proc-48-split-crest-ponta-sfr4.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-48-split-crest-ponta-sfr4.mp4",
    "topico": "outras-cirurgias"
   },
@@ -1991,8 +2039,9 @@ window.CVD = {
    "titulo": "Aumento de Coroa · Flapless",
    "esp": "cirurgia",
    "prof": "Dr. Aldir Machado",
-   "mb": 86.9,
+   "mb": 4.3,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-49-aumento-de-coroa-flapless-dr-aldir-machado.mp4",
+   "local": "arquivos/procedimentos/proc-49-aumento-de-coroa-flapless-dr-aldir-machado.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-49-aumento-de-coroa-flapless-dr-aldir-machado.mp4",
    "topico": "flapless",
    "esps": [
@@ -3594,5 +3643,5 @@ window.CVD = {
    "nome": "Demonstrações e casos clínicos"
   }
  ],
- "rev": 1793363949783
+ "rev": 1793374917731
 };

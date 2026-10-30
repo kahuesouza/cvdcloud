@@ -1,5 +1,5 @@
 // Cache só da "casca" do app (alguns KB). Os materiais em si são sempre links externos.
-const VERSAO = 'cvd-materiais-v113';
+const VERSAO = 'cvd-materiais-v114';
 const CASCA = ['./', 'index.html', 'firebase-config.js', 'conta.js', 'manifest.webmanifest', 'img/logo-branco.svg', 'cloud.css', 'admin-analise.js', 'img/icone.svg',
   'img/optymus.webp', 'img/clinical-plus.webp', 'img/dentsurg-pro.webp'];
 
@@ -14,6 +14,7 @@ self.addEventListener('activate', e => {
 self.addEventListener('fetch', e => {
   const url = new URL(e.request.url);
   if (e.request.method !== 'GET' || url.origin !== location.origin) return;
+  if (/\.mp4$/i.test(url.pathname)) return;   // vídeos grandes: direto da rede, sem copiar pro cache
   e.respondWith(
     fetch(e.request, {cache: 'no-cache'}).then(r => { const copia = r.clone(); caches.open(VERSAO).then(c => c.put(e.request, copia)); return r; })
       .catch(() => caches.match(e.request))
