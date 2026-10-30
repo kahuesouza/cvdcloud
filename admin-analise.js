@@ -136,20 +136,39 @@ async function carregarClientes(el){
   vis.forEach(v => { const s = segDe(v.criadoEm); if(!s) return; const d = new Date(s * 1000); horas[d.getHours()]++; sem[(d.getDay() + 6) % 7]++; });
   const picoH = Math.max(...horas) ? horas.indexOf(Math.max(...horas)) : -1;
   const mapa = mapaCalor(vis, v => segDe(v.criadoEm));
+  // por link compartilhado: quanto interesse cada envio gerou
+  const porLink = new Map();
+  vis.forEach(v => {
+    const o = porLink.get(v.compId) || { n: 0, vids: new Set(), voltou: false, seg: 0, abriu: false, baixou: false, primeiro: Infinity, ultimo: 0 };
+    o.n++; o.vids.add(v.vid); if(v.retorno) o.voltou = true; o.seg += v.seg || 0;
+    if(v.abriu) o.abriu = true; if(v.baixou) o.baixou = true;
+    const s = segDe(v.criadoEm); if(s){ o.primeiro = Math.min(o.primeiro, s); o.ultimo = Math.max(o.ultimo, s); }
+    porLink.set(v.compId, o);
+  });
+  porLink.forEach(o => { if(o.vids.size < o.n) o.voltou = true; });   // mesmo aparelho abriu mais de uma vez
+  const quentes = [...porLink.entries()].map(([id, o]) => ({ id, o, s: sh.get(id), pts: o.n + (o.voltou ? 3 : 0) + (o.abriu ? 2 : 0) + (o.baixou ? 4 : 0) + Math.min(5, o.seg / 60) }))
+    .filter(x => x.s).sort((x, y) => y.pts - x.pts).slice(0, 8);
+  const esperas = [...porLink.entries()].map(([id, o]) => { const s = sh.get(id); const env = s ? segDe(s.criadoEm) : 0; return env && o.primeiro !== Infinity ? Math.max(0, o.primeiro - env) : null; }).filter(x => x !== null).sort((a, b) => a - b);
+  const espMed = esperas.length ? esperas[Math.floor(esperas.length / 2)] : 0;
+  const esperaFmt = s => s < 90 ? 'na hora' : s < 3600 ? Math.round(s / 60) + ' min' : s < 86400 ? Math.round(s / 3600) + ' h' : Math.round(s / 86400) + ' d';
+  const nuncaTodos = shares.filter(s => !abertos.has(s.id));
+  const cortou = vis.length >= 5000 || shares.length >= 3000;
   const ult = vis.slice(0, 15);
   const sub = 'color:var(--fraco);font-size:12px;font-weight:500';
   el.innerHTML = `
     <div class="chips-f">${[[7, '7 dias'], [30, '30 dias'], [90, '90 dias']].map(([d, n]) => `<button class="${periodoCli === d ? 'on' : ''}" data-periodo-cli="${d}">${n}</button>`).join('')}</div>
-    <div class="nota anima" style="margin-top:14px">${ic('info')}<div><b>Como funciona</b>Quando um cliente abre um link compartilhado, o cvdcloud registra de forma <b>anônima</b>: horário, tipo de aparelho, fuso horário, de onde veio, tempo na página e se abriu ou baixou o material. Um cookie do próprio site (sem nome, telefone ou e-mail) identifica se a pessoa volta. O cliente é avisado e pode recusar. Só administradores veem.</div></div>
+    <div class="nota anima" style="margin-top:14px">${ic('info')}<div><b>Como funciona</b>Quando um cliente abre um link compartilhado, o cvdcloud registra de forma <b>anônima</b>: horário, tipo de aparelho, fuso horário, de onde veio, tempo na página e se abriu ou baixou o material. Um cookie do próprio site (sem nome, telefone ou e-mail) identifica se a pessoa volta. O registro começa assim que o link abre, sem pedir nada ao cliente; só não registra quem usa o "não rastrear" do navegador. Só administradores veem.</div></div>
+    ${cortou ? `<div class="nota anima" style="margin-top:14px">${ic('info')}<div><b>Período grande demais</b>O painel lê no máximo 5.000 acessos e 3.000 links por vez, então os mais antigos podem ter ficado de fora. Escolha 7 ou 30 dias para ver tudo.</div></div>` : ''}
     <div class="kpis">${kpi(nf(shares.length), 'Links enviados', '')}${kpi(nf(abertos.size), 'Links abertos', `<span class="dl">${pctFmt(abertos.size, shares.length)} dos enviados</span>`)}
       ${kpi(nf(unicos.size), 'Clientes únicos', `<span class="dl">${vis.length} acessos</span>`)}${kpi(nf(recorr.length), 'Voltaram a abrir', '')}
       ${kpi(durFmt(tMed), 'Tempo médio na página', '')}${kpi(nf(abriu), 'Abriram o material', `<span class="dl">${pctFmt(abriu, vis.length)}</span>`)}
-      ${kpi(nf(baixou), 'Baixaram', `<span class="dl">${pctFmt(baixou, vis.length)}</span>`)}${kpi(durFmt(vMed), 'Vídeo assistido (média)', '')}</div>
+      ${kpi(nf(baixou), 'Baixaram', `<span class="dl">${pctFmt(baixou, vis.length)}</span>`)}${kpi(durFmt(vMed), 'Vídeo assistido (média)', '')}${kpi(esperas.length ? esperaFmt(espMed) : '—', 'Do envio à 1ª abertura', '<span class="dl">mediana</span>')}</div>
     ${secao('Funil dos links')}
     <div class="rank">${[['Enviados', shares.length], ['Abertos pelo cliente', abertos.size], ['Abriram ou tocaram o material', abriu], ['Baixaram', baixou]].map(([n, v]) => `<div class="r bh"><span class="t">${n}</span><span class="bhb"><i style="width:${shares.length ? Math.min(100, Math.round(v / shares.length * 100)) : 0}%"></i></span><span class="v">${v}</span></div>`).join('')}</div>
+    ${secao('Links com mais interesse', 'quem vale ligar primeiro')}${quentes.length ? `<div class="rank">${quentes.map((x, i) => `<div class="r"><span class="n">${i + 1}</span><span class="t">${esc(x.s.titulo)}<br><span class="quem" style="${sub}">${esc(nomeCurto((nUser.get(x.s.criadoPor) || {}).nome))} · ${x.o.n} acesso${x.o.n > 1 ? 's' : ''} · ${x.o.vids.size} aparelho${x.o.vids.size > 1 ? 's' : ''}${x.o.voltou ? ' · voltou' : ''}${x.o.abriu ? ' · abriu' : ''}${x.o.baixou ? ' · baixou' : ''} · ${durFmt(x.o.seg)} · último acesso: ${haQuanto({ seconds: x.o.ultimo })}</span></span><span class="v">${nf(Math.round(x.pts))}</span></div>`).join('')}</div>` : rankHtml([], 'Nenhum cliente abriu links neste período.')}
     ${secao('Qualidade dos envios por vendedor', 'abertos / enviados')}${vendRank.length ? `<div class="rank">${vendRank.map((x, i) => `<div class="r"><span class="n">${i + 1}</span><span class="t">${esc(nomeCurto((nUser.get(x.uid) || {}).nome))}<br><span class="quem" style="${sub}">${x.env} enviados · ${x.abertos} abertos · tempo médio ${durFmt(x.n ? x.seg / x.n : 0)}</span></span><span class="v">${pctFmt(x.abertos, x.env)}</span></div>`).join('')}</div>` : rankHtml([], 'Ninguém compartilhou ainda.')}
     ${secao('O que os clientes mais abrem')}${matRank.length ? `<div class="rank">${matRank.map(([t, o], i) => `<div class="r"><span class="n">${i + 1}</span><span class="t">${esc(t)}<br><span class="quem" style="${sub}">tempo médio ${durFmt(o.n ? o.seg / o.n : 0)} · ${pctFmt(o.abriu, o.v)} abriram o material</span></span><span class="v">${o.v}</span></div>`).join('')}</div>` : rankHtml([], 'Nenhum cliente abriu links ainda.')}
-    ${secao('Enviados e nunca abertos', 'vale reenviar ou ligar')}${nunca.length ? `<div class="rank">${nunca.map(s => `<div class="r"><span class="t">${esc(s.titulo)}<br><span class="quem" style="${sub}">${esc(nomeCurto((nUser.get(s.criadoPor) || {}).nome))} · ${fmtData(s.criadoEm)}</span></span></div>`).join('')}</div>` : rankHtml([], 'Todos os links enviados foram abertos.')}
+    ${secao('Enviados e nunca abertos', nuncaTodos.length + ' no total · vale reenviar ou ligar')}${nunca.length ? `<div class="rank">${nunca.map(s => `<div class="r"><span class="t">${esc(s.titulo)}<br><span class="quem" style="${sub}">${esc(nomeCurto((nUser.get(s.criadoPor) || {}).nome))} · ${fmtData(s.criadoEm)} (${haQuanto(s.criadoEm)})</span></span></div>`).join('')}</div>` : rankHtml([], 'Todos os links enviados foram abertos.')}
     ${secao('Quando os clientes acessam', picoH >= 0 ? 'pico às ' + picoH + 'h' : '')}${barras(horas, Array.from({ length: 24 }, (_, h) => h + 'h'), picoH)}
     ${secao('Dia da semana e horário')}${mapa.html}
     ${secao('Aparelho')}${barraH(dist(v => v.disp === 'celular' ? 'Celular' : v.disp === 'tablet' ? 'Tablet' : 'Computador', 3), 'Sem acessos ainda.')}
@@ -160,5 +179,5 @@ async function carregarClientes(el){
     ${secao('Idioma do aparelho')}${barraH(dist(v => (v.idioma || '—').slice(0, 5), 5), 'Sem acessos ainda.')}
     ${secao('Clientes que voltaram', 'mesmo aparelho, mais de um acesso')}${recorr.length ? `<div class="rank">${recorr.sort((x, y) => y[1].length - x[1].length).slice(0, 8).map(([, l]) => { const mats = [...new Set(l.map(v => (sh.get(v.compId) || {}).titulo).filter(Boolean))]; return `<div class="r"><span class="t">${l.length} acessos · ${esc(l[0].disp)} ${esc(l[0].so)}<br><span class="quem" style="${sub}">${esc(mats.slice(0, 2).join(' · '))}${mats.length > 2 ? ' +' + (mats.length - 2) : ''}</span></span><span class="v">${haQuanto(l[0].criadoEm)}</span></div>`; }).join('')}</div>` : rankHtml([], 'Nenhum cliente voltou ainda.')}
     ${secao('Últimos acessos')}${ult.length ? `<div class="rank">${ult.map(v => { const s = sh.get(v.compId) || {}; return `<div class="r"><span class="t">${esc(s.titulo || 'Item removido')}<br><span class="quem" style="${sub}">${esc(nomeCurto((nUser.get(s.criadoPor) || {}).nome))} → cliente · ${esc(v.disp)} · ${durFmt(v.seg)}${v.abriu ? ' · abriu' : ''}${v.baixou ? ' · baixou' : ''}${v.retorno ? ' · voltou' : ''}</span></span><span class="v">${haQuanto(v.criadoEm)}</span></div>`; }).join('')}</div>` : rankHtml([], 'Nenhum acesso de cliente ainda.')}
-    <p style="color:var(--fraco);font-size:12px;line-height:1.5;margin:16px 0 0">Região é aproximada pelo fuso horário do aparelho (não usamos o IP). Clientes que recusam o aviso de privacidade não geram dados.</p>`;
+    <p style="color:var(--fraco);font-size:12px;line-height:1.5;margin:16px 0 0">Região é aproximada pelo fuso horário do aparelho (não usamos o IP). Quem usa o "não rastrear" do navegador não gera dados. Antes de 30/10/2026 só foram registrados os clientes que aceitaram o aviso, então os números anteriores a essa data são parciais.</p>`;
 }
