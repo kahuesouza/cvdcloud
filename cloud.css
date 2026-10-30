@@ -353,3 +353,7 @@ body{padding-bottom:calc(var(--nav-h) + env(safe-area-inset-bottom) + 14px)}
 .v360>summary .n{color:var(--fraco);font-size:13px}
 .v360>summary .seta{transition:transform .2s var(--ease);color:var(--fraco)}
 .v360[open]>summary .seta{transform:rotate(90deg)}
+
+.lf-vchips{display:flex;gap:8px;margin:0 0 10px;flex-wrap:wrap}
+.lf-vchip{padding:7px 14px;border-radius:999px;border:1px solid var(--linha);background:transparent;color:var(--sub);font-size:13px;font-weight:600;transition:background .15s,color .15s,border-color .15s}
+.lf-vchip.on{background:var(--texto);color:var(--bg);border-color:var(--texto)}

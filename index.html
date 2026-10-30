@@ -804,7 +804,7 @@ function telaLupas(grupoId){
     + secao('Catálogo e simulador') + docs
  };
 }
-const LF = { id: '', sel: new Set(), atual: 1, busy: false };
+const LF = { id: '', sel: new Set(), atual: 1, busy: false, vids: [] };
 const lfUrl = (it, i) => it.fotos.dir + i + '.jpg';
 const lfItem = id => { let r; LUPAS.grupos.forEach(gr => gr.itens.forEach(x => { if(x.id === id) r = x; })); return r; };
 function lfResumo(){
@@ -853,8 +853,11 @@ function painelLupa(id){
     : `<div class="img-g"><img src="img/lupas/${it.img}.webp" alt=""></div>
        <h3 style="margin-top:14px">${esc(it.nome)}${it.kit?` · ${esc(it.kit)}`:''}</h3><p class="sub">${esc(g.nome)}</p>
        <p class="desc">${esc(it.desc)}</p>`;
-  const vid = it.video && it.video.baixar
-    ? `<h4 class="lf-vh">Vídeo 360°</h4><div class="player"><video controls playsinline preload="metadata" poster="img/lupas/${esc(it.img)}.webp" src="${esc(it.video.baixar)}"></video></div>
+  const vids = (it.videos && it.videos.length) ? it.videos : (it.video && it.video.baixar ? [{ url: it.video.baixar, mb: it.video.mb }] : []);
+  LF.vids = vids;
+  const vchips = vids.length > 1 ? `<div class="lf-vchips" role="tablist">${vids.map((v, k) => `<button class="lf-vchip${k === 0 ? ' on' : ''}" role="tab" data-lfvid="${k}">Vídeo ${k + 1}</button>`).join('')}</div>` : '';
+  const vid = vids.length
+    ? `<h4 class="lf-vh">Vídeo 360°</h4>${vchips}<div class="player"><video controls playsinline preload="metadata" poster="img/lupas/${esc(it.img)}.webp" src="${esc(vids[0].url)}"></video></div>
        <p class="sub" style="margin:8px 0 0">Vídeo feito com IA a partir do produto: confira se representa fielmente o modelo antes de usar.</p>` : '';
   const fotosBtns = gal
     ? `<a class="btn prim" id="lf-dl" href="${esc(lfUrl(it, 1))}" download="lupa-${esc(id)}-01.jpg" data-dl="lupa" data-mb="0.2">${ic('download')}Baixar a foto que está aberta</a>
@@ -864,9 +867,9 @@ function painelLupa(id){
   abrirPainel(`${topo}${vid}
     <div class="botoes">
       ${vid ? btnLoop() : ''}
-      ${btnComp(it.nome + (it.kit ? ' · ' + it.kit : '') + ' · vídeo 360°', it.video.baixar, it.video.baixar, 'Vídeo', it.video.mb, 'Compartilhar vídeo 360°', 'img/lupas/' + it.img + '.webp')}
+      ${vids.length ? btnComp(it.nome + (it.kit ? ' · ' + it.kit : '') + ' · vídeo 360°', vids[0].url, vids[0].url, 'Vídeo', vids[0].mb, 'Compartilhar vídeo 360°', 'img/lupas/' + it.img + '.webp').replace('<button ', '<button id="lf-vcomp" ') : ''}
       ${fotosBtns}
-      <a class="btn sec" href="${esc(it.video.baixar)}" download data-dl="lupa" data-mb="${it.video.mb}">${ic('download')}Baixar vídeo <small>${fmtTam(it.video.mb)}</small></a>
+      ${vids.length ? `<a class="btn sec" id="lf-vdl" href="${esc(vids[0].url)}" download data-dl="lupa" data-mb="${vids[0].mb}">${ic('download')}Baixar vídeo <small>${fmtTam(vids[0].mb)}</small></a>` : ''}
     </div>`);
 }
 
@@ -1847,6 +1850,14 @@ document.addEventListener('click', e=>{
   const lupa = t.closest('[data-lupa]'); if(lupa){ painelLupa(lupa.dataset.lupa); return; }
   const lp = t.closest('[data-logo-p]'); if(lp){ const [gi,li] = lp.dataset.logoP.split(':'); painelLogo(+gi,+li); return; }
   const lfs = t.closest('[data-lfsel]'); if(lfs){ const i = +lfs.dataset.lfsel.split(':')[1]; LF.sel.has(i) ? LF.sel.delete(i) : LF.sel.add(i); lfResumo(); return; }
+  const lvc = t.closest('[data-lfvid]'); if(lvc){
+    const k = +lvc.dataset.lfvid, v = LF.vids[k], it = lfItem(LF.id); if(v && it){
+      const vp = painel.querySelector('video'), lp = vp && vp.loop; if(vp){ vp.src = v.url; vp.load(); if(lp) vp.loop = true; vp.play().catch(() => {}); }
+      const dl = document.getElementById('lf-vdl'); if(dl){ dl.href = v.url; dl.dataset.mb = v.mb; const sm = dl.querySelector('small'); if(sm) sm.textContent = fmtTam(v.mb); }
+      const cp = document.getElementById('lf-vcomp'); if(cp) cp.dataset.compGen = JSON.stringify({ t: it.nome + (it.kit ? ' · ' + it.kit : '') + ' · vídeo 360° (' + (k + 1) + ')', u: v.url, d: v.url, tp: 'Vídeo', mb: v.mb, th: 'img/lupas/' + it.img + '.webp' });
+      document.querySelectorAll('.lf-vchip').forEach((b, j) => b.classList.toggle('on', j === k));
+    } return;
+  }
   const lfv = t.closest('[data-lfoto]'); if(lfv){ lfVer(+lfv.dataset.lfoto.split(':')[1]); return; }
   if(t.closest('[data-lf-todas]')){ const it = lfItem(LF.id); if(it){ if(LF.sel.size === it.fotos.n) LF.sel.clear(); else for(let k = 1; k <= it.fotos.n; k++) LF.sel.add(k); lfResumo(); } return; }
   if(t.closest('[data-lf-baixar]')){ lfBaixar(); return; }

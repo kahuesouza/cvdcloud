@@ -93,6 +93,72 @@ window.CVD = {
  ],
  "materiais": [
   {
+   "titulo": "Galileu · TTL · 360° (2)",
+   "tipo": "video3d",
+   "produto": "lupas",
+   "grupo360": "lupa",
+   "idioma": "pt",
+   "novo": true,
+   "mb": 9.1,
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-2.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-2.mp4"
+  },
+  {
+   "titulo": "Galileu · TTL · 360° (3)",
+   "tipo": "video3d",
+   "produto": "lupas",
+   "grupo360": "lupa",
+   "idioma": "pt",
+   "novo": true,
+   "mb": 4.1,
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-3.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-3.mp4"
+  },
+  {
+   "titulo": "Ergo · TTL · 360° (2)",
+   "tipo": "video3d",
+   "produto": "lupas",
+   "grupo360": "lupa",
+   "idioma": "pt",
+   "novo": true,
+   "mb": 6.7,
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-ergo-video-2.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-ergo-video-2.mp4"
+  },
+  {
+   "titulo": "Ergo · TTL · 360° (3)",
+   "tipo": "video3d",
+   "produto": "lupas",
+   "grupo360": "lupa",
+   "idioma": "pt",
+   "novo": true,
+   "mb": 4.3,
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-ergo-video-3.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-ergo-video-3.mp4"
+  },
+  {
+   "titulo": "Galileu · Flip-up · 360° (2)",
+   "tipo": "video3d",
+   "produto": "lupas",
+   "grupo360": "lupa",
+   "idioma": "pt",
+   "novo": true,
+   "mb": 4.9,
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video-2.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video-2.mp4"
+  },
+  {
+   "titulo": "Galileu · Flip-up · 360° (3)",
+   "tipo": "video3d",
+   "produto": "lupas",
+   "grupo360": "lupa",
+   "idioma": "pt",
+   "novo": true,
+   "mb": 2.7,
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video-3.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video-3.mp4"
+  },
+  {
    "titulo": "Galileu · Flip-up · 360°",
    "tipo": "video3d",
    "produto": "lupas",
@@ -3517,5 +3583,5 @@ window.CVD = {
    "nome": "Demonstrações e casos clínicos"
   }
  ],
- "rev": 1793275841550
+ "rev": 1793361707920
 };

@@ -58,7 +58,8 @@ window.CVD_LUPAS = {
       "ver": "https://catalogodelupas.cvdentus.com.br/uploads/GALILEU_FLIP_360.mp4",
       "baixar": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video.mp4",
       "mb": 4.5
-     }
+     },
+     "videos": [{"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video-2.mp4", "mb": 4.9}, {"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video-3.mp4", "mb": 2.7}, {"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video.mp4", "mb": 4.5}]
     }
    ]
   },
@@ -83,7 +84,8 @@ window.CVD_LUPAS = {
       "ver": "https://catalogodelupas.cvdentus.com.br/uploads/ERGO_TTL_360.mp4",
       "baixar": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-ergo-video.mp4",
       "mb": 4.2
-     }
+     },
+     "videos": [{"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-ergo-video-2.mp4", "mb": 6.7}, {"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-ergo-video-3.mp4", "mb": 4.3}, {"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-ergo-video.mp4", "mb": 4.2}]
     },
     {
      "id": "ttl-kepler",
@@ -119,7 +121,8 @@ window.CVD_LUPAS = {
       "ver": "https://catalogodelupas.cvdentus.com.br/uploads/GALILEU_360.mp4",
       "baixar": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video.mp4",
       "mb": 2.9
-     }
+     },
+     "videos": [{"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-2.mp4", "mb": 9.1}, {"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-3.mp4", "mb": 4.1}, {"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video.mp4", "mb": 2.9}]
     }
    ]
   },
