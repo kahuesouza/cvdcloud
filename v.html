@@ -320,18 +320,11 @@ else {
           document.getElementById('pdf') && marca('abriu');
           document.getElementById('yt') && marca('abriu');
         };
-        /* registro automático e anônimo assim que o link abre (sem botão de autorização).
+        /* registro automático assim que o link abre: sem aviso e sem pedir autorização.
            Só não registra se o navegador estiver com "não rastrear" ligado. */
         if(navigator.doNotTrack === '1'){ nota('rastreio desligado ("não rastrear" do navegador)'); }
         else {
           iniciarRastreio();
-          const av = document.getElementById('aviso');
-          if(av && !lerCookie('cvdcloud_ciente')){
-            av.innerHTML = `Registramos de forma <b>anônima</b> o horário, o tipo de aparelho e o tempo nesta página. Não coletamos nome, telefone nem e-mail.
-              <div class="ac"><button id="aceitar">Ok</button></div>`;
-            av.hidden = false;
-            document.getElementById('aceitar').onclick = () => { gravarCookie('cvdcloud_ciente', '1', 400); av.hidden = true; };
-          }
         }
       }
     }
