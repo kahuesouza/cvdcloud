@@ -37,14 +37,36 @@ if(!CFG || !CFG.apiKey || CFG.apiKey === 'COLE_AQUI'){
         try{ await F.setDoc(F.doc(db, 'users', u.uid), { nome: txt(C.verificado.nome || u.email, 80), email: u.email, role: 'vendedor', status: 'aprovado', criadoEm: F.serverTimestamp() }); C.perfil = await lerPerfil(u); }catch(e){}
       }
     };
-    let acessoRegistrado = false;
+    /* "último acesso": grava ao entrar E toda vez que a pessoa volta ao app (celular retomado do segundo plano,
+       aba reaberta), no máximo a cada 5 min. Antes só gravava no carregamento da página, então quem deixava o
+       app aberto ficava com data velha. Falha de gravação não é mais engolida: vai para o console e para C.erroAcesso. */
+    let acessoRegistrado = false, tocouEm = 0, entrouEm = 0;
+    const tocarAcesso = (forcar) => {
+      if(C.estado() !== 'ok') return;
+      const agora = Date.now();
+      if(!forcar && agora - tocouEm < 5 * 60e3) return;
+      tocouEm = agora;
+      F.updateDoc(F.doc(db, 'users', C.user.uid), { ultimoAcesso: F.serverTimestamp() })
+        .then(() => { C.erroAcesso = null; })
+        .catch(e => { tocouEm = 0; C.erroAcesso = (e && e.code) || String(e); console.warn('[cvdcloud] não foi possível gravar o último acesso:', C.erroAcesso); });
+    };
+    C.tocarAcesso = tocarAcesso;
     const registrarEntrada = () => {
       if(C.estado() === 'ok' && !acessoRegistrado){
         acessoRegistrado = true;
-        F.updateDoc(F.doc(db, 'users', C.user.uid), { ultimoAcesso: F.serverTimestamp() }).catch(() => {});
+        tocarAcesso(true);
+        entrouEm = Date.now();
         C.registrar('entrar', 'app', 'Entrou no app', '');
       }
     };
+    const voltou = () => {
+      if(document.visibilityState === 'hidden' || C.estado() !== 'ok') return;
+      tocarAcesso();
+      if(Date.now() - entrouEm > 30 * 60e3){ entrouEm = Date.now(); C.registrar('entrar', 'app', 'Voltou ao app', ''); }   // nova sessão depois de 30 min fora
+    };
+    document.addEventListener('visibilitychange', voltou);
+    addEventListener('pageshow', voltou);
+    addEventListener('focus', voltou);
 
     A.onAuthStateChanged(auth, async u => {
       C.user = u; C.perfil = null; acessoRegistrado = false;
@@ -178,7 +200,8 @@ if(!CFG || !CFG.apiKey || CFG.apiKey === 'COLE_AQUI'){
         if(C.estado() !== 'ok') return;
         const k = tipo + '|' + chave + '|' + (extra || ''), agora = Date.now();
         C._ult = C._ult || {}; if(C._ult[k] && agora - C._ult[k] < 2500) return; C._ult[k] = agora;
-        F.addDoc(F.collection(db, 'eventos'), { uid: C.user.uid, tipo, chave: txt(chave, 64), titulo: txt(titulo, 140), extra: txt(extra || '', 100), criadoEm: F.serverTimestamp() }).catch(() => {});
+        tocarAcesso();   // qualquer atividade mantém o "último acesso" em dia
+        F.addDoc(F.collection(db, 'eventos'), { uid: C.user.uid, tipo, chave: txt(chave, 64), titulo: txt(titulo, 140), extra: txt(extra || '', 100), criadoEm: F.serverTimestamp() }).catch(e => { C.erroEventos = (e && e.code) || String(e); console.warn('[cvdcloud] evento não gravado:', C.erroEventos); });
       },
       async eventos(dias, limite){
         if(!C.admin()) throw new Error('Apenas administradores.');

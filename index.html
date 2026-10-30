@@ -1513,7 +1513,7 @@ function painelVendedor(uid){
 
 async function carregarPainel(el){
   const C = CONTA();
-  const [users, evs] = await Promise.all([C.todosUsuarios(), C.eventos(30, 3000)]);
+  const [users, evs] = await Promise.all([C.todosUsuarios(), C.eventos(30, 8000)]);
   const agora = Date.now(), seg = t => (t && (t.seconds ?? (t.toMillis ? t.toMillis()/1000 : 0))) || 0;
   const dia = 86400, nUser = new Map(users.map(u => [u.uid, u.nome]));
   const novos7 = users.filter(u => agora/1000 - seg(u.criadoEm) < 7*dia).length;

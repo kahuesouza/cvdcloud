@@ -299,13 +299,15 @@ else {
           const ref_ = doc(db, 'visitas', sid);
           const base = { compId: id, vid, retorno: jaTinha, disp: ap.disp, so: ap.so, nav: ap.nav, tz: (Intl.DateTimeFormat().resolvedOptions().timeZone || '').slice(0, 40), idioma: (navigator.language || '').slice(0, 12), tela: `${screen.width}x${screen.height}`.slice(0, 12), ref };
           let criado = false;
-          const criar = () => setDoc(ref_, { ...base, ...estado, criadoEm: serverTimestamp(), ultimoSinal: serverTimestamp() })
+          let criando = false;
+          const criar = () => { if(criando || criado) return; criando = true; return setDoc(ref_, { ...base, ...estado, criadoEm: serverTimestamp(), ultimoSinal: serverTimestamp() })
             .then(() => { criado = true; nota('registro de acesso: ok'); })
-            .catch(e => { nota('registro de acesso: ERRO ' + (e && e.code || e) + (e && e.code === 'permission-denied' ? ' (as regras do Firestore v8 ainda não foram publicadas?)' : '')); });
+            .catch(e => { nota('registro de acesso: ERRO ' + (e && e.code || e) + (e && e.code === 'permission-denied' ? ' (as regras do Firestore v8 ainda não foram publicadas?)' : '')); })
+            .finally(() => { criando = false; }); };
           criar();
           let sujo = false, ultimo = Date.now(), visivel = document.visibilityState === 'visible';
           const enviar = () => { if(!sujo || !criado) return; sujo = false; updateDoc(ref_, { seg: estado.seg, abriu: estado.abriu, baixou: estado.baixou, video: Math.round(estado.video), ultimoSinal: serverTimestamp() }).catch(e => nota('atualização: ERRO ' + (e && e.code || e))); };
-          setInterval(() => { const agora = Date.now(); if(visivel && estado.seg < 7200){ estado.seg += Math.min(6, Math.round((agora - ultimo) / 1000)); sujo = true; } ultimo = agora; if(!criado && !criar.tentou){ criar.tentou = true; criar(); } enviar(); }, 5000);
+          setInterval(() => { const agora = Date.now(); if(visivel && estado.seg < 7200){ estado.seg += Math.min(6, Math.round((agora - ultimo) / 1000)); sujo = true; } ultimo = agora; if(!criado) criar(); enviar(); }, 5000);
           document.addEventListener('visibilitychange', () => { visivel = document.visibilityState === 'visible'; ultimo = Date.now(); if(!visivel){ sujo = true; enviar(); } });
           addEventListener('pagehide', () => { sujo = true; enviar(); });
           const marca = campo => { if(!estado[campo]){ estado[campo] = true; sujo = true; enviar(); } };
@@ -318,16 +320,18 @@ else {
           document.getElementById('pdf') && marca('abriu');
           document.getElementById('yt') && marca('abriu');
         };
-        const decisao = lerCookie('cvdcloud_ciente');          // '1' aceitou · '0' recusou
-        if(navigator.doNotTrack === '1' || decisao === '0'){ nota('rastreio desligado (recusado ou "não rastrear" do navegador)'); }
-        else if(decisao === '1'){ iniciarRastreio(); }
+        /* registro automático e anônimo assim que o link abre (sem botão de autorização).
+           Só não registra se o navegador estiver com "não rastrear" ligado. */
+        if(navigator.doNotTrack === '1'){ nota('rastreio desligado ("não rastrear" do navegador)'); }
         else {
+          iniciarRastreio();
           const av = document.getElementById('aviso');
-          av.innerHTML = `<b>Posso registrar seu acesso?</b> Para a CVDentus entender o que interessa aos clientes, registramos de forma <b>anônima</b> o horário, o tipo de aparelho e o tempo que você fica nesta página. <b>Não</b> pedimos nome, telefone nem e-mail, e você pode recusar sem perder nada.
-            <div class="ac"><button id="aceitar">Aceitar</button><button id="recusar" class="sec2">Recusar</button></div>`;
-          av.hidden = false;
-          document.getElementById('aceitar').onclick = () => { gravarCookie('cvdcloud_ciente', '1', 400); av.hidden = true; iniciarRastreio(); };
-          document.getElementById('recusar').onclick = () => { gravarCookie('cvdcloud_ciente', '0', 400); gravarCookie('cvdcloud_v', '', 0); av.hidden = true; nota('rastreio recusado'); };
+          if(av && !lerCookie('cvdcloud_ciente')){
+            av.innerHTML = `Registramos de forma <b>anônima</b> o horário, o tipo de aparelho e o tempo nesta página. Não coletamos nome, telefone nem e-mail.
+              <div class="ac"><button id="aceitar">Ok</button></div>`;
+            av.hidden = false;
+            document.getElementById('aceitar').onclick = () => { gravarCookie('cvdcloud_ciente', '1', 400); av.hidden = true; };
+          }
         }
       }
     }
