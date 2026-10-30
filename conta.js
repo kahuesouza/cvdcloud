@@ -167,7 +167,14 @@ if(!CFG || !CFG.apiKey || CFG.apiKey === 'COLE_AQUI'){
         if(o.thumb) d.thumb = txt(o.thumb, 200);
         if(o.tipo) d.tipo = txt(o.tipo, 40);
         if(typeof o.mb === 'number') d.mb = o.mb;
-        const ref = await F.addDoc(F.collection(db, 'compartilhamentos'), d);
+        if(o.cliente) d.cliente = txt(o.cliente, 60);
+        let ref;
+        try{ ref = await F.addDoc(F.collection(db, 'compartilhamentos'), d); }
+        catch(e){
+          // regras do Firestore ainda sem o campo "cliente": gera o link mesmo assim (sem o nome) em vez de falhar
+          if(d.cliente && e && e.code === 'permission-denied'){ delete d.cliente; C.semCampoCliente = true; ref = await F.addDoc(F.collection(db, 'compartilhamentos'), d); }
+          else throw e;
+        }
         return ref.id;
       },
       async listarCompartilhamentos(dias, limite){

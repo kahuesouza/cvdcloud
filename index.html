@@ -1580,7 +1580,7 @@ async function carregarAdmin(aba){
         ${(() => { const ehMaster = (window.CVD_ADMINS || []).includes((u.email || '').toLowerCase()); if(u.uid === C.user.uid || ehMaster) return ''; const nm = esc(u.nome); return u.role === 'admin' ? `<div class="acoes-c"><button data-papel="${esc(u.uid)}:vendedor" data-nome="${nm}">Remover admin</button></div>` : `<div class="acoes-c">${u.status !== 'bloqueado' ? `<button class="ruim" data-usr="${esc(u.uid)}:bloqueado">Bloquear</button>` : `<button class="ok" data-usr="${esc(u.uid)}:aprovado">Liberar de novo</button>`}<button class="ok" data-papel="${esc(u.uid)}:admin" data-nome="${nm}">Tornar admin</button><button class="ruim" data-excluir-conta="${esc(u.uid)}" data-email="${esc(u.email)}" data-nome="${nm}">Excluir conta</button></div>`; })()}</div>`).join('') : vazio('Ninguém por aqui.'));
     } else if(aba === 'links'){
       const l = await C.listarCompartilhamentos(); const us = new Map((await C.todosUsuarios()).map(u => [u.uid, u.nome]));
-      el.innerHTML = `<p style="color:var(--sub);font-size:13.5px;margin:12px 0 0">Links enviados a clientes. Excluir derruba o link na hora.</p>` + (l.length ? l.map(c => `<div class="cartao-c anima"><b style="font-size:14px">${esc(c.titulo)}</b><div class="quem" style="margin-top:2px">${esc(us.get(c.criadoPor) || 'Equipe')} · ${fmtData(c.criadoEm)}${c.tipo ? ' · ' + esc(c.tipo) : ''}</div><div class="acoes-c"><button data-abrir-link="${esc(c.id)}">Abrir</button><button class="ruim" data-excluir-link="${esc(c.id)}">Excluir link</button></div></div>`).join('') : vazio('Nenhum link compartilhado ainda.'));
+      el.innerHTML = `<p style="color:var(--sub);font-size:13.5px;margin:12px 0 0">Links enviados a clientes. Excluir derruba o link na hora.</p>` + (l.length ? l.map(c => `<div class="cartao-c anima"><b style="font-size:14px">${esc(c.titulo)}</b><div class="quem" style="margin-top:2px">${esc(us.get(c.criadoPor) || 'Equipe')}${c.cliente ? ' → ' + esc(c.cliente) : ''} · ${fmtData(c.criadoEm)}${c.tipo ? ' · ' + esc(c.tipo) : ''}</div><div class="acoes-c"><button data-abrir-link="${esc(c.id)}">Abrir</button><button class="ruim" data-excluir-link="${esc(c.id)}">Excluir link</button></div></div>`).join('') : vazio('Nenhum link compartilhado ainda.'));
     } else if(aba === 'catalogo'){
       const orig = window.__origemCatalogo === 'servidor' ? 'do servidor protegido (Firestore)' : window.__origemCatalogo === 'arquivos' ? 'dos arquivos do app (modo de preparação)' : 'de nenhuma fonte';
       el.innerHTML = `<div class="nota anima" style="--i:0">${ic('info')}<div><b>Fonte atual do catálogo</b>O app está lendo ${orig}. ${D ? D.materiais.length + ' materiais, ' + D.procedimentos.length + ' procedimentos.' : ''}</div></div>
@@ -1780,12 +1780,28 @@ const fichaPonta = (cod, eq) => `${FICHA_BASE}?ficha=ponta&c=${encodeURIComponen
 const fichaEquip = id => `${FICHA_BASE}?ficha=equip&p=${encodeURIComponent(id)}`;
 const siteEmpresaUrl = u => { try{ const h = new URL(u).hostname; return /(^|\.)cvdentus\.com\.br$/.test(h) && h !== 'cloud.cvdentus.com.br'; }catch(e){ return false; } };
 const btnComp = (titulo, url, baixarUrl, tipo, mb, rot, th) => `<button class="btn prim" data-comp-gen="${esc(JSON.stringify({ t: titulo, u: url, d: baixarUrl || '', tp: tipo || '', mb: typeof mb === 'number' ? mb : null, th: th || '' }))}">${ic('share')}${rot || 'Compartilhar'}</button>`;
+/* Pergunta opcional "para quem é este link?": o nome fica no link e aparece só para administradores nos relatórios. null = cancelou. */
+function pedirCliente(){
+  return new Promise(res => {
+    let fim = false; const fechar = v => { if(fim) return; fim = true; res(v); };
+    abrirPainel(`<h3>Para quem é este link?</h3><p class="sub">Opcional. O nome aparece só para os administradores, nos relatórios de acesso.</p>
+      <form class="form" data-cli-form novalidate><label>Cliente ou clínica<input name="cliente" maxlength="60" autocomplete="off" placeholder="Ex.: Clínica Sorriso"></label>
+      <div class="botoes"><button class="btn prim" type="submit">Gerar link</button><button class="btn sec" type="button" data-cli-pular>Gerar sem nome</button></div></form>`);
+    const f = painel.querySelector('[data-cli-form]'), inp = f.elements.cliente;
+    setTimeout(() => { try{ inp.focus(); }catch(e){} }, 250);
+    f.addEventListener('submit', e => { e.preventDefault(); const v = inp.value.replace(/\s+/g, ' ').trim().slice(0, 60); fecharPainel(); fechar(v); });
+    painel.querySelector('[data-cli-pular]').addEventListener('click', () => { fecharPainel(); fechar(''); });
+    const obs = new MutationObserver(() => { if(!painel.classList.contains('on')){ obs.disconnect(); fechar(null); } });   // fechou sem escolher = cancelou
+    obs.observe(painel, { attributes: true, attributeFilter: ['class'] });
+  });
+}
 async function compartilharGenerico(o){
   const C = CONTA();
   track('compartilhar', 'g' + String(o.u).slice(-40), o.t, '');
   if(C && C.configurado && C.aprovado()){
+    const cli = await pedirCliente(); if(cli === null) return;
     try{
-      const id = await C.criarCompartilhamento({ titulo: o.t, url: o.u, baixarUrl: o.d || undefined, thumb: o.th || undefined, tipo: o.tp || undefined, mb: typeof o.mb === 'number' ? o.mb : undefined });
+      const id = await C.criarCompartilhamento({ titulo: o.t, url: o.u, baixarUrl: o.d || undefined, thumb: o.th || undefined, tipo: o.tp || undefined, mb: typeof o.mb === 'number' ? o.mb : undefined, cliente: cli || undefined });
       await enviarLink(o.t, new URL('v.html', location.href.split('#')[0]).href + '#' + id);
     }catch(e){ toast('Não foi possível gerar o link agora'); }
     return;
@@ -1798,11 +1814,13 @@ async function compartilhar(x){
   track('compartilhar', chaveItem(x), x.titulo, '');
   // o link abre o material numa página do cvdcloud
   if(C && C.configurado && C.aprovado()){
+    const cli = await pedirCliente(); if(cli === null) return;
     try{
       const dl = linkDownload(x), t = THUMBS[x.url], tam = tamDownload(x);
       const urlCli = siteEmpresaUrl(x.url) && PROD[x.produto] ? fichaEquip(x.produto) : (x.local ? absUrl(x.local) : x.url);
-      const id = await C.criarCompartilhamento({ titulo: nome, url: urlCli, baixarUrl: dl ? absUrl(dl) : undefined, thumb: t ? 'img/t/' + t[0] : undefined, tipo: x.esp ? 'Vídeo de procedimento' : (TIPOS[x.tipo] || {}).nome, mb: typeof tam === 'number' ? tam : undefined });
+      const id = await C.criarCompartilhamento({ titulo: nome, url: urlCli, baixarUrl: dl ? absUrl(dl) : undefined, thumb: t ? 'img/t/' + t[0] : undefined, tipo: x.esp ? 'Vídeo de procedimento' : (TIPOS[x.tipo] || {}).nome, mb: typeof tam === 'number' ? tam : undefined, cliente: cli || undefined });
       await enviarLink(nome, new URL('v.html', location.href.split('#')[0]).href + '#' + id);
+      if(cli && C.semCampoCliente) toast('Link copiado, mas o nome do cliente não foi salvo (regras do Firebase desatualizadas)');
     }catch(e){ toast('Não foi possível gerar o link agora'); }
     return;
   }
