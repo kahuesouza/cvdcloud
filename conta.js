@@ -56,6 +56,7 @@ if(!CFG || !CFG.apiKey || CFG.apiKey === 'COLE_AQUI'){
         acessoRegistrado = true;
         tocarAcesso(true);
         entrouEm = Date.now();
+        try{ localStorage.setItem('cvd_equipe', '1'); }catch(e){}   // marca este navegador como do time: visitas de link de cliente feitas aqui não entram nas estatísticas
         C.registrar('entrar', 'app', 'Entrou no app', '');
       }
     };
@@ -296,6 +297,38 @@ if(!CFG || !CFG.apiKey || CFG.apiKey === 'COLE_AQUI'){
       async moderarComentario(id, status, nota){ if(!C.admin()) throw new Error('Apenas administradores.'); await F.updateDoc(F.doc(db, 'comentarios', id), { status, revisadoPor: txt(C.perfil ? C.perfil.nome : C.user.email, 80), revisadoEm: F.serverTimestamp(), notaAdmin: txt(nota || '', 300) }); },
       async excluirComentario(id){ if(!C.admin()) throw new Error('Apenas administradores.'); await F.deleteDoc(F.doc(db, 'comentarios', id)); },
     });
+
+    /* ---------- cache de leitura do painel (5 min, só em memória) ----------
+       Cada aba do painel lia milhares de registros a cada abertura; no plano gratuito do Firebase
+       (50 mil leituras/dia) isso estoura rápido. Janelas de tempo são agrupadas de 5 em 5 min para a chave repetir. */
+    const cacheLeitura = new Map(), TTL = 5 * 60e3;
+    const chaveArg = a => (typeof a === 'number' && a > 1e11) ? Math.floor(a / TTL) : a;
+    ['eventosEntre', 'eventos', 'visitas', 'todosUsuarios', 'listarCompartilhamentos'].forEach(nome => {
+      const orig = C[nome]; if(typeof orig !== 'function') return;
+      C[nome] = (...args) => {
+        const k = nome + '|' + JSON.stringify(args.map(chaveArg)), hit = cacheLeitura.get(k);
+        if(hit && Date.now() - hit.t < TTL) return hit.p;
+        const p = orig(...args); cacheLeitura.set(k, { t: Date.now(), p });
+        p.catch(() => cacheLeitura.delete(k));
+        return p;
+      };
+    });
+    C.limparCache = () => cacheLeitura.clear();
+    // qualquer alteração feita pelo admin (bloquear, excluir, moderar...) invalida o cache
+    Object.keys(C).filter(n => typeof C[n] === 'function' && /^(mudar|marcar|excluir|criar|moderar|liberar|bloquear|definir|verificar|reenviar)/.test(n) && n !== 'criarCompartilhamento').forEach(n => {
+      const f = C[n]; C[n] = async (...a) => { const r = await f(...a); cacheLeitura.clear(); return r; };
+    });
+
+    /* ---------- saúde da coleta de dados (só admin) ---------- */
+    C.saudeDados = async () => {
+      if(!C.admin()) throw new Error('Apenas administradores.');
+      const agora = Date.now(), s = { erroAcesso: C.erroAcesso || null, erroEventos: C.erroEventos || null };
+      const ultimo = async colecao => { try{ const r = await F.getDocs(F.query(F.collection(db, colecao), F.orderBy('criadoEm', 'desc'), F.limit(1))); return r.empty ? null : r.docs[0].data().criadoEm; }catch(e){ s['erro_' + colecao] = e.code || String(e); return undefined; } };
+      const contar = async colecao => { try{ return await C.contarEntre(colecao, agora - 48 * 36e5, agora + 60e3); }catch(e){ s['erro_' + colecao] = e.code || String(e); return null; } };
+      [s.ultimaVisita, s.ultimoEvento, s.env48, s.vis48] = await Promise.all([ultimo('visitas'), ultimo('eventos'), contar('compartilhamentos'), contar('visitas')]);
+      return s;
+    };
+
   }catch(e){
     console.error('Firebase não carregou', e);
     window.CVDConta = { configurado: true, indisponivel: true, resolvido: true, pronto: Promise.resolve(false), ouvintes: new Set(), dominioOk, estado: () => 'indisponivel' };

@@ -1433,6 +1433,7 @@ function telaAdmin(aba){
   const sts = aba === 'comentarios' ? [['pendente','Novos'],['aprovado','Resolvidos'],['rejeitado','Descartados']] : aba === 'usuarios' ? [['aprovado','Ativos'],['bloqueado','Bloqueados']] : [];
   const corpo = largo('Administração', 'Uso do app, equipe e moderação.')
     + abas(ABAS_ADMIN.map(x => x.id === 'usuarios' && novasContas ? { ...x, n: novasContas } : x.id === 'comentarios' && novosComentarios ? { ...x, n: novosComentarios } : x), aba, '#/admin')
+    + (['painel', 'desempenho', 'semana', 'clientes'].includes(aba) ? `<div class="chips-f"><button data-admin-atualizar>Atualizar dados</button></div>` : '')
     + (sts.length ? `<div class="chips-f">${sts.map(([k,n]) => `<button class="${filtroAdmin[aba] === k ? 'on' : ''}" data-filtro="${aba}:${k}">${n}</button>`).join('')}</div>` : '')
     + `<div id="admin-lista">${vazio('Carregando…')}</div>`;
   return { ...base, corpo, depois: () => carregarAdmin(aba) };
@@ -1546,10 +1547,26 @@ async function carregarPainel(el){
     ${bloqueados ? `<p style="color:var(--sub);font-size:12.5px;margin:12px 0 0">${bloqueados} pessoa(s) bloqueada(s).</p>` : ''}
     <p style="color:var(--fraco);font-size:12px;line-height:1.5;margin:16px 0 0">Baseado nos últimos 3.000 eventos registrados. Cada abertura, download, compartilhamento, busca e visita a uma área vira um evento.</p>`;
 }
+/* "Saúde dos dados": mostra se a coleta está chegando ao banco (erros de regra aparecem aqui, não só no console) */
+async function cartaoSaude(el){
+  const C = CONTA(); if(!C || !C.saudeDados) return;
+  let s; try{ s = await C.saudeDados(); }catch(e){ return; }
+  const ha = t => { const x = haQuanto(t); return x === 'nunca' ? 'nenhum registro' : x === 'agora' ? 'agora' : 'há ' + x; };
+  const prob = [];
+  if(s.erro_visitas) prob.push('Não consegui ler as visitas de clientes (' + s.erro_visitas + '). Confira as regras do Firestore.');
+  if(s.erro_eventos) prob.push('Não consegui ler os eventos dos vendedores (' + s.erro_eventos + ').');
+  if(s.erroAcesso) prob.push('O seu último acesso não foi gravado (' + s.erroAcesso + '). Provável causa: regras do Firestore desatualizadas.');
+  if(s.erroEventos) prob.push('Seus eventos de uso não foram gravados (' + s.erroEventos + ').');
+  if(s.env48 > 0 && s.vis48 === 0) prob.push(s.env48 + ' link' + (s.env48 > 1 ? 's' : '') + ' enviado' + (s.env48 > 1 ? 's' : '') + ' nas últimas 48 h e nenhuma visita registrada. Pode ser normal, mas se os clientes dizem ter aberto, as regras da coleção "visitas" não estão publicadas.');
+  const html = `<div class="cartao-c anima" style="${prob.length ? 'border-color:var(--acento)' : ''}"><b style="font-size:14.5px">Saúde dos dados${prob.length ? ' · atenção' : ' · ok'}</b>
+    <p style="color:var(--sub);font-size:13.5px;margin:6px 0 0;line-height:1.6">Último evento de vendedor: ${ha(s.ultimoEvento)}<br>Última visita de cliente: ${ha(s.ultimaVisita)}<br>Últimas 48 h: ${s.env48 ?? '?'} links enviados · ${s.vis48 ?? '?'} visitas</p>
+    ${prob.length ? `<p style="color:var(--erro);font-size:13.5px;margin:8px 0 0;line-height:1.5">${prob.map(esc).join('<br>')}</p>` : ''}</div>`;
+  if(document.getElementById('admin-lista') === el) el.insertAdjacentHTML('afterbegin', html);
+}
 async function carregarAdmin(aba){
   const el = document.getElementById('admin-lista'); if(!el) return; const C = CONTA(), st = filtroAdmin[aba];
   try{
-    if(aba === 'painel'){ await carregarPainel(el); }
+    if(aba === 'painel'){ await carregarPainel(el); cartaoSaude(el); }
     else if(aba === 'desempenho'){ await carregarDesempenho(el); }
     else if(aba === 'semana'){ await carregarSemana(el); }
     else if(aba === 'clientes'){ await carregarClientes(el); }
@@ -1902,6 +1919,13 @@ document.addEventListener('click', e=>{
   const exc = t.closest('[data-excluir-conta]'); if(exc){ if(!confirm('Excluir a conta de ' + exc.dataset.nome + ' (' + exc.dataset.email + ')? A pessoa perde o acesso na hora. Para liberar de novo, crie a conta outra vez.')) return; CONTA().excluirUsuario(exc.dataset.excluirConta, exc.dataset.email).then(() => { toast('Conta excluída'); carregarAdmin('usuarios'); }).catch(e => toast('Erro: ' + e.message)); return; }
   const us = t.closest('[data-usr]'); if(us){ const [uid, st] = us.dataset.usr.split(':'); CONTA().mudarUsuario(uid, st).then(() => { toast('Atualizado'); carregarAdmin('usuarios'); }).catch(e => toast('Erro: ' + e.message)); return; }
   const fv = t.closest('[data-fav]'); if(fv){ const id = fv.dataset.fav; if(favs.has(id)){ favs.delete(id); toast('Removido dos salvos'); } else { favs.add(id); toast('Salvo'); } salvarFavs(); fecharPainel(); if(location.hash==='#/salvos') render(); return; }
+  const atl = t.closest('[data-admin-atualizar]');
+  if(atl){
+    const C = CONTA(); if(C && C.limparCache) C.limparCache();
+    const aba = (location.hash.split('/')[2] || 'painel').split('?')[0], el = document.getElementById('admin-lista');
+    if(el){ el.innerHTML = vazio('Atualizando…'); carregarAdmin(aba); toast('Dados atualizados'); }
+    return;
+  }
   const dl = t.closest('[data-dl]');
   if(dl){
     const mb = parseFloat(dl.dataset.mb||0);

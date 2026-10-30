@@ -322,7 +322,9 @@ else {
         };
         /* registro automático assim que o link abre: sem aviso e sem pedir autorização.
            Só não registra se o navegador estiver com "não rastrear" ligado. */
+        const ehEquipe = (() => { try{ return localStorage.getItem('cvd_equipe') === '1' && !/[?&]cliente=1/.test(location.search); }catch(e){ return false; } })();
         if(navigator.doNotTrack === '1'){ nota('rastreio desligado ("não rastrear" do navegador)'); }
+        else if(ehEquipe){ nota('este navegador é do time (já entrou no app): visita não registrada. Use ?cliente=1 para testar como cliente.'); }
         else {
           iniciarRastreio();
         }
