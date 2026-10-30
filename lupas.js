@@ -122,7 +122,7 @@ window.CVD_LUPAS = {
       "baixar": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video.mp4",
       "mb": 2.9
      },
-     "videos": [{"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-2.mp4", "mb": 9.1}, {"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-3.mp4", "mb": 4.1}, {"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video.mp4", "mb": 2.9}]
+     "videos": [{"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-2.mp4", "mb": 9.1}, {"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-4.mp4", "mb": 6.8}, {"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-5.mp4", "mb": 5.9}, {"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video.mp4", "mb": 2.9}]
     }
    ]
   },

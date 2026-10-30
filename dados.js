@@ -93,6 +93,28 @@ window.CVD = {
  ],
  "materiais": [
   {
+   "titulo": "Galileu · TTL · 360° (3)",
+   "tipo": "video3d",
+   "produto": "lupas",
+   "grupo360": "lupa",
+   "idioma": "pt",
+   "novo": true,
+   "mb": 6.8,
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-4.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-4.mp4"
+  },
+  {
+   "titulo": "Galileu · TTL · 360° (4)",
+   "tipo": "video3d",
+   "produto": "lupas",
+   "grupo360": "lupa",
+   "idioma": "pt",
+   "novo": true,
+   "mb": 5.9,
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-5.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-5.mp4"
+  },
+  {
    "titulo": "Galileu · TTL · 360° (2)",
    "tipo": "video3d",
    "produto": "lupas",
@@ -102,17 +124,6 @@ window.CVD = {
    "mb": 9.1,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-2.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-2.mp4"
-  },
-  {
-   "titulo": "Galileu · TTL · 360° (3)",
-   "tipo": "video3d",
-   "produto": "lupas",
-   "grupo360": "lupa",
-   "idioma": "pt",
-   "novo": true,
-   "mb": 4.1,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-3.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-3.mp4"
   },
   {
    "titulo": "Ergo · TTL · 360° (2)",
@@ -3583,5 +3594,5 @@ window.CVD = {
    "nome": "Demonstrações e casos clínicos"
   }
  ],
- "rev": 1793361707920
+ "rev": 1793363949783
 };
