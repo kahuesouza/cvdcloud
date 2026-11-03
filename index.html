@@ -1637,7 +1637,7 @@ function atualizarDicasDoItem(x){
 /* ===================== Acesso obrigatório (login) e carregamento do catálogo ===================== */
 const gateEl = document.getElementById('gate');
 let appIniciado = false, carregandoCatalogo = false, modoGate = 'entrar';
-const VERSAO_APP = 'v43';
+const VERSAO_APP = 'v123';
 function gateHtml(corpo){ return `<div class="gate-in"><img class="logo-g" src="img/logo.svg" alt="cvdcloud">${corpo}</div>`; }
 const LOADER = '<div class="loader-linha" role="status" aria-label="Carregando"></div>';
 function gateMostrar(html){ document.body.classList.add('gate-on'); gateEl.innerHTML = gateHtml(html); }
@@ -1681,7 +1681,12 @@ async function carregarEIniciar(){
     try{ cat = await C.carregarCatalogo(); }catch(e){}
     // usa sempre a cópia mais nova: a do servidor (Firestore) ou os arquivos publicados com o app
     await carregarEstatico(); window.__origemCatalogo = 'arquivos';
-    if(cat && cat.dados && (cat.dados.rev || 0) >= ((window.CVD && window.CVD.rev) || 0)){ aplicarCatalogo(cat); window.__origemCatalogo = 'servidor'; }
+    const lupasArq = window.CVD_LUPAS;
+    // o servidor só vence se for ESTRITAMENTE mais novo (em empate, a cópia do servidor pode ser um retrato antigo)
+    if(cat && cat.dados && (cat.dados.rev || 0) > ((window.CVD && window.CVD.rev) || 0)){ aplicarCatalogo(cat); window.__origemCatalogo = 'servidor'; }
+    // lupas (fotos e vídeos 360°): o arquivo publicado com o app vence a cópia do servidor, a menos que ela tenha selo mais novo
+    if(lupasArq && (!window.CVD_LUPAS || (window.CVD_LUPAS.rev || 0) < (lupasArq.rev || 0))) window.CVD_LUPAS = lupasArq;
+    console.info('[cvdcloud] catálogo:', window.__origemCatalogo, '· dados', (window.CVD || {}).rev, '· lupas', (window.CVD_LUPAS || {}).rev);
     try{ OCULTOS = (cat && cat.ocultos && cat.ocultos.urls) ? cat.ocultos : await C.lerOcultos(); if(!OCULTOS.titulos) OCULTOS.titulos = {}; }catch(e){}
     prepararDados(); appIniciado = true; carregandoCatalogo = false; gateFechar(); render();
   }catch(e){
