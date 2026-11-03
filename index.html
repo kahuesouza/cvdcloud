@@ -748,26 +748,38 @@ function telaModelos(){
   return html;
 }
 const MFOTO_BASE = 'https://cloud.cvdentus.com.br/arquivos/modelos/';
-const mfotoUrl = (id, i) => MFOTO_BASE + id + '_' + String(i).padStart(2, '0') + '.jpg';
+const mfotoUrl = (id, i) => MFOTO_BASE + id + '_' + String(i).padStart(2, '0') + '.jpg';          // foto completa (download / compartilhar)
+const mfotoVista = (id, i) => 'img/modelos/v/' + id + '_' + String(i).padStart(2, '0') + '.webp';      // versão leve para ver no celular (~18 KB)
+const mfotoMini = (id, i) => 'img/modelos/t/' + id + '_' + String(i).padStart(2, '0') + '.webp';       // miniatura (~1 KB)
+const mfCache = new Map();
+function mfPre(id, i, n){ i = ((i - 1 + n) % n) + 1; const u = mfotoVista(id, i); if(!mfCache.has(u)){ const im = new Image(); im.decoding = 'async'; im.src = u; mfCache.set(u, im); } return mfCache.get(u); }
 function painelModelo(id){
   const x = (LUPAS.modelos||[]).find(m=>m.id===id); if(!x) return;
   const sub = [x.linha, x.tipo].filter(Boolean).join(' · ');
   const n = x.n || 1, fotos = Array.from({ length: n }, (_, k) => k + 1);
   const nome1 = `Lupa ${x.codigo} · foto 1`;
-  abrirPainel(`<div class="img-g" style="background:#fff"><img id="mf-img" src="${esc(mfotoUrl(id, 1))}" alt="${esc(x.codigo)}" onerror="this.onerror=null;this.src='img/modelos/${esc(x.id)}.webp'"></div>
+  abrirPainel(`<div class="img-g" style="background:#fff"><img id="mf-img" src="${esc(mfotoVista(id, 1))}" alt="${esc(x.codigo)}" decoding="async" onerror="this.onerror=function(){this.onerror=null;this.src='img/modelos/${esc(x.id)}.webp'};this.src='${esc(mfotoUrl(id, 1))}'"></div>
     <h3 style="margin-top:14px">${esc(x.codigo)}</h3><p class="sub">${esc(sub)}${x.mags?' · '+esc(x.mags):''}</p>
     <p class="sub" id="mf-leg" style="margin-top:2px">Foto 1 de ${n} · toque em uma miniatura para ver e baixar só ela</p>
-    <div class="mf-tiras" role="list">${fotos.map(i => `<button class="mf-mini${i === 1 ? ' on' : ''}" role="listitem" data-mfoto="${esc(id)}:${i}" aria-label="Foto ${i}"><img loading="lazy" alt="" src="${esc(mfotoUrl(id, i))}"></button>`).join('')}</div>
+    <div class="mf-tiras" role="list">${fotos.map(i => `<button class="mf-mini${i === 1 ? ' on' : ''}" role="listitem" data-mfoto="${esc(id)}:${i}" aria-label="Foto ${i}"><img loading="lazy" decoding="async" alt="" src="${esc(mfotoMini(id, i))}" onerror="this.onerror=null;this.src='${esc(mfotoUrl(id, i))}'"></button>`).join('')}</div>
     <div class="botoes">
       <a class="btn prim" id="mf-dl" href="${esc(mfotoUrl(id, 1))}" download="lupa-${esc(id)}-01.jpg" data-dl="modelo-foto" data-mb="0.1">${ic('download')}Baixar esta foto</a>
       <a class="btn sec" href="${esc(x.zip)}" download data-dl="modelo" data-mb="${x.mb}">${ic('download')}Baixar todas as ${n} fotos <small>${fmtTam(x.mb)}</small></a>
       <button class="btn sec" id="mf-comp" data-comp-gen="${esc(JSON.stringify({ t: nome1, u: mfotoUrl(id, 1), d: mfotoUrl(id, 1), tp: 'Foto', mb: 0.1 }))}">${ic('share')}Compartilhar esta foto</button>
     </div>`);
+  if(n > 1){ mfPre(id, 2, n); mfPre(id, n, n); }
 }
 function trocarFotoModelo(id, i){
   const x = (LUPAS.modelos||[]).find(m=>m.id===id); if(!x) return;
   const u = mfotoUrl(id, i), nn = String(i).padStart(2, '0');
-  const img = document.getElementById('mf-img'); if(img){ img.onerror = null; img.src = u; }
+  const img = document.getElementById('mf-img');
+  if(img){
+    const n = x.n || 1, im = mfPre(id, i, n);
+    img.dataset.atual = i;   // se o vendedor já passou para outra foto, esta não sobrescreve
+    const mostrar = () => { if(+img.dataset.atual === i){ img.onerror = () => { img.onerror = null; img.src = u; }; img.src = mfotoVista(id, i); } };
+    if(im.complete && im.naturalWidth) mostrar(); else if(im.decode) im.decode().then(mostrar, mostrar); else im.onload = mostrar;
+    if(n > 1){ mfPre(id, i + 1, n); mfPre(id, i - 1, n); }
+  }
   const dl = document.getElementById('mf-dl'); if(dl){ dl.href = u; dl.setAttribute('download', `lupa-${id}-${nn}.jpg`); }
   const cp = document.getElementById('mf-comp'); if(cp) cp.dataset.compGen = JSON.stringify({ t: `Lupa ${x.codigo} · foto ${i}`, u, d: u, tp: 'Foto', mb: 0.1 });
   const lg = document.getElementById('mf-leg'); if(lg) lg.textContent = `Foto ${i} de ${x.n} · toque em uma miniatura para ver e baixar só ela`;
