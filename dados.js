@@ -177,8 +177,8 @@ window.CVD = {
    "idioma": "pt",
    "novo": true,
    "mb": 5.6,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-360-ergo-flip.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-360-ergo-flip.mp4"
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-ergo-video-2.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-ergo-video-2.mp4"
   },
   {
    "titulo": "Kepler · Flip-up · 360°",
@@ -187,9 +187,9 @@ window.CVD = {
    "grupo360": "lupa",
    "idioma": "pt",
    "novo": true,
-   "mb": 3.3,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-360-kepler-flip.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-360-kepler-flip.mp4"
+   "mb": 4.5,
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-kepler-video-2.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-kepler-video-2.mp4"
   },
   {
    "titulo": "Kepler · TTL · 360°",
@@ -3589,5 +3589,5 @@ window.CVD = {
    "nome": "Demonstrações e casos clínicos"
   }
  ],
- "rev": 1793719066350
+ "rev": 1793733429939
 };

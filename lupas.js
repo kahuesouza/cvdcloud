@@ -1,6 +1,6 @@
 /* Lupas, fotóforos e armações (fonte: catalogodelupas.cvdentus.com.br). Fotos em .zip e vídeo 360° no release "lupas" de cvdentus-arquivos. */
 window.CVD_LUPAS = {
- "rev": 1793719066350,
+ "rev": 1793733429939,
  "grupos": [
   {
    "id": "flip",
@@ -20,8 +20,7 @@ window.CVD_LUPAS = {
       "dir": "arquivos/lupas/flip-ergo/"
      },
      "video": {
-      "ver": "https://catalogodelupas.cvdentus.com.br/uploads/ERGO_FLIP_360.mp4",
-      "baixar": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-ergo-video.mp4",
+      "baixar": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-ergo-video-2.mp4",
       "mb": 5.6
      }
     },
@@ -38,9 +37,8 @@ window.CVD_LUPAS = {
       "dir": "arquivos/lupas/flip-kepler/"
      },
      "video": {
-      "ver": "https://catalogodelupas.cvdentus.com.br/uploads/KEPLER_FLIP_360.mp4",
-      "baixar": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-kepler-video.mp4",
-      "mb": 3.3
+      "baixar": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-kepler-video-2.mp4",
+      "mb": 4.5
      }
     },
     {
