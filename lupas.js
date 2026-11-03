@@ -1,6 +1,6 @@
 /* Lupas, fotóforos e armações (fonte: catalogodelupas.cvdentus.com.br). Fotos em .zip e vídeo 360° no release "lupas" de cvdentus-arquivos. */
 window.CVD_LUPAS = {
- "rev": 1793715945653,
+ "rev": 1793719066350,
  "grupos": [
   {
    "id": "flip",
@@ -56,11 +56,10 @@ window.CVD_LUPAS = {
       "dir": "arquivos/lupas/flip-galileu/"
      },
      "video": {
-      "ver": "https://catalogodelupas.cvdentus.com.br/uploads/GALILEU_FLIP_360.mp4",
-      "baixar": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video.mp4",
-      "mb": 4.5
+      "baixar": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video-2.mp4",
+      "mb": 4.9
      },
-     "videos": [{"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video-2.mp4", "mb": 4.9}, {"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video-3.mp4", "mb": 2.7}, {"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video.mp4", "mb": 4.5}]
+     "videos": [{"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video-2.mp4", "mb": 4.9}, {"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video-3.mp4", "mb": 2.7}]
     }
    ]
   },
@@ -82,11 +81,10 @@ window.CVD_LUPAS = {
       "dir": "arquivos/lupas/ttl-ergo/"
      },
      "video": {
-      "ver": "https://catalogodelupas.cvdentus.com.br/uploads/ERGO_TTL_360.mp4",
-      "baixar": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-ergo-video.mp4",
-      "mb": 4.2
+      "baixar": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-ergo-video-2.mp4",
+      "mb": 6.7
      },
-     "videos": [{"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-ergo-video-2.mp4", "mb": 6.7}, {"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-ergo-video-3.mp4", "mb": 4.3}, {"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-ergo-video.mp4", "mb": 4.2}]
+     "videos": [{"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-ergo-video-2.mp4", "mb": 6.7}, {"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-ergo-video-3.mp4", "mb": 4.3}]
     },
     {
      "id": "ttl-kepler",
@@ -119,11 +117,10 @@ window.CVD_LUPAS = {
       "dir": "arquivos/lupas/ttl-galileu/"
      },
      "video": {
-      "ver": "https://catalogodelupas.cvdentus.com.br/uploads/GALILEU_360.mp4",
-      "baixar": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video.mp4",
-      "mb": 2.9
+      "baixar": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-2.mp4",
+      "mb": 9.1
      },
-     "videos": [{"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-2.mp4", "mb": 9.1}, {"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-4.mp4", "mb": 6.8}, {"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-5.mp4", "mb": 5.9}, {"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video.mp4", "mb": 2.9}]
+     "videos": [{"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-2.mp4", "mb": 9.1}, {"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-4.mp4", "mb": 6.8}, {"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-5.mp4", "mb": 5.9}]
     }
    ]
   },
