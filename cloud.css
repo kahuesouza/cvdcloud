@@ -366,3 +366,6 @@ body{padding-bottom:calc(var(--nav-h) + env(safe-area-inset-bottom) + 14px)}
 .lf-prev{left:10px}.lf-prev svg{transform:rotate(180deg)}
 .lf-next{right:10px}
 .lf-cont{position:absolute;right:12px;bottom:12px;padding:4px 10px;border-radius:999px;background:rgba(0,0,0,.55);color:#fff;font-size:12px;font-weight:600;letter-spacing:.02em}
+.painel .img-g.lf-grande{touch-action:pan-y;-webkit-user-select:none;user-select:none}
+.painel .img-g.lf-grande img{-webkit-user-drag:none;user-drag:none}
+.painel{overscroll-behavior:contain}

@@ -193,7 +193,7 @@ details.outros[open] summary svg{transform:rotate(90deg)}
 /* pontas */
 .ponta{display:flex;gap:14px;padding:16px 0;border-top:1px solid var(--linha)}
 .ponta:first-child{border-top:0}
-.ponta .foto{flex:none;width:68px;height:88px;border-radius:12px;background:#fff;border:1px solid var(--linha);display:grid;place-items:center;overflow:hidden}
+.ponta .foto{cursor:pointer;flex:none;width:68px;height:88px;border-radius:12px;background:#fff;border:1px solid var(--linha);display:grid;place-items:center;overflow:hidden}
 .ponta .foto img{width:100%;height:100%;object-fit:contain}
 .ponta .corpo{flex:1;min-width:0}
 .ponta .topo-p{display:flex;align-items:center;gap:8px}
@@ -430,7 +430,9 @@ let OCULTOS = { urls: [], titulos: {} };
 let FAM = {};
 function prepararDados(){
   D = window.CVD;
-  if(OCULTOS.urls.length){ const oc = new Set(OCULTOS.urls); D.materiais = D.materiais.filter(m => !oc.has(m.url)); D.procedimentos = D.procedimentos.filter(p => !oc.has(p.url)); } PONTAS = window.CVD_PONTAS || []; IMGP = window.CVD_PONTAS_IMG || {}; LUPAS = window.CVD_LUPAS;
+  if(OCULTOS.urls.length){ const oc = new Set(OCULTOS.urls); D.materiais = D.materiais.filter(m => !oc.has(m.url)); D.procedimentos = D.procedimentos.filter(p => !oc.has(p.url)); }
+  D.materiais = D.materiais.filter(m => !(siteEmpresaUrl(m.url) && m.produto !== 'lupas'));   // pontas e equipamentos nunca levam ao site da empresa
+  PONTAS = window.CVD_PONTAS || []; IMGP = window.CVD_PONTAS_IMG || {}; LUPAS = window.CVD_LUPAS;
   THUMBS = window.CVD_THUMBS || {}; FOT = (window.CVD_FOTOS || {}).equip || {};
   D.materiais.forEach((m,i)=> m.id = 'm'+i);
   FAM = {}; D.materiais.forEach(m=>{ if(m.familia){ (FAM[m.familia] = FAM[m.familia] || {})[m.idioma || 'pt'] = m; } });
@@ -685,7 +687,7 @@ function painelVideosPonta(cods){
 function cardPonta(p){
   const pots = [...new Set(p.linhas.map(l=>l[1]))], unica = pots.length===1 && pots[0];
   const exp = p.cod.flatMap(expandirCod), com = exp.filter(c=>IMGP[c]), prim = com[0] ? IMGP[com[0]] : null;
-  const foto = prim ? `<a class="foto" href="${esc(prim.link)}" target="_blank" rel="noopener" aria-label="Ver ${esc(com[0])} no site"><img loading="lazy" alt="Ponta ${esc(com[0])}" src="img/pontas/${prim.s}.webp"></a>` : '';
+  const foto = prim ? `<div class="foto" role="button" tabindex="0" data-galeria="${esc(com[0])}" aria-label="Ver as fotos da ponta ${esc(com[0])}"><img loading="lazy" alt="Ponta ${esc(com[0])}" src="img/pontas/${prim.s}.webp"></div>` : '';
   const rot = c => exp.length===1 ? `Fotos (${IMGP[c].f.length})` : c.replace(/^(SCPF?|SI) /,'Ø ');
   const dls = com.map(c=>`<button class="pilula" data-galeria="${esc(c)}">${ic('download')}${esc(rot(c))}</button>`).join('');
   return `<div class="ponta anima">${foto}<div class="corpo"><div class="topo-p"><div class="cods">${p.cod.map(c=>{ const [cd,diam]=c.split(' · '); return `<span class="cod">${esc(cd)}</span>${diam?`<span class="diam">${esc(diam)}</span>`:''}`; }).join('')}</div>${unica?`<span class="pot-u">${esc(fmtPot(pots[0]))}</span>`:''}</div>
@@ -703,7 +705,7 @@ function painelPonta(cod){
     <div class="grade" style="margin-top:14px">${I.f.map(([id,rot,mb])=>`<a class="fcard" href="${esc(DL+id+'.png')}" download data-dl="ponta-png" data-tit="${esc(cod+' · '+rot)}" data-mb="${mb}">
       <span class="im" style="background:#fff;border:1px solid var(--linha)"><img loading="lazy" alt="${esc(cod+' · '+rot)}" src="${esc(PV+id+'.webp')}"></span>
       <b>${esc(rot)}</b><small>PNG · ${fmtTam(Math.max(.1,mb))} · baixar</small></a>`).join('')}</div>
-    <div class="botoes" style="margin-top:14px">${btnComp('Ponta ' + cod, fichaPonta(cod, eqOk), '', 'Ponta', null, 'Compartilhar com o cliente', 'img/pontas/' + I.s + '.webp')}<a class="btn sec" href="${esc(I.link)}" target="_blank" rel="noopener">${ic('link')}Ver a ponta no site</a></div>`);
+    <div class="botoes" style="margin-top:14px">${btnComp('Ponta ' + cod, fichaPonta(cod, eqOk), '', 'Ponta', null, 'Compartilhar com o cliente', 'img/pontas/' + I.s + '.webp')}</div>`);
 }
 function telaPontas(eqId, modoId){
   const e = PONTAS.find(x=>x.id===eqId);
@@ -713,7 +715,7 @@ function telaPontas(eqId, modoId){
       + `<div class="lista">${PONTAS.map((x,i)=>{ const n = x.modos.reduce((s,m)=>s+m.pontas.length,0);
           return `<a class="linha anima" style="--i:${i}" href="#/pontas/${x.id}"><span class="abrir"><span class="lead foto" style="width:64px;background:var(--surface-2)"><img src="${x.img}" alt=""></span><span class="txt"><span class="t">${esc(x.nome)}</span><span class="m" style="display:block">${n} pontas · ${x.modos.map(m=>m.nome.split(' ')[0]).join(', ')}</span></span></span><span class="acoes"><span class="ibtn" style="color:var(--fraco)">${ic('seta')}</span></span></a>`; }).join('')}</div>`
       + secao('Bula completa (PDF)','como na fonte') + `<div class="lista">${PONTAS.map(bulaRow).join('')}</div>`
-      + `<div class="rodape">Fonte: bulas oficiais em conteudo.cvdentus.com.br/bula-piezos.<br>Em caso de dúvida, vale a bula completa.</div>` };
+      + `<div class="rodape">Fonte: bulas oficiais dos Piezos.<br>Em caso de dúvida, vale a bula completa.</div>` };
   }
   const ativo = e.modos.find(m=>m.id===modoId) || e.modos[0];
   const itensAba = e.modos.map(m=>({id:m.id,nome:m.nome.split(' ')[0],n:m.pontas.length}));
@@ -808,7 +810,10 @@ function telaLupas(grupoId){
  };
 }
 const LF = { id: '', sel: new Set(), atual: 1, busy: false, vids: [] };
-const lfUrl = (it, i) => it.fotos.dir + i + '.jpg';
+const lfUrl = (it, i) => it.fotos.dir + i + '.jpg';                // foto completa (download)
+const lfVista = (it, i) => 'img/lupas/v/' + it.id + '-' + i + '.webp';  // versão leve para ver no celular (~30 KB)
+const lfCache = new Map();
+function lfPre(it, i){ const n = it.fotos.n; i = ((i - 1 + n) % n) + 1; const u = lfVista(it, i); if(!lfCache.has(u)){ const im = new Image(); im.decoding = 'async'; im.src = u; lfCache.set(u, im); } return lfCache.get(u); }
 const lfItem = id => { let r; LUPAS.grupos.forEach(gr => gr.itens.forEach(x => { if(x.id === id) r = x; })); return r; };
 function lfResumo(){
   const it = lfItem(LF.id); if(!it) return; const n = LF.sel.size, b = document.getElementById('lf-baixar'), t = document.getElementById('lf-todas');
@@ -818,11 +823,16 @@ function lfResumo(){
 }
 function lfVer(i){
   const it = lfItem(LF.id); if(!it) return; LF.atual = i; const u = lfUrl(it, i);
-  const img = document.getElementById('lf-img'); if(img) img.src = u;
+  const img = document.getElementById('lf-img');
+  if(img){
+    const v = lfVista(it, i), im = lfPre(it, i), mostrar = () => { if(LF.atual === i && LF.id === it.id){ img.onerror = () => { img.onerror = null; img.src = u; }; img.src = v; } };
+    if(im.complete && im.naturalWidth) mostrar(); else if(im.decode) im.decode().then(mostrar, mostrar); else im.onload = mostrar;   // troca só quando já dá pra mostrar: sem piscar
+  }
   const dl = document.getElementById('lf-dl'); if(dl){ dl.href = u; dl.setAttribute('download', `lupa-${LF.id}-${String(i).padStart(2, '0')}.jpg`); }
   const lg = document.getElementById('lf-leg'); if(lg) lg.textContent = `Foto ${i} de ${it.fotos.n} · toque nas miniaturas para ver; marque as que quer baixar`;
-  document.querySelectorAll('.lf-tiras .mf-mini').forEach(b => { const on = +b.dataset.lfoto.split(':')[1] === i; b.classList.toggle('on', on); if(on && b.scrollIntoView) b.scrollIntoView({ block: 'nearest', inline: 'nearest' }); });
+  document.querySelectorAll('.lf-tiras .mf-mini').forEach(b => { const on = +b.dataset.lfoto.split(':')[1] === i; b.classList.toggle('on', on); });   // sem scrollIntoView: ele rolava o painel e a foto saía da tela
   const ct = document.getElementById('lf-cont'); if(ct) ct.textContent = `${i} / ${it.fotos.n}`;
+  lfPre(it, i + 1); lfPre(it, i - 1);   // deixa as vizinhas prontas para o próximo passo
 }
 function lfPasso(d){ const it = lfItem(LF.id); if(!it) return; const n = it.fotos.n; lfVer(((LF.atual - 1 + d + n) % n) + 1); }
 async function lfBaixar(){
@@ -850,7 +860,7 @@ function painelLupa(id){
   const gal = !!it.fotos.dir, n = it.fotos.n;
   LF.id = id; LF.sel = new Set(); LF.atual = 1; LF.busy = false;
   const topo = gal
-    ? `<div class="img-g lf-grande" id="lf-box"><img id="lf-img" src="${esc(lfUrl(it, 1))}" alt="${esc(it.nome)}" onerror="this.onerror=null;this.src='img/lupas/${esc(it.img)}.webp'">
+    ? `<div class="img-g lf-grande" id="lf-box"><img id="lf-img" src="${esc(lfVista(it, 1))}" alt="${esc(it.nome)}" decoding="async" onerror="this.onerror=function(){this.onerror=null;this.src='img/lupas/${esc(it.img)}.webp'};this.src='${esc(lfUrl(it, 1))}'">
          ${n > 1 ? `<button class="lf-nav lf-prev" data-lfnav="-1" aria-label="Foto anterior">${ic('seta')}</button><button class="lf-nav lf-next" data-lfnav="1" aria-label="Próxima foto">${ic('seta')}</button><span class="lf-cont" id="lf-cont">1 / ${n}</span>` : ''}</div>
        <h3 style="margin-top:14px">${esc(it.nome)}${it.kit?` · ${esc(it.kit)}`:''}</h3><p class="sub">${esc(g.nome)}</p>
        <p class="desc">${esc(it.desc)}</p>
@@ -878,9 +888,10 @@ function painelLupa(id){
       ${vids.length ? `<a class="btn sec" id="lf-vdl" href="${esc(vids[0].url)}" download data-dl="lupa" data-mb="${vids[0].mb}">${ic('download')}Baixar vídeo <small>${fmtTam(vids[0].mb)}</small></a>` : ''}
     </div>`);
   const bx = document.getElementById('lf-box');
-  if(bx){ let x0 = null;
-    bx.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
-    bx.addEventListener('touchend', e => { if(x0 === null) return; const dx = e.changedTouches[0].clientX - x0; x0 = null; if(Math.abs(dx) > 40) lfPasso(dx < 0 ? 1 : -1); }, { passive: true }); }
+  if(bx){ let x0 = null, y0 = 0;
+    bx.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, { passive: true });
+    bx.addEventListener('touchend', e => { if(x0 === null) return; const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0; x0 = null; if(Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) * 1.2) lfPasso(dx < 0 ? 1 : -1); }, { passive: true });
+    lfPre(it, 2); }
 }
 
 /* ---------- Marca ---------- */
@@ -918,9 +929,12 @@ function abrirPainel(html){
 }
 function fecharPainel(){ liberarTela(); painel.querySelectorAll('iframe').forEach(f => f.remove()); painel.querySelectorAll('video').forEach(v => { try{ v.pause(); }catch(e){} }); if(!painel.classList.contains('on')) return; veu.classList.remove('on'); painel.classList.remove('on'); if(!buscaOv.classList.contains('on')) document.body.style.overflow = ''; if(foco && foco.focus) try{ foco.focus(); }catch(e){} }
 veu.addEventListener('click', fecharPainel);
-(()=>{ let y0=null, dy=0;
-  painel.addEventListener('touchstart',e=>{ if(painel.scrollTop<=0){ y0=e.touches[0].clientY; dy=0; painel.style.transition='none'; } },{passive:true});
-  painel.addEventListener('touchmove',e=>{ if(y0===null) return; dy=Math.max(0,e.touches[0].clientY-y0); painel.style.transform=`translateY(${dy}px)`; },{passive:true});
+(()=>{ let y0=null, x0=0, dy=0, decidido=false;
+  // o painel só acompanha o dedo quando o gesto é claramente para baixo; deslizar a foto/vídeo de lado não arrasta o painel
+  painel.addEventListener('touchstart',e=>{ if(painel.scrollTop<=0 && !e.target.closest('.lf-grande, video, .lf-vchips')){ y0=e.touches[0].clientY; x0=e.touches[0].clientX; dy=0; decidido=false; } else y0=null; },{passive:true});
+  painel.addEventListener('touchmove',e=>{ if(y0===null) return; const t=e.touches[0], ax=t.clientX-x0, ay=t.clientY-y0;
+    if(!decidido){ if(Math.abs(ax)<8 && Math.abs(ay)<8) return; if(Math.abs(ax)>=Math.abs(ay) || ay<0){ y0=null; return; } decidido=true; painel.style.transition='none'; }
+    dy=Math.max(0,ay); painel.style.transform=`translateY(${dy}px)`; },{passive:true});
   painel.addEventListener('touchend',()=>{ if(y0===null) return; painel.style.transition=''; painel.style.transform=''; if(dy>110) fecharPainel(); y0=null; }); })();
 
 let _wl = null;
@@ -1827,7 +1841,7 @@ async function compartilhar(x){
   await enviarLink(nome, x.url);   // modo de preparação (sem Firebase)
 }
 document.addEventListener('pointermove', e => { const c = e.target.closest && e.target.closest('.tile,.cartao-c'); if(!c) return; const r = c.getBoundingClientRect(); c.style.setProperty('--mx', (e.clientX - r.left) + 'px'); c.style.setProperty('--my', (e.clientY - r.top) + 'px'); }, { passive: true });
-document.addEventListener('keydown', e=>{ if((e.key === 'Enter' || e.key === ' ') && e.target.matches && e.target.matches('.idm, .clip-row')){ e.preventDefault(); e.target.click(); } });
+document.addEventListener('keydown', e=>{ if((e.key === 'Enter' || e.key === ' ') && e.target.matches && e.target.matches('.idm, .clip-row, .ponta .foto')){ e.preventDefault(); e.target.click(); } });
 document.addEventListener('click', e=>{
   const t = e.target;
   if(t.closest('[data-tema]')){ aplicarTema(!temaEscuro()); toast(temaEscuro() ? 'Visual escuro' : 'Visual branco'); return; }

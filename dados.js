@@ -553,13 +553,6 @@ window.CVD = {
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/bulas/bula-cirurgica-clinica-dentsurg-pro-2023-v04.pdf"
   },
   {
-   "titulo": "Bula das Pontas",
-   "tipo": "bula",
-   "produto": "pontas",
-   "idioma": "pt",
-   "url": "https://conteudo.cvdentus.com.br/bula-piezos"
-  },
-  {
    "titulo": "Instruções de Uso das Pontas",
    "tipo": "uso",
    "produto": "pontas",
@@ -863,13 +856,6 @@ window.CVD = {
    "url": "https://simuladordelupas.cvdentus.com.br/"
   },
   {
-   "titulo": "Página do Spray Control",
-   "tipo": "landing",
-   "produto": "spray-control",
-   "idioma": "pt",
-   "url": "https://conteudo.cvdentus.com.br/spray-control"
-  },
-  {
    "titulo": "Modo de Uso Spray Control",
    "tipo": "uso",
    "produto": "spray-control",
@@ -1102,13 +1088,6 @@ window.CVD = {
    "mb": 0.5,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-video-pontas-em-movimento.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-video-pontas-em-movimento.mp4"
-  },
-  {
-   "titulo": "Site oficial · Linha Elo",
-   "tipo": "landing",
-   "produto": "linha-elo",
-   "idioma": "pt",
-   "url": "https://cvdentus.com.br/linha-elo/"
   },
   {
    "titulo": "Linha Elo · fotos e artes",
@@ -3643,5 +3622,5 @@ window.CVD = {
    "nome": "Demonstrações e casos clínicos"
   }
  ],
- "rev": 1793374917731
+ "rev": 1793711749192
 };
