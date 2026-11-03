@@ -883,7 +883,7 @@ function painelLupa(id){
        <p class="desc">${esc(it.desc)}</p>`;
   const vids = (it.videos && it.videos.length) ? it.videos : (it.video && it.video.baixar ? [{ url: it.video.baixar, mb: it.video.mb }] : []);
   LF.vids = vids;
-  const vchips = vids.length > 1 ? `<div class="lf-vchips" role="tablist">${vids.map((v, k) => `<button class="lf-vchip${k === 0 ? ' on' : ''}" role="tab" data-lfvid="${k}">Vídeo ${k + 1}</button>`).join('')}</div>` : '';
+  const vchips = vids.length > 1 ? `<div class="lf-vchips" role="tablist">${vids.map((v, k) => `<button class="lf-vchip${k === 0 ? ' on' : ''}" role="tab" data-lfvid="${k}">${(it.video && it.video.baixar === v.url) ? 'Antigo' : 'Novo ' + vids.slice(0, k + 1).filter(x => !(it.video && it.video.baixar === x.url)).length}</button>`).join('')}</div>` : '';
   const vid = vids.length
     ? `<h4 class="lf-vh">Vídeo 360°</h4>${vchips}<div class="player"><video controls playsinline preload="metadata" poster="img/lupas/${esc(it.img)}.webp" src="${esc(vids[0].url)}"></video></div>
        <p class="sub" style="margin:8px 0 0">Vídeo feito com IA a partir do produto: confira se representa fielmente o modelo antes de usar.</p>` : '';
@@ -1637,7 +1637,7 @@ function atualizarDicasDoItem(x){
 /* ===================== Acesso obrigatório (login) e carregamento do catálogo ===================== */
 const gateEl = document.getElementById('gate');
 let appIniciado = false, carregandoCatalogo = false, modoGate = 'entrar';
-const VERSAO_APP = 'v123';
+const VERSAO_APP = 'v124';
 function gateHtml(corpo){ return `<div class="gate-in"><img class="logo-g" src="img/logo.svg" alt="cvdcloud">${corpo}</div>`; }
 const LOADER = '<div class="loader-linha" role="status" aria-label="Carregando"></div>';
 function gateMostrar(html){ document.body.classList.add('gate-on'); gateEl.innerHTML = gateHtml(html); }
