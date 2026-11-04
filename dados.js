@@ -198,7 +198,7 @@ window.CVD = {
    "grupo360": "lupa",
    "idioma": "pt",
    "novo": true,
-   "mb": 7.0,
+   "mb": 7,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-360-kepler-ttl.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-360-kepler-ttl.mp4"
   },
@@ -849,7 +849,7 @@ window.CVD = {
    "idioma": "en",
    "ano": 2026,
    "novo": true,
-   "mb": 6.0,
+   "mb": 6,
    "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-acessorios-cvdentus-2026-en.pdf",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/catalogo-acessorios-cvdentus-2026-en.pdf"
   },
@@ -861,7 +861,7 @@ window.CVD = {
    "idioma": "es",
    "ano": 2026,
    "novo": true,
-   "mb": 6.0,
+   "mb": 6,
    "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-acessorios-cvdentus-2026-es.pdf",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/catalogo-acessorios-cvdentus-2026-es.pdf"
   },
@@ -1055,6 +1055,16 @@ window.CVD = {
    "mb": 0.5,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-video-pontas-em-movimento.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-video-pontas-em-movimento.mp4"
+  },
+  {
+   "titulo": "Vídeo · SAC Linha Elo (dicas de uso e cuidados)",
+   "tipo": "apoio",
+   "produto": "linha-elo",
+   "idioma": "pt",
+   "novo": true,
+   "mb": 16.9,
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-video-sac-pos-venda.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-video-sac-pos-venda.mp4"
   },
   {
    "titulo": "Linha Elo · fotos e artes",
@@ -1448,7 +1458,7 @@ window.CVD = {
    "titulo": "Flapless",
    "esp": "cirurgia",
    "prof": "Dr. Diego Bazan",
-   "mb": 23.0,
+   "mb": 23,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-03-flapless-dr-diego-bazan.mp4",
    "local": "arquivos/procedimentos/proc-03-flapless-dr-diego-bazan.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-03-flapless-dr-diego-bazan.mp4",
@@ -1515,7 +1525,7 @@ window.CVD = {
   {
    "titulo": "Osteotomia",
    "esp": "cirurgia",
-   "mb": 5.0,
+   "mb": 5,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-07-osteotomia.mp4",
    "local": "arquivos/procedimentos/proc-07-osteotomia.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-07-osteotomia.mp4",
@@ -1671,7 +1681,7 @@ window.CVD = {
   {
    "titulo": "Remoção de Pino",
    "esp": "endodontia",
-   "mb": 9.0,
+   "mb": 9,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-20-remocao-de-pino.mp4",
    "local": "arquivos/procedimentos/proc-20-remocao-de-pino.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-20-remocao-de-pino.mp4",
@@ -1701,7 +1711,7 @@ window.CVD = {
    "titulo": "Término de Preparo",
    "esp": "dentistica",
    "ponta": "T1F",
-   "mb": 5.0,
+   "mb": 5,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-23-termino-de-preparo.mp4",
    "local": "arquivos/procedimentos/proc-23-termino-de-preparo.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-23-termino-de-preparo.mp4",
@@ -1763,7 +1773,7 @@ window.CVD = {
   {
    "titulo": "Remoção de Amálgama",
    "esp": "dentistica",
-   "mb": 12.0,
+   "mb": 12,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-28-remocao-de-amalgama.mp4",
    "local": "arquivos/procedimentos/proc-28-remocao-de-amalgama.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-28-remocao-de-amalgama.mp4",
@@ -1856,7 +1866,7 @@ window.CVD = {
    "titulo": "Ponta T1T-P em ação",
    "esp": "profilaxia",
    "ponta": "T1T-P",
-   "mb": 2.0,
+   "mb": 2,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-37-ponta-t1t-p-em-acao.mp4",
    "local": "arquivos/procedimentos/proc-37-ponta-t1t-p-em-acao.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-37-ponta-t1t-p-em-acao.mp4",
@@ -1929,7 +1939,7 @@ window.CVD = {
    "titulo": "Caso Clínico · Paciente Samuel",
    "esp": "demonstracao",
    "prof": "Dra. Liete Yassuda",
-   "mb": 9.0,
+   "mb": 9,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-44-caso-clinico-paciente-samuel-dra-liete-yassuda.mp4",
    "local": "arquivos/procedimentos/proc-44-caso-clinico-paciente-samuel-dra-liete-yassuda.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-44-caso-clinico-paciente-samuel-dra-liete-yassuda.mp4",
@@ -1975,7 +1985,7 @@ window.CVD = {
    "pontas": [
     "SFR4"
    ],
-   "mb": 3.0,
+   "mb": 3,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-48-split-crest-ponta-sfr4.mp4",
    "local": "arquivos/procedimentos/proc-48-split-crest-ponta-sfr4.mp4",
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-48-split-crest-ponta-sfr4.mp4",
@@ -3589,5 +3599,5 @@ window.CVD = {
    "nome": "Demonstrações e casos clínicos"
   }
  ],
- "rev": 1793733429939
+ "rev": 1793803527402
 };
