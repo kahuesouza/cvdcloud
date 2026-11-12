@@ -432,7 +432,7 @@ function prepararDados(){
   D = window.CVD;
   if(OCULTOS.urls.length){ const oc = new Set(OCULTOS.urls); D.materiais = D.materiais.filter(m => !oc.has(m.url)); D.procedimentos = D.procedimentos.filter(p => !oc.has(p.url)); }
   D.materiais = D.materiais.filter(m => !(siteEmpresaUrl(m.url) && m.produto !== 'lupas'));   // pontas e equipamentos nunca levam ao site da empresa
-  PONTAS = window.CVD_PONTAS || []; IMGP = window.CVD_PONTAS_IMG || {}; LUPAS = window.CVD_LUPAS;
+  ACC = window.CVD_ACESSORIOS || null; PONTAS = window.CVD_PONTAS || []; IMGP = window.CVD_PONTAS_IMG || {}; LUPAS = window.CVD_LUPAS;
   THUMBS = window.CVD_THUMBS || {}; FOT = (window.CVD_FOTOS || {}).equip || {};
   D.materiais.forEach((m,i)=> m.id = 'm'+i);
   FAM = {}; D.materiais.forEach(m=>{ if(m.familia){ (FAM[m.familia] = FAM[m.familia] || {})[m.idioma || 'pt'] = m; } });
@@ -496,6 +496,7 @@ async function ocultarItem(id){
   OCULTOS = o; fecharPainel(); prepararDados(); render(); toast('Item excluído do app');
 }
 const srcVid = x => x.local || x.url;
+const srcTv = x => x.tv || srcVid(x);   // versão horizontal (16:9) quando existe: é a que vai para a TV
 const absUrl = u => /^https?:/i.test(u) ? u : new URL(u, location.href.split('#')[0]).href;
 const isVideo = x => /\.mp4(\?|$)/i.test((x && x.url) || '');
 function chipsIdioma(x){
@@ -784,6 +785,68 @@ function trocarFotoModelo(id, i){
   const cp = document.getElementById('mf-comp'); if(cp) cp.dataset.compGen = JSON.stringify({ t: `Lupa ${x.codigo} · foto ${i}`, u, d: u, tp: 'Foto', mb: 0.1 });
   const lg = document.getElementById('mf-leg'); if(lg) lg.textContent = `Foto ${i} de ${x.n} · toque em uma miniatura para ver e baixar só ela`;
   document.querySelectorAll('.mf-mini').forEach(b => b.classList.toggle('on', b.dataset.mfoto === id + ':' + i));
+}
+/* ---------- Acessórios (fotos e textos do site, hospedados no app) ---------- */
+let ACC = null;
+const ACCS = { id: '', atual: 1, busy: false };
+const accItem = id => { let r = null; (ACC ? ACC.grupos : []).forEach(g => g.itens.forEach(x => { if(x.id === id) r = x; })); return r; };
+const accFull = (it, i) => `arquivos/acessorios/${it.id}/${i}.jpg`;                  // foto completa (download / compartilhar)
+const accVista = (it, i) => `img/acessorios/v/${it.id}-${i}.webp`;                   // versão leve para ver no celular
+const accMini = (it, i) => `img/acessorios/t/${it.id}-${i}.webp`;
+const accCache = new Map();
+function accPre(it, i){ const n = it.n; i = ((i - 1 + n) % n) + 1; const u = accVista(it, i); if(!accCache.has(u)){ const im = new Image(); im.decoding = 'async'; im.src = u; accCache.set(u, im); } return accCache.get(u); }
+function telaAcessorios(){
+  if(!ACC) return telaInicio();
+  const total = ACC.grupos.reduce((s, g) => s + g.itens.length, 0);
+  const cards = g => `<div class="grade">${g.itens.map((it, i) => `<button class="cartao anima" style="--i:${i}" data-acc="${esc(it.id)}"><span class="im"><img loading="lazy" src="img/acessorios/${esc(it.id)}.webp" alt="${esc(it.nome)}"></span><b>${esc(it.nome)}</b><small>${esc(it.compat)}</small></button>`).join('')}</div>`;
+  const docs = D.materiais.filter(m => m.produto === 'acessorios');
+  return { titulo: 'Acessórios', voltar: '#/', corpo: largo('Acessórios', `${total} itens para os equipamentos. Toque para ver as fotos e baixar.`)
+    + ACC.grupos.map(g => secao(g.nome, g.itens.length) + `<p style="color:var(--sub);font-size:13.5px;margin:6px 0 0">${esc(g.sub)}</p>` + cards(g)).join('')
+    + (docs.length ? secao('Catálogo e vídeos de apoio') + lista(docs) : '') };
+}
+function painelAcessorio(id){
+  const it = accItem(id); if(!it) return; ACCS.id = id; ACCS.atual = 1; const n = it.n;
+  const nav = n > 1 ? `<button class="lf-nav lf-prev" data-accnav="-1" aria-label="Foto anterior">${ic('seta')}</button><button class="lf-nav lf-next" data-accnav="1" aria-label="Próxima foto">${ic('seta')}</button><span class="lf-cont" id="ac-cont">1 / ${n}</span>` : '';
+  abrirPainel(`<div class="img-g lf-grande" id="ac-box"><img id="ac-img" src="${esc(accVista(it, 1))}" alt="${esc(it.nome)}" decoding="async" onerror="this.onerror=function(){this.onerror=null;this.src='img/acessorios/${esc(it.id)}.webp'};this.src='${esc(accFull(it, 1))}'">${nav}</div>
+    <h3 style="margin-top:14px">${esc(it.nome)}</h3><p class="sub">${esc(it.compat)}</p>
+    <p style="color:var(--sub);font-size:14px;line-height:1.55;margin:8px 0 0">${esc(it.desc)}</p>
+    ${n > 1 ? `<div class="mf-tiras" role="list">${Array.from({ length: n }, (_, k) => k + 1).map(i => `<button class="mf-mini${i === 1 ? ' on' : ''}" role="listitem" data-accfoto="${i}" aria-label="Ver foto ${i}"><img loading="lazy" alt="" src="${esc(accMini(it, i))}"></button>`).join('')}</div>` : ''}
+    <div class="botoes">
+      <a class="btn prim" id="ac-dl" href="${esc(accFull(it, 1))}" download="${esc(it.id)}-01.jpg" data-dl="acessorio" data-mb="0.2">${ic('download')}Baixar esta foto</a>
+      ${n > 1 ? `<button class="btn sec" id="ac-todas" data-ac-todas>${ic('download')}Baixar as ${n} fotos (.zip)</button>` : ''}
+      ${btnComp(it.nome + ' · ' + it.compat, absUrl(accFull(it, 1)), absUrl(accFull(it, 1)), 'Foto', 0.2, 'Compartilhar esta foto', 'img/acessorios/' + it.id + '.webp').replace('<button ', '<button id="ac-comp" ')}
+    </div>`);
+  const bx = document.getElementById('ac-box');
+  if(bx && n > 1){ let x0 = null, y0 = 0;
+    bx.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, { passive: true });
+    bx.addEventListener('touchend', e => { if(x0 === null) return; const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0; x0 = null; if(Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) * 1.2) accPasso(dx < 0 ? 1 : -1); }, { passive: true });
+    accPre(it, 2); }
+}
+function accVer(i){
+  const it = accItem(ACCS.id); if(!it) return; ACCS.atual = i; const u = accFull(it, i), img = document.getElementById('ac-img');
+  if(img){
+    const v = accVista(it, i), im = accPre(it, i), mostrar = () => { if(ACCS.atual === i && ACCS.id === it.id){ img.onerror = () => { img.onerror = null; img.src = u; }; img.src = v; } };
+    if(im.complete && im.naturalWidth) mostrar(); else if(im.decode) im.decode().then(mostrar, mostrar); else im.onload = mostrar;   // troca só quando já dá pra mostrar: sem piscar
+  }
+  const dl = document.getElementById('ac-dl'); if(dl){ dl.href = u; dl.setAttribute('download', `${it.id}-${String(i).padStart(2, '0')}.jpg`); }
+  const cp = document.getElementById('ac-comp'); if(cp) cp.dataset.compGen = JSON.stringify({ t: it.nome + ' · ' + it.compat, u: absUrl(u), d: absUrl(u), tp: 'Foto', mb: 0.2, th: 'img/acessorios/' + it.id + '.webp' });
+  document.querySelectorAll('[data-accfoto]').forEach(b => b.classList.toggle('on', +b.dataset.accfoto === i));
+  const ct = document.getElementById('ac-cont'); if(ct) ct.textContent = `${i} / ${it.n}`;
+  accPre(it, i + 1); accPre(it, i - 1);
+}
+function accPasso(d){ const it = accItem(ACCS.id); if(!it) return; accVer(((ACCS.atual - 1 + d + it.n) % it.n) + 1); }
+async function accBaixarTodas(){
+  const it = accItem(ACCS.id); if(!it || ACCS.busy) return; ACCS.busy = true; const b = document.getElementById('ac-todas'), rot = b ? b.innerHTML : '';
+  try{
+    const dados = [];
+    for(let k = 1; k <= it.n; k++){
+      if(b){ b.disabled = true; b.textContent = `Preparando ${k} de ${it.n}…`; }
+      const r = await fetch(accFull(it, k)); if(!r.ok) throw new Error('foto');
+      dados.push({ nome: `${it.id}-${String(k).padStart(2, '0')}.jpg`, dados: new Uint8Array(await r.arrayBuffer()) });
+    }
+    salvarBlob(montarZip(dados), `${it.id}-fotos.zip`); toast(`${it.n} fotos baixadas`);
+  }catch(e){ toast('Não foi possível baixar. Tente de novo'); }
+  ACCS.busy = false; if(b){ b.disabled = false; b.innerHTML = rot; }
 }
 function telaFotoforos(){
   const g = LUPAS.grupos.find(x=>x.id==='fotoforos'); if(!g) return telaInicio();
@@ -1079,12 +1142,12 @@ function clipsVai(i){
   CP.i = ((i % n) + n) % n;
   const x = CP.lista[CP.i];
   CP.v.loop = n === 1;                       // um vídeo só: repete direto
-  CP.v.src = srcVid(x); CP.v.muted = CP.mudo;
+  CP.v.src = srcTv(x); CP.v.muted = CP.mudo;
   document.getElementById('clips-tit').textContent = x.titulo + (x.prof ? ' · ' + x.prof : '');
   document.getElementById('clips-pos').textContent = (CP.i + 1) + ' de ' + n + ' · repetição contínua';
   const pr = document.getElementById('clips-prog'); if(pr) pr.style.width = '0%';
   CP.v.play().catch(() => {});
-  if(n > 1){ const prox = CP.lista[(CP.i + 1) % n]; if(prox && CP.pre.getAttribute('src') !== srcVid(prox)) CP.pre.src = srcVid(prox); }
+  if(n > 1){ const prox = CP.lista[(CP.i + 1) % n]; if(prox && CP.pre.getAttribute('src') !== srcTv(prox)) CP.pre.src = srcTv(prox); }
   track('abrir', chaveItem(x), x.titulo, 'clips');
 }
 function clipsIniciar(){
@@ -1119,9 +1182,11 @@ document.addEventListener('visibilitychange', () => { if(document.visibilityStat
 function painelVideo(x){
   const dl = linkDownload(x), tam = tamDownload(x), t = THUMBS[x.url], fav = favs.has(x.id);
   const sub = metaDe(x, {produto:true}).replace(/<br>.*/, '').replace(/<[^>]+>/g, '');
-  abrirPainel(`<div class="player"><video controls playsinline preload="metadata" ${t ? `poster="img/t/${t[0]}"` : ''} src="${esc(srcVid(x))}"></video></div>
+  const tvChips = x.tv ? `<div class="lf-vchips" role="tablist"><button class="lf-vchip on" role="tab" data-tvver="orig" data-tvid="${x.id}">Original</button><button class="lf-vchip" role="tab" data-tvver="tv" data-tvid="${x.id}">Horizontal (girado)</button></div>` : '';
+  abrirPainel(`${tvChips}<div class="player"><video controls playsinline preload="metadata" ${t ? `poster="img/t/${t[0]}"` : ''} src="${esc(srcVid(x))}"></video></div>
     <h3 style="margin-top:14px">${esc(x.titulo)}</h3><p class="sub">${sub}</p>
     <div class="botoes">${btnLoop()}${dl ? `<a class="btn prim" href="${esc(dl)}" download data-dl="${x.id}" data-mb="${tam||0}">${ic('download')}Baixar vídeo${tam ? ` <small>${fmtTam(tam)}</small>` : ''}</a>` : ''}
+      ${x.tv ? `<a class="btn sec" href="${esc(x.tv)}" download data-dl="${x.id}" data-mb="${x.tvMb||0}">${ic('download')}Baixar versão horizontal (TV)${x.tvMb ? ` <small>${fmtTam(x.tvMb)}</small>` : ''}</a>` : ''}
       <button class="btn prim" data-compartilhar="${x.id}">${ic('share')}Copiar link</button>
       <button class="btn sec" data-fav="${x.id}">${ic('estrela')}${fav ? 'Remover dos salvos' : 'Salvar'}</button>
       ${adminAgora() ? `<button class="btn sec" data-ocultar="${x.id}" style="color:var(--erro)">${ic('x')}Excluir do app</button>` : ''}</div>`);
@@ -1310,10 +1375,12 @@ function resultadosBusca(q){
   const logos = []; D.marcas.forEach((g,gi)=>g.logos.forEach((l,li)=>{ if(casa([l.nome,l.nota,g.grupo,'logo marca'].join(' '))) logos.push([gi,li,l]); }));
   const modl = (LUPAS.modelos||[]).filter(x=>casa([x.codigo,x.linha,x.tipo,x.mags,'lupa modelo codigo'].join(' ')));
   const pt = resultadosPontas(termos);
-  if(!mats.length && !procs.length && !lup.length && !logos.length && !pt.n && !modl.length) return vazio(`Nada encontrado para “${esc(q)}”.`);
+  const acs = []; (ACC ? ACC.grupos : []).forEach(g => g.itens.forEach(it => { if(casa([it.nome, it.compat, it.desc, g.nome, 'acessorio acessorios'].join(' '))) acs.push(it); }));
+  if(!mats.length && !procs.length && !lup.length && !logos.length && !pt.n && !modl.length && !acs.length) return vazio(`Nada encontrado para “${esc(q)}”.`);
   return (pt.n ? secao('Pontas (bula)', pt.n) + pt.html.replace(/<div class="sec">.*?<\/div>/g,'') : '')
     + (procs.length ? secao('Procedimentos', procs.length) + lista(procs.slice(0,30),{produto:true}) : '')
     + (mats.length ? secao('Materiais', mats.length) + lista(mats.slice(0,40),{produto:true}) : '')
+    + (acs.length ? secao('Acessórios', acs.length) + `<div class="lista">${acs.map(it => `<div class="linha"><button class="abrir" data-acc="${esc(it.id)}"><span class="lead foto"><img src="img/acessorios/${esc(it.id)}.webp" alt=""></span><span class="txt"><span class="t">${esc(it.nome)}</span><span class="m" style="display:block">${esc(it.compat)}</span></span></button></div>`).join('')}</div>` : '')
     + (lup.length ? secao('Lupas e fotóforos', lup.length) + `<div class="lista">${lup.map(([g,it])=>`<div class="linha"><button class="abrir" data-lupa="${it.id}"><span class="lead foto"><img src="img/lupas/${it.img}.webp" alt=""></span><span class="txt"><span class="t">${esc(it.nome)}${it.kit?' · '+esc(it.kit):''}</span><span class="m" style="display:block">${esc(g.nome)}</span></span></button></div>`).join('')}</div>` : '')
     + (modl.length ? secao('Lupas por código', modl.length) + `<div class="lista">${modl.map((x,i)=>linhaModelo(x,i)).join('')}</div>` : '')
     + (logos.length ? secao('Logos e selos', logos.length) + `<div class="lista">${logos.map(([gi,li,l])=>`<div class="linha"><button class="abrir" data-logo-p="${gi}:${li}"><span class="lead">${ic('estrela')}</span><span class="txt"><span class="t">${esc(l.nome)}</span><span class="m" style="display:block">${esc(l.nota)}</span></span></button></div>`).join('')}</div>` : '');
@@ -1637,7 +1704,7 @@ function atualizarDicasDoItem(x){
 /* ===================== Acesso obrigatório (login) e carregamento do catálogo ===================== */
 const gateEl = document.getElementById('gate');
 let appIniciado = false, carregandoCatalogo = false, modoGate = 'entrar';
-const VERSAO_APP = 'v126';
+const VERSAO_APP = 'v128';
 function gateHtml(corpo){ return `<div class="gate-in"><img class="logo-g" src="img/logo.svg" alt="cvdcloud">${corpo}</div>`; }
 const LOADER = '<div class="loader-linha" role="status" aria-label="Carregando"></div>';
 function gateMostrar(html){ document.body.classList.add('gate-on'); gateEl.innerHTML = gateHtml(html); }
@@ -1669,7 +1736,7 @@ function aplicarCatalogo(c){
   const pi = c.pontas_img || {}; window.CVD_PONTAS_IMG = pi.img; window.CVD_PONTAS_DL = pi.dl; window.CVD_PONTAS_PREV = pi.prev;
 }
 async function carregarEstatico(){
-  for(const a of ['dados.js', 'pontas.js', 'pontas_img.js', 'lupas.js', 'thumbs.js', 'fotos.js', 'posvenda.js']){
+  for(const a of ['dados.js', 'pontas.js', 'pontas_img.js', 'lupas.js', 'acessorios.js', 'thumbs.js', 'fotos.js', 'posvenda.js']){
     await new Promise((ok, er) => { const s = document.createElement('script'); s.src = a + '?' + VERSAO_APP; s.onload = ok; s.onerror = () => er(new Error(a)); document.head.appendChild(s); });
   }
 }
@@ -1719,7 +1786,7 @@ function boot(){
 }
 
 /* ===================== Roteador ===================== */
-const NAV = [['#/','Início','casa','inicio'],['#/tipo/catalogo','Catálogos','livro','catalogo'],['#/procedimentos','Procedim.','dente','proc'],['#/pontas','Pontas','pilula','pontas'],['#/salvos','Salvos','estrela','salvos']];
+const NAV = [['#/','Início','casa','inicio'],['#/tipo/catalogo','Catálogos','livro','catalogo'],['#/procedimentos','Procedim.','dente','proc'],['#/pontas','Pontas','pilula','pontas'],['#/acessorios','Acessórios','cubo','acc'],['#/salvos','Salvos','estrela','salvos']];
 const barEl = document.getElementById('bar'), app = document.getElementById('app'), navEl = document.getElementById('nav');
 let io = null, rotaAnterior = '';
 
@@ -1728,11 +1795,13 @@ function qualNav(a, b){
   if(a==='tipo' && b==='catalogo') return 'catalogo';
   if(a==='procedimentos' || a==='topico') return 'proc';
   if(a==='pontas') return 'pontas';
+  if(a==='acessorios' || (a==='produto' && b==='acessorios')) return 'acc';
   if(a==='salvos') return 'salvos';
   return '';
 }
 function escolherTela(){
   const [, a, b, c] = (location.hash || '#/').split('/');
+  if(a==='acessorios' || (a==='produto' && b==='acessorios')) return telaAcessorios();
   if(a==='produto') return telaProduto(b, c);
   if(a==='lupas') return telaLupas(b);
   if(a==='tipo') return telaTipo(b);
@@ -1935,6 +2004,10 @@ document.addEventListener('click', e=>{
     } return;
   }
   const lnv = t.closest('[data-lfnav]'); if(lnv){ lfPasso(+lnv.dataset.lfnav); return; }
+  const acc = t.closest('[data-acc]'); if(acc){ painelAcessorio(acc.dataset.acc); return; }
+  const anv = t.closest('[data-accnav]'); if(anv){ accPasso(+anv.dataset.accnav); return; }
+  const afo = t.closest('[data-accfoto]'); if(afo){ accVer(+afo.dataset.accfoto); return; }
+  if(t.closest('[data-ac-todas]')){ accBaixarTodas(); return; }
   const lfv = t.closest('[data-lfoto]'); if(lfv){ lfVer(+lfv.dataset.lfoto.split(':')[1]); return; }
   if(t.closest('[data-lf-todas]')){ const it = lfItem(LF.id); if(it){ if(LF.sel.size === it.fotos.n) LF.sel.clear(); else for(let k = 1; k <= it.fotos.n; k++) LF.sel.add(k); lfResumo(); } return; }
   if(t.closest('[data-lf-baixar]')){ lfBaixar(); return; }
@@ -1968,6 +2041,12 @@ document.addEventListener('click', e=>{
   const exc = t.closest('[data-excluir-conta]'); if(exc){ if(!confirm('Excluir a conta de ' + exc.dataset.nome + ' (' + exc.dataset.email + ')? A pessoa perde o acesso na hora. Para liberar de novo, crie a conta outra vez.')) return; CONTA().excluirUsuario(exc.dataset.excluirConta, exc.dataset.email).then(() => { toast('Conta excluída'); carregarAdmin('usuarios'); }).catch(e => toast('Erro: ' + e.message)); return; }
   const us = t.closest('[data-usr]'); if(us){ const [uid, st] = us.dataset.usr.split(':'); CONTA().mudarUsuario(uid, st).then(() => { toast('Atualizado'); carregarAdmin('usuarios'); }).catch(e => toast('Erro: ' + e.message)); return; }
   const fv = t.closest('[data-fav]'); if(fv){ const id = fv.dataset.fav; if(favs.has(id)){ favs.delete(id); toast('Removido dos salvos'); } else { favs.add(id); toast('Salvo'); } salvarFavs(); fecharPainel(); if(location.hash==='#/salvos') render(); return; }
+  const tvb = t.closest('[data-tvver]');
+  if(tvb){
+    const x = TODOS[tvb.dataset.tvid], vp = painel.querySelector('video');
+    if(x && vp){ const loop = vp.loop; vp.src = tvb.dataset.tvver === 'tv' ? x.tv : srcVid(x); vp.load(); vp.loop = loop; vp.play().catch(() => {}); painel.querySelectorAll('[data-tvver]').forEach(b => b.classList.toggle('on', b === tvb)); }
+    return;
+  }
   const atl = t.closest('[data-admin-atualizar]');
   if(atl){
     const C = CONTA(); if(C && C.limparCache) C.limparCache();

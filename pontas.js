@@ -307,12 +307,34 @@ window.CVD_PONTAS = [
      },
      {
       "cod": [
+       "T0TC"
+      ],
+      "linhas": [
+       [
+        "Raspagem supragengival (sem diamante)",
+        ""
+       ]
+      ]
+     },
+     {
+      "cod": [
        "T0U-2"
       ],
       "linhas": [
        [
         "Raspagem delicada na região de furca (com diamante)",
         "3"
+       ]
+      ]
+     },
+     {
+      "cod": [
+       "T0UX"
+      ],
+      "linhas": [
+       [
+        "Raspagem interproximal supra e subgengival delicada (com diamante)",
+        ""
        ]
       ]
      },
@@ -335,6 +357,28 @@ window.CVD_PONTAS = [
        [
         "Raspagem na região de furca",
         "3"
+       ]
+      ]
+     },
+     {
+      "cod": [
+       "T1UX"
+      ],
+      "linhas": [
+       [
+        "Raspagem sub e supragengival (com diamante)",
+        ""
+       ]
+      ]
+     },
+     {
+      "cod": [
+       "TR1U-SD"
+      ],
+      "linhas": [
+       [
+        "Raspagem supra e subgengival com diamante apenas nas laterais",
+        ""
        ]
       ]
      },
@@ -1339,6 +1383,17 @@ window.CVD_PONTAS = [
      },
      {
       "cod": [
+       "T0TC"
+      ],
+      "linhas": [
+       [
+        "Raspagem supragengival (sem diamante)",
+        ""
+       ]
+      ]
+     },
+     {
+      "cod": [
        "T1T"
       ],
       "linhas": [
@@ -1433,6 +1488,17 @@ window.CVD_PONTAS = [
        [
         "Raspagem subgengival (com diamante)",
         "30%"
+       ]
+      ]
+     },
+     {
+      "cod": [
+       "T1UX"
+      ],
+      "linhas": [
+       [
+        "Raspagem sub e supragengival (com diamante)",
+        ""
        ]
       ]
      },
@@ -2511,6 +2577,17 @@ window.CVD_PONTAS = [
      },
      {
       "cod": [
+       "T0TC"
+      ],
+      "linhas": [
+       [
+        "Raspagem supragengival (sem diamante)",
+        ""
+       ]
+      ]
+     },
+     {
+      "cod": [
        "T1T"
       ],
       "linhas": [
@@ -2605,6 +2682,17 @@ window.CVD_PONTAS = [
        [
         "Raspagem subgengival (com diamante)",
         "30%"
+       ]
+      ]
+     },
+     {
+      "cod": [
+       "T1UX"
+      ],
+      "linhas": [
+       [
+        "Raspagem sub e supragengival (com diamante)",
+        ""
        ]
       ]
      },
@@ -2747,6 +2835,17 @@ window.CVD_PONTAS = [
      },
      {
       "cod": [
+       "SCR7"
+      ],
+      "linhas": [
+       [
+        "Limpeza de alvéolos",
+        ""
+       ]
+      ]
+     },
+     {
+      "cod": [
        "SE1"
       ],
       "linhas": [
@@ -2786,6 +2885,21 @@ window.CVD_PONTAS = [
        [
         "Osteotomia e Ostectomia",
         "Cortical"
+       ]
+      ]
+     },
+     {
+      "cod": [
+       "SF2"
+      ],
+      "linhas": [
+       [
+        "Perfuração óssea",
+        ""
+       ],
+       [
+        "Possui 3,5 mm de profundidade de área ativa",
+        ""
        ]
       ]
      },
@@ -2890,6 +3004,21 @@ window.CVD_PONTAS = [
      },
      {
       "cod": [
+       "SFR3"
+      ],
+      "linhas": [
+       [
+        "Osteotomia e Ostectomia",
+        ""
+       ],
+       [
+        "Possui marcação a laser para controle de profundidade",
+        ""
+       ]
+      ]
+     },
+     {
+      "cod": [
        "SFR4"
       ],
       "linhas": [
@@ -2907,6 +3036,32 @@ window.CVD_PONTAS = [
        [
         "Osteotomia e Ostectomia",
         "Cortical"
+       ]
+      ]
+     },
+     {
+      "cod": [
+       "SFR43"
+      ],
+      "linhas": [
+       [
+        "Osteotomia e Ostectomia em locais de difícil acesso",
+        ""
+       ]
+      ]
+     },
+     {
+      "cod": [
+       "SFR5"
+      ],
+      "linhas": [
+       [
+        "Osteotomia e Ostectomia",
+        ""
+       ],
+       [
+        "Possui marcação a laser para controle de profundidade",
+        ""
        ]
       ]
      },
@@ -2979,6 +3134,28 @@ window.CVD_PONTAS = [
      },
      {
       "cod": [
+       "SL2"
+      ],
+      "linhas": [
+       [
+        "Osteotomia e Ostectomia próxima a tecidos moles",
+        ""
+       ]
+      ]
+     },
+     {
+      "cod": [
+       "SL3G"
+      ],
+      "linhas": [
+       [
+        "Raspagem e regularização da superfície óssea",
+        ""
+       ]
+      ]
+     },
+     {
+      "cod": [
        "SLO-2"
       ],
       "linhas": [
@@ -3004,6 +3181,21 @@ window.CVD_PONTAS = [
        [
         "Descolamento da membrana sinusal",
         "Membrana"
+       ]
+      ]
+     },
+     {
+      "cod": [
+       "SR11"
+      ],
+      "linhas": [
+       [
+        "Raspagem e regularização de superfície",
+        ""
+       ],
+       [
+        "Desgaste ósseo / abertura de janela óssea",
+        ""
        ]
       ]
      },
@@ -3037,6 +3229,55 @@ window.CVD_PONTAS = [
        [
         "Perfuração óssea e sinus lift",
         "Cortical"
+       ]
+      ]
+     },
+     {
+      "cod": [
+       "ST10G"
+      ],
+      "linhas": [
+       [
+        "Limpeza de cavitações ósseas",
+        ""
+       ]
+      ]
+     },
+     {
+      "cod": [
+       "ST23"
+      ],
+      "linhas": [
+       [
+        "Perfuração óssea / preparação inicial para colocação de implante",
+        ""
+       ],
+       [
+        "Ponta longa, para perfuração em local de difícil acesso",
+        ""
+       ],
+       [
+        "Possui marcação de profundidade",
+        ""
+       ]
+      ]
+     },
+     {
+      "cod": [
+       "ST33"
+      ],
+      "linhas": [
+       [
+        "Perfuração óssea / preparação inicial para colocação de implante",
+        ""
+       ],
+       [
+        "Ponta longa, para perfuração em local de difícil acesso",
+        ""
+       ],
+       [
+        "Possui marcação de profundidade",
+        ""
        ]
       ]
      },

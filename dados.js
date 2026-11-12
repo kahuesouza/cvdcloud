@@ -1438,6 +1438,8 @@ window.CVD = {
    "mb": 10.4,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-01-sinus-lift-prof-renato-lavezo.mp4",
    "local": "arquivos/procedimentos/proc-01-sinus-lift-prof-renato-lavezo.mp4",
+   "tv": "arquivos/procedimentos/tv/proc-01-sinus-lift-prof-renato-lavezo.mp4",
+   "tvMb": 29.0,
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-01-sinus-lift-prof-renato-lavezo.mp4",
    "topico": "sinus-lift",
    "pontas": [
@@ -1451,6 +1453,8 @@ window.CVD = {
    "mb": 3.5,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-02-descolamento-da-membrana-sinusal-prof-renato-lavezo.mp4",
    "local": "arquivos/procedimentos/proc-02-descolamento-da-membrana-sinusal-prof-renato-lavezo.mp4",
+   "tv": "arquivos/procedimentos/tv/proc-02-descolamento-da-membrana-sinusal-prof-renato-lavezo.mp4",
+   "tvMb": 5.3,
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-02-descolamento-da-membrana-sinusal-prof-renato-lavezo.mp4",
    "topico": "sinus-lift"
   },
@@ -1541,6 +1545,8 @@ window.CVD = {
    "mb": 6.2,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-08-descolamento.mp4",
    "local": "arquivos/procedimentos/proc-08-descolamento.mp4",
+   "tv": "arquivos/procedimentos/tv/proc-08-descolamento.mp4",
+   "tvMb": 2.6,
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-08-descolamento.mp4",
    "topico": "descolamento",
    "esps": [
@@ -1659,6 +1665,8 @@ window.CVD = {
    "mb": 6.3,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-18-compactacao-da-guta-percha.mp4",
    "local": "arquivos/procedimentos/proc-18-compactacao-da-guta-percha.mp4",
+   "tv": "arquivos/procedimentos/tv/proc-18-compactacao-da-guta-percha.mp4",
+   "tvMb": 6.8,
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-18-compactacao-da-guta-percha.mp4",
    "topico": "guta-percha",
    "pontas": [
@@ -1672,6 +1680,8 @@ window.CVD = {
    "mb": 7.3,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-19-remocao-de-guta-percha-para-pino-de-fibra.mp4",
    "local": "arquivos/procedimentos/proc-19-remocao-de-guta-percha-para-pino-de-fibra.mp4",
+   "tv": "arquivos/procedimentos/tv/proc-19-remocao-de-guta-percha-para-pino-de-fibra.mp4",
+   "tvMb": 7.5,
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-19-remocao-de-guta-percha-para-pino-de-fibra.mp4",
    "topico": "guta-percha",
    "pontas": [
@@ -1684,6 +1694,8 @@ window.CVD = {
    "mb": 9,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-20-remocao-de-pino.mp4",
    "local": "arquivos/procedimentos/proc-20-remocao-de-pino.mp4",
+   "tv": "arquivos/procedimentos/tv/proc-20-remocao-de-pino.mp4",
+   "tvMb": 10.4,
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-20-remocao-de-pino.mp4",
    "topico": "pinos"
   },
@@ -1785,6 +1797,8 @@ window.CVD = {
    "mb": 9.3,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-29-preparo-interproximal.mp4",
    "local": "arquivos/procedimentos/proc-29-preparo-interproximal.mp4",
+   "tv": "arquivos/procedimentos/tv/proc-29-preparo-interproximal.mp4",
+   "tvMb": 12.2,
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-29-preparo-interproximal.mp4",
    "topico": "preparo-termino"
   },
@@ -1804,6 +1818,8 @@ window.CVD = {
    "mb": 7.3,
    "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-31-slice.mp4",
    "local": "arquivos/procedimentos/proc-31-slice.mp4",
+   "tv": "arquivos/procedimentos/tv/proc-31-slice.mp4",
+   "tvMb": 6.6,
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-31-slice.mp4",
    "topico": "slice"
   },
@@ -3599,5 +3615,5 @@ window.CVD = {
    "nome": "Demonstrações e casos clínicos"
   }
  ],
- "rev": 1793803527402
+ "rev": 1794520124073
 };
