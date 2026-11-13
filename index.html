@@ -432,7 +432,7 @@ function prepararDados(){
   D = window.CVD;
   if(OCULTOS.urls.length){ const oc = new Set(OCULTOS.urls); D.materiais = D.materiais.filter(m => !oc.has(m.url)); D.procedimentos = D.procedimentos.filter(p => !oc.has(p.url)); }
   D.materiais = D.materiais.filter(m => !(siteEmpresaUrl(m.url) && m.produto !== 'lupas'));   // pontas e equipamentos nunca levam ao site da empresa
-  ACC = window.CVD_ACESSORIOS || null; BRO = window.CVD_BROCAS || null;
+  ACC = window.CVD_ACESSORIOS || null; BRO = window.CVD_BROCAS || null; COAT = window.CVD_COATING || null;
   [[ACC, 'acessorios'], [BRO, 'brocas']].forEach(([D0, dir]) => D0 && D0.grupos.forEach(g => g.itens.forEach(it => { it.dir = dir; })));
   PONTAS = window.CVD_PONTAS || []; IMGP = window.CVD_PONTAS_IMG || {}; LUPAS = window.CVD_LUPAS;
   THUMBS = window.CVD_THUMBS || {}; FOT = (window.CVD_FOTOS || {}).equip || {};
@@ -584,6 +584,7 @@ function telaInicio(){
       ${linkRow('#/posvenda','chave','Pós-venda','Instalar e usar')}
       ${linkRow('#/clips','tv','CVD Clips Pro','Modo TV')}
       ${linkRow('#/tipo/comparativo','tabela','Tabela Comparativa dos Piezos',cont('comparativo'))}
+      ${linkRow('#/coating','cubo','CVDcoating','Fotos, vídeos e logos')}
       ${linkRow('#/marketing','mega','Marketing e treinamentos')}
       ${linkRow('#/marca','estrela','Logos, selos e marca')}
     </div>
@@ -858,6 +859,31 @@ async function accBaixarTodas(){
     salvarBlob(montarZip(dados), `${it.id}-fotos.zip`); toast(`${it.n} fotos baixadas`);
   }catch(e){ toast('Não foi possível baixar. Tente de novo'); }
   ACCS.busy = false; if(b){ b.disabled = false; b.innerHTML = rot; }
+}
+/* ---------- CVDcoating: fotos, vídeos, logos e arquivos (área própria) ---------- */
+let COAT = null;
+const coatItem = id => { let r = null; (COAT ? COAT.grupos : []).forEach(g => g.itens.forEach(x => { if(x.id === id) r = x; })); return r; };
+function telaCoating(){
+  if(!COAT) return telaInicio();
+  const total = COAT.grupos.reduce((s, g) => s + g.itens.length, 0);
+  const cards = g => `<div class="grade">${g.itens.map((it, i) => it.tipo === 'arq'
+      ? `<a class="cartao anima" style="--i:${i}" href="${esc(it.url)}" download><span class="im"><span class="ext">${esc(it.ext.toUpperCase())}</span></span><b>${esc(it.nome)}</b><small>${esc(it.ext.toUpperCase())} · ${fmtTam(it.mb)}</small></a>`
+      : `<button class="cartao anima" style="--i:${i}" data-coat="${esc(it.id)}"><span class="im"><img loading="lazy" src="img/coating/t/${esc(it.id)}.webp" alt="${esc(it.nome)}">${it.tipo === 'video' ? `<span class="ext">VÍDEO</span>` : ''}</span><b>${esc(it.nome)}</b><small>${it.tipo === 'video' ? 'Vídeo' : 'Imagem'} · ${fmtTam(it.mb)}</small></button>`).join('')}</div>`;
+  return { titulo: 'CVDcoating', voltar: '#/', corpo: largo('CVDcoating', `${total} arquivos: fotos, vídeos, logos e fundos. Toque para ver e baixar.`)
+    + COAT.grupos.map(g => secao(g.nome, g.itens.length) + cards(g)).join('') };
+}
+function painelCoating(id){
+  const it = coatItem(id); if(!it) return;
+  if(it.tipo === 'video'){
+    abrirPainel(`<div class="player"><video controls playsinline preload="metadata" poster="img/coating/v/${esc(it.id)}.webp" src="${esc(it.url)}"></video></div>
+      <h3 style="margin-top:14px">${esc(it.nome)}</h3><p class="sub">Vídeo · ${fmtTam(it.mb)}</p>
+      <div class="botoes">${btnLoop()}<a class="btn prim" href="${esc(it.url)}" download data-dl="coating" data-mb="${it.mb}">${ic('download')}Baixar vídeo <small>${fmtTam(it.mb)}</small></a></div>`);
+    iniciarLoop();
+    return;
+  }
+  abrirPainel(`<div class="img-g" style="background:#fff"><img src="img/coating/v/${esc(it.id)}.webp" alt="${esc(it.nome)}" decoding="async" onerror="this.onerror=null;this.src='${esc(it.url)}'"></div>
+    <h3 style="margin-top:14px">${esc(it.nome)}</h3><p class="sub">Imagem · ${fmtTam(it.mb)} · arquivo original (PNG/JPG)</p>
+    <div class="botoes"><a class="btn prim" href="${esc(it.url)}" download data-dl="coating" data-mb="${it.mb}">${ic('download')}Baixar imagem <small>${fmtTam(it.mb)}</small></a></div>`);
 }
 function telaFotoforos(){
   const g = LUPAS.grupos.find(x=>x.id==='fotoforos'); if(!g) return telaInicio();
@@ -1717,7 +1743,7 @@ function atualizarDicasDoItem(x){
 /* ===================== Acesso obrigatório (login) e carregamento do catálogo ===================== */
 const gateEl = document.getElementById('gate');
 let appIniciado = false, carregandoCatalogo = false, modoGate = 'entrar';
-const VERSAO_APP = 'v129';
+const VERSAO_APP = 'v130';
 function gateHtml(corpo){ return `<div class="gate-in"><img class="logo-g" src="img/logo.svg" alt="cvdcloud">${corpo}</div>`; }
 const LOADER = '<div class="loader-linha" role="status" aria-label="Carregando"></div>';
 function gateMostrar(html){ document.body.classList.add('gate-on'); gateEl.innerHTML = gateHtml(html); }
@@ -1749,7 +1775,7 @@ function aplicarCatalogo(c){
   const pi = c.pontas_img || {}; window.CVD_PONTAS_IMG = pi.img; window.CVD_PONTAS_DL = pi.dl; window.CVD_PONTAS_PREV = pi.prev;
 }
 async function carregarEstatico(){
-  for(const a of ['dados.js', 'pontas.js', 'pontas_img.js', 'lupas.js', 'acessorios.js', 'brocas.js', 'thumbs.js', 'fotos.js', 'posvenda.js']){
+  for(const a of ['dados.js', 'pontas.js', 'pontas_img.js', 'lupas.js', 'acessorios.js', 'brocas.js', 'coating.js', 'thumbs.js', 'fotos.js', 'posvenda.js']){
     await new Promise((ok, er) => { const s = document.createElement('script'); s.src = a + '?' + VERSAO_APP; s.onload = ok; s.onerror = () => er(new Error(a)); document.head.appendChild(s); });
   }
 }
@@ -1816,6 +1842,7 @@ function escolherTela(){
   const [, a, b, c] = (location.hash || '#/').split('/');
   if(a==='acessorios' || (a==='produto' && b==='acessorios')) return telaAcessorios();
   if(a==='brocas' || (a==='produto' && b==='brocas')) return telaBrocas();
+  if(a==='coating') return telaCoating();
   if(a==='produto') return telaProduto(b, c);
   if(a==='lupas') return telaLupas(b);
   if(a==='tipo') return telaTipo(b);
@@ -2019,6 +2046,7 @@ document.addEventListener('click', e=>{
   }
   const lnv = t.closest('[data-lfnav]'); if(lnv){ lfPasso(+lnv.dataset.lfnav); return; }
   const acc = t.closest('[data-acc]'); if(acc){ painelAcessorio(acc.dataset.acc); return; }
+  const coat = t.closest('[data-coat]'); if(coat){ painelCoating(coat.dataset.coat); return; }
   const anv = t.closest('[data-accnav]'); if(anv){ accPasso(+anv.dataset.accnav); return; }
   const afo = t.closest('[data-accfoto]'); if(afo){ accVer(+afo.dataset.accfoto); return; }
   if(t.closest('[data-ac-todas]')){ accBaixarTodas(); return; }
