@@ -432,7 +432,9 @@ function prepararDados(){
   D = window.CVD;
   if(OCULTOS.urls.length){ const oc = new Set(OCULTOS.urls); D.materiais = D.materiais.filter(m => !oc.has(m.url)); D.procedimentos = D.procedimentos.filter(p => !oc.has(p.url)); }
   D.materiais = D.materiais.filter(m => !(siteEmpresaUrl(m.url) && m.produto !== 'lupas'));   // pontas e equipamentos nunca levam ao site da empresa
-  ACC = window.CVD_ACESSORIOS || null; PONTAS = window.CVD_PONTAS || []; IMGP = window.CVD_PONTAS_IMG || {}; LUPAS = window.CVD_LUPAS;
+  ACC = window.CVD_ACESSORIOS || null; BRO = window.CVD_BROCAS || null;
+  [[ACC, 'acessorios'], [BRO, 'brocas']].forEach(([D0, dir]) => D0 && D0.grupos.forEach(g => g.itens.forEach(it => { it.dir = dir; })));
+  PONTAS = window.CVD_PONTAS || []; IMGP = window.CVD_PONTAS_IMG || {}; LUPAS = window.CVD_LUPAS;
   THUMBS = window.CVD_THUMBS || {}; FOT = (window.CVD_FOTOS || {}).equip || {};
   D.materiais.forEach((m,i)=> m.id = 'm'+i);
   FAM = {}; D.materiais.forEach(m=>{ if(m.familia){ (FAM[m.familia] = FAM[m.familia] || {})[m.idioma || 'pt'] = m; } });
@@ -548,7 +550,7 @@ function telaInicio(){
     prodCard('#/lupas', `<img src="img/home-lupas.webp" alt="">`, 'Lupas', 'Flip, TTL e armações', 3, 'escuro'),
     prodCard('#/produto/fotoforos', `<img src="img/home-fotoforos.webp" alt="">`, 'Fotóforos', 'Iluminação LED', 4, 'escuro'),
   ].join('');
-  const outros = D.produtos.filter(p=>!p.img && p.id!=='lupas' && p.id!=='brocas');
+  const outros = D.produtos.filter(p=>!p.img && p.id!=='lupas');
   const novos = D.materiais.filter(m=>m.novo && doPt(m));
   const nPontasEq = e => e.modos.reduce((a,m)=>a+m.pontas.length,0);
   const totalPontas = PONTAS.reduce((a,e)=>a+nPontasEq(e),0);
@@ -787,18 +789,27 @@ function trocarFotoModelo(id, i){
   document.querySelectorAll('.mf-mini').forEach(b => b.classList.toggle('on', b.dataset.mfoto === id + ':' + i));
 }
 /* ---------- Acessórios (fotos e textos do site, hospedados no app) ---------- */
-let ACC = null;
+let ACC = null, BRO = null;
 const ACCS = { id: '', atual: 1, busy: false };
-const accItem = id => { let r = null; (ACC ? ACC.grupos : []).forEach(g => g.itens.forEach(x => { if(x.id === id) r = x; })); return r; };
-const accFull = (it, i) => `arquivos/acessorios/${it.id}/${i}.jpg`;                  // foto completa (download / compartilhar)
-const accVista = (it, i) => `img/acessorios/v/${it.id}-${i}.webp`;                   // versão leve para ver no celular
-const accMini = (it, i) => `img/acessorios/t/${it.id}-${i}.webp`;
+const accItem = id => { let r = null; [ACC, BRO].forEach(D0 => (D0 ? D0.grupos : []).forEach(g => g.itens.forEach(x => { if(x.id === id) r = x; }))); return r; };
+const accFull = (it, i) => `arquivos/${it.dir}/${it.id}/${i}.jpg`;                  // foto completa (download / compartilhar)
+const accVista = (it, i) => `img/${it.dir}/v/${it.id}-${i}.webp`;                   // versão leve para ver no celular
+const accMini = (it, i) => `img/${it.dir}/t/${it.id}-${i}.webp`;
 const accCache = new Map();
 function accPre(it, i){ const n = it.n; i = ((i - 1 + n) % n) + 1; const u = accVista(it, i); if(!accCache.has(u)){ const im = new Image(); im.decoding = 'async'; im.src = u; accCache.set(u, im); } return accCache.get(u); }
+const accCards = g => `<div class="grade">${g.itens.map((it, i) => `<button class="cartao anima" style="--i:${i}" data-acc="${esc(it.id)}"><span class="im"><img loading="lazy" src="img/${it.dir}/${esc(it.id)}.webp" alt="${esc(it.nome)}"></span><b>${esc(it.nome)}</b><small>${esc(it.compat)}</small></button>`).join('')}</div>`;
+function telaBrocas(){
+  if(!BRO) return telaInicio();
+  const total = BRO.grupos.reduce((s, g) => s + g.itens.length, 0);
+  const docs = D.materiais.filter(m => m.produto === 'brocas');
+  return { titulo: 'Brocas', voltar: '#/', corpo: largo('Brocas', `${total} brocas de rotação com diamante CVDentus®. Toque para ver as imagens e baixar.`)
+    + BRO.grupos.map(g => secao(g.nome, g.itens.length) + `<p style="color:var(--sub);font-size:13.5px;margin:6px 0 0">${esc(g.sub)}</p>` + accCards(g)).join('')
+    + (docs.length ? secao('Catálogos de brocas') + lista(docs) : '') };
+}
 function telaAcessorios(){
   if(!ACC) return telaInicio();
   const total = ACC.grupos.reduce((s, g) => s + g.itens.length, 0);
-  const cards = g => `<div class="grade">${g.itens.map((it, i) => `<button class="cartao anima" style="--i:${i}" data-acc="${esc(it.id)}"><span class="im"><img loading="lazy" src="img/acessorios/${esc(it.id)}.webp" alt="${esc(it.nome)}"></span><b>${esc(it.nome)}</b><small>${esc(it.compat)}</small></button>`).join('')}</div>`;
+  const cards = accCards;
   const docs = D.materiais.filter(m => m.produto === 'acessorios');
   return { titulo: 'Acessórios', voltar: '#/', corpo: largo('Acessórios', `${total} itens para os equipamentos. Toque para ver as fotos e baixar.`)
     + ACC.grupos.map(g => secao(g.nome, g.itens.length) + `<p style="color:var(--sub);font-size:13.5px;margin:6px 0 0">${esc(g.sub)}</p>` + cards(g)).join('')
@@ -807,14 +818,14 @@ function telaAcessorios(){
 function painelAcessorio(id){
   const it = accItem(id); if(!it) return; ACCS.id = id; ACCS.atual = 1; const n = it.n;
   const nav = n > 1 ? `<button class="lf-nav lf-prev" data-accnav="-1" aria-label="Foto anterior">${ic('seta')}</button><button class="lf-nav lf-next" data-accnav="1" aria-label="Próxima foto">${ic('seta')}</button><span class="lf-cont" id="ac-cont">1 / ${n}</span>` : '';
-  abrirPainel(`<div class="img-g lf-grande" id="ac-box"><img id="ac-img" src="${esc(accVista(it, 1))}" alt="${esc(it.nome)}" decoding="async" onerror="this.onerror=function(){this.onerror=null;this.src='img/acessorios/${esc(it.id)}.webp'};this.src='${esc(accFull(it, 1))}'">${nav}</div>
+  abrirPainel(`<div class="img-g lf-grande" id="ac-box"><img id="ac-img" src="${esc(accVista(it, 1))}" alt="${esc(it.nome)}" decoding="async" onerror="this.onerror=function(){this.onerror=null;this.src='img/${it.dir}/${esc(it.id)}.webp'};this.src='${esc(accFull(it, 1))}'">${nav}</div>
     <h3 style="margin-top:14px">${esc(it.nome)}</h3><p class="sub">${esc(it.compat)}</p>
     <p style="color:var(--sub);font-size:14px;line-height:1.55;margin:8px 0 0">${esc(it.desc)}</p>
     ${n > 1 ? `<div class="mf-tiras" role="list">${Array.from({ length: n }, (_, k) => k + 1).map(i => `<button class="mf-mini${i === 1 ? ' on' : ''}" role="listitem" data-accfoto="${i}" aria-label="Ver foto ${i}"><img loading="lazy" alt="" src="${esc(accMini(it, i))}"></button>`).join('')}</div>` : ''}
     <div class="botoes">
       <a class="btn prim" id="ac-dl" href="${esc(accFull(it, 1))}" download="${esc(it.id)}-01.jpg" data-dl="acessorio" data-mb="0.2">${ic('download')}Baixar esta foto</a>
       ${n > 1 ? `<button class="btn sec" id="ac-todas" data-ac-todas>${ic('download')}Baixar as ${n} fotos (.zip)</button>` : ''}
-      ${btnComp(it.nome + ' · ' + it.compat, absUrl(accFull(it, 1)), absUrl(accFull(it, 1)), 'Foto', 0.2, 'Compartilhar esta foto', 'img/acessorios/' + it.id + '.webp').replace('<button ', '<button id="ac-comp" ')}
+      ${btnComp(it.nome + ' · ' + it.compat, absUrl(accFull(it, 1)), absUrl(accFull(it, 1)), 'Foto', 0.2, 'Compartilhar esta foto', 'img/' + it.dir + '/' + it.id + '.webp').replace('<button ', '<button id="ac-comp" ')}
     </div>`);
   const bx = document.getElementById('ac-box');
   if(bx && n > 1){ let x0 = null, y0 = 0;
@@ -829,7 +840,7 @@ function accVer(i){
     if(im.complete && im.naturalWidth) mostrar(); else if(im.decode) im.decode().then(mostrar, mostrar); else im.onload = mostrar;   // troca só quando já dá pra mostrar: sem piscar
   }
   const dl = document.getElementById('ac-dl'); if(dl){ dl.href = u; dl.setAttribute('download', `${it.id}-${String(i).padStart(2, '0')}.jpg`); }
-  const cp = document.getElementById('ac-comp'); if(cp) cp.dataset.compGen = JSON.stringify({ t: it.nome + ' · ' + it.compat, u: absUrl(u), d: absUrl(u), tp: 'Foto', mb: 0.2, th: 'img/acessorios/' + it.id + '.webp' });
+  const cp = document.getElementById('ac-comp'); if(cp) cp.dataset.compGen = JSON.stringify({ t: it.nome + ' · ' + it.compat, u: absUrl(u), d: absUrl(u), tp: 'Foto', mb: 0.2, th: 'img/' + it.dir + '/' + it.id + '.webp' });
   document.querySelectorAll('[data-accfoto]').forEach(b => b.classList.toggle('on', +b.dataset.accfoto === i));
   const ct = document.getElementById('ac-cont'); if(ct) ct.textContent = `${i} / ${it.n}`;
   accPre(it, i + 1); accPre(it, i - 1);
@@ -1376,10 +1387,12 @@ function resultadosBusca(q){
   const modl = (LUPAS.modelos||[]).filter(x=>casa([x.codigo,x.linha,x.tipo,x.mags,'lupa modelo codigo'].join(' ')));
   const pt = resultadosPontas(termos);
   const acs = []; (ACC ? ACC.grupos : []).forEach(g => g.itens.forEach(it => { if(casa([it.nome, it.compat, it.desc, g.nome, 'acessorio acessorios'].join(' '))) acs.push(it); }));
-  if(!mats.length && !procs.length && !lup.length && !logos.length && !pt.n && !modl.length && !acs.length) return vazio(`Nada encontrado para “${esc(q)}”.`);
+  const bro = []; (BRO ? BRO.grupos : []).forEach(g => g.itens.forEach(it => { if(casa([it.nome, it.compat, it.desc, g.nome, 'broca brocas rotacao'].join(' '))) bro.push(it); }));
+  if(!mats.length && !procs.length && !lup.length && !logos.length && !pt.n && !modl.length && !acs.length && !bro.length) return vazio(`Nada encontrado para “${esc(q)}”.`);
   return (pt.n ? secao('Pontas (bula)', pt.n) + pt.html.replace(/<div class="sec">.*?<\/div>/g,'') : '')
     + (procs.length ? secao('Procedimentos', procs.length) + lista(procs.slice(0,30),{produto:true}) : '')
     + (mats.length ? secao('Materiais', mats.length) + lista(mats.slice(0,40),{produto:true}) : '')
+    + (bro.length ? secao('Brocas', bro.length) + `<div class="lista">${bro.map(it => `<div class="linha"><button class="abrir" data-acc="${esc(it.id)}"><span class="lead foto"><img src="img/brocas/${esc(it.id)}.webp" alt=""></span><span class="txt"><span class="t">${esc(it.nome)}</span><span class="m" style="display:block">${esc(it.compat)}</span></span></button></div>`).join('')}</div>` : '')
     + (acs.length ? secao('Acessórios', acs.length) + `<div class="lista">${acs.map(it => `<div class="linha"><button class="abrir" data-acc="${esc(it.id)}"><span class="lead foto"><img src="img/acessorios/${esc(it.id)}.webp" alt=""></span><span class="txt"><span class="t">${esc(it.nome)}</span><span class="m" style="display:block">${esc(it.compat)}</span></span></button></div>`).join('')}</div>` : '')
     + (lup.length ? secao('Lupas e fotóforos', lup.length) + `<div class="lista">${lup.map(([g,it])=>`<div class="linha"><button class="abrir" data-lupa="${it.id}"><span class="lead foto"><img src="img/lupas/${it.img}.webp" alt=""></span><span class="txt"><span class="t">${esc(it.nome)}${it.kit?' · '+esc(it.kit):''}</span><span class="m" style="display:block">${esc(g.nome)}</span></span></button></div>`).join('')}</div>` : '')
     + (modl.length ? secao('Lupas por código', modl.length) + `<div class="lista">${modl.map((x,i)=>linhaModelo(x,i)).join('')}</div>` : '')
@@ -1704,7 +1717,7 @@ function atualizarDicasDoItem(x){
 /* ===================== Acesso obrigatório (login) e carregamento do catálogo ===================== */
 const gateEl = document.getElementById('gate');
 let appIniciado = false, carregandoCatalogo = false, modoGate = 'entrar';
-const VERSAO_APP = 'v128';
+const VERSAO_APP = 'v129';
 function gateHtml(corpo){ return `<div class="gate-in"><img class="logo-g" src="img/logo.svg" alt="cvdcloud">${corpo}</div>`; }
 const LOADER = '<div class="loader-linha" role="status" aria-label="Carregando"></div>';
 function gateMostrar(html){ document.body.classList.add('gate-on'); gateEl.innerHTML = gateHtml(html); }
@@ -1736,7 +1749,7 @@ function aplicarCatalogo(c){
   const pi = c.pontas_img || {}; window.CVD_PONTAS_IMG = pi.img; window.CVD_PONTAS_DL = pi.dl; window.CVD_PONTAS_PREV = pi.prev;
 }
 async function carregarEstatico(){
-  for(const a of ['dados.js', 'pontas.js', 'pontas_img.js', 'lupas.js', 'acessorios.js', 'thumbs.js', 'fotos.js', 'posvenda.js']){
+  for(const a of ['dados.js', 'pontas.js', 'pontas_img.js', 'lupas.js', 'acessorios.js', 'brocas.js', 'thumbs.js', 'fotos.js', 'posvenda.js']){
     await new Promise((ok, er) => { const s = document.createElement('script'); s.src = a + '?' + VERSAO_APP; s.onload = ok; s.onerror = () => er(new Error(a)); document.head.appendChild(s); });
   }
 }
@@ -1802,6 +1815,7 @@ function qualNav(a, b){
 function escolherTela(){
   const [, a, b, c] = (location.hash || '#/').split('/');
   if(a==='acessorios' || (a==='produto' && b==='acessorios')) return telaAcessorios();
+  if(a==='brocas' || (a==='produto' && b==='brocas')) return telaBrocas();
   if(a==='produto') return telaProduto(b, c);
   if(a==='lupas') return telaLupas(b);
   if(a==='tipo') return telaTipo(b);
