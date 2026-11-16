@@ -2879,658 +2879,752 @@ window.CVD = {
     "esp": "cirurgia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APM1sX0o88C5I25OPe8obn4/BUCOMAXILOFACIAL/ORTOGNATICA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APM1sX0o88C5I25OPe8obn4/BUCOMAXILOFACIAL/ORTOGNATICA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/cirurgia-ortognatica.webp"
   },
   {
     "titulo": "Rino",
     "esp": "cirurgia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APrwULir7ZeUBC2Ux9IYgwg/CIRURGIA%20PLASTICA/RINO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APrwULir7ZeUBC2Ux9IYgwg/CIRURGIA%20PLASTICA/RINO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/cirurgia-rino.webp"
   },
   {
     "titulo": "Cirurgia do mento",
     "esp": "cirurgia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APjWTKBLoprfY__bgy97HPU/CIRURGIA/CIRURGIA%20DO%20MENTO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APjWTKBLoprfY__bgy97HPU/CIRURGIA/CIRURGIA%20DO%20MENTO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/cirurgia-cirurgia-do-mento.webp"
   },
   {
     "titulo": "Cortes no osso - ds pro",
     "esp": "cirurgia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKPaVsBHAo5TrXkq95LQwc0/CIRURGIA/CORTES%20NO%20OSSO%20-%20DS%20PRO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKPaVsBHAo5TrXkq95LQwc0/CIRURGIA/CORTES%20NO%20OSSO%20-%20DS%20PRO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/cirurgia-cortes-no-osso-ds-pro.webp"
   },
   {
     "titulo": "Descolamento de membrana",
     "esp": "cirurgia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AClbs_-FeSwbypgpmgliN0o/CIRURGIA/DESCOLAMENTO%20DE%20MEMBRANA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AClbs_-FeSwbypgpmgliN0o/CIRURGIA/DESCOLAMENTO%20DE%20MEMBRANA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/cirurgia-descolamento-de-membrana.webp"
   },
   {
     "titulo": "Descolamento gengival",
     "esp": "cirurgia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGOnhSWSmmarGXxh2-GuZ_g/CIRURGIA/DESCOLAMENTO%20GENGIVAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGOnhSWSmmarGXxh2-GuZ_g/CIRURGIA/DESCOLAMENTO%20GENGIVAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/cirurgia-descolamento-gengival.webp"
   },
   {
     "titulo": "Descolamento torus",
     "esp": "cirurgia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJ5fSO9PZ1O9RbSJj3y0mWQ/CIRURGIA/DESCOLAMENTO%20TORUS?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJ5fSO9PZ1O9RbSJj3y0mWQ/CIRURGIA/DESCOLAMENTO%20TORUS?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/cirurgia-descolamento-torus.webp"
   },
   {
     "titulo": "Descortizalização",
     "esp": "cirurgia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACCTP5b9-4VpBHhT6a-iNQ8/CIRURGIA/DESCORTIZALIZA%C3%87%C3%83O?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACCTP5b9-4VpBHhT6a-iNQ8/CIRURGIA/DESCORTIZALIZA%C3%87%C3%83O?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/cirurgia-descortizalizacao.webp"
   },
   {
     "titulo": "Distração osteogênica",
     "esp": "cirurgia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGt9Vx7FZ5PGGeZ0-qir6ow/CIRURGIA/DISTRA%C3%87%C3%83O%20OSTEOG%C3%8ANICA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGt9Vx7FZ5PGGeZ0-qir6ow/CIRURGIA/DISTRA%C3%87%C3%83O%20OSTEOG%C3%8ANICA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/cirurgia-distracao-osteogenica.webp"
   },
   {
     "titulo": "Enxerto ósseo vertical",
     "esp": "cirurgia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKBrRmISnoJPf9Pd_6WvtOU/CIRURGIA/ENXERTO%20%C3%93SSEO%20VERTICAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKBrRmISnoJPf9Pd_6WvtOU/CIRURGIA/ENXERTO%20%C3%93SSEO%20VERTICAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/cirurgia-enxerto-osseo-vertical.webp"
   },
   {
     "titulo": "Escarificação",
     "esp": "cirurgia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AAfTseAZu0zXOTDM80_-1TY/CIRURGIA/Escarifica%C3%A7%C3%A3o?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AAfTseAZu0zXOTDM80_-1TY/CIRURGIA/Escarifica%C3%A7%C3%A3o?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/cirurgia-escarificacao.webp"
   },
   {
     "titulo": "Exodontia",
     "esp": "cirurgia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AIOyXEOHfr_Jgy1MRYgQqhc/CIRURGIA/EXODONTIA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AIOyXEOHfr_Jgy1MRYgQqhc/CIRURGIA/EXODONTIA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/cirurgia-exodontia.webp"
   },
   {
     "titulo": "Exostose",
     "esp": "cirurgia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKxQwocC8BduXuBg3cIgHps/CIRURGIA/EXOSTOSE?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKxQwocC8BduXuBg3cIgHps/CIRURGIA/EXOSTOSE?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/cirurgia-exostose.webp"
   },
   {
     "titulo": "Fracionamento da raiz",
     "esp": "cirurgia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AD3mV9bzDxVdwSL-QJHuNLU/CIRURGIA/FRACIONAMENTO%20DA%20RAIZ?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AD3mV9bzDxVdwSL-QJHuNLU/CIRURGIA/FRACIONAMENTO%20DA%20RAIZ?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/cirurgia-fracionamento-da-raiz.webp"
   },
   {
     "titulo": "Inserção de barra para elevar osso",
     "esp": "cirurgia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALe9G4Qap5lOIiCMJbTFiFU/CIRURGIA/INSER%C3%87%C3%83O%20DE%20BARRA%20PARA%20ELEVAR%20OSSO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALe9G4Qap5lOIiCMJbTFiFU/CIRURGIA/INSER%C3%87%C3%83O%20DE%20BARRA%20PARA%20ELEVAR%20OSSO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/cirurgia-insercao-de-barra-para-elevar-osso.webp"
   },
   {
     "titulo": "Lateralização do nervo alveolar inferior",
     "esp": "cirurgia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ABNawd2ZE39sO52OCR69EvY/CIRURGIA/LATERALIZA%C3%87%C3%83O%20DO%20NERVO%20ALVEOLAR%20INFERIOR?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ABNawd2ZE39sO52OCR69EvY/CIRURGIA/LATERALIZA%C3%87%C3%83O%20DO%20NERVO%20ALVEOLAR%20INFERIOR?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/cirurgia-lateralizacao-do-nervo-alveolar-inferior.webp"
   },
   {
     "titulo": "Levantamento de seio",
     "esp": "cirurgia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFsrId2OA_YLddDf3SiAd0g/CIRURGIA/LEVANTAMENTO%20DE%20SEIO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFsrId2OA_YLddDf3SiAd0g/CIRURGIA/LEVANTAMENTO%20DE%20SEIO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/cirurgia-levantamento-de-seio.webp"
   },
   {
     "titulo": "Levantamento de seio via crista alveolar",
     "esp": "cirurgia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACIfbwY86FRyA4rywGVTFNs/CIRURGIA/LEVANTAMENTO%20DE%20SEIO%20VIA%20CRISTA%20ALVEOLAR?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACIfbwY86FRyA4rywGVTFNs/CIRURGIA/LEVANTAMENTO%20DE%20SEIO%20VIA%20CRISTA%20ALVEOLAR?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/cirurgia-levantamento-de-seio-via-crista-alveolar.webp"
   },
   {
     "titulo": "Acabamento dos limites do preparo para remoção dos prismas de esmalte sem suporte",
     "esp": "dentistica",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APaqc-cHGqzzs9pHIb9Ozfc/DENT%C3%8DSTICA/Acabamento%20dos%20limites%20do%20preparo%20para%20remo%C3%A7%C3%A3o%20dos%20prismas%20de%20esmalte%20sem%20suporte?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APaqc-cHGqzzs9pHIb9Ozfc/DENT%C3%8DSTICA/Acabamento%20dos%20limites%20do%20preparo%20para%20remo%C3%A7%C3%A3o%20dos%20prismas%20de%20esmalte%20sem%20suporte?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/dentistica-acabamento-dos-limites-do-preparo-para-remocao-dos-prismas-.webp"
   },
   {
     "titulo": "Desgaste fino na região intrapapilar, supra e subgengival",
     "esp": "dentistica",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AC8PEsHj-r_8hVryukceQkY/DENT%C3%8DSTICA/DESGASTE%20FINO%20NA%20REGI%C3%83O%20INTRAPAPILAR%2C%20SUPRA%20E%20SUBGENGIVAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AC8PEsHj-r_8hVryukceQkY/DENT%C3%8DSTICA/DESGASTE%20FINO%20NA%20REGI%C3%83O%20INTRAPAPILAR%2C%20SUPRA%20E%20SUBGENGIVAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/dentistica-desgaste-fino-na-regiao-intrapapilar-supra-e-subgengival.webp"
   },
   {
     "titulo": "Limpeza",
     "esp": "dentistica",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALusRlGU8AY-KuJknS5Wgf0/DENT%C3%8DSTICA/LIMPEZA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALusRlGU8AY-KuJknS5Wgf0/DENT%C3%8DSTICA/LIMPEZA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/dentistica-limpeza.webp"
   },
   {
     "titulo": "Preparo cavitário",
     "esp": "dentistica",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALYFtef_B9k7uu9XC68DLe0/DENT%C3%8DSTICA/PREPARO%20CAVIT%C3%81RIO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALYFtef_B9k7uu9XC68DLe0/DENT%C3%8DSTICA/PREPARO%20CAVIT%C3%81RIO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/dentistica-preparo-cavitario.webp"
   },
   {
     "titulo": "Preparo cavitário classe V",
     "esp": "dentistica",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AB4lBlkLib4SwfG3opmzUOo/DENT%C3%8DSTICA/Preparo%20cavit%C3%A1rio%20classe%20V?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AB4lBlkLib4SwfG3opmzUOo/DENT%C3%8DSTICA/Preparo%20cavit%C3%A1rio%20classe%20V?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/dentistica-preparo-cavitario-classe-v.webp"
   },
   {
     "titulo": "Refinamento do preparo",
     "esp": "dentistica",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHVkXczH0KFaaVPl0fd0dgc/DENT%C3%8DSTICA/REFINAMENTO%20DO%20PREPARO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHVkXczH0KFaaVPl0fd0dgc/DENT%C3%8DSTICA/REFINAMENTO%20DO%20PREPARO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/dentistica-refinamento-do-preparo.webp"
   },
   {
     "titulo": "Remoção da parede proximal",
     "esp": "dentistica",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACL4MMmKD_XQf7EN2X1RbyA/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DA%20PAREDE%20PROXIMAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACL4MMmKD_XQf7EN2X1RbyA/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DA%20PAREDE%20PROXIMAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/dentistica-remocao-da-parede-proximal.webp"
   },
   {
     "titulo": "Remoção de amálgama",
     "esp": "dentistica",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AB236MWtCLtiIVcgaHGtN2I/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20AM%C3%81LGAMA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AB236MWtCLtiIVcgaHGtN2I/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20AM%C3%81LGAMA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/dentistica-remocao-de-amalgama.webp"
   },
   {
     "titulo": "Remoção de cárie",
     "esp": "dentistica",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ANpMtvZzv0MHv7hCrLNHE7M/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20C%C3%81RIE?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ANpMtvZzv0MHv7hCrLNHE7M/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20C%C3%81RIE?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/dentistica-remocao-de-carie.webp"
   },
   {
     "titulo": "Remoção de cáries e resina - T1 e R2",
     "esp": "dentistica",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AE-Iz3JJTrv6sOeFvLdZgiw/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20C%C3%81RIES%20E%20RESINA%20-%20T1%20E%20R2?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AE-Iz3JJTrv6sOeFvLdZgiw/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20C%C3%81RIES%20E%20RESINA%20-%20T1%20E%20R2?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/dentistica-remocao-de-caries-e-resina-t1-e-r2.webp"
   },
   {
     "titulo": "Remoção de excessos",
     "esp": "dentistica",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACtFzjQYlMttv6ns4JJi7aE/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20EXCESSOS?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACtFzjQYlMttv6ns4JJi7aE/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20EXCESSOS?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/dentistica-remocao-de-excessos.webp"
   },
   {
     "titulo": "Remoção de pino",
     "esp": "dentistica",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHR2sWyad4NowS5GbEzmPUE/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20PINO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHR2sWyad4NowS5GbEzmPUE/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20PINO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/dentistica-remocao-de-pino.webp"
   },
   {
     "titulo": "Remoção de resina",
     "esp": "dentistica",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AD9ab_URcdvBcKyz8yI-lDs/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20RESINA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AD9ab_URcdvBcKyz8yI-lDs/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20RESINA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/dentistica-remocao-de-resina.webp"
   },
   {
     "titulo": "Remoção de resina composta classe v",
     "esp": "dentistica",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AAvlrtbttap_Ox1epNy1iwM/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20RESINA%20COMPOSTA%20CLASSE%20V?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AAvlrtbttap_Ox1epNy1iwM/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20RESINA%20COMPOSTA%20CLASSE%20V?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/dentistica-remocao-de-resina-composta-classe-v.webp"
   },
   {
     "titulo": "Apicectomia",
     "esp": "endodontia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGIFbdsbnXJTTUkV1aPa57M/ENDODONTIA/Apicectomia?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGIFbdsbnXJTTUkV1aPa57M/ENDODONTIA/Apicectomia?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/endodontia-apicectomia.webp"
   },
   {
     "titulo": "Corte e compatação guta percha",
     "esp": "endodontia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AOgC8NIQXjttRRWEbg_-exM/ENDODONTIA/CORTE%20E%20COMPATA%C3%87%C3%83O%20GUTA%20PERCHA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AOgC8NIQXjttRRWEbg_-exM/ENDODONTIA/CORTE%20E%20COMPATA%C3%87%C3%83O%20GUTA%20PERCHA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/endodontia-corte-e-compatacao-guta-percha.webp"
   },
   {
     "titulo": "Irrigação do conduto - corte guta",
     "esp": "endodontia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AEaqRoscg6fd14t-gGniRxI/ENDODONTIA/IRRIGA%C3%87%C3%83O%20DO%20CONDUTO%20-%20CORTE%20GUTA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AEaqRoscg6fd14t-gGniRxI/ENDODONTIA/IRRIGA%C3%87%C3%83O%20DO%20CONDUTO%20-%20CORTE%20GUTA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/endodontia-irrigacao-do-conduto-corte-guta.webp"
   },
   {
     "titulo": "Limpeza",
     "esp": "endodontia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHSfG9NG3R9FTtThffiqjrY/ENDODONTIA/LIMPEZA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHSfG9NG3R9FTtThffiqjrY/ENDODONTIA/LIMPEZA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/endodontia-limpeza.webp"
   },
   {
     "titulo": "Localização de canal",
     "esp": "endodontia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJ2TrysWNMskBiI3G5DARHc/ENDODONTIA/LOCALIZA%C3%87%C3%83O%20DE%20CANAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJ2TrysWNMskBiI3G5DARHc/ENDODONTIA/LOCALIZA%C3%87%C3%83O%20DE%20CANAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/endodontia-localizacao-de-canal.webp"
   },
   {
     "titulo": "Pólipo pulpar",
     "esp": "endodontia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACIMCUYZOmfVGdS5-qlfNtA/ENDODONTIA/P%C3%93LIPO%20PULPAR?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACIMCUYZOmfVGdS5-qlfNtA/ENDODONTIA/P%C3%93LIPO%20PULPAR?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/endodontia-polipo-pulpar.webp"
   },
   {
     "titulo": "Pui",
     "esp": "endodontia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJU4N9oMUbFhHrFc8HQkn9Q/ENDODONTIA/PUI?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJU4N9oMUbFhHrFc8HQkn9Q/ENDODONTIA/PUI?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/endodontia-pui.webp"
   },
   {
     "titulo": "Remoção de excesso em restauração classe V",
     "esp": "endodontia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AH9nHl1jffmYl8h9bU-YqeU/ENDODONTIA/Remo%C3%A7%C3%A3o%20de%20excesso%20em%20restaura%C3%A7%C3%A3o%20classe%20V?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AH9nHl1jffmYl8h9bU-YqeU/ENDODONTIA/Remo%C3%A7%C3%A3o%20de%20excesso%20em%20restaura%C3%A7%C3%A3o%20classe%20V?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/endodontia-remocao-de-excesso-em-restauracao-classe-v.webp"
   },
   {
     "titulo": "Remoção de núcleo",
     "esp": "endodontia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AEAoSSvp8XHIbICVNDdu1g0/ENDODONTIA/REMO%C3%87%C3%83O%20DE%20N%C3%9ACLEO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AEAoSSvp8XHIbICVNDdu1g0/ENDODONTIA/REMO%C3%87%C3%83O%20DE%20N%C3%9ACLEO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/endodontia-remocao-de-nucleo.webp"
   },
   {
     "titulo": "Remoção de pino",
     "esp": "endodontia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJxcra26rBEituQ16DOflYY/ENDODONTIA/REMO%C3%87%C3%83O%20DE%20PINO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJxcra26rBEituQ16DOflYY/ENDODONTIA/REMO%C3%87%C3%83O%20DE%20PINO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/endodontia-remocao-de-pino.webp"
   },
   {
     "titulo": "Retropreparo",
     "esp": "endodontia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGEbz0If4NqVkIHUDVlAUWM/ENDODONTIA/RETROPREPARO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGEbz0If4NqVkIHUDVlAUWM/ENDODONTIA/RETROPREPARO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/endodontia-retropreparo.webp"
   },
   {
     "titulo": "Implantoplastia",
     "esp": "implante",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALcxTgMARcv69b2UZS1z0sw/IMPLANTE/IMPLANTOPLASTIA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALcxTgMARcv69b2UZS1z0sw/IMPLANTE/IMPLANTOPLASTIA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/implante-implantoplastia.webp"
   },
   {
     "titulo": "Instalação de implantes para protocolo inferior",
     "esp": "implante",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AB-C--SA749O0JUNU3SpYfM/IMPLANTE/INSTALA%C3%87%C3%83O%20DE%20IMPLANTES%20PARA%20PROTOCOLO%20INFERIOR?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AB-C--SA749O0JUNU3SpYfM/IMPLANTE/INSTALA%C3%87%C3%83O%20DE%20IMPLANTES%20PARA%20PROTOCOLO%20INFERIOR?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/implante-instalacao-de-implantes-para-protocolo-inferior.webp"
   },
   {
     "titulo": "Limpeza de implantes",
     "esp": "implante",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AMXd_-jFdz5C9QEyGjyRWuw/IMPLANTE/LIMPEZA%20DE%20IMPLANTES?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AMXd_-jFdz5C9QEyGjyRWuw/IMPLANTE/LIMPEZA%20DE%20IMPLANTES?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/implante-limpeza-de-implantes.webp"
   },
   {
     "titulo": "Perfuração óssea scp",
     "esp": "implante",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFR9rt9hNCdDbAvfurLkQI4/IMPLANTE/PERFURA%C3%87%C3%83O%20%C3%93SSEA%20SCP?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFR9rt9hNCdDbAvfurLkQI4/IMPLANTE/PERFURA%C3%87%C3%83O%20%C3%93SSEA%20SCP?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/implante-perfuracao-ossea-scp.webp"
   },
   {
     "titulo": "Preparação alveolar para implantes",
     "esp": "implante",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AOgMDxlk7UNfJonsloSUkFs/IMPLANTE/PREPARA%C3%87%C3%83O%20ALVEOLAR%20PARA%20IMPLANTES?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AOgMDxlk7UNfJonsloSUkFs/IMPLANTE/PREPARA%C3%87%C3%83O%20ALVEOLAR%20PARA%20IMPLANTES?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/implante-preparacao-alveolar-para-implantes.webp"
   },
   {
     "titulo": "Remoção de implante danificado",
     "esp": "implante",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APKH7bFUMhHWwWuQtyaQ_cA/IMPLANTE/REMO%C3%87%C3%83O%20DE%20IMPLANTE%20DANIFICADO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APKH7bFUMhHWwWuQtyaQ_cA/IMPLANTE/REMO%C3%87%C3%83O%20DE%20IMPLANTE%20DANIFICADO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/implante-remocao-de-implante-danificado.webp"
   },
   {
     "titulo": "Remoção de pinos",
     "esp": "implante",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHP0qnTmlBDkfIG3h5fli7M/IMPLANTE/REMO%C3%87%C3%83O%20DE%20PINOS?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHP0qnTmlBDkfIG3h5fli7M/IMPLANTE/REMO%C3%87%C3%83O%20DE%20PINOS?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/implante-remocao-de-pinos.webp"
   },
   {
     "titulo": "Trefinagem",
     "esp": "implante",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKE9ibR5QoK7KTagKNQc57o/IMPLANTE/TREFINAGEM?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKE9ibR5QoK7KTagKNQc57o/IMPLANTE/TREFINAGEM?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/implante-trefinagem.webp"
   },
   {
     "titulo": "Remoção de Siso",
     "esp": "orto-odontoped",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJET2Wx84YTZ9XxItB4Ed3Y/ODONTOPEDIATRIA/Remo%C3%A7%C3%A3o%20de%20Siso?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJET2Wx84YTZ9XxItB4Ed3Y/ODONTOPEDIATRIA/Remo%C3%A7%C3%A3o%20de%20Siso?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/orto-odontoped-remocao-de-siso.webp"
   },
   {
     "titulo": "VR1T - Extração de Dentes",
     "esp": "orto-odontoped",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJQQiipCCOavsXtLAQR_0zc/ODONTOPEDIATRIA/VR1T%20-%20Extra%C3%A7%C3%A3o%20de%20Dentes?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJQQiipCCOavsXtLAQR_0zc/ODONTOPEDIATRIA/VR1T%20-%20Extra%C3%A7%C3%A3o%20de%20Dentes?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/orto-odontoped-vr1t-extracao-de-dentes.webp"
   },
   {
     "titulo": "Corticotomia",
     "esp": "orto-odontoped",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ADKGiDUkIh-SSwFzojkUw80/ORTODONTIA/CORTICOTOMIA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ADKGiDUkIh-SSwFzojkUw80/ORTODONTIA/CORTICOTOMIA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/orto-odontoped-corticotomia.webp"
   },
   {
     "titulo": "Ipr",
     "esp": "orto-odontoped",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJmaBc84UGxXFbbicZihNJg/ORTODONTIA/IPR?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJmaBc84UGxXFbbicZihNJg/ORTODONTIA/IPR?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/orto-odontoped-ipr.webp"
   },
   {
     "titulo": "Micro osteo perfurações",
     "esp": "orto-odontoped",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AC5shm-h1-CcflTpi_9jCZU/ORTODONTIA/Micro%20osteo%20perfura%C3%A7%C3%B5es?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AC5shm-h1-CcflTpi_9jCZU/ORTODONTIA/Micro%20osteo%20perfura%C3%A7%C3%B5es?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/orto-odontoped-micro-osteo-perfuracoes.webp"
   },
   {
     "titulo": "Remoção de resina pós-bracket",
     "esp": "orto-odontoped",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ANU_FeaBcYtoHJ95hXVSM38/ORTODONTIA/REMO%C3%87%C3%83O%20DE%20RESINA%20P%C3%93S-BRACKET?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ANU_FeaBcYtoHJ95hXVSM38/ORTODONTIA/REMO%C3%87%C3%83O%20DE%20RESINA%20P%C3%93S-BRACKET?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/orto-odontoped-remocao-de-resina-pos-bracket.webp"
   },
   {
     "titulo": "Slice",
     "esp": "orto-odontoped",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALqCDIi5Ig633EMl-l6hJRs/ORTODONTIA/SLICE?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALqCDIi5Ig633EMl-l6hJRs/ORTODONTIA/SLICE?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/orto-odontoped-slice.webp"
   },
   {
     "titulo": "Aumento de Coroa - Ponta CH4M-T",
     "esp": "periodontia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFNpYRgjakBhxEBbSrPvjJQ/PERIODONTIA/Aumento%20de%20Coroa%20-%20Ponta%20CH4M-T?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFNpYRgjakBhxEBbSrPvjJQ/PERIODONTIA/Aumento%20de%20Coroa%20-%20Ponta%20CH4M-T?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/periodontia-aumento-de-coroa-ponta-ch4m-t.webp"
   },
   {
     "titulo": "Aumento de coroa clínica e regularização radicular",
     "esp": "periodontia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHjGMghGLnc2JyGKHDHhS4E/PERIODONTIA/Aumento%20de%20coroa%20cl%C3%ADnica%20e%20regulariza%C3%A7%C3%A3o%20radicular?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHjGMghGLnc2JyGKHDHhS4E/PERIODONTIA/Aumento%20de%20coroa%20cl%C3%ADnica%20e%20regulariza%C3%A7%C3%A3o%20radicular?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/periodontia-aumento-de-coroa-clinica-e-regularizacao-radicular.webp"
   },
   {
     "titulo": "Aumento de coroa em osso espesso",
     "esp": "periodontia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AMOBAt-Yn0E9oZffae9tyJk/PERIODONTIA/AUMENTO%20DE%20COROA%20EM%20OSSO%20ESPESSO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AMOBAt-Yn0E9oZffae9tyJk/PERIODONTIA/AUMENTO%20DE%20COROA%20EM%20OSSO%20ESPESSO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/periodontia-aumento-de-coroa-em-osso-espesso.webp"
   },
   {
     "titulo": "Escarificação",
     "esp": "periodontia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACGmlwj0Dk7rLPRBu4Hp2PY/PERIODONTIA/Escarifica%C3%A7%C3%A3o?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACGmlwj0Dk7rLPRBu4Hp2PY/PERIODONTIA/Escarifica%C3%A7%C3%A3o?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/periodontia-escarificacao.webp"
   },
   {
     "titulo": "Flapless",
     "esp": "periodontia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AMMkG7hPCDPaAPbT072ttkA/PERIODONTIA/Flapless?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AMMkG7hPCDPaAPbT072ttkA/PERIODONTIA/Flapless?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/periodontia-flapless.webp"
   },
   {
     "titulo": "Gengivoplastia com osteotomia",
     "esp": "periodontia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AAF1fIWoblCn3q_R_yjkyEE/PERIODONTIA/GENGIVOPLASTIA%20COM%20OSTEOTOMIA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AAF1fIWoblCn3q_R_yjkyEE/PERIODONTIA/GENGIVOPLASTIA%20COM%20OSTEOTOMIA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/periodontia-gengivoplastia-com-osteotomia.webp"
   },
   {
     "titulo": "Peeling gengival",
     "esp": "periodontia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACjNMYt1w9UZvInrzBXZ-0A/PERIODONTIA/PEELING%20GENGIVAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACjNMYt1w9UZvInrzBXZ-0A/PERIODONTIA/PEELING%20GENGIVAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/periodontia-peeling-gengival.webp"
   },
   {
     "titulo": "Preparo de coroa",
     "esp": "periodontia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AA-gudqmmPFBRSM7F_8H-xw/PERIODONTIA/Preparo%20de%20coroa?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AA-gudqmmPFBRSM7F_8H-xw/PERIODONTIA/Preparo%20de%20coroa?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/periodontia-preparo-de-coroa.webp"
   },
   {
     "titulo": "Profilaxia",
     "esp": "periodontia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ADyW6yrNLF-duEnEaJ9SsdE/PERIODONTIA/PROFILAXIA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ADyW6yrNLF-duEnEaJ9SsdE/PERIODONTIA/PROFILAXIA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/periodontia-profilaxia.webp"
   },
   {
     "titulo": "Raspagem",
     "esp": "periodontia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFFfw_ear-CHRKBlW5wMQ0A/PERIODONTIA/RASPAGEM?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFFfw_ear-CHRKBlW5wMQ0A/PERIODONTIA/RASPAGEM?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/periodontia-raspagem.webp"
   },
   {
     "titulo": "Remoção de cálculo com T1U-2",
     "esp": "periodontia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJ49OQUp8uthlSTyC6thtFA/PERIODONTIA/Remo%C3%A7%C3%A3o%20de%20c%C3%A1lculo%20com%20T1U-2?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJ49OQUp8uthlSTyC6thtFA/PERIODONTIA/Remo%C3%A7%C3%A3o%20de%20c%C3%A1lculo%20com%20T1U-2?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/periodontia-remocao-de-calculo-com-t1u-2.webp"
   },
   {
     "titulo": "Remoção de tártaro",
     "esp": "periodontia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGVvuhSI-vKublSo-3lsMNA/PERIODONTIA/Remo%C3%A7%C3%A3o%20de%20t%C3%A1rtaro?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGVvuhSI-vKublSo-3lsMNA/PERIODONTIA/Remo%C3%A7%C3%A3o%20de%20t%C3%A1rtaro?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/periodontia-remocao-de-tartaro.webp"
   },
   {
     "titulo": "Slice",
     "esp": "periodontia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFOkbOOsCb1OMRqafMS133A/PERIODONTIA/SLICE?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFOkbOOsCb1OMRqafMS133A/PERIODONTIA/SLICE?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/periodontia-slice.webp"
   },
   {
     "titulo": "T1T-P limpeza Implante",
     "esp": "periodontia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKx7HuI5Vtny1KtzMi9LJfY/PERIODONTIA/T1T-P%20limpeza%20Implante?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKx7HuI5Vtny1KtzMi9LJfY/PERIODONTIA/T1T-P%20limpeza%20Implante?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/periodontia-t1t-p-limpeza-implante.webp"
   },
   {
     "titulo": "Técnica bopt",
     "esp": "periodontia",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFzjXvzVFAP02E7Yriu6NIs/PERIODONTIA/T%C3%89CNICA%20BOPT?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFzjXvzVFAP02E7Yriu6NIs/PERIODONTIA/T%C3%89CNICA%20BOPT?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/periodontia-tecnica-bopt.webp"
   },
   {
     "titulo": "Acabamento Cervical de Restauros em Resina Composta",
     "esp": "dentistica",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APyOBeYid5Ef2Y-QMW4RXuA/PR%C3%93TESE/Acabamento%20Cervical%20de%20Restauros%20em%20Resina%20Composta?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APyOBeYid5Ef2Y-QMW4RXuA/PR%C3%93TESE/Acabamento%20Cervical%20de%20Restauros%20em%20Resina%20Composta?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/dentistica-acabamento-cervical-de-restauros-em-resina-composta.webp"
   },
   {
     "titulo": "Acabamento dos limites do preparo (prótese)",
     "esp": "dentistica",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACG6-CUjeB5YIBQrYmqXbOU/PR%C3%93TESE/Acabamento%20dos%20limites%20do%20preparo%20para%20remo%C3%A7%C3%A3o%20dos%20prismas%20de%20esmalte%20sem%20suporte?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACG6-CUjeB5YIBQrYmqXbOU/PR%C3%93TESE/Acabamento%20dos%20limites%20do%20preparo%20para%20remo%C3%A7%C3%A3o%20dos%20prismas%20de%20esmalte%20sem%20suporte?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/dentistica-acabamento-dos-limites-do-preparo-protese.webp"
   },
   {
     "titulo": "Bopt",
     "esp": "dentistica",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKSETBxpJXT5vXfdDbOhMac/PR%C3%93TESE/BOPT?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKSETBxpJXT5vXfdDbOhMac/PR%C3%93TESE/BOPT?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/dentistica-bopt.webp"
   },
   {
     "titulo": "Cimentação",
     "esp": "dentistica",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AOAYm3Dc9aQwhnF4tkJv1Ek/PR%C3%93TESE/CIMENTA%C3%87%C3%83O?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AOAYm3Dc9aQwhnF4tkJv1Ek/PR%C3%93TESE/CIMENTA%C3%87%C3%83O?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/dentistica-cimentacao.webp"
   },
   {
     "titulo": "Interproximal",
     "esp": "dentistica",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AL1-UZBilKqEdkWABjAegOg/PR%C3%93TESE/INTERPROXIMAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AL1-UZBilKqEdkWABjAegOg/PR%C3%93TESE/INTERPROXIMAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/dentistica-interproximal.webp"
   },
   {
     "titulo": "Limpeza facetas T1T-p",
     "esp": "dentistica",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKo2VJQmZ5MzU4yGijvhVSo/PR%C3%93TESE/LIMPEZA%20FACETAS%20T1T-P?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKo2VJQmZ5MzU4yGijvhVSo/PR%C3%93TESE/LIMPEZA%20FACETAS%20T1T-P?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/dentistica-limpeza-facetas-t1t-p.webp"
   },
   {
     "titulo": "Preparo ar x us",
     "esp": "dentistica",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AAwP-q22Nlzvxksk5QRwjz8/PR%C3%93TESE/PREPARO%20AR%20X%20US?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AAwP-q22Nlzvxksk5QRwjz8/PR%C3%93TESE/PREPARO%20AR%20X%20US?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/dentistica-preparo-ar-x-us.webp"
   },
   {
     "titulo": "Preparo para coroa",
     "esp": "dentistica",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGS8VtnycE7E4HmDthr9rfE/PR%C3%93TESE/PREPARO%20PARA%20COROA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGS8VtnycE7E4HmDthr9rfE/PR%C3%93TESE/PREPARO%20PARA%20COROA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/dentistica-preparo-para-coroa.webp"
   },
   {
     "titulo": "Refinamento de preparo",
     "esp": "dentistica",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJJHzNyI7Li1cWbm7NlvQUw/PR%C3%93TESE/REFINAMENTO%20DE%20PREPARO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJJHzNyI7Li1cWbm7NlvQUw/PR%C3%93TESE/REFINAMENTO%20DE%20PREPARO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/dentistica-refinamento-de-preparo.webp"
   },
   {
     "titulo": "Remoção de cimento resinoso",
     "esp": "dentistica",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHZGTldD-9dGWEuh-eH8_1I/PR%C3%93TESE/REMO%C3%87%C3%83O%20DE%20CIMENTO%20RESINOSO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHZGTldD-9dGWEuh-eH8_1I/PR%C3%93TESE/REMO%C3%87%C3%83O%20DE%20CIMENTO%20RESINOSO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/dentistica-remocao-de-cimento-resinoso.webp"
   },
   {
     "titulo": "Remoção de degrau",
     "esp": "dentistica",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APYD_Mz-EElwLSYq3yE5W9A/PR%C3%93TESE/REMO%C3%87%C3%83O%20DE%20DEGRAU?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APYD_Mz-EElwLSYq3yE5W9A/PR%C3%93TESE/REMO%C3%87%C3%83O%20DE%20DEGRAU?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/dentistica-remocao-de-degrau.webp"
   },
   {
     "titulo": "Remoção de faceta",
     "esp": "dentistica",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ADnOcCg-9xfZ0IeBOMI0NUw/PR%C3%93TESE/REMO%C3%87%C3%83O%20DE%20FACETA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ADnOcCg-9xfZ0IeBOMI0NUw/PR%C3%93TESE/REMO%C3%87%C3%83O%20DE%20FACETA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/dentistica-remocao-de-faceta.webp"
   },
   {
     "titulo": "Remoção de pino rosqueável",
     "esp": "dentistica",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AEUbQmnThhb00pcnaCWZ198/PR%C3%93TESE/REMO%C3%87%C3%83O%20DE%20PINO%20ROSQUE%C3%81VEL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AEUbQmnThhb00pcnaCWZ198/PR%C3%93TESE/REMO%C3%87%C3%83O%20DE%20PINO%20ROSQUE%C3%81VEL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/dentistica-remocao-de-pino-rosqueavel.webp"
   },
   {
     "titulo": "Término de preparo",
     "esp": "dentistica",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AOJAHPUorltSZ8Op7TafBCo/PR%C3%93TESE/T%C3%89RMINO%20DE%20PREPARO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AOJAHPUorltSZ8Op7TafBCo/PR%C3%93TESE/T%C3%89RMINO%20DE%20PREPARO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/dentistica-termino-de-preparo.webp"
   },
   {
     "titulo": "Guta-percha para cimentação de pino de fibra de vidro (T0S-E2)",
     "esp": "dentistica",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ANZeVjjvd_7F3xG382lVFMc/S%C3%89RIE/1%20Remo%C3%A7%C3%A3o%20de%20guta-percha%20para%20cimenta%C3%A7%C3%A3o%20de%20pino%20de%20fibra%20de%20vidro%20-%20ponta%20T0S-E2.mp4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ANZeVjjvd_7F3xG382lVFMc/S%C3%89RIE/1%20Remo%C3%A7%C3%A3o%20de%20guta-percha%20para%20cimenta%C3%A7%C3%A3o%20de%20pino%20de%20fibra%20de%20vidro%20-%20ponta%20T0S-E2.mp4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/dentistica-guta-percha-para-cimentacao-de-pino-de-fibra-de-vidro-t0s-e.webp"
   },
   {
     "titulo": "Compactação da guta-percha (CR2T-E)",
     "esp": "dentistica",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AAqvS9pWqn5xOJ7p76IDVzc/S%C3%89RIE/2%20Compacta%C3%A7%C3%A3o%20da%20Guta%20Percha%20-%20CR2T-E.mp4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AAqvS9pWqn5xOJ7p76IDVzc/S%C3%89RIE/2%20Compacta%C3%A7%C3%A3o%20da%20Guta%20Percha%20-%20CR2T-E.mp4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/dentistica-compactacao-da-guta-percha-cr2t-e.webp"
   },
   {
     "titulo": "Cimentação",
     "esp": "dentistica",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ADYdY_ASTlneti0WJWI6HlY/S%C3%89RIE/CIMENTA%C3%87%C3%83O.mp4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ADYdY_ASTlneti0WJWI6HlY/S%C3%89RIE/CIMENTA%C3%87%C3%83O.mp4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/dentistica-cimentacao.webp"
   },
   {
     "titulo": "Limpeza de implantes (1)",
     "esp": "dentistica",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ANonC8I0ctp_T2mmfJBB-MI/S%C3%89RIE/LIMPEZA%20DE%20IMPLANTES%20%281%29.MP4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ANonC8I0ctp_T2mmfJBB-MI/S%C3%89RIE/LIMPEZA%20DE%20IMPLANTES%20%281%29.MP4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/dentistica-limpeza-de-implantes-1.webp"
   },
   {
     "titulo": "Limpeza de implantes (2)",
     "esp": "dentistica",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AMxN0OVMUXBcmIRCCgX9Egw/S%C3%89RIE/LIMPEZA%20DE%20IMPLANTES%20%282%29.MP4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AMxN0OVMUXBcmIRCCgX9Egw/S%C3%89RIE/LIMPEZA%20DE%20IMPLANTES%20%282%29.MP4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/dentistica-limpeza-de-implantes-2.webp"
   },
   {
     "titulo": "Remoção de pino",
     "esp": "dentistica",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALuDwXmp3WuSA78ke_3cOgs/S%C3%89RIE/REMO%C3%87%C3%83O%20DE%20PINO.mp4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALuDwXmp3WuSA78ke_3cOgs/S%C3%89RIE/REMO%C3%87%C3%83O%20DE%20PINO.mp4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/dentistica-remocao-de-pino.webp"
   },
   {
     "titulo": "Término de preparo",
     "esp": "dentistica",
     "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AMhvT4f3AK2sWYYoR1VwQeE/S%C3%89RIE/TERMINO%20DE%20PREPARO.mp4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
     "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AMhvT4f3AK2sWYYoR1VwQeE/S%C3%89RIE/TERMINO%20DE%20PREPARO.mp4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox"
+    "link": "dropbox",
+    "thumb": "img/proc/dentistica-termino-de-preparo.webp"
   }
  ],
  "galerias": {
@@ -4354,5 +4448,5 @@ window.CVD = {
    "nome": "Demonstrações e casos clínicos"
   }
  ],
- "rev": 1794850391118
+ "rev": 1794850891537
 };

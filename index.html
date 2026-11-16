@@ -1725,7 +1725,7 @@ function atualizarDicasDoItem(x){
 /* ===================== Acesso obrigatório (login) e carregamento do catálogo ===================== */
 const gateEl = document.getElementById('gate');
 let appIniciado = false, carregandoCatalogo = false, modoGate = 'entrar';
-const VERSAO_APP = 'v143';
+const VERSAO_APP = 'v144';
 function gateHtml(corpo){ return `<div class="gate-in"><img class="logo-g" src="img/logo.svg" alt="cvdcloud">${corpo}</div>`; }
 const LOADER = '<div class="loader-linha" role="status" aria-label="Carregando"></div>';
 function gateMostrar(html){ document.body.classList.add('gate-on'); gateEl.innerHTML = gateHtml(html); }
@@ -1941,7 +1941,7 @@ async function compartilhar(x){
     try{
       const dl = linkDownload(x), t = THUMBS[x.url], tam = tamDownload(x);
       const urlCli = siteEmpresaUrl(x.url) && PROD[x.produto] ? fichaEquip(x.produto) : (x.local ? absUrl(x.local) : x.url);
-      const id = await C.criarCompartilhamento({ titulo: nome, url: urlCli, baixarUrl: dl ? absUrl(dl) : undefined, thumb: t ? 'img/t/' + t[0] : undefined, tipo: x.esp ? 'Vídeo de procedimento' : (TIPOS[x.tipo] || {}).nome, mb: typeof tam === 'number' ? tam : undefined, cliente: cli || undefined });
+      const id = await C.criarCompartilhamento({ titulo: nome, url: urlCli, baixarUrl: dl ? absUrl(dl) : undefined, thumb: t ? 'img/t/' + t[0] : (x.thumb || undefined), tipo: x.esp ? 'Vídeo de procedimento' : (TIPOS[x.tipo] || {}).nome, mb: typeof tam === 'number' ? tam : undefined, cliente: cli || undefined });
       await enviarLink(nome, new URL('v.html', location.href.split('#')[0]).href + '#' + id);
       if(cli && C.semCampoCliente) toast('Link copiado, mas o nome do cliente não foi salvo (regras do Firebase desatualizadas)');
     }catch(e){ toast('Não foi possível gerar o link agora'); }
