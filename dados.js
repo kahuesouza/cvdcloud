@@ -170,6 +170,17 @@ window.CVD = {
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video-3.mp4"
   },
   {
+   "titulo": "Galileu · Flip-up · 360° (3)",
+   "tipo": "video3d",
+   "produto": "lupas",
+   "grupo360": "lupa",
+   "idioma": "pt",
+   "novo": true,
+   "mb": 4.5,
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video.mp4"
+  },
+  {
    "titulo": "Ergo · Flip-up · 360°",
    "tipo": "video3d",
    "produto": "lupas",
@@ -3615,5 +3626,5 @@ window.CVD = {
    "nome": "Demonstrações e casos clínicos"
   }
  ],
- "rev": 1794520124073
+ "rev": 1794836633046
 };

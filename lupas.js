@@ -1,6 +1,6 @@
 /* Lupas, fotóforos e armações (fonte: catalogodelupas.cvdentus.com.br). Fotos em .zip e vídeo 360° no release "lupas" de cvdentus-arquivos. */
 window.CVD_LUPAS = {
- "rev": 1793733429939,
+ "rev": 1794836633046,
  "grupos": [
   {
    "id": "flip",
@@ -57,7 +57,7 @@ window.CVD_LUPAS = {
       "baixar": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video-2.mp4",
       "mb": 4.9
      },
-     "videos": [{"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video-2.mp4", "mb": 4.9}, {"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video-3.mp4", "mb": 2.7}]
+     "videos": [{"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video-2.mp4", "mb": 4.9}, {"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video-3.mp4", "mb": 2.7}, {"url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video.mp4", "mb": 4.5}]
     }
    ]
   },
