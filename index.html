@@ -468,6 +468,7 @@ function leadPorThumb(url, icone){
 }
 function leadDe(x){
   if(THUMBS[x.url]) return leadPorThumb(x.url);
+  if(x.thumb) return `<span class="lead thumb"><img loading="lazy" alt="" src="${esc(x.thumb)}"><span class="pl">${ic('playcheio')}</span></span>`;
   const yt = ytId(x.url);
   if(yt) return `<span class="lead thumb"><img loading="lazy" alt="" src="https://i.ytimg.com/vi/${yt}/mqdefault.jpg" onerror="this.remove()"><span class="pl">${ic('playcheio')}</span></span>`;
   if(x.esp) return `<span class="lead">${ic('play')}</span>`;
@@ -1725,7 +1726,7 @@ function atualizarDicasDoItem(x){
 /* ===================== Acesso obrigatório (login) e carregamento do catálogo ===================== */
 const gateEl = document.getElementById('gate');
 let appIniciado = false, carregandoCatalogo = false, modoGate = 'entrar';
-const VERSAO_APP = 'v144';
+const VERSAO_APP = 'v145';
 function gateHtml(corpo){ return `<div class="gate-in"><img class="logo-g" src="img/logo.svg" alt="cvdcloud">${corpo}</div>`; }
 const LOADER = '<div class="loader-linha" role="status" aria-label="Carregando"></div>';
 function gateMostrar(html){ document.body.classList.add('gate-on'); gateEl.innerHTML = gateHtml(html); }

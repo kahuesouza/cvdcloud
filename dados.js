@@ -29,4424 +29,4538 @@
      • semDownload: true → esconde o botão nesse item.
    ===================================================================== */
 window.CVD = {
- "atualizado": "14/10/2026",
- "produtos": [
-  {
-   "id": "optymus",
-   "nome": "Optymus",
-   "img": "img/optymus.webp",
-   "cor": "#1D4ED8",
-   "resumo": "Endodontia e profilaxia · portátil, autoclavável, pedal wireless"
-  },
-  {
-   "id": "clinical-plus",
-   "nome": "Clinical Plus",
-   "img": "img/clinical-plus.webp",
-   "cor": "#0F7C8C",
-   "resumo": "Multiespecialidade clínica · 2 peças de mão, kit 7 pontas"
-  },
-  {
-   "id": "dentsurg-pro",
-   "nome": "DentSurg Pro",
-   "img": "img/dentsurg-pro.webp",
-   "cor": "#122B63",
-   "resumo": "Todas as especialidades + cirurgia · touchscreen, corte ósseo seletivo"
-  },
-  {
-   "id": "lupas",
-   "nome": "Lupas",
-   "icone": "busca",
-   "resumo": "Galileu, Kepler, Ergo e Ergo CX · fotóforos",
-   "nota": "Os preços e descontos seguem a política comercial. Antes de passar valores ao cliente, confira se a política vigente não teve alteração de sazonalidade."
-  },
-  {
-   "id": "spray-control",
-   "nome": "Spray Control",
-   "icone": "spray",
-   "resumo": "Profilaxia com jato controlado"
-  },
-  {
-   "id": "pontas",
-   "nome": "Pontas CVD",
-   "icone": "ponta",
-   "resumo": "Catálogos, bula e instruções das pontas diamantadas"
-  },
-  {
-   "id": "brocas",
-   "nome": "Brocas",
-   "icone": "broca",
-   "resumo": "Linha de brocas CVDentus"
-  },
-  {
-   "id": "acessorios",
-   "nome": "Acessórios",
-   "icone": "chave",
-   "resumo": "Bomba peristáltica, chave catraca e afins"
-  },
-  {
-   "id": "linha-elo",
-   "nome": "Linha Elo",
-   "icone": "pilula",
-   "resumo": "Pontas T1T e T1UX · encaixes D, E e N",
-   "nota": "Pontas de ultrassom de alta performance, compatíveis com a maioria dos piezoelétricos do mercado. T1T (profilaxia, raspagem e manutenção) e T1UX com Diamante CVD (manchas, biofilme, próteses e peri-implantar). Encaixes D, E e N. 30 dias de garantia de compatibilidade e performance, ou o dinheiro de volta. Os valores seguem a política comercial: confira se não houve alteração antes de passar ao cliente."
-  }
- ],
- "materiais": [
-  {
-   "titulo": "Galileu · TTL · 360° (1)",
-   "tipo": "video3d",
-   "produto": "lupas",
-   "grupo360": "lupa",
-   "idioma": "pt",
-   "novo": true,
-   "mb": 9.1,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-2.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-2.mp4"
-  },
-  {
-   "titulo": "Galileu · TTL · 360° (2)",
-   "tipo": "video3d",
-   "produto": "lupas",
-   "grupo360": "lupa",
-   "idioma": "pt",
-   "novo": true,
-   "mb": 6.8,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-4.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-4.mp4"
-  },
-  {
-   "titulo": "Galileu · TTL · 360° (3)",
-   "tipo": "video3d",
-   "produto": "lupas",
-   "grupo360": "lupa",
-   "idioma": "pt",
-   "novo": true,
-   "mb": 5.9,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-5.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-5.mp4"
-  },
-  {
-   "titulo": "Ergo · TTL · 360° (1)",
-   "tipo": "video3d",
-   "produto": "lupas",
-   "grupo360": "lupa",
-   "idioma": "pt",
-   "novo": true,
-   "mb": 6.7,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-ergo-video-2.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-ergo-video-2.mp4"
-  },
-  {
-   "titulo": "Ergo · TTL · 360° (2)",
-   "tipo": "video3d",
-   "produto": "lupas",
-   "grupo360": "lupa",
-   "idioma": "pt",
-   "novo": true,
-   "mb": 4.3,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-ergo-video-3.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-ergo-video-3.mp4"
-  },
-  {
-   "titulo": "Galileu · Flip-up · 360° (1)",
-   "tipo": "video3d",
-   "produto": "lupas",
-   "grupo360": "lupa",
-   "idioma": "pt",
-   "novo": true,
-   "mb": 4.9,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video-2.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video-2.mp4"
-  },
-  {
-   "titulo": "Galileu · Flip-up · 360° (2)",
-   "tipo": "video3d",
-   "produto": "lupas",
-   "grupo360": "lupa",
-   "idioma": "pt",
-   "novo": true,
-   "mb": 2.7,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video-3.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video-3.mp4"
-  },
-  {
-   "titulo": "Galileu · Flip-up · 360° (3)",
-   "tipo": "video3d",
-   "produto": "lupas",
-   "grupo360": "lupa",
-   "idioma": "pt",
-   "novo": true,
-   "mb": 4.5,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video.mp4"
-  },
-  {
-   "titulo": "Ergo · Flip-up · 360°",
-   "tipo": "video3d",
-   "produto": "lupas",
-   "grupo360": "lupa",
-   "idioma": "pt",
-   "novo": true,
-   "mb": 5.6,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-ergo-video-2.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-ergo-video-2.mp4"
-  },
-  {
-   "titulo": "Kepler · Flip-up · 360°",
-   "tipo": "video3d",
-   "produto": "lupas",
-   "grupo360": "lupa",
-   "idioma": "pt",
-   "novo": true,
-   "mb": 4.5,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-kepler-video-2.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-kepler-video-2.mp4"
-  },
-  {
-   "titulo": "Kepler · TTL · 360°",
-   "tipo": "video3d",
-   "produto": "lupas",
-   "grupo360": "lupa",
-   "idioma": "pt",
-   "novo": true,
-   "mb": 7,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-360-kepler-ttl.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-360-kepler-ttl.mp4"
-  },
-  {
-   "titulo": "Armação J04 Preta · 360°",
-   "tipo": "video3d",
-   "produto": "lupas",
-   "grupo360": "armacao",
-   "idioma": "pt",
-   "novo": true,
-   "mb": 3.3,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j04-preta.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j04-preta.mp4"
-  },
-  {
-   "titulo": "Armação J04 Prata · 360°",
-   "tipo": "video3d",
-   "produto": "lupas",
-   "grupo360": "armacao",
-   "idioma": "pt",
-   "novo": true,
-   "mb": 2.4,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j04-prata.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j04-prata.mp4"
-  },
-  {
-   "titulo": "Armação J22 · 360°",
-   "tipo": "video3d",
-   "produto": "lupas",
-   "grupo360": "armacao",
-   "idioma": "pt",
-   "novo": true,
-   "mb": 2.8,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j22.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j22.mp4"
-  },
-  {
-   "titulo": "Armação J23 · 360°",
-   "tipo": "video3d",
-   "produto": "lupas",
-   "grupo360": "armacao",
-   "idioma": "pt",
-   "novo": true,
-   "mb": 3.4,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j23.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j23.mp4"
-  },
-  {
-   "titulo": "Armação J24 Preta · 360°",
-   "tipo": "video3d",
-   "produto": "lupas",
-   "grupo360": "armacao",
-   "idioma": "pt",
-   "novo": true,
-   "mb": 2.5,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j24-preta.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j24-preta.mp4"
-  },
-  {
-   "titulo": "Armação J24 Prata · 360°",
-   "tipo": "video3d",
-   "produto": "lupas",
-   "grupo360": "armacao",
-   "idioma": "pt",
-   "novo": true,
-   "mb": 2.5,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j24-prata.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j24-prata.mp4"
-  },
-  {
-   "titulo": "Armação · 360° (modelo a confirmar)",
-   "tipo": "video3d",
-   "produto": "lupas",
-   "grupo360": "armacao",
-   "idioma": "pt",
-   "novo": true,
-   "mb": 3.5,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-a-confirmar.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-a-confirmar.mp4"
-  },
-  {
-   "titulo": "Catálogo Equipamentos CVDentus",
-   "familia": "cat-equipamentos",
-   "tipo": "catalogo",
-   "produto": "geral",
-   "idioma": "pt",
-   "ano": 2023,
-   "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-equipamentos-cvdentus.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-equipamentos-cvdentus.pdf",
-   "mb": 1.9
-  },
-  {
-   "titulo": "Piezo Catalog CVDentus",
-   "familia": "cat-equipamentos",
-   "tipo": "catalogo",
-   "produto": "geral",
-   "idioma": "en",
-   "novo": true,
-   "url": "https://cloud.cvdentus.com.br/arquivos/livros/piezo-catalog-cvdentus-en.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/piezo-catalog-cvdentus-en.pdf",
-   "mb": 1.8
-  },
-  {
-   "titulo": "Catálogo de Piezos CVDentus",
-   "familia": "cat-equipamentos",
-   "tipo": "catalogo",
-   "produto": "geral",
-   "idioma": "es",
-   "novo": true,
-   "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-piezos-cvdentus-es.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-piezos-cvdentus-es.pdf",
-   "mb": 1.8
-  },
-  {
-   "titulo": "Catálogo Técnico · Representantes",
-   "familia": "cat-representantes",
-   "tipo": "catalogo",
-   "produto": "geral",
-   "idioma": "pt",
-   "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-representantes.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-representantes.pdf",
-   "mb": 7.9,
-   "aviso": "Versão 2021"
-  },
-  {
-   "titulo": "Technical Catalog · Representatives",
-   "familia": "cat-representantes",
-   "tipo": "catalogo",
-   "produto": "geral",
-   "idioma": "en",
-   "novo": true,
-   "aviso": "Versão 2021",
-   "mb": 6.2,
-   "url": "https://cloud.cvdentus.com.br/arquivos/livros/representatives-catalog-en.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/representatives-catalog-en.pdf"
-  },
-  {
-   "titulo": "Catálogo Técnico · Representantes (Español)",
-   "familia": "cat-representantes",
-   "tipo": "catalogo",
-   "produto": "geral",
-   "idioma": "es",
-   "novo": true,
-   "aviso": "Versão 2021",
-   "mb": 6.2,
-   "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-representantes-es.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-representantes-es.pdf"
-  },
-  {
-   "titulo": "Tabela Comparativa dos Piezos",
-   "tipo": "comparativo",
-   "produto": "geral",
-   "idioma": "pt",
-   "mb": 0.8,
-   "url": "https://cloud.cvdentus.com.br/arquivos/arte/mat-tabela-comparativa-dos-piezos.jpg",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/mat-tabela-comparativa-dos-piezos.jpg"
-  },
-  {
-   "titulo": "3 Verdades sobre o Piezoelétrico",
-   "tipo": "marketing",
-   "produto": "geral",
-   "idioma": "pt",
-   "mb": 0.9,
-   "url": "https://cloud.cvdentus.com.br/arquivos/arte/mat-3-verdades-sobre-o-piezoeletrico.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/mat-3-verdades-sobre-o-piezoeletrico.pdf"
-  },
-  {
-   "titulo": "Catálogo Brocas CVDentus",
-   "familia": "cat-brocas",
-   "tipo": "catalogo",
-   "produto": "brocas",
-   "idioma": "pt",
-   "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-brocas-cvdentus.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-brocas-cvdentus.pdf",
-   "mb": 1.9
-  },
-  {
-   "titulo": "Burs Catalog CVDentus",
-   "familia": "cat-brocas",
-   "tipo": "catalogo",
-   "produto": "brocas",
-   "idioma": "en",
-   "novo": true,
-   "url": "https://cloud.cvdentus.com.br/arquivos/livros/burs-catalog-cvdentus-en.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/burs-catalog-cvdentus-en.pdf",
-   "mb": 1.6
-  },
-  {
-   "titulo": "Catálogo de Fresas CVDentus",
-   "familia": "cat-brocas",
-   "tipo": "catalogo",
-   "produto": "brocas",
-   "idioma": "es",
-   "novo": true,
-   "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-fresas-cvdentus-es.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-fresas-cvdentus-es.pdf",
-   "mb": 1.6
-  },
-  {
-   "titulo": "Catálogo Pontas · Clinical Plus e DentSurg Pro",
-   "familia": "cat-pontas-cp-dsp",
-   "tipo": "catalogo",
-   "produto": "pontas",
-   "idioma": "pt",
-   "ano": 2026,
-   "novo": true,
-   "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-pontas-clinical-plus-dentsurg-pro-2026.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-pontas-clinical-plus-dentsurg-pro-2026.pdf",
-   "mb": 12.1
-  },
-  {
-   "titulo": "Catálogo Pontas · Optymus",
-   "familia": "cat-pontas-optymus",
-   "tipo": "catalogo",
-   "produto": "pontas",
-   "idioma": "pt",
-   "ano": 2025,
-   "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-pontas-optymus-2025.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-pontas-optymus-2025.pdf",
-   "mb": 4.4
-  },
-  {
-   "titulo": "Tips Catalog · Optymus",
-   "familia": "cat-pontas-optymus",
-   "tipo": "catalogo",
-   "produto": "pontas",
-   "idioma": "en",
-   "ano": 2025,
-   "novo": true,
-   "url": "https://cloud.cvdentus.com.br/arquivos/livros/tips-catalog-optymus-2025-en.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/tips-catalog-optymus-2025-en.pdf",
-   "mb": 4.2
-  },
-  {
-   "titulo": "Catálogo Puntas · Optymus",
-   "familia": "cat-pontas-optymus",
-   "tipo": "catalogo",
-   "produto": "pontas",
-   "idioma": "es",
-   "ano": 2025,
-   "novo": true,
-   "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-puntas-optymus-2025-es.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-puntas-optymus-2025-es.pdf",
-   "mb": 4.2
-  },
-  {
-   "titulo": "Tips Catalog · Clinical Plus & DentSurg Pro (2026)",
-   "familia": "cat-pontas-cp-dsp",
-   "tipo": "catalogo",
-   "produto": "pontas",
-   "idioma": "en",
-   "ano": 2026,
-   "novo": true,
-   "url": "https://cloud.cvdentus.com.br/arquivos/livros/tips-catalog-clinical-plus-dentsurg-pro-en-2026-v3.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/tips-catalog-clinical-plus-dentsurg-pro-en-2026-v3.pdf",
-   "mb": 10.6
-  },
-  {
-   "titulo": "Tips Catalog · Clinical Plus & DentSurg Pro",
-   "tipo": "catalogo",
-   "produto": "pontas",
-   "idioma": "en",
-   "ano": 2023,
-   "url": "https://cloud.cvdentus.com.br/arquivos/livros/tips-catalog-clinical-plus-dentsurg-pro-en.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/tips-catalog-clinical-plus-dentsurg-pro-en.pdf",
-   "mb": 8.7
-  },
-  {
-   "titulo": "Catálogo Puntas · Clinical Plus y DentSurg Pro (2026)",
-   "familia": "cat-pontas-cp-dsp",
-   "tipo": "catalogo",
-   "produto": "pontas",
-   "idioma": "es",
-   "ano": 2026,
-   "novo": true,
-   "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-puntas-clinical-plus-dentsurg-pro-es-2026-v3.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-puntas-clinical-plus-dentsurg-pro-es-2026-v3.pdf",
-   "mb": 10.6
-  },
-  {
-   "titulo": "Catálogo Puntas",
-   "tipo": "catalogo",
-   "produto": "pontas",
-   "idioma": "es",
-   "ano": 2021,
-   "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-puntas-es.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-puntas-es.pdf",
-   "mb": 4.7,
-   "aviso": "Versão 2021"
-  },
-  {
-   "titulo": "Bula das pontas · Optymus (completa)",
-   "tipo": "bula",
-   "produto": "optymus",
-   "idioma": "pt",
-   "ano": 2023,
-   "mb": 0.2,
-   "url": "https://d335luupugsy2.cloudfront.net/cms%2Ffiles%2F59178%2F1693500441Bula_OPTYMUS_2023_v04.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/bulas/bula-pontas-optymus-2023-v04.pdf"
-  },
-  {
-   "titulo": "Bula por procedimento · Clinical Plus (completa)",
-   "tipo": "bula",
-   "produto": "clinical-plus",
-   "idioma": "pt",
-   "ano": 2022,
-   "mb": 0.2,
-   "url": "https://d335luupugsy2.cloudfront.net/cms%2Ffiles%2F59178%2F1693500450Bula_por_procedimento_clnicas_DS_e_DS_PRO_V.05_2022.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/bulas/bula-procedimento-clinical-plus-ds-2022-v05.pdf"
-  },
-  {
-   "titulo": "Bula cirúrgica e clínica · DentSurg Pro (completa)",
-   "tipo": "bula",
-   "produto": "dentsurg-pro",
-   "idioma": "pt",
-   "ano": 2023,
-   "mb": 0.2,
-   "url": "https://d335luupugsy2.cloudfront.net/cms%2Ffiles%2F59178%2F1693500463Bula_cirrgicas_e_clnica_DS_PRO_V04_2023.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/bulas/bula-cirurgica-clinica-dentsurg-pro-2023-v04.pdf"
-  },
-  {
-   "titulo": "Instruções de Uso das Pontas",
-   "tipo": "uso",
-   "produto": "pontas",
-   "idioma": "pt",
-   "url": "https://youtu.be/tSEyNjEQnV4"
-  },
-  {
-   "titulo": "Vídeo 3D Optymus",
-   "tipo": "video3d",
-   "produto": "optymus",
-   "idioma": "pt",
-   "url": "https://youtu.be/PCFeRKehPDc"
-  },
-  {
-   "titulo": "Optymus 3D Video",
-   "tipo": "video3d",
-   "produto": "optymus",
-   "idioma": "en",
-   "url": "https://youtu.be/3RYsJW9FTgI"
-  },
-  {
-   "titulo": "Video 3D Optymus",
-   "tipo": "video3d",
-   "produto": "optymus",
-   "idioma": "es",
-   "url": "https://youtu.be/plRR_-HniZk"
-  },
-  {
-   "titulo": "Instalação Optymus",
-   "tipo": "instalacao",
-   "produto": "optymus",
-   "idioma": "pt",
-   "url": "https://youtu.be/6YtLc8fd1bI"
-  },
-  {
-   "titulo": "Optymus Installation",
-   "tipo": "instalacao",
-   "produto": "optymus",
-   "idioma": "en",
-   "url": "https://youtu.be/vt13Qi1JVfM"
-  },
-  {
-   "titulo": "Instalación Optymus",
-   "tipo": "instalacao",
-   "produto": "optymus",
-   "idioma": "es",
-   "url": "https://youtu.be/s2lqKfn6PFg"
-  },
-  {
-   "titulo": "Modo de Uso Optymus",
-   "tipo": "uso",
-   "produto": "optymus",
-   "idioma": "pt",
-   "mb": 6.6,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/uso-optymus-pt-v2.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/uso-optymus-pt-v2.mp4"
-  },
-  {
-   "titulo": "How to Use Optymus",
-   "tipo": "uso",
-   "produto": "optymus",
-   "idioma": "en",
-   "url": "https://youtu.be/jIoGEZu3R3Q"
-  },
-  {
-   "titulo": "Modo de Uso Optymus",
-   "tipo": "uso",
-   "produto": "optymus",
-   "idioma": "es",
-   "url": "https://youtu.be/wVuyZkZgaUw"
-  },
-  {
-   "titulo": "Manual Optymus",
-   "tipo": "manual",
-   "produto": "optymus",
-   "idioma": "pt",
-   "url": "https://cloud.cvdentus.com.br/arquivos/livros/manual-optymus.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/manual-optymus.pdf",
-   "mb": 13.5
-  },
-  {
-   "titulo": "Vídeo 3D Clinical Plus",
-   "tipo": "video3d",
-   "produto": "clinical-plus",
-   "idioma": "pt",
-   "url": "https://youtu.be/eHURySio6Yo"
-  },
-  {
-   "titulo": "Clinical Plus 3D Video",
-   "tipo": "video3d",
-   "produto": "clinical-plus",
-   "idioma": "en",
-   "url": "https://youtu.be/SJtAMp0_xhU"
-  },
-  {
-   "titulo": "Video 3D Clinical Plus",
-   "tipo": "video3d",
-   "produto": "clinical-plus",
-   "idioma": "es",
-   "url": "https://youtu.be/OjYg2zspbS4"
-  },
-  {
-   "titulo": "Instalação Clinical Plus",
-   "tipo": "instalacao",
-   "produto": "clinical-plus",
-   "idioma": "pt",
-   "url": "https://youtu.be/LmS7AfMrtyI"
-  },
-  {
-   "titulo": "Clinical Plus Installation",
-   "tipo": "instalacao",
-   "produto": "clinical-plus",
-   "idioma": "en",
-   "url": "https://youtu.be/flVFjvdDu2E"
-  },
-  {
-   "titulo": "Instalación Clinical Plus",
-   "tipo": "instalacao",
-   "produto": "clinical-plus",
-   "idioma": "es",
-   "url": "https://youtu.be/oSra1IOqGiI"
-  },
-  {
-   "titulo": "Modo de Uso Clinical Plus",
-   "tipo": "uso",
-   "produto": "clinical-plus",
-   "idioma": "pt",
-   "url": "https://youtu.be/RMMw6dI8k90"
-  },
-  {
-   "titulo": "How to Use Clinical Plus",
-   "tipo": "uso",
-   "produto": "clinical-plus",
-   "idioma": "en",
-   "url": "https://youtu.be/hIYBXrC0Rg0"
-  },
-  {
-   "titulo": "Modo de Uso Clinical Plus",
-   "tipo": "uso",
-   "produto": "clinical-plus",
-   "idioma": "es",
-   "url": "https://youtu.be/pJWZx8l6IyU"
-  },
-  {
-   "titulo": "Manual Clinical Plus",
-   "tipo": "manual",
-   "produto": "clinical-plus",
-   "idioma": "pt",
-   "url": "https://cloud.cvdentus.com.br/arquivos/livros/manual-clinical-plus.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/manual-clinical-plus.pdf",
-   "mb": 16.3
-  },
-  {
-   "titulo": "Clinical Plus Manual",
-   "tipo": "manual",
-   "produto": "clinical-plus",
-   "idioma": "en",
-   "url": "https://cloud.cvdentus.com.br/arquivos/livros/clinical-plus-manual-en.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/clinical-plus-manual-en.pdf",
-   "mb": 13.9
-  },
-  {
-   "titulo": "Vídeo 3D DentSurg Pro",
-   "tipo": "video3d",
-   "produto": "dentsurg-pro",
-   "idioma": "pt",
-   "url": "https://youtu.be/za1LrR-Jp0o"
-  },
-  {
-   "titulo": "DentSurg Pro 3D Video",
-   "tipo": "video3d",
-   "produto": "dentsurg-pro",
-   "idioma": "en",
-   "url": "https://youtu.be/p4YLlH98ncQ"
-  },
-  {
-   "titulo": "Video 3D DentSurg Pro",
-   "tipo": "video3d",
-   "produto": "dentsurg-pro",
-   "idioma": "es",
-   "url": "https://youtu.be/dJoAHEjT9UE"
-  },
-  {
-   "titulo": "Instalação DentSurg Pro",
-   "tipo": "instalacao",
-   "produto": "dentsurg-pro",
-   "idioma": "pt",
-   "url": "https://youtu.be/_rkvwdZsHaE"
-  },
-  {
-   "titulo": "DentSurg Pro Installation",
-   "tipo": "instalacao",
-   "produto": "dentsurg-pro",
-   "idioma": "en",
-   "url": "https://youtu.be/SvNvYGksd_k"
-  },
-  {
-   "titulo": "Instalación DentSurg Pro",
-   "tipo": "instalacao",
-   "produto": "dentsurg-pro",
-   "idioma": "es",
-   "url": "https://www.youtube.com/watch?v=_vOhPcJwnVk&list=PLwi_3lSQGTZAGF823s4tTpp0iZa0k3XnW&index=11"
-  },
-  {
-   "titulo": "Modo de Uso DentSurg Pro",
-   "tipo": "uso",
-   "produto": "dentsurg-pro",
-   "idioma": "pt",
-   "url": "https://youtu.be/9kBlbd_ZXd4"
-  },
-  {
-   "titulo": "How to Use DentSurg Pro",
-   "tipo": "uso",
-   "produto": "dentsurg-pro",
-   "idioma": "en",
-   "url": "https://youtu.be/AzZOPpWdPy8"
-  },
-  {
-   "titulo": "Modo de Uso DentSurg Pro",
-   "tipo": "uso",
-   "produto": "dentsurg-pro",
-   "idioma": "es",
-   "url": "https://youtu.be/OSFUZF5a02w"
-  },
-  {
-   "titulo": "Manual DentSurg Pro",
-   "tipo": "manual",
-   "produto": "dentsurg-pro",
-   "idioma": "pt",
-   "url": "https://cloud.cvdentus.com.br/arquivos/livros/manual-dentsurg-pro.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/manual-dentsurg-pro.pdf",
-   "mb": 15.3
-  },
-  {
-   "titulo": "DentSurg Pro Manual",
-   "tipo": "manual",
-   "produto": "dentsurg-pro",
-   "idioma": "en",
-   "url": "https://cloud.cvdentus.com.br/arquivos/livros/dentsurg-pro-manual-en.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/dentsurg-pro-manual-en.pdf",
-   "mb": 14.2
-  },
-  {
-   "titulo": "Manual DentSurg Pro",
-   "tipo": "manual",
-   "produto": "dentsurg-pro",
-   "idioma": "es",
-   "url": "https://cloud.cvdentus.com.br/arquivos/livros/manual-dentsurg-pro-es.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/manual-dentsurg-pro-es.pdf",
-   "mb": 13.5
-  },
-  {
-   "titulo": "DentSurg Pro Catalog",
-   "familia": "cat-dentsurg-pro",
-   "tipo": "catalogo",
-   "produto": "dentsurg-pro",
-   "idioma": "en",
-   "mb": 2.1,
-   "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-dentsurg-pro-en.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/english_CATALOG_DS_PRO_OK.pdf"
-  },
-  {
-   "titulo": "Catálogo DentSurg Pro",
-   "familia": "cat-dentsurg-pro",
-   "tipo": "catalogo",
-   "produto": "dentsurg-pro",
-   "idioma": "es",
-   "mb": 2.7,
-   "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-dentsurg-pro-es.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/SPANISH_CATALOG_DS_PRO_OK.pdf"
-  },
-  {
-   "titulo": "Folder DentSurg Pro Cirúrgico",
-   "familia": "cat-dentsurg-pro",
-   "tipo": "catalogo",
-   "produto": "dentsurg-pro",
-   "idioma": "pt",
-   "ano": 2024,
-   "url": "https://cloud.cvdentus.com.br/arquivos/livros/folder-dentsurg-pro-cirurgico-2024.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/folder-dentsurg-pro-cirurgico-2024.pdf",
-   "mb": 1.4
-  },
-  {
-   "titulo": "Catálogo de Lupas (online)",
-   "tipo": "catalogo",
-   "produto": "lupas",
-   "idioma": "pt",
-   "ano": 2026,
-   "novo": true,
-   "url": "https://catalogodelupas.cvdentus.com.br/",
-   "pdf": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/catalogo-lupas-oficial-2026.pdf",
-   "pdfMb": 49,
-   "aviso": "Confira a política comercial vigente"
-  },
-  {
-   "titulo": "Simulador de Lupas",
-   "tipo": "landing",
-   "produto": "lupas",
-   "idioma": "pt",
-   "novo": true,
-   "url": "https://simuladordelupas.cvdentus.com.br/"
-  },
-  {
-   "titulo": "Modo de Uso Spray Control",
-   "tipo": "uso",
-   "produto": "spray-control",
-   "idioma": "pt",
-   "url": "https://youtu.be/vdwjV-I9VZE"
-  },
-  {
-   "titulo": "Catálogo de Acessórios",
-   "familia": "cat-acessorios",
-   "tipo": "catalogo",
-   "produto": "acessorios",
-   "idioma": "pt",
-   "ano": 2026,
-   "novo": true,
-   "mb": 5.2,
-   "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-acessorios-cvdentus-2026.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/CATALOGO_ACESSORIOS_CVDENTUS_2026_DIGITAL.pdf"
-  },
-  {
-   "titulo": "Accessories Catalog CVDentus",
-   "familia": "cat-acessorios",
-   "tipo": "catalogo",
-   "produto": "acessorios",
-   "idioma": "en",
-   "ano": 2026,
-   "novo": true,
-   "mb": 6,
-   "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-acessorios-cvdentus-2026-en.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/catalogo-acessorios-cvdentus-2026-en.pdf"
-  },
-  {
-   "titulo": "Catálogo de Accesorios CVDentus",
-   "familia": "cat-acessorios",
-   "tipo": "catalogo",
-   "produto": "acessorios",
-   "idioma": "es",
-   "ano": 2026,
-   "novo": true,
-   "mb": 6,
-   "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-acessorios-cvdentus-2026-es.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/catalogo-acessorios-cvdentus-2026-es.pdf"
-  },
-  {
-   "titulo": "Vídeo de apoio · Bomba Peristáltica",
-   "tipo": "apoio",
-   "produto": "acessorios",
-   "idioma": "pt",
-   "mb": 11,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/mat-video-de-apoio-bomba-peristaltica.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/mat-video-de-apoio-bomba-peristaltica.mp4"
-  },
-  {
-   "titulo": "Vídeo de apoio · Chave Catraca",
-   "tipo": "apoio",
-   "produto": "acessorios",
-   "idioma": "pt",
-   "mb": 43,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/mat-video-de-apoio-chave-catraca.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/mat-video-de-apoio-chave-catraca.mp4"
-  },
-  {
-   "titulo": "Peças de divulgação",
-   "tipo": "marketing",
-   "produto": "geral",
-   "idioma": "pt",
-   "mb": 102,
-   "url": "#/galeria/pecas",
-   "galeria": "pecas",
-   "semDownload": true
-  },
-  {
-   "titulo": "Lançamento Adaptadores Optymus",
-   "tipo": "marketing",
-   "produto": "optymus",
-   "idioma": "pt",
-   "mb": 12,
-   "url": "#/galeria/adaptadores",
-   "novo": true,
-   "galeria": "adaptadores",
-   "semDownload": true
-  },
-  {
-   "titulo": "CVDentus Members · artes feed e story",
-   "tipo": "marketing",
-   "produto": "geral",
-   "idioma": "pt",
-   "mb": 17,
-   "url": "#/galeria/members",
-   "novo": true,
-   "galeria": "members",
-   "semDownload": true
-  },
-  {
-   "titulo": "Kit Flapless · e-mail marketing",
-   "tipo": "marketing",
-   "produto": "dentsurg-pro",
-   "idioma": "pt",
-   "mb": 1,
-   "url": "#/galeria/flapless",
-   "galeria": "flapless",
-   "semDownload": true
-  },
-  {
-   "titulo": "Piezo na Odontologia Moderna",
-   "tipo": "treinamento",
-   "produto": "geral",
-   "idioma": "pt",
-   "url": "https://www.dropbox.com/home/REDE01/MARKETING/EQUIPE%20MARKETING/CVDentus/COMERCIAL/TREINAMENTOS?preview=Piezo+na+Odontologia+Moderna.mp4",
-   "aviso": "Exige login no Dropbox da equipe"
-  },
-  {
-   "titulo": "Catálogo de Lupas 2026 (PDF)",
-   "tipo": "catalogo",
-   "produto": "lupas",
-   "idioma": "pt",
-   "ano": 2026,
-   "novo": true,
-   "mb": 14.7,
-   "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-lupas-cvdentus-2026.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/CATALOGO_LUPAS_CVDENTUS_2026_DIGITAL.pdf"
-  },
-  {
-   "titulo": "Loupe Catalog 2026 (PDF)",
-   "tipo": "catalogo",
-   "produto": "lupas",
-   "idioma": "en",
-   "ano": 2026,
-   "novo": true,
-   "mb": 15.8,
-   "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-lupas-cvdentus-2026-en.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/CATALOGO_LUPAS_2026_EN.pdf"
-  },
-  {
-   "titulo": "Catálogo de Lupas 2026 (PDF)",
-   "tipo": "catalogo",
-   "produto": "lupas",
-   "idioma": "es",
-   "ano": 2026,
-   "novo": true,
-   "mb": 15.8,
-   "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-lupas-cvdentus-2026-es.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/CATALOGO_LUPAS_2026_ES.pdf"
-  },
-  {
-   "titulo": "Catálogo de Lupas · versão fechada",
-   "familia": "cat-lupas-fechado",
-   "tipo": "catalogo",
-   "produto": "lupas",
-   "idioma": "pt",
-   "ano": 2026,
-   "novo": true,
-   "mb": 28.3,
-   "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-lupas-fechado.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/CATALOGO_CVLUPAS_fechado.pdf"
-  },
-  {
-   "titulo": "Loupes Catalog CVDentus",
-   "familia": "cat-lupas-fechado",
-   "tipo": "catalogo",
-   "produto": "lupas",
-   "idioma": "en",
-   "ano": 2026,
-   "novo": true,
-   "mb": 2.8,
-   "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-lupas-fechado-en.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/loupes-catalog-cvdentus-EN.pdf"
-  },
-  {
-   "titulo": "Catálogo de Lupas CVDentus",
-   "familia": "cat-lupas-fechado",
-   "tipo": "catalogo",
-   "produto": "lupas",
-   "idioma": "es",
-   "ano": 2026,
-   "novo": true,
-   "mb": 2.9,
-   "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-lupas-fechado-es.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/catalogo-lupas-cvdentus-ES.pdf"
-  },
-  {
-   "titulo": "Catálogo Linha Elo 2026",
-   "familia": "cat-linha-elo",
-   "tipo": "catalogo",
-   "produto": "linha-elo",
-   "idioma": "pt",
-   "ano": 2026,
-   "novo": true,
-   "mb": 8.4,
-   "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-linha-elo-2026.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/CATALOGO_LINHA_ELO_2026.pdf"
-  },
-  {
-   "titulo": "Elo Line Catalog 2026",
-   "familia": "cat-linha-elo",
-   "tipo": "catalogo",
-   "produto": "linha-elo",
-   "idioma": "en",
-   "ano": 2026,
-   "novo": true,
-   "mb": 9.1,
-   "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-linha-elo-2026-en.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/elo-line-catalog-2026-EN.pdf"
-  },
-  {
-   "titulo": "Catálogo Línea Elo 2026",
-   "familia": "cat-linha-elo",
-   "tipo": "catalogo",
-   "produto": "linha-elo",
-   "idioma": "es",
-   "ano": 2026,
-   "novo": true,
-   "mb": 9.1,
-   "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-linha-elo-2026-es.pdf",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/catalogo-linea-elo-2026-ES.pdf"
-  },
-  {
-   "titulo": "Tabela de valores · Linha Elo",
-   "tipo": "comparativo",
-   "produto": "linha-elo",
-   "idioma": "pt",
-   "novo": true,
-   "aviso": "Confira a política comercial vigente",
-   "mb": 0.3,
-   "url": "https://cloud.cvdentus.com.br/arquivos/arte/elo-08-tabela-de-valores-linha-elo.png",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-08-tabela-de-valores-linha-elo.png"
-  },
-  {
-   "titulo": "Compatibilidade das pontas Elo",
-   "tipo": "comparativo",
-   "produto": "linha-elo",
-   "idioma": "pt",
-   "novo": true,
-   "mb": 1.3,
-   "url": "https://cloud.cvdentus.com.br/arquivos/arte/elo-07-compatibilidade-das-pontas-elo.png",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-07-compatibilidade-das-pontas-elo.png"
-  },
-  {
-   "titulo": "Vídeo · Linha Elo (anúncio)",
-   "tipo": "apoio",
-   "produto": "linha-elo",
-   "idioma": "pt",
-   "novo": true,
-   "mb": 33.2,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-video-anuncio.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-video-anuncio.mp4"
-  },
-  {
-   "titulo": "Vídeo · Pontas Elo em movimento",
-   "tipo": "apoio",
-   "produto": "linha-elo",
-   "idioma": "pt",
-   "mb": 0.5,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-video-pontas-em-movimento.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-video-pontas-em-movimento.mp4"
-  },
-  {
-   "titulo": "Vídeo · SAC Linha Elo (dicas de uso e cuidados)",
-   "tipo": "apoio",
-   "produto": "linha-elo",
-   "idioma": "pt",
-   "novo": true,
-   "mb": 16.9,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-video-sac-pos-venda.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-video-sac-pos-venda.mp4"
-  },
-  {
-   "titulo": "Linha Elo · fotos e artes",
-   "tipo": "marketing",
-   "produto": "linha-elo",
-   "idioma": "pt",
-   "novo": true,
-   "mb": 3.9,
-   "url": "#/galeria/elo",
-   "galeria": "elo",
-   "semDownload": true
-  }
- ],
- "marcas": [
-  {
-   "grupo": "CVDentus",
-   "logos": [
+  "atualizado": "14/10/2026",
+  "produtos": [
     {
-     "nome": "Padrão colorido",
-     "nota": "Fundo transparente",
-     "img": "cvdentus-padrao",
-     "fundo": "claro",
-     "arquivos": [
-      [
-       "PNG",
-       "cvdentus-padrao.png",
-       0.05
-      ],
-      [
-       "PDF vetor",
-       "cvdentus-vetor.pdf",
-       0.7
-      ]
-     ]
+      "id": "optymus",
+      "nome": "Optymus",
+      "img": "img/optymus.webp",
+      "cor": "#1D4ED8",
+      "resumo": "Endodontia e profilaxia · portátil, autoclavável, pedal wireless"
     },
     {
-     "nome": "Branco",
-     "nota": "Para fundos escuros",
-     "img": "cvdentus-fundo-branco",
-     "fundo": "escuro",
-     "arquivos": [
-      [
-       "PNG",
-       "cvdentus-fundo-branco.png",
-       0.05
-      ]
-     ]
+      "id": "clinical-plus",
+      "nome": "Clinical Plus",
+      "img": "img/clinical-plus.webp",
+      "cor": "#0F7C8C",
+      "resumo": "Multiespecialidade clínica · 2 peças de mão, kit 7 pontas"
     },
     {
-     "nome": "Fundo preto",
-     "nota": "Quadrado 1080 px",
-     "img": "cvdentus-preto",
-     "fundo": "neutro",
-     "arquivos": [
-      [
-       "PNG",
-       "cvdentus-preto.png",
-       0.04
-      ]
-     ]
+      "id": "dentsurg-pro",
+      "nome": "DentSurg Pro",
+      "img": "img/dentsurg-pro.webp",
+      "cor": "#122B63",
+      "resumo": "Todas as especialidades + cirurgia · touchscreen, corte ósseo seletivo"
     },
     {
-     "nome": "Alta resolução",
-     "nota": "Web e impressão grande · 21020 px",
-     "img": "cvdentus-padrao",
-     "fundo": "claro",
-     "arquivos": [
-      [
-       "PNG",
-       "cvdentus-web.png",
-       2.1
-      ]
-     ]
+      "id": "lupas",
+      "nome": "Lupas",
+      "icone": "busca",
+      "resumo": "Galileu, Kepler, Ergo e Ergo CX · fotóforos",
+      "nota": "Os preços e descontos seguem a política comercial. Antes de passar valores ao cliente, confira se a política vigente não teve alteração de sazonalidade."
+    },
+    {
+      "id": "spray-control",
+      "nome": "Spray Control",
+      "icone": "spray",
+      "resumo": "Profilaxia com jato controlado"
+    },
+    {
+      "id": "pontas",
+      "nome": "Pontas CVD",
+      "icone": "ponta",
+      "resumo": "Catálogos, bula e instruções das pontas diamantadas"
+    },
+    {
+      "id": "brocas",
+      "nome": "Brocas",
+      "icone": "broca",
+      "resumo": "Linha de brocas CVDentus"
+    },
+    {
+      "id": "acessorios",
+      "nome": "Acessórios",
+      "icone": "chave",
+      "resumo": "Bomba peristáltica, chave catraca e afins"
+    },
+    {
+      "id": "linha-elo",
+      "nome": "Linha Elo",
+      "icone": "pilula",
+      "resumo": "Pontas T1T e T1UX · encaixes D, E e N",
+      "nota": "Pontas de ultrassom de alta performance, compatíveis com a maioria dos piezoelétricos do mercado. T1T (profilaxia, raspagem e manutenção) e T1UX com Diamante CVD (manchas, biofilme, próteses e peri-implantar). Encaixes D, E e N. 30 dias de garantia de compatibilidade e performance, ou o dinheiro de volta. Os valores seguem a política comercial: confira se não houve alteração antes de passar ao cliente."
     }
-   ]
-  },
-  {
-   "grupo": "Selos e certificações",
-   "pasta": "selos",
-   "logos": [
+  ],
+  "materiais": [
     {
-     "nome": "ISO 13485",
-     "nota": "Dispositivos médicos",
-     "img": "iso-13485",
-     "fundo": "claro",
-     "arquivos": [
-      [
-       "PNG",
-       "iso-13485.png",
-       0.04
-      ],
-      [
-       "PDF",
-       "iso-13485.pdf",
-       0.3
-      ]
-     ]
+      "titulo": "Galileu · TTL · 360° (1)",
+      "tipo": "video3d",
+      "produto": "lupas",
+      "grupo360": "lupa",
+      "idioma": "pt",
+      "novo": true,
+      "mb": 9.1,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-2.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-2.mp4"
     },
     {
-     "nome": "ISO 9001",
-     "nota": "Gestão da qualidade",
-     "img": "iso-9001",
-     "fundo": "claro",
-     "arquivos": [
-      [
-       "PNG",
-       "iso-9001.png",
-       0.04
-      ]
-     ]
+      "titulo": "Galileu · TTL · 360° (2)",
+      "tipo": "video3d",
+      "produto": "lupas",
+      "grupo360": "lupa",
+      "idioma": "pt",
+      "novo": true,
+      "mb": 6.8,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-4.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-4.mp4"
     },
     {
-     "nome": "+25 anos",
-     "nota": "Selo comemorativo",
-     "img": "25-anos",
-     "fundo": "claro",
-     "arquivos": [
-      [
-       "PNG",
-       "25-anos.png",
-       0.05
-      ],
-      [
-       "PDF",
-       "25-anos-identidade.pdf",
-       0.54
-      ],
-      [
-       "Editável .ai",
-       "25-anos-identidade-editavel.ai",
-       1.95
-      ]
-     ]
-    }
-   ]
-  },
-  {
-   "grupo": "Patentes e prêmios",
-   "pasta": "selos",
-   "logos": [
-    {
-     "nome": "+7 patentes",
-     "nota": "+100 artigos publicados · branco",
-     "img": "7-patentes",
-     "fundo": "escuro",
-     "arquivos": [
-      [
-       "PNG",
-       "7-patentes.png",
-       0.03
-      ]
-     ]
+      "titulo": "Galileu · TTL · 360° (3)",
+      "tipo": "video3d",
+      "produto": "lupas",
+      "grupo360": "lupa",
+      "idioma": "pt",
+      "novo": true,
+      "mb": 5.9,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-5.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-5.mp4"
     },
     {
-     "nome": "Melhor Invento do Mundo",
-     "nota": "WIPO 2011 · branco",
-     "img": "melhor-invento",
-     "fundo": "escuro",
-     "arquivos": [
-      [
-       "PNG",
-       "melhor-invento.png",
-       0.03
-      ]
-     ]
-    }
-   ]
-  },
-  {
-   "grupo": "Equipamentos",
-   "logos": [
-    {
-     "nome": "Optymus",
-     "nota": "Branco",
-     "img": "optymus",
-     "fundo": "escuro",
-     "arquivos": [
-      [
-       "PNG",
-       "optymus.png",
-       0.01
-      ]
-     ]
+      "titulo": "Ergo · TTL · 360° (1)",
+      "tipo": "video3d",
+      "produto": "lupas",
+      "grupo360": "lupa",
+      "idioma": "pt",
+      "novo": true,
+      "mb": 6.7,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-ergo-video-2.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-ergo-video-2.mp4"
     },
     {
-     "nome": "Clinical Plus",
-     "nota": "Branco",
-     "img": "clinical-plus",
-     "fundo": "escuro",
-     "arquivos": [
-      [
-       "PNG",
-       "clinical-plus.png",
-       0.05
-      ]
-     ]
+      "titulo": "Ergo · TTL · 360° (2)",
+      "tipo": "video3d",
+      "produto": "lupas",
+      "grupo360": "lupa",
+      "idioma": "pt",
+      "novo": true,
+      "mb": 4.3,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-ergo-video-3.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-ergo-video-3.mp4"
     },
     {
-     "nome": "DentSurg Pro",
-     "nota": "Branco",
-     "img": "dentsurg-pro",
-     "fundo": "escuro",
-     "arquivos": [
-      [
-       "PNG",
-       "dentsurg-pro.png",
-       0.02
-      ]
-     ]
+      "titulo": "Galileu · Flip-up · 360° (1)",
+      "tipo": "video3d",
+      "produto": "lupas",
+      "grupo360": "lupa",
+      "idioma": "pt",
+      "novo": true,
+      "mb": 4.9,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video-2.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video-2.mp4"
     },
     {
-     "nome": "Spray Control",
-     "nota": "Branco",
-     "img": "spray-control",
-     "fundo": "escuro",
-     "arquivos": [
-      [
-       "PNG",
-       "spray-control.png",
-       0.04
-      ]
-     ]
-    }
-   ]
-  },
-  {
-   "grupo": "Outras marcas do grupo",
-   "logos": [
-    {
-     "nome": "CVD Lupas",
-     "nota": "Branco",
-     "img": "cvdlupas",
-     "fundo": "escuro",
-     "arquivos": [
-      [
-       "PNG",
-       "cvdlupas.png",
-       0.02
-      ],
-      [
-       "PDF vetor",
-       "cvdlupas-vetor.pdf",
-       0.7
-      ]
-     ]
+      "titulo": "Galileu · Flip-up · 360° (2)",
+      "tipo": "video3d",
+      "produto": "lupas",
+      "grupo360": "lupa",
+      "idioma": "pt",
+      "novo": true,
+      "mb": 2.7,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video-3.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video-3.mp4"
     },
     {
-     "nome": "CVD Vale",
-     "nota": "Colorido",
-     "img": "cvdvale",
-     "fundo": "claro",
-     "arquivos": [
-      [
-       "PNG",
-       "cvdvale.png",
-       0.04
-      ],
-      [
-       "PDF vetor",
-       "cvdvale-vetor.pdf",
-       0.7
-      ]
-     ]
+      "titulo": "Galileu · Flip-up · 360° (3)",
+      "tipo": "video3d",
+      "produto": "lupas",
+      "grupo360": "lupa",
+      "idioma": "pt",
+      "novo": true,
+      "mb": 4.5,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video.mp4"
     },
     {
-     "nome": "CVD Vale branco",
-     "nota": "Para fundos escuros",
-     "img": "cvdvale-branco",
-     "fundo": "escuro",
-     "arquivos": [
-      [
-       "PNG",
-       "cvdvale-branco.png",
-       0.04
-      ]
-     ]
+      "titulo": "Ergo · Flip-up · 360°",
+      "tipo": "video3d",
+      "produto": "lupas",
+      "grupo360": "lupa",
+      "idioma": "pt",
+      "novo": true,
+      "mb": 5.6,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-ergo-video-2.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-ergo-video-2.mp4"
     },
     {
-     "nome": "CVD Coating",
-     "nota": "Colorido",
-     "img": "cvdcoating",
-     "fundo": "claro",
-     "arquivos": [
-      [
-       "PNG",
-       "cvdcoating.png",
-       0.05
-      ],
-      [
-       "PDF vetor",
-       "cvdcoating-vetor.pdf",
-       0.7
-      ]
-     ]
-    }
-   ]
-  },
-  {
-   "grupo": "Linha Elo",
-   "logos": [
+      "titulo": "Kepler · Flip-up · 360°",
+      "tipo": "video3d",
+      "produto": "lupas",
+      "grupo360": "lupa",
+      "idioma": "pt",
+      "novo": true,
+      "mb": 4.5,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-kepler-video-2.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-kepler-video-2.mp4"
+    },
     {
-     "nome": "Linha Elo",
-     "nota": "Logo da linha de pontas · PNG sem fundo, SVG e PDF vetor",
-     "img": "linha-elo",
-     "fundo": "claro",
-     "arquivos": [
-      [
-       "PNG",
-       "logo-linha-elo.png",
-       0.05
-      ],
-      [
-       "SVG",
-       "logo-linha-elo.svg",
-       0.02
-      ],
-      [
-       "PDF vetor",
-       "logo-linha-elo.pdf",
-       0.1
-      ]
-     ]
-    }
-   ]
-  }
- ],
- "marcasBase": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/",
- "especialidades": [
-  {
-   "id": "cirurgia",
-   "nome": "Cirurgia e Implantodontia",
-   "curto": "Cirurgia"
-  },
-  {
-   "id": "periodontia",
-   "nome": "Periodontia",
-   "curto": "Perio"
-  },
-  {
-   "id": "endodontia",
-   "nome": "Endodontia",
-   "curto": "Endo"
-  },
-  {
-   "id": "dentistica",
-   "nome": "Dentística e Prótese",
-   "curto": "Dentística"
-  },
-  {
-   "id": "profilaxia",
-   "nome": "Profilaxia",
-   "curto": "Profilaxia"
-  },
-  {
-   "id": "orto-odontoped",
-   "nome": "Ortodontia e Odontopediatria",
-   "curto": "Orto/Odontoped."
-  },
-  {
-   "id": "demonstracao",
-   "nome": "Demonstrações e Redes Sociais",
-   "curto": "Demonstrações"
-  }
- ],
- "procedimentos": [
-  {
-   "titulo": "Sinus Lift",
-   "esp": "cirurgia",
-   "prof": "Prof. Renato Lavezo",
-   "ponta": "SR9",
-   "mb": 10.4,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-01-sinus-lift-prof-renato-lavezo.mp4",
-   "local": "arquivos/procedimentos/proc-01-sinus-lift-prof-renato-lavezo.mp4",
-   "tv": "arquivos/procedimentos/tv/proc-01-sinus-lift-prof-renato-lavezo.mp4",
-   "tvMb": 29.0,
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-01-sinus-lift-prof-renato-lavezo.mp4",
-   "topico": "sinus-lift",
-   "pontas": [
-    "SR9"
-   ]
-  },
-  {
-   "titulo": "Descolamento da Membrana Sinusal",
-   "esp": "cirurgia",
-   "prof": "Prof. Renato Lavezo",
-   "mb": 3.5,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-02-descolamento-da-membrana-sinusal-prof-renato-lavezo.mp4",
-   "local": "arquivos/procedimentos/proc-02-descolamento-da-membrana-sinusal-prof-renato-lavezo.mp4",
-   "tv": "arquivos/procedimentos/tv/proc-02-descolamento-da-membrana-sinusal-prof-renato-lavezo.mp4",
-   "tvMb": 5.3,
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-02-descolamento-da-membrana-sinusal-prof-renato-lavezo.mp4",
-   "topico": "sinus-lift"
-  },
-  {
-   "titulo": "Flapless",
-   "esp": "cirurgia",
-   "prof": "Dr. Diego Bazan",
-   "mb": 23,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-03-flapless-dr-diego-bazan.mp4",
-   "local": "arquivos/procedimentos/proc-03-flapless-dr-diego-bazan.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-03-flapless-dr-diego-bazan.mp4",
-   "topico": "flapless",
-   "esps": [
-    "cirurgia",
-    "periodontia"
-   ]
-  },
-  {
-   "titulo": "Descolamento",
-   "esp": "cirurgia",
-   "prof": "Prof. Diego Bazan",
-   "ponta": "SL1-0",
-   "mb": 15.6,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-04-descolamento-prof-diego-bazan.mp4",
-   "local": "arquivos/procedimentos/proc-04-descolamento-prof-diego-bazan.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-04-descolamento-prof-diego-bazan.mp4",
-   "topico": "descolamento",
-   "pontas": [
-    "SL1-0"
-   ],
-   "esps": [
-    "cirurgia",
-    "periodontia"
-   ]
-  },
-  {
-   "titulo": "Descolamento de Torus",
-   "esp": "cirurgia",
-   "prof": "Prof. Diego Bazan",
-   "mb": 5.1,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-05-descolamento-de-torus-prof-diego-bazan.mp4",
-   "local": "arquivos/procedimentos/proc-05-descolamento-de-torus-prof-diego-bazan.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-05-descolamento-de-torus-prof-diego-bazan.mp4",
-   "topico": "osteotomia-torus",
-   "esps": [
-    "cirurgia",
-    "periodontia"
-   ],
-   "pontas": [
-    "SL1-0"
-   ],
-   "ponta": "SL1-0"
-  },
-  {
-   "titulo": "Osteotomia de Torus",
-   "esp": "cirurgia",
-   "prof": "Prof. Diego Bazan",
-   "mb": 4.3,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-06-osteotomia-de-torus-prof-diego-bazan.mp4",
-   "local": "arquivos/procedimentos/proc-06-osteotomia-de-torus-prof-diego-bazan.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-06-osteotomia-de-torus-prof-diego-bazan.mp4",
-   "topico": "osteotomia-torus",
-   "esps": [
-    "cirurgia",
-    "periodontia"
-   ],
-   "pontas": [
-    "SF3"
-   ],
-   "ponta": "SF3"
-  },
-  {
-   "titulo": "Osteotomia",
-   "esp": "cirurgia",
-   "mb": 5,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-07-osteotomia.mp4",
-   "local": "arquivos/procedimentos/proc-07-osteotomia.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-07-osteotomia.mp4",
-   "topico": "osteotomia-torus",
-   "esps": [
-    "cirurgia",
-    "periodontia"
-   ]
-  },
-  {
-   "titulo": "Descolamento",
-   "esp": "cirurgia",
-   "mb": 6.2,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-08-descolamento.mp4",
-   "local": "arquivos/procedimentos/proc-08-descolamento.mp4",
-   "tv": "arquivos/procedimentos/tv/proc-08-descolamento.mp4",
-   "tvMb": 2.6,
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-08-descolamento.mp4",
-   "topico": "descolamento",
-   "esps": [
-    "cirurgia",
-    "periodontia"
-   ]
-  },
-  {
-   "titulo": "Cirurgia do Mento",
-   "esp": "cirurgia",
-   "prof": "Ricardo Scotton",
-   "mb": 8.8,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-09-cirurgia-do-mento-ricardo-scotton.mp4",
-   "local": "arquivos/procedimentos/proc-09-cirurgia-do-mento-ricardo-scotton.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-09-cirurgia-do-mento-ricardo-scotton.mp4",
-   "topico": "outras-cirurgias"
-  },
-  {
-   "titulo": "Sindesmotomia",
-   "esp": "cirurgia",
-   "mb": 5.7,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-10-sindesmotomia.mp4",
-   "local": "arquivos/procedimentos/proc-10-sindesmotomia.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-10-sindesmotomia.mp4",
-   "topico": "outras-cirurgias"
-  },
-  {
-   "titulo": "Aumento de Coroa e Regularização Radicular",
-   "esp": "periodontia",
-   "prof": "Prof. Diego Bazan",
-   "mb": 2.7,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-11-aumento-de-coroa-e-regularizacao-radicular-prof-diego-bazan.mp4",
-   "local": "arquivos/procedimentos/proc-11-aumento-de-coroa-e-regularizacao-radicular-prof-diego-bazan.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-11-aumento-de-coroa-e-regularizacao-radicular-prof-diego-bazan.mp4",
-   "topico": "flapless",
-   "esps": [
-    "cirurgia",
-    "periodontia"
-   ]
-  },
-  {
-   "titulo": "Raspagem e Alisamento Radicular",
-   "esp": "periodontia",
-   "prof": "Prof. Diego Bazan",
-   "mb": 12.8,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-12-raspagem-e-alisamento-radicular-prof-diego-bazan.mp4",
-   "local": "arquivos/procedimentos/proc-12-raspagem-e-alisamento-radicular-prof-diego-bazan.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-12-raspagem-e-alisamento-radicular-prof-diego-bazan.mp4",
-   "topico": "raspagem"
-  },
-  {
-   "titulo": "Gengivoplastia com Osteotomia",
-   "esp": "periodontia",
-   "mb": 6.6,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-13-gengivoplastia-com-osteotomia.mp4",
-   "local": "arquivos/procedimentos/proc-13-gengivoplastia-com-osteotomia.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-13-gengivoplastia-com-osteotomia.mp4",
-   "topico": "gengivoplastia-peeling",
-   "esps": [
-    "cirurgia",
-    "periodontia"
-   ]
-  },
-  {
-   "titulo": "Peeling Gengival",
-   "esp": "periodontia",
-   "mb": 7.2,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-14-peeling-gengival.mp4",
-   "local": "arquivos/procedimentos/proc-14-peeling-gengival.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-14-peeling-gengival.mp4",
-   "topico": "gengivoplastia-peeling",
-   "esps": [
-    "cirurgia",
-    "periodontia"
-   ]
-  },
-  {
-   "titulo": "Cirurgia de Retropreparo",
-   "esp": "endodontia",
-   "prof": "Prof. Eduardo Santini",
-   "mb": 23.6,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-15-cirurgia-de-retropreparo-prof-eduardo-santini.mp4",
-   "local": "arquivos/procedimentos/proc-15-cirurgia-de-retropreparo-prof-eduardo-santini.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-15-cirurgia-de-retropreparo-prof-eduardo-santini.mp4",
-   "topico": "apicectomia",
-   "pontas": [
-    "VR04XR",
-    "T1F-2"
-   ],
-   "ponta": "VR04XR e T1F-2"
-  },
-  {
-   "titulo": "Irrigação do Conduto e Corte de Guta-Percha",
-   "esp": "endodontia",
-   "prof": "Prof. Rodrigo Villagra",
-   "mb": 14.6,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-16-irrigacao-do-conduto-e-corte-de-guta-percha-prof-rodrigo-vil.mp4",
-   "local": "arquivos/procedimentos/proc-16-irrigacao-do-conduto-e-corte-de-guta-percha-prof-rodrigo-vil.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-16-irrigacao-do-conduto-e-corte-de-guta-percha-prof-rodrigo-vil.mp4",
-   "topico": "pui"
-  },
-  {
-   "titulo": "Limpeza da Câmara Pulpar",
-   "esp": "endodontia",
-   "prof": "Prof. Rodrigo Villagra",
-   "mb": 25.4,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-17-limpeza-da-camara-pulpar-prof-rodrigo-villagra.mp4",
-   "local": "arquivos/procedimentos/proc-17-limpeza-da-camara-pulpar-prof-rodrigo-villagra.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-17-limpeza-da-camara-pulpar-prof-rodrigo-villagra.mp4",
-   "topico": "endodontia"
-  },
-  {
-   "titulo": "Compactação da Guta-Percha",
-   "esp": "endodontia",
-   "ponta": "CR2T-E",
-   "mb": 6.3,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-18-compactacao-da-guta-percha.mp4",
-   "local": "arquivos/procedimentos/proc-18-compactacao-da-guta-percha.mp4",
-   "tv": "arquivos/procedimentos/tv/proc-18-compactacao-da-guta-percha.mp4",
-   "tvMb": 6.8,
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-18-compactacao-da-guta-percha.mp4",
-   "topico": "guta-percha",
-   "pontas": [
-    "CR2T-E"
-   ]
-  },
-  {
-   "titulo": "Remoção de Guta-Percha para Pino de Fibra",
-   "esp": "endodontia",
-   "ponta": "T0S-E2",
-   "mb": 7.3,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-19-remocao-de-guta-percha-para-pino-de-fibra.mp4",
-   "local": "arquivos/procedimentos/proc-19-remocao-de-guta-percha-para-pino-de-fibra.mp4",
-   "tv": "arquivos/procedimentos/tv/proc-19-remocao-de-guta-percha-para-pino-de-fibra.mp4",
-   "tvMb": 7.5,
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-19-remocao-de-guta-percha-para-pino-de-fibra.mp4",
-   "topico": "guta-percha",
-   "pontas": [
-    "T0S-E2"
-   ]
-  },
-  {
-   "titulo": "Remoção de Pino",
-   "esp": "endodontia",
-   "mb": 9,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-20-remocao-de-pino.mp4",
-   "local": "arquivos/procedimentos/proc-20-remocao-de-pino.mp4",
-   "tv": "arquivos/procedimentos/tv/proc-20-remocao-de-pino.mp4",
-   "tvMb": 10.4,
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-20-remocao-de-pino.mp4",
-   "topico": "pinos"
-  },
-  {
-   "titulo": "Término de Preparo",
-   "esp": "dentistica",
-   "prof": "Dr. Rodrigo Bucker",
-   "mb": 5.1,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-21-termino-de-preparo-dr-rodrigo-bucker.mp4",
-   "local": "arquivos/procedimentos/proc-21-termino-de-preparo-dr-rodrigo-bucker.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-21-termino-de-preparo-dr-rodrigo-bucker.mp4",
-   "topico": "preparo-termino"
-  },
-  {
-   "titulo": "Término de Preparo",
-   "esp": "dentistica",
-   "prof": "Dr. Shizuma Shibata",
-   "mb": 4.7,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-22-termino-de-preparo-dr-shizuma-shibata.mp4",
-   "local": "arquivos/procedimentos/proc-22-termino-de-preparo-dr-shizuma-shibata.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-22-termino-de-preparo-dr-shizuma-shibata.mp4",
-   "topico": "preparo-termino"
-  },
-  {
-   "titulo": "Término de Preparo",
-   "esp": "dentistica",
-   "ponta": "T1F",
-   "mb": 5,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-23-termino-de-preparo.mp4",
-   "local": "arquivos/procedimentos/proc-23-termino-de-preparo.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-23-termino-de-preparo.mp4",
-   "topico": "preparo-termino",
-   "pontas": [
-    "T1F"
-   ]
-  },
-  {
-   "titulo": "Acabamento Cervical de Restauros em Resina",
-   "esp": "dentistica",
-   "prof": "Prof. Renato Voss",
-   "mb": 11.8,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-24-acabamento-cervical-de-restauros-em-resina-prof-renato-voss.mp4",
-   "local": "arquivos/procedimentos/proc-24-acabamento-cervical-de-restauros-em-resina-prof-renato-voss.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-24-acabamento-cervical-de-restauros-em-resina-prof-renato-voss.mp4",
-   "topico": "preparo-termino"
-  },
-  {
-   "titulo": "Acabamento Cervical de Restauros em Resina",
-   "esp": "dentistica",
-   "prof": "Prof. Renato Voss",
-   "ponta": "TR1F-RV",
-   "mb": 7.7,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-25-acabamento-cervical-de-restauros-em-resina-prof-renato-voss.mp4",
-   "local": "arquivos/procedimentos/proc-25-acabamento-cervical-de-restauros-em-resina-prof-renato-voss.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-25-acabamento-cervical-de-restauros-em-resina-prof-renato-voss.mp4",
-   "topico": "preparo-termino",
-   "pontas": [
-    "TR1F-RV"
-   ]
-  },
-  {
-   "titulo": "Remoção de Facetas",
-   "esp": "dentistica",
-   "prof": "Gustavo Greco, Alexandre Greco e Ricardo Oliveira",
-   "mb": 6.6,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-26-remocao-de-facetas-gustavo-greco-alexandre-greco-e-ricardo-o.mp4",
-   "local": "arquivos/procedimentos/proc-26-remocao-de-facetas-gustavo-greco-alexandre-greco-e-ricardo-o.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-26-remocao-de-facetas-gustavo-greco-alexandre-greco-e-ricardo-o.mp4",
-   "topico": "facetas"
-  },
-  {
-   "titulo": "Remoção de Facetas",
-   "esp": "dentistica",
-   "prof": "Dr. Clébio Domingues",
-   "mb": 5.2,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-27-remocao-de-facetas-dr-clebio-domingues.mp4",
-   "local": "arquivos/procedimentos/proc-27-remocao-de-facetas-dr-clebio-domingues.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-27-remocao-de-facetas-dr-clebio-domingues.mp4",
-   "topico": "facetas",
-   "pontas": [
-    "W1",
-    "CR1",
-    "CR1U"
-   ],
-   "ponta": "W1 e CR1 e CR1U"
-  },
-  {
-   "titulo": "Remoção de Amálgama",
-   "esp": "dentistica",
-   "mb": 12,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-28-remocao-de-amalgama.mp4",
-   "local": "arquivos/procedimentos/proc-28-remocao-de-amalgama.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-28-remocao-de-amalgama.mp4",
-   "topico": "amalgama-resina"
-  },
-  {
-   "titulo": "Preparo Interproximal",
-   "esp": "dentistica",
-   "mb": 9.3,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-29-preparo-interproximal.mp4",
-   "local": "arquivos/procedimentos/proc-29-preparo-interproximal.mp4",
-   "tv": "arquivos/procedimentos/tv/proc-29-preparo-interproximal.mp4",
-   "tvMb": 12.2,
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-29-preparo-interproximal.mp4",
-   "topico": "preparo-termino"
-  },
-  {
-   "titulo": "Slice",
-   "esp": "dentistica",
-   "prof": "Dra. Elizabeth Yassuda",
-   "mb": 2.3,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-30-slice-dra-elizabeth-yassuda.mp4",
-   "local": "arquivos/procedimentos/proc-30-slice-dra-elizabeth-yassuda.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-30-slice-dra-elizabeth-yassuda.mp4",
-   "topico": "slice"
-  },
-  {
-   "titulo": "Slice",
-   "esp": "dentistica",
-   "mb": 7.3,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-31-slice.mp4",
-   "local": "arquivos/procedimentos/proc-31-slice.mp4",
-   "tv": "arquivos/procedimentos/tv/proc-31-slice.mp4",
-   "tvMb": 6.6,
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-31-slice.mp4",
-   "topico": "slice"
-  },
-  {
-   "titulo": "Cimentação",
-   "esp": "dentistica",
-   "mb": 1.3,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-32-cimentacao.mp4",
-   "local": "arquivos/procedimentos/proc-32-cimentacao.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-32-cimentacao.mp4",
-   "topico": "cimentacao"
-  },
-  {
-   "titulo": "Profilaxia com Spray Control",
-   "esp": "profilaxia",
-   "prof": "Dr. Danilo Cioffi",
-   "mb": 4.5,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-33-profilaxia-com-spray-control-dr-danilo-cioffi.mp4",
-   "local": "arquivos/procedimentos/proc-33-profilaxia-com-spray-control-dr-danilo-cioffi.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-33-profilaxia-com-spray-control-dr-danilo-cioffi.mp4",
-   "topico": "profilaxia"
-  },
-  {
-   "titulo": "Profilaxia com Spray Control",
-   "esp": "profilaxia",
-   "mb": 4.2,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-34-profilaxia-com-spray-control.mp4",
-   "local": "arquivos/procedimentos/proc-34-profilaxia-com-spray-control.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-34-profilaxia-com-spray-control.mp4",
-   "topico": "profilaxia"
-  },
-  {
-   "titulo": "Limpeza com Ponta T1T-P",
-   "esp": "profilaxia",
-   "prof": "Ricardo Scotton",
-   "ponta": "T1T-P",
-   "mb": 12.8,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-35-limpeza-com-ponta-t1t-p-ricardo-scotton.mp4",
-   "local": "arquivos/procedimentos/proc-35-limpeza-com-ponta-t1t-p-ricardo-scotton.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-35-limpeza-com-ponta-t1t-p-ricardo-scotton.mp4",
-   "topico": "t1tp-implantes",
-   "pontas": [
-    "T1T-P"
-   ]
-  },
-  {
-   "titulo": "Modo de Uso da Ponta T1T-P",
-   "esp": "profilaxia",
-   "ponta": "T1T-P",
-   "mb": 4.2,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-36-modo-de-uso-da-ponta-t1t-p.mp4",
-   "local": "arquivos/procedimentos/proc-36-modo-de-uso-da-ponta-t1t-p.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-36-modo-de-uso-da-ponta-t1t-p.mp4",
-   "topico": "t1tp-implantes",
-   "pontas": [
-    "T1T-P"
-   ]
-  },
-  {
-   "titulo": "Ponta T1T-P em ação",
-   "esp": "profilaxia",
-   "ponta": "T1T-P",
-   "mb": 2,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-37-ponta-t1t-p-em-acao.mp4",
-   "local": "arquivos/procedimentos/proc-37-ponta-t1t-p-em-acao.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-37-ponta-t1t-p-em-acao.mp4",
-   "topico": "t1tp-implantes",
-   "pontas": [
-    "T1T-P"
-   ]
-  },
-  {
-   "titulo": "Remoção de Resina de Bracket",
-   "esp": "orto-odontoped",
-   "mb": 6.8,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-38-remocao-de-resina-de-bracket.mp4",
-   "local": "arquivos/procedimentos/proc-38-remocao-de-resina-de-bracket.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-38-remocao-de-resina-de-bracket.mp4",
-   "topico": "odontopediatria"
-  },
-  {
-   "titulo": "Odontopediatria",
-   "esp": "orto-odontoped",
-   "mb": 10.9,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-39-odontopediatria.mp4",
-   "local": "arquivos/procedimentos/proc-39-odontopediatria.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-39-odontopediatria.mp4",
-   "topico": "odontopediatria"
-  },
-  {
-   "titulo": "Simulação no Ovo · seletividade do corte",
-   "esp": "demonstracao",
-   "prof": "Dr. Danilo Cioffi",
-   "mb": 2.2,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-40-simulacao-no-ovo-seletividade-do-corte-dr-danilo-cioffi.mp4",
-   "local": "arquivos/procedimentos/proc-40-simulacao-no-ovo-seletividade-do-corte-dr-danilo-cioffi.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-40-simulacao-no-ovo-seletividade-do-corte-dr-danilo-cioffi.mp4",
-   "topico": "demonstracoes"
-  },
-  {
-   "titulo": "Minimamente Invasivo",
-   "esp": "demonstracao",
-   "prof": "Dr. Danilo Cioffi",
-   "formato": "Feed",
-   "mb": 12.7,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-41-minimamente-invasivo-dr-danilo-cioffi.mp4",
-   "local": "arquivos/procedimentos/proc-41-minimamente-invasivo-dr-danilo-cioffi.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-41-minimamente-invasivo-dr-danilo-cioffi.mp4",
-   "topico": "demonstracoes"
-  },
-  {
-   "titulo": "Minimamente Invasivo",
-   "esp": "demonstracao",
-   "prof": "Dr. Danilo Cioffi",
-   "formato": "Story",
-   "mb": 3.1,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-42-minimamente-invasivo-dr-danilo-cioffi.mp4",
-   "local": "arquivos/procedimentos/proc-42-minimamente-invasivo-dr-danilo-cioffi.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-42-minimamente-invasivo-dr-danilo-cioffi.mp4",
-   "topico": "demonstracoes"
-  },
-  {
-   "titulo": "Profilaxia",
-   "esp": "demonstracao",
-   "formato": "Post",
-   "mb": 12.3,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-43-profilaxia.mp4",
-   "local": "arquivos/procedimentos/proc-43-profilaxia.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-43-profilaxia.mp4",
-   "topico": "profilaxia"
-  },
-  {
-   "titulo": "Caso Clínico · Paciente Samuel",
-   "esp": "demonstracao",
-   "prof": "Dra. Liete Yassuda",
-   "mb": 9,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-44-caso-clinico-paciente-samuel-dra-liete-yassuda.mp4",
-   "local": "arquivos/procedimentos/proc-44-caso-clinico-paciente-samuel-dra-liete-yassuda.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-44-caso-clinico-paciente-samuel-dra-liete-yassuda.mp4",
-   "topico": "demonstracoes"
-  },
-  {
-   "titulo": "Broca em Rotação",
-   "esp": "demonstracao",
-   "mb": 3.9,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-45-broca-em-rotacao.mp4",
-   "local": "arquivos/procedimentos/proc-45-broca-em-rotacao.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-45-broca-em-rotacao.mp4",
-   "topico": "demonstracoes"
-  },
-  {
-   "titulo": "Vídeo sem título (26/07/2022)",
-   "esp": "demonstracao",
-   "aviso": "Renomear no Dropbox",
-   "mb": 12.8,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-46-video-sem-titulo-26-07-2022.mp4",
-   "local": "arquivos/procedimentos/proc-46-video-sem-titulo-26-07-2022.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-46-video-sem-titulo-26-07-2022.mp4",
-   "topico": "demonstracoes"
-  },
-  {
-   "titulo": "Cirurgia com a ponta SFR4",
-   "esp": "cirurgia",
-   "prof": "Dr. Berti",
-   "ponta": "SFR4",
-   "pontas": [
-    "SFR4"
-   ],
-   "mb": 5.8,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-47-cirurgia-ponta-sfr4-dr-berti.mp4",
-   "local": "arquivos/procedimentos/proc-47-cirurgia-ponta-sfr4-dr-berti.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-47-cirurgia-ponta-sfr4-dr-berti.mp4",
-   "topico": "outras-cirurgias"
-  },
-  {
-   "titulo": "Split Crest · Ponta SFR4",
-   "esp": "cirurgia",
-   "ponta": "SFR4",
-   "pontas": [
-    "SFR4"
-   ],
-   "mb": 3,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-48-split-crest-ponta-sfr4.mp4",
-   "local": "arquivos/procedimentos/proc-48-split-crest-ponta-sfr4.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-48-split-crest-ponta-sfr4.mp4",
-   "topico": "outras-cirurgias"
-  },
-  {
-   "titulo": "Aumento de Coroa · Flapless",
-   "esp": "cirurgia",
-   "prof": "Dr. Aldir Machado",
-   "mb": 4.3,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-49-aumento-de-coroa-flapless-dr-aldir-machado.mp4",
-   "local": "arquivos/procedimentos/proc-49-aumento-de-coroa-flapless-dr-aldir-machado.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-49-aumento-de-coroa-flapless-dr-aldir-machado.mp4",
-   "topico": "flapless",
-   "esps": [
-    "cirurgia",
-    "periodontia"
-   ]
-  },
-  {
-   "titulo": "Rinoplastia · vídeo 1",
-   "esp": "cirurgia",
-   "mb": 2.4,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-50-rinoplastia-01.mp4",
-   "local": "arquivos/procedimentos/proc-50-rinoplastia-01.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-50-rinoplastia-01.mp4"
-  },
-  {
-   "titulo": "Rinoplastia · vídeo 2",
-   "esp": "cirurgia",
-   "mb": 3.1,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-51-rinoplastia-02.mp4",
-   "local": "arquivos/procedimentos/proc-51-rinoplastia-02.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-51-rinoplastia-02.mp4"
-  },
-  {
-   "titulo": "Rinoplastia · feedback do cirurgião",
-   "esp": "cirurgia",
-   "mb": 5.2,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-52-rinoplastia-feedback-cirurgiao.mp4",
-   "local": "arquivos/procedimentos/proc-52-rinoplastia-feedback-cirurgiao.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-52-rinoplastia-feedback-cirurgiao.mp4"
-  },
-  {
-   "titulo": "Rinoplastia ultrassônica · SL3G (Dr. Alexandre Cavasini)",
-   "esp": "cirurgia",
-   "mb": 4.0,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-53-rinoplastia-sl3g-cavasini.mp4",
-   "local": "arquivos/procedimentos/proc-53-rinoplastia-sl3g-cavasini.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-53-rinoplastia-sl3g-cavasini.mp4"
-  },
-  {
-   "titulo": "Rinoplastia · SF3",
-   "esp": "cirurgia",
-   "mb": 6.8,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-54-rinoplastia-sf3.mp4",
-   "local": "arquivos/procedimentos/proc-54-rinoplastia-sf3.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-54-rinoplastia-sf3.mp4"
-  },
-  {
-   "titulo": "Rinoplastia ultrassônica · Dr. Alexandre Cavasini (2023)",
-   "esp": "cirurgia",
-   "mb": 3.7,
-   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-55-rinoplastia-cavasini-2023.mp4",
-   "local": "arquivos/procedimentos/proc-55-rinoplastia-cavasini-2023.mp4",
-   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-55-rinoplastia-cavasini-2023.mp4"
-  },
-  {
-   "titulo": "Aumento de Coroa · Flapless com DentSurg",
-   "esp": "cirurgia",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=wi9IzQrBXxo",
-   "topico": "flapless",
-   "esps": [
-    "cirurgia",
-    "periodontia"
-   ],
-   "pontas": [
-    "T1"
-   ],
-   "ponta": "T1"
-  },
-  {
-   "titulo": "Aumento de Coroa Clínica · Flap",
-   "esp": "cirurgia",
-   "prof": "Dra. Thayane Furtado",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=fbNMSDdVj3o",
-   "topico": "flapless",
-   "esps": [
-    "cirurgia",
-    "periodontia"
-   ]
-  },
-  {
-   "titulo": "Cirurgia Flapless",
-   "esp": "cirurgia",
-   "prof": "Dr. Paulo Kano",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=UAydlOoTFLA",
-   "topico": "flapless",
-   "esps": [
-    "cirurgia",
-    "periodontia"
-   ]
-  },
-  {
-   "titulo": "Cirurgia Flapless",
-   "esp": "cirurgia",
-   "prof": "Dr. Alexandre Teixeira Neto",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=YXHPTtstu6g",
-   "topico": "flapless",
-   "esps": [
-    "cirurgia",
-    "periodontia"
-   ]
-  },
-  {
-   "titulo": "Cirurgia Flapless",
-   "esp": "cirurgia",
-   "prof": "Dr. Boanerges Araújo",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=iwImNKu3nqM",
-   "topico": "flapless",
-   "esps": [
-    "cirurgia",
-    "periodontia"
-   ]
-  },
-  {
-   "titulo": "Como a CVDentus auxilia na osteotomia?",
-   "esp": "cirurgia",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=yTyNztoidJg",
-   "topico": "osteotomia-torus",
-   "esps": [
-    "cirurgia",
-    "periodontia"
-   ]
-  },
-  {
-   "titulo": "Descolamento de Retalho com o Piezo DentSurg Pro",
-   "esp": "cirurgia",
-   "prof": "Dr. Diego Bazan",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=RyiRHUvYIC0",
-   "topico": "descolamento",
-   "esps": [
-    "cirurgia",
-    "periodontia"
-   ]
-  },
-  {
-   "titulo": "Entrevista · Pontas na Cirurgia Estética",
-   "esp": "cirurgia",
-   "prof": "Eduardo Santini",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=vPVzbfGDsmc",
-   "topico": "outras-cirurgias"
-  },
-  {
-   "titulo": "Enxerto Anterior com o Piezo DentSurg Pro",
-   "esp": "cirurgia",
-   "prof": "Dr. Rodrigo Bucker do Instituto Bucker",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=-ZoqziA4DDI",
-   "topico": "outras-cirurgias"
-  },
-  {
-   "titulo": "Flapless em ação",
-   "esp": "cirurgia",
-   "prof": "Florin Cofar",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=F4d6g_AsSc0",
-   "topico": "flapless",
-   "esps": [
-    "cirurgia",
-    "periodontia"
-   ]
-  },
-  {
-   "titulo": "Gengivoplastia Flapless realizada com o Piezo DentSurg Pro",
-   "esp": "cirurgia",
-   "prof": "Dr. Diego Bazan",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=svU3vsmquz4",
-   "topico": "flapless",
-   "esps": [
-    "cirurgia",
-    "periodontia"
-   ]
-  },
-  {
-   "titulo": "Instalação de implantes para protocolo inferior",
-   "esp": "cirurgia",
-   "prof": "Dra. Thayane Furtado",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=Uy3suGWv0Rs",
-   "topico": "outras-cirurgias"
-  },
-  {
-   "titulo": "Nova técnica de extração",
-   "esp": "cirurgia",
-   "prof": "Liete Yassuda",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=2goQJsDpkzY",
-   "topico": "outras-cirurgias",
-   "pontas": [
-    "VR1T"
-   ],
-   "ponta": "VR1T"
-  },
-  {
-   "titulo": "Osteotomias",
-   "esp": "cirurgia",
-   "prof": "Heitor Consenza",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=2GXanb3J4u8",
-   "topico": "osteotomia-torus",
-   "esps": [
-    "cirurgia",
-    "periodontia"
-   ]
-  },
-  {
-   "titulo": "Ponta SR9 · Levantamento de seio via crista alveolar",
-   "esp": "cirurgia",
-   "ponta": "SR9",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=M9AxPO2OCUo",
-   "topico": "sinus-lift",
-   "pontas": [
-    "SR9"
-   ]
-  },
-  {
-   "titulo": "Preservando os nervos durante o procedimento",
-   "esp": "cirurgia",
-   "prof": "Renato Maluta",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=Why3JVWDAFc",
-   "topico": "outras-cirurgias"
-  },
-  {
-   "titulo": "Remoção de Tórus",
-   "esp": "cirurgia",
-   "prof": "Renato Lavezo",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=Sci1bIBlc5U",
-   "topico": "osteotomia-torus",
-   "pontas": [
-    "SFR4"
-   ],
-   "ponta": "SFR4",
-   "esps": [
-    "cirurgia",
-    "periodontia"
-   ]
-  },
-  {
-   "titulo": "Remoção de Tórus · Ponta SFR4",
-   "esp": "cirurgia",
-   "ponta": "SFR4",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=qNwljFxBCJM",
-   "topico": "osteotomia-torus",
-   "pontas": [
-    "SFR4"
-   ],
-   "esps": [
-    "cirurgia",
-    "periodontia"
-   ]
-  },
-  {
-   "titulo": "Sinus Lift",
-   "esp": "cirurgia",
-   "prof": "Dr. Fernando Almeida",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=ygIANwe7gdc",
-   "topico": "sinus-lift"
-  },
-  {
-   "titulo": "Sinus Lift com SFR4 e SLO-2",
-   "esp": "cirurgia",
-   "prof": "Diego Bazan",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=Hm8O3Air--Y",
-   "topico": "sinus-lift",
-   "pontas": [
-    "SFR4",
-    "SLO-2"
-   ],
-   "ponta": "SFR4 e SLO-2"
-  },
-  {
-   "titulo": "Sinus Lift",
-   "esp": "cirurgia",
-   "prof": "Prof. Diego Bazan",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=3eVEs0TMViU",
-   "topico": "sinus-lift"
-  },
-  {
-   "titulo": "Técnica Flapless em ação",
-   "esp": "cirurgia",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=T7yo7_mWkoI",
-   "topico": "flapless",
-   "esps": [
-    "cirurgia",
-    "periodontia"
-   ]
-  },
-  {
-   "titulo": "Técnica Flapless",
-   "esp": "cirurgia",
-   "prof": "Prof. Eduardo Santini de Almeida",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=WM02wTTFUEs",
-   "topico": "flapless",
-   "esps": [
-    "cirurgia",
-    "periodontia"
-   ]
-  },
-  {
-   "titulo": "Acabamento em Facetas",
-   "esp": "dentistica",
-   "prof": "Dr. Rogério Marcondes",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=OEWJfrRT8ZA",
-   "topico": "facetas"
-  },
-  {
-   "titulo": "Cimentação",
-   "esp": "dentistica",
-   "prof": "Dr. Rogério Marcondes",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=tVIl2BaL2Ok",
-   "topico": "cimentacao",
-   "pontas": [
-    "CM4"
-   ],
-   "ponta": "CM4"
-  },
-  {
-   "titulo": "Como realizar o refinamento dos limites do preparo com ponta CR4XR?",
-   "esp": "dentistica",
-   "prof": "Dr. Danilo Cioffi",
-   "ponta": "CR4XR",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=mQv82kDRaAE",
-   "topico": "preparo-termino",
-   "pontas": [
-    "CR4XR"
-   ]
-  },
-  {
-   "titulo": "Como remover excessos com a ponta T1?",
-   "esp": "dentistica",
-   "prof": "Dr. Danilo Cioffi",
-   "ponta": "T1",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=UQVEKl6995w",
-   "topico": "amalgama-resina",
-   "pontas": [
-    "T1"
-   ]
-  },
-  {
-   "titulo": "Remoção de Facetas com o DentSurg Pro",
-   "esp": "dentistica",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=Dg6QHEydf9g",
-   "topico": "facetas",
-   "pontas": [
-    "W1-O"
-   ],
-   "ponta": "W1-O"
-  },
-  {
-   "titulo": "Ponta T1F",
-   "esp": "dentistica",
-   "prof": "Shizuma Shibata",
-   "ponta": "T1F",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=NbJVzW6k3KY",
-   "topico": "preparo-termino",
-   "pontas": [
-    "T1F"
-   ]
-  },
-  {
-   "titulo": "Preparo Cavitário",
-   "esp": "dentistica",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=pHJiCuKc0lA",
-   "topico": "preparo-termino"
-  },
-  {
-   "titulo": "Preparo Classe V",
-   "esp": "dentistica",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=r2CjynOgDHg",
-   "topico": "preparo-termino",
-   "pontas": [
-    "CR1XR"
-   ],
-   "ponta": "CR1XR"
-  },
-  {
-   "titulo": "Preparo da caixa distal com ponta CH1-D",
-   "esp": "dentistica",
-   "prof": "Dr. Danilo Cioffi",
-   "ponta": "CH1-D",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=bQnnFLvqtNY",
-   "topico": "preparo-termino",
-   "pontas": [
-    "CH1-D"
-   ]
-  },
-  {
-   "titulo": "Preparo em área de difícil acesso",
-   "esp": "dentistica",
-   "prof": "Danilo Cioffi",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=Leq3te44KJM",
-   "topico": "preparo-termino"
-  },
-  {
-   "titulo": "Refinamento de Preparo",
-   "esp": "dentistica",
-   "prof": "João Maurício",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=DbLVt4iYBcM",
-   "topico": "preparo-termino"
-  },
-  {
-   "titulo": "Remoção de Cárie",
-   "esp": "dentistica",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=aDlzRV2Mr6Q",
-   "topico": "amalgama-resina"
-  },
-  {
-   "titulo": "Remoção de Restauração e Amálgama",
-   "esp": "dentistica",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=Z6wIFwkUvr0",
-   "topico": "amalgama-resina"
-  },
-  {
-   "titulo": "Remoção de Amálgama",
-   "esp": "dentistica",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=xiqvklQ99Yk",
-   "topico": "amalgama-resina"
-  },
-  {
-   "titulo": "Remoção de Amálgama",
-   "esp": "dentistica",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=ReZj1xzwGNE",
-   "topico": "amalgama-resina"
-  },
-  {
-   "titulo": "Remoção de Amálgama · Ponta W1",
-   "esp": "dentistica",
-   "ponta": "W1",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=VycZdDqYGJw",
-   "topico": "amalgama-resina",
-   "pontas": [
-    "W1"
-   ]
-  },
-  {
-   "titulo": "Remoção de Excesso · Restauração em classe V",
-   "esp": "dentistica",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=HGT0MTH9tcg",
-   "topico": "amalgama-resina"
-  },
-  {
-   "titulo": "Remoção de Faceta com o DentSurg Pro",
-   "esp": "dentistica",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=QFQw8-qMvHQ",
-   "topico": "facetas",
-   "pontas": [
-    "W1-O"
-   ],
-   "ponta": "W1-O"
-  },
-  {
-   "titulo": "Remoção de Faceta com o DentSurg Pro",
-   "esp": "dentistica",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=XPg2iS2iEX8",
-   "topico": "facetas",
-   "pontas": [
-    "W1-O",
-    "W1",
-    "CR1",
-    "CR1U"
-   ],
-   "ponta": "W1-O e W1 e CR1 e CR1U"
-  },
-  {
-   "titulo": "Remoção de Material Restaurador · Ponta CR4XR",
-   "esp": "dentistica",
-   "ponta": "CR4XR",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=BSZx2n7So8A",
-   "topico": "amalgama-resina",
-   "pontas": [
-    "CR4XR"
-   ]
-  },
-  {
-   "titulo": "Remoção de amálgama (Ponta T1)",
-   "esp": "dentistica",
-   "prof": "Dr. Danilo Cioffi",
-   "ponta": "T1",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=Vet9LgFfKKk",
-   "topico": "amalgama-resina",
-   "pontas": [
-    "T1"
-   ]
-  },
-  {
-   "titulo": "Remoção de amálgama com alta precisão!",
-   "esp": "dentistica",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=Bq0HXG9DOvk",
-   "topico": "amalgama-resina"
-  },
-  {
-   "titulo": "Remoção de resina composta em restauração de classe V (Ponta CR4XR)",
-   "esp": "dentistica",
-   "prof": "Dr. Danilo Cioffi",
-   "ponta": "CR4XR",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=joAze665sdI",
-   "topico": "amalgama-resina",
-   "pontas": [
-    "CR4XR"
-   ]
-  },
-  {
-   "titulo": "Restauração de resina composta · Ultrassom e ponta CR1",
-   "esp": "dentistica",
-   "ponta": "CR1",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=udHMN0oxmKA",
-   "topico": "amalgama-resina",
-   "pontas": [
-    "CR1"
-   ]
-  },
-  {
-   "titulo": "Tratamento Dentário Proximal",
-   "esp": "dentistica",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=JwLscRDSXQQ",
-   "topico": "preparo-termino"
-  },
-  {
-   "titulo": "Apicectomia",
-   "esp": "endodontia",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=znT__3AL7S8",
-   "topico": "apicectomia"
-  },
-  {
-   "titulo": "Corte de Guta-Percha",
-   "esp": "endodontia",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=55JhfcB5xOU",
-   "topico": "guta-percha"
-  },
-  {
-   "titulo": "Endodontia Completa",
-   "esp": "endodontia",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=hO2ye44zmng",
-   "topico": "endodontia",
-   "pontas": [
-    "T1F-E",
-    "T0S-E2",
-    "R1-E"
-   ],
-   "ponta": "T1F-E e T0S-E2 e R1-E"
-  },
-  {
-   "titulo": "Endodontia",
-   "esp": "endodontia",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=Ds0KJXNyGOk",
-   "topico": "endodontia"
-  },
-  {
-   "titulo": "Endodontia · Cone + PUI + Guta",
-   "esp": "endodontia",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=bJdKR-V781U",
-   "topico": "pui"
-  },
-  {
-   "titulo": "Fases operatórias na Endodontia",
-   "esp": "endodontia",
-   "prof": "Marco Aurélio",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=D4djpKMMT5k",
-   "topico": "endodontia"
-  },
-  {
-   "titulo": "Irrigação do Conduto, Corte e Termoplastificação da Guta-Percha",
-   "esp": "endodontia",
-   "prof": "Dr. Rodrigo Villagra",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=yo4N3xLUACo",
-   "topico": "pui"
-  },
-  {
-   "titulo": "PUI · Irrigação Ultrassônica Passiva",
-   "esp": "endodontia",
-   "prof": "Dr. Rodrigo Villagra",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=5N_-cOotnU8",
-   "topico": "pui"
-  },
-  {
-   "titulo": "PUI · Irrigação Ultrassônica Passiva",
-   "esp": "endodontia",
-   "prof": "Danilo Cioffi",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=BPDngu0dJFU",
-   "topico": "pui",
-   "pontas": [
-    "T0T-E2"
-   ],
-   "ponta": "T0T-E2"
-  },
-  {
-   "titulo": "Remoção de Pinos",
-   "esp": "endodontia",
-   "prof": "Dr. Marco Aurélio",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=Vxc-1fRuOhk",
-   "topico": "pinos"
-  },
-  {
-   "titulo": "Corte da Guta-Percha e Limpeza com Optymus",
-   "esp": "endodontia",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=D9dZqa_bJvI",
-   "topico": "guta-percha"
-  },
-  {
-   "titulo": "Remoção de Pinos",
-   "esp": "endodontia",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=xPEsVMswMmQ",
-   "topico": "pinos",
-   "pontas": [
-    "C2S"
-   ],
-   "ponta": "C2S"
-  },
-  {
-   "titulo": "Remoção de pinos",
-   "esp": "endodontia",
-   "prof": "Dr. Marco Aurélio",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=JvM-5vOW0Qk",
-   "topico": "pinos"
-  },
-  {
-   "titulo": "Aplicação da ponta R,05 na Odontopediatria",
-   "esp": "orto-odontoped",
-   "prof": "Dra. Liete Yassuda",
-   "ponta": "R0,5",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=8BznPFgACwc",
-   "topico": "odontopediatria",
-   "pontas": [
-    "R0,5"
-   ]
-  },
-  {
-   "titulo": "Odontopediatria",
-   "esp": "orto-odontoped",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=s2Yi1R5jRJM",
-   "topico": "odontopediatria"
-  },
-  {
-   "titulo": "Procedimento Slice",
-   "esp": "dentistica",
-   "prof": "Monique Bazan",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=7Wct-hj7TTQ",
-   "topico": "slice"
-  },
-  {
-   "titulo": "Procedimento Slice",
-   "esp": "dentistica",
-   "prof": "Prof. Monique Bazan",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=ANK4d91w9tI",
-   "topico": "slice"
-  },
-  {
-   "titulo": "Realização de procedimento na Odontopediatria com Clinical Plus e Ponta R4",
-   "esp": "orto-odontoped",
-   "ponta": "R4",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=YSq-bzXXVXo",
-   "topico": "odontopediatria",
-   "pontas": [
-    "R4"
-   ]
-  },
-  {
-   "titulo": "Flapless e Peeling Gengival",
-   "esp": "periodontia",
-   "prof": "Prof. Paulo Kano",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=1bL--HkhMU8",
-   "topico": "flapless",
-   "esps": [
-    "cirurgia",
-    "periodontia"
-   ]
-  },
-  {
-   "titulo": "Limpeza de implantes com DentSurg Pro e ponta T1T-P",
-   "esp": "periodontia",
-   "prof": "Dr. Helder Pavanelli",
-   "ponta": "T1T-P",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=obRPyPdOT1E",
-   "topico": "t1tp-implantes",
-   "pontas": [
-    "T1T-P"
-   ]
-  },
-  {
-   "titulo": "Limpeza com a ponta T1T-P",
-   "esp": "periodontia",
-   "prof": "Dr. Ricardo Scotton",
-   "ponta": "T1T-P",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=e2r1BbeteK0",
-   "topico": "t1tp-implantes",
-   "pontas": [
-    "T1T-P"
-   ]
-  },
-  {
-   "titulo": "Modo de uso da ponta T1T-P",
-   "esp": "periodontia",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=k6myHF4cnxs",
-   "topico": "t1tp-implantes",
-   "pontas": [
-    "T1T-P"
-   ],
-   "ponta": "T1T-P"
-  },
-  {
-   "titulo": "Peeling Gengival",
-   "esp": "periodontia",
-   "prof": "Dra. Débora Ayala",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=1xdHV_EWobk",
-   "topico": "gengivoplastia-peeling",
-   "esps": [
-    "cirurgia",
-    "periodontia"
-   ]
-  },
-  {
-   "titulo": "Raspagem",
-   "esp": "periodontia",
-   "prof": "Prof. Diego Bazan",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=N49aEd9JBOQ",
-   "topico": "raspagem"
-  },
-  {
-   "titulo": "Raspagem",
-   "esp": "periodontia",
-   "prof": "Dra. Analice Giovani Pereira",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=WcJRg_2HL8s",
-   "topico": "raspagem"
-  },
-  {
-   "titulo": "Raspagem/ Remoção de Cálculo",
-   "esp": "periodontia",
-   "prof": "Dr. Leonardo Costa",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=VITipyNfzX8",
-   "topico": "raspagem",
-   "pontas": [
-    "T1F"
-   ],
-   "ponta": "T1F"
-  },
-  {
-   "titulo": "Remoção de Cálculo com a Ponta T1U-2",
-   "esp": "periodontia",
-   "prof": "Dr. Maurício Castello",
-   "ponta": "T1U-2",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=DVzTjQB1U5s",
-   "topico": "raspagem",
-   "pontas": [
-    "T1U-2"
-   ]
-  },
-  {
-   "titulo": "Retracão Gengival",
-   "esp": "periodontia",
-   "prof": "Dr. Rodrigo Bucker do Instituto Bucker",
-   "formato": "YouTube",
-   "url": "https://www.youtube.com/watch?v=bbhINtRRQeM",
-   "topico": "gengivoplastia-peeling",
-   "esps": [
-    "cirurgia",
-    "periodontia"
-   ]
-  },
-  {
-    "titulo": "Ortognatica",
-    "esp": "cirurgia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APM1sX0o88C5I25OPe8obn4/BUCOMAXILOFACIAL/ORTOGNATICA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APM1sX0o88C5I25OPe8obn4/BUCOMAXILOFACIAL/ORTOGNATICA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/cirurgia-ortognatica.webp"
-  },
-  {
-    "titulo": "Rino",
-    "esp": "cirurgia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APrwULir7ZeUBC2Ux9IYgwg/CIRURGIA%20PLASTICA/RINO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APrwULir7ZeUBC2Ux9IYgwg/CIRURGIA%20PLASTICA/RINO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/cirurgia-rino.webp"
-  },
-  {
-    "titulo": "Cirurgia do mento",
-    "esp": "cirurgia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APjWTKBLoprfY__bgy97HPU/CIRURGIA/CIRURGIA%20DO%20MENTO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APjWTKBLoprfY__bgy97HPU/CIRURGIA/CIRURGIA%20DO%20MENTO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/cirurgia-cirurgia-do-mento.webp"
-  },
-  {
-    "titulo": "Cortes no osso - ds pro",
-    "esp": "cirurgia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKPaVsBHAo5TrXkq95LQwc0/CIRURGIA/CORTES%20NO%20OSSO%20-%20DS%20PRO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKPaVsBHAo5TrXkq95LQwc0/CIRURGIA/CORTES%20NO%20OSSO%20-%20DS%20PRO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/cirurgia-cortes-no-osso-ds-pro.webp"
-  },
-  {
-    "titulo": "Descolamento de membrana",
-    "esp": "cirurgia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AClbs_-FeSwbypgpmgliN0o/CIRURGIA/DESCOLAMENTO%20DE%20MEMBRANA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AClbs_-FeSwbypgpmgliN0o/CIRURGIA/DESCOLAMENTO%20DE%20MEMBRANA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/cirurgia-descolamento-de-membrana.webp"
-  },
-  {
-    "titulo": "Descolamento gengival",
-    "esp": "cirurgia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGOnhSWSmmarGXxh2-GuZ_g/CIRURGIA/DESCOLAMENTO%20GENGIVAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGOnhSWSmmarGXxh2-GuZ_g/CIRURGIA/DESCOLAMENTO%20GENGIVAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/cirurgia-descolamento-gengival.webp"
-  },
-  {
-    "titulo": "Descolamento torus",
-    "esp": "cirurgia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJ5fSO9PZ1O9RbSJj3y0mWQ/CIRURGIA/DESCOLAMENTO%20TORUS?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJ5fSO9PZ1O9RbSJj3y0mWQ/CIRURGIA/DESCOLAMENTO%20TORUS?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/cirurgia-descolamento-torus.webp"
-  },
-  {
-    "titulo": "Descortizalização",
-    "esp": "cirurgia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACCTP5b9-4VpBHhT6a-iNQ8/CIRURGIA/DESCORTIZALIZA%C3%87%C3%83O?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACCTP5b9-4VpBHhT6a-iNQ8/CIRURGIA/DESCORTIZALIZA%C3%87%C3%83O?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/cirurgia-descortizalizacao.webp"
-  },
-  {
-    "titulo": "Distração osteogênica",
-    "esp": "cirurgia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGt9Vx7FZ5PGGeZ0-qir6ow/CIRURGIA/DISTRA%C3%87%C3%83O%20OSTEOG%C3%8ANICA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGt9Vx7FZ5PGGeZ0-qir6ow/CIRURGIA/DISTRA%C3%87%C3%83O%20OSTEOG%C3%8ANICA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/cirurgia-distracao-osteogenica.webp"
-  },
-  {
-    "titulo": "Enxerto ósseo vertical",
-    "esp": "cirurgia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKBrRmISnoJPf9Pd_6WvtOU/CIRURGIA/ENXERTO%20%C3%93SSEO%20VERTICAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKBrRmISnoJPf9Pd_6WvtOU/CIRURGIA/ENXERTO%20%C3%93SSEO%20VERTICAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/cirurgia-enxerto-osseo-vertical.webp"
-  },
-  {
-    "titulo": "Escarificação",
-    "esp": "cirurgia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AAfTseAZu0zXOTDM80_-1TY/CIRURGIA/Escarifica%C3%A7%C3%A3o?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AAfTseAZu0zXOTDM80_-1TY/CIRURGIA/Escarifica%C3%A7%C3%A3o?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/cirurgia-escarificacao.webp"
-  },
-  {
-    "titulo": "Exodontia",
-    "esp": "cirurgia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AIOyXEOHfr_Jgy1MRYgQqhc/CIRURGIA/EXODONTIA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AIOyXEOHfr_Jgy1MRYgQqhc/CIRURGIA/EXODONTIA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/cirurgia-exodontia.webp"
-  },
-  {
-    "titulo": "Exostose",
-    "esp": "cirurgia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKxQwocC8BduXuBg3cIgHps/CIRURGIA/EXOSTOSE?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKxQwocC8BduXuBg3cIgHps/CIRURGIA/EXOSTOSE?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/cirurgia-exostose.webp"
-  },
-  {
-    "titulo": "Fracionamento da raiz",
-    "esp": "cirurgia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AD3mV9bzDxVdwSL-QJHuNLU/CIRURGIA/FRACIONAMENTO%20DA%20RAIZ?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AD3mV9bzDxVdwSL-QJHuNLU/CIRURGIA/FRACIONAMENTO%20DA%20RAIZ?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/cirurgia-fracionamento-da-raiz.webp"
-  },
-  {
-    "titulo": "Inserção de barra para elevar osso",
-    "esp": "cirurgia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALe9G4Qap5lOIiCMJbTFiFU/CIRURGIA/INSER%C3%87%C3%83O%20DE%20BARRA%20PARA%20ELEVAR%20OSSO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALe9G4Qap5lOIiCMJbTFiFU/CIRURGIA/INSER%C3%87%C3%83O%20DE%20BARRA%20PARA%20ELEVAR%20OSSO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/cirurgia-insercao-de-barra-para-elevar-osso.webp"
-  },
-  {
-    "titulo": "Lateralização do nervo alveolar inferior",
-    "esp": "cirurgia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ABNawd2ZE39sO52OCR69EvY/CIRURGIA/LATERALIZA%C3%87%C3%83O%20DO%20NERVO%20ALVEOLAR%20INFERIOR?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ABNawd2ZE39sO52OCR69EvY/CIRURGIA/LATERALIZA%C3%87%C3%83O%20DO%20NERVO%20ALVEOLAR%20INFERIOR?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/cirurgia-lateralizacao-do-nervo-alveolar-inferior.webp"
-  },
-  {
-    "titulo": "Levantamento de seio",
-    "esp": "cirurgia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFsrId2OA_YLddDf3SiAd0g/CIRURGIA/LEVANTAMENTO%20DE%20SEIO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFsrId2OA_YLddDf3SiAd0g/CIRURGIA/LEVANTAMENTO%20DE%20SEIO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/cirurgia-levantamento-de-seio.webp"
-  },
-  {
-    "titulo": "Levantamento de seio via crista alveolar",
-    "esp": "cirurgia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACIfbwY86FRyA4rywGVTFNs/CIRURGIA/LEVANTAMENTO%20DE%20SEIO%20VIA%20CRISTA%20ALVEOLAR?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACIfbwY86FRyA4rywGVTFNs/CIRURGIA/LEVANTAMENTO%20DE%20SEIO%20VIA%20CRISTA%20ALVEOLAR?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/cirurgia-levantamento-de-seio-via-crista-alveolar.webp"
-  },
-  {
-    "titulo": "Acabamento dos limites do preparo para remoção dos prismas de esmalte sem suporte",
-    "esp": "dentistica",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APaqc-cHGqzzs9pHIb9Ozfc/DENT%C3%8DSTICA/Acabamento%20dos%20limites%20do%20preparo%20para%20remo%C3%A7%C3%A3o%20dos%20prismas%20de%20esmalte%20sem%20suporte?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APaqc-cHGqzzs9pHIb9Ozfc/DENT%C3%8DSTICA/Acabamento%20dos%20limites%20do%20preparo%20para%20remo%C3%A7%C3%A3o%20dos%20prismas%20de%20esmalte%20sem%20suporte?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/dentistica-acabamento-dos-limites-do-preparo-para-remocao-dos-prismas-.webp"
-  },
-  {
-    "titulo": "Desgaste fino na região intrapapilar, supra e subgengival",
-    "esp": "dentistica",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AC8PEsHj-r_8hVryukceQkY/DENT%C3%8DSTICA/DESGASTE%20FINO%20NA%20REGI%C3%83O%20INTRAPAPILAR%2C%20SUPRA%20E%20SUBGENGIVAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AC8PEsHj-r_8hVryukceQkY/DENT%C3%8DSTICA/DESGASTE%20FINO%20NA%20REGI%C3%83O%20INTRAPAPILAR%2C%20SUPRA%20E%20SUBGENGIVAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/dentistica-desgaste-fino-na-regiao-intrapapilar-supra-e-subgengival.webp"
-  },
-  {
-    "titulo": "Limpeza",
-    "esp": "dentistica",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALusRlGU8AY-KuJknS5Wgf0/DENT%C3%8DSTICA/LIMPEZA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALusRlGU8AY-KuJknS5Wgf0/DENT%C3%8DSTICA/LIMPEZA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/dentistica-limpeza.webp"
-  },
-  {
-    "titulo": "Preparo cavitário",
-    "esp": "dentistica",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALYFtef_B9k7uu9XC68DLe0/DENT%C3%8DSTICA/PREPARO%20CAVIT%C3%81RIO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALYFtef_B9k7uu9XC68DLe0/DENT%C3%8DSTICA/PREPARO%20CAVIT%C3%81RIO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/dentistica-preparo-cavitario.webp"
-  },
-  {
-    "titulo": "Preparo cavitário classe V",
-    "esp": "dentistica",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AB4lBlkLib4SwfG3opmzUOo/DENT%C3%8DSTICA/Preparo%20cavit%C3%A1rio%20classe%20V?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AB4lBlkLib4SwfG3opmzUOo/DENT%C3%8DSTICA/Preparo%20cavit%C3%A1rio%20classe%20V?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/dentistica-preparo-cavitario-classe-v.webp"
-  },
-  {
-    "titulo": "Refinamento do preparo",
-    "esp": "dentistica",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHVkXczH0KFaaVPl0fd0dgc/DENT%C3%8DSTICA/REFINAMENTO%20DO%20PREPARO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHVkXczH0KFaaVPl0fd0dgc/DENT%C3%8DSTICA/REFINAMENTO%20DO%20PREPARO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/dentistica-refinamento-do-preparo.webp"
-  },
-  {
-    "titulo": "Remoção da parede proximal",
-    "esp": "dentistica",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACL4MMmKD_XQf7EN2X1RbyA/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DA%20PAREDE%20PROXIMAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACL4MMmKD_XQf7EN2X1RbyA/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DA%20PAREDE%20PROXIMAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/dentistica-remocao-da-parede-proximal.webp"
-  },
-  {
-    "titulo": "Remoção de amálgama",
-    "esp": "dentistica",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AB236MWtCLtiIVcgaHGtN2I/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20AM%C3%81LGAMA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AB236MWtCLtiIVcgaHGtN2I/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20AM%C3%81LGAMA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/dentistica-remocao-de-amalgama.webp"
-  },
-  {
-    "titulo": "Remoção de cárie",
-    "esp": "dentistica",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ANpMtvZzv0MHv7hCrLNHE7M/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20C%C3%81RIE?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ANpMtvZzv0MHv7hCrLNHE7M/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20C%C3%81RIE?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/dentistica-remocao-de-carie.webp"
-  },
-  {
-    "titulo": "Remoção de cáries e resina - T1 e R2",
-    "esp": "dentistica",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AE-Iz3JJTrv6sOeFvLdZgiw/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20C%C3%81RIES%20E%20RESINA%20-%20T1%20E%20R2?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AE-Iz3JJTrv6sOeFvLdZgiw/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20C%C3%81RIES%20E%20RESINA%20-%20T1%20E%20R2?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/dentistica-remocao-de-caries-e-resina-t1-e-r2.webp"
-  },
-  {
-    "titulo": "Remoção de excessos",
-    "esp": "dentistica",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACtFzjQYlMttv6ns4JJi7aE/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20EXCESSOS?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACtFzjQYlMttv6ns4JJi7aE/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20EXCESSOS?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/dentistica-remocao-de-excessos.webp"
-  },
-  {
-    "titulo": "Remoção de pino",
-    "esp": "dentistica",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHR2sWyad4NowS5GbEzmPUE/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20PINO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHR2sWyad4NowS5GbEzmPUE/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20PINO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/dentistica-remocao-de-pino.webp"
-  },
-  {
-    "titulo": "Remoção de resina",
-    "esp": "dentistica",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AD9ab_URcdvBcKyz8yI-lDs/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20RESINA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AD9ab_URcdvBcKyz8yI-lDs/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20RESINA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/dentistica-remocao-de-resina.webp"
-  },
-  {
-    "titulo": "Remoção de resina composta classe v",
-    "esp": "dentistica",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AAvlrtbttap_Ox1epNy1iwM/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20RESINA%20COMPOSTA%20CLASSE%20V?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AAvlrtbttap_Ox1epNy1iwM/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20RESINA%20COMPOSTA%20CLASSE%20V?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/dentistica-remocao-de-resina-composta-classe-v.webp"
-  },
-  {
-    "titulo": "Apicectomia",
-    "esp": "endodontia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGIFbdsbnXJTTUkV1aPa57M/ENDODONTIA/Apicectomia?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGIFbdsbnXJTTUkV1aPa57M/ENDODONTIA/Apicectomia?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/endodontia-apicectomia.webp"
-  },
-  {
-    "titulo": "Corte e compatação guta percha",
-    "esp": "endodontia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AOgC8NIQXjttRRWEbg_-exM/ENDODONTIA/CORTE%20E%20COMPATA%C3%87%C3%83O%20GUTA%20PERCHA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AOgC8NIQXjttRRWEbg_-exM/ENDODONTIA/CORTE%20E%20COMPATA%C3%87%C3%83O%20GUTA%20PERCHA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/endodontia-corte-e-compatacao-guta-percha.webp"
-  },
-  {
-    "titulo": "Irrigação do conduto - corte guta",
-    "esp": "endodontia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AEaqRoscg6fd14t-gGniRxI/ENDODONTIA/IRRIGA%C3%87%C3%83O%20DO%20CONDUTO%20-%20CORTE%20GUTA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AEaqRoscg6fd14t-gGniRxI/ENDODONTIA/IRRIGA%C3%87%C3%83O%20DO%20CONDUTO%20-%20CORTE%20GUTA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/endodontia-irrigacao-do-conduto-corte-guta.webp"
-  },
-  {
-    "titulo": "Limpeza",
-    "esp": "endodontia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHSfG9NG3R9FTtThffiqjrY/ENDODONTIA/LIMPEZA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHSfG9NG3R9FTtThffiqjrY/ENDODONTIA/LIMPEZA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/endodontia-limpeza.webp"
-  },
-  {
-    "titulo": "Localização de canal",
-    "esp": "endodontia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJ2TrysWNMskBiI3G5DARHc/ENDODONTIA/LOCALIZA%C3%87%C3%83O%20DE%20CANAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJ2TrysWNMskBiI3G5DARHc/ENDODONTIA/LOCALIZA%C3%87%C3%83O%20DE%20CANAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/endodontia-localizacao-de-canal.webp"
-  },
-  {
-    "titulo": "Pólipo pulpar",
-    "esp": "endodontia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACIMCUYZOmfVGdS5-qlfNtA/ENDODONTIA/P%C3%93LIPO%20PULPAR?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACIMCUYZOmfVGdS5-qlfNtA/ENDODONTIA/P%C3%93LIPO%20PULPAR?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/endodontia-polipo-pulpar.webp"
-  },
-  {
-    "titulo": "Pui",
-    "esp": "endodontia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJU4N9oMUbFhHrFc8HQkn9Q/ENDODONTIA/PUI?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJU4N9oMUbFhHrFc8HQkn9Q/ENDODONTIA/PUI?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/endodontia-pui.webp"
-  },
-  {
-    "titulo": "Remoção de excesso em restauração classe V",
-    "esp": "endodontia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AH9nHl1jffmYl8h9bU-YqeU/ENDODONTIA/Remo%C3%A7%C3%A3o%20de%20excesso%20em%20restaura%C3%A7%C3%A3o%20classe%20V?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AH9nHl1jffmYl8h9bU-YqeU/ENDODONTIA/Remo%C3%A7%C3%A3o%20de%20excesso%20em%20restaura%C3%A7%C3%A3o%20classe%20V?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/endodontia-remocao-de-excesso-em-restauracao-classe-v.webp"
-  },
-  {
-    "titulo": "Remoção de núcleo",
-    "esp": "endodontia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AEAoSSvp8XHIbICVNDdu1g0/ENDODONTIA/REMO%C3%87%C3%83O%20DE%20N%C3%9ACLEO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AEAoSSvp8XHIbICVNDdu1g0/ENDODONTIA/REMO%C3%87%C3%83O%20DE%20N%C3%9ACLEO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/endodontia-remocao-de-nucleo.webp"
-  },
-  {
-    "titulo": "Remoção de pino",
-    "esp": "endodontia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJxcra26rBEituQ16DOflYY/ENDODONTIA/REMO%C3%87%C3%83O%20DE%20PINO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJxcra26rBEituQ16DOflYY/ENDODONTIA/REMO%C3%87%C3%83O%20DE%20PINO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/endodontia-remocao-de-pino.webp"
-  },
-  {
-    "titulo": "Retropreparo",
-    "esp": "endodontia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGEbz0If4NqVkIHUDVlAUWM/ENDODONTIA/RETROPREPARO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGEbz0If4NqVkIHUDVlAUWM/ENDODONTIA/RETROPREPARO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/endodontia-retropreparo.webp"
-  },
-  {
-    "titulo": "Implantoplastia",
-    "esp": "implante",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALcxTgMARcv69b2UZS1z0sw/IMPLANTE/IMPLANTOPLASTIA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALcxTgMARcv69b2UZS1z0sw/IMPLANTE/IMPLANTOPLASTIA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/implante-implantoplastia.webp"
-  },
-  {
-    "titulo": "Instalação de implantes para protocolo inferior",
-    "esp": "implante",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AB-C--SA749O0JUNU3SpYfM/IMPLANTE/INSTALA%C3%87%C3%83O%20DE%20IMPLANTES%20PARA%20PROTOCOLO%20INFERIOR?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AB-C--SA749O0JUNU3SpYfM/IMPLANTE/INSTALA%C3%87%C3%83O%20DE%20IMPLANTES%20PARA%20PROTOCOLO%20INFERIOR?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/implante-instalacao-de-implantes-para-protocolo-inferior.webp"
-  },
-  {
-    "titulo": "Limpeza de implantes",
-    "esp": "implante",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AMXd_-jFdz5C9QEyGjyRWuw/IMPLANTE/LIMPEZA%20DE%20IMPLANTES?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AMXd_-jFdz5C9QEyGjyRWuw/IMPLANTE/LIMPEZA%20DE%20IMPLANTES?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/implante-limpeza-de-implantes.webp"
-  },
-  {
-    "titulo": "Perfuração óssea scp",
-    "esp": "implante",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFR9rt9hNCdDbAvfurLkQI4/IMPLANTE/PERFURA%C3%87%C3%83O%20%C3%93SSEA%20SCP?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFR9rt9hNCdDbAvfurLkQI4/IMPLANTE/PERFURA%C3%87%C3%83O%20%C3%93SSEA%20SCP?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/implante-perfuracao-ossea-scp.webp"
-  },
-  {
-    "titulo": "Preparação alveolar para implantes",
-    "esp": "implante",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AOgMDxlk7UNfJonsloSUkFs/IMPLANTE/PREPARA%C3%87%C3%83O%20ALVEOLAR%20PARA%20IMPLANTES?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AOgMDxlk7UNfJonsloSUkFs/IMPLANTE/PREPARA%C3%87%C3%83O%20ALVEOLAR%20PARA%20IMPLANTES?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/implante-preparacao-alveolar-para-implantes.webp"
-  },
-  {
-    "titulo": "Remoção de implante danificado",
-    "esp": "implante",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APKH7bFUMhHWwWuQtyaQ_cA/IMPLANTE/REMO%C3%87%C3%83O%20DE%20IMPLANTE%20DANIFICADO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APKH7bFUMhHWwWuQtyaQ_cA/IMPLANTE/REMO%C3%87%C3%83O%20DE%20IMPLANTE%20DANIFICADO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/implante-remocao-de-implante-danificado.webp"
-  },
-  {
-    "titulo": "Remoção de pinos",
-    "esp": "implante",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHP0qnTmlBDkfIG3h5fli7M/IMPLANTE/REMO%C3%87%C3%83O%20DE%20PINOS?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHP0qnTmlBDkfIG3h5fli7M/IMPLANTE/REMO%C3%87%C3%83O%20DE%20PINOS?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/implante-remocao-de-pinos.webp"
-  },
-  {
-    "titulo": "Trefinagem",
-    "esp": "implante",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKE9ibR5QoK7KTagKNQc57o/IMPLANTE/TREFINAGEM?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKE9ibR5QoK7KTagKNQc57o/IMPLANTE/TREFINAGEM?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/implante-trefinagem.webp"
-  },
-  {
-    "titulo": "Remoção de Siso",
-    "esp": "orto-odontoped",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJET2Wx84YTZ9XxItB4Ed3Y/ODONTOPEDIATRIA/Remo%C3%A7%C3%A3o%20de%20Siso?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJET2Wx84YTZ9XxItB4Ed3Y/ODONTOPEDIATRIA/Remo%C3%A7%C3%A3o%20de%20Siso?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/orto-odontoped-remocao-de-siso.webp"
-  },
-  {
-    "titulo": "VR1T - Extração de Dentes",
-    "esp": "orto-odontoped",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJQQiipCCOavsXtLAQR_0zc/ODONTOPEDIATRIA/VR1T%20-%20Extra%C3%A7%C3%A3o%20de%20Dentes?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJQQiipCCOavsXtLAQR_0zc/ODONTOPEDIATRIA/VR1T%20-%20Extra%C3%A7%C3%A3o%20de%20Dentes?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/orto-odontoped-vr1t-extracao-de-dentes.webp"
-  },
-  {
-    "titulo": "Corticotomia",
-    "esp": "orto-odontoped",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ADKGiDUkIh-SSwFzojkUw80/ORTODONTIA/CORTICOTOMIA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ADKGiDUkIh-SSwFzojkUw80/ORTODONTIA/CORTICOTOMIA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/orto-odontoped-corticotomia.webp"
-  },
-  {
-    "titulo": "Ipr",
-    "esp": "orto-odontoped",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJmaBc84UGxXFbbicZihNJg/ORTODONTIA/IPR?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJmaBc84UGxXFbbicZihNJg/ORTODONTIA/IPR?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/orto-odontoped-ipr.webp"
-  },
-  {
-    "titulo": "Micro osteo perfurações",
-    "esp": "orto-odontoped",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AC5shm-h1-CcflTpi_9jCZU/ORTODONTIA/Micro%20osteo%20perfura%C3%A7%C3%B5es?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AC5shm-h1-CcflTpi_9jCZU/ORTODONTIA/Micro%20osteo%20perfura%C3%A7%C3%B5es?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/orto-odontoped-micro-osteo-perfuracoes.webp"
-  },
-  {
-    "titulo": "Remoção de resina pós-bracket",
-    "esp": "orto-odontoped",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ANU_FeaBcYtoHJ95hXVSM38/ORTODONTIA/REMO%C3%87%C3%83O%20DE%20RESINA%20P%C3%93S-BRACKET?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ANU_FeaBcYtoHJ95hXVSM38/ORTODONTIA/REMO%C3%87%C3%83O%20DE%20RESINA%20P%C3%93S-BRACKET?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/orto-odontoped-remocao-de-resina-pos-bracket.webp"
-  },
-  {
-    "titulo": "Slice",
-    "esp": "orto-odontoped",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALqCDIi5Ig633EMl-l6hJRs/ORTODONTIA/SLICE?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALqCDIi5Ig633EMl-l6hJRs/ORTODONTIA/SLICE?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/orto-odontoped-slice.webp"
-  },
-  {
-    "titulo": "Aumento de Coroa - Ponta CH4M-T",
-    "esp": "periodontia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFNpYRgjakBhxEBbSrPvjJQ/PERIODONTIA/Aumento%20de%20Coroa%20-%20Ponta%20CH4M-T?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFNpYRgjakBhxEBbSrPvjJQ/PERIODONTIA/Aumento%20de%20Coroa%20-%20Ponta%20CH4M-T?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/periodontia-aumento-de-coroa-ponta-ch4m-t.webp"
-  },
-  {
-    "titulo": "Aumento de coroa clínica e regularização radicular",
-    "esp": "periodontia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHjGMghGLnc2JyGKHDHhS4E/PERIODONTIA/Aumento%20de%20coroa%20cl%C3%ADnica%20e%20regulariza%C3%A7%C3%A3o%20radicular?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHjGMghGLnc2JyGKHDHhS4E/PERIODONTIA/Aumento%20de%20coroa%20cl%C3%ADnica%20e%20regulariza%C3%A7%C3%A3o%20radicular?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/periodontia-aumento-de-coroa-clinica-e-regularizacao-radicular.webp"
-  },
-  {
-    "titulo": "Aumento de coroa em osso espesso",
-    "esp": "periodontia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AMOBAt-Yn0E9oZffae9tyJk/PERIODONTIA/AUMENTO%20DE%20COROA%20EM%20OSSO%20ESPESSO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AMOBAt-Yn0E9oZffae9tyJk/PERIODONTIA/AUMENTO%20DE%20COROA%20EM%20OSSO%20ESPESSO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/periodontia-aumento-de-coroa-em-osso-espesso.webp"
-  },
-  {
-    "titulo": "Escarificação",
-    "esp": "periodontia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACGmlwj0Dk7rLPRBu4Hp2PY/PERIODONTIA/Escarifica%C3%A7%C3%A3o?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACGmlwj0Dk7rLPRBu4Hp2PY/PERIODONTIA/Escarifica%C3%A7%C3%A3o?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/periodontia-escarificacao.webp"
-  },
-  {
-    "titulo": "Flapless",
-    "esp": "periodontia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AMMkG7hPCDPaAPbT072ttkA/PERIODONTIA/Flapless?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AMMkG7hPCDPaAPbT072ttkA/PERIODONTIA/Flapless?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/periodontia-flapless.webp"
-  },
-  {
-    "titulo": "Gengivoplastia com osteotomia",
-    "esp": "periodontia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AAF1fIWoblCn3q_R_yjkyEE/PERIODONTIA/GENGIVOPLASTIA%20COM%20OSTEOTOMIA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AAF1fIWoblCn3q_R_yjkyEE/PERIODONTIA/GENGIVOPLASTIA%20COM%20OSTEOTOMIA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/periodontia-gengivoplastia-com-osteotomia.webp"
-  },
-  {
-    "titulo": "Peeling gengival",
-    "esp": "periodontia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACjNMYt1w9UZvInrzBXZ-0A/PERIODONTIA/PEELING%20GENGIVAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACjNMYt1w9UZvInrzBXZ-0A/PERIODONTIA/PEELING%20GENGIVAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/periodontia-peeling-gengival.webp"
-  },
-  {
-    "titulo": "Preparo de coroa",
-    "esp": "periodontia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AA-gudqmmPFBRSM7F_8H-xw/PERIODONTIA/Preparo%20de%20coroa?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AA-gudqmmPFBRSM7F_8H-xw/PERIODONTIA/Preparo%20de%20coroa?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/periodontia-preparo-de-coroa.webp"
-  },
-  {
-    "titulo": "Profilaxia",
-    "esp": "periodontia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ADyW6yrNLF-duEnEaJ9SsdE/PERIODONTIA/PROFILAXIA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ADyW6yrNLF-duEnEaJ9SsdE/PERIODONTIA/PROFILAXIA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/periodontia-profilaxia.webp"
-  },
-  {
-    "titulo": "Raspagem",
-    "esp": "periodontia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFFfw_ear-CHRKBlW5wMQ0A/PERIODONTIA/RASPAGEM?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFFfw_ear-CHRKBlW5wMQ0A/PERIODONTIA/RASPAGEM?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/periodontia-raspagem.webp"
-  },
-  {
-    "titulo": "Remoção de cálculo com T1U-2",
-    "esp": "periodontia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJ49OQUp8uthlSTyC6thtFA/PERIODONTIA/Remo%C3%A7%C3%A3o%20de%20c%C3%A1lculo%20com%20T1U-2?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJ49OQUp8uthlSTyC6thtFA/PERIODONTIA/Remo%C3%A7%C3%A3o%20de%20c%C3%A1lculo%20com%20T1U-2?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/periodontia-remocao-de-calculo-com-t1u-2.webp"
-  },
-  {
-    "titulo": "Remoção de tártaro",
-    "esp": "periodontia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGVvuhSI-vKublSo-3lsMNA/PERIODONTIA/Remo%C3%A7%C3%A3o%20de%20t%C3%A1rtaro?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGVvuhSI-vKublSo-3lsMNA/PERIODONTIA/Remo%C3%A7%C3%A3o%20de%20t%C3%A1rtaro?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/periodontia-remocao-de-tartaro.webp"
-  },
-  {
-    "titulo": "Slice",
-    "esp": "periodontia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFOkbOOsCb1OMRqafMS133A/PERIODONTIA/SLICE?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFOkbOOsCb1OMRqafMS133A/PERIODONTIA/SLICE?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/periodontia-slice.webp"
-  },
-  {
-    "titulo": "T1T-P limpeza Implante",
-    "esp": "periodontia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKx7HuI5Vtny1KtzMi9LJfY/PERIODONTIA/T1T-P%20limpeza%20Implante?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKx7HuI5Vtny1KtzMi9LJfY/PERIODONTIA/T1T-P%20limpeza%20Implante?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/periodontia-t1t-p-limpeza-implante.webp"
-  },
-  {
-    "titulo": "Técnica bopt",
-    "esp": "periodontia",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFzjXvzVFAP02E7Yriu6NIs/PERIODONTIA/T%C3%89CNICA%20BOPT?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFzjXvzVFAP02E7Yriu6NIs/PERIODONTIA/T%C3%89CNICA%20BOPT?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/periodontia-tecnica-bopt.webp"
-  },
-  {
-    "titulo": "Acabamento Cervical de Restauros em Resina Composta",
-    "esp": "dentistica",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APyOBeYid5Ef2Y-QMW4RXuA/PR%C3%93TESE/Acabamento%20Cervical%20de%20Restauros%20em%20Resina%20Composta?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APyOBeYid5Ef2Y-QMW4RXuA/PR%C3%93TESE/Acabamento%20Cervical%20de%20Restauros%20em%20Resina%20Composta?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/dentistica-acabamento-cervical-de-restauros-em-resina-composta.webp"
-  },
-  {
-    "titulo": "Acabamento dos limites do preparo (prótese)",
-    "esp": "dentistica",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACG6-CUjeB5YIBQrYmqXbOU/PR%C3%93TESE/Acabamento%20dos%20limites%20do%20preparo%20para%20remo%C3%A7%C3%A3o%20dos%20prismas%20de%20esmalte%20sem%20suporte?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACG6-CUjeB5YIBQrYmqXbOU/PR%C3%93TESE/Acabamento%20dos%20limites%20do%20preparo%20para%20remo%C3%A7%C3%A3o%20dos%20prismas%20de%20esmalte%20sem%20suporte?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/dentistica-acabamento-dos-limites-do-preparo-protese.webp"
-  },
-  {
-    "titulo": "Bopt",
-    "esp": "dentistica",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKSETBxpJXT5vXfdDbOhMac/PR%C3%93TESE/BOPT?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKSETBxpJXT5vXfdDbOhMac/PR%C3%93TESE/BOPT?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/dentistica-bopt.webp"
-  },
-  {
-    "titulo": "Cimentação",
-    "esp": "dentistica",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AOAYm3Dc9aQwhnF4tkJv1Ek/PR%C3%93TESE/CIMENTA%C3%87%C3%83O?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AOAYm3Dc9aQwhnF4tkJv1Ek/PR%C3%93TESE/CIMENTA%C3%87%C3%83O?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/dentistica-cimentacao.webp"
-  },
-  {
-    "titulo": "Interproximal",
-    "esp": "dentistica",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AL1-UZBilKqEdkWABjAegOg/PR%C3%93TESE/INTERPROXIMAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AL1-UZBilKqEdkWABjAegOg/PR%C3%93TESE/INTERPROXIMAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/dentistica-interproximal.webp"
-  },
-  {
-    "titulo": "Limpeza facetas T1T-p",
-    "esp": "dentistica",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKo2VJQmZ5MzU4yGijvhVSo/PR%C3%93TESE/LIMPEZA%20FACETAS%20T1T-P?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKo2VJQmZ5MzU4yGijvhVSo/PR%C3%93TESE/LIMPEZA%20FACETAS%20T1T-P?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/dentistica-limpeza-facetas-t1t-p.webp"
-  },
-  {
-    "titulo": "Preparo ar x us",
-    "esp": "dentistica",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AAwP-q22Nlzvxksk5QRwjz8/PR%C3%93TESE/PREPARO%20AR%20X%20US?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AAwP-q22Nlzvxksk5QRwjz8/PR%C3%93TESE/PREPARO%20AR%20X%20US?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/dentistica-preparo-ar-x-us.webp"
-  },
-  {
-    "titulo": "Preparo para coroa",
-    "esp": "dentistica",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGS8VtnycE7E4HmDthr9rfE/PR%C3%93TESE/PREPARO%20PARA%20COROA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGS8VtnycE7E4HmDthr9rfE/PR%C3%93TESE/PREPARO%20PARA%20COROA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/dentistica-preparo-para-coroa.webp"
-  },
-  {
-    "titulo": "Refinamento de preparo",
-    "esp": "dentistica",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJJHzNyI7Li1cWbm7NlvQUw/PR%C3%93TESE/REFINAMENTO%20DE%20PREPARO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJJHzNyI7Li1cWbm7NlvQUw/PR%C3%93TESE/REFINAMENTO%20DE%20PREPARO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/dentistica-refinamento-de-preparo.webp"
-  },
-  {
-    "titulo": "Remoção de cimento resinoso",
-    "esp": "dentistica",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHZGTldD-9dGWEuh-eH8_1I/PR%C3%93TESE/REMO%C3%87%C3%83O%20DE%20CIMENTO%20RESINOSO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHZGTldD-9dGWEuh-eH8_1I/PR%C3%93TESE/REMO%C3%87%C3%83O%20DE%20CIMENTO%20RESINOSO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/dentistica-remocao-de-cimento-resinoso.webp"
-  },
-  {
-    "titulo": "Remoção de degrau",
-    "esp": "dentistica",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APYD_Mz-EElwLSYq3yE5W9A/PR%C3%93TESE/REMO%C3%87%C3%83O%20DE%20DEGRAU?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APYD_Mz-EElwLSYq3yE5W9A/PR%C3%93TESE/REMO%C3%87%C3%83O%20DE%20DEGRAU?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/dentistica-remocao-de-degrau.webp"
-  },
-  {
-    "titulo": "Remoção de faceta",
-    "esp": "dentistica",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ADnOcCg-9xfZ0IeBOMI0NUw/PR%C3%93TESE/REMO%C3%87%C3%83O%20DE%20FACETA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ADnOcCg-9xfZ0IeBOMI0NUw/PR%C3%93TESE/REMO%C3%87%C3%83O%20DE%20FACETA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/dentistica-remocao-de-faceta.webp"
-  },
-  {
-    "titulo": "Remoção de pino rosqueável",
-    "esp": "dentistica",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AEUbQmnThhb00pcnaCWZ198/PR%C3%93TESE/REMO%C3%87%C3%83O%20DE%20PINO%20ROSQUE%C3%81VEL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AEUbQmnThhb00pcnaCWZ198/PR%C3%93TESE/REMO%C3%87%C3%83O%20DE%20PINO%20ROSQUE%C3%81VEL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/dentistica-remocao-de-pino-rosqueavel.webp"
-  },
-  {
-    "titulo": "Término de preparo",
-    "esp": "dentistica",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AOJAHPUorltSZ8Op7TafBCo/PR%C3%93TESE/T%C3%89RMINO%20DE%20PREPARO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AOJAHPUorltSZ8Op7TafBCo/PR%C3%93TESE/T%C3%89RMINO%20DE%20PREPARO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/dentistica-termino-de-preparo.webp"
-  },
-  {
-    "titulo": "Guta-percha para cimentação de pino de fibra de vidro (T0S-E2)",
-    "esp": "dentistica",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ANZeVjjvd_7F3xG382lVFMc/S%C3%89RIE/1%20Remo%C3%A7%C3%A3o%20de%20guta-percha%20para%20cimenta%C3%A7%C3%A3o%20de%20pino%20de%20fibra%20de%20vidro%20-%20ponta%20T0S-E2.mp4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ANZeVjjvd_7F3xG382lVFMc/S%C3%89RIE/1%20Remo%C3%A7%C3%A3o%20de%20guta-percha%20para%20cimenta%C3%A7%C3%A3o%20de%20pino%20de%20fibra%20de%20vidro%20-%20ponta%20T0S-E2.mp4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/dentistica-guta-percha-para-cimentacao-de-pino-de-fibra-de-vidro-t0s-e.webp"
-  },
-  {
-    "titulo": "Compactação da guta-percha (CR2T-E)",
-    "esp": "dentistica",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AAqvS9pWqn5xOJ7p76IDVzc/S%C3%89RIE/2%20Compacta%C3%A7%C3%A3o%20da%20Guta%20Percha%20-%20CR2T-E.mp4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AAqvS9pWqn5xOJ7p76IDVzc/S%C3%89RIE/2%20Compacta%C3%A7%C3%A3o%20da%20Guta%20Percha%20-%20CR2T-E.mp4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/dentistica-compactacao-da-guta-percha-cr2t-e.webp"
-  },
-  {
-    "titulo": "Cimentação",
-    "esp": "dentistica",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ADYdY_ASTlneti0WJWI6HlY/S%C3%89RIE/CIMENTA%C3%87%C3%83O.mp4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ADYdY_ASTlneti0WJWI6HlY/S%C3%89RIE/CIMENTA%C3%87%C3%83O.mp4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/dentistica-cimentacao.webp"
-  },
-  {
-    "titulo": "Limpeza de implantes (1)",
-    "esp": "dentistica",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ANonC8I0ctp_T2mmfJBB-MI/S%C3%89RIE/LIMPEZA%20DE%20IMPLANTES%20%281%29.MP4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ANonC8I0ctp_T2mmfJBB-MI/S%C3%89RIE/LIMPEZA%20DE%20IMPLANTES%20%281%29.MP4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/dentistica-limpeza-de-implantes-1.webp"
-  },
-  {
-    "titulo": "Limpeza de implantes (2)",
-    "esp": "dentistica",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AMxN0OVMUXBcmIRCCgX9Egw/S%C3%89RIE/LIMPEZA%20DE%20IMPLANTES%20%282%29.MP4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AMxN0OVMUXBcmIRCCgX9Egw/S%C3%89RIE/LIMPEZA%20DE%20IMPLANTES%20%282%29.MP4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/dentistica-limpeza-de-implantes-2.webp"
-  },
-  {
-    "titulo": "Remoção de pino",
-    "esp": "dentistica",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALuDwXmp3WuSA78ke_3cOgs/S%C3%89RIE/REMO%C3%87%C3%83O%20DE%20PINO.mp4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALuDwXmp3WuSA78ke_3cOgs/S%C3%89RIE/REMO%C3%87%C3%83O%20DE%20PINO.mp4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/dentistica-remocao-de-pino.webp"
-  },
-  {
-    "titulo": "Término de preparo",
-    "esp": "dentistica",
-    "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AMhvT4f3AK2sWYYoR1VwQeE/S%C3%89RIE/TERMINO%20DE%20PREPARO.mp4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AMhvT4f3AK2sWYYoR1VwQeE/S%C3%89RIE/TERMINO%20DE%20PREPARO.mp4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
-    "link": "dropbox",
-    "thumb": "img/proc/dentistica-termino-de-preparo.webp"
-  }
- ],
- "galerias": {
-  "dl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/",
-  "prev": "https://cloud.cvdentus.com.br/arquivos/arte/",
-  "lista": {
-   "members": {
-    "titulo": "CVDentus Members · artes",
-    "itens": [
-     {
-      "id": "members-01-arte-1-feed",
-      "titulo": "Arte 1 · Feed",
-      "grupo": "Artes",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 1.2
-     },
-     {
-      "id": "members-02-arte-1-story",
-      "titulo": "Arte 1 · Story",
-      "grupo": "Artes",
-      "tipo": "img",
-      "ext": "png",
+      "titulo": "Kepler · TTL · 360°",
+      "tipo": "video3d",
+      "produto": "lupas",
+      "grupo360": "lupa",
+      "idioma": "pt",
+      "novo": true,
+      "mb": 7,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-360-kepler-ttl.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-360-kepler-ttl.mp4"
+    },
+    {
+      "titulo": "Armação J04 Preta · 360°",
+      "tipo": "video3d",
+      "produto": "lupas",
+      "grupo360": "armacao",
+      "idioma": "pt",
+      "novo": true,
+      "mb": 3.3,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j04-preta.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j04-preta.mp4"
+    },
+    {
+      "titulo": "Armação J04 Prata · 360°",
+      "tipo": "video3d",
+      "produto": "lupas",
+      "grupo360": "armacao",
+      "idioma": "pt",
+      "novo": true,
+      "mb": 2.4,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j04-prata.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j04-prata.mp4"
+    },
+    {
+      "titulo": "Armação J22 · 360°",
+      "tipo": "video3d",
+      "produto": "lupas",
+      "grupo360": "armacao",
+      "idioma": "pt",
+      "novo": true,
+      "mb": 2.8,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j22.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j22.mp4"
+    },
+    {
+      "titulo": "Armação J23 · 360°",
+      "tipo": "video3d",
+      "produto": "lupas",
+      "grupo360": "armacao",
+      "idioma": "pt",
+      "novo": true,
+      "mb": 3.4,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j23.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j23.mp4"
+    },
+    {
+      "titulo": "Armação J24 Preta · 360°",
+      "tipo": "video3d",
+      "produto": "lupas",
+      "grupo360": "armacao",
+      "idioma": "pt",
+      "novo": true,
+      "mb": 2.5,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j24-preta.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j24-preta.mp4"
+    },
+    {
+      "titulo": "Armação J24 Prata · 360°",
+      "tipo": "video3d",
+      "produto": "lupas",
+      "grupo360": "armacao",
+      "idioma": "pt",
+      "novo": true,
+      "mb": 2.5,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j24-prata.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j24-prata.mp4"
+    },
+    {
+      "titulo": "Armação · 360° (modelo a confirmar)",
+      "tipo": "video3d",
+      "produto": "lupas",
+      "grupo360": "armacao",
+      "idioma": "pt",
+      "novo": true,
+      "mb": 3.5,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-a-confirmar.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-a-confirmar.mp4"
+    },
+    {
+      "titulo": "Catálogo Equipamentos CVDentus",
+      "familia": "cat-equipamentos",
+      "tipo": "catalogo",
+      "produto": "geral",
+      "idioma": "pt",
+      "ano": 2023,
+      "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-equipamentos-cvdentus.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-equipamentos-cvdentus.pdf",
       "mb": 1.9
-     },
-     {
-      "id": "members-03-arte-2-feed",
-      "titulo": "Arte 2 · Feed",
-      "grupo": "Artes",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 1
-     },
-     {
-      "id": "members-04-arte-2-story",
-      "titulo": "Arte 2 · Story",
-      "grupo": "Artes",
-      "tipo": "img",
-      "ext": "png",
+    },
+    {
+      "titulo": "Piezo Catalog CVDentus",
+      "familia": "cat-equipamentos",
+      "tipo": "catalogo",
+      "produto": "geral",
+      "idioma": "en",
+      "novo": true,
+      "url": "https://cloud.cvdentus.com.br/arquivos/livros/piezo-catalog-cvdentus-en.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/piezo-catalog-cvdentus-en.pdf",
       "mb": 1.8
-     },
-     {
-      "id": "members-05-arte-3-feed",
-      "titulo": "Arte 3 · Feed",
-      "grupo": "Artes",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 1.1
-     },
-     {
-      "id": "members-06-arte-3-story",
-      "titulo": "Arte 3 · Story",
-      "grupo": "Artes",
-      "tipo": "img",
-      "ext": "png",
+    },
+    {
+      "titulo": "Catálogo de Piezos CVDentus",
+      "familia": "cat-equipamentos",
+      "tipo": "catalogo",
+      "produto": "geral",
+      "idioma": "es",
+      "novo": true,
+      "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-piezos-cvdentus-es.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-piezos-cvdentus-es.pdf",
       "mb": 1.8
-     },
-     {
-      "id": "members-07-arte-4-feed",
-      "titulo": "Arte 4 · Feed",
-      "grupo": "Artes",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 1.1
-     },
-     {
-      "id": "members-08-arte-4-story",
-      "titulo": "Arte 4 · Story",
-      "grupo": "Artes",
-      "tipo": "img",
-      "ext": "png",
+    },
+    {
+      "titulo": "Catálogo Técnico · Representantes",
+      "familia": "cat-representantes",
+      "tipo": "catalogo",
+      "produto": "geral",
+      "idioma": "pt",
+      "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-representantes.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-representantes.pdf",
+      "mb": 7.9,
+      "aviso": "Versão 2021"
+    },
+    {
+      "titulo": "Technical Catalog · Representatives",
+      "familia": "cat-representantes",
+      "tipo": "catalogo",
+      "produto": "geral",
+      "idioma": "en",
+      "novo": true,
+      "aviso": "Versão 2021",
+      "mb": 6.2,
+      "url": "https://cloud.cvdentus.com.br/arquivos/livros/representatives-catalog-en.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/representatives-catalog-en.pdf"
+    },
+    {
+      "titulo": "Catálogo Técnico · Representantes (Español)",
+      "familia": "cat-representantes",
+      "tipo": "catalogo",
+      "produto": "geral",
+      "idioma": "es",
+      "novo": true,
+      "aviso": "Versão 2021",
+      "mb": 6.2,
+      "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-representantes-es.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-representantes-es.pdf"
+    },
+    {
+      "titulo": "Tabela Comparativa dos Piezos",
+      "tipo": "comparativo",
+      "produto": "geral",
+      "idioma": "pt",
+      "mb": 0.8,
+      "url": "https://cloud.cvdentus.com.br/arquivos/arte/mat-tabela-comparativa-dos-piezos.jpg",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/mat-tabela-comparativa-dos-piezos.jpg"
+    },
+    {
+      "titulo": "3 Verdades sobre o Piezoelétrico",
+      "tipo": "marketing",
+      "produto": "geral",
+      "idioma": "pt",
+      "mb": 0.9,
+      "url": "https://cloud.cvdentus.com.br/arquivos/arte/mat-3-verdades-sobre-o-piezoeletrico.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/mat-3-verdades-sobre-o-piezoeletrico.pdf"
+    },
+    {
+      "titulo": "Catálogo Brocas CVDentus",
+      "familia": "cat-brocas",
+      "tipo": "catalogo",
+      "produto": "brocas",
+      "idioma": "pt",
+      "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-brocas-cvdentus.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-brocas-cvdentus.pdf",
       "mb": 1.9
-     },
-     {
-      "id": "members-09-arte-5-feed",
-      "titulo": "Arte 5 · Feed",
-      "grupo": "Artes",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 0.9
-     },
-     {
-      "id": "members-10-arte-5-story",
-      "titulo": "Arte 5 · Story",
-      "grupo": "Artes",
-      "tipo": "img",
-      "ext": "png",
+    },
+    {
+      "titulo": "Burs Catalog CVDentus",
+      "familia": "cat-brocas",
+      "tipo": "catalogo",
+      "produto": "brocas",
+      "idioma": "en",
+      "novo": true,
+      "url": "https://cloud.cvdentus.com.br/arquivos/livros/burs-catalog-cvdentus-en.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/burs-catalog-cvdentus-en.pdf",
       "mb": 1.6
-     },
-     {
-      "id": "members-11-arte-6-feed",
-      "titulo": "Arte 6 · Feed",
-      "grupo": "Artes",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 1.3
-     },
-     {
-      "id": "members-12-arte-6-story",
-      "titulo": "Arte 6 · Story",
-      "grupo": "Artes",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 1.5
-     }
-    ]
-   },
-   "adaptadores": {
-    "titulo": "Lançamento Adaptadores Optymus",
-    "itens": [
-     {
-      "id": "adaptadores-01-criativo-feed",
-      "titulo": "Criativo · Feed",
-      "grupo": "Criativos",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 1.1
-     },
-     {
-      "id": "adaptadores-02-criativo-story",
-      "titulo": "Criativo · Story",
-      "grupo": "Criativos",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 1.7
-     },
-     {
-      "id": "adaptadores-03-carrossel-1",
-      "titulo": "Carrossel · 1",
-      "grupo": "Carrossel",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 0.8
-     },
-     {
-      "id": "adaptadores-04-carrossel-2",
-      "titulo": "Carrossel · 2",
-      "grupo": "Carrossel",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 0.9
-     },
-     {
-      "id": "adaptadores-05-carrossel-3",
-      "titulo": "Carrossel · 3",
-      "grupo": "Carrossel",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 0.9
-     },
-     {
-      "id": "adaptadores-06-carrossel-4",
-      "titulo": "Carrossel · 4",
-      "grupo": "Carrossel",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 0.8
-     },
-     {
-      "id": "adaptadores-07-carrossel-story",
-      "titulo": "Carrossel · Story",
-      "grupo": "Carrossel",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 1.5
-     },
-     {
-      "id": "adaptadores-08-blog-feed",
-      "titulo": "Blog · Feed",
-      "grupo": "Blog",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 0.9
-     },
-     {
-      "id": "adaptadores-09-blog-story",
-      "titulo": "Blog · Story",
-      "grupo": "Blog",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 1.5
-     },
-     {
-      "id": "adaptadores-10-banner-do-site-horizontal",
-      "titulo": "Banner do site · horizontal",
-      "grupo": "Site",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 0.9
-     },
-     {
-      "id": "adaptadores-11-banner-do-site-vertical",
-      "titulo": "Banner do site · vertical",
-      "grupo": "Site",
-      "tipo": "img",
-      "ext": "png",
+    },
+    {
+      "titulo": "Catálogo de Fresas CVDentus",
+      "familia": "cat-brocas",
+      "tipo": "catalogo",
+      "produto": "brocas",
+      "idioma": "es",
+      "novo": true,
+      "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-fresas-cvdentus-es.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-fresas-cvdentus-es.pdf",
+      "mb": 1.6
+    },
+    {
+      "titulo": "Catálogo Pontas · Clinical Plus e DentSurg Pro",
+      "familia": "cat-pontas-cp-dsp",
+      "tipo": "catalogo",
+      "produto": "pontas",
+      "idioma": "pt",
+      "ano": 2026,
+      "novo": true,
+      "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-pontas-clinical-plus-dentsurg-pro-2026.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-pontas-clinical-plus-dentsurg-pro-2026.pdf",
+      "mb": 12.1
+    },
+    {
+      "titulo": "Catálogo Pontas · Optymus",
+      "familia": "cat-pontas-optymus",
+      "tipo": "catalogo",
+      "produto": "pontas",
+      "idioma": "pt",
+      "ano": 2025,
+      "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-pontas-optymus-2025.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-pontas-optymus-2025.pdf",
+      "mb": 4.4
+    },
+    {
+      "titulo": "Tips Catalog · Optymus",
+      "familia": "cat-pontas-optymus",
+      "tipo": "catalogo",
+      "produto": "pontas",
+      "idioma": "en",
+      "ano": 2025,
+      "novo": true,
+      "url": "https://cloud.cvdentus.com.br/arquivos/livros/tips-catalog-optymus-2025-en.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/tips-catalog-optymus-2025-en.pdf",
+      "mb": 4.2
+    },
+    {
+      "titulo": "Catálogo Puntas · Optymus",
+      "familia": "cat-pontas-optymus",
+      "tipo": "catalogo",
+      "produto": "pontas",
+      "idioma": "es",
+      "ano": 2025,
+      "novo": true,
+      "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-puntas-optymus-2025-es.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-puntas-optymus-2025-es.pdf",
+      "mb": 4.2
+    },
+    {
+      "titulo": "Tips Catalog · Clinical Plus & DentSurg Pro (2026)",
+      "familia": "cat-pontas-cp-dsp",
+      "tipo": "catalogo",
+      "produto": "pontas",
+      "idioma": "en",
+      "ano": 2026,
+      "novo": true,
+      "url": "https://cloud.cvdentus.com.br/arquivos/livros/tips-catalog-clinical-plus-dentsurg-pro-en-2026-v3.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/tips-catalog-clinical-plus-dentsurg-pro-en-2026-v3.pdf",
+      "mb": 10.6
+    },
+    {
+      "titulo": "Tips Catalog · Clinical Plus & DentSurg Pro",
+      "tipo": "catalogo",
+      "produto": "pontas",
+      "idioma": "en",
+      "ano": 2023,
+      "url": "https://cloud.cvdentus.com.br/arquivos/livros/tips-catalog-clinical-plus-dentsurg-pro-en.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/tips-catalog-clinical-plus-dentsurg-pro-en.pdf",
+      "mb": 8.7
+    },
+    {
+      "titulo": "Catálogo Puntas · Clinical Plus y DentSurg Pro (2026)",
+      "familia": "cat-pontas-cp-dsp",
+      "tipo": "catalogo",
+      "produto": "pontas",
+      "idioma": "es",
+      "ano": 2026,
+      "novo": true,
+      "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-puntas-clinical-plus-dentsurg-pro-es-2026-v3.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-puntas-clinical-plus-dentsurg-pro-es-2026-v3.pdf",
+      "mb": 10.6
+    },
+    {
+      "titulo": "Catálogo Puntas",
+      "tipo": "catalogo",
+      "produto": "pontas",
+      "idioma": "es",
+      "ano": 2021,
+      "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-puntas-es.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-puntas-es.pdf",
+      "mb": 4.7,
+      "aviso": "Versão 2021"
+    },
+    {
+      "titulo": "Bula das pontas · Optymus (completa)",
+      "tipo": "bula",
+      "produto": "optymus",
+      "idioma": "pt",
+      "ano": 2023,
+      "mb": 0.2,
+      "url": "https://d335luupugsy2.cloudfront.net/cms%2Ffiles%2F59178%2F1693500441Bula_OPTYMUS_2023_v04.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/bulas/bula-pontas-optymus-2023-v04.pdf"
+    },
+    {
+      "titulo": "Bula por procedimento · Clinical Plus (completa)",
+      "tipo": "bula",
+      "produto": "clinical-plus",
+      "idioma": "pt",
+      "ano": 2022,
+      "mb": 0.2,
+      "url": "https://d335luupugsy2.cloudfront.net/cms%2Ffiles%2F59178%2F1693500450Bula_por_procedimento_clnicas_DS_e_DS_PRO_V.05_2022.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/bulas/bula-procedimento-clinical-plus-ds-2022-v05.pdf"
+    },
+    {
+      "titulo": "Bula cirúrgica e clínica · DentSurg Pro (completa)",
+      "tipo": "bula",
+      "produto": "dentsurg-pro",
+      "idioma": "pt",
+      "ano": 2023,
+      "mb": 0.2,
+      "url": "https://d335luupugsy2.cloudfront.net/cms%2Ffiles%2F59178%2F1693500463Bula_cirrgicas_e_clnica_DS_PRO_V04_2023.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/bulas/bula-cirurgica-clinica-dentsurg-pro-2023-v04.pdf"
+    },
+    {
+      "titulo": "Instruções de Uso das Pontas",
+      "tipo": "uso",
+      "produto": "pontas",
+      "idioma": "pt",
+      "url": "https://youtu.be/tSEyNjEQnV4"
+    },
+    {
+      "titulo": "Vídeo 3D Optymus",
+      "tipo": "video3d",
+      "produto": "optymus",
+      "idioma": "pt",
+      "url": "https://youtu.be/PCFeRKehPDc"
+    },
+    {
+      "titulo": "Optymus 3D Video",
+      "tipo": "video3d",
+      "produto": "optymus",
+      "idioma": "en",
+      "url": "https://youtu.be/3RYsJW9FTgI"
+    },
+    {
+      "titulo": "Video 3D Optymus",
+      "tipo": "video3d",
+      "produto": "optymus",
+      "idioma": "es",
+      "url": "https://youtu.be/plRR_-HniZk"
+    },
+    {
+      "titulo": "Instalação Optymus",
+      "tipo": "instalacao",
+      "produto": "optymus",
+      "idioma": "pt",
+      "url": "https://youtu.be/6YtLc8fd1bI"
+    },
+    {
+      "titulo": "Optymus Installation",
+      "tipo": "instalacao",
+      "produto": "optymus",
+      "idioma": "en",
+      "url": "https://youtu.be/vt13Qi1JVfM"
+    },
+    {
+      "titulo": "Instalación Optymus",
+      "tipo": "instalacao",
+      "produto": "optymus",
+      "idioma": "es",
+      "url": "https://youtu.be/s2lqKfn6PFg"
+    },
+    {
+      "titulo": "Modo de Uso Optymus",
+      "tipo": "uso",
+      "produto": "optymus",
+      "idioma": "pt",
+      "mb": 6.6,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/uso-optymus-pt-v2.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/uso-optymus-pt-v2.mp4"
+    },
+    {
+      "titulo": "How to Use Optymus",
+      "tipo": "uso",
+      "produto": "optymus",
+      "idioma": "en",
+      "url": "https://youtu.be/jIoGEZu3R3Q"
+    },
+    {
+      "titulo": "Modo de Uso Optymus",
+      "tipo": "uso",
+      "produto": "optymus",
+      "idioma": "es",
+      "url": "https://youtu.be/wVuyZkZgaUw"
+    },
+    {
+      "titulo": "Manual Optymus",
+      "tipo": "manual",
+      "produto": "optymus",
+      "idioma": "pt",
+      "url": "https://cloud.cvdentus.com.br/arquivos/livros/manual-optymus.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/manual-optymus.pdf",
+      "mb": 13.5
+    },
+    {
+      "titulo": "Vídeo 3D Clinical Plus",
+      "tipo": "video3d",
+      "produto": "clinical-plus",
+      "idioma": "pt",
+      "url": "https://youtu.be/eHURySio6Yo"
+    },
+    {
+      "titulo": "Clinical Plus 3D Video",
+      "tipo": "video3d",
+      "produto": "clinical-plus",
+      "idioma": "en",
+      "url": "https://youtu.be/SJtAMp0_xhU"
+    },
+    {
+      "titulo": "Video 3D Clinical Plus",
+      "tipo": "video3d",
+      "produto": "clinical-plus",
+      "idioma": "es",
+      "url": "https://youtu.be/OjYg2zspbS4"
+    },
+    {
+      "titulo": "Instalação Clinical Plus",
+      "tipo": "instalacao",
+      "produto": "clinical-plus",
+      "idioma": "pt",
+      "url": "https://youtu.be/LmS7AfMrtyI"
+    },
+    {
+      "titulo": "Clinical Plus Installation",
+      "tipo": "instalacao",
+      "produto": "clinical-plus",
+      "idioma": "en",
+      "url": "https://youtu.be/flVFjvdDu2E"
+    },
+    {
+      "titulo": "Instalación Clinical Plus",
+      "tipo": "instalacao",
+      "produto": "clinical-plus",
+      "idioma": "es",
+      "url": "https://youtu.be/oSra1IOqGiI"
+    },
+    {
+      "titulo": "Modo de Uso Clinical Plus",
+      "tipo": "uso",
+      "produto": "clinical-plus",
+      "idioma": "pt",
+      "url": "https://youtu.be/RMMw6dI8k90"
+    },
+    {
+      "titulo": "How to Use Clinical Plus",
+      "tipo": "uso",
+      "produto": "clinical-plus",
+      "idioma": "en",
+      "url": "https://youtu.be/hIYBXrC0Rg0"
+    },
+    {
+      "titulo": "Modo de Uso Clinical Plus",
+      "tipo": "uso",
+      "produto": "clinical-plus",
+      "idioma": "es",
+      "url": "https://youtu.be/pJWZx8l6IyU"
+    },
+    {
+      "titulo": "Manual Clinical Plus",
+      "tipo": "manual",
+      "produto": "clinical-plus",
+      "idioma": "pt",
+      "url": "https://cloud.cvdentus.com.br/arquivos/livros/manual-clinical-plus.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/manual-clinical-plus.pdf",
+      "mb": 16.3
+    },
+    {
+      "titulo": "Clinical Plus Manual",
+      "tipo": "manual",
+      "produto": "clinical-plus",
+      "idioma": "en",
+      "url": "https://cloud.cvdentus.com.br/arquivos/livros/clinical-plus-manual-en.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/clinical-plus-manual-en.pdf",
+      "mb": 13.9
+    },
+    {
+      "titulo": "Vídeo 3D DentSurg Pro",
+      "tipo": "video3d",
+      "produto": "dentsurg-pro",
+      "idioma": "pt",
+      "url": "https://youtu.be/za1LrR-Jp0o"
+    },
+    {
+      "titulo": "DentSurg Pro 3D Video",
+      "tipo": "video3d",
+      "produto": "dentsurg-pro",
+      "idioma": "en",
+      "url": "https://youtu.be/p4YLlH98ncQ"
+    },
+    {
+      "titulo": "Video 3D DentSurg Pro",
+      "tipo": "video3d",
+      "produto": "dentsurg-pro",
+      "idioma": "es",
+      "url": "https://youtu.be/dJoAHEjT9UE"
+    },
+    {
+      "titulo": "Instalação DentSurg Pro",
+      "tipo": "instalacao",
+      "produto": "dentsurg-pro",
+      "idioma": "pt",
+      "url": "https://youtu.be/_rkvwdZsHaE"
+    },
+    {
+      "titulo": "DentSurg Pro Installation",
+      "tipo": "instalacao",
+      "produto": "dentsurg-pro",
+      "idioma": "en",
+      "url": "https://youtu.be/SvNvYGksd_k"
+    },
+    {
+      "titulo": "Instalación DentSurg Pro",
+      "tipo": "instalacao",
+      "produto": "dentsurg-pro",
+      "idioma": "es",
+      "url": "https://www.youtube.com/watch?v=_vOhPcJwnVk&list=PLwi_3lSQGTZAGF823s4tTpp0iZa0k3XnW&index=11"
+    },
+    {
+      "titulo": "Modo de Uso DentSurg Pro",
+      "tipo": "uso",
+      "produto": "dentsurg-pro",
+      "idioma": "pt",
+      "url": "https://youtu.be/9kBlbd_ZXd4"
+    },
+    {
+      "titulo": "How to Use DentSurg Pro",
+      "tipo": "uso",
+      "produto": "dentsurg-pro",
+      "idioma": "en",
+      "url": "https://youtu.be/AzZOPpWdPy8"
+    },
+    {
+      "titulo": "Modo de Uso DentSurg Pro",
+      "tipo": "uso",
+      "produto": "dentsurg-pro",
+      "idioma": "es",
+      "url": "https://youtu.be/OSFUZF5a02w"
+    },
+    {
+      "titulo": "Manual DentSurg Pro",
+      "tipo": "manual",
+      "produto": "dentsurg-pro",
+      "idioma": "pt",
+      "url": "https://cloud.cvdentus.com.br/arquivos/livros/manual-dentsurg-pro.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/manual-dentsurg-pro.pdf",
+      "mb": 15.3
+    },
+    {
+      "titulo": "DentSurg Pro Manual",
+      "tipo": "manual",
+      "produto": "dentsurg-pro",
+      "idioma": "en",
+      "url": "https://cloud.cvdentus.com.br/arquivos/livros/dentsurg-pro-manual-en.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/dentsurg-pro-manual-en.pdf",
+      "mb": 14.2
+    },
+    {
+      "titulo": "Manual DentSurg Pro",
+      "tipo": "manual",
+      "produto": "dentsurg-pro",
+      "idioma": "es",
+      "url": "https://cloud.cvdentus.com.br/arquivos/livros/manual-dentsurg-pro-es.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/manual-dentsurg-pro-es.pdf",
+      "mb": 13.5
+    },
+    {
+      "titulo": "DentSurg Pro Catalog",
+      "familia": "cat-dentsurg-pro",
+      "tipo": "catalogo",
+      "produto": "dentsurg-pro",
+      "idioma": "en",
+      "mb": 2.1,
+      "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-dentsurg-pro-en.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/english_CATALOG_DS_PRO_OK.pdf"
+    },
+    {
+      "titulo": "Catálogo DentSurg Pro",
+      "familia": "cat-dentsurg-pro",
+      "tipo": "catalogo",
+      "produto": "dentsurg-pro",
+      "idioma": "es",
+      "mb": 2.7,
+      "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-dentsurg-pro-es.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/SPANISH_CATALOG_DS_PRO_OK.pdf"
+    },
+    {
+      "titulo": "Folder DentSurg Pro Cirúrgico",
+      "familia": "cat-dentsurg-pro",
+      "tipo": "catalogo",
+      "produto": "dentsurg-pro",
+      "idioma": "pt",
+      "ano": 2024,
+      "url": "https://cloud.cvdentus.com.br/arquivos/livros/folder-dentsurg-pro-cirurgico-2024.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/folder-dentsurg-pro-cirurgico-2024.pdf",
       "mb": 1.4
-     }
-    ]
-   },
-   "flapless": {
-    "titulo": "Kit Flapless · e-mail marketing",
-    "itens": [
-     {
-      "id": "flapless-01-chamada-para-compra",
-      "titulo": "Chamada para compra",
-      "grupo": "Artes",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 0.1
-     },
-     {
-      "id": "flapless-02-e-mail-marketing-dezembro-2018",
-      "titulo": "E-mail marketing · dezembro 2018",
-      "grupo": "Artes",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 0.6
-     }
-    ]
-   },
-   "pecas": {
-    "titulo": "Peças de divulgação",
-    "itens": [
-     {
-      "id": "pecas-01-video-do-instagram",
-      "titulo": "Vídeo do Instagram",
-      "grupo": "Vídeos",
-      "tipo": "video",
-      "ext": "mp4",
-      "mb": 0.4
-     },
-     {
-      "id": "pecas-02-video-do-instagram",
-      "titulo": "Vídeo do Instagram",
-      "grupo": "Vídeos",
-      "tipo": "video",
-      "ext": "mp4",
-      "mb": 6.5
-     },
-     {
-      "id": "pecas-03-video-do-instagram",
-      "titulo": "Vídeo do Instagram",
-      "grupo": "Vídeos",
-      "tipo": "video",
-      "ext": "mp4",
-      "mb": 1.9
-     },
-     {
-      "id": "pecas-04-cv-dentus-lancamento-3pontas-05052022-feed-v3",
-      "titulo": "Cv dentus lançamento 3pontas 05052022 FEED v3",
-      "grupo": "Vídeos",
-      "tipo": "video",
-      "ext": "mp4",
-      "mb": 19.4
-     },
-     {
-      "id": "pecas-05-cv-dentus-lancamento-3pontas-05052022-story-v2",
-      "titulo": "Cv dentus lançamento 3pontas 05052022 STORY v2",
-      "grupo": "Vídeos",
-      "tipo": "video",
-      "ext": "mp4",
-      "mb": 25.1
-     },
-     {
-      "id": "pecas-06-cv-dentus-profilaxia-spray-28042022-v1",
-      "titulo": "Cv dentus profilaxia spray 28042022 v1",
-      "grupo": "Vídeos",
-      "tipo": "video",
-      "ext": "mp4",
-      "mb": 20.9
-     },
-     {
-      "id": "pecas-07-story-video-post-3-optymus",
-      "titulo": "Story vídeo post 3 optymus",
-      "grupo": "Vídeos",
-      "tipo": "video",
-      "ext": "mp4",
-      "mb": 2.4
-     },
-     {
-      "id": "pecas-08-03-081-story-cvdentus",
-      "titulo": "03 081 story cvdentus",
-      "grupo": "Artes",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 1.2
-     },
-     {
-      "id": "pecas-09-abross-23",
-      "titulo": "ABROSS 23",
-      "grupo": "Artes",
-      "tipo": "img",
-      "ext": "jpg",
-      "mb": 0
-     },
-     {
-      "id": "pecas-10-cdventus-03-06-facebook-story",
-      "titulo": "CDVentus 03.06 facebook story",
-      "grupo": "Artes",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 1.9
-     },
-     {
-      "id": "pecas-11-cdventus-2-1-facebook-story",
-      "titulo": "CDVentus 2 1 facebook story",
-      "grupo": "Artes",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 1.4
-     },
-     {
-      "id": "pecas-12-cdventus-2-2-video-faceinsta-2-story",
-      "titulo": "CDVentus 2 2 video faceinsta 2 story",
-      "grupo": "Artes",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 0.8
-     },
-     {
-      "id": "pecas-13-cdventus-2-3-faceinta-story",
-      "titulo": "CDVentus 2 3 faceinta story",
-      "grupo": "Artes",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 1.5
-     },
-     {
-      "id": "pecas-14-cdventus-3-20-06-face-insta-story-copy",
-      "titulo": "CDVentus 3 20 06 face insta story copy",
-      "grupo": "Artes",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 1.6
-     },
-     {
-      "id": "pecas-15-cdventus-3-20-06-face-insta",
-      "titulo": "CDVentus 3 20 06 face insta",
-      "grupo": "Artes",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 1.1
-     },
-     {
-      "id": "pecas-16-capa-facebook-cvdentus",
-      "titulo": "Capa facebook cvdentus",
-      "grupo": "Artes",
-      "tipo": "img",
-      "ext": "jpg",
-      "mb": 0
-     },
-     {
-      "id": "pecas-17-card-1",
-      "titulo": "Card 1",
-      "grupo": "Artes",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 1.1
-     },
-     {
-      "id": "pecas-18-ds-pro-video-bazan-stories",
-      "titulo": "Ds pro video bazan stories",
-      "grupo": "Artes",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 1.6
-     },
-     {
-      "id": "pecas-19-ds-pro-video-bazan",
-      "titulo": "Ds pro video bazan",
-      "grupo": "Artes",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 1
-     },
-     {
-      "id": "pecas-20-semana4-22-07-story",
-      "titulo": "Semana4 22 07 story",
-      "grupo": "Artes",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 1.7
-     },
-     {
-      "id": "pecas-21-semana5-2-story",
-      "titulo": "Semana5 2 story",
-      "grupo": "Artes",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 1.3
-     },
-     {
-      "id": "pecas-22-story-2",
-      "titulo": "Story 2",
-      "grupo": "Artes",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 1.3
-     },
-     {
-      "id": "pecas-23-story-5",
-      "titulo": "Story 5",
-      "grupo": "Artes",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 3
-     },
-     {
-      "id": "pecas-24-upgrade-1",
-      "titulo": "Upgrade 1",
-      "grupo": "Artes",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 1.6
-     },
-     {
-      "id": "pecas-25-upgrade-2",
-      "titulo": "Upgrade 2",
-      "grupo": "Artes",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 1
-     },
-     {
-      "id": "pecas-26-post-do-instagram-01",
-      "titulo": "Post do Instagram · 01",
-      "grupo": "Posts do Instagram",
-      "tipo": "img",
-      "ext": "jpg",
-      "mb": 0.2
-     },
-     {
-      "id": "pecas-27-post-do-instagram-02",
-      "titulo": "Post do Instagram · 02",
-      "grupo": "Posts do Instagram",
-      "tipo": "img",
-      "ext": "jpg",
-      "mb": 0.2
-     },
-     {
-      "id": "pecas-28-post-do-instagram-03",
-      "titulo": "Post do Instagram · 03",
-      "grupo": "Posts do Instagram",
-      "tipo": "img",
-      "ext": "jpg",
-      "mb": 0.3
-     },
-     {
-      "id": "pecas-29-post-do-instagram-04",
-      "titulo": "Post do Instagram · 04",
-      "grupo": "Posts do Instagram",
-      "tipo": "img",
-      "ext": "jpg",
-      "mb": 0
-     },
-     {
-      "id": "pecas-30-post-do-instagram-05",
-      "titulo": "Post do Instagram · 05",
-      "grupo": "Posts do Instagram",
-      "tipo": "img",
-      "ext": "jpg",
-      "mb": 0.1
-     },
-     {
-      "id": "pecas-31-post-do-instagram-06",
-      "titulo": "Post do Instagram · 06",
-      "grupo": "Posts do Instagram",
-      "tipo": "img",
-      "ext": "jpg",
-      "mb": 0.1
-     },
-     {
-      "id": "pecas-32-post-do-instagram-07",
-      "titulo": "Post do Instagram · 07",
-      "grupo": "Posts do Instagram",
-      "tipo": "img",
-      "ext": "jpg",
-      "mb": 0.2
-     },
-     {
-      "id": "pecas-33-post-do-instagram-08",
-      "titulo": "Post do Instagram · 08",
-      "grupo": "Posts do Instagram",
-      "tipo": "img",
-      "ext": "jpg",
-      "mb": 0.1
-     },
-     {
-      "id": "pecas-34-post-do-instagram-09",
-      "titulo": "Post do Instagram · 09",
-      "grupo": "Posts do Instagram",
-      "tipo": "img",
-      "ext": "jpg",
-      "mb": 0.1
-     },
-     {
-      "id": "pecas-35-post-do-instagram-10",
-      "titulo": "Post do Instagram · 10",
-      "grupo": "Posts do Instagram",
-      "tipo": "img",
-      "ext": "jpg",
-      "mb": 0.1
-     },
-     {
-      "id": "pecas-36-post-do-instagram-11",
-      "titulo": "Post do Instagram · 11",
-      "grupo": "Posts do Instagram",
-      "tipo": "img",
-      "ext": "jpg",
-      "mb": 0.1
-     },
-     {
-      "id": "pecas-37-post-do-instagram-12",
-      "titulo": "Post do Instagram · 12",
-      "grupo": "Posts do Instagram",
-      "tipo": "img",
-      "ext": "jpg",
-      "mb": 0
-     },
-     {
-      "id": "pecas-38-post-do-instagram-13",
-      "titulo": "Post do Instagram · 13",
-      "grupo": "Posts do Instagram",
-      "tipo": "img",
-      "ext": "jpg",
-      "mb": 0.1
-     },
-     {
-      "id": "pecas-39-post-do-instagram-14",
-      "titulo": "Post do Instagram · 14",
-      "grupo": "Posts do Instagram",
-      "tipo": "img",
-      "ext": "jpg",
-      "mb": 0.1
-     },
-     {
-      "id": "pecas-40-post-do-instagram-15",
-      "titulo": "Post do Instagram · 15",
-      "grupo": "Posts do Instagram",
-      "tipo": "img",
-      "ext": "jpg",
-      "mb": 0.1
-     },
-     {
-      "id": "pecas-41-post-do-instagram-16",
-      "titulo": "Post do Instagram · 16",
-      "grupo": "Posts do Instagram",
-      "tipo": "img",
-      "ext": "jpg",
-      "mb": 0.1
-     },
-     {
-      "id": "pecas-42-post-do-instagram-17",
-      "titulo": "Post do Instagram · 17",
-      "grupo": "Posts do Instagram",
-      "tipo": "img",
-      "ext": "jpg",
-      "mb": 0.1
-     },
-     {
-      "id": "pecas-43-post-do-instagram-18",
-      "titulo": "Post do Instagram · 18",
-      "grupo": "Posts do Instagram",
-      "tipo": "img",
-      "ext": "jpg",
-      "mb": 0
-     },
-     {
-      "id": "pecas-44-post-do-instagram-19",
-      "titulo": "Post do Instagram · 19",
-      "grupo": "Posts do Instagram",
-      "tipo": "img",
-      "ext": "jpg",
-      "mb": 0.1
-     },
-     {
-      "id": "pecas-45-post-do-instagram-20",
-      "titulo": "Post do Instagram · 20",
-      "grupo": "Posts do Instagram",
-      "tipo": "img",
-      "ext": "jpg",
-      "mb": 0.1
-     },
-     {
-      "id": "pecas-46-post-do-instagram-21",
-      "titulo": "Post do Instagram · 21",
-      "grupo": "Posts do Instagram",
-      "tipo": "img",
-      "ext": "jpg",
-      "mb": 0.1
-     }
-    ]
-   },
-   "elo": {
-    "titulo": "Linha Elo · fotos e artes",
-    "itens": [
-     {
-      "id": "elo-01-ponta-t1t-foto-1",
-      "titulo": "Ponta T1T · foto 1",
-      "grupo": "Pontas Elo",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 0.1
-     },
-     {
-      "id": "elo-02-ponta-t1t-foto-2",
-      "titulo": "Ponta T1T · foto 2",
-      "grupo": "Pontas Elo",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 0.1
-     },
-     {
-      "id": "elo-03-ponta-t1t-foto-3",
-      "titulo": "Ponta T1T · foto 3",
-      "grupo": "Pontas Elo",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 0.2
-     },
-     {
-      "id": "elo-04-ponta-t1ux-diamante-cvd-foto-1",
-      "titulo": "Ponta T1UX Diamante CVD · foto 1",
-      "grupo": "Pontas Elo",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 0.1
-     },
-     {
-      "id": "elo-05-ponta-t1ux-diamante-cvd-foto-2",
-      "titulo": "Ponta T1UX Diamante CVD · foto 2",
-      "grupo": "Pontas Elo",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 0.1
-     },
-     {
-      "id": "elo-06-ponta-t1ux-diamante-cvd-foto-3",
-      "titulo": "Ponta T1UX Diamante CVD · foto 3",
-      "grupo": "Pontas Elo",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 0.2
-     },
-     {
-      "id": "elo-07-compatibilidade-das-pontas-elo",
+    },
+    {
+      "titulo": "Catálogo de Lupas (online)",
+      "tipo": "catalogo",
+      "produto": "lupas",
+      "idioma": "pt",
+      "ano": 2026,
+      "novo": true,
+      "url": "https://catalogodelupas.cvdentus.com.br/",
+      "pdf": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/catalogo-lupas-oficial-2026.pdf",
+      "pdfMb": 49,
+      "aviso": "Confira a política comercial vigente"
+    },
+    {
+      "titulo": "Simulador de Lupas",
+      "tipo": "landing",
+      "produto": "lupas",
+      "idioma": "pt",
+      "novo": true,
+      "url": "https://simuladordelupas.cvdentus.com.br/"
+    },
+    {
+      "titulo": "Modo de Uso Spray Control",
+      "tipo": "uso",
+      "produto": "spray-control",
+      "idioma": "pt",
+      "url": "https://youtu.be/vdwjV-I9VZE"
+    },
+    {
+      "titulo": "Catálogo de Acessórios",
+      "familia": "cat-acessorios",
+      "tipo": "catalogo",
+      "produto": "acessorios",
+      "idioma": "pt",
+      "ano": 2026,
+      "novo": true,
+      "mb": 5.2,
+      "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-acessorios-cvdentus-2026.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/CATALOGO_ACESSORIOS_CVDENTUS_2026_DIGITAL.pdf"
+    },
+    {
+      "titulo": "Accessories Catalog CVDentus",
+      "familia": "cat-acessorios",
+      "tipo": "catalogo",
+      "produto": "acessorios",
+      "idioma": "en",
+      "ano": 2026,
+      "novo": true,
+      "mb": 6,
+      "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-acessorios-cvdentus-2026-en.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/catalogo-acessorios-cvdentus-2026-en.pdf"
+    },
+    {
+      "titulo": "Catálogo de Accesorios CVDentus",
+      "familia": "cat-acessorios",
+      "tipo": "catalogo",
+      "produto": "acessorios",
+      "idioma": "es",
+      "ano": 2026,
+      "novo": true,
+      "mb": 6,
+      "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-acessorios-cvdentus-2026-es.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/catalogo-acessorios-cvdentus-2026-es.pdf"
+    },
+    {
+      "titulo": "Vídeo de apoio · Bomba Peristáltica",
+      "tipo": "apoio",
+      "produto": "acessorios",
+      "idioma": "pt",
+      "mb": 11,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/mat-video-de-apoio-bomba-peristaltica.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/mat-video-de-apoio-bomba-peristaltica.mp4"
+    },
+    {
+      "titulo": "Vídeo de apoio · Chave Catraca",
+      "tipo": "apoio",
+      "produto": "acessorios",
+      "idioma": "pt",
+      "mb": 43,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/mat-video-de-apoio-chave-catraca.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/mat-video-de-apoio-chave-catraca.mp4"
+    },
+    {
+      "titulo": "Peças de divulgação",
+      "tipo": "marketing",
+      "produto": "geral",
+      "idioma": "pt",
+      "mb": 102,
+      "url": "#/galeria/pecas",
+      "galeria": "pecas",
+      "semDownload": true
+    },
+    {
+      "titulo": "Lançamento Adaptadores Optymus",
+      "tipo": "marketing",
+      "produto": "optymus",
+      "idioma": "pt",
+      "mb": 12,
+      "url": "#/galeria/adaptadores",
+      "novo": true,
+      "galeria": "adaptadores",
+      "semDownload": true
+    },
+    {
+      "titulo": "CVDentus Members · artes feed e story",
+      "tipo": "marketing",
+      "produto": "geral",
+      "idioma": "pt",
+      "mb": 17,
+      "url": "#/galeria/members",
+      "novo": true,
+      "galeria": "members",
+      "semDownload": true
+    },
+    {
+      "titulo": "Kit Flapless · e-mail marketing",
+      "tipo": "marketing",
+      "produto": "dentsurg-pro",
+      "idioma": "pt",
+      "mb": 1,
+      "url": "#/galeria/flapless",
+      "galeria": "flapless",
+      "semDownload": true
+    },
+    {
+      "titulo": "Piezo na Odontologia Moderna",
+      "tipo": "treinamento",
+      "produto": "geral",
+      "idioma": "pt",
+      "url": "https://www.dropbox.com/home/REDE01/MARKETING/EQUIPE%20MARKETING/CVDentus/COMERCIAL/TREINAMENTOS?preview=Piezo+na+Odontologia+Moderna.mp4",
+      "aviso": "Exige login no Dropbox da equipe"
+    },
+    {
+      "titulo": "Catálogo de Lupas 2026 (PDF)",
+      "tipo": "catalogo",
+      "produto": "lupas",
+      "idioma": "pt",
+      "ano": 2026,
+      "novo": true,
+      "mb": 14.7,
+      "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-lupas-cvdentus-2026.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/CATALOGO_LUPAS_CVDENTUS_2026_DIGITAL.pdf"
+    },
+    {
+      "titulo": "Loupe Catalog 2026 (PDF)",
+      "tipo": "catalogo",
+      "produto": "lupas",
+      "idioma": "en",
+      "ano": 2026,
+      "novo": true,
+      "mb": 15.8,
+      "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-lupas-cvdentus-2026-en.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/CATALOGO_LUPAS_2026_EN.pdf"
+    },
+    {
+      "titulo": "Catálogo de Lupas 2026 (PDF)",
+      "tipo": "catalogo",
+      "produto": "lupas",
+      "idioma": "es",
+      "ano": 2026,
+      "novo": true,
+      "mb": 15.8,
+      "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-lupas-cvdentus-2026-es.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/CATALOGO_LUPAS_2026_ES.pdf"
+    },
+    {
+      "titulo": "Catálogo de Lupas · versão fechada",
+      "familia": "cat-lupas-fechado",
+      "tipo": "catalogo",
+      "produto": "lupas",
+      "idioma": "pt",
+      "ano": 2026,
+      "novo": true,
+      "mb": 28.3,
+      "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-lupas-fechado.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/CATALOGO_CVLUPAS_fechado.pdf"
+    },
+    {
+      "titulo": "Loupes Catalog CVDentus",
+      "familia": "cat-lupas-fechado",
+      "tipo": "catalogo",
+      "produto": "lupas",
+      "idioma": "en",
+      "ano": 2026,
+      "novo": true,
+      "mb": 2.8,
+      "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-lupas-fechado-en.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/loupes-catalog-cvdentus-EN.pdf"
+    },
+    {
+      "titulo": "Catálogo de Lupas CVDentus",
+      "familia": "cat-lupas-fechado",
+      "tipo": "catalogo",
+      "produto": "lupas",
+      "idioma": "es",
+      "ano": 2026,
+      "novo": true,
+      "mb": 2.9,
+      "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-lupas-fechado-es.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/catalogo-lupas-cvdentus-ES.pdf"
+    },
+    {
+      "titulo": "Catálogo Linha Elo 2026",
+      "familia": "cat-linha-elo",
+      "tipo": "catalogo",
+      "produto": "linha-elo",
+      "idioma": "pt",
+      "ano": 2026,
+      "novo": true,
+      "mb": 8.4,
+      "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-linha-elo-2026.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/CATALOGO_LINHA_ELO_2026.pdf"
+    },
+    {
+      "titulo": "Elo Line Catalog 2026",
+      "familia": "cat-linha-elo",
+      "tipo": "catalogo",
+      "produto": "linha-elo",
+      "idioma": "en",
+      "ano": 2026,
+      "novo": true,
+      "mb": 9.1,
+      "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-linha-elo-2026-en.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/elo-line-catalog-2026-EN.pdf"
+    },
+    {
+      "titulo": "Catálogo Línea Elo 2026",
+      "familia": "cat-linha-elo",
+      "tipo": "catalogo",
+      "produto": "linha-elo",
+      "idioma": "es",
+      "ano": 2026,
+      "novo": true,
+      "mb": 9.1,
+      "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-linha-elo-2026-es.pdf",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/catalogo-linea-elo-2026-ES.pdf"
+    },
+    {
+      "titulo": "Tabela de valores · Linha Elo",
+      "tipo": "comparativo",
+      "produto": "linha-elo",
+      "idioma": "pt",
+      "novo": true,
+      "aviso": "Confira a política comercial vigente",
+      "mb": 0.3,
+      "url": "https://cloud.cvdentus.com.br/arquivos/arte/elo-08-tabela-de-valores-linha-elo.png",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-08-tabela-de-valores-linha-elo.png"
+    },
+    {
       "titulo": "Compatibilidade das pontas Elo",
-      "grupo": "Tabelas",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 1.3
-     },
-     {
-      "id": "elo-08-tabela-de-valores-linha-elo",
-      "titulo": "Tabela de valores Linha Elo",
-      "grupo": "Tabelas",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 0.3
-     },
-     {
-      "id": "elo-09-cartela-elo",
-      "titulo": "Cartela Elo",
-      "grupo": "Cartelas",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 0.5
-     },
-     {
-      "id": "elo-10-cartela-elo-1",
-      "titulo": "Cartela Elo · 1",
-      "grupo": "Cartelas",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 0.1
-     },
-     {
-      "id": "elo-11-cartela-elo-2",
-      "titulo": "Cartela Elo · 2",
-      "grupo": "Cartelas",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 0.6
-     },
-     {
-      "id": "elo-12-catalogo-capa",
-      "titulo": "Catálogo · Capa",
-      "grupo": "Páginas do catálogo",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 0
-     },
-     {
-      "id": "elo-13-catalogo-ponta-t1t",
-      "titulo": "Catálogo · Ponta T1T",
-      "grupo": "Páginas do catálogo",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 0.1
-     },
-     {
-      "id": "elo-14-catalogo-ponta-t1ux",
-      "titulo": "Catálogo · Ponta T1UX",
-      "grupo": "Páginas do catálogo",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 0.1
-     },
-     {
-      "id": "elo-15-catalogo-guia-de-encaixes",
-      "titulo": "Catálogo · Guia de encaixes",
-      "grupo": "Páginas do catálogo",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 0.1
-     },
-     {
-      "id": "elo-16-catalogo-garantias-e-suporte",
-      "titulo": "Catálogo · Garantias e suporte",
-      "grupo": "Páginas do catálogo",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 0
-     },
-     {
-      "id": "elo-17-catalogo-vantagens-do-diamante",
-      "titulo": "Catálogo · Vantagens do diamante",
-      "grupo": "Páginas do catálogo",
-      "tipo": "img",
-      "ext": "png",
-      "mb": 0
-     }
-    ]
-   }
-  }
- },
- "topicos": [
-  {
-   "id": "flapless",
-   "nome": "Flapless e Aumento de Coroa"
+      "tipo": "comparativo",
+      "produto": "linha-elo",
+      "idioma": "pt",
+      "novo": true,
+      "mb": 1.3,
+      "url": "https://cloud.cvdentus.com.br/arquivos/arte/elo-07-compatibilidade-das-pontas-elo.png",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-07-compatibilidade-das-pontas-elo.png"
+    },
+    {
+      "titulo": "Vídeo · Linha Elo (anúncio)",
+      "tipo": "apoio",
+      "produto": "linha-elo",
+      "idioma": "pt",
+      "novo": true,
+      "mb": 33.2,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-video-anuncio.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-video-anuncio.mp4"
+    },
+    {
+      "titulo": "Vídeo · Pontas Elo em movimento",
+      "tipo": "apoio",
+      "produto": "linha-elo",
+      "idioma": "pt",
+      "mb": 0.5,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-video-pontas-em-movimento.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-video-pontas-em-movimento.mp4"
+    },
+    {
+      "titulo": "Vídeo · SAC Linha Elo (dicas de uso e cuidados)",
+      "tipo": "apoio",
+      "produto": "linha-elo",
+      "idioma": "pt",
+      "novo": true,
+      "mb": 16.9,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-video-sac-pos-venda.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-video-sac-pos-venda.mp4"
+    },
+    {
+      "titulo": "Linha Elo · fotos e artes",
+      "tipo": "marketing",
+      "produto": "linha-elo",
+      "idioma": "pt",
+      "novo": true,
+      "mb": 3.9,
+      "url": "#/galeria/elo",
+      "galeria": "elo",
+      "semDownload": true
+    }
+  ],
+  "marcas": [
+    {
+      "grupo": "CVDentus",
+      "logos": [
+        {
+          "nome": "Padrão colorido",
+          "nota": "Fundo transparente",
+          "img": "cvdentus-padrao",
+          "fundo": "claro",
+          "arquivos": [
+            [
+              "PNG",
+              "cvdentus-padrao.png",
+              0.05
+            ],
+            [
+              "PDF vetor",
+              "cvdentus-vetor.pdf",
+              0.7
+            ]
+          ]
+        },
+        {
+          "nome": "Branco",
+          "nota": "Para fundos escuros",
+          "img": "cvdentus-fundo-branco",
+          "fundo": "escuro",
+          "arquivos": [
+            [
+              "PNG",
+              "cvdentus-fundo-branco.png",
+              0.05
+            ]
+          ]
+        },
+        {
+          "nome": "Fundo preto",
+          "nota": "Quadrado 1080 px",
+          "img": "cvdentus-preto",
+          "fundo": "neutro",
+          "arquivos": [
+            [
+              "PNG",
+              "cvdentus-preto.png",
+              0.04
+            ]
+          ]
+        },
+        {
+          "nome": "Alta resolução",
+          "nota": "Web e impressão grande · 21020 px",
+          "img": "cvdentus-padrao",
+          "fundo": "claro",
+          "arquivos": [
+            [
+              "PNG",
+              "cvdentus-web.png",
+              2.1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "grupo": "Selos e certificações",
+      "pasta": "selos",
+      "logos": [
+        {
+          "nome": "ISO 13485",
+          "nota": "Dispositivos médicos",
+          "img": "iso-13485",
+          "fundo": "claro",
+          "arquivos": [
+            [
+              "PNG",
+              "iso-13485.png",
+              0.04
+            ],
+            [
+              "PDF",
+              "iso-13485.pdf",
+              0.3
+            ]
+          ]
+        },
+        {
+          "nome": "ISO 9001",
+          "nota": "Gestão da qualidade",
+          "img": "iso-9001",
+          "fundo": "claro",
+          "arquivos": [
+            [
+              "PNG",
+              "iso-9001.png",
+              0.04
+            ]
+          ]
+        },
+        {
+          "nome": "+25 anos",
+          "nota": "Selo comemorativo",
+          "img": "25-anos",
+          "fundo": "claro",
+          "arquivos": [
+            [
+              "PNG",
+              "25-anos.png",
+              0.05
+            ],
+            [
+              "PDF",
+              "25-anos-identidade.pdf",
+              0.54
+            ],
+            [
+              "Editável .ai",
+              "25-anos-identidade-editavel.ai",
+              1.95
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "grupo": "Patentes e prêmios",
+      "pasta": "selos",
+      "logos": [
+        {
+          "nome": "+7 patentes",
+          "nota": "+100 artigos publicados · branco",
+          "img": "7-patentes",
+          "fundo": "escuro",
+          "arquivos": [
+            [
+              "PNG",
+              "7-patentes.png",
+              0.03
+            ]
+          ]
+        },
+        {
+          "nome": "Melhor Invento do Mundo",
+          "nota": "WIPO 2011 · branco",
+          "img": "melhor-invento",
+          "fundo": "escuro",
+          "arquivos": [
+            [
+              "PNG",
+              "melhor-invento.png",
+              0.03
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "grupo": "Equipamentos",
+      "logos": [
+        {
+          "nome": "Optymus",
+          "nota": "Branco",
+          "img": "optymus",
+          "fundo": "escuro",
+          "arquivos": [
+            [
+              "PNG",
+              "optymus.png",
+              0.01
+            ]
+          ]
+        },
+        {
+          "nome": "Clinical Plus",
+          "nota": "Branco",
+          "img": "clinical-plus",
+          "fundo": "escuro",
+          "arquivos": [
+            [
+              "PNG",
+              "clinical-plus.png",
+              0.05
+            ]
+          ]
+        },
+        {
+          "nome": "DentSurg Pro",
+          "nota": "Branco",
+          "img": "dentsurg-pro",
+          "fundo": "escuro",
+          "arquivos": [
+            [
+              "PNG",
+              "dentsurg-pro.png",
+              0.02
+            ]
+          ]
+        },
+        {
+          "nome": "Spray Control",
+          "nota": "Branco",
+          "img": "spray-control",
+          "fundo": "escuro",
+          "arquivos": [
+            [
+              "PNG",
+              "spray-control.png",
+              0.04
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "grupo": "Outras marcas do grupo",
+      "logos": [
+        {
+          "nome": "CVD Lupas",
+          "nota": "Branco",
+          "img": "cvdlupas",
+          "fundo": "escuro",
+          "arquivos": [
+            [
+              "PNG",
+              "cvdlupas.png",
+              0.02
+            ],
+            [
+              "PDF vetor",
+              "cvdlupas-vetor.pdf",
+              0.7
+            ]
+          ]
+        },
+        {
+          "nome": "CVD Vale",
+          "nota": "Colorido",
+          "img": "cvdvale",
+          "fundo": "claro",
+          "arquivos": [
+            [
+              "PNG",
+              "cvdvale.png",
+              0.04
+            ],
+            [
+              "PDF vetor",
+              "cvdvale-vetor.pdf",
+              0.7
+            ]
+          ]
+        },
+        {
+          "nome": "CVD Vale branco",
+          "nota": "Para fundos escuros",
+          "img": "cvdvale-branco",
+          "fundo": "escuro",
+          "arquivos": [
+            [
+              "PNG",
+              "cvdvale-branco.png",
+              0.04
+            ]
+          ]
+        },
+        {
+          "nome": "CVD Coating",
+          "nota": "Colorido",
+          "img": "cvdcoating",
+          "fundo": "claro",
+          "arquivos": [
+            [
+              "PNG",
+              "cvdcoating.png",
+              0.05
+            ],
+            [
+              "PDF vetor",
+              "cvdcoating-vetor.pdf",
+              0.7
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "grupo": "Linha Elo",
+      "logos": [
+        {
+          "nome": "Linha Elo",
+          "nota": "Logo da linha de pontas · PNG sem fundo, SVG e PDF vetor",
+          "img": "linha-elo",
+          "fundo": "claro",
+          "arquivos": [
+            [
+              "PNG",
+              "logo-linha-elo.png",
+              0.05
+            ],
+            [
+              "SVG",
+              "logo-linha-elo.svg",
+              0.02
+            ],
+            [
+              "PDF vetor",
+              "logo-linha-elo.pdf",
+              0.1
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "marcasBase": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/",
+  "especialidades": [
+    {
+      "id": "cirurgia",
+      "nome": "Cirurgia e Implantodontia",
+      "curto": "Cirurgia"
+    },
+    {
+      "id": "periodontia",
+      "nome": "Periodontia",
+      "curto": "Perio"
+    },
+    {
+      "id": "endodontia",
+      "nome": "Endodontia",
+      "curto": "Endo"
+    },
+    {
+      "id": "dentistica",
+      "nome": "Dentística e Prótese",
+      "curto": "Dentística"
+    },
+    {
+      "id": "profilaxia",
+      "nome": "Profilaxia",
+      "curto": "Profilaxia"
+    },
+    {
+      "id": "orto-odontoped",
+      "nome": "Ortodontia e Odontopediatria",
+      "curto": "Orto/Odontoped."
+    },
+    {
+      "id": "demonstracao",
+      "nome": "Demonstrações e Redes Sociais",
+      "curto": "Demonstrações"
+    }
+  ],
+  "procedimentos": [
+    {
+      "titulo": "Sinus Lift",
+      "esp": "cirurgia",
+      "prof": "Prof. Renato Lavezo",
+      "ponta": "SR9",
+      "mb": 10.4,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-01-sinus-lift-prof-renato-lavezo.mp4",
+      "local": "arquivos/procedimentos/proc-01-sinus-lift-prof-renato-lavezo.mp4",
+      "tv": "arquivos/procedimentos/tv/proc-01-sinus-lift-prof-renato-lavezo.mp4",
+      "tvMb": 29,
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-01-sinus-lift-prof-renato-lavezo.mp4",
+      "topico": "sinus-lift",
+      "pontas": [
+        "SR9"
+      ]
+    },
+    {
+      "titulo": "Descolamento da Membrana Sinusal",
+      "esp": "cirurgia",
+      "prof": "Prof. Renato Lavezo",
+      "mb": 3.5,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-02-descolamento-da-membrana-sinusal-prof-renato-lavezo.mp4",
+      "local": "arquivos/procedimentos/proc-02-descolamento-da-membrana-sinusal-prof-renato-lavezo.mp4",
+      "tv": "arquivos/procedimentos/tv/proc-02-descolamento-da-membrana-sinusal-prof-renato-lavezo.mp4",
+      "tvMb": 5.3,
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-02-descolamento-da-membrana-sinusal-prof-renato-lavezo.mp4",
+      "topico": "sinus-lift"
+    },
+    {
+      "titulo": "Flapless",
+      "esp": "cirurgia",
+      "prof": "Dr. Diego Bazan",
+      "mb": 23,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-03-flapless-dr-diego-bazan.mp4",
+      "local": "arquivos/procedimentos/proc-03-flapless-dr-diego-bazan.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-03-flapless-dr-diego-bazan.mp4",
+      "topico": "flapless",
+      "esps": [
+        "cirurgia",
+        "periodontia"
+      ]
+    },
+    {
+      "titulo": "Descolamento",
+      "esp": "cirurgia",
+      "prof": "Prof. Diego Bazan",
+      "ponta": "SL1-0",
+      "mb": 15.6,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-04-descolamento-prof-diego-bazan.mp4",
+      "local": "arquivos/procedimentos/proc-04-descolamento-prof-diego-bazan.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-04-descolamento-prof-diego-bazan.mp4",
+      "topico": "descolamento",
+      "pontas": [
+        "SL1-0"
+      ],
+      "esps": [
+        "cirurgia",
+        "periodontia"
+      ]
+    },
+    {
+      "titulo": "Descolamento de Torus",
+      "esp": "cirurgia",
+      "prof": "Prof. Diego Bazan",
+      "mb": 5.1,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-05-descolamento-de-torus-prof-diego-bazan.mp4",
+      "local": "arquivos/procedimentos/proc-05-descolamento-de-torus-prof-diego-bazan.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-05-descolamento-de-torus-prof-diego-bazan.mp4",
+      "topico": "osteotomia-torus",
+      "esps": [
+        "cirurgia",
+        "periodontia"
+      ],
+      "pontas": [
+        "SL1-0"
+      ],
+      "ponta": "SL1-0"
+    },
+    {
+      "titulo": "Osteotomia de Torus",
+      "esp": "cirurgia",
+      "prof": "Prof. Diego Bazan",
+      "mb": 4.3,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-06-osteotomia-de-torus-prof-diego-bazan.mp4",
+      "local": "arquivos/procedimentos/proc-06-osteotomia-de-torus-prof-diego-bazan.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-06-osteotomia-de-torus-prof-diego-bazan.mp4",
+      "topico": "osteotomia-torus",
+      "esps": [
+        "cirurgia",
+        "periodontia"
+      ],
+      "pontas": [
+        "SF3"
+      ],
+      "ponta": "SF3"
+    },
+    {
+      "titulo": "Osteotomia",
+      "esp": "cirurgia",
+      "mb": 5,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-07-osteotomia.mp4",
+      "local": "arquivos/procedimentos/proc-07-osteotomia.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-07-osteotomia.mp4",
+      "topico": "osteotomia-torus",
+      "esps": [
+        "cirurgia",
+        "periodontia"
+      ]
+    },
+    {
+      "titulo": "Descolamento",
+      "esp": "cirurgia",
+      "mb": 6.2,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-08-descolamento.mp4",
+      "local": "arquivos/procedimentos/proc-08-descolamento.mp4",
+      "tv": "arquivos/procedimentos/tv/proc-08-descolamento.mp4",
+      "tvMb": 2.6,
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-08-descolamento.mp4",
+      "topico": "descolamento",
+      "esps": [
+        "cirurgia",
+        "periodontia"
+      ]
+    },
+    {
+      "titulo": "Cirurgia do Mento",
+      "esp": "cirurgia",
+      "prof": "Ricardo Scotton",
+      "mb": 8.8,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-09-cirurgia-do-mento-ricardo-scotton.mp4",
+      "local": "arquivos/procedimentos/proc-09-cirurgia-do-mento-ricardo-scotton.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-09-cirurgia-do-mento-ricardo-scotton.mp4",
+      "topico": "outras-cirurgias"
+    },
+    {
+      "titulo": "Sindesmotomia",
+      "esp": "cirurgia",
+      "mb": 5.7,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-10-sindesmotomia.mp4",
+      "local": "arquivos/procedimentos/proc-10-sindesmotomia.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-10-sindesmotomia.mp4",
+      "topico": "outras-cirurgias"
+    },
+    {
+      "titulo": "Aumento de Coroa e Regularização Radicular",
+      "esp": "periodontia",
+      "prof": "Prof. Diego Bazan",
+      "mb": 2.7,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-11-aumento-de-coroa-e-regularizacao-radicular-prof-diego-bazan.mp4",
+      "local": "arquivos/procedimentos/proc-11-aumento-de-coroa-e-regularizacao-radicular-prof-diego-bazan.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-11-aumento-de-coroa-e-regularizacao-radicular-prof-diego-bazan.mp4",
+      "topico": "flapless",
+      "esps": [
+        "cirurgia",
+        "periodontia"
+      ]
+    },
+    {
+      "titulo": "Raspagem e Alisamento Radicular",
+      "esp": "periodontia",
+      "prof": "Prof. Diego Bazan",
+      "mb": 12.8,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-12-raspagem-e-alisamento-radicular-prof-diego-bazan.mp4",
+      "local": "arquivos/procedimentos/proc-12-raspagem-e-alisamento-radicular-prof-diego-bazan.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-12-raspagem-e-alisamento-radicular-prof-diego-bazan.mp4",
+      "topico": "raspagem"
+    },
+    {
+      "titulo": "Gengivoplastia com Osteotomia",
+      "esp": "periodontia",
+      "mb": 6.6,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-13-gengivoplastia-com-osteotomia.mp4",
+      "local": "arquivos/procedimentos/proc-13-gengivoplastia-com-osteotomia.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-13-gengivoplastia-com-osteotomia.mp4",
+      "topico": "gengivoplastia-peeling",
+      "esps": [
+        "cirurgia",
+        "periodontia"
+      ]
+    },
+    {
+      "titulo": "Peeling Gengival",
+      "esp": "periodontia",
+      "mb": 7.2,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-14-peeling-gengival.mp4",
+      "local": "arquivos/procedimentos/proc-14-peeling-gengival.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-14-peeling-gengival.mp4",
+      "topico": "gengivoplastia-peeling",
+      "esps": [
+        "cirurgia",
+        "periodontia"
+      ]
+    },
+    {
+      "titulo": "Cirurgia de Retropreparo",
+      "esp": "endodontia",
+      "prof": "Prof. Eduardo Santini",
+      "mb": 23.6,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-15-cirurgia-de-retropreparo-prof-eduardo-santini.mp4",
+      "local": "arquivos/procedimentos/proc-15-cirurgia-de-retropreparo-prof-eduardo-santini.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-15-cirurgia-de-retropreparo-prof-eduardo-santini.mp4",
+      "topico": "apicectomia",
+      "pontas": [
+        "VR04XR",
+        "T1F-2"
+      ],
+      "ponta": "VR04XR e T1F-2"
+    },
+    {
+      "titulo": "Irrigação do Conduto e Corte de Guta-Percha",
+      "esp": "endodontia",
+      "prof": "Prof. Rodrigo Villagra",
+      "mb": 14.6,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-16-irrigacao-do-conduto-e-corte-de-guta-percha-prof-rodrigo-vil.mp4",
+      "local": "arquivos/procedimentos/proc-16-irrigacao-do-conduto-e-corte-de-guta-percha-prof-rodrigo-vil.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-16-irrigacao-do-conduto-e-corte-de-guta-percha-prof-rodrigo-vil.mp4",
+      "topico": "pui"
+    },
+    {
+      "titulo": "Limpeza da Câmara Pulpar",
+      "esp": "endodontia",
+      "prof": "Prof. Rodrigo Villagra",
+      "mb": 25.4,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-17-limpeza-da-camara-pulpar-prof-rodrigo-villagra.mp4",
+      "local": "arquivos/procedimentos/proc-17-limpeza-da-camara-pulpar-prof-rodrigo-villagra.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-17-limpeza-da-camara-pulpar-prof-rodrigo-villagra.mp4",
+      "topico": "endodontia"
+    },
+    {
+      "titulo": "Compactação da Guta-Percha",
+      "esp": "endodontia",
+      "ponta": "CR2T-E",
+      "mb": 6.3,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-18-compactacao-da-guta-percha.mp4",
+      "local": "arquivos/procedimentos/proc-18-compactacao-da-guta-percha.mp4",
+      "tv": "arquivos/procedimentos/tv/proc-18-compactacao-da-guta-percha.mp4",
+      "tvMb": 6.8,
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-18-compactacao-da-guta-percha.mp4",
+      "topico": "guta-percha",
+      "pontas": [
+        "CR2T-E"
+      ]
+    },
+    {
+      "titulo": "Remoção de Guta-Percha para Pino de Fibra",
+      "esp": "endodontia",
+      "ponta": "T0S-E2",
+      "mb": 7.3,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-19-remocao-de-guta-percha-para-pino-de-fibra.mp4",
+      "local": "arquivos/procedimentos/proc-19-remocao-de-guta-percha-para-pino-de-fibra.mp4",
+      "tv": "arquivos/procedimentos/tv/proc-19-remocao-de-guta-percha-para-pino-de-fibra.mp4",
+      "tvMb": 7.5,
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-19-remocao-de-guta-percha-para-pino-de-fibra.mp4",
+      "topico": "guta-percha",
+      "pontas": [
+        "T0S-E2"
+      ]
+    },
+    {
+      "titulo": "Remoção de Pino",
+      "esp": "endodontia",
+      "mb": 9,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-20-remocao-de-pino.mp4",
+      "local": "arquivos/procedimentos/proc-20-remocao-de-pino.mp4",
+      "tv": "arquivos/procedimentos/tv/proc-20-remocao-de-pino.mp4",
+      "tvMb": 10.4,
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-20-remocao-de-pino.mp4",
+      "topico": "pinos"
+    },
+    {
+      "titulo": "Término de Preparo",
+      "esp": "dentistica",
+      "prof": "Dr. Rodrigo Bucker",
+      "mb": 5.1,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-21-termino-de-preparo-dr-rodrigo-bucker.mp4",
+      "local": "arquivos/procedimentos/proc-21-termino-de-preparo-dr-rodrigo-bucker.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-21-termino-de-preparo-dr-rodrigo-bucker.mp4",
+      "topico": "preparo-termino"
+    },
+    {
+      "titulo": "Término de Preparo",
+      "esp": "dentistica",
+      "prof": "Dr. Shizuma Shibata",
+      "mb": 4.7,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-22-termino-de-preparo-dr-shizuma-shibata.mp4",
+      "local": "arquivos/procedimentos/proc-22-termino-de-preparo-dr-shizuma-shibata.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-22-termino-de-preparo-dr-shizuma-shibata.mp4",
+      "topico": "preparo-termino"
+    },
+    {
+      "titulo": "Término de Preparo",
+      "esp": "dentistica",
+      "ponta": "T1F",
+      "mb": 5,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-23-termino-de-preparo.mp4",
+      "local": "arquivos/procedimentos/proc-23-termino-de-preparo.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-23-termino-de-preparo.mp4",
+      "topico": "preparo-termino",
+      "pontas": [
+        "T1F"
+      ]
+    },
+    {
+      "titulo": "Acabamento Cervical de Restauros em Resina",
+      "esp": "dentistica",
+      "prof": "Prof. Renato Voss",
+      "mb": 11.8,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-24-acabamento-cervical-de-restauros-em-resina-prof-renato-voss.mp4",
+      "local": "arquivos/procedimentos/proc-24-acabamento-cervical-de-restauros-em-resina-prof-renato-voss.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-24-acabamento-cervical-de-restauros-em-resina-prof-renato-voss.mp4",
+      "topico": "preparo-termino"
+    },
+    {
+      "titulo": "Acabamento Cervical de Restauros em Resina",
+      "esp": "dentistica",
+      "prof": "Prof. Renato Voss",
+      "ponta": "TR1F-RV",
+      "mb": 7.7,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-25-acabamento-cervical-de-restauros-em-resina-prof-renato-voss.mp4",
+      "local": "arquivos/procedimentos/proc-25-acabamento-cervical-de-restauros-em-resina-prof-renato-voss.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-25-acabamento-cervical-de-restauros-em-resina-prof-renato-voss.mp4",
+      "topico": "preparo-termino",
+      "pontas": [
+        "TR1F-RV"
+      ]
+    },
+    {
+      "titulo": "Remoção de Facetas",
+      "esp": "dentistica",
+      "prof": "Gustavo Greco, Alexandre Greco e Ricardo Oliveira",
+      "mb": 6.6,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-26-remocao-de-facetas-gustavo-greco-alexandre-greco-e-ricardo-o.mp4",
+      "local": "arquivos/procedimentos/proc-26-remocao-de-facetas-gustavo-greco-alexandre-greco-e-ricardo-o.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-26-remocao-de-facetas-gustavo-greco-alexandre-greco-e-ricardo-o.mp4",
+      "topico": "facetas"
+    },
+    {
+      "titulo": "Remoção de Facetas",
+      "esp": "dentistica",
+      "prof": "Dr. Clébio Domingues",
+      "mb": 5.2,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-27-remocao-de-facetas-dr-clebio-domingues.mp4",
+      "local": "arquivos/procedimentos/proc-27-remocao-de-facetas-dr-clebio-domingues.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-27-remocao-de-facetas-dr-clebio-domingues.mp4",
+      "topico": "facetas",
+      "pontas": [
+        "W1",
+        "CR1",
+        "CR1U"
+      ],
+      "ponta": "W1 e CR1 e CR1U"
+    },
+    {
+      "titulo": "Remoção de Amálgama",
+      "esp": "dentistica",
+      "mb": 12,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-28-remocao-de-amalgama.mp4",
+      "local": "arquivos/procedimentos/proc-28-remocao-de-amalgama.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-28-remocao-de-amalgama.mp4",
+      "topico": "amalgama-resina"
+    },
+    {
+      "titulo": "Preparo Interproximal",
+      "esp": "dentistica",
+      "mb": 9.3,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-29-preparo-interproximal.mp4",
+      "local": "arquivos/procedimentos/proc-29-preparo-interproximal.mp4",
+      "tv": "arquivos/procedimentos/tv/proc-29-preparo-interproximal.mp4",
+      "tvMb": 12.2,
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-29-preparo-interproximal.mp4",
+      "topico": "preparo-termino"
+    },
+    {
+      "titulo": "Slice",
+      "esp": "dentistica",
+      "prof": "Dra. Elizabeth Yassuda",
+      "mb": 2.3,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-30-slice-dra-elizabeth-yassuda.mp4",
+      "local": "arquivos/procedimentos/proc-30-slice-dra-elizabeth-yassuda.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-30-slice-dra-elizabeth-yassuda.mp4",
+      "topico": "slice"
+    },
+    {
+      "titulo": "Slice",
+      "esp": "dentistica",
+      "mb": 7.3,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-31-slice.mp4",
+      "local": "arquivos/procedimentos/proc-31-slice.mp4",
+      "tv": "arquivos/procedimentos/tv/proc-31-slice.mp4",
+      "tvMb": 6.6,
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-31-slice.mp4",
+      "topico": "slice"
+    },
+    {
+      "titulo": "Cimentação",
+      "esp": "dentistica",
+      "mb": 1.3,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-32-cimentacao.mp4",
+      "local": "arquivos/procedimentos/proc-32-cimentacao.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-32-cimentacao.mp4",
+      "topico": "cimentacao"
+    },
+    {
+      "titulo": "Profilaxia com Spray Control",
+      "esp": "profilaxia",
+      "prof": "Dr. Danilo Cioffi",
+      "mb": 4.5,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-33-profilaxia-com-spray-control-dr-danilo-cioffi.mp4",
+      "local": "arquivos/procedimentos/proc-33-profilaxia-com-spray-control-dr-danilo-cioffi.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-33-profilaxia-com-spray-control-dr-danilo-cioffi.mp4",
+      "topico": "profilaxia"
+    },
+    {
+      "titulo": "Profilaxia com Spray Control",
+      "esp": "profilaxia",
+      "mb": 4.2,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-34-profilaxia-com-spray-control.mp4",
+      "local": "arquivos/procedimentos/proc-34-profilaxia-com-spray-control.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-34-profilaxia-com-spray-control.mp4",
+      "topico": "profilaxia"
+    },
+    {
+      "titulo": "Limpeza com Ponta T1T-P",
+      "esp": "profilaxia",
+      "prof": "Ricardo Scotton",
+      "ponta": "T1T-P",
+      "mb": 12.8,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-35-limpeza-com-ponta-t1t-p-ricardo-scotton.mp4",
+      "local": "arquivos/procedimentos/proc-35-limpeza-com-ponta-t1t-p-ricardo-scotton.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-35-limpeza-com-ponta-t1t-p-ricardo-scotton.mp4",
+      "topico": "t1tp-implantes",
+      "pontas": [
+        "T1T-P"
+      ]
+    },
+    {
+      "titulo": "Modo de Uso da Ponta T1T-P",
+      "esp": "profilaxia",
+      "ponta": "T1T-P",
+      "mb": 4.2,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-36-modo-de-uso-da-ponta-t1t-p.mp4",
+      "local": "arquivos/procedimentos/proc-36-modo-de-uso-da-ponta-t1t-p.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-36-modo-de-uso-da-ponta-t1t-p.mp4",
+      "topico": "t1tp-implantes",
+      "pontas": [
+        "T1T-P"
+      ]
+    },
+    {
+      "titulo": "Ponta T1T-P em ação",
+      "esp": "profilaxia",
+      "ponta": "T1T-P",
+      "mb": 2,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-37-ponta-t1t-p-em-acao.mp4",
+      "local": "arquivos/procedimentos/proc-37-ponta-t1t-p-em-acao.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-37-ponta-t1t-p-em-acao.mp4",
+      "topico": "t1tp-implantes",
+      "pontas": [
+        "T1T-P"
+      ]
+    },
+    {
+      "titulo": "Remoção de Resina de Bracket",
+      "esp": "orto-odontoped",
+      "mb": 6.8,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-38-remocao-de-resina-de-bracket.mp4",
+      "local": "arquivos/procedimentos/proc-38-remocao-de-resina-de-bracket.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-38-remocao-de-resina-de-bracket.mp4",
+      "topico": "odontopediatria"
+    },
+    {
+      "titulo": "Odontopediatria",
+      "esp": "orto-odontoped",
+      "mb": 10.9,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-39-odontopediatria.mp4",
+      "local": "arquivos/procedimentos/proc-39-odontopediatria.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-39-odontopediatria.mp4",
+      "topico": "odontopediatria"
+    },
+    {
+      "titulo": "Simulação no Ovo · seletividade do corte",
+      "esp": "demonstracao",
+      "prof": "Dr. Danilo Cioffi",
+      "mb": 2.2,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-40-simulacao-no-ovo-seletividade-do-corte-dr-danilo-cioffi.mp4",
+      "local": "arquivos/procedimentos/proc-40-simulacao-no-ovo-seletividade-do-corte-dr-danilo-cioffi.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-40-simulacao-no-ovo-seletividade-do-corte-dr-danilo-cioffi.mp4",
+      "topico": "demonstracoes"
+    },
+    {
+      "titulo": "Minimamente Invasivo",
+      "esp": "demonstracao",
+      "prof": "Dr. Danilo Cioffi",
+      "formato": "Feed",
+      "mb": 12.7,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-41-minimamente-invasivo-dr-danilo-cioffi.mp4",
+      "local": "arquivos/procedimentos/proc-41-minimamente-invasivo-dr-danilo-cioffi.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-41-minimamente-invasivo-dr-danilo-cioffi.mp4",
+      "topico": "demonstracoes"
+    },
+    {
+      "titulo": "Minimamente Invasivo",
+      "esp": "demonstracao",
+      "prof": "Dr. Danilo Cioffi",
+      "formato": "Story",
+      "mb": 3.1,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-42-minimamente-invasivo-dr-danilo-cioffi.mp4",
+      "local": "arquivos/procedimentos/proc-42-minimamente-invasivo-dr-danilo-cioffi.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-42-minimamente-invasivo-dr-danilo-cioffi.mp4",
+      "topico": "demonstracoes"
+    },
+    {
+      "titulo": "Profilaxia",
+      "esp": "demonstracao",
+      "formato": "Post",
+      "mb": 12.3,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-43-profilaxia.mp4",
+      "local": "arquivos/procedimentos/proc-43-profilaxia.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-43-profilaxia.mp4",
+      "topico": "profilaxia"
+    },
+    {
+      "titulo": "Caso Clínico · Paciente Samuel",
+      "esp": "demonstracao",
+      "prof": "Dra. Liete Yassuda",
+      "mb": 9,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-44-caso-clinico-paciente-samuel-dra-liete-yassuda.mp4",
+      "local": "arquivos/procedimentos/proc-44-caso-clinico-paciente-samuel-dra-liete-yassuda.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-44-caso-clinico-paciente-samuel-dra-liete-yassuda.mp4",
+      "topico": "demonstracoes"
+    },
+    {
+      "titulo": "Broca em Rotação",
+      "esp": "demonstracao",
+      "mb": 3.9,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-45-broca-em-rotacao.mp4",
+      "local": "arquivos/procedimentos/proc-45-broca-em-rotacao.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-45-broca-em-rotacao.mp4",
+      "topico": "demonstracoes"
+    },
+    {
+      "titulo": "Vídeo sem título (26/07/2022)",
+      "esp": "demonstracao",
+      "aviso": "Renomear no Dropbox",
+      "mb": 12.8,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-46-video-sem-titulo-26-07-2022.mp4",
+      "local": "arquivos/procedimentos/proc-46-video-sem-titulo-26-07-2022.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-46-video-sem-titulo-26-07-2022.mp4",
+      "topico": "demonstracoes"
+    },
+    {
+      "titulo": "Cirurgia com a ponta SFR4",
+      "esp": "cirurgia",
+      "prof": "Dr. Berti",
+      "ponta": "SFR4",
+      "pontas": [
+        "SFR4"
+      ],
+      "mb": 5.8,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-47-cirurgia-ponta-sfr4-dr-berti.mp4",
+      "local": "arquivos/procedimentos/proc-47-cirurgia-ponta-sfr4-dr-berti.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-47-cirurgia-ponta-sfr4-dr-berti.mp4",
+      "topico": "outras-cirurgias"
+    },
+    {
+      "titulo": "Split Crest · Ponta SFR4",
+      "esp": "cirurgia",
+      "ponta": "SFR4",
+      "pontas": [
+        "SFR4"
+      ],
+      "mb": 3,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-48-split-crest-ponta-sfr4.mp4",
+      "local": "arquivos/procedimentos/proc-48-split-crest-ponta-sfr4.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-48-split-crest-ponta-sfr4.mp4",
+      "topico": "outras-cirurgias"
+    },
+    {
+      "titulo": "Aumento de Coroa · Flapless",
+      "esp": "cirurgia",
+      "prof": "Dr. Aldir Machado",
+      "mb": 4.3,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-49-aumento-de-coroa-flapless-dr-aldir-machado.mp4",
+      "local": "arquivos/procedimentos/proc-49-aumento-de-coroa-flapless-dr-aldir-machado.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-49-aumento-de-coroa-flapless-dr-aldir-machado.mp4",
+      "topico": "flapless",
+      "esps": [
+        "cirurgia",
+        "periodontia"
+      ]
+    },
+    {
+      "titulo": "Rinoplastia · vídeo 1",
+      "esp": "cirurgia",
+      "mb": 2.4,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-50-rinoplastia-01.mp4",
+      "local": "arquivos/procedimentos/proc-50-rinoplastia-01.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-50-rinoplastia-01.mp4",
+      "topico": "rinoplastia",
+      "thumb": "img/proc/proc-50-rinoplastia-01.webp"
+    },
+    {
+      "titulo": "Rinoplastia · vídeo 2",
+      "esp": "cirurgia",
+      "mb": 3.1,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-51-rinoplastia-02.mp4",
+      "local": "arquivos/procedimentos/proc-51-rinoplastia-02.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-51-rinoplastia-02.mp4",
+      "topico": "rinoplastia",
+      "thumb": "img/proc/proc-51-rinoplastia-02.webp"
+    },
+    {
+      "titulo": "Rinoplastia · feedback do cirurgião",
+      "esp": "cirurgia",
+      "mb": 5.2,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-52-rinoplastia-feedback-cirurgiao.mp4",
+      "local": "arquivos/procedimentos/proc-52-rinoplastia-feedback-cirurgiao.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-52-rinoplastia-feedback-cirurgiao.mp4",
+      "topico": "rinoplastia",
+      "thumb": "img/proc/proc-52-rinoplastia-feedback-cirurgiao.webp"
+    },
+    {
+      "titulo": "Rinoplastia ultrassônica · SL3G (Dr. Alexandre Cavasini)",
+      "esp": "cirurgia",
+      "mb": 4,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-53-rinoplastia-sl3g-cavasini.mp4",
+      "local": "arquivos/procedimentos/proc-53-rinoplastia-sl3g-cavasini.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-53-rinoplastia-sl3g-cavasini.mp4",
+      "topico": "rinoplastia",
+      "thumb": "img/proc/proc-53-rinoplastia-sl3g-cavasini.webp"
+    },
+    {
+      "titulo": "Rinoplastia · SF3",
+      "esp": "cirurgia",
+      "mb": 6.8,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-54-rinoplastia-sf3.mp4",
+      "local": "arquivos/procedimentos/proc-54-rinoplastia-sf3.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-54-rinoplastia-sf3.mp4",
+      "topico": "rinoplastia",
+      "thumb": "img/proc/proc-54-rinoplastia-sf3.webp"
+    },
+    {
+      "titulo": "Rinoplastia ultrassônica · Dr. Alexandre Cavasini (2023)",
+      "esp": "cirurgia",
+      "mb": 3.7,
+      "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-55-rinoplastia-cavasini-2023.mp4",
+      "local": "arquivos/procedimentos/proc-55-rinoplastia-cavasini-2023.mp4",
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-55-rinoplastia-cavasini-2023.mp4",
+      "topico": "rinoplastia",
+      "thumb": "img/proc/proc-55-rinoplastia-cavasini-2023.webp"
+    },
+    {
+      "titulo": "Aumento de Coroa · Flapless com DentSurg",
+      "esp": "cirurgia",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=wi9IzQrBXxo",
+      "topico": "flapless",
+      "esps": [
+        "cirurgia",
+        "periodontia"
+      ],
+      "pontas": [
+        "T1"
+      ],
+      "ponta": "T1"
+    },
+    {
+      "titulo": "Aumento de Coroa Clínica · Flap",
+      "esp": "cirurgia",
+      "prof": "Dra. Thayane Furtado",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=fbNMSDdVj3o",
+      "topico": "flapless",
+      "esps": [
+        "cirurgia",
+        "periodontia"
+      ]
+    },
+    {
+      "titulo": "Cirurgia Flapless",
+      "esp": "cirurgia",
+      "prof": "Dr. Paulo Kano",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=UAydlOoTFLA",
+      "topico": "flapless",
+      "esps": [
+        "cirurgia",
+        "periodontia"
+      ]
+    },
+    {
+      "titulo": "Cirurgia Flapless",
+      "esp": "cirurgia",
+      "prof": "Dr. Alexandre Teixeira Neto",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=YXHPTtstu6g",
+      "topico": "flapless",
+      "esps": [
+        "cirurgia",
+        "periodontia"
+      ]
+    },
+    {
+      "titulo": "Cirurgia Flapless",
+      "esp": "cirurgia",
+      "prof": "Dr. Boanerges Araújo",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=iwImNKu3nqM",
+      "topico": "flapless",
+      "esps": [
+        "cirurgia",
+        "periodontia"
+      ]
+    },
+    {
+      "titulo": "Como a CVDentus auxilia na osteotomia?",
+      "esp": "cirurgia",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=yTyNztoidJg",
+      "topico": "osteotomia-torus",
+      "esps": [
+        "cirurgia",
+        "periodontia"
+      ]
+    },
+    {
+      "titulo": "Descolamento de Retalho com o Piezo DentSurg Pro",
+      "esp": "cirurgia",
+      "prof": "Dr. Diego Bazan",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=RyiRHUvYIC0",
+      "topico": "descolamento",
+      "esps": [
+        "cirurgia",
+        "periodontia"
+      ]
+    },
+    {
+      "titulo": "Entrevista · Pontas na Cirurgia Estética",
+      "esp": "cirurgia",
+      "prof": "Eduardo Santini",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=vPVzbfGDsmc",
+      "topico": "outras-cirurgias"
+    },
+    {
+      "titulo": "Enxerto Anterior com o Piezo DentSurg Pro",
+      "esp": "cirurgia",
+      "prof": "Dr. Rodrigo Bucker do Instituto Bucker",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=-ZoqziA4DDI",
+      "topico": "outras-cirurgias"
+    },
+    {
+      "titulo": "Flapless em ação",
+      "esp": "cirurgia",
+      "prof": "Florin Cofar",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=F4d6g_AsSc0",
+      "topico": "flapless",
+      "esps": [
+        "cirurgia",
+        "periodontia"
+      ]
+    },
+    {
+      "titulo": "Gengivoplastia Flapless realizada com o Piezo DentSurg Pro",
+      "esp": "cirurgia",
+      "prof": "Dr. Diego Bazan",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=svU3vsmquz4",
+      "topico": "flapless",
+      "esps": [
+        "cirurgia",
+        "periodontia"
+      ]
+    },
+    {
+      "titulo": "Instalação de implantes para protocolo inferior",
+      "esp": "cirurgia",
+      "prof": "Dra. Thayane Furtado",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=Uy3suGWv0Rs",
+      "topico": "outras-cirurgias"
+    },
+    {
+      "titulo": "Nova técnica de extração",
+      "esp": "cirurgia",
+      "prof": "Liete Yassuda",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=2goQJsDpkzY",
+      "topico": "outras-cirurgias",
+      "pontas": [
+        "VR1T"
+      ],
+      "ponta": "VR1T"
+    },
+    {
+      "titulo": "Osteotomias",
+      "esp": "cirurgia",
+      "prof": "Heitor Consenza",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=2GXanb3J4u8",
+      "topico": "osteotomia-torus",
+      "esps": [
+        "cirurgia",
+        "periodontia"
+      ]
+    },
+    {
+      "titulo": "Ponta SR9 · Levantamento de seio via crista alveolar",
+      "esp": "cirurgia",
+      "ponta": "SR9",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=M9AxPO2OCUo",
+      "topico": "sinus-lift",
+      "pontas": [
+        "SR9"
+      ]
+    },
+    {
+      "titulo": "Preservando os nervos durante o procedimento",
+      "esp": "cirurgia",
+      "prof": "Renato Maluta",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=Why3JVWDAFc",
+      "topico": "outras-cirurgias"
+    },
+    {
+      "titulo": "Remoção de Tórus",
+      "esp": "cirurgia",
+      "prof": "Renato Lavezo",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=Sci1bIBlc5U",
+      "topico": "osteotomia-torus",
+      "pontas": [
+        "SFR4"
+      ],
+      "ponta": "SFR4",
+      "esps": [
+        "cirurgia",
+        "periodontia"
+      ]
+    },
+    {
+      "titulo": "Remoção de Tórus · Ponta SFR4",
+      "esp": "cirurgia",
+      "ponta": "SFR4",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=qNwljFxBCJM",
+      "topico": "osteotomia-torus",
+      "pontas": [
+        "SFR4"
+      ],
+      "esps": [
+        "cirurgia",
+        "periodontia"
+      ]
+    },
+    {
+      "titulo": "Sinus Lift",
+      "esp": "cirurgia",
+      "prof": "Dr. Fernando Almeida",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=ygIANwe7gdc",
+      "topico": "sinus-lift"
+    },
+    {
+      "titulo": "Sinus Lift com SFR4 e SLO-2",
+      "esp": "cirurgia",
+      "prof": "Diego Bazan",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=Hm8O3Air--Y",
+      "topico": "sinus-lift",
+      "pontas": [
+        "SFR4",
+        "SLO-2"
+      ],
+      "ponta": "SFR4 e SLO-2"
+    },
+    {
+      "titulo": "Sinus Lift",
+      "esp": "cirurgia",
+      "prof": "Prof. Diego Bazan",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=3eVEs0TMViU",
+      "topico": "sinus-lift"
+    },
+    {
+      "titulo": "Técnica Flapless em ação",
+      "esp": "cirurgia",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=T7yo7_mWkoI",
+      "topico": "flapless",
+      "esps": [
+        "cirurgia",
+        "periodontia"
+      ]
+    },
+    {
+      "titulo": "Técnica Flapless",
+      "esp": "cirurgia",
+      "prof": "Prof. Eduardo Santini de Almeida",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=WM02wTTFUEs",
+      "topico": "flapless",
+      "esps": [
+        "cirurgia",
+        "periodontia"
+      ]
+    },
+    {
+      "titulo": "Acabamento em Facetas",
+      "esp": "dentistica",
+      "prof": "Dr. Rogério Marcondes",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=OEWJfrRT8ZA",
+      "topico": "facetas"
+    },
+    {
+      "titulo": "Cimentação",
+      "esp": "dentistica",
+      "prof": "Dr. Rogério Marcondes",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=tVIl2BaL2Ok",
+      "topico": "cimentacao",
+      "pontas": [
+        "CM4"
+      ],
+      "ponta": "CM4"
+    },
+    {
+      "titulo": "Como realizar o refinamento dos limites do preparo com ponta CR4XR?",
+      "esp": "dentistica",
+      "prof": "Dr. Danilo Cioffi",
+      "ponta": "CR4XR",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=mQv82kDRaAE",
+      "topico": "preparo-termino",
+      "pontas": [
+        "CR4XR"
+      ]
+    },
+    {
+      "titulo": "Como remover excessos com a ponta T1?",
+      "esp": "dentistica",
+      "prof": "Dr. Danilo Cioffi",
+      "ponta": "T1",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=UQVEKl6995w",
+      "topico": "amalgama-resina",
+      "pontas": [
+        "T1"
+      ]
+    },
+    {
+      "titulo": "Remoção de Facetas com o DentSurg Pro",
+      "esp": "dentistica",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=Dg6QHEydf9g",
+      "topico": "facetas",
+      "pontas": [
+        "W1-O"
+      ],
+      "ponta": "W1-O"
+    },
+    {
+      "titulo": "Ponta T1F",
+      "esp": "dentistica",
+      "prof": "Shizuma Shibata",
+      "ponta": "T1F",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=NbJVzW6k3KY",
+      "topico": "preparo-termino",
+      "pontas": [
+        "T1F"
+      ]
+    },
+    {
+      "titulo": "Preparo Cavitário",
+      "esp": "dentistica",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=pHJiCuKc0lA",
+      "topico": "preparo-termino"
+    },
+    {
+      "titulo": "Preparo Classe V",
+      "esp": "dentistica",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=r2CjynOgDHg",
+      "topico": "preparo-termino",
+      "pontas": [
+        "CR1XR"
+      ],
+      "ponta": "CR1XR"
+    },
+    {
+      "titulo": "Preparo da caixa distal com ponta CH1-D",
+      "esp": "dentistica",
+      "prof": "Dr. Danilo Cioffi",
+      "ponta": "CH1-D",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=bQnnFLvqtNY",
+      "topico": "preparo-termino",
+      "pontas": [
+        "CH1-D"
+      ]
+    },
+    {
+      "titulo": "Preparo em área de difícil acesso",
+      "esp": "dentistica",
+      "prof": "Danilo Cioffi",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=Leq3te44KJM",
+      "topico": "preparo-termino"
+    },
+    {
+      "titulo": "Refinamento de Preparo",
+      "esp": "dentistica",
+      "prof": "João Maurício",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=DbLVt4iYBcM",
+      "topico": "preparo-termino"
+    },
+    {
+      "titulo": "Remoção de Cárie",
+      "esp": "dentistica",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=aDlzRV2Mr6Q",
+      "topico": "amalgama-resina"
+    },
+    {
+      "titulo": "Remoção de Restauração e Amálgama",
+      "esp": "dentistica",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=Z6wIFwkUvr0",
+      "topico": "amalgama-resina"
+    },
+    {
+      "titulo": "Remoção de Amálgama",
+      "esp": "dentistica",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=xiqvklQ99Yk",
+      "topico": "amalgama-resina"
+    },
+    {
+      "titulo": "Remoção de Amálgama",
+      "esp": "dentistica",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=ReZj1xzwGNE",
+      "topico": "amalgama-resina"
+    },
+    {
+      "titulo": "Remoção de Amálgama · Ponta W1",
+      "esp": "dentistica",
+      "ponta": "W1",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=VycZdDqYGJw",
+      "topico": "amalgama-resina",
+      "pontas": [
+        "W1"
+      ]
+    },
+    {
+      "titulo": "Remoção de Excesso · Restauração em classe V",
+      "esp": "dentistica",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=HGT0MTH9tcg",
+      "topico": "amalgama-resina"
+    },
+    {
+      "titulo": "Remoção de Faceta com o DentSurg Pro",
+      "esp": "dentistica",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=QFQw8-qMvHQ",
+      "topico": "facetas",
+      "pontas": [
+        "W1-O"
+      ],
+      "ponta": "W1-O"
+    },
+    {
+      "titulo": "Remoção de Faceta com o DentSurg Pro",
+      "esp": "dentistica",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=XPg2iS2iEX8",
+      "topico": "facetas",
+      "pontas": [
+        "W1-O",
+        "W1",
+        "CR1",
+        "CR1U"
+      ],
+      "ponta": "W1-O e W1 e CR1 e CR1U"
+    },
+    {
+      "titulo": "Remoção de Material Restaurador · Ponta CR4XR",
+      "esp": "dentistica",
+      "ponta": "CR4XR",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=BSZx2n7So8A",
+      "topico": "amalgama-resina",
+      "pontas": [
+        "CR4XR"
+      ]
+    },
+    {
+      "titulo": "Remoção de amálgama (Ponta T1)",
+      "esp": "dentistica",
+      "prof": "Dr. Danilo Cioffi",
+      "ponta": "T1",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=Vet9LgFfKKk",
+      "topico": "amalgama-resina",
+      "pontas": [
+        "T1"
+      ]
+    },
+    {
+      "titulo": "Remoção de amálgama com alta precisão!",
+      "esp": "dentistica",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=Bq0HXG9DOvk",
+      "topico": "amalgama-resina"
+    },
+    {
+      "titulo": "Remoção de resina composta em restauração de classe V (Ponta CR4XR)",
+      "esp": "dentistica",
+      "prof": "Dr. Danilo Cioffi",
+      "ponta": "CR4XR",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=joAze665sdI",
+      "topico": "amalgama-resina",
+      "pontas": [
+        "CR4XR"
+      ]
+    },
+    {
+      "titulo": "Restauração de resina composta · Ultrassom e ponta CR1",
+      "esp": "dentistica",
+      "ponta": "CR1",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=udHMN0oxmKA",
+      "topico": "amalgama-resina",
+      "pontas": [
+        "CR1"
+      ]
+    },
+    {
+      "titulo": "Tratamento Dentário Proximal",
+      "esp": "dentistica",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=JwLscRDSXQQ",
+      "topico": "preparo-termino"
+    },
+    {
+      "titulo": "Apicectomia",
+      "esp": "endodontia",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=znT__3AL7S8",
+      "topico": "apicectomia"
+    },
+    {
+      "titulo": "Corte de Guta-Percha",
+      "esp": "endodontia",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=55JhfcB5xOU",
+      "topico": "guta-percha"
+    },
+    {
+      "titulo": "Endodontia Completa",
+      "esp": "endodontia",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=hO2ye44zmng",
+      "topico": "endodontia",
+      "pontas": [
+        "T1F-E",
+        "T0S-E2",
+        "R1-E"
+      ],
+      "ponta": "T1F-E e T0S-E2 e R1-E"
+    },
+    {
+      "titulo": "Endodontia",
+      "esp": "endodontia",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=Ds0KJXNyGOk",
+      "topico": "endodontia"
+    },
+    {
+      "titulo": "Endodontia · Cone + PUI + Guta",
+      "esp": "endodontia",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=bJdKR-V781U",
+      "topico": "pui"
+    },
+    {
+      "titulo": "Fases operatórias na Endodontia",
+      "esp": "endodontia",
+      "prof": "Marco Aurélio",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=D4djpKMMT5k",
+      "topico": "endodontia"
+    },
+    {
+      "titulo": "Irrigação do Conduto, Corte e Termoplastificação da Guta-Percha",
+      "esp": "endodontia",
+      "prof": "Dr. Rodrigo Villagra",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=yo4N3xLUACo",
+      "topico": "pui"
+    },
+    {
+      "titulo": "PUI · Irrigação Ultrassônica Passiva",
+      "esp": "endodontia",
+      "prof": "Dr. Rodrigo Villagra",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=5N_-cOotnU8",
+      "topico": "pui"
+    },
+    {
+      "titulo": "PUI · Irrigação Ultrassônica Passiva",
+      "esp": "endodontia",
+      "prof": "Danilo Cioffi",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=BPDngu0dJFU",
+      "topico": "pui",
+      "pontas": [
+        "T0T-E2"
+      ],
+      "ponta": "T0T-E2"
+    },
+    {
+      "titulo": "Remoção de Pinos",
+      "esp": "endodontia",
+      "prof": "Dr. Marco Aurélio",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=Vxc-1fRuOhk",
+      "topico": "pinos"
+    },
+    {
+      "titulo": "Corte da Guta-Percha e Limpeza com Optymus",
+      "esp": "endodontia",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=D9dZqa_bJvI",
+      "topico": "guta-percha"
+    },
+    {
+      "titulo": "Remoção de Pinos",
+      "esp": "endodontia",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=xPEsVMswMmQ",
+      "topico": "pinos",
+      "pontas": [
+        "C2S"
+      ],
+      "ponta": "C2S"
+    },
+    {
+      "titulo": "Remoção de pinos",
+      "esp": "endodontia",
+      "prof": "Dr. Marco Aurélio",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=JvM-5vOW0Qk",
+      "topico": "pinos"
+    },
+    {
+      "titulo": "Aplicação da ponta R,05 na Odontopediatria",
+      "esp": "orto-odontoped",
+      "prof": "Dra. Liete Yassuda",
+      "ponta": "R0,5",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=8BznPFgACwc",
+      "topico": "odontopediatria",
+      "pontas": [
+        "R0,5"
+      ]
+    },
+    {
+      "titulo": "Odontopediatria",
+      "esp": "orto-odontoped",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=s2Yi1R5jRJM",
+      "topico": "odontopediatria"
+    },
+    {
+      "titulo": "Procedimento Slice",
+      "esp": "dentistica",
+      "prof": "Monique Bazan",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=7Wct-hj7TTQ",
+      "topico": "slice"
+    },
+    {
+      "titulo": "Procedimento Slice",
+      "esp": "dentistica",
+      "prof": "Prof. Monique Bazan",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=ANK4d91w9tI",
+      "topico": "slice"
+    },
+    {
+      "titulo": "Realização de procedimento na Odontopediatria com Clinical Plus e Ponta R4",
+      "esp": "orto-odontoped",
+      "ponta": "R4",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=YSq-bzXXVXo",
+      "topico": "odontopediatria",
+      "pontas": [
+        "R4"
+      ]
+    },
+    {
+      "titulo": "Flapless e Peeling Gengival",
+      "esp": "periodontia",
+      "prof": "Prof. Paulo Kano",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=1bL--HkhMU8",
+      "topico": "flapless",
+      "esps": [
+        "cirurgia",
+        "periodontia"
+      ]
+    },
+    {
+      "titulo": "Limpeza de implantes com DentSurg Pro e ponta T1T-P",
+      "esp": "periodontia",
+      "prof": "Dr. Helder Pavanelli",
+      "ponta": "T1T-P",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=obRPyPdOT1E",
+      "topico": "t1tp-implantes",
+      "pontas": [
+        "T1T-P"
+      ]
+    },
+    {
+      "titulo": "Limpeza com a ponta T1T-P",
+      "esp": "periodontia",
+      "prof": "Dr. Ricardo Scotton",
+      "ponta": "T1T-P",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=e2r1BbeteK0",
+      "topico": "t1tp-implantes",
+      "pontas": [
+        "T1T-P"
+      ]
+    },
+    {
+      "titulo": "Modo de uso da ponta T1T-P",
+      "esp": "periodontia",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=k6myHF4cnxs",
+      "topico": "t1tp-implantes",
+      "pontas": [
+        "T1T-P"
+      ],
+      "ponta": "T1T-P"
+    },
+    {
+      "titulo": "Peeling Gengival",
+      "esp": "periodontia",
+      "prof": "Dra. Débora Ayala",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=1xdHV_EWobk",
+      "topico": "gengivoplastia-peeling",
+      "esps": [
+        "cirurgia",
+        "periodontia"
+      ]
+    },
+    {
+      "titulo": "Raspagem",
+      "esp": "periodontia",
+      "prof": "Prof. Diego Bazan",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=N49aEd9JBOQ",
+      "topico": "raspagem"
+    },
+    {
+      "titulo": "Raspagem",
+      "esp": "periodontia",
+      "prof": "Dra. Analice Giovani Pereira",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=WcJRg_2HL8s",
+      "topico": "raspagem"
+    },
+    {
+      "titulo": "Raspagem/ Remoção de Cálculo",
+      "esp": "periodontia",
+      "prof": "Dr. Leonardo Costa",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=VITipyNfzX8",
+      "topico": "raspagem",
+      "pontas": [
+        "T1F"
+      ],
+      "ponta": "T1F"
+    },
+    {
+      "titulo": "Remoção de Cálculo com a Ponta T1U-2",
+      "esp": "periodontia",
+      "prof": "Dr. Maurício Castello",
+      "ponta": "T1U-2",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=DVzTjQB1U5s",
+      "topico": "raspagem",
+      "pontas": [
+        "T1U-2"
+      ]
+    },
+    {
+      "titulo": "Retracão Gengival",
+      "esp": "periodontia",
+      "prof": "Dr. Rodrigo Bucker do Instituto Bucker",
+      "formato": "YouTube",
+      "url": "https://www.youtube.com/watch?v=bbhINtRRQeM",
+      "topico": "gengivoplastia-peeling",
+      "esps": [
+        "cirurgia",
+        "periodontia"
+      ]
+    },
+    {
+      "titulo": "Ortognatica",
+      "esp": "cirurgia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APM1sX0o88C5I25OPe8obn4/BUCOMAXILOFACIAL/ORTOGNATICA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APM1sX0o88C5I25OPe8obn4/BUCOMAXILOFACIAL/ORTOGNATICA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/cirurgia-ortognatica.webp",
+      "topico": "ortognatica"
+    },
+    {
+      "titulo": "Rino",
+      "esp": "cirurgia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APrwULir7ZeUBC2Ux9IYgwg/CIRURGIA%20PLASTICA/RINO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APrwULir7ZeUBC2Ux9IYgwg/CIRURGIA%20PLASTICA/RINO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/cirurgia-rino.webp",
+      "topico": "rinoplastia"
+    },
+    {
+      "titulo": "Cirurgia do mento",
+      "esp": "cirurgia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APjWTKBLoprfY__bgy97HPU/CIRURGIA/CIRURGIA%20DO%20MENTO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APjWTKBLoprfY__bgy97HPU/CIRURGIA/CIRURGIA%20DO%20MENTO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/cirurgia-cirurgia-do-mento.webp",
+      "topico": "outras-cirurgias"
+    },
+    {
+      "titulo": "Cortes no osso - ds pro",
+      "esp": "cirurgia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKPaVsBHAo5TrXkq95LQwc0/CIRURGIA/CORTES%20NO%20OSSO%20-%20DS%20PRO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKPaVsBHAo5TrXkq95LQwc0/CIRURGIA/CORTES%20NO%20OSSO%20-%20DS%20PRO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/cirurgia-cortes-no-osso-ds-pro.webp",
+      "topico": "outras-cirurgias"
+    },
+    {
+      "titulo": "Descolamento de membrana",
+      "esp": "cirurgia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AClbs_-FeSwbypgpmgliN0o/CIRURGIA/DESCOLAMENTO%20DE%20MEMBRANA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AClbs_-FeSwbypgpmgliN0o/CIRURGIA/DESCOLAMENTO%20DE%20MEMBRANA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/cirurgia-descolamento-de-membrana.webp",
+      "topico": "descolamento"
+    },
+    {
+      "titulo": "Descolamento gengival",
+      "esp": "cirurgia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGOnhSWSmmarGXxh2-GuZ_g/CIRURGIA/DESCOLAMENTO%20GENGIVAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGOnhSWSmmarGXxh2-GuZ_g/CIRURGIA/DESCOLAMENTO%20GENGIVAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/cirurgia-descolamento-gengival.webp",
+      "topico": "descolamento"
+    },
+    {
+      "titulo": "Descolamento torus",
+      "esp": "cirurgia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJ5fSO9PZ1O9RbSJj3y0mWQ/CIRURGIA/DESCOLAMENTO%20TORUS?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJ5fSO9PZ1O9RbSJj3y0mWQ/CIRURGIA/DESCOLAMENTO%20TORUS?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/cirurgia-descolamento-torus.webp",
+      "topico": "descolamento"
+    },
+    {
+      "titulo": "Descortizalização",
+      "esp": "cirurgia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACCTP5b9-4VpBHhT6a-iNQ8/CIRURGIA/DESCORTIZALIZA%C3%87%C3%83O?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACCTP5b9-4VpBHhT6a-iNQ8/CIRURGIA/DESCORTIZALIZA%C3%87%C3%83O?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/cirurgia-descortizalizacao.webp",
+      "topico": "outras-cirurgias"
+    },
+    {
+      "titulo": "Distração osteogênica",
+      "esp": "cirurgia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGt9Vx7FZ5PGGeZ0-qir6ow/CIRURGIA/DISTRA%C3%87%C3%83O%20OSTEOG%C3%8ANICA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGt9Vx7FZ5PGGeZ0-qir6ow/CIRURGIA/DISTRA%C3%87%C3%83O%20OSTEOG%C3%8ANICA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/cirurgia-distracao-osteogenica.webp",
+      "topico": "outras-cirurgias"
+    },
+    {
+      "titulo": "Enxerto ósseo vertical",
+      "esp": "cirurgia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKBrRmISnoJPf9Pd_6WvtOU/CIRURGIA/ENXERTO%20%C3%93SSEO%20VERTICAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKBrRmISnoJPf9Pd_6WvtOU/CIRURGIA/ENXERTO%20%C3%93SSEO%20VERTICAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/cirurgia-enxerto-osseo-vertical.webp",
+      "topico": "outras-cirurgias"
+    },
+    {
+      "titulo": "Escarificação",
+      "esp": "cirurgia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AAfTseAZu0zXOTDM80_-1TY/CIRURGIA/Escarifica%C3%A7%C3%A3o?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AAfTseAZu0zXOTDM80_-1TY/CIRURGIA/Escarifica%C3%A7%C3%A3o?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/cirurgia-escarificacao.webp",
+      "topico": "outras-cirurgias"
+    },
+    {
+      "titulo": "Exodontia",
+      "esp": "cirurgia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AIOyXEOHfr_Jgy1MRYgQqhc/CIRURGIA/EXODONTIA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AIOyXEOHfr_Jgy1MRYgQqhc/CIRURGIA/EXODONTIA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/cirurgia-exodontia.webp",
+      "topico": "outras-cirurgias"
+    },
+    {
+      "titulo": "Exostose",
+      "esp": "cirurgia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKxQwocC8BduXuBg3cIgHps/CIRURGIA/EXOSTOSE?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKxQwocC8BduXuBg3cIgHps/CIRURGIA/EXOSTOSE?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/cirurgia-exostose.webp",
+      "topico": "outras-cirurgias"
+    },
+    {
+      "titulo": "Fracionamento da raiz",
+      "esp": "cirurgia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AD3mV9bzDxVdwSL-QJHuNLU/CIRURGIA/FRACIONAMENTO%20DA%20RAIZ?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AD3mV9bzDxVdwSL-QJHuNLU/CIRURGIA/FRACIONAMENTO%20DA%20RAIZ?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/cirurgia-fracionamento-da-raiz.webp",
+      "topico": "outras-cirurgias"
+    },
+    {
+      "titulo": "Inserção de barra para elevar osso",
+      "esp": "cirurgia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALe9G4Qap5lOIiCMJbTFiFU/CIRURGIA/INSER%C3%87%C3%83O%20DE%20BARRA%20PARA%20ELEVAR%20OSSO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALe9G4Qap5lOIiCMJbTFiFU/CIRURGIA/INSER%C3%87%C3%83O%20DE%20BARRA%20PARA%20ELEVAR%20OSSO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/cirurgia-insercao-de-barra-para-elevar-osso.webp",
+      "topico": "outras-cirurgias"
+    },
+    {
+      "titulo": "Lateralização do nervo alveolar inferior",
+      "esp": "cirurgia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ABNawd2ZE39sO52OCR69EvY/CIRURGIA/LATERALIZA%C3%87%C3%83O%20DO%20NERVO%20ALVEOLAR%20INFERIOR?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ABNawd2ZE39sO52OCR69EvY/CIRURGIA/LATERALIZA%C3%87%C3%83O%20DO%20NERVO%20ALVEOLAR%20INFERIOR?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/cirurgia-lateralizacao-do-nervo-alveolar-inferior.webp",
+      "topico": "outras-cirurgias"
+    },
+    {
+      "titulo": "Levantamento de seio",
+      "esp": "cirurgia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFsrId2OA_YLddDf3SiAd0g/CIRURGIA/LEVANTAMENTO%20DE%20SEIO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFsrId2OA_YLddDf3SiAd0g/CIRURGIA/LEVANTAMENTO%20DE%20SEIO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/cirurgia-levantamento-de-seio.webp",
+      "topico": "sinus-lift"
+    },
+    {
+      "titulo": "Levantamento de seio via crista alveolar",
+      "esp": "cirurgia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACIfbwY86FRyA4rywGVTFNs/CIRURGIA/LEVANTAMENTO%20DE%20SEIO%20VIA%20CRISTA%20ALVEOLAR?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACIfbwY86FRyA4rywGVTFNs/CIRURGIA/LEVANTAMENTO%20DE%20SEIO%20VIA%20CRISTA%20ALVEOLAR?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/cirurgia-levantamento-de-seio-via-crista-alveolar.webp",
+      "topico": "sinus-lift"
+    },
+    {
+      "titulo": "Acabamento dos limites do preparo para remoção dos prismas de esmalte sem suporte",
+      "esp": "dentistica",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APaqc-cHGqzzs9pHIb9Ozfc/DENT%C3%8DSTICA/Acabamento%20dos%20limites%20do%20preparo%20para%20remo%C3%A7%C3%A3o%20dos%20prismas%20de%20esmalte%20sem%20suporte?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APaqc-cHGqzzs9pHIb9Ozfc/DENT%C3%8DSTICA/Acabamento%20dos%20limites%20do%20preparo%20para%20remo%C3%A7%C3%A3o%20dos%20prismas%20de%20esmalte%20sem%20suporte?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/dentistica-acabamento-dos-limites-do-preparo-para-remocao-dos-prismas-.webp",
+      "topico": "preparo-termino"
+    },
+    {
+      "titulo": "Desgaste fino na região intrapapilar, supra e subgengival",
+      "esp": "dentistica",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AC8PEsHj-r_8hVryukceQkY/DENT%C3%8DSTICA/DESGASTE%20FINO%20NA%20REGI%C3%83O%20INTRAPAPILAR%2C%20SUPRA%20E%20SUBGENGIVAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AC8PEsHj-r_8hVryukceQkY/DENT%C3%8DSTICA/DESGASTE%20FINO%20NA%20REGI%C3%83O%20INTRAPAPILAR%2C%20SUPRA%20E%20SUBGENGIVAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/dentistica-desgaste-fino-na-regiao-intrapapilar-supra-e-subgengival.webp",
+      "topico": "preparo-termino"
+    },
+    {
+      "titulo": "Limpeza",
+      "esp": "dentistica",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALusRlGU8AY-KuJknS5Wgf0/DENT%C3%8DSTICA/LIMPEZA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALusRlGU8AY-KuJknS5Wgf0/DENT%C3%8DSTICA/LIMPEZA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/dentistica-limpeza.webp",
+      "topico": "profilaxia"
+    },
+    {
+      "titulo": "Preparo cavitário",
+      "esp": "dentistica",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALYFtef_B9k7uu9XC68DLe0/DENT%C3%8DSTICA/PREPARO%20CAVIT%C3%81RIO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALYFtef_B9k7uu9XC68DLe0/DENT%C3%8DSTICA/PREPARO%20CAVIT%C3%81RIO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/dentistica-preparo-cavitario.webp",
+      "topico": "preparo-termino"
+    },
+    {
+      "titulo": "Preparo cavitário classe V",
+      "esp": "dentistica",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AB4lBlkLib4SwfG3opmzUOo/DENT%C3%8DSTICA/Preparo%20cavit%C3%A1rio%20classe%20V?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AB4lBlkLib4SwfG3opmzUOo/DENT%C3%8DSTICA/Preparo%20cavit%C3%A1rio%20classe%20V?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/dentistica-preparo-cavitario-classe-v.webp",
+      "topico": "preparo-termino"
+    },
+    {
+      "titulo": "Refinamento do preparo",
+      "esp": "dentistica",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHVkXczH0KFaaVPl0fd0dgc/DENT%C3%8DSTICA/REFINAMENTO%20DO%20PREPARO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHVkXczH0KFaaVPl0fd0dgc/DENT%C3%8DSTICA/REFINAMENTO%20DO%20PREPARO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/dentistica-refinamento-do-preparo.webp",
+      "topico": "preparo-termino"
+    },
+    {
+      "titulo": "Remoção da parede proximal",
+      "esp": "dentistica",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACL4MMmKD_XQf7EN2X1RbyA/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DA%20PAREDE%20PROXIMAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACL4MMmKD_XQf7EN2X1RbyA/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DA%20PAREDE%20PROXIMAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/dentistica-remocao-da-parede-proximal.webp",
+      "topico": "preparo-termino"
+    },
+    {
+      "titulo": "Remoção de amálgama",
+      "esp": "dentistica",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AB236MWtCLtiIVcgaHGtN2I/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20AM%C3%81LGAMA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AB236MWtCLtiIVcgaHGtN2I/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20AM%C3%81LGAMA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/dentistica-remocao-de-amalgama.webp",
+      "topico": "amalgama-resina"
+    },
+    {
+      "titulo": "Remoção de cárie",
+      "esp": "dentistica",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ANpMtvZzv0MHv7hCrLNHE7M/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20C%C3%81RIE?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ANpMtvZzv0MHv7hCrLNHE7M/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20C%C3%81RIE?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/dentistica-remocao-de-carie.webp",
+      "topico": "amalgama-resina"
+    },
+    {
+      "titulo": "Remoção de cáries e resina - T1 e R2",
+      "esp": "dentistica",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AE-Iz3JJTrv6sOeFvLdZgiw/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20C%C3%81RIES%20E%20RESINA%20-%20T1%20E%20R2?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AE-Iz3JJTrv6sOeFvLdZgiw/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20C%C3%81RIES%20E%20RESINA%20-%20T1%20E%20R2?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/dentistica-remocao-de-caries-e-resina-t1-e-r2.webp",
+      "topico": "amalgama-resina"
+    },
+    {
+      "titulo": "Remoção de excessos",
+      "esp": "dentistica",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACtFzjQYlMttv6ns4JJi7aE/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20EXCESSOS?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACtFzjQYlMttv6ns4JJi7aE/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20EXCESSOS?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/dentistica-remocao-de-excessos.webp",
+      "topico": "preparo-termino"
+    },
+    {
+      "titulo": "Remoção de pino",
+      "esp": "dentistica",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHR2sWyad4NowS5GbEzmPUE/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20PINO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHR2sWyad4NowS5GbEzmPUE/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20PINO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/dentistica-remocao-de-pino.webp",
+      "topico": "pinos"
+    },
+    {
+      "titulo": "Remoção de resina",
+      "esp": "dentistica",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AD9ab_URcdvBcKyz8yI-lDs/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20RESINA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AD9ab_URcdvBcKyz8yI-lDs/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20RESINA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/dentistica-remocao-de-resina.webp",
+      "topico": "amalgama-resina"
+    },
+    {
+      "titulo": "Remoção de resina composta classe v",
+      "esp": "dentistica",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AAvlrtbttap_Ox1epNy1iwM/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20RESINA%20COMPOSTA%20CLASSE%20V?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AAvlrtbttap_Ox1epNy1iwM/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20RESINA%20COMPOSTA%20CLASSE%20V?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/dentistica-remocao-de-resina-composta-classe-v.webp",
+      "topico": "amalgama-resina"
+    },
+    {
+      "titulo": "Apicectomia",
+      "esp": "endodontia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGIFbdsbnXJTTUkV1aPa57M/ENDODONTIA/Apicectomia?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGIFbdsbnXJTTUkV1aPa57M/ENDODONTIA/Apicectomia?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/endodontia-apicectomia.webp",
+      "topico": "apicectomia"
+    },
+    {
+      "titulo": "Corte e compatação guta percha",
+      "esp": "endodontia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AOgC8NIQXjttRRWEbg_-exM/ENDODONTIA/CORTE%20E%20COMPATA%C3%87%C3%83O%20GUTA%20PERCHA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AOgC8NIQXjttRRWEbg_-exM/ENDODONTIA/CORTE%20E%20COMPATA%C3%87%C3%83O%20GUTA%20PERCHA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/endodontia-corte-e-compatacao-guta-percha.webp",
+      "topico": "guta-percha"
+    },
+    {
+      "titulo": "Irrigação do conduto - corte guta",
+      "esp": "endodontia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AEaqRoscg6fd14t-gGniRxI/ENDODONTIA/IRRIGA%C3%87%C3%83O%20DO%20CONDUTO%20-%20CORTE%20GUTA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AEaqRoscg6fd14t-gGniRxI/ENDODONTIA/IRRIGA%C3%87%C3%83O%20DO%20CONDUTO%20-%20CORTE%20GUTA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/endodontia-irrigacao-do-conduto-corte-guta.webp",
+      "topico": "pui"
+    },
+    {
+      "titulo": "Limpeza",
+      "esp": "endodontia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHSfG9NG3R9FTtThffiqjrY/ENDODONTIA/LIMPEZA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHSfG9NG3R9FTtThffiqjrY/ENDODONTIA/LIMPEZA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/endodontia-limpeza.webp",
+      "topico": "endodontia"
+    },
+    {
+      "titulo": "Localização de canal",
+      "esp": "endodontia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJ2TrysWNMskBiI3G5DARHc/ENDODONTIA/LOCALIZA%C3%87%C3%83O%20DE%20CANAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJ2TrysWNMskBiI3G5DARHc/ENDODONTIA/LOCALIZA%C3%87%C3%83O%20DE%20CANAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/endodontia-localizacao-de-canal.webp",
+      "topico": "endodontia"
+    },
+    {
+      "titulo": "Pólipo pulpar",
+      "esp": "endodontia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACIMCUYZOmfVGdS5-qlfNtA/ENDODONTIA/P%C3%93LIPO%20PULPAR?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACIMCUYZOmfVGdS5-qlfNtA/ENDODONTIA/P%C3%93LIPO%20PULPAR?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/endodontia-polipo-pulpar.webp",
+      "topico": "endodontia"
+    },
+    {
+      "titulo": "Pui",
+      "esp": "endodontia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJU4N9oMUbFhHrFc8HQkn9Q/ENDODONTIA/PUI?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJU4N9oMUbFhHrFc8HQkn9Q/ENDODONTIA/PUI?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/endodontia-pui.webp",
+      "topico": "pui"
+    },
+    {
+      "titulo": "Remoção de excesso em restauração classe V",
+      "esp": "endodontia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AH9nHl1jffmYl8h9bU-YqeU/ENDODONTIA/Remo%C3%A7%C3%A3o%20de%20excesso%20em%20restaura%C3%A7%C3%A3o%20classe%20V?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AH9nHl1jffmYl8h9bU-YqeU/ENDODONTIA/Remo%C3%A7%C3%A3o%20de%20excesso%20em%20restaura%C3%A7%C3%A3o%20classe%20V?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/endodontia-remocao-de-excesso-em-restauracao-classe-v.webp",
+      "topico": "amalgama-resina"
+    },
+    {
+      "titulo": "Remoção de núcleo",
+      "esp": "endodontia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AEAoSSvp8XHIbICVNDdu1g0/ENDODONTIA/REMO%C3%87%C3%83O%20DE%20N%C3%9ACLEO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AEAoSSvp8XHIbICVNDdu1g0/ENDODONTIA/REMO%C3%87%C3%83O%20DE%20N%C3%9ACLEO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/endodontia-remocao-de-nucleo.webp",
+      "topico": "pinos"
+    },
+    {
+      "titulo": "Remoção de pino",
+      "esp": "endodontia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJxcra26rBEituQ16DOflYY/ENDODONTIA/REMO%C3%87%C3%83O%20DE%20PINO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJxcra26rBEituQ16DOflYY/ENDODONTIA/REMO%C3%87%C3%83O%20DE%20PINO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/endodontia-remocao-de-pino.webp",
+      "topico": "pinos"
+    },
+    {
+      "titulo": "Retropreparo",
+      "esp": "endodontia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGEbz0If4NqVkIHUDVlAUWM/ENDODONTIA/RETROPREPARO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGEbz0If4NqVkIHUDVlAUWM/ENDODONTIA/RETROPREPARO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/endodontia-retropreparo.webp",
+      "topico": "apicectomia"
+    },
+    {
+      "titulo": "Implantoplastia",
+      "esp": "implante",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALcxTgMARcv69b2UZS1z0sw/IMPLANTE/IMPLANTOPLASTIA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALcxTgMARcv69b2UZS1z0sw/IMPLANTE/IMPLANTOPLASTIA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/implante-implantoplastia.webp",
+      "topico": "outras-cirurgias"
+    },
+    {
+      "titulo": "Instalação de implantes para protocolo inferior",
+      "esp": "implante",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AB-C--SA749O0JUNU3SpYfM/IMPLANTE/INSTALA%C3%87%C3%83O%20DE%20IMPLANTES%20PARA%20PROTOCOLO%20INFERIOR?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AB-C--SA749O0JUNU3SpYfM/IMPLANTE/INSTALA%C3%87%C3%83O%20DE%20IMPLANTES%20PARA%20PROTOCOLO%20INFERIOR?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/implante-instalacao-de-implantes-para-protocolo-inferior.webp",
+      "topico": "outras-cirurgias"
+    },
+    {
+      "titulo": "Limpeza de implantes",
+      "esp": "implante",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AMXd_-jFdz5C9QEyGjyRWuw/IMPLANTE/LIMPEZA%20DE%20IMPLANTES?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AMXd_-jFdz5C9QEyGjyRWuw/IMPLANTE/LIMPEZA%20DE%20IMPLANTES?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/implante-limpeza-de-implantes.webp",
+      "topico": "t1tp-implantes"
+    },
+    {
+      "titulo": "Perfuração óssea scp",
+      "esp": "implante",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFR9rt9hNCdDbAvfurLkQI4/IMPLANTE/PERFURA%C3%87%C3%83O%20%C3%93SSEA%20SCP?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFR9rt9hNCdDbAvfurLkQI4/IMPLANTE/PERFURA%C3%87%C3%83O%20%C3%93SSEA%20SCP?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/implante-perfuracao-ossea-scp.webp",
+      "topico": "outras-cirurgias"
+    },
+    {
+      "titulo": "Preparação alveolar para implantes",
+      "esp": "implante",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AOgMDxlk7UNfJonsloSUkFs/IMPLANTE/PREPARA%C3%87%C3%83O%20ALVEOLAR%20PARA%20IMPLANTES?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AOgMDxlk7UNfJonsloSUkFs/IMPLANTE/PREPARA%C3%87%C3%83O%20ALVEOLAR%20PARA%20IMPLANTES?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/implante-preparacao-alveolar-para-implantes.webp",
+      "topico": "outras-cirurgias"
+    },
+    {
+      "titulo": "Remoção de implante danificado",
+      "esp": "implante",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APKH7bFUMhHWwWuQtyaQ_cA/IMPLANTE/REMO%C3%87%C3%83O%20DE%20IMPLANTE%20DANIFICADO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APKH7bFUMhHWwWuQtyaQ_cA/IMPLANTE/REMO%C3%87%C3%83O%20DE%20IMPLANTE%20DANIFICADO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/implante-remocao-de-implante-danificado.webp",
+      "topico": "outras-cirurgias"
+    },
+    {
+      "titulo": "Remoção de pinos",
+      "esp": "implante",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHP0qnTmlBDkfIG3h5fli7M/IMPLANTE/REMO%C3%87%C3%83O%20DE%20PINOS?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHP0qnTmlBDkfIG3h5fli7M/IMPLANTE/REMO%C3%87%C3%83O%20DE%20PINOS?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/implante-remocao-de-pinos.webp",
+      "topico": "pinos"
+    },
+    {
+      "titulo": "Trefinagem",
+      "esp": "implante",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKE9ibR5QoK7KTagKNQc57o/IMPLANTE/TREFINAGEM?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKE9ibR5QoK7KTagKNQc57o/IMPLANTE/TREFINAGEM?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/implante-trefinagem.webp",
+      "topico": "outras-cirurgias"
+    },
+    {
+      "titulo": "Remoção de Siso",
+      "esp": "orto-odontoped",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJET2Wx84YTZ9XxItB4Ed3Y/ODONTOPEDIATRIA/Remo%C3%A7%C3%A3o%20de%20Siso?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJET2Wx84YTZ9XxItB4Ed3Y/ODONTOPEDIATRIA/Remo%C3%A7%C3%A3o%20de%20Siso?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/orto-odontoped-remocao-de-siso.webp",
+      "topico": "odontopediatria"
+    },
+    {
+      "titulo": "VR1T - Extração de Dentes",
+      "esp": "orto-odontoped",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJQQiipCCOavsXtLAQR_0zc/ODONTOPEDIATRIA/VR1T%20-%20Extra%C3%A7%C3%A3o%20de%20Dentes?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJQQiipCCOavsXtLAQR_0zc/ODONTOPEDIATRIA/VR1T%20-%20Extra%C3%A7%C3%A3o%20de%20Dentes?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/orto-odontoped-vr1t-extracao-de-dentes.webp",
+      "topico": "odontopediatria"
+    },
+    {
+      "titulo": "Corticotomia",
+      "esp": "orto-odontoped",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ADKGiDUkIh-SSwFzojkUw80/ORTODONTIA/CORTICOTOMIA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ADKGiDUkIh-SSwFzojkUw80/ORTODONTIA/CORTICOTOMIA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/orto-odontoped-corticotomia.webp",
+      "topico": "odontopediatria"
+    },
+    {
+      "titulo": "Ipr",
+      "esp": "orto-odontoped",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJmaBc84UGxXFbbicZihNJg/ORTODONTIA/IPR?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJmaBc84UGxXFbbicZihNJg/ORTODONTIA/IPR?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/orto-odontoped-ipr.webp",
+      "topico": "slice"
+    },
+    {
+      "titulo": "Micro osteo perfurações",
+      "esp": "orto-odontoped",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AC5shm-h1-CcflTpi_9jCZU/ORTODONTIA/Micro%20osteo%20perfura%C3%A7%C3%B5es?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AC5shm-h1-CcflTpi_9jCZU/ORTODONTIA/Micro%20osteo%20perfura%C3%A7%C3%B5es?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/orto-odontoped-micro-osteo-perfuracoes.webp",
+      "topico": "odontopediatria"
+    },
+    {
+      "titulo": "Remoção de resina pós-bracket",
+      "esp": "orto-odontoped",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ANU_FeaBcYtoHJ95hXVSM38/ORTODONTIA/REMO%C3%87%C3%83O%20DE%20RESINA%20P%C3%93S-BRACKET?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ANU_FeaBcYtoHJ95hXVSM38/ORTODONTIA/REMO%C3%87%C3%83O%20DE%20RESINA%20P%C3%93S-BRACKET?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/orto-odontoped-remocao-de-resina-pos-bracket.webp",
+      "topico": "amalgama-resina"
+    },
+    {
+      "titulo": "Slice",
+      "esp": "orto-odontoped",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALqCDIi5Ig633EMl-l6hJRs/ORTODONTIA/SLICE?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALqCDIi5Ig633EMl-l6hJRs/ORTODONTIA/SLICE?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/orto-odontoped-slice.webp",
+      "topico": "slice"
+    },
+    {
+      "titulo": "Aumento de Coroa - Ponta CH4M-T",
+      "esp": "periodontia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFNpYRgjakBhxEBbSrPvjJQ/PERIODONTIA/Aumento%20de%20Coroa%20-%20Ponta%20CH4M-T?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFNpYRgjakBhxEBbSrPvjJQ/PERIODONTIA/Aumento%20de%20Coroa%20-%20Ponta%20CH4M-T?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/periodontia-aumento-de-coroa-ponta-ch4m-t.webp",
+      "topico": "flapless"
+    },
+    {
+      "titulo": "Aumento de coroa clínica e regularização radicular",
+      "esp": "periodontia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHjGMghGLnc2JyGKHDHhS4E/PERIODONTIA/Aumento%20de%20coroa%20cl%C3%ADnica%20e%20regulariza%C3%A7%C3%A3o%20radicular?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHjGMghGLnc2JyGKHDHhS4E/PERIODONTIA/Aumento%20de%20coroa%20cl%C3%ADnica%20e%20regulariza%C3%A7%C3%A3o%20radicular?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/periodontia-aumento-de-coroa-clinica-e-regularizacao-radicular.webp",
+      "topico": "flapless"
+    },
+    {
+      "titulo": "Aumento de coroa em osso espesso",
+      "esp": "periodontia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AMOBAt-Yn0E9oZffae9tyJk/PERIODONTIA/AUMENTO%20DE%20COROA%20EM%20OSSO%20ESPESSO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AMOBAt-Yn0E9oZffae9tyJk/PERIODONTIA/AUMENTO%20DE%20COROA%20EM%20OSSO%20ESPESSO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/periodontia-aumento-de-coroa-em-osso-espesso.webp",
+      "topico": "flapless"
+    },
+    {
+      "titulo": "Escarificação",
+      "esp": "periodontia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACGmlwj0Dk7rLPRBu4Hp2PY/PERIODONTIA/Escarifica%C3%A7%C3%A3o?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACGmlwj0Dk7rLPRBu4Hp2PY/PERIODONTIA/Escarifica%C3%A7%C3%A3o?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/periodontia-escarificacao.webp",
+      "topico": "raspagem"
+    },
+    {
+      "titulo": "Flapless",
+      "esp": "periodontia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AMMkG7hPCDPaAPbT072ttkA/PERIODONTIA/Flapless?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AMMkG7hPCDPaAPbT072ttkA/PERIODONTIA/Flapless?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/periodontia-flapless.webp",
+      "topico": "flapless"
+    },
+    {
+      "titulo": "Gengivoplastia com osteotomia",
+      "esp": "periodontia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AAF1fIWoblCn3q_R_yjkyEE/PERIODONTIA/GENGIVOPLASTIA%20COM%20OSTEOTOMIA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AAF1fIWoblCn3q_R_yjkyEE/PERIODONTIA/GENGIVOPLASTIA%20COM%20OSTEOTOMIA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/periodontia-gengivoplastia-com-osteotomia.webp",
+      "topico": "gengivoplastia-peeling"
+    },
+    {
+      "titulo": "Peeling gengival",
+      "esp": "periodontia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACjNMYt1w9UZvInrzBXZ-0A/PERIODONTIA/PEELING%20GENGIVAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACjNMYt1w9UZvInrzBXZ-0A/PERIODONTIA/PEELING%20GENGIVAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/periodontia-peeling-gengival.webp",
+      "topico": "gengivoplastia-peeling"
+    },
+    {
+      "titulo": "Preparo de coroa",
+      "esp": "periodontia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AA-gudqmmPFBRSM7F_8H-xw/PERIODONTIA/Preparo%20de%20coroa?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AA-gudqmmPFBRSM7F_8H-xw/PERIODONTIA/Preparo%20de%20coroa?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/periodontia-preparo-de-coroa.webp",
+      "topico": "preparo-termino"
+    },
+    {
+      "titulo": "Profilaxia",
+      "esp": "periodontia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ADyW6yrNLF-duEnEaJ9SsdE/PERIODONTIA/PROFILAXIA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ADyW6yrNLF-duEnEaJ9SsdE/PERIODONTIA/PROFILAXIA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/periodontia-profilaxia.webp",
+      "topico": "profilaxia"
+    },
+    {
+      "titulo": "Raspagem",
+      "esp": "periodontia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFFfw_ear-CHRKBlW5wMQ0A/PERIODONTIA/RASPAGEM?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFFfw_ear-CHRKBlW5wMQ0A/PERIODONTIA/RASPAGEM?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/periodontia-raspagem.webp",
+      "topico": "raspagem"
+    },
+    {
+      "titulo": "Remoção de cálculo com T1U-2",
+      "esp": "periodontia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJ49OQUp8uthlSTyC6thtFA/PERIODONTIA/Remo%C3%A7%C3%A3o%20de%20c%C3%A1lculo%20com%20T1U-2?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJ49OQUp8uthlSTyC6thtFA/PERIODONTIA/Remo%C3%A7%C3%A3o%20de%20c%C3%A1lculo%20com%20T1U-2?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/periodontia-remocao-de-calculo-com-t1u-2.webp",
+      "topico": "raspagem"
+    },
+    {
+      "titulo": "Remoção de tártaro",
+      "esp": "periodontia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGVvuhSI-vKublSo-3lsMNA/PERIODONTIA/Remo%C3%A7%C3%A3o%20de%20t%C3%A1rtaro?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGVvuhSI-vKublSo-3lsMNA/PERIODONTIA/Remo%C3%A7%C3%A3o%20de%20t%C3%A1rtaro?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/periodontia-remocao-de-tartaro.webp",
+      "topico": "raspagem"
+    },
+    {
+      "titulo": "Slice",
+      "esp": "periodontia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFOkbOOsCb1OMRqafMS133A/PERIODONTIA/SLICE?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFOkbOOsCb1OMRqafMS133A/PERIODONTIA/SLICE?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/periodontia-slice.webp",
+      "topico": "slice"
+    },
+    {
+      "titulo": "T1T-P limpeza Implante",
+      "esp": "periodontia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKx7HuI5Vtny1KtzMi9LJfY/PERIODONTIA/T1T-P%20limpeza%20Implante?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKx7HuI5Vtny1KtzMi9LJfY/PERIODONTIA/T1T-P%20limpeza%20Implante?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/periodontia-t1t-p-limpeza-implante.webp",
+      "topico": "t1tp-implantes"
+    },
+    {
+      "titulo": "Técnica bopt",
+      "esp": "periodontia",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFzjXvzVFAP02E7Yriu6NIs/PERIODONTIA/T%C3%89CNICA%20BOPT?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFzjXvzVFAP02E7Yriu6NIs/PERIODONTIA/T%C3%89CNICA%20BOPT?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/periodontia-tecnica-bopt.webp",
+      "topico": "flapless"
+    },
+    {
+      "titulo": "Acabamento Cervical de Restauros em Resina Composta",
+      "esp": "dentistica",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APyOBeYid5Ef2Y-QMW4RXuA/PR%C3%93TESE/Acabamento%20Cervical%20de%20Restauros%20em%20Resina%20Composta?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APyOBeYid5Ef2Y-QMW4RXuA/PR%C3%93TESE/Acabamento%20Cervical%20de%20Restauros%20em%20Resina%20Composta?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/dentistica-acabamento-cervical-de-restauros-em-resina-composta.webp",
+      "topico": "amalgama-resina"
+    },
+    {
+      "titulo": "Acabamento dos limites do preparo (prótese)",
+      "esp": "dentistica",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACG6-CUjeB5YIBQrYmqXbOU/PR%C3%93TESE/Acabamento%20dos%20limites%20do%20preparo%20para%20remo%C3%A7%C3%A3o%20dos%20prismas%20de%20esmalte%20sem%20suporte?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACG6-CUjeB5YIBQrYmqXbOU/PR%C3%93TESE/Acabamento%20dos%20limites%20do%20preparo%20para%20remo%C3%A7%C3%A3o%20dos%20prismas%20de%20esmalte%20sem%20suporte?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/dentistica-acabamento-dos-limites-do-preparo-protese.webp",
+      "topico": "preparo-termino"
+    },
+    {
+      "titulo": "Bopt",
+      "esp": "dentistica",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKSETBxpJXT5vXfdDbOhMac/PR%C3%93TESE/BOPT?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKSETBxpJXT5vXfdDbOhMac/PR%C3%93TESE/BOPT?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/dentistica-bopt.webp",
+      "topico": "preparo-termino"
+    },
+    {
+      "titulo": "Cimentação",
+      "esp": "dentistica",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AOAYm3Dc9aQwhnF4tkJv1Ek/PR%C3%93TESE/CIMENTA%C3%87%C3%83O?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AOAYm3Dc9aQwhnF4tkJv1Ek/PR%C3%93TESE/CIMENTA%C3%87%C3%83O?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/dentistica-cimentacao.webp",
+      "topico": "cimentacao"
+    },
+    {
+      "titulo": "Interproximal",
+      "esp": "dentistica",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AL1-UZBilKqEdkWABjAegOg/PR%C3%93TESE/INTERPROXIMAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AL1-UZBilKqEdkWABjAegOg/PR%C3%93TESE/INTERPROXIMAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/dentistica-interproximal.webp",
+      "topico": "slice"
+    },
+    {
+      "titulo": "Limpeza facetas T1T-p",
+      "esp": "dentistica",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKo2VJQmZ5MzU4yGijvhVSo/PR%C3%93TESE/LIMPEZA%20FACETAS%20T1T-P?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKo2VJQmZ5MzU4yGijvhVSo/PR%C3%93TESE/LIMPEZA%20FACETAS%20T1T-P?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/dentistica-limpeza-facetas-t1t-p.webp",
+      "topico": "profilaxia"
+    },
+    {
+      "titulo": "Preparo ar x us",
+      "esp": "dentistica",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AAwP-q22Nlzvxksk5QRwjz8/PR%C3%93TESE/PREPARO%20AR%20X%20US?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AAwP-q22Nlzvxksk5QRwjz8/PR%C3%93TESE/PREPARO%20AR%20X%20US?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/dentistica-preparo-ar-x-us.webp",
+      "topico": "preparo-termino"
+    },
+    {
+      "titulo": "Preparo para coroa",
+      "esp": "dentistica",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGS8VtnycE7E4HmDthr9rfE/PR%C3%93TESE/PREPARO%20PARA%20COROA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGS8VtnycE7E4HmDthr9rfE/PR%C3%93TESE/PREPARO%20PARA%20COROA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/dentistica-preparo-para-coroa.webp",
+      "topico": "preparo-termino"
+    },
+    {
+      "titulo": "Refinamento de preparo",
+      "esp": "dentistica",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJJHzNyI7Li1cWbm7NlvQUw/PR%C3%93TESE/REFINAMENTO%20DE%20PREPARO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJJHzNyI7Li1cWbm7NlvQUw/PR%C3%93TESE/REFINAMENTO%20DE%20PREPARO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/dentistica-refinamento-de-preparo.webp",
+      "topico": "preparo-termino"
+    },
+    {
+      "titulo": "Remoção de cimento resinoso",
+      "esp": "dentistica",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHZGTldD-9dGWEuh-eH8_1I/PR%C3%93TESE/REMO%C3%87%C3%83O%20DE%20CIMENTO%20RESINOSO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHZGTldD-9dGWEuh-eH8_1I/PR%C3%93TESE/REMO%C3%87%C3%83O%20DE%20CIMENTO%20RESINOSO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/dentistica-remocao-de-cimento-resinoso.webp",
+      "topico": "preparo-termino"
+    },
+    {
+      "titulo": "Remoção de degrau",
+      "esp": "dentistica",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APYD_Mz-EElwLSYq3yE5W9A/PR%C3%93TESE/REMO%C3%87%C3%83O%20DE%20DEGRAU?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APYD_Mz-EElwLSYq3yE5W9A/PR%C3%93TESE/REMO%C3%87%C3%83O%20DE%20DEGRAU?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/dentistica-remocao-de-degrau.webp",
+      "topico": "preparo-termino"
+    },
+    {
+      "titulo": "Remoção de faceta",
+      "esp": "dentistica",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ADnOcCg-9xfZ0IeBOMI0NUw/PR%C3%93TESE/REMO%C3%87%C3%83O%20DE%20FACETA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ADnOcCg-9xfZ0IeBOMI0NUw/PR%C3%93TESE/REMO%C3%87%C3%83O%20DE%20FACETA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/dentistica-remocao-de-faceta.webp",
+      "topico": "facetas"
+    },
+    {
+      "titulo": "Remoção de pino rosqueável",
+      "esp": "dentistica",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AEUbQmnThhb00pcnaCWZ198/PR%C3%93TESE/REMO%C3%87%C3%83O%20DE%20PINO%20ROSQUE%C3%81VEL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AEUbQmnThhb00pcnaCWZ198/PR%C3%93TESE/REMO%C3%87%C3%83O%20DE%20PINO%20ROSQUE%C3%81VEL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/dentistica-remocao-de-pino-rosqueavel.webp",
+      "topico": "pinos"
+    },
+    {
+      "titulo": "Término de preparo",
+      "esp": "dentistica",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AOJAHPUorltSZ8Op7TafBCo/PR%C3%93TESE/T%C3%89RMINO%20DE%20PREPARO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AOJAHPUorltSZ8Op7TafBCo/PR%C3%93TESE/T%C3%89RMINO%20DE%20PREPARO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/dentistica-termino-de-preparo.webp",
+      "topico": "preparo-termino"
+    },
+    {
+      "titulo": "Guta-percha para cimentação de pino de fibra de vidro (T0S-E2)",
+      "esp": "dentistica",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ANZeVjjvd_7F3xG382lVFMc/S%C3%89RIE/1%20Remo%C3%A7%C3%A3o%20de%20guta-percha%20para%20cimenta%C3%A7%C3%A3o%20de%20pino%20de%20fibra%20de%20vidro%20-%20ponta%20T0S-E2.mp4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ANZeVjjvd_7F3xG382lVFMc/S%C3%89RIE/1%20Remo%C3%A7%C3%A3o%20de%20guta-percha%20para%20cimenta%C3%A7%C3%A3o%20de%20pino%20de%20fibra%20de%20vidro%20-%20ponta%20T0S-E2.mp4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/dentistica-guta-percha-para-cimentacao-de-pino-de-fibra-de-vidro-t0s-e.webp",
+      "topico": "pinos"
+    },
+    {
+      "titulo": "Compactação da guta-percha (CR2T-E)",
+      "esp": "dentistica",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AAqvS9pWqn5xOJ7p76IDVzc/S%C3%89RIE/2%20Compacta%C3%A7%C3%A3o%20da%20Guta%20Percha%20-%20CR2T-E.mp4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AAqvS9pWqn5xOJ7p76IDVzc/S%C3%89RIE/2%20Compacta%C3%A7%C3%A3o%20da%20Guta%20Percha%20-%20CR2T-E.mp4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/dentistica-compactacao-da-guta-percha-cr2t-e.webp",
+      "topico": "guta-percha"
+    },
+    {
+      "titulo": "Cimentação",
+      "esp": "dentistica",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ADYdY_ASTlneti0WJWI6HlY/S%C3%89RIE/CIMENTA%C3%87%C3%83O.mp4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ADYdY_ASTlneti0WJWI6HlY/S%C3%89RIE/CIMENTA%C3%87%C3%83O.mp4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/dentistica-cimentacao.webp",
+      "topico": "cimentacao"
+    },
+    {
+      "titulo": "Limpeza de implantes (1)",
+      "esp": "dentistica",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ANonC8I0ctp_T2mmfJBB-MI/S%C3%89RIE/LIMPEZA%20DE%20IMPLANTES%20%281%29.MP4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ANonC8I0ctp_T2mmfJBB-MI/S%C3%89RIE/LIMPEZA%20DE%20IMPLANTES%20%281%29.MP4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/dentistica-limpeza-de-implantes-1.webp",
+      "topico": "t1tp-implantes"
+    },
+    {
+      "titulo": "Limpeza de implantes (2)",
+      "esp": "dentistica",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AMxN0OVMUXBcmIRCCgX9Egw/S%C3%89RIE/LIMPEZA%20DE%20IMPLANTES%20%282%29.MP4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AMxN0OVMUXBcmIRCCgX9Egw/S%C3%89RIE/LIMPEZA%20DE%20IMPLANTES%20%282%29.MP4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/dentistica-limpeza-de-implantes-2.webp",
+      "topico": "t1tp-implantes"
+    },
+    {
+      "titulo": "Remoção de pino",
+      "esp": "dentistica",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALuDwXmp3WuSA78ke_3cOgs/S%C3%89RIE/REMO%C3%87%C3%83O%20DE%20PINO.mp4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALuDwXmp3WuSA78ke_3cOgs/S%C3%89RIE/REMO%C3%87%C3%83O%20DE%20PINO.mp4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/dentistica-remocao-de-pino.webp",
+      "topico": "pinos"
+    },
+    {
+      "titulo": "Término de preparo",
+      "esp": "dentistica",
+      "url": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AMhvT4f3AK2sWYYoR1VwQeE/S%C3%89RIE/TERMINO%20DE%20PREPARO.mp4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AMhvT4f3AK2sWYYoR1VwQeE/S%C3%89RIE/TERMINO%20DE%20PREPARO.mp4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
+      "link": "dropbox",
+      "thumb": "img/proc/dentistica-termino-de-preparo.webp",
+      "topico": "preparo-termino"
+    }
+  ],
+  "galerias": {
+    "dl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/",
+    "prev": "https://cloud.cvdentus.com.br/arquivos/arte/",
+    "lista": {
+      "members": {
+        "titulo": "CVDentus Members · artes",
+        "itens": [
+          {
+            "id": "members-01-arte-1-feed",
+            "titulo": "Arte 1 · Feed",
+            "grupo": "Artes",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 1.2
+          },
+          {
+            "id": "members-02-arte-1-story",
+            "titulo": "Arte 1 · Story",
+            "grupo": "Artes",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 1.9
+          },
+          {
+            "id": "members-03-arte-2-feed",
+            "titulo": "Arte 2 · Feed",
+            "grupo": "Artes",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 1
+          },
+          {
+            "id": "members-04-arte-2-story",
+            "titulo": "Arte 2 · Story",
+            "grupo": "Artes",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 1.8
+          },
+          {
+            "id": "members-05-arte-3-feed",
+            "titulo": "Arte 3 · Feed",
+            "grupo": "Artes",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 1.1
+          },
+          {
+            "id": "members-06-arte-3-story",
+            "titulo": "Arte 3 · Story",
+            "grupo": "Artes",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 1.8
+          },
+          {
+            "id": "members-07-arte-4-feed",
+            "titulo": "Arte 4 · Feed",
+            "grupo": "Artes",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 1.1
+          },
+          {
+            "id": "members-08-arte-4-story",
+            "titulo": "Arte 4 · Story",
+            "grupo": "Artes",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 1.9
+          },
+          {
+            "id": "members-09-arte-5-feed",
+            "titulo": "Arte 5 · Feed",
+            "grupo": "Artes",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 0.9
+          },
+          {
+            "id": "members-10-arte-5-story",
+            "titulo": "Arte 5 · Story",
+            "grupo": "Artes",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 1.6
+          },
+          {
+            "id": "members-11-arte-6-feed",
+            "titulo": "Arte 6 · Feed",
+            "grupo": "Artes",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 1.3
+          },
+          {
+            "id": "members-12-arte-6-story",
+            "titulo": "Arte 6 · Story",
+            "grupo": "Artes",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 1.5
+          }
+        ]
+      },
+      "adaptadores": {
+        "titulo": "Lançamento Adaptadores Optymus",
+        "itens": [
+          {
+            "id": "adaptadores-01-criativo-feed",
+            "titulo": "Criativo · Feed",
+            "grupo": "Criativos",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 1.1
+          },
+          {
+            "id": "adaptadores-02-criativo-story",
+            "titulo": "Criativo · Story",
+            "grupo": "Criativos",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 1.7
+          },
+          {
+            "id": "adaptadores-03-carrossel-1",
+            "titulo": "Carrossel · 1",
+            "grupo": "Carrossel",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 0.8
+          },
+          {
+            "id": "adaptadores-04-carrossel-2",
+            "titulo": "Carrossel · 2",
+            "grupo": "Carrossel",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 0.9
+          },
+          {
+            "id": "adaptadores-05-carrossel-3",
+            "titulo": "Carrossel · 3",
+            "grupo": "Carrossel",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 0.9
+          },
+          {
+            "id": "adaptadores-06-carrossel-4",
+            "titulo": "Carrossel · 4",
+            "grupo": "Carrossel",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 0.8
+          },
+          {
+            "id": "adaptadores-07-carrossel-story",
+            "titulo": "Carrossel · Story",
+            "grupo": "Carrossel",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 1.5
+          },
+          {
+            "id": "adaptadores-08-blog-feed",
+            "titulo": "Blog · Feed",
+            "grupo": "Blog",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 0.9
+          },
+          {
+            "id": "adaptadores-09-blog-story",
+            "titulo": "Blog · Story",
+            "grupo": "Blog",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 1.5
+          },
+          {
+            "id": "adaptadores-10-banner-do-site-horizontal",
+            "titulo": "Banner do site · horizontal",
+            "grupo": "Site",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 0.9
+          },
+          {
+            "id": "adaptadores-11-banner-do-site-vertical",
+            "titulo": "Banner do site · vertical",
+            "grupo": "Site",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 1.4
+          }
+        ]
+      },
+      "flapless": {
+        "titulo": "Kit Flapless · e-mail marketing",
+        "itens": [
+          {
+            "id": "flapless-01-chamada-para-compra",
+            "titulo": "Chamada para compra",
+            "grupo": "Artes",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 0.1
+          },
+          {
+            "id": "flapless-02-e-mail-marketing-dezembro-2018",
+            "titulo": "E-mail marketing · dezembro 2018",
+            "grupo": "Artes",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 0.6
+          }
+        ]
+      },
+      "pecas": {
+        "titulo": "Peças de divulgação",
+        "itens": [
+          {
+            "id": "pecas-01-video-do-instagram",
+            "titulo": "Vídeo do Instagram",
+            "grupo": "Vídeos",
+            "tipo": "video",
+            "ext": "mp4",
+            "mb": 0.4
+          },
+          {
+            "id": "pecas-02-video-do-instagram",
+            "titulo": "Vídeo do Instagram",
+            "grupo": "Vídeos",
+            "tipo": "video",
+            "ext": "mp4",
+            "mb": 6.5
+          },
+          {
+            "id": "pecas-03-video-do-instagram",
+            "titulo": "Vídeo do Instagram",
+            "grupo": "Vídeos",
+            "tipo": "video",
+            "ext": "mp4",
+            "mb": 1.9
+          },
+          {
+            "id": "pecas-04-cv-dentus-lancamento-3pontas-05052022-feed-v3",
+            "titulo": "Cv dentus lançamento 3pontas 05052022 FEED v3",
+            "grupo": "Vídeos",
+            "tipo": "video",
+            "ext": "mp4",
+            "mb": 19.4
+          },
+          {
+            "id": "pecas-05-cv-dentus-lancamento-3pontas-05052022-story-v2",
+            "titulo": "Cv dentus lançamento 3pontas 05052022 STORY v2",
+            "grupo": "Vídeos",
+            "tipo": "video",
+            "ext": "mp4",
+            "mb": 25.1
+          },
+          {
+            "id": "pecas-06-cv-dentus-profilaxia-spray-28042022-v1",
+            "titulo": "Cv dentus profilaxia spray 28042022 v1",
+            "grupo": "Vídeos",
+            "tipo": "video",
+            "ext": "mp4",
+            "mb": 20.9
+          },
+          {
+            "id": "pecas-07-story-video-post-3-optymus",
+            "titulo": "Story vídeo post 3 optymus",
+            "grupo": "Vídeos",
+            "tipo": "video",
+            "ext": "mp4",
+            "mb": 2.4
+          },
+          {
+            "id": "pecas-08-03-081-story-cvdentus",
+            "titulo": "03 081 story cvdentus",
+            "grupo": "Artes",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 1.2
+          },
+          {
+            "id": "pecas-09-abross-23",
+            "titulo": "ABROSS 23",
+            "grupo": "Artes",
+            "tipo": "img",
+            "ext": "jpg",
+            "mb": 0
+          },
+          {
+            "id": "pecas-10-cdventus-03-06-facebook-story",
+            "titulo": "CDVentus 03.06 facebook story",
+            "grupo": "Artes",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 1.9
+          },
+          {
+            "id": "pecas-11-cdventus-2-1-facebook-story",
+            "titulo": "CDVentus 2 1 facebook story",
+            "grupo": "Artes",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 1.4
+          },
+          {
+            "id": "pecas-12-cdventus-2-2-video-faceinsta-2-story",
+            "titulo": "CDVentus 2 2 video faceinsta 2 story",
+            "grupo": "Artes",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 0.8
+          },
+          {
+            "id": "pecas-13-cdventus-2-3-faceinta-story",
+            "titulo": "CDVentus 2 3 faceinta story",
+            "grupo": "Artes",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 1.5
+          },
+          {
+            "id": "pecas-14-cdventus-3-20-06-face-insta-story-copy",
+            "titulo": "CDVentus 3 20 06 face insta story copy",
+            "grupo": "Artes",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 1.6
+          },
+          {
+            "id": "pecas-15-cdventus-3-20-06-face-insta",
+            "titulo": "CDVentus 3 20 06 face insta",
+            "grupo": "Artes",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 1.1
+          },
+          {
+            "id": "pecas-16-capa-facebook-cvdentus",
+            "titulo": "Capa facebook cvdentus",
+            "grupo": "Artes",
+            "tipo": "img",
+            "ext": "jpg",
+            "mb": 0
+          },
+          {
+            "id": "pecas-17-card-1",
+            "titulo": "Card 1",
+            "grupo": "Artes",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 1.1
+          },
+          {
+            "id": "pecas-18-ds-pro-video-bazan-stories",
+            "titulo": "Ds pro video bazan stories",
+            "grupo": "Artes",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 1.6
+          },
+          {
+            "id": "pecas-19-ds-pro-video-bazan",
+            "titulo": "Ds pro video bazan",
+            "grupo": "Artes",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 1
+          },
+          {
+            "id": "pecas-20-semana4-22-07-story",
+            "titulo": "Semana4 22 07 story",
+            "grupo": "Artes",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 1.7
+          },
+          {
+            "id": "pecas-21-semana5-2-story",
+            "titulo": "Semana5 2 story",
+            "grupo": "Artes",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 1.3
+          },
+          {
+            "id": "pecas-22-story-2",
+            "titulo": "Story 2",
+            "grupo": "Artes",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 1.3
+          },
+          {
+            "id": "pecas-23-story-5",
+            "titulo": "Story 5",
+            "grupo": "Artes",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 3
+          },
+          {
+            "id": "pecas-24-upgrade-1",
+            "titulo": "Upgrade 1",
+            "grupo": "Artes",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 1.6
+          },
+          {
+            "id": "pecas-25-upgrade-2",
+            "titulo": "Upgrade 2",
+            "grupo": "Artes",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 1
+          },
+          {
+            "id": "pecas-26-post-do-instagram-01",
+            "titulo": "Post do Instagram · 01",
+            "grupo": "Posts do Instagram",
+            "tipo": "img",
+            "ext": "jpg",
+            "mb": 0.2
+          },
+          {
+            "id": "pecas-27-post-do-instagram-02",
+            "titulo": "Post do Instagram · 02",
+            "grupo": "Posts do Instagram",
+            "tipo": "img",
+            "ext": "jpg",
+            "mb": 0.2
+          },
+          {
+            "id": "pecas-28-post-do-instagram-03",
+            "titulo": "Post do Instagram · 03",
+            "grupo": "Posts do Instagram",
+            "tipo": "img",
+            "ext": "jpg",
+            "mb": 0.3
+          },
+          {
+            "id": "pecas-29-post-do-instagram-04",
+            "titulo": "Post do Instagram · 04",
+            "grupo": "Posts do Instagram",
+            "tipo": "img",
+            "ext": "jpg",
+            "mb": 0
+          },
+          {
+            "id": "pecas-30-post-do-instagram-05",
+            "titulo": "Post do Instagram · 05",
+            "grupo": "Posts do Instagram",
+            "tipo": "img",
+            "ext": "jpg",
+            "mb": 0.1
+          },
+          {
+            "id": "pecas-31-post-do-instagram-06",
+            "titulo": "Post do Instagram · 06",
+            "grupo": "Posts do Instagram",
+            "tipo": "img",
+            "ext": "jpg",
+            "mb": 0.1
+          },
+          {
+            "id": "pecas-32-post-do-instagram-07",
+            "titulo": "Post do Instagram · 07",
+            "grupo": "Posts do Instagram",
+            "tipo": "img",
+            "ext": "jpg",
+            "mb": 0.2
+          },
+          {
+            "id": "pecas-33-post-do-instagram-08",
+            "titulo": "Post do Instagram · 08",
+            "grupo": "Posts do Instagram",
+            "tipo": "img",
+            "ext": "jpg",
+            "mb": 0.1
+          },
+          {
+            "id": "pecas-34-post-do-instagram-09",
+            "titulo": "Post do Instagram · 09",
+            "grupo": "Posts do Instagram",
+            "tipo": "img",
+            "ext": "jpg",
+            "mb": 0.1
+          },
+          {
+            "id": "pecas-35-post-do-instagram-10",
+            "titulo": "Post do Instagram · 10",
+            "grupo": "Posts do Instagram",
+            "tipo": "img",
+            "ext": "jpg",
+            "mb": 0.1
+          },
+          {
+            "id": "pecas-36-post-do-instagram-11",
+            "titulo": "Post do Instagram · 11",
+            "grupo": "Posts do Instagram",
+            "tipo": "img",
+            "ext": "jpg",
+            "mb": 0.1
+          },
+          {
+            "id": "pecas-37-post-do-instagram-12",
+            "titulo": "Post do Instagram · 12",
+            "grupo": "Posts do Instagram",
+            "tipo": "img",
+            "ext": "jpg",
+            "mb": 0
+          },
+          {
+            "id": "pecas-38-post-do-instagram-13",
+            "titulo": "Post do Instagram · 13",
+            "grupo": "Posts do Instagram",
+            "tipo": "img",
+            "ext": "jpg",
+            "mb": 0.1
+          },
+          {
+            "id": "pecas-39-post-do-instagram-14",
+            "titulo": "Post do Instagram · 14",
+            "grupo": "Posts do Instagram",
+            "tipo": "img",
+            "ext": "jpg",
+            "mb": 0.1
+          },
+          {
+            "id": "pecas-40-post-do-instagram-15",
+            "titulo": "Post do Instagram · 15",
+            "grupo": "Posts do Instagram",
+            "tipo": "img",
+            "ext": "jpg",
+            "mb": 0.1
+          },
+          {
+            "id": "pecas-41-post-do-instagram-16",
+            "titulo": "Post do Instagram · 16",
+            "grupo": "Posts do Instagram",
+            "tipo": "img",
+            "ext": "jpg",
+            "mb": 0.1
+          },
+          {
+            "id": "pecas-42-post-do-instagram-17",
+            "titulo": "Post do Instagram · 17",
+            "grupo": "Posts do Instagram",
+            "tipo": "img",
+            "ext": "jpg",
+            "mb": 0.1
+          },
+          {
+            "id": "pecas-43-post-do-instagram-18",
+            "titulo": "Post do Instagram · 18",
+            "grupo": "Posts do Instagram",
+            "tipo": "img",
+            "ext": "jpg",
+            "mb": 0
+          },
+          {
+            "id": "pecas-44-post-do-instagram-19",
+            "titulo": "Post do Instagram · 19",
+            "grupo": "Posts do Instagram",
+            "tipo": "img",
+            "ext": "jpg",
+            "mb": 0.1
+          },
+          {
+            "id": "pecas-45-post-do-instagram-20",
+            "titulo": "Post do Instagram · 20",
+            "grupo": "Posts do Instagram",
+            "tipo": "img",
+            "ext": "jpg",
+            "mb": 0.1
+          },
+          {
+            "id": "pecas-46-post-do-instagram-21",
+            "titulo": "Post do Instagram · 21",
+            "grupo": "Posts do Instagram",
+            "tipo": "img",
+            "ext": "jpg",
+            "mb": 0.1
+          }
+        ]
+      },
+      "elo": {
+        "titulo": "Linha Elo · fotos e artes",
+        "itens": [
+          {
+            "id": "elo-01-ponta-t1t-foto-1",
+            "titulo": "Ponta T1T · foto 1",
+            "grupo": "Pontas Elo",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 0.1
+          },
+          {
+            "id": "elo-02-ponta-t1t-foto-2",
+            "titulo": "Ponta T1T · foto 2",
+            "grupo": "Pontas Elo",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 0.1
+          },
+          {
+            "id": "elo-03-ponta-t1t-foto-3",
+            "titulo": "Ponta T1T · foto 3",
+            "grupo": "Pontas Elo",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 0.2
+          },
+          {
+            "id": "elo-04-ponta-t1ux-diamante-cvd-foto-1",
+            "titulo": "Ponta T1UX Diamante CVD · foto 1",
+            "grupo": "Pontas Elo",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 0.1
+          },
+          {
+            "id": "elo-05-ponta-t1ux-diamante-cvd-foto-2",
+            "titulo": "Ponta T1UX Diamante CVD · foto 2",
+            "grupo": "Pontas Elo",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 0.1
+          },
+          {
+            "id": "elo-06-ponta-t1ux-diamante-cvd-foto-3",
+            "titulo": "Ponta T1UX Diamante CVD · foto 3",
+            "grupo": "Pontas Elo",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 0.2
+          },
+          {
+            "id": "elo-07-compatibilidade-das-pontas-elo",
+            "titulo": "Compatibilidade das pontas Elo",
+            "grupo": "Tabelas",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 1.3
+          },
+          {
+            "id": "elo-08-tabela-de-valores-linha-elo",
+            "titulo": "Tabela de valores Linha Elo",
+            "grupo": "Tabelas",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 0.3
+          },
+          {
+            "id": "elo-09-cartela-elo",
+            "titulo": "Cartela Elo",
+            "grupo": "Cartelas",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 0.5
+          },
+          {
+            "id": "elo-10-cartela-elo-1",
+            "titulo": "Cartela Elo · 1",
+            "grupo": "Cartelas",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 0.1
+          },
+          {
+            "id": "elo-11-cartela-elo-2",
+            "titulo": "Cartela Elo · 2",
+            "grupo": "Cartelas",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 0.6
+          },
+          {
+            "id": "elo-12-catalogo-capa",
+            "titulo": "Catálogo · Capa",
+            "grupo": "Páginas do catálogo",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 0
+          },
+          {
+            "id": "elo-13-catalogo-ponta-t1t",
+            "titulo": "Catálogo · Ponta T1T",
+            "grupo": "Páginas do catálogo",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 0.1
+          },
+          {
+            "id": "elo-14-catalogo-ponta-t1ux",
+            "titulo": "Catálogo · Ponta T1UX",
+            "grupo": "Páginas do catálogo",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 0.1
+          },
+          {
+            "id": "elo-15-catalogo-guia-de-encaixes",
+            "titulo": "Catálogo · Guia de encaixes",
+            "grupo": "Páginas do catálogo",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 0.1
+          },
+          {
+            "id": "elo-16-catalogo-garantias-e-suporte",
+            "titulo": "Catálogo · Garantias e suporte",
+            "grupo": "Páginas do catálogo",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 0
+          },
+          {
+            "id": "elo-17-catalogo-vantagens-do-diamante",
+            "titulo": "Catálogo · Vantagens do diamante",
+            "grupo": "Páginas do catálogo",
+            "tipo": "img",
+            "ext": "png",
+            "mb": 0
+          }
+        ]
+      }
+    }
   },
-  {
-   "id": "sinus-lift",
-   "nome": "Sinus Lift"
-  },
-  {
-   "id": "gengivoplastia-peeling",
-   "nome": "Gengivoplastia, Peeling e Retração Gengival"
-  },
-  {
-   "id": "osteotomia-torus",
-   "nome": "Osteotomia e Tórus"
-  },
-  {
-   "id": "descolamento",
-   "nome": "Descolamento de Retalho"
-  },
-  {
-   "id": "raspagem",
-   "nome": "Raspagem e Remoção de Cálculo"
-  },
-  {
-   "id": "t1tp-implantes",
-   "nome": "Ponta T1T-P e Limpeza de Implantes"
-  },
-  {
-   "id": "profilaxia",
-   "nome": "Profilaxia e Spray Control"
-  },
-  {
-   "id": "pui",
-   "nome": "PUI e Irrigação do Conduto"
-  },
-  {
-   "id": "guta-percha",
-   "nome": "Guta-Percha"
-  },
-  {
-   "id": "pinos",
-   "nome": "Remoção de Pinos"
-  },
-  {
-   "id": "apicectomia",
-   "nome": "Apicectomia e Retropreparo"
-  },
-  {
-   "id": "endodontia",
-   "nome": "Endodontia · Procedimentos completos"
-  },
-  {
-   "id": "facetas",
-   "nome": "Facetas"
-  },
-  {
-   "id": "odontopediatria",
-   "nome": "Odontopediatria e Ortodontia"
-  },
-  {
-   "id": "preparo-termino",
-   "nome": "Preparo, Término e Refinamento"
-  },
-  {
-   "id": "amalgama-resina",
-   "nome": "Remoção de Amálgama, Resina e Cárie"
-  },
-  {
-   "id": "cimentacao",
-   "nome": "Cimentação"
-  },
-  {
-   "id": "slice",
-   "nome": "Slice (desgaste interproximal)"
-  },
-  {
-   "id": "outras-cirurgias",
-   "nome": "Implantes, Enxerto, Extração e outras cirurgias"
-  },
-  {
-   "id": "demonstracoes",
-   "nome": "Demonstrações e casos clínicos"
-  }
- ],
- "rev": 1794850891537
+  "topicos": [
+    {
+      "id": "flapless",
+      "nome": "Flapless e Aumento de Coroa"
+    },
+    {
+      "id": "sinus-lift",
+      "nome": "Sinus Lift"
+    },
+    {
+      "id": "gengivoplastia-peeling",
+      "nome": "Gengivoplastia, Peeling e Retração Gengival"
+    },
+    {
+      "id": "osteotomia-torus",
+      "nome": "Osteotomia e Tórus"
+    },
+    {
+      "id": "descolamento",
+      "nome": "Descolamento de Retalho"
+    },
+    {
+      "id": "raspagem",
+      "nome": "Raspagem e Remoção de Cálculo"
+    },
+    {
+      "id": "t1tp-implantes",
+      "nome": "Ponta T1T-P e Limpeza de Implantes"
+    },
+    {
+      "id": "profilaxia",
+      "nome": "Profilaxia e Spray Control"
+    },
+    {
+      "id": "pui",
+      "nome": "PUI e Irrigação do Conduto"
+    },
+    {
+      "id": "guta-percha",
+      "nome": "Guta-Percha"
+    },
+    {
+      "id": "pinos",
+      "nome": "Remoção de Pinos"
+    },
+    {
+      "id": "apicectomia",
+      "nome": "Apicectomia e Retropreparo"
+    },
+    {
+      "id": "endodontia",
+      "nome": "Endodontia · Procedimentos completos"
+    },
+    {
+      "id": "facetas",
+      "nome": "Facetas"
+    },
+    {
+      "id": "odontopediatria",
+      "nome": "Odontopediatria e Ortodontia"
+    },
+    {
+      "id": "preparo-termino",
+      "nome": "Preparo, Término e Refinamento"
+    },
+    {
+      "id": "amalgama-resina",
+      "nome": "Remoção de Amálgama, Resina e Cárie"
+    },
+    {
+      "id": "cimentacao",
+      "nome": "Cimentação"
+    },
+    {
+      "id": "slice",
+      "nome": "Slice (desgaste interproximal)"
+    },
+    {
+      "id": "outras-cirurgias",
+      "nome": "Implantes, Enxerto, Extração e outras cirurgias"
+    },
+    {
+      "id": "demonstracoes",
+      "nome": "Demonstrações e casos clínicos"
+    },
+    {
+      "id": "rinoplastia",
+      "nome": "Rinoplastia"
+    },
+    {
+      "id": "ortognatica",
+      "nome": "Ortognática"
+    }
+  ],
+  "rev": 1794851124595
 };
