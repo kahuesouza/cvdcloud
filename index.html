@@ -898,7 +898,9 @@ function telaLupas(grupoId){
   const itens = `<div class="grade">${ativo.itens.map((it,i)=>`<button class="cartao anima" style="--i:${i}" data-lupa="${it.id}"><span class="im"><img loading="lazy" src="img/lupas/${it.img}.webp" alt="${esc(it.nome)}"></span><b>${esc(it.nome)}</b><small>${esc(it.kit || (ativo.id==='flip'?'Flip-up':ativo.id==='ttl'?'TTL':''))}</small></button>`).join('')}</div>`;
   const pdf = LUPAS.pdf;
   const docs = `<div class="lista">
-    <div class="linha anima"><a class="abrir" href="${esc(pdf.baixar)}" download data-dl="lupas-pdf" data-mb="${pdf.mb}">${leadPorThumb(pdf.baixar,'livro')}<span class="txt"><span class="t">Catálogo de lupas (PDF oficial)</span><span class="m" style="display:block">2026 · ${fmtTam(pdf.mb)}</span></span></a><span class="acoes"><a class="ibtn" href="${esc(pdf.baixar)}" download data-dl="lupas-pdf" data-mb="${pdf.mb}" aria-label="Baixar">${ic('download')}</a></span></div>
+    <div class="linha anima"><a class="abrir" href="${esc(pdf.baixar)}" download data-dl="lupas-pdf" data-mb="${pdf.mb}">${leadPorThumb(pdf.baixar,'livro')}<span class="txt"><span class="t">Catálogo de lupas · Português (PDF oficial)</span><span class="m" style="display:block">2026 · ${fmtTam(pdf.mb)}</span></span></a><span class="acoes"><a class="ibtn" href="${esc(pdf.baixar)}" download data-dl="lupas-pdf" data-mb="${pdf.mb}" aria-label="Baixar">${ic('download')}</a></span></div>
+    <div class="linha anima"><a class="abrir" href="https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-lupas-cvdentus-2026-en.pdf" download data-dl="lupas-pdf-en" data-mb="15.8">${leadPorThumb('https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-lupas-cvdentus-2026-en.pdf','livro')}<span class="txt"><span class="t">Loupe catalog · English</span><span class="m" style="display:block">2026 · ${fmtTam(15.8)}</span></span></a></div>
+    <div class="linha anima"><a class="abrir" href="https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-lupas-cvdentus-2026-es.pdf" download data-dl="lupas-pdf-es" data-mb="15.8">${leadPorThumb('https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-lupas-cvdentus-2026-es.pdf','livro')}<span class="txt"><span class="t">Catálogo de lupas · Español</span><span class="m" style="display:block">2026 · ${fmtTam(15.8)}</span></span></a></div>
     ${linhaExt(LUPAS.catalogoOnline,'globo','Catálogo online com vídeos 360°','Vídeos 360° de cada modelo')}
     ${linhaExt(LUPAS.simulador,'lupa','Simulador de lupas','Escolha a lupa ideal')}</div>`;
   return { titulo:'Lupas', voltar:'#/', corpo: largo('Lupas','Lupas, fotóforos e armações CVDentus.')
@@ -1726,7 +1728,7 @@ function atualizarDicasDoItem(x){
 /* ===================== Acesso obrigatório (login) e carregamento do catálogo ===================== */
 const gateEl = document.getElementById('gate');
 let appIniciado = false, carregandoCatalogo = false, modoGate = 'entrar';
-const VERSAO_APP = 'v146';
+const VERSAO_APP = 'v147';
 function gateHtml(corpo){ return `<div class="gate-in"><img class="logo-g" src="img/logo.svg" alt="cvdcloud">${corpo}</div>`; }
 const LOADER = '<div class="loader-linha" role="status" aria-label="Carregando"></div>';
 function gateMostrar(html){ document.body.classList.add('gate-on'); gateEl.innerHTML = gateHtml(html); }
