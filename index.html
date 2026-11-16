@@ -621,7 +621,7 @@ function telaProduto(id, aba){
 
 function telaFotos(id){
   const F = FOT[id]; if(!F) return '';
-  let html = `<div class="lista"><div class="linha anima"><a class="abrir" href="${esc(F.zip.url)}" download data-dl="fotos-zip" data-mb="${F.zip.mb}"><span class="lead">${ic('download')}</span><span class="txt"><span class="t">Baixar todas (.zip)</span><span class="m" style="display:block">${F.zip.n} imagens · ${fmtTam(F.zip.mb)}${F.grupos.some(g=>g.ia)?' · sem as geradas com IA':''}</span></span></a></div></div>`;
+  let html = `<div class="lista"><div class="linha anima"><button class="abrir" data-foto-todas="${esc(id)}"><span class="lead">${ic('download')}</span><span class="txt"><span class="t">Baixar todas as fotos</span><span class="m" style="display:block">${F.grupos.filter(g=>!g.ia).reduce((s,g)=>s+g.itens.length,0)} imagens${F.grupos.some(g=>g.ia)?' · sem as geradas com IA':''}</span></span></button></div></div>`;
   F.grupos.forEach(g=>{
     html += secao(g.nome, g.itens.length);
     if(g.ia) html += `<p style="color:var(--alerta);font-size:12.5px;margin:6px 0 0;line-height:1.5">Imagens geradas com IA. Confira se representam fielmente o produto antes de usar.</p>`;
@@ -743,7 +743,7 @@ const gruposLupas = () => LUPAS.grupos.filter(g=>g.id!=='fotoforos');
 function linhaModelo(x, i){
   const sub = [x.linha, x.tipo, x.mags].filter(Boolean).join(' · ');
   return `<div class="linha cod-row anima" style="--i:${Math.min(i,10)}"><button class="abrir" data-modelo="${x.id}"><span class="lead foto" style="background:#fff;border:1px solid var(--linha)"><img loading="lazy" alt="" src="img/modelos/${x.id}.webp"></span><span class="txt"><span class="t cod-n">${esc(x.codigo)}</span><span class="m" style="display:block">${esc(sub)}</span></span></button>
-    <span class="acoes"><a class="ibtn" href="${esc(x.zip)}" download data-dl="modelo" data-mb="${x.mb}" aria-label="Baixar ${x.n} fotos (${fmtTam(x.mb)})">${ic('download')}</a></span></div>`;
+    <span class="acoes"><button class="ibtn" data-mf-todas="${esc(x.id)}" data-mf-n="${x.n}" aria-label="Baixar ${x.n} fotos">${ic('download')}</button></span></div>`;
 }
 function telaModelos(){
   const mod = modelosLupas(); let html = '', i = 0;
@@ -768,7 +768,7 @@ function painelModelo(id){
     <div class="mf-tiras" role="list">${fotos.map(i => `<button class="mf-mini${i === 1 ? ' on' : ''}" role="listitem" data-mfoto="${esc(id)}:${i}" aria-label="Foto ${i}"><img loading="lazy" decoding="async" alt="" src="${esc(mfotoMini(id, i))}" onerror="this.onerror=null;this.src='${esc(mfotoUrl(id, i))}'"></button>`).join('')}</div>
     <div class="botoes">
       <a class="btn prim" id="mf-dl" href="${esc(mfotoUrl(id, 1))}" download="lupa-${esc(id)}-01.jpg" data-dl="modelo-foto" data-mb="0.1">${ic('download')}Baixar esta foto</a>
-      <a class="btn sec" href="${esc(x.zip)}" download data-dl="modelo" data-mb="${x.mb}">${ic('download')}Baixar todas as ${n} fotos <small>${fmtTam(x.mb)}</small></a>
+      <button class="btn sec" data-mf-todas="${esc(id)}" data-mf-n="${n}">${ic('download')}Baixar todas as ${n} fotos</button>
       <button class="btn sec" id="mf-comp" data-comp-gen="${esc(JSON.stringify({ t: nome1, u: mfotoUrl(id, 1), d: mfotoUrl(id, 1), tp: 'Foto', mb: 0.1 }))}">${ic('share')}Compartilhar esta foto</button>
     </div>`);
   if(n > 1){ mfPre(id, 2, n); mfPre(id, n, n); }
@@ -825,7 +825,7 @@ function painelAcessorio(id){
     ${n > 1 ? `<div class="mf-tiras" role="list">${Array.from({ length: n }, (_, k) => k + 1).map(i => `<button class="mf-mini${i === 1 ? ' on' : ''}" role="listitem" data-accfoto="${i}" aria-label="Ver foto ${i}"><img loading="lazy" alt="" src="${esc(accMini(it, i))}"></button>`).join('')}</div>` : ''}
     <div class="botoes">
       <a class="btn prim" id="ac-dl" href="${esc(accFull(it, 1))}" download="${esc(it.id)}-01.jpg" data-dl="acessorio" data-mb="0.2">${ic('download')}Baixar esta foto</a>
-      ${n > 1 ? `<button class="btn sec" id="ac-todas" data-ac-todas>${ic('download')}Baixar as ${n} fotos (.zip)</button>` : ''}
+      ${n > 1 ? `<button class="btn sec" id="ac-todas" data-ac-todas>${ic('download')}Baixar as ${n} fotos</button>` : ''}
       ${btnComp(it.nome + ' · ' + it.compat, absUrl(accFull(it, 1)), absUrl(accFull(it, 1)), 'Foto', 0.2, 'Compartilhar esta foto', 'img/' + it.dir + '/' + it.id + '.webp').replace('<button ', '<button id="ac-comp" ')}
     </div>`);
   const bx = document.getElementById('ac-box');
@@ -847,18 +847,10 @@ function accVer(i){
   accPre(it, i + 1); accPre(it, i - 1);
 }
 function accPasso(d){ const it = accItem(ACCS.id); if(!it) return; accVer(((ACCS.atual - 1 + d + it.n) % it.n) + 1); }
-async function accBaixarTodas(){
-  const it = accItem(ACCS.id); if(!it || ACCS.busy) return; ACCS.busy = true; const b = document.getElementById('ac-todas'), rot = b ? b.innerHTML : '';
-  try{
-    const dados = [];
-    for(let k = 1; k <= it.n; k++){
-      if(b){ b.disabled = true; b.textContent = `Preparando ${k} de ${it.n}…`; }
-      const r = await fetch(accFull(it, k)); if(!r.ok) throw new Error('foto');
-      dados.push({ nome: `${it.id}-${String(k).padStart(2, '0')}.jpg`, dados: new Uint8Array(await r.arrayBuffer()) });
-    }
-    salvarBlob(montarZip(dados), `${it.id}-fotos.zip`); toast(`${it.n} fotos baixadas`);
-  }catch(e){ toast('Não foi possível baixar. Tente de novo'); }
-  ACCS.busy = false; if(b){ b.disabled = false; b.innerHTML = rot; }
+function accBaixarTodas(){
+  const it = accItem(ACCS.id); if(!it) return;
+  baixarArquivos(Array.from({ length: it.n }, (_, k) => ({ url: accFull(it, k + 1), nome: `${it.id}-${String(k + 1).padStart(2, '0')}.jpg` })));
+  toast(`${it.n} fotos sendo baixadas`);
 }
 /* ---------- CVDcoating: fotos, vídeos, logos e arquivos (área própria) ---------- */
 let COAT = null;
@@ -947,24 +939,12 @@ function lfVer(i){
   lfPre(it, i + 1); lfPre(it, i - 1);   // deixa as vizinhas prontas para o próximo passo
 }
 function lfPasso(d){ const it = lfItem(LF.id); if(!it) return; const n = it.fotos.n; lfVer(((LF.atual - 1 + d + n) % n) + 1); }
-async function lfBaixar(){
-  const it = lfItem(LF.id); if(!it || LF.busy || !LF.sel.size) return;
-  const idx = [...LF.sel].sort((p, q) => p - q), b = document.getElementById('lf-baixar'); LF.busy = true;
-  try{
-    const arq = [];
-    for(let k = 0; k < idx.length; k++){
-      if(b){ b.disabled = true; b.textContent = `Preparando ${k + 1} de ${idx.length}…`; }
-      const r = await fetch(lfUrl(it, idx[k])); if(!r.ok) throw new Error('foto');
-      arq.push({ nome: `lupa-${it.id}-${String(idx[k]).padStart(2, '0')}.jpg`, blob: await r.blob() });
-    }
-    if(arq.length === 1) salvarBlob(arq[0].blob, arq[0].nome);
-    else{
-      const dados = []; for(const a of arq) dados.push({ nome: a.nome, dados: new Uint8Array(await a.blob.arrayBuffer()) });
-      salvarBlob(montarZip(dados), `lupa-${it.id}-fotos.zip`);
-    }
-    toast(arq.length === 1 ? 'Foto baixada' : `${arq.length} fotos baixadas`);
-  }catch(e){ toast('Não foi possível baixar. Tente de novo'); }
-  LF.busy = false; lfResumo();
+function lfBaixar(){
+  const it = lfItem(LF.id); if(!it || !LF.sel.size) return;
+  const idx = [...LF.sel].sort((p, q) => p - q);
+  baixarArquivos(idx.map(k => ({ url: lfUrl(it, k), nome: `lupa-${it.id}-${String(k).padStart(2, '0')}.jpg` })));
+  toast(idx.length === 1 ? 'Foto baixada' : `${idx.length} fotos sendo baixadas`);
+  lfResumo();
 }
 function painelLupa(id){
   let it, g; LUPAS.grupos.forEach(gr=>gr.itens.forEach(x=>{ if(x.id===id){ it=x; g=gr; } }));
@@ -990,8 +970,8 @@ function painelLupa(id){
   const fotosBtns = gal
     ? `<a class="btn prim" id="lf-dl" href="${esc(lfUrl(it, 1))}" download="lupa-${esc(id)}-01.jpg" data-dl="lupa" data-mb="0.2">${ic('download')}Baixar a foto que está aberta</a>
        <button class="btn sec" id="lf-baixar" data-lf-baixar disabled>${ic('download')}Baixar as escolhidas</button>
-       <a class="btn sec" href="${esc(it.fotos.url)}" download data-dl="lupa" data-mb="${it.fotos.mb}">${ic('download')}Baixar todas as ${n} fotos <small>${fmtTam(it.fotos.mb)}</small></a>`
-    : `<a class="btn sec" href="${esc(it.fotos.url)}" download data-dl="lupa" data-mb="${it.fotos.mb}">${ic('download')}Baixar fotos <small>${it.fotos.n} · ${fmtTam(it.fotos.mb)}</small></a>`;
+       <button class="btn sec" data-lf-baixar-todas>${ic('download')}Baixar todas as ${n} fotos</button>`
+    : `<button class="btn sec" data-lf-baixar-todas>${ic('download')}Baixar fotos (${it.fotos.n})</button>`;
   abrirPainel(`${topo}${vid}
     <div class="botoes">
       ${vid ? btnLoop() : ''}
@@ -1291,6 +1271,14 @@ function salvarBlob(blob, nome){
   const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = nome; a.style.display = 'none';
   document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 5000);
 }
+/* baixa uma lista de arquivos, um de cada vez, cada um no formato em que está (PNG ou JPG). Nada de .zip, que não funciona bem no celular. */
+function baixarArquivos(lista){
+  lista.forEach((f, k) => setTimeout(() => {
+    const a = document.createElement('a'); a.href = f.url; a.download = f.nome; a.rel = 'noopener'; a.style.display = 'none';
+    document.body.appendChild(a); a.click(); setTimeout(() => a.remove(), 3000);
+    if(f.url.startsWith('blob:')) setTimeout(() => URL.revokeObjectURL(f.url), 120000);
+  }, k * 900));
+}
 function pgResumo(){
   const n = PG.sel.length, b = document.getElementById('pg-baixar'), c = document.getElementById('pg-cont');
   if(c) c.textContent = n ? `${n} ${n === 1 ? 'página escolhida' : 'páginas escolhidas'}` : 'Toque nas páginas que quer baixar';
@@ -1357,13 +1345,7 @@ async function pgBaixar(){
       if(!blob) throw new Error('png');
       arq.push({ nome: `${base}-pag-${String(n).padStart(2, '0')}.png`, blob });
     }
-    if(arq.length === 1) salvarBlob(arq[0].blob, arq[0].nome);
-    else{
-      if(b) b.textContent = 'Compactando…';
-      const dados = [];
-      for(const a of arq) dados.push({ nome: a.nome, dados: new Uint8Array(await a.blob.arrayBuffer()) });
-      salvarBlob(montarZip(dados), `${base}-paginas.zip`);
-    }
+    baixarArquivos(arq.map(a => ({ url: URL.createObjectURL(a.blob), nome: a.nome })));
     track('baixar', chaveItem(PG.x), PG.x.titulo + ' · PNG ' + paginas.length + ' pág.', '');
     toast(arq.length === 1 ? 'Página baixada' : `${arq.length} páginas baixadas`);
     if(st) st.textContent = 'Pronto. Se não aparecer, confira a pasta de downloads do aparelho.';
@@ -1743,7 +1725,7 @@ function atualizarDicasDoItem(x){
 /* ===================== Acesso obrigatório (login) e carregamento do catálogo ===================== */
 const gateEl = document.getElementById('gate');
 let appIniciado = false, carregandoCatalogo = false, modoGate = 'entrar';
-const VERSAO_APP = 'v131';
+const VERSAO_APP = 'v132';
 function gateHtml(corpo){ return `<div class="gate-in"><img class="logo-g" src="img/logo.svg" alt="cvdcloud">${corpo}</div>`; }
 const LOADER = '<div class="loader-linha" role="status" aria-label="Carregando"></div>';
 function gateMostrar(html){ document.body.classList.add('gate-on'); gateEl.innerHTML = gateHtml(html); }
@@ -2050,6 +2032,9 @@ document.addEventListener('click', e=>{
   const anv = t.closest('[data-accnav]'); if(anv){ accPasso(+anv.dataset.accnav); return; }
   const afo = t.closest('[data-accfoto]'); if(afo){ accVer(+afo.dataset.accfoto); return; }
   if(t.closest('[data-ac-todas]')){ accBaixarTodas(); return; }
+  const ftd = t.closest('[data-foto-todas]'); if(ftd){ const F = FOT[ftd.dataset.fotoTodas], CF = window.CVD_FOTOS; if(F && CF){ baixarArquivos(F.grupos.filter(g => !g.ia).flatMap(g => g.itens).map(it => ({ url: CF.dl + it.id + '.' + it.ext, nome: it.id + '.' + it.ext }))); toast('Baixando as fotos'); } return; }
+  const mtd = t.closest('[data-mf-todas]'); if(mtd){ const id = mtd.dataset.mfTodas, n = +mtd.dataset.mfN; baixarArquivos(Array.from({ length: n }, (_, k) => ({ url: mfotoUrl(id, k + 1), nome: `lupa-${id}-${String(k + 1).padStart(2, '0')}.jpg` }))); toast(`${n} fotos sendo baixadas`); return; }
+  if(t.closest('[data-lf-baixar-todas]')){ const it = lfItem(LF.id); if(it){ baixarArquivos(Array.from({ length: it.fotos.n }, (_, k) => ({ url: lfUrl(it, k + 1), nome: `lupa-${it.id}-${String(k + 1).padStart(2, '0')}.jpg` }))); toast(`${it.fotos.n} fotos sendo baixadas`); } return; }
   const lfv = t.closest('[data-lfoto]'); if(lfv){ lfVer(+lfv.dataset.lfoto.split(':')[1]); return; }
   if(t.closest('[data-lf-todas]')){ const it = lfItem(LF.id); if(it){ if(LF.sel.size === it.fotos.n) LF.sel.clear(); else for(let k = 1; k <= it.fotos.n; k++) LF.sel.add(k); lfResumo(); } return; }
   if(t.closest('[data-lf-baixar]')){ lfBaixar(); return; }
