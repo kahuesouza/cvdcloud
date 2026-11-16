@@ -8,10 +8,10 @@ window.CVD_PONTAS = [
   "cor": "#1D4ED8",
   "bula": {
    "titulo": "Bula das pontas Optymus",
-   "versao": "2023 · v04",
-   "ver": "https://d335luupugsy2.cloudfront.net/cms%2Ffiles%2F59178%2F1693500441Bula_OPTYMUS_2023_v04.pdf",
-   "baixar": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/bulas/bula-pontas-optymus-2023-v04.pdf",
-   "mb": 0.2
+   "versao": "2023 · v04 + T0UX e T1UX",
+   "ver": "https://cloud.cvdentus.com.br/arquivos/bulas/bula-pontas-optymus-2023-v04-t0ux-t1ux.pdf",
+   "baixar": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/bulas/bula-pontas-optymus-2023-v04-t0ux-t1ux.pdf",
+   "mb": 0.3
   },
   "modos": [
    {
