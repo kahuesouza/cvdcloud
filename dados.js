@@ -2055,6 +2055,22 @@ window.CVD = {
    ]
   },
   {
+   "titulo": "Rinoplastia · vídeo 1",
+   "esp": "cirurgia",
+   "mb": 2.4,
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-50-rinoplastia-01.mp4",
+   "local": "arquivos/procedimentos/proc-50-rinoplastia-01.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-50-rinoplastia-01.mp4"
+  },
+  {
+   "titulo": "Rinoplastia · vídeo 2",
+   "esp": "cirurgia",
+   "mb": 3.1,
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-51-rinoplastia-02.mp4",
+   "local": "arquivos/procedimentos/proc-51-rinoplastia-02.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-51-rinoplastia-02.mp4"
+  },
+  {
    "titulo": "Aumento de Coroa · Flapless com DentSurg",
    "esp": "cirurgia",
    "formato": "YouTube",
@@ -3648,5 +3664,5 @@ window.CVD = {
    "nome": "Demonstrações e casos clínicos"
   }
  ],
- "rev": 1794841096090
+ "rev": 1794841230496
 };
