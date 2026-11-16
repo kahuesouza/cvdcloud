@@ -2071,6 +2071,14 @@ window.CVD = {
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-51-rinoplastia-02.mp4"
   },
   {
+   "titulo": "Rinoplastia · feedback do cirurgião",
+   "esp": "cirurgia",
+   "mb": 5.2,
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-52-rinoplastia-feedback-cirurgiao.mp4",
+   "local": "arquivos/procedimentos/proc-52-rinoplastia-feedback-cirurgiao.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-52-rinoplastia-feedback-cirurgiao.mp4"
+  },
+  {
    "titulo": "Aumento de Coroa · Flapless com DentSurg",
    "esp": "cirurgia",
    "formato": "YouTube",
@@ -3664,5 +3672,5 @@ window.CVD = {
    "nome": "Demonstrações e casos clínicos"
   }
  ],
- "rev": 1794841230496
+ "rev": 1794841734733
 };
