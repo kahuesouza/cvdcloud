@@ -2079,6 +2079,30 @@ window.CVD = {
    "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-52-rinoplastia-feedback-cirurgiao.mp4"
   },
   {
+   "titulo": "Rinoplastia ultrassônica · SL3G (Dr. Alexandre Cavasini)",
+   "esp": "cirurgia",
+   "mb": 4.0,
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-53-rinoplastia-sl3g-cavasini.mp4",
+   "local": "arquivos/procedimentos/proc-53-rinoplastia-sl3g-cavasini.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-53-rinoplastia-sl3g-cavasini.mp4"
+  },
+  {
+   "titulo": "Rinoplastia · SF3",
+   "esp": "cirurgia",
+   "mb": 6.8,
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-54-rinoplastia-sf3.mp4",
+   "local": "arquivos/procedimentos/proc-54-rinoplastia-sf3.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-54-rinoplastia-sf3.mp4"
+  },
+  {
+   "titulo": "Rinoplastia ultrassônica · Dr. Alexandre Cavasini (2023)",
+   "esp": "cirurgia",
+   "mb": 3.7,
+   "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-55-rinoplastia-cavasini-2023.mp4",
+   "local": "arquivos/procedimentos/proc-55-rinoplastia-cavasini-2023.mp4",
+   "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-55-rinoplastia-cavasini-2023.mp4"
+  },
+  {
    "titulo": "Aumento de Coroa · Flapless com DentSurg",
    "esp": "cirurgia",
    "formato": "YouTube",
@@ -3672,5 +3696,5 @@ window.CVD = {
    "nome": "Demonstrações e casos clínicos"
   }
  ],
- "rev": 1794841734733
+ "rev": 1794841864581
 };
