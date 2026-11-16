@@ -3304,7 +3304,90 @@ window.CVD_PONTAS = [
       ]
      }
     ]
-   }
+   },
+  {
+    "id": "rinoplastia",
+    "nome": "Rinoplastia (Kit Pro Médico)",
+    "pontas": [
+      {
+        "cod": [
+          "SFR4"
+        ],
+        "linhas": [
+          [
+            "Osteotomia e Ostectomia",
+            "Cortical"
+          ]
+        ]
+      },
+      {
+        "cod": [
+          "SF32"
+        ],
+        "linhas": [
+          [
+            "Osteotomia e Ostectomia",
+            "Cortical"
+          ]
+        ]
+      },
+      {
+        "cod": [
+          "SF3-R (right)"
+        ],
+        "linhas": [
+          [
+            "Osteotomia e Ostectomia lateral (área de difícil acesso)",
+            "Cortical/ Medular"
+          ]
+        ]
+      },
+      {
+        "cod": [
+          "SF3-L (left)"
+        ],
+        "linhas": [
+          [
+            "Osteotomia e Ostectomia lateral (área de difícil acesso)",
+            "Cortical/ Medular"
+          ]
+        ]
+      },
+      {
+        "cod": [
+          "SE9G"
+        ],
+        "linhas": [
+          [
+            "Raspagem para desgaste da superfície óssea",
+            "Cortical"
+          ]
+        ]
+      },
+      {
+        "cod": [
+          "STR1"
+        ],
+        "linhas": [
+          [
+            "Perfuração óssea",
+            "Cortical"
+          ]
+        ]
+      },
+      {
+        "cod": [
+          "SL3G"
+        ],
+        "linhas": [
+          [
+            "Raspagem e regularização da superfície óssea",
+            ""
+          ]
+        ]
+      }
+    ]
+  }
   ]
  }
 ];
