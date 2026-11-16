@@ -1,6 +1,6 @@
 /* Lupas, fotóforos e armações (fonte: catalogodelupas.cvdentus.com.br). Fotos em .zip e vídeo 360° no release "lupas" de cvdentus-arquivos. */
 window.CVD_LUPAS = {
- "rev": 1794836633046,
+ "rev": 1794836898204,
  "grupos": [
   {
    "id": "flip",
@@ -525,6 +525,36 @@ window.CVD_LUPAS = {
   "n": 8,
   "mb": 0.6,
   "zip": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/modelos-lupas/lupa-j24-fotos.zip"
- }
+ },
+    {
+     "id": "ia-galileu-ttl-1",
+     "codigo": "GAL-IA-1",
+     "linha": "Galileu",
+     "tipo": "TTL",
+     "mags": "Imagem gerada com IA · parecida com TTL-21",
+     "n": 4,
+     "mb": 0.6,
+     "zip": ""
+    },
+    {
+     "id": "ia-galileu-ttl-2",
+     "codigo": "GAL-IA-2",
+     "linha": "Galileu",
+     "tipo": "TTL",
+     "mags": "Imagem gerada com IA · parecida com TTL-21",
+     "n": 4,
+     "mb": 0.6,
+     "zip": ""
+    },
+    {
+     "id": "ia-kepler-ttl-1",
+     "codigo": "KEP-IA-1",
+     "linha": "Kepler",
+     "tipo": "TTL",
+     "mags": "Imagem gerada com IA · parecida com TTL-24",
+     "n": 4,
+     "mb": 1.1,
+     "zip": ""
+    }
 ]
 };
