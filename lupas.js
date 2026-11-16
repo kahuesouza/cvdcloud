@@ -1,6 +1,6 @@
 /* Lupas, fotóforos e armações (fonte: catalogodelupas.cvdentus.com.br). Fotos em .zip e vídeo 360° no release "lupas" de cvdentus-arquivos. */
 window.CVD_LUPAS = {
- "rev": 1794836898204,
+ "rev": 1794839173758,
  "grupos": [
   {
    "id": "flip",
@@ -95,11 +95,6 @@ window.CVD_LUPAS = {
       "mb": 0.9,
       "n": 5,
       "dir": "arquivos/lupas/ttl-kepler/"
-     },
-     "video": {
-      "ver": "https://catalogodelupas.cvdentus.com.br/uploads/KEPLER_TTL_360.mp4",
-      "baixar": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-kepler-video.mp4",
-      "mb": 7.0
      }
     },
     {
