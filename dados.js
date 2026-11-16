@@ -1477,6 +1477,10 @@ window.CVD = {
       "topico": "sinus-lift",
       "pontas": [
         "SR9"
+      ],
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
       ]
     },
     {
@@ -1489,7 +1493,11 @@ window.CVD = {
       "tv": "arquivos/procedimentos/tv/proc-02-descolamento-da-membrana-sinusal-prof-renato-lavezo.mp4",
       "tvMb": 5.3,
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-02-descolamento-da-membrana-sinusal-prof-renato-lavezo.mp4",
-      "topico": "sinus-lift"
+      "topico": "sinus-lift",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Flapless",
@@ -1503,6 +1511,10 @@ window.CVD = {
       "esps": [
         "cirurgia",
         "periodontia"
+      ],
+      "tags": [
+        "Periodontia",
+        "Cirurgia e implante"
       ]
     },
     {
@@ -1521,6 +1533,10 @@ window.CVD = {
       "esps": [
         "cirurgia",
         "periodontia"
+      ],
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
       ]
     },
     {
@@ -1539,7 +1555,11 @@ window.CVD = {
       "pontas": [
         "SL1-0"
       ],
-      "ponta": "SL1-0"
+      "ponta": "SL1-0",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Osteotomia de Torus",
@@ -1557,7 +1577,11 @@ window.CVD = {
       "pontas": [
         "SF3"
       ],
-      "ponta": "SF3"
+      "ponta": "SF3",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Osteotomia",
@@ -1570,6 +1594,10 @@ window.CVD = {
       "esps": [
         "cirurgia",
         "periodontia"
+      ],
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
       ]
     },
     {
@@ -1585,6 +1613,10 @@ window.CVD = {
       "esps": [
         "cirurgia",
         "periodontia"
+      ],
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
       ]
     },
     {
@@ -1595,7 +1627,11 @@ window.CVD = {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-09-cirurgia-do-mento-ricardo-scotton.mp4",
       "local": "arquivos/procedimentos/proc-09-cirurgia-do-mento-ricardo-scotton.mp4",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-09-cirurgia-do-mento-ricardo-scotton.mp4",
-      "topico": "outras-cirurgias"
+      "topico": "outras-cirurgias",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Sindesmotomia",
@@ -1604,7 +1640,11 @@ window.CVD = {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-10-sindesmotomia.mp4",
       "local": "arquivos/procedimentos/proc-10-sindesmotomia.mp4",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-10-sindesmotomia.mp4",
-      "topico": "outras-cirurgias"
+      "topico": "outras-cirurgias",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Aumento de Coroa e Regularização Radicular",
@@ -1618,6 +1658,10 @@ window.CVD = {
       "esps": [
         "cirurgia",
         "periodontia"
+      ],
+      "tags": [
+        "Periodontia",
+        "Cirurgia e implante"
       ]
     },
     {
@@ -1628,7 +1672,10 @@ window.CVD = {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-12-raspagem-e-alisamento-radicular-prof-diego-bazan.mp4",
       "local": "arquivos/procedimentos/proc-12-raspagem-e-alisamento-radicular-prof-diego-bazan.mp4",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-12-raspagem-e-alisamento-radicular-prof-diego-bazan.mp4",
-      "topico": "raspagem"
+      "topico": "raspagem",
+      "tags": [
+        "Periodontia"
+      ]
     },
     {
       "titulo": "Gengivoplastia com Osteotomia",
@@ -1641,6 +1688,9 @@ window.CVD = {
       "esps": [
         "cirurgia",
         "periodontia"
+      ],
+      "tags": [
+        "Periodontia"
       ]
     },
     {
@@ -1654,6 +1704,9 @@ window.CVD = {
       "esps": [
         "cirurgia",
         "periodontia"
+      ],
+      "tags": [
+        "Periodontia"
       ]
     },
     {
@@ -1669,7 +1722,10 @@ window.CVD = {
         "VR04XR",
         "T1F-2"
       ],
-      "ponta": "VR04XR e T1F-2"
+      "ponta": "VR04XR e T1F-2",
+      "tags": [
+        "Endodontia"
+      ]
     },
     {
       "titulo": "Irrigação do Conduto e Corte de Guta-Percha",
@@ -1679,7 +1735,10 @@ window.CVD = {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-16-irrigacao-do-conduto-e-corte-de-guta-percha-prof-rodrigo-vil.mp4",
       "local": "arquivos/procedimentos/proc-16-irrigacao-do-conduto-e-corte-de-guta-percha-prof-rodrigo-vil.mp4",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-16-irrigacao-do-conduto-e-corte-de-guta-percha-prof-rodrigo-vil.mp4",
-      "topico": "pui"
+      "topico": "pui",
+      "tags": [
+        "Endodontia"
+      ]
     },
     {
       "titulo": "Limpeza da Câmara Pulpar",
@@ -1689,7 +1748,10 @@ window.CVD = {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-17-limpeza-da-camara-pulpar-prof-rodrigo-villagra.mp4",
       "local": "arquivos/procedimentos/proc-17-limpeza-da-camara-pulpar-prof-rodrigo-villagra.mp4",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-17-limpeza-da-camara-pulpar-prof-rodrigo-villagra.mp4",
-      "topico": "endodontia"
+      "topico": "endodontia",
+      "tags": [
+        "Endodontia"
+      ]
     },
     {
       "titulo": "Compactação da Guta-Percha",
@@ -1704,6 +1766,9 @@ window.CVD = {
       "topico": "guta-percha",
       "pontas": [
         "CR2T-E"
+      ],
+      "tags": [
+        "Endodontia"
       ]
     },
     {
@@ -1719,6 +1784,9 @@ window.CVD = {
       "topico": "guta-percha",
       "pontas": [
         "T0S-E2"
+      ],
+      "tags": [
+        "Endodontia"
       ]
     },
     {
@@ -1730,7 +1798,11 @@ window.CVD = {
       "tv": "arquivos/procedimentos/tv/proc-20-remocao-de-pino.mp4",
       "tvMb": 10.4,
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-20-remocao-de-pino.mp4",
-      "topico": "pinos"
+      "topico": "pinos",
+      "tags": [
+        "Endodontia",
+        "Prótese e cimentação"
+      ]
     },
     {
       "titulo": "Término de Preparo",
@@ -1740,7 +1812,12 @@ window.CVD = {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-21-termino-de-preparo-dr-rodrigo-bucker.mp4",
       "local": "arquivos/procedimentos/proc-21-termino-de-preparo-dr-rodrigo-bucker.mp4",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-21-termino-de-preparo-dr-rodrigo-bucker.mp4",
-      "topico": "preparo-termino"
+      "topico": "preparo-termino",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Término de Preparo",
@@ -1750,7 +1827,12 @@ window.CVD = {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-22-termino-de-preparo-dr-shizuma-shibata.mp4",
       "local": "arquivos/procedimentos/proc-22-termino-de-preparo-dr-shizuma-shibata.mp4",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-22-termino-de-preparo-dr-shizuma-shibata.mp4",
-      "topico": "preparo-termino"
+      "topico": "preparo-termino",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Término de Preparo",
@@ -1763,6 +1845,11 @@ window.CVD = {
       "topico": "preparo-termino",
       "pontas": [
         "T1F"
+      ],
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
       ]
     },
     {
@@ -1773,7 +1860,12 @@ window.CVD = {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-24-acabamento-cervical-de-restauros-em-resina-prof-renato-voss.mp4",
       "local": "arquivos/procedimentos/proc-24-acabamento-cervical-de-restauros-em-resina-prof-renato-voss.mp4",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-24-acabamento-cervical-de-restauros-em-resina-prof-renato-voss.mp4",
-      "topico": "preparo-termino"
+      "topico": "preparo-termino",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Acabamento Cervical de Restauros em Resina",
@@ -1787,6 +1879,11 @@ window.CVD = {
       "topico": "preparo-termino",
       "pontas": [
         "TR1F-RV"
+      ],
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
       ]
     },
     {
@@ -1797,7 +1894,12 @@ window.CVD = {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-26-remocao-de-facetas-gustavo-greco-alexandre-greco-e-ricardo-o.mp4",
       "local": "arquivos/procedimentos/proc-26-remocao-de-facetas-gustavo-greco-alexandre-greco-e-ricardo-o.mp4",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-26-remocao-de-facetas-gustavo-greco-alexandre-greco-e-ricardo-o.mp4",
-      "topico": "facetas"
+      "topico": "facetas",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Remoção de Facetas",
@@ -1813,7 +1915,12 @@ window.CVD = {
         "CR1",
         "CR1U"
       ],
-      "ponta": "W1 e CR1 e CR1U"
+      "ponta": "W1 e CR1 e CR1U",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Remoção de Amálgama",
@@ -1822,7 +1929,10 @@ window.CVD = {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-28-remocao-de-amalgama.mp4",
       "local": "arquivos/procedimentos/proc-28-remocao-de-amalgama.mp4",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-28-remocao-de-amalgama.mp4",
-      "topico": "amalgama-resina"
+      "topico": "amalgama-resina",
+      "tags": [
+        "Desgaste e preparo"
+      ]
     },
     {
       "titulo": "Preparo Interproximal",
@@ -1833,7 +1943,12 @@ window.CVD = {
       "tv": "arquivos/procedimentos/tv/proc-29-preparo-interproximal.mp4",
       "tvMb": 12.2,
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-29-preparo-interproximal.mp4",
-      "topico": "preparo-termino"
+      "topico": "preparo-termino",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Slice",
@@ -1843,7 +1958,11 @@ window.CVD = {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-30-slice-dra-elizabeth-yassuda.mp4",
       "local": "arquivos/procedimentos/proc-30-slice-dra-elizabeth-yassuda.mp4",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-30-slice-dra-elizabeth-yassuda.mp4",
-      "topico": "slice"
+      "topico": "slice",
+      "tags": [
+        "Desgaste e preparo",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Slice",
@@ -1854,7 +1973,11 @@ window.CVD = {
       "tv": "arquivos/procedimentos/tv/proc-31-slice.mp4",
       "tvMb": 6.6,
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-31-slice.mp4",
-      "topico": "slice"
+      "topico": "slice",
+      "tags": [
+        "Desgaste e preparo",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Cimentação",
@@ -1863,7 +1986,11 @@ window.CVD = {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-32-cimentacao.mp4",
       "local": "arquivos/procedimentos/proc-32-cimentacao.mp4",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-32-cimentacao.mp4",
-      "topico": "cimentacao"
+      "topico": "cimentacao",
+      "tags": [
+        "Prótese e cimentação",
+        "Desgaste e preparo"
+      ]
     },
     {
       "titulo": "Profilaxia com Spray Control",
@@ -1873,7 +2000,10 @@ window.CVD = {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-33-profilaxia-com-spray-control-dr-danilo-cioffi.mp4",
       "local": "arquivos/procedimentos/proc-33-profilaxia-com-spray-control-dr-danilo-cioffi.mp4",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-33-profilaxia-com-spray-control-dr-danilo-cioffi.mp4",
-      "topico": "profilaxia"
+      "topico": "profilaxia",
+      "tags": [
+        "Periodontia"
+      ]
     },
     {
       "titulo": "Profilaxia com Spray Control",
@@ -1882,7 +2012,10 @@ window.CVD = {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-34-profilaxia-com-spray-control.mp4",
       "local": "arquivos/procedimentos/proc-34-profilaxia-com-spray-control.mp4",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-34-profilaxia-com-spray-control.mp4",
-      "topico": "profilaxia"
+      "topico": "profilaxia",
+      "tags": [
+        "Periodontia"
+      ]
     },
     {
       "titulo": "Limpeza com Ponta T1T-P",
@@ -1896,6 +2029,10 @@ window.CVD = {
       "topico": "t1tp-implantes",
       "pontas": [
         "T1T-P"
+      ],
+      "tags": [
+        "Periodontia",
+        "Cirurgia e implante"
       ]
     },
     {
@@ -1909,6 +2046,10 @@ window.CVD = {
       "topico": "t1tp-implantes",
       "pontas": [
         "T1T-P"
+      ],
+      "tags": [
+        "Periodontia",
+        "Cirurgia e implante"
       ]
     },
     {
@@ -1922,6 +2063,10 @@ window.CVD = {
       "topico": "t1tp-implantes",
       "pontas": [
         "T1T-P"
+      ],
+      "tags": [
+        "Periodontia",
+        "Cirurgia e implante"
       ]
     },
     {
@@ -1931,7 +2076,10 @@ window.CVD = {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-38-remocao-de-resina-de-bracket.mp4",
       "local": "arquivos/procedimentos/proc-38-remocao-de-resina-de-bracket.mp4",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-38-remocao-de-resina-de-bracket.mp4",
-      "topico": "odontopediatria"
+      "topico": "odontopediatria",
+      "tags": [
+        "Ortodontia e odontopediatria"
+      ]
     },
     {
       "titulo": "Odontopediatria",
@@ -1940,7 +2088,10 @@ window.CVD = {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-39-odontopediatria.mp4",
       "local": "arquivos/procedimentos/proc-39-odontopediatria.mp4",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-39-odontopediatria.mp4",
-      "topico": "odontopediatria"
+      "topico": "odontopediatria",
+      "tags": [
+        "Ortodontia e odontopediatria"
+      ]
     },
     {
       "titulo": "Simulação no Ovo · seletividade do corte",
@@ -1950,7 +2101,10 @@ window.CVD = {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-40-simulacao-no-ovo-seletividade-do-corte-dr-danilo-cioffi.mp4",
       "local": "arquivos/procedimentos/proc-40-simulacao-no-ovo-seletividade-do-corte-dr-danilo-cioffi.mp4",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-40-simulacao-no-ovo-seletividade-do-corte-dr-danilo-cioffi.mp4",
-      "topico": "demonstracoes"
+      "topico": "demonstracoes",
+      "tags": [
+        "Dúvida sobre o resultado"
+      ]
     },
     {
       "titulo": "Minimamente Invasivo",
@@ -1961,7 +2115,10 @@ window.CVD = {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-41-minimamente-invasivo-dr-danilo-cioffi.mp4",
       "local": "arquivos/procedimentos/proc-41-minimamente-invasivo-dr-danilo-cioffi.mp4",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-41-minimamente-invasivo-dr-danilo-cioffi.mp4",
-      "topico": "demonstracoes"
+      "topico": "demonstracoes",
+      "tags": [
+        "Dúvida sobre o resultado"
+      ]
     },
     {
       "titulo": "Minimamente Invasivo",
@@ -1972,7 +2129,10 @@ window.CVD = {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-42-minimamente-invasivo-dr-danilo-cioffi.mp4",
       "local": "arquivos/procedimentos/proc-42-minimamente-invasivo-dr-danilo-cioffi.mp4",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-42-minimamente-invasivo-dr-danilo-cioffi.mp4",
-      "topico": "demonstracoes"
+      "topico": "demonstracoes",
+      "tags": [
+        "Dúvida sobre o resultado"
+      ]
     },
     {
       "titulo": "Profilaxia",
@@ -1982,7 +2142,10 @@ window.CVD = {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-43-profilaxia.mp4",
       "local": "arquivos/procedimentos/proc-43-profilaxia.mp4",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-43-profilaxia.mp4",
-      "topico": "profilaxia"
+      "topico": "profilaxia",
+      "tags": [
+        "Periodontia"
+      ]
     },
     {
       "titulo": "Caso Clínico · Paciente Samuel",
@@ -1992,7 +2155,10 @@ window.CVD = {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-44-caso-clinico-paciente-samuel-dra-liete-yassuda.mp4",
       "local": "arquivos/procedimentos/proc-44-caso-clinico-paciente-samuel-dra-liete-yassuda.mp4",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-44-caso-clinico-paciente-samuel-dra-liete-yassuda.mp4",
-      "topico": "demonstracoes"
+      "topico": "demonstracoes",
+      "tags": [
+        "Dúvida sobre o resultado"
+      ]
     },
     {
       "titulo": "Broca em Rotação",
@@ -2001,7 +2167,10 @@ window.CVD = {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-45-broca-em-rotacao.mp4",
       "local": "arquivos/procedimentos/proc-45-broca-em-rotacao.mp4",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-45-broca-em-rotacao.mp4",
-      "topico": "demonstracoes"
+      "topico": "demonstracoes",
+      "tags": [
+        "Dúvida sobre o resultado"
+      ]
     },
     {
       "titulo": "Vídeo sem título (26/07/2022)",
@@ -2011,7 +2180,10 @@ window.CVD = {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-46-video-sem-titulo-26-07-2022.mp4",
       "local": "arquivos/procedimentos/proc-46-video-sem-titulo-26-07-2022.mp4",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-46-video-sem-titulo-26-07-2022.mp4",
-      "topico": "demonstracoes"
+      "topico": "demonstracoes",
+      "tags": [
+        "Dúvida sobre o resultado"
+      ]
     },
     {
       "titulo": "Cirurgia com a ponta SFR4",
@@ -2025,7 +2197,11 @@ window.CVD = {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-47-cirurgia-ponta-sfr4-dr-berti.mp4",
       "local": "arquivos/procedimentos/proc-47-cirurgia-ponta-sfr4-dr-berti.mp4",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-47-cirurgia-ponta-sfr4-dr-berti.mp4",
-      "topico": "outras-cirurgias"
+      "topico": "outras-cirurgias",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Split Crest · Ponta SFR4",
@@ -2038,7 +2214,11 @@ window.CVD = {
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-48-split-crest-ponta-sfr4.mp4",
       "local": "arquivos/procedimentos/proc-48-split-crest-ponta-sfr4.mp4",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-48-split-crest-ponta-sfr4.mp4",
-      "topico": "outras-cirurgias"
+      "topico": "outras-cirurgias",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Aumento de Coroa · Flapless",
@@ -2052,6 +2232,10 @@ window.CVD = {
       "esps": [
         "cirurgia",
         "periodontia"
+      ],
+      "tags": [
+        "Periodontia",
+        "Cirurgia e implante"
       ]
     },
     {
@@ -2062,7 +2246,12 @@ window.CVD = {
       "local": "arquivos/procedimentos/proc-50-rinoplastia-01.mp4",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-50-rinoplastia-01.mp4",
       "topico": "rinoplastia",
-      "thumb": "img/proc/proc-50-rinoplastia-01.webp"
+      "thumb": "img/proc/proc-50-rinoplastia-01.webp",
+      "tags": [
+        "Raiz do nariz (rinoplastia)",
+        "Cirurgia e implante",
+        "Dúvida sobre o resultado"
+      ]
     },
     {
       "titulo": "Rinoplastia · vídeo 2",
@@ -2072,7 +2261,12 @@ window.CVD = {
       "local": "arquivos/procedimentos/proc-51-rinoplastia-02.mp4",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-51-rinoplastia-02.mp4",
       "topico": "rinoplastia",
-      "thumb": "img/proc/proc-51-rinoplastia-02.webp"
+      "thumb": "img/proc/proc-51-rinoplastia-02.webp",
+      "tags": [
+        "Raiz do nariz (rinoplastia)",
+        "Cirurgia e implante",
+        "Dúvida sobre o resultado"
+      ]
     },
     {
       "titulo": "Rinoplastia · feedback do cirurgião",
@@ -2082,7 +2276,12 @@ window.CVD = {
       "local": "arquivos/procedimentos/proc-52-rinoplastia-feedback-cirurgiao.mp4",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-52-rinoplastia-feedback-cirurgiao.mp4",
       "topico": "rinoplastia",
-      "thumb": "img/proc/proc-52-rinoplastia-feedback-cirurgiao.webp"
+      "thumb": "img/proc/proc-52-rinoplastia-feedback-cirurgiao.webp",
+      "tags": [
+        "Raiz do nariz (rinoplastia)",
+        "Cirurgia e implante",
+        "Dúvida sobre o resultado"
+      ]
     },
     {
       "titulo": "Rinoplastia ultrassônica · SL3G (Dr. Alexandre Cavasini)",
@@ -2092,7 +2291,12 @@ window.CVD = {
       "local": "arquivos/procedimentos/proc-53-rinoplastia-sl3g-cavasini.mp4",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-53-rinoplastia-sl3g-cavasini.mp4",
       "topico": "rinoplastia",
-      "thumb": "img/proc/proc-53-rinoplastia-sl3g-cavasini.webp"
+      "thumb": "img/proc/proc-53-rinoplastia-sl3g-cavasini.webp",
+      "tags": [
+        "Raiz do nariz (rinoplastia)",
+        "Cirurgia e implante",
+        "Dúvida sobre o resultado"
+      ]
     },
     {
       "titulo": "Rinoplastia · SF3",
@@ -2102,7 +2306,12 @@ window.CVD = {
       "local": "arquivos/procedimentos/proc-54-rinoplastia-sf3.mp4",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-54-rinoplastia-sf3.mp4",
       "topico": "rinoplastia",
-      "thumb": "img/proc/proc-54-rinoplastia-sf3.webp"
+      "thumb": "img/proc/proc-54-rinoplastia-sf3.webp",
+      "tags": [
+        "Raiz do nariz (rinoplastia)",
+        "Cirurgia e implante",
+        "Dúvida sobre o resultado"
+      ]
     },
     {
       "titulo": "Rinoplastia ultrassônica · Dr. Alexandre Cavasini (2023)",
@@ -2112,7 +2321,12 @@ window.CVD = {
       "local": "arquivos/procedimentos/proc-55-rinoplastia-cavasini-2023.mp4",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/proc-55-rinoplastia-cavasini-2023.mp4",
       "topico": "rinoplastia",
-      "thumb": "img/proc/proc-55-rinoplastia-cavasini-2023.webp"
+      "thumb": "img/proc/proc-55-rinoplastia-cavasini-2023.webp",
+      "tags": [
+        "Raiz do nariz (rinoplastia)",
+        "Cirurgia e implante",
+        "Dúvida sobre o resultado"
+      ]
     },
     {
       "titulo": "Aumento de Coroa · Flapless com DentSurg",
@@ -2127,7 +2341,11 @@ window.CVD = {
       "pontas": [
         "T1"
       ],
-      "ponta": "T1"
+      "ponta": "T1",
+      "tags": [
+        "Periodontia",
+        "Cirurgia e implante"
+      ]
     },
     {
       "titulo": "Aumento de Coroa Clínica · Flap",
@@ -2139,6 +2357,10 @@ window.CVD = {
       "esps": [
         "cirurgia",
         "periodontia"
+      ],
+      "tags": [
+        "Periodontia",
+        "Cirurgia e implante"
       ]
     },
     {
@@ -2151,6 +2373,10 @@ window.CVD = {
       "esps": [
         "cirurgia",
         "periodontia"
+      ],
+      "tags": [
+        "Periodontia",
+        "Cirurgia e implante"
       ]
     },
     {
@@ -2163,6 +2389,10 @@ window.CVD = {
       "esps": [
         "cirurgia",
         "periodontia"
+      ],
+      "tags": [
+        "Periodontia",
+        "Cirurgia e implante"
       ]
     },
     {
@@ -2175,6 +2405,10 @@ window.CVD = {
       "esps": [
         "cirurgia",
         "periodontia"
+      ],
+      "tags": [
+        "Periodontia",
+        "Cirurgia e implante"
       ]
     },
     {
@@ -2186,6 +2420,10 @@ window.CVD = {
       "esps": [
         "cirurgia",
         "periodontia"
+      ],
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
       ]
     },
     {
@@ -2198,6 +2436,10 @@ window.CVD = {
       "esps": [
         "cirurgia",
         "periodontia"
+      ],
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
       ]
     },
     {
@@ -2206,7 +2448,11 @@ window.CVD = {
       "prof": "Eduardo Santini",
       "formato": "YouTube",
       "url": "https://www.youtube.com/watch?v=vPVzbfGDsmc",
-      "topico": "outras-cirurgias"
+      "topico": "outras-cirurgias",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Enxerto Anterior com o Piezo DentSurg Pro",
@@ -2214,7 +2460,11 @@ window.CVD = {
       "prof": "Dr. Rodrigo Bucker do Instituto Bucker",
       "formato": "YouTube",
       "url": "https://www.youtube.com/watch?v=-ZoqziA4DDI",
-      "topico": "outras-cirurgias"
+      "topico": "outras-cirurgias",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Flapless em ação",
@@ -2226,6 +2476,10 @@ window.CVD = {
       "esps": [
         "cirurgia",
         "periodontia"
+      ],
+      "tags": [
+        "Periodontia",
+        "Cirurgia e implante"
       ]
     },
     {
@@ -2238,6 +2492,10 @@ window.CVD = {
       "esps": [
         "cirurgia",
         "periodontia"
+      ],
+      "tags": [
+        "Periodontia",
+        "Cirurgia e implante"
       ]
     },
     {
@@ -2246,7 +2504,11 @@ window.CVD = {
       "prof": "Dra. Thayane Furtado",
       "formato": "YouTube",
       "url": "https://www.youtube.com/watch?v=Uy3suGWv0Rs",
-      "topico": "outras-cirurgias"
+      "topico": "outras-cirurgias",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Nova técnica de extração",
@@ -2258,7 +2520,11 @@ window.CVD = {
       "pontas": [
         "VR1T"
       ],
-      "ponta": "VR1T"
+      "ponta": "VR1T",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Osteotomias",
@@ -2270,6 +2536,10 @@ window.CVD = {
       "esps": [
         "cirurgia",
         "periodontia"
+      ],
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
       ]
     },
     {
@@ -2281,6 +2551,10 @@ window.CVD = {
       "topico": "sinus-lift",
       "pontas": [
         "SR9"
+      ],
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
       ]
     },
     {
@@ -2289,7 +2563,11 @@ window.CVD = {
       "prof": "Renato Maluta",
       "formato": "YouTube",
       "url": "https://www.youtube.com/watch?v=Why3JVWDAFc",
-      "topico": "outras-cirurgias"
+      "topico": "outras-cirurgias",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Remoção de Tórus",
@@ -2305,6 +2583,10 @@ window.CVD = {
       "esps": [
         "cirurgia",
         "periodontia"
+      ],
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
       ]
     },
     {
@@ -2320,6 +2602,10 @@ window.CVD = {
       "esps": [
         "cirurgia",
         "periodontia"
+      ],
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
       ]
     },
     {
@@ -2328,7 +2614,11 @@ window.CVD = {
       "prof": "Dr. Fernando Almeida",
       "formato": "YouTube",
       "url": "https://www.youtube.com/watch?v=ygIANwe7gdc",
-      "topico": "sinus-lift"
+      "topico": "sinus-lift",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Sinus Lift com SFR4 e SLO-2",
@@ -2341,7 +2631,11 @@ window.CVD = {
         "SFR4",
         "SLO-2"
       ],
-      "ponta": "SFR4 e SLO-2"
+      "ponta": "SFR4 e SLO-2",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Sinus Lift",
@@ -2349,7 +2643,11 @@ window.CVD = {
       "prof": "Prof. Diego Bazan",
       "formato": "YouTube",
       "url": "https://www.youtube.com/watch?v=3eVEs0TMViU",
-      "topico": "sinus-lift"
+      "topico": "sinus-lift",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Técnica Flapless em ação",
@@ -2360,6 +2658,10 @@ window.CVD = {
       "esps": [
         "cirurgia",
         "periodontia"
+      ],
+      "tags": [
+        "Periodontia",
+        "Cirurgia e implante"
       ]
     },
     {
@@ -2372,6 +2674,10 @@ window.CVD = {
       "esps": [
         "cirurgia",
         "periodontia"
+      ],
+      "tags": [
+        "Periodontia",
+        "Cirurgia e implante"
       ]
     },
     {
@@ -2380,7 +2686,12 @@ window.CVD = {
       "prof": "Dr. Rogério Marcondes",
       "formato": "YouTube",
       "url": "https://www.youtube.com/watch?v=OEWJfrRT8ZA",
-      "topico": "facetas"
+      "topico": "facetas",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Cimentação",
@@ -2392,7 +2703,11 @@ window.CVD = {
       "pontas": [
         "CM4"
       ],
-      "ponta": "CM4"
+      "ponta": "CM4",
+      "tags": [
+        "Prótese e cimentação",
+        "Desgaste e preparo"
+      ]
     },
     {
       "titulo": "Como realizar o refinamento dos limites do preparo com ponta CR4XR?",
@@ -2404,6 +2719,11 @@ window.CVD = {
       "topico": "preparo-termino",
       "pontas": [
         "CR4XR"
+      ],
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
       ]
     },
     {
@@ -2416,6 +2736,9 @@ window.CVD = {
       "topico": "amalgama-resina",
       "pontas": [
         "T1"
+      ],
+      "tags": [
+        "Desgaste e preparo"
       ]
     },
     {
@@ -2427,7 +2750,12 @@ window.CVD = {
       "pontas": [
         "W1-O"
       ],
-      "ponta": "W1-O"
+      "ponta": "W1-O",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Ponta T1F",
@@ -2439,6 +2767,11 @@ window.CVD = {
       "topico": "preparo-termino",
       "pontas": [
         "T1F"
+      ],
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
       ]
     },
     {
@@ -2446,7 +2779,12 @@ window.CVD = {
       "esp": "dentistica",
       "formato": "YouTube",
       "url": "https://www.youtube.com/watch?v=pHJiCuKc0lA",
-      "topico": "preparo-termino"
+      "topico": "preparo-termino",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Preparo Classe V",
@@ -2457,7 +2795,12 @@ window.CVD = {
       "pontas": [
         "CR1XR"
       ],
-      "ponta": "CR1XR"
+      "ponta": "CR1XR",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Preparo da caixa distal com ponta CH1-D",
@@ -2469,6 +2812,11 @@ window.CVD = {
       "topico": "preparo-termino",
       "pontas": [
         "CH1-D"
+      ],
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
       ]
     },
     {
@@ -2477,7 +2825,12 @@ window.CVD = {
       "prof": "Danilo Cioffi",
       "formato": "YouTube",
       "url": "https://www.youtube.com/watch?v=Leq3te44KJM",
-      "topico": "preparo-termino"
+      "topico": "preparo-termino",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Refinamento de Preparo",
@@ -2485,35 +2838,52 @@ window.CVD = {
       "prof": "João Maurício",
       "formato": "YouTube",
       "url": "https://www.youtube.com/watch?v=DbLVt4iYBcM",
-      "topico": "preparo-termino"
+      "topico": "preparo-termino",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Remoção de Cárie",
       "esp": "dentistica",
       "formato": "YouTube",
       "url": "https://www.youtube.com/watch?v=aDlzRV2Mr6Q",
-      "topico": "amalgama-resina"
+      "topico": "amalgama-resina",
+      "tags": [
+        "Desgaste e preparo"
+      ]
     },
     {
       "titulo": "Remoção de Restauração e Amálgama",
       "esp": "dentistica",
       "formato": "YouTube",
       "url": "https://www.youtube.com/watch?v=Z6wIFwkUvr0",
-      "topico": "amalgama-resina"
+      "topico": "amalgama-resina",
+      "tags": [
+        "Desgaste e preparo"
+      ]
     },
     {
       "titulo": "Remoção de Amálgama",
       "esp": "dentistica",
       "formato": "YouTube",
       "url": "https://www.youtube.com/watch?v=xiqvklQ99Yk",
-      "topico": "amalgama-resina"
+      "topico": "amalgama-resina",
+      "tags": [
+        "Desgaste e preparo"
+      ]
     },
     {
       "titulo": "Remoção de Amálgama",
       "esp": "dentistica",
       "formato": "YouTube",
       "url": "https://www.youtube.com/watch?v=ReZj1xzwGNE",
-      "topico": "amalgama-resina"
+      "topico": "amalgama-resina",
+      "tags": [
+        "Desgaste e preparo"
+      ]
     },
     {
       "titulo": "Remoção de Amálgama · Ponta W1",
@@ -2524,6 +2894,9 @@ window.CVD = {
       "topico": "amalgama-resina",
       "pontas": [
         "W1"
+      ],
+      "tags": [
+        "Desgaste e preparo"
       ]
     },
     {
@@ -2531,7 +2904,10 @@ window.CVD = {
       "esp": "dentistica",
       "formato": "YouTube",
       "url": "https://www.youtube.com/watch?v=HGT0MTH9tcg",
-      "topico": "amalgama-resina"
+      "topico": "amalgama-resina",
+      "tags": [
+        "Desgaste e preparo"
+      ]
     },
     {
       "titulo": "Remoção de Faceta com o DentSurg Pro",
@@ -2542,7 +2918,12 @@ window.CVD = {
       "pontas": [
         "W1-O"
       ],
-      "ponta": "W1-O"
+      "ponta": "W1-O",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Remoção de Faceta com o DentSurg Pro",
@@ -2556,7 +2937,12 @@ window.CVD = {
         "CR1",
         "CR1U"
       ],
-      "ponta": "W1-O e W1 e CR1 e CR1U"
+      "ponta": "W1-O e W1 e CR1 e CR1U",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Remoção de Material Restaurador · Ponta CR4XR",
@@ -2567,6 +2953,9 @@ window.CVD = {
       "topico": "amalgama-resina",
       "pontas": [
         "CR4XR"
+      ],
+      "tags": [
+        "Desgaste e preparo"
       ]
     },
     {
@@ -2579,6 +2968,9 @@ window.CVD = {
       "topico": "amalgama-resina",
       "pontas": [
         "T1"
+      ],
+      "tags": [
+        "Desgaste e preparo"
       ]
     },
     {
@@ -2586,7 +2978,10 @@ window.CVD = {
       "esp": "dentistica",
       "formato": "YouTube",
       "url": "https://www.youtube.com/watch?v=Bq0HXG9DOvk",
-      "topico": "amalgama-resina"
+      "topico": "amalgama-resina",
+      "tags": [
+        "Desgaste e preparo"
+      ]
     },
     {
       "titulo": "Remoção de resina composta em restauração de classe V (Ponta CR4XR)",
@@ -2598,6 +2993,9 @@ window.CVD = {
       "topico": "amalgama-resina",
       "pontas": [
         "CR4XR"
+      ],
+      "tags": [
+        "Desgaste e preparo"
       ]
     },
     {
@@ -2609,6 +3007,9 @@ window.CVD = {
       "topico": "amalgama-resina",
       "pontas": [
         "CR1"
+      ],
+      "tags": [
+        "Desgaste e preparo"
       ]
     },
     {
@@ -2616,21 +3017,32 @@ window.CVD = {
       "esp": "dentistica",
       "formato": "YouTube",
       "url": "https://www.youtube.com/watch?v=JwLscRDSXQQ",
-      "topico": "preparo-termino"
+      "topico": "preparo-termino",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Apicectomia",
       "esp": "endodontia",
       "formato": "YouTube",
       "url": "https://www.youtube.com/watch?v=znT__3AL7S8",
-      "topico": "apicectomia"
+      "topico": "apicectomia",
+      "tags": [
+        "Endodontia"
+      ]
     },
     {
       "titulo": "Corte de Guta-Percha",
       "esp": "endodontia",
       "formato": "YouTube",
       "url": "https://www.youtube.com/watch?v=55JhfcB5xOU",
-      "topico": "guta-percha"
+      "topico": "guta-percha",
+      "tags": [
+        "Endodontia"
+      ]
     },
     {
       "titulo": "Endodontia Completa",
@@ -2643,21 +3055,30 @@ window.CVD = {
         "T0S-E2",
         "R1-E"
       ],
-      "ponta": "T1F-E e T0S-E2 e R1-E"
+      "ponta": "T1F-E e T0S-E2 e R1-E",
+      "tags": [
+        "Endodontia"
+      ]
     },
     {
       "titulo": "Endodontia",
       "esp": "endodontia",
       "formato": "YouTube",
       "url": "https://www.youtube.com/watch?v=Ds0KJXNyGOk",
-      "topico": "endodontia"
+      "topico": "endodontia",
+      "tags": [
+        "Endodontia"
+      ]
     },
     {
       "titulo": "Endodontia · Cone + PUI + Guta",
       "esp": "endodontia",
       "formato": "YouTube",
       "url": "https://www.youtube.com/watch?v=bJdKR-V781U",
-      "topico": "pui"
+      "topico": "pui",
+      "tags": [
+        "Endodontia"
+      ]
     },
     {
       "titulo": "Fases operatórias na Endodontia",
@@ -2665,7 +3086,10 @@ window.CVD = {
       "prof": "Marco Aurélio",
       "formato": "YouTube",
       "url": "https://www.youtube.com/watch?v=D4djpKMMT5k",
-      "topico": "endodontia"
+      "topico": "endodontia",
+      "tags": [
+        "Endodontia"
+      ]
     },
     {
       "titulo": "Irrigação do Conduto, Corte e Termoplastificação da Guta-Percha",
@@ -2673,7 +3097,10 @@ window.CVD = {
       "prof": "Dr. Rodrigo Villagra",
       "formato": "YouTube",
       "url": "https://www.youtube.com/watch?v=yo4N3xLUACo",
-      "topico": "pui"
+      "topico": "pui",
+      "tags": [
+        "Endodontia"
+      ]
     },
     {
       "titulo": "PUI · Irrigação Ultrassônica Passiva",
@@ -2681,7 +3108,10 @@ window.CVD = {
       "prof": "Dr. Rodrigo Villagra",
       "formato": "YouTube",
       "url": "https://www.youtube.com/watch?v=5N_-cOotnU8",
-      "topico": "pui"
+      "topico": "pui",
+      "tags": [
+        "Endodontia"
+      ]
     },
     {
       "titulo": "PUI · Irrigação Ultrassônica Passiva",
@@ -2693,7 +3123,10 @@ window.CVD = {
       "pontas": [
         "T0T-E2"
       ],
-      "ponta": "T0T-E2"
+      "ponta": "T0T-E2",
+      "tags": [
+        "Endodontia"
+      ]
     },
     {
       "titulo": "Remoção de Pinos",
@@ -2701,14 +3134,21 @@ window.CVD = {
       "prof": "Dr. Marco Aurélio",
       "formato": "YouTube",
       "url": "https://www.youtube.com/watch?v=Vxc-1fRuOhk",
-      "topico": "pinos"
+      "topico": "pinos",
+      "tags": [
+        "Endodontia",
+        "Prótese e cimentação"
+      ]
     },
     {
       "titulo": "Corte da Guta-Percha e Limpeza com Optymus",
       "esp": "endodontia",
       "formato": "YouTube",
       "url": "https://www.youtube.com/watch?v=D9dZqa_bJvI",
-      "topico": "guta-percha"
+      "topico": "guta-percha",
+      "tags": [
+        "Endodontia"
+      ]
     },
     {
       "titulo": "Remoção de Pinos",
@@ -2719,7 +3159,11 @@ window.CVD = {
       "pontas": [
         "C2S"
       ],
-      "ponta": "C2S"
+      "ponta": "C2S",
+      "tags": [
+        "Endodontia",
+        "Prótese e cimentação"
+      ]
     },
     {
       "titulo": "Remoção de pinos",
@@ -2727,7 +3171,11 @@ window.CVD = {
       "prof": "Dr. Marco Aurélio",
       "formato": "YouTube",
       "url": "https://www.youtube.com/watch?v=JvM-5vOW0Qk",
-      "topico": "pinos"
+      "topico": "pinos",
+      "tags": [
+        "Endodontia",
+        "Prótese e cimentação"
+      ]
     },
     {
       "titulo": "Aplicação da ponta R,05 na Odontopediatria",
@@ -2739,6 +3187,9 @@ window.CVD = {
       "topico": "odontopediatria",
       "pontas": [
         "R0,5"
+      ],
+      "tags": [
+        "Ortodontia e odontopediatria"
       ]
     },
     {
@@ -2746,7 +3197,10 @@ window.CVD = {
       "esp": "orto-odontoped",
       "formato": "YouTube",
       "url": "https://www.youtube.com/watch?v=s2Yi1R5jRJM",
-      "topico": "odontopediatria"
+      "topico": "odontopediatria",
+      "tags": [
+        "Ortodontia e odontopediatria"
+      ]
     },
     {
       "titulo": "Procedimento Slice",
@@ -2754,7 +3208,11 @@ window.CVD = {
       "prof": "Monique Bazan",
       "formato": "YouTube",
       "url": "https://www.youtube.com/watch?v=7Wct-hj7TTQ",
-      "topico": "slice"
+      "topico": "slice",
+      "tags": [
+        "Desgaste e preparo",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Procedimento Slice",
@@ -2762,7 +3220,11 @@ window.CVD = {
       "prof": "Prof. Monique Bazan",
       "formato": "YouTube",
       "url": "https://www.youtube.com/watch?v=ANK4d91w9tI",
-      "topico": "slice"
+      "topico": "slice",
+      "tags": [
+        "Desgaste e preparo",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Realização de procedimento na Odontopediatria com Clinical Plus e Ponta R4",
@@ -2773,6 +3235,9 @@ window.CVD = {
       "topico": "odontopediatria",
       "pontas": [
         "R4"
+      ],
+      "tags": [
+        "Ortodontia e odontopediatria"
       ]
     },
     {
@@ -2785,6 +3250,10 @@ window.CVD = {
       "esps": [
         "cirurgia",
         "periodontia"
+      ],
+      "tags": [
+        "Periodontia",
+        "Cirurgia e implante"
       ]
     },
     {
@@ -2797,6 +3266,10 @@ window.CVD = {
       "topico": "t1tp-implantes",
       "pontas": [
         "T1T-P"
+      ],
+      "tags": [
+        "Periodontia",
+        "Cirurgia e implante"
       ]
     },
     {
@@ -2809,6 +3282,10 @@ window.CVD = {
       "topico": "t1tp-implantes",
       "pontas": [
         "T1T-P"
+      ],
+      "tags": [
+        "Periodontia",
+        "Cirurgia e implante"
       ]
     },
     {
@@ -2820,7 +3297,11 @@ window.CVD = {
       "pontas": [
         "T1T-P"
       ],
-      "ponta": "T1T-P"
+      "ponta": "T1T-P",
+      "tags": [
+        "Periodontia",
+        "Cirurgia e implante"
+      ]
     },
     {
       "titulo": "Peeling Gengival",
@@ -2832,6 +3313,9 @@ window.CVD = {
       "esps": [
         "cirurgia",
         "periodontia"
+      ],
+      "tags": [
+        "Periodontia"
       ]
     },
     {
@@ -2840,7 +3324,10 @@ window.CVD = {
       "prof": "Prof. Diego Bazan",
       "formato": "YouTube",
       "url": "https://www.youtube.com/watch?v=N49aEd9JBOQ",
-      "topico": "raspagem"
+      "topico": "raspagem",
+      "tags": [
+        "Periodontia"
+      ]
     },
     {
       "titulo": "Raspagem",
@@ -2848,7 +3335,10 @@ window.CVD = {
       "prof": "Dra. Analice Giovani Pereira",
       "formato": "YouTube",
       "url": "https://www.youtube.com/watch?v=WcJRg_2HL8s",
-      "topico": "raspagem"
+      "topico": "raspagem",
+      "tags": [
+        "Periodontia"
+      ]
     },
     {
       "titulo": "Raspagem/ Remoção de Cálculo",
@@ -2860,7 +3350,10 @@ window.CVD = {
       "pontas": [
         "T1F"
       ],
-      "ponta": "T1F"
+      "ponta": "T1F",
+      "tags": [
+        "Periodontia"
+      ]
     },
     {
       "titulo": "Remoção de Cálculo com a Ponta T1U-2",
@@ -2872,6 +3365,9 @@ window.CVD = {
       "topico": "raspagem",
       "pontas": [
         "T1U-2"
+      ],
+      "tags": [
+        "Periodontia"
       ]
     },
     {
@@ -2884,6 +3380,9 @@ window.CVD = {
       "esps": [
         "cirurgia",
         "periodontia"
+      ],
+      "tags": [
+        "Periodontia"
       ]
     },
     {
@@ -2893,7 +3392,10 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APM1sX0o88C5I25OPe8obn4/BUCOMAXILOFACIAL/ORTOGNATICA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/cirurgia-ortognatica.webp",
-      "topico": "ortognatica"
+      "topico": "ortognatica",
+      "tags": [
+        "Cirurgia e implante"
+      ]
     },
     {
       "titulo": "Rino",
@@ -2902,7 +3404,12 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APrwULir7ZeUBC2Ux9IYgwg/CIRURGIA%20PLASTICA/RINO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/cirurgia-rino.webp",
-      "topico": "rinoplastia"
+      "topico": "rinoplastia",
+      "tags": [
+        "Raiz do nariz (rinoplastia)",
+        "Cirurgia e implante",
+        "Dúvida sobre o resultado"
+      ]
     },
     {
       "titulo": "Cirurgia do mento",
@@ -2911,7 +3418,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APjWTKBLoprfY__bgy97HPU/CIRURGIA/CIRURGIA%20DO%20MENTO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/cirurgia-cirurgia-do-mento.webp",
-      "topico": "outras-cirurgias"
+      "topico": "outras-cirurgias",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Cortes no osso - ds pro",
@@ -2920,7 +3431,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKPaVsBHAo5TrXkq95LQwc0/CIRURGIA/CORTES%20NO%20OSSO%20-%20DS%20PRO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/cirurgia-cortes-no-osso-ds-pro.webp",
-      "topico": "outras-cirurgias"
+      "topico": "outras-cirurgias",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Descolamento de membrana",
@@ -2929,7 +3444,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AClbs_-FeSwbypgpmgliN0o/CIRURGIA/DESCOLAMENTO%20DE%20MEMBRANA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/cirurgia-descolamento-de-membrana.webp",
-      "topico": "descolamento"
+      "topico": "descolamento",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Descolamento gengival",
@@ -2938,7 +3457,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGOnhSWSmmarGXxh2-GuZ_g/CIRURGIA/DESCOLAMENTO%20GENGIVAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/cirurgia-descolamento-gengival.webp",
-      "topico": "descolamento"
+      "topico": "descolamento",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Descolamento torus",
@@ -2947,7 +3470,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJ5fSO9PZ1O9RbSJj3y0mWQ/CIRURGIA/DESCOLAMENTO%20TORUS?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/cirurgia-descolamento-torus.webp",
-      "topico": "descolamento"
+      "topico": "descolamento",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Descortizalização",
@@ -2956,7 +3483,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACCTP5b9-4VpBHhT6a-iNQ8/CIRURGIA/DESCORTIZALIZA%C3%87%C3%83O?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/cirurgia-descortizalizacao.webp",
-      "topico": "outras-cirurgias"
+      "topico": "outras-cirurgias",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Distração osteogênica",
@@ -2965,7 +3496,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGt9Vx7FZ5PGGeZ0-qir6ow/CIRURGIA/DISTRA%C3%87%C3%83O%20OSTEOG%C3%8ANICA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/cirurgia-distracao-osteogenica.webp",
-      "topico": "outras-cirurgias"
+      "topico": "outras-cirurgias",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Enxerto ósseo vertical",
@@ -2974,7 +3509,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKBrRmISnoJPf9Pd_6WvtOU/CIRURGIA/ENXERTO%20%C3%93SSEO%20VERTICAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/cirurgia-enxerto-osseo-vertical.webp",
-      "topico": "outras-cirurgias"
+      "topico": "outras-cirurgias",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Escarificação",
@@ -2983,7 +3522,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AAfTseAZu0zXOTDM80_-1TY/CIRURGIA/Escarifica%C3%A7%C3%A3o?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/cirurgia-escarificacao.webp",
-      "topico": "outras-cirurgias"
+      "topico": "outras-cirurgias",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Exodontia",
@@ -2992,7 +3535,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AIOyXEOHfr_Jgy1MRYgQqhc/CIRURGIA/EXODONTIA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/cirurgia-exodontia.webp",
-      "topico": "outras-cirurgias"
+      "topico": "outras-cirurgias",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Exostose",
@@ -3001,7 +3548,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKxQwocC8BduXuBg3cIgHps/CIRURGIA/EXOSTOSE?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/cirurgia-exostose.webp",
-      "topico": "outras-cirurgias"
+      "topico": "outras-cirurgias",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Fracionamento da raiz",
@@ -3010,7 +3561,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AD3mV9bzDxVdwSL-QJHuNLU/CIRURGIA/FRACIONAMENTO%20DA%20RAIZ?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/cirurgia-fracionamento-da-raiz.webp",
-      "topico": "outras-cirurgias"
+      "topico": "outras-cirurgias",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Inserção de barra para elevar osso",
@@ -3019,7 +3574,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALe9G4Qap5lOIiCMJbTFiFU/CIRURGIA/INSER%C3%87%C3%83O%20DE%20BARRA%20PARA%20ELEVAR%20OSSO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/cirurgia-insercao-de-barra-para-elevar-osso.webp",
-      "topico": "outras-cirurgias"
+      "topico": "outras-cirurgias",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Lateralização do nervo alveolar inferior",
@@ -3028,7 +3587,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ABNawd2ZE39sO52OCR69EvY/CIRURGIA/LATERALIZA%C3%87%C3%83O%20DO%20NERVO%20ALVEOLAR%20INFERIOR?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/cirurgia-lateralizacao-do-nervo-alveolar-inferior.webp",
-      "topico": "outras-cirurgias"
+      "topico": "outras-cirurgias",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Levantamento de seio",
@@ -3037,7 +3600,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFsrId2OA_YLddDf3SiAd0g/CIRURGIA/LEVANTAMENTO%20DE%20SEIO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/cirurgia-levantamento-de-seio.webp",
-      "topico": "sinus-lift"
+      "topico": "sinus-lift",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Levantamento de seio via crista alveolar",
@@ -3046,7 +3613,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACIfbwY86FRyA4rywGVTFNs/CIRURGIA/LEVANTAMENTO%20DE%20SEIO%20VIA%20CRISTA%20ALVEOLAR?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/cirurgia-levantamento-de-seio-via-crista-alveolar.webp",
-      "topico": "sinus-lift"
+      "topico": "sinus-lift",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Acabamento dos limites do preparo para remoção dos prismas de esmalte sem suporte",
@@ -3055,7 +3626,12 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APaqc-cHGqzzs9pHIb9Ozfc/DENT%C3%8DSTICA/Acabamento%20dos%20limites%20do%20preparo%20para%20remo%C3%A7%C3%A3o%20dos%20prismas%20de%20esmalte%20sem%20suporte?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/dentistica-acabamento-dos-limites-do-preparo-para-remocao-dos-prismas-.webp",
-      "topico": "preparo-termino"
+      "topico": "preparo-termino",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Desgaste fino na região intrapapilar, supra e subgengival",
@@ -3064,7 +3640,12 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AC8PEsHj-r_8hVryukceQkY/DENT%C3%8DSTICA/DESGASTE%20FINO%20NA%20REGI%C3%83O%20INTRAPAPILAR%2C%20SUPRA%20E%20SUBGENGIVAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/dentistica-desgaste-fino-na-regiao-intrapapilar-supra-e-subgengival.webp",
-      "topico": "preparo-termino"
+      "topico": "preparo-termino",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Limpeza",
@@ -3073,7 +3654,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALusRlGU8AY-KuJknS5Wgf0/DENT%C3%8DSTICA/LIMPEZA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/dentistica-limpeza.webp",
-      "topico": "profilaxia"
+      "topico": "profilaxia",
+      "tags": [
+        "Periodontia",
+        "Desgaste e preparo"
+      ]
     },
     {
       "titulo": "Preparo cavitário",
@@ -3082,7 +3667,12 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALYFtef_B9k7uu9XC68DLe0/DENT%C3%8DSTICA/PREPARO%20CAVIT%C3%81RIO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/dentistica-preparo-cavitario.webp",
-      "topico": "preparo-termino"
+      "topico": "preparo-termino",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Preparo cavitário classe V",
@@ -3091,7 +3681,12 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AB4lBlkLib4SwfG3opmzUOo/DENT%C3%8DSTICA/Preparo%20cavit%C3%A1rio%20classe%20V?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/dentistica-preparo-cavitario-classe-v.webp",
-      "topico": "preparo-termino"
+      "topico": "preparo-termino",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Refinamento do preparo",
@@ -3100,7 +3695,12 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHVkXczH0KFaaVPl0fd0dgc/DENT%C3%8DSTICA/REFINAMENTO%20DO%20PREPARO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/dentistica-refinamento-do-preparo.webp",
-      "topico": "preparo-termino"
+      "topico": "preparo-termino",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Remoção da parede proximal",
@@ -3109,7 +3709,12 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACL4MMmKD_XQf7EN2X1RbyA/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DA%20PAREDE%20PROXIMAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/dentistica-remocao-da-parede-proximal.webp",
-      "topico": "preparo-termino"
+      "topico": "preparo-termino",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Remoção de amálgama",
@@ -3118,7 +3723,10 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AB236MWtCLtiIVcgaHGtN2I/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20AM%C3%81LGAMA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/dentistica-remocao-de-amalgama.webp",
-      "topico": "amalgama-resina"
+      "topico": "amalgama-resina",
+      "tags": [
+        "Desgaste e preparo"
+      ]
     },
     {
       "titulo": "Remoção de cárie",
@@ -3127,7 +3735,10 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ANpMtvZzv0MHv7hCrLNHE7M/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20C%C3%81RIE?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/dentistica-remocao-de-carie.webp",
-      "topico": "amalgama-resina"
+      "topico": "amalgama-resina",
+      "tags": [
+        "Desgaste e preparo"
+      ]
     },
     {
       "titulo": "Remoção de cáries e resina - T1 e R2",
@@ -3136,7 +3747,10 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AE-Iz3JJTrv6sOeFvLdZgiw/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20C%C3%81RIES%20E%20RESINA%20-%20T1%20E%20R2?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/dentistica-remocao-de-caries-e-resina-t1-e-r2.webp",
-      "topico": "amalgama-resina"
+      "topico": "amalgama-resina",
+      "tags": [
+        "Desgaste e preparo"
+      ]
     },
     {
       "titulo": "Remoção de excessos",
@@ -3145,7 +3759,12 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACtFzjQYlMttv6ns4JJi7aE/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20EXCESSOS?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/dentistica-remocao-de-excessos.webp",
-      "topico": "preparo-termino"
+      "topico": "preparo-termino",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Remoção de pino",
@@ -3154,7 +3773,12 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHR2sWyad4NowS5GbEzmPUE/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20PINO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/dentistica-remocao-de-pino.webp",
-      "topico": "pinos"
+      "topico": "pinos",
+      "tags": [
+        "Endodontia",
+        "Prótese e cimentação",
+        "Desgaste e preparo"
+      ]
     },
     {
       "titulo": "Remoção de resina",
@@ -3163,7 +3787,10 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AD9ab_URcdvBcKyz8yI-lDs/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20RESINA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/dentistica-remocao-de-resina.webp",
-      "topico": "amalgama-resina"
+      "topico": "amalgama-resina",
+      "tags": [
+        "Desgaste e preparo"
+      ]
     },
     {
       "titulo": "Remoção de resina composta classe v",
@@ -3172,7 +3799,10 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AAvlrtbttap_Ox1epNy1iwM/DENT%C3%8DSTICA/REMO%C3%87%C3%83O%20DE%20RESINA%20COMPOSTA%20CLASSE%20V?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/dentistica-remocao-de-resina-composta-classe-v.webp",
-      "topico": "amalgama-resina"
+      "topico": "amalgama-resina",
+      "tags": [
+        "Desgaste e preparo"
+      ]
     },
     {
       "titulo": "Apicectomia",
@@ -3181,7 +3811,10 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGIFbdsbnXJTTUkV1aPa57M/ENDODONTIA/Apicectomia?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/endodontia-apicectomia.webp",
-      "topico": "apicectomia"
+      "topico": "apicectomia",
+      "tags": [
+        "Endodontia"
+      ]
     },
     {
       "titulo": "Corte e compatação guta percha",
@@ -3190,7 +3823,10 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AOgC8NIQXjttRRWEbg_-exM/ENDODONTIA/CORTE%20E%20COMPATA%C3%87%C3%83O%20GUTA%20PERCHA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/endodontia-corte-e-compatacao-guta-percha.webp",
-      "topico": "guta-percha"
+      "topico": "guta-percha",
+      "tags": [
+        "Endodontia"
+      ]
     },
     {
       "titulo": "Irrigação do conduto - corte guta",
@@ -3199,7 +3835,10 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AEaqRoscg6fd14t-gGniRxI/ENDODONTIA/IRRIGA%C3%87%C3%83O%20DO%20CONDUTO%20-%20CORTE%20GUTA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/endodontia-irrigacao-do-conduto-corte-guta.webp",
-      "topico": "pui"
+      "topico": "pui",
+      "tags": [
+        "Endodontia"
+      ]
     },
     {
       "titulo": "Limpeza",
@@ -3208,7 +3847,10 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHSfG9NG3R9FTtThffiqjrY/ENDODONTIA/LIMPEZA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/endodontia-limpeza.webp",
-      "topico": "endodontia"
+      "topico": "endodontia",
+      "tags": [
+        "Endodontia"
+      ]
     },
     {
       "titulo": "Localização de canal",
@@ -3217,7 +3859,10 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJ2TrysWNMskBiI3G5DARHc/ENDODONTIA/LOCALIZA%C3%87%C3%83O%20DE%20CANAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/endodontia-localizacao-de-canal.webp",
-      "topico": "endodontia"
+      "topico": "endodontia",
+      "tags": [
+        "Endodontia"
+      ]
     },
     {
       "titulo": "Pólipo pulpar",
@@ -3226,7 +3871,10 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACIMCUYZOmfVGdS5-qlfNtA/ENDODONTIA/P%C3%93LIPO%20PULPAR?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/endodontia-polipo-pulpar.webp",
-      "topico": "endodontia"
+      "topico": "endodontia",
+      "tags": [
+        "Endodontia"
+      ]
     },
     {
       "titulo": "Pui",
@@ -3235,7 +3883,10 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJU4N9oMUbFhHrFc8HQkn9Q/ENDODONTIA/PUI?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/endodontia-pui.webp",
-      "topico": "pui"
+      "topico": "pui",
+      "tags": [
+        "Endodontia"
+      ]
     },
     {
       "titulo": "Remoção de excesso em restauração classe V",
@@ -3244,7 +3895,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AH9nHl1jffmYl8h9bU-YqeU/ENDODONTIA/Remo%C3%A7%C3%A3o%20de%20excesso%20em%20restaura%C3%A7%C3%A3o%20classe%20V?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/endodontia-remocao-de-excesso-em-restauracao-classe-v.webp",
-      "topico": "amalgama-resina"
+      "topico": "amalgama-resina",
+      "tags": [
+        "Desgaste e preparo",
+        "Endodontia"
+      ]
     },
     {
       "titulo": "Remoção de núcleo",
@@ -3253,7 +3908,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AEAoSSvp8XHIbICVNDdu1g0/ENDODONTIA/REMO%C3%87%C3%83O%20DE%20N%C3%9ACLEO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/endodontia-remocao-de-nucleo.webp",
-      "topico": "pinos"
+      "topico": "pinos",
+      "tags": [
+        "Endodontia",
+        "Prótese e cimentação"
+      ]
     },
     {
       "titulo": "Remoção de pino",
@@ -3262,7 +3921,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJxcra26rBEituQ16DOflYY/ENDODONTIA/REMO%C3%87%C3%83O%20DE%20PINO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/endodontia-remocao-de-pino.webp",
-      "topico": "pinos"
+      "topico": "pinos",
+      "tags": [
+        "Endodontia",
+        "Prótese e cimentação"
+      ]
     },
     {
       "titulo": "Retropreparo",
@@ -3271,7 +3934,10 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGEbz0If4NqVkIHUDVlAUWM/ENDODONTIA/RETROPREPARO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/endodontia-retropreparo.webp",
-      "topico": "apicectomia"
+      "topico": "apicectomia",
+      "tags": [
+        "Endodontia"
+      ]
     },
     {
       "titulo": "Implantoplastia",
@@ -3280,7 +3946,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALcxTgMARcv69b2UZS1z0sw/IMPLANTE/IMPLANTOPLASTIA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/implante-implantoplastia.webp",
-      "topico": "outras-cirurgias"
+      "topico": "outras-cirurgias",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Instalação de implantes para protocolo inferior",
@@ -3289,7 +3959,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AB-C--SA749O0JUNU3SpYfM/IMPLANTE/INSTALA%C3%87%C3%83O%20DE%20IMPLANTES%20PARA%20PROTOCOLO%20INFERIOR?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/implante-instalacao-de-implantes-para-protocolo-inferior.webp",
-      "topico": "outras-cirurgias"
+      "topico": "outras-cirurgias",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Limpeza de implantes",
@@ -3298,7 +3972,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AMXd_-jFdz5C9QEyGjyRWuw/IMPLANTE/LIMPEZA%20DE%20IMPLANTES?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/implante-limpeza-de-implantes.webp",
-      "topico": "t1tp-implantes"
+      "topico": "t1tp-implantes",
+      "tags": [
+        "Periodontia",
+        "Cirurgia e implante"
+      ]
     },
     {
       "titulo": "Perfuração óssea scp",
@@ -3307,7 +3985,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFR9rt9hNCdDbAvfurLkQI4/IMPLANTE/PERFURA%C3%87%C3%83O%20%C3%93SSEA%20SCP?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/implante-perfuracao-ossea-scp.webp",
-      "topico": "outras-cirurgias"
+      "topico": "outras-cirurgias",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Preparação alveolar para implantes",
@@ -3316,7 +3998,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AOgMDxlk7UNfJonsloSUkFs/IMPLANTE/PREPARA%C3%87%C3%83O%20ALVEOLAR%20PARA%20IMPLANTES?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/implante-preparacao-alveolar-para-implantes.webp",
-      "topico": "outras-cirurgias"
+      "topico": "outras-cirurgias",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Remoção de implante danificado",
@@ -3325,7 +4011,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APKH7bFUMhHWwWuQtyaQ_cA/IMPLANTE/REMO%C3%87%C3%83O%20DE%20IMPLANTE%20DANIFICADO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/implante-remocao-de-implante-danificado.webp",
-      "topico": "outras-cirurgias"
+      "topico": "outras-cirurgias",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Remoção de pinos",
@@ -3334,7 +4024,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHP0qnTmlBDkfIG3h5fli7M/IMPLANTE/REMO%C3%87%C3%83O%20DE%20PINOS?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/implante-remocao-de-pinos.webp",
-      "topico": "pinos"
+      "topico": "pinos",
+      "tags": [
+        "Endodontia",
+        "Prótese e cimentação"
+      ]
     },
     {
       "titulo": "Trefinagem",
@@ -3343,7 +4037,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKE9ibR5QoK7KTagKNQc57o/IMPLANTE/TREFINAGEM?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/implante-trefinagem.webp",
-      "topico": "outras-cirurgias"
+      "topico": "outras-cirurgias",
+      "tags": [
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Remoção de Siso",
@@ -3352,7 +4050,10 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJET2Wx84YTZ9XxItB4Ed3Y/ODONTOPEDIATRIA/Remo%C3%A7%C3%A3o%20de%20Siso?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/orto-odontoped-remocao-de-siso.webp",
-      "topico": "odontopediatria"
+      "topico": "odontopediatria",
+      "tags": [
+        "Ortodontia e odontopediatria"
+      ]
     },
     {
       "titulo": "VR1T - Extração de Dentes",
@@ -3361,7 +4062,10 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJQQiipCCOavsXtLAQR_0zc/ODONTOPEDIATRIA/VR1T%20-%20Extra%C3%A7%C3%A3o%20de%20Dentes?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/orto-odontoped-vr1t-extracao-de-dentes.webp",
-      "topico": "odontopediatria"
+      "topico": "odontopediatria",
+      "tags": [
+        "Ortodontia e odontopediatria"
+      ]
     },
     {
       "titulo": "Corticotomia",
@@ -3370,7 +4074,10 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ADKGiDUkIh-SSwFzojkUw80/ORTODONTIA/CORTICOTOMIA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/orto-odontoped-corticotomia.webp",
-      "topico": "odontopediatria"
+      "topico": "odontopediatria",
+      "tags": [
+        "Ortodontia e odontopediatria"
+      ]
     },
     {
       "titulo": "Ipr",
@@ -3379,7 +4086,12 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJmaBc84UGxXFbbicZihNJg/ORTODONTIA/IPR?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/orto-odontoped-ipr.webp",
-      "topico": "slice"
+      "topico": "slice",
+      "tags": [
+        "Desgaste e preparo",
+        "Ortodontia e odontopediatria",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Micro osteo perfurações",
@@ -3388,7 +4100,10 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AC5shm-h1-CcflTpi_9jCZU/ORTODONTIA/Micro%20osteo%20perfura%C3%A7%C3%B5es?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/orto-odontoped-micro-osteo-perfuracoes.webp",
-      "topico": "odontopediatria"
+      "topico": "odontopediatria",
+      "tags": [
+        "Ortodontia e odontopediatria"
+      ]
     },
     {
       "titulo": "Remoção de resina pós-bracket",
@@ -3397,7 +4112,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ANU_FeaBcYtoHJ95hXVSM38/ORTODONTIA/REMO%C3%87%C3%83O%20DE%20RESINA%20P%C3%93S-BRACKET?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/orto-odontoped-remocao-de-resina-pos-bracket.webp",
-      "topico": "amalgama-resina"
+      "topico": "amalgama-resina",
+      "tags": [
+        "Desgaste e preparo",
+        "Ortodontia e odontopediatria"
+      ]
     },
     {
       "titulo": "Slice",
@@ -3406,7 +4125,12 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALqCDIi5Ig633EMl-l6hJRs/ORTODONTIA/SLICE?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/orto-odontoped-slice.webp",
-      "topico": "slice"
+      "topico": "slice",
+      "tags": [
+        "Desgaste e preparo",
+        "Ortodontia e odontopediatria",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Aumento de Coroa - Ponta CH4M-T",
@@ -3415,7 +4139,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFNpYRgjakBhxEBbSrPvjJQ/PERIODONTIA/Aumento%20de%20Coroa%20-%20Ponta%20CH4M-T?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/periodontia-aumento-de-coroa-ponta-ch4m-t.webp",
-      "topico": "flapless"
+      "topico": "flapless",
+      "tags": [
+        "Periodontia",
+        "Cirurgia e implante"
+      ]
     },
     {
       "titulo": "Aumento de coroa clínica e regularização radicular",
@@ -3424,7 +4152,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHjGMghGLnc2JyGKHDHhS4E/PERIODONTIA/Aumento%20de%20coroa%20cl%C3%ADnica%20e%20regulariza%C3%A7%C3%A3o%20radicular?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/periodontia-aumento-de-coroa-clinica-e-regularizacao-radicular.webp",
-      "topico": "flapless"
+      "topico": "flapless",
+      "tags": [
+        "Periodontia",
+        "Cirurgia e implante"
+      ]
     },
     {
       "titulo": "Aumento de coroa em osso espesso",
@@ -3433,7 +4165,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AMOBAt-Yn0E9oZffae9tyJk/PERIODONTIA/AUMENTO%20DE%20COROA%20EM%20OSSO%20ESPESSO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/periodontia-aumento-de-coroa-em-osso-espesso.webp",
-      "topico": "flapless"
+      "topico": "flapless",
+      "tags": [
+        "Periodontia",
+        "Cirurgia e implante"
+      ]
     },
     {
       "titulo": "Escarificação",
@@ -3442,7 +4178,10 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACGmlwj0Dk7rLPRBu4Hp2PY/PERIODONTIA/Escarifica%C3%A7%C3%A3o?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/periodontia-escarificacao.webp",
-      "topico": "raspagem"
+      "topico": "raspagem",
+      "tags": [
+        "Periodontia"
+      ]
     },
     {
       "titulo": "Flapless",
@@ -3451,7 +4190,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AMMkG7hPCDPaAPbT072ttkA/PERIODONTIA/Flapless?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/periodontia-flapless.webp",
-      "topico": "flapless"
+      "topico": "flapless",
+      "tags": [
+        "Periodontia",
+        "Cirurgia e implante"
+      ]
     },
     {
       "titulo": "Gengivoplastia com osteotomia",
@@ -3460,7 +4203,10 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AAF1fIWoblCn3q_R_yjkyEE/PERIODONTIA/GENGIVOPLASTIA%20COM%20OSTEOTOMIA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/periodontia-gengivoplastia-com-osteotomia.webp",
-      "topico": "gengivoplastia-peeling"
+      "topico": "gengivoplastia-peeling",
+      "tags": [
+        "Periodontia"
+      ]
     },
     {
       "titulo": "Peeling gengival",
@@ -3469,7 +4215,10 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACjNMYt1w9UZvInrzBXZ-0A/PERIODONTIA/PEELING%20GENGIVAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/periodontia-peeling-gengival.webp",
-      "topico": "gengivoplastia-peeling"
+      "topico": "gengivoplastia-peeling",
+      "tags": [
+        "Periodontia"
+      ]
     },
     {
       "titulo": "Preparo de coroa",
@@ -3478,7 +4227,13 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AA-gudqmmPFBRSM7F_8H-xw/PERIODONTIA/Preparo%20de%20coroa?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/periodontia-preparo-de-coroa.webp",
-      "topico": "preparo-termino"
+      "topico": "preparo-termino",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Periodontia",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Profilaxia",
@@ -3487,7 +4242,10 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ADyW6yrNLF-duEnEaJ9SsdE/PERIODONTIA/PROFILAXIA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/periodontia-profilaxia.webp",
-      "topico": "profilaxia"
+      "topico": "profilaxia",
+      "tags": [
+        "Periodontia"
+      ]
     },
     {
       "titulo": "Raspagem",
@@ -3496,7 +4254,10 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFFfw_ear-CHRKBlW5wMQ0A/PERIODONTIA/RASPAGEM?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/periodontia-raspagem.webp",
-      "topico": "raspagem"
+      "topico": "raspagem",
+      "tags": [
+        "Periodontia"
+      ]
     },
     {
       "titulo": "Remoção de cálculo com T1U-2",
@@ -3505,7 +4266,10 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJ49OQUp8uthlSTyC6thtFA/PERIODONTIA/Remo%C3%A7%C3%A3o%20de%20c%C3%A1lculo%20com%20T1U-2?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/periodontia-remocao-de-calculo-com-t1u-2.webp",
-      "topico": "raspagem"
+      "topico": "raspagem",
+      "tags": [
+        "Periodontia"
+      ]
     },
     {
       "titulo": "Remoção de tártaro",
@@ -3514,7 +4278,10 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGVvuhSI-vKublSo-3lsMNA/PERIODONTIA/Remo%C3%A7%C3%A3o%20de%20t%C3%A1rtaro?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/periodontia-remocao-de-tartaro.webp",
-      "topico": "raspagem"
+      "topico": "raspagem",
+      "tags": [
+        "Periodontia"
+      ]
     },
     {
       "titulo": "Slice",
@@ -3523,7 +4290,12 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFOkbOOsCb1OMRqafMS133A/PERIODONTIA/SLICE?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/periodontia-slice.webp",
-      "topico": "slice"
+      "topico": "slice",
+      "tags": [
+        "Desgaste e preparo",
+        "Periodontia",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "T1T-P limpeza Implante",
@@ -3532,7 +4304,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKx7HuI5Vtny1KtzMi9LJfY/PERIODONTIA/T1T-P%20limpeza%20Implante?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/periodontia-t1t-p-limpeza-implante.webp",
-      "topico": "t1tp-implantes"
+      "topico": "t1tp-implantes",
+      "tags": [
+        "Periodontia",
+        "Cirurgia e implante"
+      ]
     },
     {
       "titulo": "Técnica bopt",
@@ -3541,7 +4317,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AFzjXvzVFAP02E7Yriu6NIs/PERIODONTIA/T%C3%89CNICA%20BOPT?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/periodontia-tecnica-bopt.webp",
-      "topico": "flapless"
+      "topico": "flapless",
+      "tags": [
+        "Periodontia",
+        "Cirurgia e implante"
+      ]
     },
     {
       "titulo": "Acabamento Cervical de Restauros em Resina Composta",
@@ -3550,7 +4330,10 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APyOBeYid5Ef2Y-QMW4RXuA/PR%C3%93TESE/Acabamento%20Cervical%20de%20Restauros%20em%20Resina%20Composta?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/dentistica-acabamento-cervical-de-restauros-em-resina-composta.webp",
-      "topico": "amalgama-resina"
+      "topico": "amalgama-resina",
+      "tags": [
+        "Desgaste e preparo"
+      ]
     },
     {
       "titulo": "Acabamento dos limites do preparo (prótese)",
@@ -3559,7 +4342,12 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ACG6-CUjeB5YIBQrYmqXbOU/PR%C3%93TESE/Acabamento%20dos%20limites%20do%20preparo%20para%20remo%C3%A7%C3%A3o%20dos%20prismas%20de%20esmalte%20sem%20suporte?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/dentistica-acabamento-dos-limites-do-preparo-protese.webp",
-      "topico": "preparo-termino"
+      "topico": "preparo-termino",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Bopt",
@@ -3568,7 +4356,12 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKSETBxpJXT5vXfdDbOhMac/PR%C3%93TESE/BOPT?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/dentistica-bopt.webp",
-      "topico": "preparo-termino"
+      "topico": "preparo-termino",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Cimentação",
@@ -3577,7 +4370,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AOAYm3Dc9aQwhnF4tkJv1Ek/PR%C3%93TESE/CIMENTA%C3%87%C3%83O?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/dentistica-cimentacao.webp",
-      "topico": "cimentacao"
+      "topico": "cimentacao",
+      "tags": [
+        "Prótese e cimentação",
+        "Desgaste e preparo"
+      ]
     },
     {
       "titulo": "Interproximal",
@@ -3586,7 +4383,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AL1-UZBilKqEdkWABjAegOg/PR%C3%93TESE/INTERPROXIMAL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/dentistica-interproximal.webp",
-      "topico": "slice"
+      "topico": "slice",
+      "tags": [
+        "Desgaste e preparo",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Limpeza facetas T1T-p",
@@ -3595,7 +4396,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AKo2VJQmZ5MzU4yGijvhVSo/PR%C3%93TESE/LIMPEZA%20FACETAS%20T1T-P?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/dentistica-limpeza-facetas-t1t-p.webp",
-      "topico": "profilaxia"
+      "topico": "profilaxia",
+      "tags": [
+        "Periodontia",
+        "Desgaste e preparo"
+      ]
     },
     {
       "titulo": "Preparo ar x us",
@@ -3604,7 +4409,12 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AAwP-q22Nlzvxksk5QRwjz8/PR%C3%93TESE/PREPARO%20AR%20X%20US?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/dentistica-preparo-ar-x-us.webp",
-      "topico": "preparo-termino"
+      "topico": "preparo-termino",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Preparo para coroa",
@@ -3613,7 +4423,12 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AGS8VtnycE7E4HmDthr9rfE/PR%C3%93TESE/PREPARO%20PARA%20COROA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/dentistica-preparo-para-coroa.webp",
-      "topico": "preparo-termino"
+      "topico": "preparo-termino",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Refinamento de preparo",
@@ -3622,7 +4437,12 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AJJHzNyI7Li1cWbm7NlvQUw/PR%C3%93TESE/REFINAMENTO%20DE%20PREPARO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/dentistica-refinamento-de-preparo.webp",
-      "topico": "preparo-termino"
+      "topico": "preparo-termino",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Remoção de cimento resinoso",
@@ -3631,7 +4451,12 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AHZGTldD-9dGWEuh-eH8_1I/PR%C3%93TESE/REMO%C3%87%C3%83O%20DE%20CIMENTO%20RESINOSO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/dentistica-remocao-de-cimento-resinoso.webp",
-      "topico": "preparo-termino"
+      "topico": "preparo-termino",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Remoção de degrau",
@@ -3640,7 +4465,12 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/APYD_Mz-EElwLSYq3yE5W9A/PR%C3%93TESE/REMO%C3%87%C3%83O%20DE%20DEGRAU?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/dentistica-remocao-de-degrau.webp",
-      "topico": "preparo-termino"
+      "topico": "preparo-termino",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Remoção de faceta",
@@ -3649,7 +4479,12 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ADnOcCg-9xfZ0IeBOMI0NUw/PR%C3%93TESE/REMO%C3%87%C3%83O%20DE%20FACETA?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/dentistica-remocao-de-faceta.webp",
-      "topico": "facetas"
+      "topico": "facetas",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Remoção de pino rosqueável",
@@ -3658,7 +4493,12 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AEUbQmnThhb00pcnaCWZ198/PR%C3%93TESE/REMO%C3%87%C3%83O%20DE%20PINO%20ROSQUE%C3%81VEL?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/dentistica-remocao-de-pino-rosqueavel.webp",
-      "topico": "pinos"
+      "topico": "pinos",
+      "tags": [
+        "Endodontia",
+        "Prótese e cimentação",
+        "Desgaste e preparo"
+      ]
     },
     {
       "titulo": "Término de preparo",
@@ -3667,7 +4507,12 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AOJAHPUorltSZ8Op7TafBCo/PR%C3%93TESE/T%C3%89RMINO%20DE%20PREPARO?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/dentistica-termino-de-preparo.webp",
-      "topico": "preparo-termino"
+      "topico": "preparo-termino",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
+      ]
     },
     {
       "titulo": "Guta-percha para cimentação de pino de fibra de vidro (T0S-E2)",
@@ -3676,7 +4521,12 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ANZeVjjvd_7F3xG382lVFMc/S%C3%89RIE/1%20Remo%C3%A7%C3%A3o%20de%20guta-percha%20para%20cimenta%C3%A7%C3%A3o%20de%20pino%20de%20fibra%20de%20vidro%20-%20ponta%20T0S-E2.mp4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/dentistica-guta-percha-para-cimentacao-de-pino-de-fibra-de-vidro-t0s-e.webp",
-      "topico": "pinos"
+      "topico": "pinos",
+      "tags": [
+        "Endodontia",
+        "Prótese e cimentação",
+        "Desgaste e preparo"
+      ]
     },
     {
       "titulo": "Compactação da guta-percha (CR2T-E)",
@@ -3685,7 +4535,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AAqvS9pWqn5xOJ7p76IDVzc/S%C3%89RIE/2%20Compacta%C3%A7%C3%A3o%20da%20Guta%20Percha%20-%20CR2T-E.mp4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/dentistica-compactacao-da-guta-percha-cr2t-e.webp",
-      "topico": "guta-percha"
+      "topico": "guta-percha",
+      "tags": [
+        "Endodontia",
+        "Desgaste e preparo"
+      ]
     },
     {
       "titulo": "Cimentação",
@@ -3694,7 +4548,11 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ADYdY_ASTlneti0WJWI6HlY/S%C3%89RIE/CIMENTA%C3%87%C3%83O.mp4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/dentistica-cimentacao.webp",
-      "topico": "cimentacao"
+      "topico": "cimentacao",
+      "tags": [
+        "Prótese e cimentação",
+        "Desgaste e preparo"
+      ]
     },
     {
       "titulo": "Limpeza de implantes (1)",
@@ -3703,7 +4561,12 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ANonC8I0ctp_T2mmfJBB-MI/S%C3%89RIE/LIMPEZA%20DE%20IMPLANTES%20%281%29.MP4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/dentistica-limpeza-de-implantes-1.webp",
-      "topico": "t1tp-implantes"
+      "topico": "t1tp-implantes",
+      "tags": [
+        "Periodontia",
+        "Cirurgia e implante",
+        "Desgaste e preparo"
+      ]
     },
     {
       "titulo": "Limpeza de implantes (2)",
@@ -3712,7 +4575,12 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AMxN0OVMUXBcmIRCCgX9Egw/S%C3%89RIE/LIMPEZA%20DE%20IMPLANTES%20%282%29.MP4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/dentistica-limpeza-de-implantes-2.webp",
-      "topico": "t1tp-implantes"
+      "topico": "t1tp-implantes",
+      "tags": [
+        "Periodontia",
+        "Cirurgia e implante",
+        "Desgaste e preparo"
+      ]
     },
     {
       "titulo": "Remoção de pino",
@@ -3721,7 +4589,12 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/ALuDwXmp3WuSA78ke_3cOgs/S%C3%89RIE/REMO%C3%87%C3%83O%20DE%20PINO.mp4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/dentistica-remocao-de-pino.webp",
-      "topico": "pinos"
+      "topico": "pinos",
+      "tags": [
+        "Endodontia",
+        "Prótese e cimentação",
+        "Desgaste e preparo"
+      ]
     },
     {
       "titulo": "Término de preparo",
@@ -3730,7 +4603,12 @@ window.CVD = {
       "baixarUrl": "https://www.dropbox.com/scl/fo/c10frzjfa0boisrs0ztwa/AMhvT4f3AK2sWYYoR1VwQeE/S%C3%89RIE/TERMINO%20DE%20PREPARO.mp4?rlkey=jxkxs6a0r6jhu1unpkjwnam2j&dl=0",
       "link": "dropbox",
       "thumb": "img/proc/dentistica-termino-de-preparo.webp",
-      "topico": "preparo-termino"
+      "topico": "preparo-termino",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Medo de desgastar dente saudável"
+      ]
     }
   ],
   "galerias": {
@@ -4562,5 +5440,22 @@ window.CVD = {
       "nome": "Ortognática"
     }
   ],
-  "rev": 1794851124595
+  "rev": 1794853976094,
+  "filtros": {
+    "aplicacoes": {
+      "desgaste": "Desgaste e preparo",
+      "nariz": "Raiz do nariz (rinoplastia)",
+      "perio": "Periodontia",
+      "endo": "Endodontia",
+      "cirurgia": "Cirurgia e implante",
+      "orto": "Ortodontia e odontopediatria",
+      "protese": "Prótese e cimentação"
+    },
+    "objecoes": {
+      "medo_desgaste": "Medo de desgastar dente saudável",
+      "resultado": "Dúvida sobre o resultado",
+      "seguranca": "Segurança do procedimento",
+      "dor": "Dor ou anestesia"
+    }
+  }
 };

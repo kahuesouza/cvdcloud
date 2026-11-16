@@ -334,6 +334,7 @@ nav.base a.on svg{stroke-width:2.3}
 nav.base a.on::after{content:"";position:absolute;top:-7px;left:50%;width:26px;height:4px;margin-left:-13px;border-radius:0 0 4px 4px;background:var(--acento)}
 
 @media (min-width:640px){ .tiles{grid-template-columns:repeat(3,1fr)} .tile.destaque{grid-column:span 3} .grade{grid-template-columns:repeat(3,1fr)} }
+.filtros-busca{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 4px}.filtros-busca select{flex:1 1 150px;min-width:0;font:600 13px Montserrat,system-ui,sans-serif;padding:10px 12px;border-radius:12px;border:1px solid var(--linha);background:var(--surface2);color:var(--texto)}
 </style>
 <link rel="stylesheet" href="cloud.css?v78">
 </head>
@@ -476,7 +477,7 @@ function leadDe(x){
 }
 function metaDe(x, {produto=false}={}){
   const p = [];
-  if(x.esp){ if(x.prof) p.push(esc(x.prof)); if(x.ponta) p.push((x.pontas && x.pontas.length>1 ? 'Pontas ' : 'Ponta ') + esc(x.ponta)); if(x.formato) p.push(esc(x.formato)); if(produto) p.push(esc(ESP[x.esp].curto)); }
+  if(x.esp){ if(x.idioma && x.idioma !== 'pt') p.push(LANG[x.idioma]); if(x.prof) p.push(esc(x.prof)); if(x.ponta) p.push((x.pontas && x.pontas.length>1 ? 'Pontas ' : 'Ponta ') + esc(x.ponta)); if(x.formato) p.push(esc(x.formato)); if(produto) p.push(esc(ESP[x.esp].curto)); }
   else {
     if(x.idioma && x.idioma!=='pt') p.push(LANG[x.idioma]);
     if(produto && PROD[x.produto]) p.push(esc(PROD[x.produto].nome));
@@ -1008,9 +1009,25 @@ function telaMarketing(){
   return { titulo:'Marketing', voltar:'#/', corpo: largo('Marketing','Artes, campanhas e treinamentos para usar com o cliente.')
     + secao('Artes e campanhas', pastas.length) + lista(pastas,{produto:true}) + (docs.length?secao('Para enviar')+lista(docs):'') + secao('Treinamentos') + lista(tr) };
 }
+let KIT_LINK = '';
+function montarKit(){
+  const itens = [...favs].map(i=>TODOS[i]).filter(Boolean);
+  if(!itens.length){ toast('Salve materiais antes de montar o kit'); return; }
+  const dados = itens.map(x => {
+    const dl = linkDownload(x), tc = THUMBS[x.url];
+    return { t: x.esp ? `${x.titulo}${x.prof ? ' · ' + x.prof : ''}` : x.titulo,
+             u: absUrl(x.url), d: dl ? absUrl(dl) : '', th: tc ? 'img/t/' + tc[0] : (x.thumb || ''),
+             tp: x.esp ? 'Vídeo de procedimento' : ((TIPOS[x.tipo] || {}).nome || ''), i: x.idioma || 'pt' };
+  });
+  const json = JSON.stringify({ n: 'Seleção CVDentus', i: dados });
+  const b64 = btoa(unescape(encodeURIComponent(json))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+  KIT_LINK = new URL('v.html', location.href.split('#')[0]).href + '#kit=' + b64;
+  abrirPainel(`<h3>Kit pronto</h3><p class="sub">${dados.length} materiais num único link. O cliente abre, vê cada item e baixa direto.</p>
+    <div class="botoes"><button class="btn prim" data-kit-wa>${ic('share')}Enviar no WhatsApp</button><button class="btn sec" data-kit-copiar>Copiar link</button></div>`);
+}
 function telaSalvos(){
   const itens = [...favs].map(i=>TODOS[i]).filter(Boolean);
-  return { titulo:'Salvos', corpo: largo('Salvos','Seus materiais mais usados.') + (itens.length ? lista(itens,{produto:true})
+  return { titulo:'Salvos', corpo: largo('Salvos','Seus materiais mais usados.') + (itens.length ? `<div class="botoes" style="margin:0 0 16px"><button class="btn prim" data-kit>${ic('share')}Montar kit para o cliente</button></div>` : '') + (itens.length ? lista(itens,{produto:true})
     : `<div class="vazio">${ic('estrela')}<p>Toque em ⋯ e em “Salvar” para deixar aqui os links que você manda todo dia.</p></div>`) };
 }
 
@@ -1377,6 +1394,15 @@ function painelItem(id){
 /* ===================== Busca em tela cheia ===================== */
 const buscaOv = document.getElementById('busca-ov');
 const SUGESTOES = ['Optymus','Instalação','Flapless','T1T-P','Bula','Spray Control','Lupa','Raspagem'];
+let FILTROS = { ap: '', ob: '', idi: '' };
+const temFiltro = () => !!(FILTROS.ap || FILTROS.ob || FILTROS.idi);
+const passaFiltro = p => (!FILTROS.ap || (p.tags || []).includes(FILTROS.ap)) && (!FILTROS.ob || (p.tags || []).includes(FILTROS.ob)) && (!FILTROS.idi || (p.idioma || 'pt') === FILTROS.idi);
+function barraFiltros(){
+  const F = D.filtros || {};
+  const opts = (obj, sel) => Object.values(obj).map(v => `<option value="${esc(v)}"${sel === v ? ' selected' : ''}>${esc(v)}</option>`).join('');
+  const idi = [['pt','Português'],['en','English'],['es','Español']].map(([k,v]) => `<option value="${k}"${FILTROS.idi === k ? ' selected' : ''}>${v}</option>`).join('');
+  return `<div class="filtros-busca"><select data-fb="ap" aria-label="Aplicação clínica"><option value="">Aplicação: todas</option>${opts(F.aplicacoes || {}, FILTROS.ap)}</select><select data-fb="ob" aria-label="Objeção"><option value="">Objeção: todas</option>${opts(F.objecoes || {}, FILTROS.ob)}</select><select data-fb="idi" aria-label="Idioma"><option value="">Idioma: todos</option>${idi}</select></div>`;
+}
 function abrirBusca(){
   buscaOv.innerHTML = `<div class="topo"><label class="campo">${ic('busca')}<span class="sr">Buscar</span><input id="q" type="search" placeholder="Material, vídeo, ponta, lupa…" autocomplete="off" enterkeyhint="search"></label><button class="cancelar" data-fechar-busca>Cancelar</button></div><div class="res" id="res"></div>`;
   buscaOv.classList.add('on'); document.body.style.overflow = 'hidden';
@@ -1386,13 +1412,18 @@ function abrirBusca(){
   res.innerHTML = vazioHtml;
   let t, tb; q.addEventListener('input', ()=>{ clearTimeout(t); t = setTimeout(()=>{ const v = q.value.trim(); res.innerHTML = v ? resultadosBusca(v) : vazioHtml; },90); clearTimeout(tb); tb = setTimeout(()=>{ const v = q.value.trim(); if(v.length >= 3) track('buscar', 'busca', v.slice(0, 100), resultadosBusca(v).includes('Nada encontrado') ? '0' : 'ok'); }, 1600); });
   q.addEventListener('keydown', e=>{ if(e.key==='Enter'){ const v=q.value.trim(); if(v){ ls.set('recentes',[v,...recentes.filter(r=>r!==v)].slice(0,6)); q.blur(); } } });
+  buscaOv.querySelector('.topo').insertAdjacentHTML('afterend', barraFiltros());
+  buscaOv.querySelectorAll('[data-fb]').forEach(s => s.addEventListener('change', () => {
+    FILTROS[s.dataset.fb === 'ap' ? 'ap' : s.dataset.fb === 'ob' ? 'ob' : 'idi'] = s.value;
+    const v = q.value.trim(); res.innerHTML = (v || temFiltro()) ? resultadosBusca(v) : vazioHtml;
+  }));
   setTimeout(()=>q.focus(), 60);
 }
 function fecharBusca(){ if(!buscaOv.classList.contains('on')) return; buscaOv.classList.remove('on'); document.body.style.overflow = ''; }
 function resultadosBusca(q){
   const termos = norm(q).split(/\s+/).filter(Boolean), casa = t => termos.every(x=>norm(t).includes(x));
-  const mats = D.materiais.filter(m=>casa([m.titulo,TIPOS[m.tipo]?.nome,PROD[m.produto]?.nome,m.ano].join(' ')));
-  const procs = D.procedimentos.filter(p=>casa([p.titulo,p.prof,p.ponta,ESP[p.esp]?.nome,p.formato].join(' ')));
+  const mats = D.materiais.filter(m=>casa([m.titulo,TIPOS[m.tipo]?.nome,PROD[m.produto]?.nome,m.ano].join(' ')) && (!FILTROS.idi || (m.idioma || 'pt') === FILTROS.idi));
+  const procs = D.procedimentos.filter(p=>casa([p.titulo,p.prof,p.ponta,ESP[p.esp]?.nome,p.formato].join(' ')) && passaFiltro(p));
   const lup = []; LUPAS.grupos.forEach(g=>g.itens.forEach(it=>{ if(casa([it.nome,it.kit,it.desc,g.nome,'lupa'].join(' '))) lup.push([g,it]); }));
   const logos = []; D.marcas.forEach((g,gi)=>g.logos.forEach((l,li)=>{ if(casa([l.nome,l.nota,g.grupo,'logo marca'].join(' '))) logos.push([gi,li,l]); }));
   const modl = (LUPAS.modelos||[]).filter(x=>casa([x.codigo,x.linha,x.tipo,x.mags,'lupa modelo codigo'].join(' ')));
@@ -1728,7 +1759,7 @@ function atualizarDicasDoItem(x){
 /* ===================== Acesso obrigatório (login) e carregamento do catálogo ===================== */
 const gateEl = document.getElementById('gate');
 let appIniciado = false, carregandoCatalogo = false, modoGate = 'entrar';
-const VERSAO_APP = 'v148';
+const VERSAO_APP = 'v149';
 function gateHtml(corpo){ return `<div class="gate-in"><img class="logo-g" src="img/logo.svg" alt="cvdcloud">${corpo}</div>`; }
 const LOADER = '<div class="loader-linha" role="status" aria-label="Carregando"></div>';
 function gateMostrar(html){ document.body.classList.add('gate-on'); gateEl.innerHTML = gateHtml(html); }
@@ -2070,6 +2101,9 @@ document.addEventListener('click', e=>{
   const val = t.closest('[data-validar]'); if(val){ CONTA().validarEmail(val.dataset.validar, val.dataset.nome).then(() => { toast('E-mail validado'); carregarAdmin('usuarios'); }).catch(e => toast('Erro: ' + e.message)); return; }
   const exc = t.closest('[data-excluir-conta]'); if(exc){ if(!confirm('Excluir a conta de ' + exc.dataset.nome + ' (' + exc.dataset.email + ')? A pessoa perde o acesso na hora. Para liberar de novo, crie a conta outra vez.')) return; CONTA().excluirUsuario(exc.dataset.excluirConta, exc.dataset.email).then(() => { toast('Conta excluída'); carregarAdmin('usuarios'); }).catch(e => toast('Erro: ' + e.message)); return; }
   const us = t.closest('[data-usr]'); if(us){ const [uid, st] = us.dataset.usr.split(':'); CONTA().mudarUsuario(uid, st).then(() => { toast('Atualizado'); carregarAdmin('usuarios'); }).catch(e => toast('Erro: ' + e.message)); return; }
+  if(t.closest('[data-kit]')){ montarKit(); return; }
+  if(t.closest('[data-kit-wa]')){ window.open('https://wa.me/?text=' + encodeURIComponent('Segue a seleção de materiais CVDentus: ' + KIT_LINK), '_blank', 'noopener'); return; }
+  if(t.closest('[data-kit-copiar]')){ enviarLink('Kit CVDentus', KIT_LINK); return; }
   const fv = t.closest('[data-fav]'); if(fv){ const id = fv.dataset.fav; if(favs.has(id)){ favs.delete(id); toast('Removido dos salvos'); } else { favs.add(id); toast('Salvo'); } salvarFavs(); fecharPainel(); if(location.hash==='#/salvos') render(); return; }
   const tvb = t.closest('[data-tvver]');
   if(tvb){

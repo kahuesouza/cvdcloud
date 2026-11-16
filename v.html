@@ -33,6 +33,7 @@ h1{font-size:26px;line-height:1.15;margin:0;font-weight:800;letter-spacing:-.03e
 a.btn{display:flex;align-items:center;justify-content:center;gap:9px;padding:15px 18px;border-radius:14px;font-weight:700;font-size:15px;text-decoration:none;transition:transform .15s}
 a.btn:active{transform:scale(.97)}
 .prim{background:var(--texto);color:var(--bg)}.sec{background:var(--surface2);color:var(--texto);border:1px solid var(--linha)}
+.kit-lista{display:grid;gap:12px;margin-top:18px}.kit-item{border:1px solid var(--linha);border-radius:16px;padding:12px;background:var(--surface)}.kit-item img{width:100%;border-radius:12px;display:block;margin-bottom:10px;aspect-ratio:16/9;object-fit:cover}.kit-t b{display:block;font-size:15px}.kit-t small{color:var(--sub);font-size:12.5px}.kit-b{display:flex;gap:8px;margin-top:10px}.kit-b a{flex:1;padding:11px 12px;font-size:14px}
 .rod{text-align:center;color:var(--fraco);font-size:12px;margin-top:26px}
 .vazio{text-align:center;padding:40px 10px;color:var(--sub);line-height:1.6}
 svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
@@ -108,6 +109,16 @@ const https = u => { try{ return new URL(u).protocol === 'https:'; }catch(e){ re
 const id = (location.hash || '').slice(1);
 const CFG = window.CVD_FIREBASE;
 
+/* ---------- kit: uma seleção de materiais num único link (sem consultar o banco) ---------- */
+function renderKit(p){
+  let k;
+  try{ k = JSON.parse(decodeURIComponent(escape(atob(p.replace(/-/g, '+').replace(/_/g, '/'))))); }catch(e){ return falha('Link inválido.'); }
+  const itens = (k.i || []).filter(x => x && https(x.u)).slice(0, 60);
+  if(!itens.length) return falha('Este kit está vazio.');
+  const cartao = x => `<div class="kit-item">${x.th && /^img\/[\w\-./]+$/.test(x.th) ? `<img src="${esc(x.th)}" alt="">` : ''}<div class="kit-t"><b>${esc(x.t)}</b><small>${esc(x.tp || '')}${x.i && x.i !== 'pt' ? ' · ' + esc(String(x.i).toUpperCase()) : ''}</small></div><div class="kit-b"><a class="btn prim" href="${esc(x.u)}" target="_blank" rel="noopener">Abrir</a>${https(x.d) ? `<a class="btn sec" href="${esc(x.d)}" download>Baixar</a>` : ''}</div></div>`;
+  document.title = esc(k.n || 'Seleção CVDentus');
+  c.innerHTML = `<h1>${esc(k.n || 'Seleção CVDentus')}</h1><p class="meta">${itens.length} materiais</p><div class="kit-lista">${itens.map(cartao).join('')}</div>`;
+}
 /* ---------- cookie de visitante (anônimo, do próprio site) ---------- */
 const lerCookie = n => { const m = document.cookie.match(new RegExp('(?:^|; )' + n + '=([^;]*)')); return m ? decodeURIComponent(m[1]) : null; };
 const gravarCookie = (n, v, dias) => { try{ document.cookie = `${n}=${encodeURIComponent(v)}; max-age=${dias * 86400}; path=/; SameSite=Lax${location.protocol === 'https:' ? '; Secure' : ''}`; }catch(e){} };
@@ -243,7 +254,8 @@ async function renderFicha(f, d){
   }));
 }
 
-if(!/^[A-Za-z0-9]{10,40}$/.test(id)) falha('Link inválido.');
+if(id.startsWith('kit=')) renderKit(id.slice(4));
+else if(!/^[A-Za-z0-9]{10,40}$/.test(id)) falha('Link inválido.');
 else if(!CFG || !CFG.apiKey) falha('Link indisponível.');
 else {
   try{
