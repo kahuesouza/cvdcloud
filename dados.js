@@ -101,7 +101,8 @@ window.CVD = {
       "novo": true,
       "mb": 9.1,
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-2.mp4",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-2.mp4"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-2.mp4",
+      "tags": []
     },
     {
       "titulo": "Galileu · TTL · 360° (2)",
@@ -112,7 +113,8 @@ window.CVD = {
       "novo": true,
       "mb": 6.8,
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-4.mp4",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-4.mp4"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-4.mp4",
+      "tags": []
     },
     {
       "titulo": "Galileu · TTL · 360° (3)",
@@ -123,7 +125,8 @@ window.CVD = {
       "novo": true,
       "mb": 5.9,
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-5.mp4",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-5.mp4"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-galileu-video-5.mp4",
+      "tags": []
     },
     {
       "titulo": "Ergo · TTL · 360° (1)",
@@ -134,7 +137,8 @@ window.CVD = {
       "novo": true,
       "mb": 6.7,
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-ergo-video-2.mp4",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-ergo-video-2.mp4"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-ergo-video-2.mp4",
+      "tags": []
     },
     {
       "titulo": "Ergo · TTL · 360° (2)",
@@ -145,7 +149,8 @@ window.CVD = {
       "novo": true,
       "mb": 4.3,
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-ergo-video-3.mp4",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-ergo-video-3.mp4"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-ttl-ergo-video-3.mp4",
+      "tags": []
     },
     {
       "titulo": "Galileu · Flip-up · 360° (1)",
@@ -156,7 +161,8 @@ window.CVD = {
       "novo": true,
       "mb": 4.9,
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video-2.mp4",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video-2.mp4"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video-2.mp4",
+      "tags": []
     },
     {
       "titulo": "Galileu · Flip-up · 360° (2)",
@@ -167,7 +173,8 @@ window.CVD = {
       "novo": true,
       "mb": 2.7,
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video-3.mp4",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video-3.mp4"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video-3.mp4",
+      "tags": []
     },
     {
       "titulo": "Galileu · Flip-up · 360° (3)",
@@ -178,7 +185,8 @@ window.CVD = {
       "novo": true,
       "mb": 4.5,
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video.mp4",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video.mp4"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-galileu-video.mp4",
+      "tags": []
     },
     {
       "titulo": "Ergo · Flip-up · 360°",
@@ -189,7 +197,8 @@ window.CVD = {
       "novo": true,
       "mb": 5.6,
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-ergo-video-2.mp4",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-ergo-video-2.mp4"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-ergo-video-2.mp4",
+      "tags": []
     },
     {
       "titulo": "Kepler · Flip-up · 360°",
@@ -200,7 +209,8 @@ window.CVD = {
       "novo": true,
       "mb": 4.5,
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-kepler-video-2.mp4",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-kepler-video-2.mp4"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-flip-kepler-video-2.mp4",
+      "tags": []
     },
     {
       "titulo": "Kepler · TTL · 360°",
@@ -211,7 +221,8 @@ window.CVD = {
       "novo": true,
       "mb": 7,
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-360-kepler-ttl.mp4",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-360-kepler-ttl.mp4"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/lupa-360-kepler-ttl.mp4",
+      "tags": []
     },
     {
       "titulo": "Armação J04 Preta · 360°",
@@ -222,7 +233,8 @@ window.CVD = {
       "novo": true,
       "mb": 3.3,
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j04-preta.mp4",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j04-preta.mp4"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j04-preta.mp4",
+      "tags": []
     },
     {
       "titulo": "Armação J04 Prata · 360°",
@@ -233,7 +245,8 @@ window.CVD = {
       "novo": true,
       "mb": 2.4,
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j04-prata.mp4",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j04-prata.mp4"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j04-prata.mp4",
+      "tags": []
     },
     {
       "titulo": "Armação J22 · 360°",
@@ -244,7 +257,8 @@ window.CVD = {
       "novo": true,
       "mb": 2.8,
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j22.mp4",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j22.mp4"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j22.mp4",
+      "tags": []
     },
     {
       "titulo": "Armação J23 · 360°",
@@ -255,7 +269,8 @@ window.CVD = {
       "novo": true,
       "mb": 3.4,
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j23.mp4",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j23.mp4"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j23.mp4",
+      "tags": []
     },
     {
       "titulo": "Armação J24 Preta · 360°",
@@ -266,7 +281,8 @@ window.CVD = {
       "novo": true,
       "mb": 2.5,
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j24-preta.mp4",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j24-preta.mp4"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j24-preta.mp4",
+      "tags": []
     },
     {
       "titulo": "Armação J24 Prata · 360°",
@@ -277,7 +293,8 @@ window.CVD = {
       "novo": true,
       "mb": 2.5,
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j24-prata.mp4",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j24-prata.mp4"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-j24-prata.mp4",
+      "tags": []
     },
     {
       "titulo": "Armação · 360° (modelo a confirmar)",
@@ -288,7 +305,8 @@ window.CVD = {
       "novo": true,
       "mb": 3.5,
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-a-confirmar.mp4",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-a-confirmar.mp4"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/lupas/armacao-360-a-confirmar.mp4",
+      "tags": []
     },
     {
       "titulo": "Catálogo Equipamentos CVDentus",
@@ -299,7 +317,8 @@ window.CVD = {
       "ano": 2023,
       "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-equipamentos-cvdentus.pdf",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-equipamentos-cvdentus.pdf",
-      "mb": 1.9
+      "mb": 1.9,
+      "tags": []
     },
     {
       "titulo": "Piezo Catalog CVDentus",
@@ -310,7 +329,8 @@ window.CVD = {
       "novo": true,
       "url": "https://cloud.cvdentus.com.br/arquivos/livros/piezo-catalog-cvdentus-en.pdf",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/piezo-catalog-cvdentus-en.pdf",
-      "mb": 1.8
+      "mb": 1.8,
+      "tags": []
     },
     {
       "titulo": "Catálogo de Piezos CVDentus",
@@ -321,7 +341,8 @@ window.CVD = {
       "novo": true,
       "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-piezos-cvdentus-es.pdf",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-piezos-cvdentus-es.pdf",
-      "mb": 1.8
+      "mb": 1.8,
+      "tags": []
     },
     {
       "titulo": "Catálogo Técnico · Representantes",
@@ -332,7 +353,8 @@ window.CVD = {
       "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-representantes.pdf",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-representantes.pdf",
       "mb": 7.9,
-      "aviso": "Versão 2021"
+      "aviso": "Versão 2021",
+      "tags": []
     },
     {
       "titulo": "Technical Catalog · Representatives",
@@ -344,7 +366,8 @@ window.CVD = {
       "aviso": "Versão 2021",
       "mb": 6.2,
       "url": "https://cloud.cvdentus.com.br/arquivos/livros/representatives-catalog-en.pdf",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/representatives-catalog-en.pdf"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/representatives-catalog-en.pdf",
+      "tags": []
     },
     {
       "titulo": "Catálogo Técnico · Representantes (Español)",
@@ -356,7 +379,8 @@ window.CVD = {
       "aviso": "Versão 2021",
       "mb": 6.2,
       "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-representantes-es.pdf",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-representantes-es.pdf"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-representantes-es.pdf",
+      "tags": []
     },
     {
       "titulo": "Tabela Comparativa dos Piezos",
@@ -365,7 +389,10 @@ window.CVD = {
       "idioma": "pt",
       "mb": 0.8,
       "url": "https://cloud.cvdentus.com.br/arquivos/arte/mat-tabela-comparativa-dos-piezos.jpg",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/mat-tabela-comparativa-dos-piezos.jpg"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/mat-tabela-comparativa-dos-piezos.jpg",
+      "tags": [
+        "Dúvida sobre o resultado"
+      ]
     },
     {
       "titulo": "3 Verdades sobre o Piezoelétrico",
@@ -374,7 +401,8 @@ window.CVD = {
       "idioma": "pt",
       "mb": 0.9,
       "url": "https://cloud.cvdentus.com.br/arquivos/arte/mat-3-verdades-sobre-o-piezoeletrico.pdf",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/mat-3-verdades-sobre-o-piezoeletrico.pdf"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/mat-3-verdades-sobre-o-piezoeletrico.pdf",
+      "tags": []
     },
     {
       "titulo": "Catálogo Brocas CVDentus",
@@ -384,7 +412,8 @@ window.CVD = {
       "idioma": "pt",
       "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-brocas-cvdentus.pdf",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-brocas-cvdentus.pdf",
-      "mb": 1.9
+      "mb": 1.9,
+      "tags": []
     },
     {
       "titulo": "Burs Catalog CVDentus",
@@ -395,7 +424,8 @@ window.CVD = {
       "novo": true,
       "url": "https://cloud.cvdentus.com.br/arquivos/livros/burs-catalog-cvdentus-en.pdf",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/burs-catalog-cvdentus-en.pdf",
-      "mb": 1.6
+      "mb": 1.6,
+      "tags": []
     },
     {
       "titulo": "Catálogo de Fresas CVDentus",
@@ -406,7 +436,8 @@ window.CVD = {
       "novo": true,
       "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-fresas-cvdentus-es.pdf",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-fresas-cvdentus-es.pdf",
-      "mb": 1.6
+      "mb": 1.6,
+      "tags": []
     },
     {
       "titulo": "Catálogo Pontas · Clinical Plus e DentSurg Pro",
@@ -418,7 +449,8 @@ window.CVD = {
       "novo": true,
       "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-pontas-clinical-plus-dentsurg-pro-2026.pdf",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-pontas-clinical-plus-dentsurg-pro-2026.pdf",
-      "mb": 12.1
+      "mb": 12.1,
+      "tags": []
     },
     {
       "titulo": "Catálogo Pontas · Optymus",
@@ -429,7 +461,8 @@ window.CVD = {
       "ano": 2025,
       "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-pontas-optymus-2025.pdf",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-pontas-optymus-2025.pdf",
-      "mb": 4.4
+      "mb": 4.4,
+      "tags": []
     },
     {
       "titulo": "Tips Catalog · Optymus",
@@ -441,7 +474,8 @@ window.CVD = {
       "novo": true,
       "url": "https://cloud.cvdentus.com.br/arquivos/livros/tips-catalog-optymus-2025-en.pdf",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/tips-catalog-optymus-2025-en.pdf",
-      "mb": 4.2
+      "mb": 4.2,
+      "tags": []
     },
     {
       "titulo": "Catálogo Puntas · Optymus",
@@ -453,7 +487,8 @@ window.CVD = {
       "novo": true,
       "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-puntas-optymus-2025-es.pdf",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-puntas-optymus-2025-es.pdf",
-      "mb": 4.2
+      "mb": 4.2,
+      "tags": []
     },
     {
       "titulo": "Tips Catalog · Clinical Plus & DentSurg Pro (2026)",
@@ -465,7 +500,8 @@ window.CVD = {
       "novo": true,
       "url": "https://cloud.cvdentus.com.br/arquivos/livros/tips-catalog-clinical-plus-dentsurg-pro-en-2026-v3.pdf",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/tips-catalog-clinical-plus-dentsurg-pro-en-2026-v3.pdf",
-      "mb": 10.6
+      "mb": 10.6,
+      "tags": []
     },
     {
       "titulo": "Tips Catalog · Clinical Plus & DentSurg Pro",
@@ -475,7 +511,8 @@ window.CVD = {
       "ano": 2023,
       "url": "https://cloud.cvdentus.com.br/arquivos/livros/tips-catalog-clinical-plus-dentsurg-pro-en.pdf",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/tips-catalog-clinical-plus-dentsurg-pro-en.pdf",
-      "mb": 8.7
+      "mb": 8.7,
+      "tags": []
     },
     {
       "titulo": "Catálogo Puntas · Clinical Plus y DentSurg Pro (2026)",
@@ -487,7 +524,8 @@ window.CVD = {
       "novo": true,
       "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-puntas-clinical-plus-dentsurg-pro-es-2026-v3.pdf",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-puntas-clinical-plus-dentsurg-pro-es-2026-v3.pdf",
-      "mb": 10.6
+      "mb": 10.6,
+      "tags": []
     },
     {
       "titulo": "Catálogo Puntas",
@@ -498,7 +536,8 @@ window.CVD = {
       "url": "https://cloud.cvdentus.com.br/arquivos/livros/catalogo-puntas-es.pdf",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/catalogo-puntas-es.pdf",
       "mb": 4.7,
-      "aviso": "Versão 2021"
+      "aviso": "Versão 2021",
+      "tags": []
     },
     {
       "titulo": "Bula das pontas · Optymus (completa)",
@@ -508,7 +547,12 @@ window.CVD = {
       "ano": 2023,
       "mb": 0.2,
       "url": "https://d335luupugsy2.cloudfront.net/cms%2Ffiles%2F59178%2F1693500441Bula_OPTYMUS_2023_v04.pdf",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/bulas/bula-pontas-optymus-2023-v04.pdf"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/bulas/bula-pontas-optymus-2023-v04.pdf",
+      "tags": [
+        "Endodontia",
+        "Periodontia",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Bula por procedimento · Clinical Plus (completa)",
@@ -518,7 +562,15 @@ window.CVD = {
       "ano": 2022,
       "mb": 0.2,
       "url": "https://d335luupugsy2.cloudfront.net/cms%2Ffiles%2F59178%2F1693500450Bula_por_procedimento_clnicas_DS_e_DS_PRO_V.05_2022.pdf",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/bulas/bula-procedimento-clinical-plus-ds-2022-v05.pdf"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/bulas/bula-procedimento-clinical-plus-ds-2022-v05.pdf",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Endodontia",
+        "Periodontia",
+        "Ortodontia e odontopediatria",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Bula cirúrgica e clínica · DentSurg Pro (completa)",
@@ -528,56 +580,84 @@ window.CVD = {
       "ano": 2023,
       "mb": 0.2,
       "url": "https://d335luupugsy2.cloudfront.net/cms%2Ffiles%2F59178%2F1693500463Bula_cirrgicas_e_clnica_DS_PRO_V04_2023.pdf",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/bulas/bula-cirurgica-clinica-dentsurg-pro-2023-v04.pdf"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/bulas/bula-cirurgica-clinica-dentsurg-pro-2023-v04.pdf",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Endodontia",
+        "Periodontia",
+        "Ortodontia e odontopediatria",
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Instruções de Uso das Pontas",
       "tipo": "uso",
       "produto": "pontas",
       "idioma": "pt",
-      "url": "https://youtu.be/tSEyNjEQnV4"
+      "url": "https://youtu.be/tSEyNjEQnV4",
+      "tags": []
     },
     {
       "titulo": "Vídeo 3D Optymus",
       "tipo": "video3d",
       "produto": "optymus",
       "idioma": "pt",
-      "url": "https://youtu.be/PCFeRKehPDc"
+      "url": "https://youtu.be/PCFeRKehPDc",
+      "tags": []
     },
     {
       "titulo": "Optymus 3D Video",
       "tipo": "video3d",
       "produto": "optymus",
       "idioma": "en",
-      "url": "https://youtu.be/3RYsJW9FTgI"
+      "url": "https://youtu.be/3RYsJW9FTgI",
+      "tags": []
     },
     {
       "titulo": "Video 3D Optymus",
       "tipo": "video3d",
       "produto": "optymus",
       "idioma": "es",
-      "url": "https://youtu.be/plRR_-HniZk"
+      "url": "https://youtu.be/plRR_-HniZk",
+      "tags": []
     },
     {
       "titulo": "Instalação Optymus",
       "tipo": "instalacao",
       "produto": "optymus",
       "idioma": "pt",
-      "url": "https://youtu.be/6YtLc8fd1bI"
+      "url": "https://youtu.be/6YtLc8fd1bI",
+      "tags": [
+        "Endodontia",
+        "Periodontia",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Optymus Installation",
       "tipo": "instalacao",
       "produto": "optymus",
       "idioma": "en",
-      "url": "https://youtu.be/vt13Qi1JVfM"
+      "url": "https://youtu.be/vt13Qi1JVfM",
+      "tags": [
+        "Endodontia",
+        "Periodontia",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Instalación Optymus",
       "tipo": "instalacao",
       "produto": "optymus",
       "idioma": "es",
-      "url": "https://youtu.be/s2lqKfn6PFg"
+      "url": "https://youtu.be/s2lqKfn6PFg",
+      "tags": [
+        "Endodontia",
+        "Periodontia",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Modo de Uso Optymus",
@@ -586,21 +666,33 @@ window.CVD = {
       "idioma": "pt",
       "mb": 6.6,
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/uso-optymus-pt-v2.mp4",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/uso-optymus-pt-v2.mp4"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/uso-optymus-pt-v2.mp4",
+      "tags": [
+        "Endodontia",
+        "Periodontia"
+      ]
     },
     {
       "titulo": "How to Use Optymus",
       "tipo": "uso",
       "produto": "optymus",
       "idioma": "en",
-      "url": "https://youtu.be/jIoGEZu3R3Q"
+      "url": "https://youtu.be/jIoGEZu3R3Q",
+      "tags": [
+        "Endodontia",
+        "Periodontia"
+      ]
     },
     {
       "titulo": "Modo de Uso Optymus",
       "tipo": "uso",
       "produto": "optymus",
       "idioma": "es",
-      "url": "https://youtu.be/wVuyZkZgaUw"
+      "url": "https://youtu.be/wVuyZkZgaUw",
+      "tags": [
+        "Endodontia",
+        "Periodontia"
+      ]
     },
     {
       "titulo": "Manual Optymus",
@@ -609,70 +701,123 @@ window.CVD = {
       "idioma": "pt",
       "url": "https://cloud.cvdentus.com.br/arquivos/livros/manual-optymus.pdf",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/manual-optymus.pdf",
-      "mb": 13.5
+      "mb": 13.5,
+      "tags": [
+        "Endodontia",
+        "Periodontia",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Vídeo 3D Clinical Plus",
       "tipo": "video3d",
       "produto": "clinical-plus",
       "idioma": "pt",
-      "url": "https://youtu.be/eHURySio6Yo"
+      "url": "https://youtu.be/eHURySio6Yo",
+      "tags": []
     },
     {
       "titulo": "Clinical Plus 3D Video",
       "tipo": "video3d",
       "produto": "clinical-plus",
       "idioma": "en",
-      "url": "https://youtu.be/SJtAMp0_xhU"
+      "url": "https://youtu.be/SJtAMp0_xhU",
+      "tags": []
     },
     {
       "titulo": "Video 3D Clinical Plus",
       "tipo": "video3d",
       "produto": "clinical-plus",
       "idioma": "es",
-      "url": "https://youtu.be/OjYg2zspbS4"
+      "url": "https://youtu.be/OjYg2zspbS4",
+      "tags": []
     },
     {
       "titulo": "Instalação Clinical Plus",
       "tipo": "instalacao",
       "produto": "clinical-plus",
       "idioma": "pt",
-      "url": "https://youtu.be/LmS7AfMrtyI"
+      "url": "https://youtu.be/LmS7AfMrtyI",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Endodontia",
+        "Periodontia",
+        "Ortodontia e odontopediatria",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Clinical Plus Installation",
       "tipo": "instalacao",
       "produto": "clinical-plus",
       "idioma": "en",
-      "url": "https://youtu.be/flVFjvdDu2E"
+      "url": "https://youtu.be/flVFjvdDu2E",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Endodontia",
+        "Periodontia",
+        "Ortodontia e odontopediatria",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Instalación Clinical Plus",
       "tipo": "instalacao",
       "produto": "clinical-plus",
       "idioma": "es",
-      "url": "https://youtu.be/oSra1IOqGiI"
+      "url": "https://youtu.be/oSra1IOqGiI",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Endodontia",
+        "Periodontia",
+        "Ortodontia e odontopediatria",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Modo de Uso Clinical Plus",
       "tipo": "uso",
       "produto": "clinical-plus",
       "idioma": "pt",
-      "url": "https://youtu.be/RMMw6dI8k90"
+      "url": "https://youtu.be/RMMw6dI8k90",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Endodontia",
+        "Periodontia",
+        "Ortodontia e odontopediatria"
+      ]
     },
     {
       "titulo": "How to Use Clinical Plus",
       "tipo": "uso",
       "produto": "clinical-plus",
       "idioma": "en",
-      "url": "https://youtu.be/hIYBXrC0Rg0"
+      "url": "https://youtu.be/hIYBXrC0Rg0",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Endodontia",
+        "Periodontia",
+        "Ortodontia e odontopediatria"
+      ]
     },
     {
       "titulo": "Modo de Uso Clinical Plus",
       "tipo": "uso",
       "produto": "clinical-plus",
       "idioma": "es",
-      "url": "https://youtu.be/pJWZx8l6IyU"
+      "url": "https://youtu.be/pJWZx8l6IyU",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Endodontia",
+        "Periodontia",
+        "Ortodontia e odontopediatria"
+      ]
     },
     {
       "titulo": "Manual Clinical Plus",
@@ -681,7 +826,15 @@ window.CVD = {
       "idioma": "pt",
       "url": "https://cloud.cvdentus.com.br/arquivos/livros/manual-clinical-plus.pdf",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/manual-clinical-plus.pdf",
-      "mb": 16.3
+      "mb": 16.3,
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Endodontia",
+        "Periodontia",
+        "Ortodontia e odontopediatria",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Clinical Plus Manual",
@@ -690,70 +843,132 @@ window.CVD = {
       "idioma": "en",
       "url": "https://cloud.cvdentus.com.br/arquivos/livros/clinical-plus-manual-en.pdf",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/clinical-plus-manual-en.pdf",
-      "mb": 13.9
+      "mb": 13.9,
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Endodontia",
+        "Periodontia",
+        "Ortodontia e odontopediatria",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Vídeo 3D DentSurg Pro",
       "tipo": "video3d",
       "produto": "dentsurg-pro",
       "idioma": "pt",
-      "url": "https://youtu.be/za1LrR-Jp0o"
+      "url": "https://youtu.be/za1LrR-Jp0o",
+      "tags": []
     },
     {
       "titulo": "DentSurg Pro 3D Video",
       "tipo": "video3d",
       "produto": "dentsurg-pro",
       "idioma": "en",
-      "url": "https://youtu.be/p4YLlH98ncQ"
+      "url": "https://youtu.be/p4YLlH98ncQ",
+      "tags": []
     },
     {
       "titulo": "Video 3D DentSurg Pro",
       "tipo": "video3d",
       "produto": "dentsurg-pro",
       "idioma": "es",
-      "url": "https://youtu.be/dJoAHEjT9UE"
+      "url": "https://youtu.be/dJoAHEjT9UE",
+      "tags": []
     },
     {
       "titulo": "Instalação DentSurg Pro",
       "tipo": "instalacao",
       "produto": "dentsurg-pro",
       "idioma": "pt",
-      "url": "https://youtu.be/_rkvwdZsHaE"
+      "url": "https://youtu.be/_rkvwdZsHaE",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Endodontia",
+        "Periodontia",
+        "Ortodontia e odontopediatria",
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "DentSurg Pro Installation",
       "tipo": "instalacao",
       "produto": "dentsurg-pro",
       "idioma": "en",
-      "url": "https://youtu.be/SvNvYGksd_k"
+      "url": "https://youtu.be/SvNvYGksd_k",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Endodontia",
+        "Periodontia",
+        "Ortodontia e odontopediatria",
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Instalación DentSurg Pro",
       "tipo": "instalacao",
       "produto": "dentsurg-pro",
       "idioma": "es",
-      "url": "https://www.youtube.com/watch?v=_vOhPcJwnVk&list=PLwi_3lSQGTZAGF823s4tTpp0iZa0k3XnW&index=11"
+      "url": "https://www.youtube.com/watch?v=_vOhPcJwnVk&list=PLwi_3lSQGTZAGF823s4tTpp0iZa0k3XnW&index=11",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Endodontia",
+        "Periodontia",
+        "Ortodontia e odontopediatria",
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Modo de Uso DentSurg Pro",
       "tipo": "uso",
       "produto": "dentsurg-pro",
       "idioma": "pt",
-      "url": "https://youtu.be/9kBlbd_ZXd4"
+      "url": "https://youtu.be/9kBlbd_ZXd4",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Endodontia",
+        "Periodontia",
+        "Ortodontia e odontopediatria",
+        "Cirurgia e implante"
+      ]
     },
     {
       "titulo": "How to Use DentSurg Pro",
       "tipo": "uso",
       "produto": "dentsurg-pro",
       "idioma": "en",
-      "url": "https://youtu.be/AzZOPpWdPy8"
+      "url": "https://youtu.be/AzZOPpWdPy8",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Endodontia",
+        "Periodontia",
+        "Ortodontia e odontopediatria",
+        "Cirurgia e implante"
+      ]
     },
     {
       "titulo": "Modo de Uso DentSurg Pro",
       "tipo": "uso",
       "produto": "dentsurg-pro",
       "idioma": "es",
-      "url": "https://youtu.be/OSFUZF5a02w"
+      "url": "https://youtu.be/OSFUZF5a02w",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Endodontia",
+        "Periodontia",
+        "Ortodontia e odontopediatria",
+        "Cirurgia e implante"
+      ]
     },
     {
       "titulo": "Manual DentSurg Pro",
@@ -762,7 +977,16 @@ window.CVD = {
       "idioma": "pt",
       "url": "https://cloud.cvdentus.com.br/arquivos/livros/manual-dentsurg-pro.pdf",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/manual-dentsurg-pro.pdf",
-      "mb": 15.3
+      "mb": 15.3,
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Endodontia",
+        "Periodontia",
+        "Ortodontia e odontopediatria",
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "DentSurg Pro Manual",
@@ -771,7 +995,16 @@ window.CVD = {
       "idioma": "en",
       "url": "https://cloud.cvdentus.com.br/arquivos/livros/dentsurg-pro-manual-en.pdf",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/dentsurg-pro-manual-en.pdf",
-      "mb": 14.2
+      "mb": 14.2,
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Endodontia",
+        "Periodontia",
+        "Ortodontia e odontopediatria",
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "Manual DentSurg Pro",
@@ -780,7 +1013,16 @@ window.CVD = {
       "idioma": "es",
       "url": "https://cloud.cvdentus.com.br/arquivos/livros/manual-dentsurg-pro-es.pdf",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/manual-dentsurg-pro-es.pdf",
-      "mb": 13.5
+      "mb": 13.5,
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Endodontia",
+        "Periodontia",
+        "Ortodontia e odontopediatria",
+        "Cirurgia e implante",
+        "Segurança do procedimento"
+      ]
     },
     {
       "titulo": "DentSurg Pro Catalog",
@@ -790,7 +1032,15 @@ window.CVD = {
       "idioma": "en",
       "mb": 2.1,
       "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-dentsurg-pro-en.pdf",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/english_CATALOG_DS_PRO_OK.pdf"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/english_CATALOG_DS_PRO_OK.pdf",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Endodontia",
+        "Periodontia",
+        "Ortodontia e odontopediatria",
+        "Cirurgia e implante"
+      ]
     },
     {
       "titulo": "Catálogo DentSurg Pro",
@@ -800,7 +1050,15 @@ window.CVD = {
       "idioma": "es",
       "mb": 2.7,
       "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-dentsurg-pro-es.pdf",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/SPANISH_CATALOG_DS_PRO_OK.pdf"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/SPANISH_CATALOG_DS_PRO_OK.pdf",
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Endodontia",
+        "Periodontia",
+        "Ortodontia e odontopediatria",
+        "Cirurgia e implante"
+      ]
     },
     {
       "titulo": "Folder DentSurg Pro Cirúrgico",
@@ -811,7 +1069,15 @@ window.CVD = {
       "ano": 2024,
       "url": "https://cloud.cvdentus.com.br/arquivos/livros/folder-dentsurg-pro-cirurgico-2024.pdf",
       "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/livros/folder-dentsurg-pro-cirurgico-2024.pdf",
-      "mb": 1.4
+      "mb": 1.4,
+      "tags": [
+        "Desgaste e preparo",
+        "Prótese e cimentação",
+        "Endodontia",
+        "Periodontia",
+        "Ortodontia e odontopediatria",
+        "Cirurgia e implante"
+      ]
     },
     {
       "titulo": "Catálogo de Lupas (online)",
@@ -823,7 +1089,8 @@ window.CVD = {
       "url": "https://catalogodelupas.cvdentus.com.br/",
       "pdf": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/catalogo-lupas-oficial-2026.pdf",
       "pdfMb": 49,
-      "aviso": "Confira a política comercial vigente"
+      "aviso": "Confira a política comercial vigente",
+      "tags": []
     },
     {
       "titulo": "Simulador de Lupas",
@@ -831,14 +1098,16 @@ window.CVD = {
       "produto": "lupas",
       "idioma": "pt",
       "novo": true,
-      "url": "https://simuladordelupas.cvdentus.com.br/"
+      "url": "https://simuladordelupas.cvdentus.com.br/",
+      "tags": []
     },
     {
       "titulo": "Modo de Uso Spray Control",
       "tipo": "uso",
       "produto": "spray-control",
       "idioma": "pt",
-      "url": "https://youtu.be/vdwjV-I9VZE"
+      "url": "https://youtu.be/vdwjV-I9VZE",
+      "tags": []
     },
     {
       "titulo": "Catálogo de Acessórios",
@@ -850,7 +1119,8 @@ window.CVD = {
       "novo": true,
       "mb": 5.2,
       "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-acessorios-cvdentus-2026.pdf",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/CATALOGO_ACESSORIOS_CVDENTUS_2026_DIGITAL.pdf"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/CATALOGO_ACESSORIOS_CVDENTUS_2026_DIGITAL.pdf",
+      "tags": []
     },
     {
       "titulo": "Accessories Catalog CVDentus",
@@ -862,7 +1132,8 @@ window.CVD = {
       "novo": true,
       "mb": 6,
       "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-acessorios-cvdentus-2026-en.pdf",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/catalogo-acessorios-cvdentus-2026-en.pdf"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/catalogo-acessorios-cvdentus-2026-en.pdf",
+      "tags": []
     },
     {
       "titulo": "Catálogo de Accesorios CVDentus",
@@ -874,7 +1145,8 @@ window.CVD = {
       "novo": true,
       "mb": 6,
       "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-acessorios-cvdentus-2026-es.pdf",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/catalogo-acessorios-cvdentus-2026-es.pdf"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/catalogo-acessorios-cvdentus-2026-es.pdf",
+      "tags": []
     },
     {
       "titulo": "Vídeo de apoio · Bomba Peristáltica",
@@ -883,7 +1155,8 @@ window.CVD = {
       "idioma": "pt",
       "mb": 11,
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/mat-video-de-apoio-bomba-peristaltica.mp4",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/mat-video-de-apoio-bomba-peristaltica.mp4"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/mat-video-de-apoio-bomba-peristaltica.mp4",
+      "tags": []
     },
     {
       "titulo": "Vídeo de apoio · Chave Catraca",
@@ -892,7 +1165,8 @@ window.CVD = {
       "idioma": "pt",
       "mb": 43,
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/mat-video-de-apoio-chave-catraca.mp4",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/mat-video-de-apoio-chave-catraca.mp4"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/procedimentos/mat-video-de-apoio-chave-catraca.mp4",
+      "tags": []
     },
     {
       "titulo": "Peças de divulgação",
@@ -902,7 +1176,8 @@ window.CVD = {
       "mb": 102,
       "url": "#/galeria/pecas",
       "galeria": "pecas",
-      "semDownload": true
+      "semDownload": true,
+      "tags": []
     },
     {
       "titulo": "Lançamento Adaptadores Optymus",
@@ -913,7 +1188,8 @@ window.CVD = {
       "url": "#/galeria/adaptadores",
       "novo": true,
       "galeria": "adaptadores",
-      "semDownload": true
+      "semDownload": true,
+      "tags": []
     },
     {
       "titulo": "CVDentus Members · artes feed e story",
@@ -924,7 +1200,8 @@ window.CVD = {
       "url": "#/galeria/members",
       "novo": true,
       "galeria": "members",
-      "semDownload": true
+      "semDownload": true,
+      "tags": []
     },
     {
       "titulo": "Kit Flapless · e-mail marketing",
@@ -934,7 +1211,8 @@ window.CVD = {
       "mb": 1,
       "url": "#/galeria/flapless",
       "galeria": "flapless",
-      "semDownload": true
+      "semDownload": true,
+      "tags": []
     },
     {
       "titulo": "Piezo na Odontologia Moderna",
@@ -942,7 +1220,8 @@ window.CVD = {
       "produto": "geral",
       "idioma": "pt",
       "url": "https://www.dropbox.com/home/REDE01/MARKETING/EQUIPE%20MARKETING/CVDentus/COMERCIAL/TREINAMENTOS?preview=Piezo+na+Odontologia+Moderna.mp4",
-      "aviso": "Exige login no Dropbox da equipe"
+      "aviso": "Exige login no Dropbox da equipe",
+      "tags": []
     },
     {
       "titulo": "Catálogo de Lupas 2026 (PDF)",
@@ -953,7 +1232,8 @@ window.CVD = {
       "novo": true,
       "mb": 14.7,
       "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-lupas-cvdentus-2026.pdf",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/CATALOGO_LUPAS_CVDENTUS_2026_DIGITAL.pdf"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/CATALOGO_LUPAS_CVDENTUS_2026_DIGITAL.pdf",
+      "tags": []
     },
     {
       "titulo": "Loupe Catalog 2026 (PDF)",
@@ -964,7 +1244,8 @@ window.CVD = {
       "novo": true,
       "mb": 15.8,
       "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-lupas-cvdentus-2026-en.pdf",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/CATALOGO_LUPAS_2026_EN.pdf"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/CATALOGO_LUPAS_2026_EN.pdf",
+      "tags": []
     },
     {
       "titulo": "Catálogo de Lupas 2026 (PDF)",
@@ -975,7 +1256,8 @@ window.CVD = {
       "novo": true,
       "mb": 15.8,
       "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-lupas-cvdentus-2026-es.pdf",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/CATALOGO_LUPAS_2026_ES.pdf"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/CATALOGO_LUPAS_2026_ES.pdf",
+      "tags": []
     },
     {
       "titulo": "Catálogo de Lupas · versão fechada",
@@ -987,7 +1269,8 @@ window.CVD = {
       "novo": true,
       "mb": 28.3,
       "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-lupas-fechado.pdf",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/CATALOGO_CVLUPAS_fechado.pdf"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/CATALOGO_CVLUPAS_fechado.pdf",
+      "tags": []
     },
     {
       "titulo": "Loupes Catalog CVDentus",
@@ -999,7 +1282,8 @@ window.CVD = {
       "novo": true,
       "mb": 2.8,
       "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-lupas-fechado-en.pdf",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/loupes-catalog-cvdentus-EN.pdf"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/loupes-catalog-cvdentus-EN.pdf",
+      "tags": []
     },
     {
       "titulo": "Catálogo de Lupas CVDentus",
@@ -1011,7 +1295,8 @@ window.CVD = {
       "novo": true,
       "mb": 2.9,
       "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-lupas-fechado-es.pdf",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/catalogo-lupas-cvdentus-ES.pdf"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/catalogo-lupas-cvdentus-ES.pdf",
+      "tags": []
     },
     {
       "titulo": "Catálogo Linha Elo 2026",
@@ -1023,7 +1308,8 @@ window.CVD = {
       "novo": true,
       "mb": 8.4,
       "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-linha-elo-2026.pdf",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/CATALOGO_LINHA_ELO_2026.pdf"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/CATALOGO_LINHA_ELO_2026.pdf",
+      "tags": []
     },
     {
       "titulo": "Elo Line Catalog 2026",
@@ -1035,7 +1321,8 @@ window.CVD = {
       "novo": true,
       "mb": 9.1,
       "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-linha-elo-2026-en.pdf",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/elo-line-catalog-2026-EN.pdf"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/elo-line-catalog-2026-EN.pdf",
+      "tags": []
     },
     {
       "titulo": "Catálogo Línea Elo 2026",
@@ -1047,7 +1334,8 @@ window.CVD = {
       "novo": true,
       "mb": 9.1,
       "url": "https://cloud.cvdentus.com.br/arquivos/catalogos/catalogo-linha-elo-2026-es.pdf",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/catalogo-linea-elo-2026-ES.pdf"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/catalogos/catalogo-linea-elo-2026-ES.pdf",
+      "tags": []
     },
     {
       "titulo": "Tabela de valores · Linha Elo",
@@ -1058,7 +1346,10 @@ window.CVD = {
       "aviso": "Confira a política comercial vigente",
       "mb": 0.3,
       "url": "https://cloud.cvdentus.com.br/arquivos/arte/elo-08-tabela-de-valores-linha-elo.png",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-08-tabela-de-valores-linha-elo.png"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-08-tabela-de-valores-linha-elo.png",
+      "tags": [
+        "Dúvida sobre o resultado"
+      ]
     },
     {
       "titulo": "Compatibilidade das pontas Elo",
@@ -1068,7 +1359,10 @@ window.CVD = {
       "novo": true,
       "mb": 1.3,
       "url": "https://cloud.cvdentus.com.br/arquivos/arte/elo-07-compatibilidade-das-pontas-elo.png",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-07-compatibilidade-das-pontas-elo.png"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-07-compatibilidade-das-pontas-elo.png",
+      "tags": [
+        "Dúvida sobre o resultado"
+      ]
     },
     {
       "titulo": "Vídeo · Linha Elo (anúncio)",
@@ -1078,7 +1372,8 @@ window.CVD = {
       "novo": true,
       "mb": 33.2,
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-video-anuncio.mp4",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-video-anuncio.mp4"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-video-anuncio.mp4",
+      "tags": []
     },
     {
       "titulo": "Vídeo · Pontas Elo em movimento",
@@ -1087,7 +1382,8 @@ window.CVD = {
       "idioma": "pt",
       "mb": 0.5,
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-video-pontas-em-movimento.mp4",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-video-pontas-em-movimento.mp4"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-video-pontas-em-movimento.mp4",
+      "tags": []
     },
     {
       "titulo": "Vídeo · SAC Linha Elo (dicas de uso e cuidados)",
@@ -1097,7 +1393,8 @@ window.CVD = {
       "novo": true,
       "mb": 16.9,
       "url": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-video-sac-pos-venda.mp4",
-      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-video-sac-pos-venda.mp4"
+      "baixarUrl": "https://github.com/kahuesouza/cvdentus-arquivos/releases/download/marketing/elo-video-sac-pos-venda.mp4",
+      "tags": []
     },
     {
       "titulo": "Linha Elo · fotos e artes",
@@ -1108,7 +1405,8 @@ window.CVD = {
       "mb": 3.9,
       "url": "#/galeria/elo",
       "galeria": "elo",
-      "semDownload": true
+      "semDownload": true,
+      "tags": []
     }
   ],
   "marcas": [
@@ -5440,7 +5738,7 @@ window.CVD = {
       "nome": "Ortognática"
     }
   ],
-  "rev": 1794853976094,
+  "rev": 1794918279240,
   "filtros": {
     "aplicacoes": {
       "desgaste": "Desgaste e preparo",

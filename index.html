@@ -732,7 +732,7 @@ function resultadosPontas(termos){
   let out = '', n = 0;
   const casa = t => termos.every(x=>norm(t).includes(x));
   PONTAS.forEach(e=>e.modos.forEach(m=>{
-    const a = m.pontas.filter(p=>casa(p.cod.join(' ')+' '+p.linhas.map(l=>l[0]).join(' ')+' '+m.nome));
+    const a = m.pontas.filter(p=>casa(p.cod.join(' ')+' '+p.linhas.map(l=>l[0]).join(' ')+' '+m.nome) && passaTags(p.tags, 'pt'));
     if(a.length){ n += a.length; out += secao(`${e.nome} · ${m.nome}`, a.length) + `<div>${a.slice(0,12).map(cardPonta).join('')}</div>`; }
   }));
   return {html: out, n};
@@ -1396,7 +1396,8 @@ const buscaOv = document.getElementById('busca-ov');
 const SUGESTOES = ['Optymus','Instalação','Flapless','T1T-P','Bula','Spray Control','Lupa','Raspagem'];
 let FILTROS = { ap: '', ob: '', idi: '' };
 const temFiltro = () => !!(FILTROS.ap || FILTROS.ob || FILTROS.idi);
-const passaFiltro = p => (!FILTROS.ap || (p.tags || []).includes(FILTROS.ap)) && (!FILTROS.ob || (p.tags || []).includes(FILTROS.ob)) && (!FILTROS.idi || (p.idioma || 'pt') === FILTROS.idi);
+const passaTags = (tags, idioma) => (!FILTROS.ap || (tags || []).includes(FILTROS.ap)) && (!FILTROS.ob || (tags || []).includes(FILTROS.ob)) && (!FILTROS.idi || (idioma || 'pt') === FILTROS.idi);
+const passaFiltro = p => passaTags(p.tags, p.idioma);
 function barraFiltros(){
   const F = D.filtros || {};
   const opts = (obj, sel) => Object.values(obj).map(v => `<option value="${esc(v)}"${sel === v ? ' selected' : ''}>${esc(v)}</option>`).join('');
@@ -1422,7 +1423,7 @@ function abrirBusca(){
 function fecharBusca(){ if(!buscaOv.classList.contains('on')) return; buscaOv.classList.remove('on'); document.body.style.overflow = ''; }
 function resultadosBusca(q){
   const termos = norm(q).split(/\s+/).filter(Boolean), casa = t => termos.every(x=>norm(t).includes(x));
-  const mats = D.materiais.filter(m=>casa([m.titulo,TIPOS[m.tipo]?.nome,PROD[m.produto]?.nome,m.ano].join(' ')) && (!FILTROS.idi || (m.idioma || 'pt') === FILTROS.idi));
+  const mats = D.materiais.filter(m=>casa([m.titulo,TIPOS[m.tipo]?.nome,PROD[m.produto]?.nome,m.ano].join(' ')) && passaTags(m.tags, m.idioma));
   const procs = D.procedimentos.filter(p=>casa([p.titulo,p.prof,p.ponta,ESP[p.esp]?.nome,p.formato].join(' ')) && passaFiltro(p));
   const lup = []; LUPAS.grupos.forEach(g=>g.itens.forEach(it=>{ if(casa([it.nome,it.kit,it.desc,g.nome,'lupa'].join(' '))) lup.push([g,it]); }));
   const logos = []; D.marcas.forEach((g,gi)=>g.logos.forEach((l,li)=>{ if(casa([l.nome,l.nota,g.grupo,'logo marca'].join(' '))) logos.push([gi,li,l]); }));
@@ -1759,7 +1760,7 @@ function atualizarDicasDoItem(x){
 /* ===================== Acesso obrigatório (login) e carregamento do catálogo ===================== */
 const gateEl = document.getElementById('gate');
 let appIniciado = false, carregandoCatalogo = false, modoGate = 'entrar';
-const VERSAO_APP = 'v149';
+const VERSAO_APP = 'v150';
 function gateHtml(corpo){ return `<div class="gate-in"><img class="logo-g" src="img/logo.svg" alt="cvdcloud">${corpo}</div>`; }
 const LOADER = '<div class="loader-linha" role="status" aria-label="Carregando"></div>';
 function gateMostrar(html){ document.body.classList.add('gate-on'); gateEl.innerHTML = gateHtml(html); }

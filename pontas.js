@@ -31,6 +31,9 @@ window.CVD_PONTAS = [
         "Preparo em ângulos",
         "7"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -42,6 +45,9 @@ window.CVD_PONTAS = [
         "Remoção de núcleo (pino)",
         "10"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -53,6 +59,9 @@ window.CVD_PONTAS = [
         "Corte e compactação da guta percha",
         ""
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -64,6 +73,9 @@ window.CVD_PONTAS = [
         "Alisamento das paredes da câmara pulpar sem desgaste do assoalho",
         "5"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -83,6 +95,9 @@ window.CVD_PONTAS = [
         "Compactar e aplainar a guta percha",
         "5"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -111,6 +126,9 @@ window.CVD_PONTAS = [
         "Remoção na linha do cimento ao redor de pino metálico e - dentro do canal - (T0T-E) Finalização da remoção do pino de fibra de vidro",
         "2"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -139,6 +157,9 @@ window.CVD_PONTAS = [
         "Remoção de lima fraturada",
         "2"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -154,6 +175,9 @@ window.CVD_PONTAS = [
         "Limpeza de canais em retratamento",
         "3"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -169,6 +193,9 @@ window.CVD_PONTAS = [
         "Agitamento do cimento, ácidos e líquidos de limpeza",
         "2"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -180,6 +207,9 @@ window.CVD_PONTAS = [
         "Cirurgia parendodôntica- Retropreparo em anteriores",
         "3"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -192,6 +222,9 @@ window.CVD_PONTAS = [
         "Cirurgia parendodôntica- Retropreparo em posteriores",
         "3"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -203,6 +236,9 @@ window.CVD_PONTAS = [
         "Cirurgia retropreparo em anteriores",
         "3"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -218,6 +254,9 @@ window.CVD_PONTAS = [
         "Remoção de cálculo/ ístimo",
         "2"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -229,6 +268,9 @@ window.CVD_PONTAS = [
         "Cirurgia de retropreparo em posteriores",
         "3"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -240,6 +282,9 @@ window.CVD_PONTAS = [
         "Cirurgia retropreparo em posteriores",
         "3"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -255,6 +300,9 @@ window.CVD_PONTAS = [
         "Refinamento da entrada do canal",
         "5"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -270,6 +318,9 @@ window.CVD_PONTAS = [
         "Apicectomia/ seccionamento de raíz",
         "8"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -286,6 +337,9 @@ window.CVD_PONTAS = [
         "Apicectomia",
         "10"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      }
     ]
@@ -303,6 +357,9 @@ window.CVD_PONTAS = [
         "Raspagem supra e subgengival convencional delicada (sem diamante)",
         "5"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -314,6 +371,9 @@ window.CVD_PONTAS = [
         "Raspagem supragengival (sem diamante)",
         ""
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -325,6 +385,9 @@ window.CVD_PONTAS = [
         "Raspagem delicada na região de furca (com diamante)",
         "3"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -336,6 +399,9 @@ window.CVD_PONTAS = [
         "Raspagem interproximal supra e subgengival delicada (com diamante)",
         ""
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -347,6 +413,9 @@ window.CVD_PONTAS = [
         "Raspagem supragengival convencional",
         "3"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -358,6 +427,9 @@ window.CVD_PONTAS = [
         "Raspagem na região de furca",
         "3"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -369,6 +441,9 @@ window.CVD_PONTAS = [
         "Raspagem sub e supragengival (com diamante)",
         ""
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -380,6 +455,9 @@ window.CVD_PONTAS = [
         "Raspagem supra e subgengival com diamante apenas nas laterais",
         ""
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -391,6 +469,9 @@ window.CVD_PONTAS = [
         "Raspagem supragengival convencional",
         "5"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      }
     ]
@@ -431,6 +512,10 @@ window.CVD_PONTAS = [
         "Biselamento",
         "50%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -442,6 +527,10 @@ window.CVD_PONTAS = [
         "Preparo em ângulos",
         "70%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -454,6 +543,10 @@ window.CVD_PONTAS = [
         "Desgaste para aberturas de cavidades interproximais pequenas (medial ou distal)",
         "50%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -466,6 +559,10 @@ window.CVD_PONTAS = [
         "Desgaste para aberturas de cavidades interproximais grandes (medial ou distal)",
         "80%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -477,6 +574,10 @@ window.CVD_PONTAS = [
         "Alto desgaste para abertura cavitária e remoção de resina e pós bracket",
         "70%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -488,6 +589,10 @@ window.CVD_PONTAS = [
         "Desgaste do término da remoção do material restaurador",
         "80%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -499,6 +604,10 @@ window.CVD_PONTAS = [
         "Alto desgaste para abertura cavitária e remoção de resina e pós bracket",
         "100%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -510,6 +619,10 @@ window.CVD_PONTAS = [
         "Desgaste para a remoção do excesso de material restaurador em face lingual de dentes anteriores ou oclusal",
         "80%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -521,6 +634,10 @@ window.CVD_PONTAS = [
         "Refinamento do desgaste do material restaurador em face lingual de dentes anteriores ou oclusal",
         "30%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -532,6 +649,10 @@ window.CVD_PONTAS = [
         "Desgaste/ abertura cavitária pequena",
         "30%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -547,6 +668,10 @@ window.CVD_PONTAS = [
         "Contorno papilar",
         "50%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -558,6 +683,10 @@ window.CVD_PONTAS = [
         "Desgaste/ abertura cavitária pequena de difícil como em túnel",
         "50%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -569,6 +698,10 @@ window.CVD_PONTAS = [
         "Desgaste/ abertura cavitária pequena de difícil como face lingual de anteriores e acesso tipo túnel",
         "50%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -580,6 +713,10 @@ window.CVD_PONTAS = [
         "Contorno papilar",
         "50%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -591,6 +728,10 @@ window.CVD_PONTAS = [
         "Desgaste/ abertura cavitária média",
         "50%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -602,6 +743,10 @@ window.CVD_PONTAS = [
         "Desgaste/ abertura cavitária grande",
         "80%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -621,6 +766,10 @@ window.CVD_PONTAS = [
         "Preparo em sulcos com lesões mais incipientes",
         "70%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -636,6 +785,10 @@ window.CVD_PONTAS = [
         "Texturização em material restaurador",
         "70%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -648,6 +801,10 @@ window.CVD_PONTAS = [
         "Desgaste fino na região intrapapilar, supra e subgengival em face vestibular",
         "50%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -659,6 +816,10 @@ window.CVD_PONTAS = [
         "Desgaste fino para remoção de excesso de material restaurador em região intrapapilar, supra e subgengival em face lingual",
         "30%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -670,6 +831,10 @@ window.CVD_PONTAS = [
         "Refinamento delicado em áreas interproximais",
         "30%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -681,6 +846,10 @@ window.CVD_PONTAS = [
         "Apicectomia/ seccionamento de raíz",
         "70%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -692,6 +861,10 @@ window.CVD_PONTAS = [
         "Remoção de material restaurador (amálgama grande)",
         "80%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -703,6 +876,10 @@ window.CVD_PONTAS = [
         "Remoção de material restaurador (amálgama grande)",
         "80%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      }
     ]
@@ -720,6 +897,9 @@ window.CVD_PONTAS = [
         "Biselamento",
         "50%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -731,6 +911,9 @@ window.CVD_PONTAS = [
         "Remoção de pinos metálicos fundidos ou rosqueados",
         "100%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -743,6 +926,9 @@ window.CVD_PONTAS = [
         "Desgaste para o término de preparo em margem estreita ou em região interproximal (medial ou distal)",
         "50%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -755,6 +941,9 @@ window.CVD_PONTAS = [
         "Desgaste para o término de preparo em margem larga ou em região interproximal (medial ou distal)",
         "80%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -766,6 +955,9 @@ window.CVD_PONTAS = [
         "Cimentação de lentes e próteses",
         "40%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -777,6 +969,9 @@ window.CVD_PONTAS = [
         "Desgaste para o término de preparo (margem estreita)",
         "50%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -788,6 +983,9 @@ window.CVD_PONTAS = [
         "Alto desgaste para o preparo de laminados e lente de contato",
         "70%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -803,6 +1001,9 @@ window.CVD_PONTAS = [
         "Refinamento do desgaste em remoção do excesso de material",
         "30%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -814,6 +1015,9 @@ window.CVD_PONTAS = [
         "Desgaste para o término do preparo para laminados e lente de contato (margem larga)",
         "80%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -825,6 +1029,9 @@ window.CVD_PONTAS = [
         "Alto desgaste para o preparo de laminados e lente de contato",
         "100%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -840,6 +1047,9 @@ window.CVD_PONTAS = [
         "Refinamento do preparo em margem protética larga e auxilio para a hibridização do selamento imediato",
         "50%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -851,6 +1061,9 @@ window.CVD_PONTAS = [
         "Desgaste para a remoção do excesso de material restaurador em face lingual de dentes anteriores ou oclusal",
         "80%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -862,6 +1075,9 @@ window.CVD_PONTAS = [
         "Refinamento do desgaste do material restaurador em face lingual de dentes anteriores ou oclusal",
         "30%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -873,6 +1089,9 @@ window.CVD_PONTAS = [
         "Desgaste interproximal",
         "40%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -884,6 +1103,9 @@ window.CVD_PONTAS = [
         "Desgaste interproximal",
         "70%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -896,6 +1118,9 @@ window.CVD_PONTAS = [
         "Remoção na linha do cimento ao redor de pino metálico e - dentro do canal - (T0T-E) Finalização da remoção do pino de fibra de vidro",
         "20%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -911,6 +1136,9 @@ window.CVD_PONTAS = [
         "Texturização em material restaurador",
         "70%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -922,6 +1150,9 @@ window.CVD_PONTAS = [
         "Refinamento delicado em áreas interproximais",
         "30%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -933,6 +1164,9 @@ window.CVD_PONTAS = [
         "Refinamento desgaste para remoção de excesso de material restaurador e do preparo para laminados e lente de contato",
         "30%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -944,6 +1178,9 @@ window.CVD_PONTAS = [
         "Desgaste fino na cervical de restauros em resina composta",
         "50%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -955,6 +1192,9 @@ window.CVD_PONTAS = [
         "Odontosecção",
         "70%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -970,6 +1210,9 @@ window.CVD_PONTAS = [
         "Remoção de facetas",
         "80%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -981,6 +1224,9 @@ window.CVD_PONTAS = [
         "Odontosecção",
         "80%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      }
     ]
@@ -998,6 +1244,9 @@ window.CVD_PONTAS = [
         "Preparo da câmara pulpar. Realiza o desgatste e permite a remoção do teto e da dentina",
         "50%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -1009,6 +1258,9 @@ window.CVD_PONTAS = [
         "Remoção de pinos metálicos fundidos ou rosqueados",
         "100%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -1020,6 +1272,9 @@ window.CVD_PONTAS = [
         "Corte e compactação da guta percha",
         "30%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -1031,6 +1286,9 @@ window.CVD_PONTAS = [
         "Desgaste fino das paredes da câmara pulpar sem desgaste do assoalho",
         "50%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -1050,6 +1308,9 @@ window.CVD_PONTAS = [
         "Localização do canal",
         "50%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -1061,6 +1322,9 @@ window.CVD_PONTAS = [
         "Desgaste para o acesso à câmara pulpar",
         "50%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -1072,6 +1336,9 @@ window.CVD_PONTAS = [
         "Desgaste para o acesso à câmara pulpar",
         "80%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -1100,6 +1367,9 @@ window.CVD_PONTAS = [
         "Remoção na linha do cimento ao redor de pino metálico e - dentro do canal - (T0T-E) Finalização da remoção do pino de fibra de vidro",
         "20%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -1124,6 +1394,9 @@ window.CVD_PONTAS = [
         "Ativação do cimento",
         "30%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -1139,6 +1412,9 @@ window.CVD_PONTAS = [
         "Limpeza de canais em retratamento",
         "30%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -1154,6 +1430,9 @@ window.CVD_PONTAS = [
         "Agitamento do cimento, ácidos e líquidos de limpeza",
         "20%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -1166,6 +1445,9 @@ window.CVD_PONTAS = [
         "Cirurgia parendodôntica- Retropreparo em posteriores",
         "50%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -1177,6 +1459,9 @@ window.CVD_PONTAS = [
         "Cirurgia parendodôntica- Retropreparo em anteriores",
         "30%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -1196,6 +1481,9 @@ window.CVD_PONTAS = [
         "Remoção de nódulo pulpar",
         "40%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -1207,6 +1495,9 @@ window.CVD_PONTAS = [
         "Cirurgia parendodôntica- Retropreparo em anteriores",
         "30%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -1219,6 +1510,9 @@ window.CVD_PONTAS = [
         "Cirurgia parendodôntica- Retropreparo em posteriores",
         "30%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -1230,6 +1524,9 @@ window.CVD_PONTAS = [
         "Remoção do pino de fibra de vidro",
         "70%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -1245,6 +1542,9 @@ window.CVD_PONTAS = [
         "Desgaste fino na entrada do canal",
         "50%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -1256,6 +1556,9 @@ window.CVD_PONTAS = [
         "Aplainamento na câmara pulpar",
         "50%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -1271,6 +1574,9 @@ window.CVD_PONTAS = [
         "Apicectomia/ seccionamento de raíz",
         "70%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -1282,6 +1588,9 @@ window.CVD_PONTAS = [
         "Apicectomia",
         "80%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      }
     ]
@@ -1302,6 +1611,9 @@ window.CVD_PONTAS = [
         "Aumento de coroa clínica sem abertura de retalho. Indicado para desgaste do osso mais espesso. Possui diamante apenas no topo e realiza o desgaste ósseo através de uma abertura na gengiva (mini flap) para a introdução da ponta.",
         "80%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -1313,6 +1625,9 @@ window.CVD_PONTAS = [
         "Peeling Gengival (área estreita)",
         "50%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -1324,6 +1639,9 @@ window.CVD_PONTAS = [
         "Peeling Gengival (áreas amplas)",
         "80%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -1335,6 +1653,9 @@ window.CVD_PONTAS = [
         "Raspagem com diamante supragengival em face lingual dos dentes anteriores",
         "30%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -1346,6 +1667,9 @@ window.CVD_PONTAS = [
         "Aumento de coroa com abertura de retalho (Realiza a raspagem do osso espesso em área mais estreita)",
         "100%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -1357,6 +1681,9 @@ window.CVD_PONTAS = [
         "Aumento de coroa com abertura de retalho (Realiza a raspagem mais ampla do osso espesso)",
         "100%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -1368,6 +1695,9 @@ window.CVD_PONTAS = [
         "Descolamento da gengiva",
         "80%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -1379,6 +1709,9 @@ window.CVD_PONTAS = [
         "Raspagem supra e subgengival convencional delicada (sem diamante)",
         "30%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -1390,6 +1723,9 @@ window.CVD_PONTAS = [
         "Raspagem supragengival (sem diamante)",
         ""
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -1401,6 +1737,9 @@ window.CVD_PONTAS = [
         "Raspagem supragengival convencional (sem diamante)",
         "50%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -1412,6 +1751,9 @@ window.CVD_PONTAS = [
         "Raspagem supra e subgengival convencional (sem diamante) para limpeza de implantes e peças cerâmicas",
         "20%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -1423,6 +1765,9 @@ window.CVD_PONTAS = [
         "Alisamento radicular",
         "40%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -1434,6 +1779,9 @@ window.CVD_PONTAS = [
         "Raspagem interproximal supra e sub gengival delicada (com diamante)",
         "30%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -1445,6 +1793,9 @@ window.CVD_PONTAS = [
         "Raspagem interproximal supra e sub gengival delicada (com diamante)",
         "30%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -1456,6 +1807,9 @@ window.CVD_PONTAS = [
         "Raspagem supragengival (com diamante)",
         "30%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -1467,6 +1821,9 @@ window.CVD_PONTAS = [
         "Raspagem delicada na região de furca (com diamante)",
         "30%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -1478,6 +1835,9 @@ window.CVD_PONTAS = [
         "Raspagem na região de furca (com diamante)",
         "30%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -1489,6 +1849,9 @@ window.CVD_PONTAS = [
         "Raspagem subgengival (com diamante)",
         "30%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -1500,6 +1863,9 @@ window.CVD_PONTAS = [
         "Raspagem sub e supragengival (com diamante)",
         ""
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -1513,6 +1879,9 @@ window.CVD_PONTAS = [
         "Aumento de coroa clínica sem abertura de retalho (Flapless). Realiza o desgaste ósseo sem lesionar a gengiva. Possui 3mm de diamante e marcação de profundidade em 4 e 5 mm",
         "70%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -1524,6 +1893,9 @@ window.CVD_PONTAS = [
         "Aumento de coroa clínica sem abertura de retalho (Flapless). Realiza o desgaste ósseo sem lesionar a gengiva. Possui 2mm de diamante e marcação de profundidade em 3 e 4 mm",
         "70%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -1535,6 +1907,9 @@ window.CVD_PONTAS = [
         "Raspagem supra e subgengival com diamante apenas nas laterais",
         "30%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -1546,6 +1921,9 @@ window.CVD_PONTAS = [
         "Periotomia em todos os elementos",
         "70%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -1557,6 +1935,9 @@ window.CVD_PONTAS = [
         "Raspagem supragengival convencional (sem diamante)",
         "50%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      }
     ]
@@ -1574,6 +1955,9 @@ window.CVD_PONTAS = [
         "Desgaste interproximal",
         "40%"
        ]
+      ],
+      "tags": [
+       "Ortodontia e odontopediatria"
       ]
      },
      {
@@ -1585,6 +1969,9 @@ window.CVD_PONTAS = [
         "Desgaste interproximal",
         "70%"
        ]
+      ],
+      "tags": [
+       "Ortodontia e odontopediatria"
       ]
      }
     ]
@@ -1625,6 +2012,10 @@ window.CVD_PONTAS = [
         "Biselamento",
         "50%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -1636,6 +2027,10 @@ window.CVD_PONTAS = [
         "Preparo em ângulos",
         "70%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -1648,6 +2043,10 @@ window.CVD_PONTAS = [
         "Desgaste para aberturas de cavidades interproximais pequenas (medial ou distal)",
         "50%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -1660,6 +2059,10 @@ window.CVD_PONTAS = [
         "Desgaste para aberturas de cavidades interproximais grandes (medial ou distal)",
         "80%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -1671,6 +2074,10 @@ window.CVD_PONTAS = [
         "Alto desgaste para abertura cavitária e remoção de resina e pós bracket",
         "70%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -1682,6 +2089,10 @@ window.CVD_PONTAS = [
         "Desgaste do término da remoção do material restaurador",
         "80%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -1693,6 +2104,10 @@ window.CVD_PONTAS = [
         "Alto desgaste para abertura cavitária e remoção de resina e pós bracket",
         "100%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -1704,6 +2119,10 @@ window.CVD_PONTAS = [
         "Desgaste para a remoção do excesso de material restaurador em face lingual de dentes anteriores ou oclusal",
         "80%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -1715,6 +2134,10 @@ window.CVD_PONTAS = [
         "Refinamento do desgaste do material restaurador em face lingual de dentes anteriores ou oclusal",
         "30%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -1726,6 +2149,10 @@ window.CVD_PONTAS = [
         "Desgaste/ abertura cavitária pequena",
         "30%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -1741,6 +2168,10 @@ window.CVD_PONTAS = [
         "Contorno papilar",
         "50%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -1752,6 +2183,10 @@ window.CVD_PONTAS = [
         "Desgaste/ abertura cavitária pequena de difícil como em túnel",
         "50%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -1763,6 +2198,10 @@ window.CVD_PONTAS = [
         "Desgaste/ abertura cavitária pequena de difícil como face lingual de anteriores e acesso tipo túnel",
         "50%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -1774,6 +2213,10 @@ window.CVD_PONTAS = [
         "Contorno papilar",
         "50%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -1785,6 +2228,10 @@ window.CVD_PONTAS = [
         "Desgaste/ abertura cavitária média",
         "50%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -1796,6 +2243,10 @@ window.CVD_PONTAS = [
         "Desgaste/ abertura cavitária grande",
         "80%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -1815,6 +2266,10 @@ window.CVD_PONTAS = [
         "Preparo em sulcos com lesões mais incipientes",
         "70%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -1830,6 +2285,10 @@ window.CVD_PONTAS = [
         "Texturização em material restaurador",
         "70%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -1842,6 +2301,10 @@ window.CVD_PONTAS = [
         "Desgaste fino na região intrapapilar, supra e subgengival em face vestibular",
         "50%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -1853,6 +2316,10 @@ window.CVD_PONTAS = [
         "Desgaste fino para remoção de excesso de material restaurador em região intrapapilar, supra e subgengival em face lingual",
         "30%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -1864,6 +2331,10 @@ window.CVD_PONTAS = [
         "Refinamento delicado em áreas interproximais",
         "30%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -1875,6 +2346,10 @@ window.CVD_PONTAS = [
         "Apicectomia/ seccionamento de raíz",
         "70%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -1886,6 +2361,10 @@ window.CVD_PONTAS = [
         "Remoção de material restaurador (amálgama grande)",
         "80%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      },
      {
@@ -1897,6 +2376,10 @@ window.CVD_PONTAS = [
         "Remoção de material restaurador (amálgama grande)",
         "80%"
        ]
+      ],
+      "tags": [
+       "Desgaste e preparo",
+       "Medo de desgastar dente saudável"
       ]
      }
     ]
@@ -1914,6 +2397,9 @@ window.CVD_PONTAS = [
         "Biselamento",
         "50%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -1925,6 +2411,9 @@ window.CVD_PONTAS = [
         "Remoção de pinos metálicos fundidos ou rosqueados",
         "100%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -1937,6 +2426,9 @@ window.CVD_PONTAS = [
         "Desgaste para o término de preparo em margem estreita ou em região interproximal (medial ou distal)",
         "50%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -1949,6 +2441,9 @@ window.CVD_PONTAS = [
         "Desgaste para o término de preparo em margem larga ou em região interproximal (medial ou distal)",
         "80%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -1960,6 +2455,9 @@ window.CVD_PONTAS = [
         "Cimentação de lentes e próteses",
         "40%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -1971,6 +2469,9 @@ window.CVD_PONTAS = [
         "Desgaste para o término de preparo (margem estreita)",
         "50%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -1982,6 +2483,9 @@ window.CVD_PONTAS = [
         "Alto desgaste para o preparo de laminados e lente de contato",
         "70%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -1997,6 +2501,9 @@ window.CVD_PONTAS = [
         "Refinamento do desgaste em remoção do excesso de material",
         "30%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -2008,6 +2515,9 @@ window.CVD_PONTAS = [
         "Desgaste para o término do preparo para laminados e lente de contato (margem larga)",
         "80%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -2019,6 +2529,9 @@ window.CVD_PONTAS = [
         "Alto desgaste para o preparo de laminados e lente de contato",
         "100%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -2034,6 +2547,9 @@ window.CVD_PONTAS = [
         "Refinamento do preparo em margem protética larga e auxilio para a hibridização do selamento imediato",
         "50%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -2045,6 +2561,9 @@ window.CVD_PONTAS = [
         "Desgaste para a remoção do excesso de material restaurador em face lingual de dentes anteriores ou oclusal",
         "80%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -2056,6 +2575,9 @@ window.CVD_PONTAS = [
         "Refinamento do desgaste do material restaurador em face lingual de dentes anteriores ou oclusal",
         "30%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -2067,6 +2589,9 @@ window.CVD_PONTAS = [
         "Desgaste interproximal",
         "40%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -2078,6 +2603,9 @@ window.CVD_PONTAS = [
         "Desgaste interproximal",
         "70%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -2090,6 +2618,9 @@ window.CVD_PONTAS = [
         "Remoção na linha do cimento ao redor de pino metálico e - dentro do canal - (T0T-E) Finalização da remoção do pino de fibra de vidro",
         "20%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -2105,6 +2636,9 @@ window.CVD_PONTAS = [
         "Texturização em material restaurador",
         "70%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -2116,6 +2650,9 @@ window.CVD_PONTAS = [
         "Refinamento delicado em áreas interproximais",
         "30%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -2127,6 +2664,9 @@ window.CVD_PONTAS = [
         "Refinamento desgaste para remoção de excesso de material restaurador e do preparo para laminados e lente de contato",
         "30%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -2138,6 +2678,9 @@ window.CVD_PONTAS = [
         "Desgaste fino na cervical de restauros em resina composta",
         "50%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -2149,6 +2692,9 @@ window.CVD_PONTAS = [
         "Odontosecção",
         "70%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -2164,6 +2710,9 @@ window.CVD_PONTAS = [
         "Remoção de facetas",
         "80%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      },
      {
@@ -2175,6 +2724,9 @@ window.CVD_PONTAS = [
         "Odontosecção",
         "80%"
        ]
+      ],
+      "tags": [
+       "Prótese e cimentação"
       ]
      }
     ]
@@ -2192,6 +2744,9 @@ window.CVD_PONTAS = [
         "Preparo da câmara pulpar. Realiza o desgatste e permite a remoção do teto e da dentina",
         "50%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -2203,6 +2758,9 @@ window.CVD_PONTAS = [
         "Remoção de pinos metálicos fundidos ou rosqueados",
         "100%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -2214,6 +2772,9 @@ window.CVD_PONTAS = [
         "Corte e compactação da guta percha",
         "30%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -2225,6 +2786,9 @@ window.CVD_PONTAS = [
         "Desgaste fino das paredes da câmara pulpar sem desgaste do assoalho",
         "50%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -2244,6 +2808,9 @@ window.CVD_PONTAS = [
         "Localização do canal",
         "50%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -2255,6 +2822,9 @@ window.CVD_PONTAS = [
         "Desgaste para o acesso à câmara pulpar",
         "50%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -2266,6 +2836,9 @@ window.CVD_PONTAS = [
         "Desgaste para o acesso à câmara pulpar",
         "80%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -2294,6 +2867,9 @@ window.CVD_PONTAS = [
         "Remoção na linha do cimento ao redor de pino metálico e - dentro do canal - (T0T-E) Finalização da remoção do pino de fibra de vidro",
         "20%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -2318,6 +2894,9 @@ window.CVD_PONTAS = [
         "Ativação do cimento",
         "30%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -2333,6 +2912,9 @@ window.CVD_PONTAS = [
         "Limpeza de canais em retratamento",
         "30%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -2348,6 +2930,9 @@ window.CVD_PONTAS = [
         "Agitamento do cimento, ácidos e líquidos de limpeza",
         "20%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -2360,6 +2945,9 @@ window.CVD_PONTAS = [
         "Cirurgia parendodôntica- Retropreparo em posteriores",
         "50%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -2371,6 +2959,9 @@ window.CVD_PONTAS = [
         "Cirurgia parendodôntica- Retropreparo em anteriores",
         "30%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -2390,6 +2981,9 @@ window.CVD_PONTAS = [
         "Remoção de nódulo pulpar",
         "40%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -2401,6 +2995,9 @@ window.CVD_PONTAS = [
         "Cirurgia parendodôntica- Retropreparo em anteriores",
         "30%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -2413,6 +3010,9 @@ window.CVD_PONTAS = [
         "Cirurgia parendodôntica- Retropreparo em posteriores",
         "30%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -2424,6 +3024,9 @@ window.CVD_PONTAS = [
         "Remoção do pino de fibra de vidro",
         "70%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -2439,6 +3042,9 @@ window.CVD_PONTAS = [
         "Desgaste fino na entrada do canal",
         "50%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -2450,6 +3056,9 @@ window.CVD_PONTAS = [
         "Aplainamento na câmara pulpar",
         "50%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -2465,6 +3074,9 @@ window.CVD_PONTAS = [
         "Apicectomia/ seccionamento de raíz",
         "70%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      },
      {
@@ -2476,6 +3088,9 @@ window.CVD_PONTAS = [
         "Apicectomia",
         "80%"
        ]
+      ],
+      "tags": [
+       "Endodontia"
       ]
      }
     ]
@@ -2496,6 +3111,9 @@ window.CVD_PONTAS = [
         "Aumento de coroa clínica sem abertura de retalho. Indicado para desgaste do osso mais espesso. Possui diamante apenas no topo e realiza o desgaste ósseo através de uma abertura na gengiva (mini flap) para a introdução da ponta.",
         "80%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -2507,6 +3125,9 @@ window.CVD_PONTAS = [
         "Peeling Gengival (área estreita)",
         "50%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -2518,6 +3139,9 @@ window.CVD_PONTAS = [
         "Peeling Gengival (áreas amplas)",
         "80%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -2529,6 +3153,9 @@ window.CVD_PONTAS = [
         "Raspagem com diamante supragengival em face lingual dos dentes anteriores",
         "30%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -2540,6 +3167,9 @@ window.CVD_PONTAS = [
         "Aumento de coroa com abertura de retalho (Realiza a raspagem do osso espesso em área mais estreita)",
         "100%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -2551,6 +3181,9 @@ window.CVD_PONTAS = [
         "Aumento de coroa com abertura de retalho (Realiza a raspagem mais ampla do osso espesso)",
         "100%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -2562,6 +3195,9 @@ window.CVD_PONTAS = [
         "Descolamento da gengiva",
         "80%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -2573,6 +3209,9 @@ window.CVD_PONTAS = [
         "Raspagem interproximal supra e subgengival convencional delicada (sem diamante)",
         "30%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -2584,6 +3223,9 @@ window.CVD_PONTAS = [
         "Raspagem supragengival (sem diamante)",
         ""
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -2595,6 +3237,9 @@ window.CVD_PONTAS = [
         "Raspagem supragengival convencional (sem diamante)",
         "50%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -2606,6 +3251,9 @@ window.CVD_PONTAS = [
         "Raspagem supra e subgengival convencional (sem diamante) para limpeza de implantes e peças cerâmicas",
         "20%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -2617,6 +3265,9 @@ window.CVD_PONTAS = [
         "Alisamento radicular",
         "40%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -2628,6 +3279,9 @@ window.CVD_PONTAS = [
         "Raspagem interproximal supra e subgengival delicada (com diamante)",
         "30%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -2639,6 +3293,9 @@ window.CVD_PONTAS = [
         "Raspagem interproximal supra e subgengival delicada (com diamante)",
         "30%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -2650,6 +3307,9 @@ window.CVD_PONTAS = [
         "Raspagem supragengival (com diamante)",
         "30%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -2661,6 +3321,9 @@ window.CVD_PONTAS = [
         "Raspagem delicada na região de furca (com diamante)",
         "30%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -2672,6 +3335,9 @@ window.CVD_PONTAS = [
         "Raspagem na região de furca (com diamante)",
         "30%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -2683,6 +3349,9 @@ window.CVD_PONTAS = [
         "Raspagem subgengival (com diamante)",
         "30%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -2694,6 +3363,9 @@ window.CVD_PONTAS = [
         "Raspagem sub e supragengival (com diamante)",
         ""
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -2707,6 +3379,9 @@ window.CVD_PONTAS = [
         "Aumento de coroa clínica sem abertura de retalho (Flapless). Realiza o desgaste ósseo sem lesionar a gengiva. Possui 3mm de diamante e marcação de profundidade em 4 e 5 mm",
         "70%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -2718,6 +3393,9 @@ window.CVD_PONTAS = [
         "Aumento de coroa clínica sem abertura de retalho (Flapless). Realiza o desgaste ósseo sem lesionar a gengiva. Possui 2mm de diamante e marcação de profundidade em 3 e 4 mm",
         "70%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -2729,6 +3407,9 @@ window.CVD_PONTAS = [
         "Raspagem supra e subgengival com diamante apenas nas laterais",
         "30%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -2740,6 +3421,9 @@ window.CVD_PONTAS = [
         "Periotomia em todos os elementos",
         "70%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      },
      {
@@ -2751,6 +3435,9 @@ window.CVD_PONTAS = [
         "Raspagem supragengival convencional (sem diamante)",
         "50%"
        ]
+      ],
+      "tags": [
+       "Periodontia"
       ]
      }
     ]
@@ -2768,6 +3455,9 @@ window.CVD_PONTAS = [
         "Desgaste interproximal",
         "40%"
        ]
+      ],
+      "tags": [
+       "Ortodontia e odontopediatria"
       ]
      },
      {
@@ -2779,6 +3469,9 @@ window.CVD_PONTAS = [
         "Desgaste interproximal",
         "70%"
        ]
+      ],
+      "tags": [
+       "Ortodontia e odontopediatria"
       ]
      }
     ]
@@ -2808,6 +3501,10 @@ window.CVD_PONTAS = [
         "Trefina",
         "Cortical/ Medular"
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -2831,6 +3528,10 @@ window.CVD_PONTAS = [
         "Trefina com ação mais delicada",
         "Cortical/ Medular"
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -2842,6 +3543,10 @@ window.CVD_PONTAS = [
         "Limpeza de alvéolos",
         ""
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -2853,6 +3558,10 @@ window.CVD_PONTAS = [
         "Descolamento da membrana sinusal",
         "Membrana"
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -2864,6 +3573,10 @@ window.CVD_PONTAS = [
         "Raspagem para acabamento e regularização da superfície óssea",
         "Cortical"
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -2875,6 +3588,10 @@ window.CVD_PONTAS = [
         "Raspagem para desgaste da superfície óssea",
         "Cortical"
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -2886,6 +3603,10 @@ window.CVD_PONTAS = [
         "Osteotomia e Ostectomia",
         "Cortical"
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -2901,6 +3622,10 @@ window.CVD_PONTAS = [
         "Possui 3,5 mm de profundidade de área ativa",
         ""
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -2912,6 +3637,10 @@ window.CVD_PONTAS = [
         "Osteotomia e Ostectomia",
         "Cortical/ Medular"
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -2923,6 +3652,10 @@ window.CVD_PONTAS = [
         "Osteotomia e Ostectomia lateral (área de difícil acesso)",
         "Cortical/ Medular"
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -2934,6 +3667,10 @@ window.CVD_PONTAS = [
         "Osteotomia e Ostectomia lateral (área de difícil acesso)",
         "Cortical/ Medular"
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -2945,6 +3682,10 @@ window.CVD_PONTAS = [
         "Osteotomia e Ostectomia",
         "Cortical"
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -2956,6 +3697,10 @@ window.CVD_PONTAS = [
         "Osteotomia e Ostectomia",
         "Cortical"
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -2967,6 +3712,10 @@ window.CVD_PONTAS = [
         "Osteotomia e Ostectomia",
         "Cortical/ Medular"
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -2978,6 +3727,10 @@ window.CVD_PONTAS = [
         "Osteotomia e Ostectomia na ortogonal (área de difícil acesso)",
         "Cortical/ Medular"
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -2989,6 +3742,10 @@ window.CVD_PONTAS = [
         "Osteotomia e Ostectomia delicada (próxima à tecidos moles)",
         "Cortical/ Medular"
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -3000,6 +3757,10 @@ window.CVD_PONTAS = [
         "Osteotomia e Ostectomia delicada na ortogonal (área de difícil acesso próxima à tecidos moles)",
         "Cortical/ Medular"
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -3015,6 +3776,10 @@ window.CVD_PONTAS = [
         "Possui marcação a laser para controle de profundidade",
         ""
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -3026,6 +3791,10 @@ window.CVD_PONTAS = [
         "Osteotomia e Ostectomia",
         "Cortical"
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -3037,6 +3806,10 @@ window.CVD_PONTAS = [
         "Osteotomia e Ostectomia",
         "Cortical"
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -3048,6 +3821,10 @@ window.CVD_PONTAS = [
         "Osteotomia e Ostectomia em locais de difícil acesso",
         ""
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -3063,6 +3840,10 @@ window.CVD_PONTAS = [
         "Possui marcação a laser para controle de profundidade",
         ""
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -3078,6 +3859,10 @@ window.CVD_PONTAS = [
         "Coleta de osso autógeno",
         "Cortical"
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -3093,6 +3878,10 @@ window.CVD_PONTAS = [
         "Osteotomia e Ostectomia delicada",
         "Cortical"
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -3108,6 +3897,10 @@ window.CVD_PONTAS = [
         "Osteotomia em torno de ápices ou implantes fraturados",
         "Cortical/ Medular"
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -3119,6 +3912,10 @@ window.CVD_PONTAS = [
         "Guia para SCP",
         "Cortical"
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -3130,6 +3927,10 @@ window.CVD_PONTAS = [
         "Osteotomia delicada (próxima à tecidos moles)",
         "Cortical/ Medular"
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -3141,6 +3942,10 @@ window.CVD_PONTAS = [
         "Osteotomia e Ostectomia próxima a tecidos moles",
         ""
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -3152,6 +3957,10 @@ window.CVD_PONTAS = [
         "Raspagem e regularização da superfície óssea",
         ""
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -3163,6 +3972,10 @@ window.CVD_PONTAS = [
         "Descolamento da membrana",
         "Membrana"
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -3182,6 +3995,10 @@ window.CVD_PONTAS = [
         "Descolamento da membrana sinusal",
         "Membrana"
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -3197,6 +4014,10 @@ window.CVD_PONTAS = [
         "Desgaste ósseo / abertura de janela óssea",
         ""
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -3208,6 +4029,10 @@ window.CVD_PONTAS = [
         "Perfuração inicial para colocação de implante",
         "Cortical/ Medular"
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -3219,6 +4044,10 @@ window.CVD_PONTAS = [
         "Perfuração óssea",
         "Cortical/ Medular"
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -3230,6 +4059,10 @@ window.CVD_PONTAS = [
         "Perfuração óssea e sinus lift",
         "Cortical"
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -3241,6 +4074,10 @@ window.CVD_PONTAS = [
         "Limpeza de cavitações ósseas",
         ""
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -3260,6 +4097,10 @@ window.CVD_PONTAS = [
         "Possui marcação de profundidade",
         ""
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -3279,6 +4120,10 @@ window.CVD_PONTAS = [
         "Possui marcação de profundidade",
         ""
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -3290,6 +4135,10 @@ window.CVD_PONTAS = [
         "Perfuração óssea",
         "Cortical"
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      },
      {
@@ -3301,93 +4150,118 @@ window.CVD_PONTAS = [
         "Perfuração óssea",
         "Cortical/ Medular"
        ]
+      ],
+      "tags": [
+       "Cirurgia e implante",
+       "Segurança do procedimento"
       ]
      }
     ]
    },
-  {
+   {
     "id": "rinoplastia",
     "nome": "Rinoplastia (Kit Pro Médico)",
     "pontas": [
-      {
-        "cod": [
-          "SFR4"
-        ],
-        "linhas": [
-          [
-            "Osteotomia e Ostectomia",
-            "Cortical"
-          ]
-        ]
-      },
-      {
-        "cod": [
-          "SF32"
-        ],
-        "linhas": [
-          [
-            "Osteotomia e Ostectomia",
-            "Cortical"
-          ]
-        ]
-      },
-      {
-        "cod": [
-          "SF3-R (right)"
-        ],
-        "linhas": [
-          [
-            "Osteotomia e Ostectomia lateral (área de difícil acesso)",
-            "Cortical/ Medular"
-          ]
-        ]
-      },
-      {
-        "cod": [
-          "SF3-L (left)"
-        ],
-        "linhas": [
-          [
-            "Osteotomia e Ostectomia lateral (área de difícil acesso)",
-            "Cortical/ Medular"
-          ]
-        ]
-      },
-      {
-        "cod": [
-          "SE9G"
-        ],
-        "linhas": [
-          [
-            "Raspagem para desgaste da superfície óssea",
-            "Cortical"
-          ]
-        ]
-      },
-      {
-        "cod": [
-          "STR1"
-        ],
-        "linhas": [
-          [
-            "Perfuração óssea",
-            "Cortical"
-          ]
-        ]
-      },
-      {
-        "cod": [
-          "SL3G"
-        ],
-        "linhas": [
-          [
-            "Raspagem e regularização da superfície óssea",
-            ""
-          ]
-        ]
-      }
+     {
+      "cod": [
+       "SFR4"
+      ],
+      "linhas": [
+       [
+        "Osteotomia e Ostectomia",
+        "Cortical"
+       ]
+      ],
+      "tags": [
+       "Raiz do nariz (rinoplastia)"
+      ]
+     },
+     {
+      "cod": [
+       "SF32"
+      ],
+      "linhas": [
+       [
+        "Osteotomia e Ostectomia",
+        "Cortical"
+       ]
+      ],
+      "tags": [
+       "Raiz do nariz (rinoplastia)"
+      ]
+     },
+     {
+      "cod": [
+       "SF3-R (right)"
+      ],
+      "linhas": [
+       [
+        "Osteotomia e Ostectomia lateral (área de difícil acesso)",
+        "Cortical/ Medular"
+       ]
+      ],
+      "tags": [
+       "Raiz do nariz (rinoplastia)"
+      ]
+     },
+     {
+      "cod": [
+       "SF3-L (left)"
+      ],
+      "linhas": [
+       [
+        "Osteotomia e Ostectomia lateral (área de difícil acesso)",
+        "Cortical/ Medular"
+       ]
+      ],
+      "tags": [
+       "Raiz do nariz (rinoplastia)"
+      ]
+     },
+     {
+      "cod": [
+       "SE9G"
+      ],
+      "linhas": [
+       [
+        "Raspagem para desgaste da superfície óssea",
+        "Cortical"
+       ]
+      ],
+      "tags": [
+       "Raiz do nariz (rinoplastia)"
+      ]
+     },
+     {
+      "cod": [
+       "STR1"
+      ],
+      "linhas": [
+       [
+        "Perfuração óssea",
+        "Cortical"
+       ]
+      ],
+      "tags": [
+       "Raiz do nariz (rinoplastia)"
+      ]
+     },
+     {
+      "cod": [
+       "SL3G"
+      ],
+      "linhas": [
+       [
+        "Raspagem e regularização da superfície óssea",
+        ""
+       ]
+      ],
+      "tags": [
+       "Raiz do nariz (rinoplastia)"
+      ]
+     }
     ]
-  }
+   }
   ]
  }
 ];
